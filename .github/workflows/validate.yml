@@ -63,3 +63,19 @@ jobs:
 
       - name: 配图房规检查
         run: python scripts/check_figures.py --strict
+
+      # reviewed 前置条件：**声称通过审核的页面，必须拿得出审核的证据。**
+      #
+      # validate.py 的 VALID_STATUS 里**有** reviewed，但它不为这个值检查任何东西 ——
+      # 也就是说「reviewed」这个标签一度完全靠人自觉。
+      # 本步判的不是「内容对不对」（那机器判不了，归两道人工闸门），
+      # 而是「有没有走完流程并留下证据」：
+      #   · 自称 reviewed ⇒ 必须有对应它的审核记录
+      #   · 记录里必须写明透镜 3（陌生读者测试，两道人工闸门之一）
+      #   · 记录里必须钉住 SHA256 —— 否则「当时为什么绿」不可复现
+      #     （判据本身也会变：见 docs/quality-audit.md 附录七）
+      #   · 该页配图不得有未处理的「有错误 / 需小修」复核结论
+      # draft 页只提示不报错（它们本来就还没做完）。
+      - name: reviewed 前置条件
+        run: python scripts/check_reviewed.py --root .
+

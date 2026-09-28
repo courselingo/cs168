@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 215" width="760" height="215"
      role="img" aria-labelledby="fig-intro-3-title fig-intro-3-desc">
   <title id="fig-intro-3-title">各片网络各自换外壳，共同的分组格式不变</title>
-  <desc id="fig-intro-3-desc">一台主机把分组交给第一片网络，依次穿过以太网、无线、光纤三种链路技术的网络，再到另一台主机；每一片网络内部自己决定怎么传，跨网络时用的分组共同格式一路不换。</desc>
+  <desc id="fig-intro-3-desc">一台主机把分组交给第一片网络，依次穿过以太网、Wi-Fi、光纤链路三种链路技术的网络，再到另一台主机。换外壳这件事发生在两片网络之间的路由器上：它一边拆掉上一片网络的外壳、一边套上下一片网络的，而中间那份共同的分组格式一路不换。以太网与 Wi-Fi 是链路层的技术，光纤是它们下面的传输介质。</desc>
 
   <defs>
     <style>
@@ -16,34 +16,44 @@
   <rect x="0" y="0" width="760" height="215" fill="#ffffff"/>
 
   <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">各片网络各自换外壳，共同的分组格式不变</text>
-  <text x="380" y="66" font-size="11" fill="#64748b" text-anchor="middle">三片网络的链路技术各不相同</text>
+  <text x="380" y="66" font-size="11" fill="#64748b" text-anchor="middle">三片网络各用一种链路技术</text>
 
-  <!-- 五段链：两个端主机 + 三片网络 -->
-  <rect x="22" y="110" width="123" height="54" rx="6" fill="#d1fae5" stroke="#22c55e"/>
-  <text x="83" y="132" font-size="12" fill="#166534" text-anchor="middle">端主机 A</text>
-  <text x="83" y="150" font-size="12" fill="#166534" text-anchor="middle">收发数据</text>
+  <!-- 七段链：两个端主机 + 三片网络 + 两台路由器（换外壳的就是它们） -->
+  <rect x="25" y="110" width="80" height="54" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="65" y="132" font-size="12" fill="#166534" text-anchor="middle">端主机 A</text>
+  <text x="65" y="150" font-size="12" fill="#166534" text-anchor="middle">收发数据</text>
 
-  <rect x="170" y="110" width="123" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
-  <text x="231" y="132" font-size="12" fill="#1e40af" text-anchor="middle">网络 1</text>
-  <text x="231" y="150" font-size="12" fill="#1e40af" text-anchor="middle">以太网</text>
+  <rect x="130" y="110" width="80" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="170" y="132" font-size="12" fill="#1e40af" text-anchor="middle">网络 1</text>
+  <text x="170" y="150" font-size="12" fill="#1e40af" text-anchor="middle">以太网</text>
 
-  <rect x="318" y="110" width="123" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
-  <text x="379" y="132" font-size="12" fill="#1e40af" text-anchor="middle">网络 2</text>
-  <text x="379" y="150" font-size="12" fill="#1e40af" text-anchor="middle">无线</text>
+  <rect x="235" y="110" width="80" height="54" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="275" y="132" font-size="12" fill="#b45309" text-anchor="middle">路由器</text>
+  <text x="275" y="150" font-size="12" fill="#b45309" text-anchor="middle">换外壳</text>
 
-  <rect x="466" y="110" width="123" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
-  <text x="527" y="132" font-size="12" fill="#1e40af" text-anchor="middle">网络 3</text>
-  <text x="527" y="150" font-size="12" fill="#1e40af" text-anchor="middle">光纤</text>
+  <rect x="340" y="110" width="80" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="132" font-size="12" fill="#1e40af" text-anchor="middle">网络 2</text>
+  <text x="380" y="150" font-size="12" fill="#1e40af" text-anchor="middle">Wi-Fi</text>
 
-  <rect x="614" y="110" width="123" height="54" rx="6" fill="#d1fae5" stroke="#22c55e"/>
-  <text x="675" y="132" font-size="12" fill="#166534" text-anchor="middle">端主机 B</text>
-  <text x="675" y="150" font-size="12" fill="#166534" text-anchor="middle">收发数据</text>
+  <rect x="445" y="110" width="80" height="54" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="485" y="132" font-size="12" fill="#b45309" text-anchor="middle">路由器</text>
+  <text x="485" y="150" font-size="12" fill="#b45309" text-anchor="middle">换外壳</text>
 
-  <!-- 逐跳转发 -->
-  <path d="M150,137 L 159,137" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
-  <path d="M298,137 L 307,137" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
-  <path d="M446,137 L 455,137" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
-  <path d="M594,137 L 603,137" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+  <rect x="550" y="110" width="80" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="590" y="132" font-size="12" fill="#1e40af" text-anchor="middle">网络 3</text>
+  <text x="590" y="150" font-size="12" fill="#1e40af" text-anchor="middle">光纤链路</text>
 
-  <text x="380" y="190" font-size="12" fill="#1e293b" text-anchor="middle">跨过去的分组，共同格式一路不换</text>
+  <rect x="655" y="110" width="80" height="54" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="695" y="132" font-size="12" fill="#166534" text-anchor="middle">端主机 B</text>
+  <text x="695" y="150" font-size="12" fill="#166534" text-anchor="middle">收发数据</text>
+
+  <!-- 逐跳转发：外壳在路由器上换 -->
+  <path d="M110,137 L 119,137" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+  <path d="M215,137 L 224,137" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+  <path d="M320,137 L 329,137" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+  <path d="M425,137 L 434,137" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+  <path d="M530,137 L 539,137" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+  <path d="M635,137 L 644,137" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+
+  <text x="380" y="190" font-size="12" fill="#1e293b" text-anchor="middle">换外壳发生在两片网络之间的路由器上</text>
 </svg>
