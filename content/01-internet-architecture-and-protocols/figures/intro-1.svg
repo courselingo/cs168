@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 290" width="760" height="290"
      role="img" aria-labelledby="fig-intro-1-title fig-intro-1-desc">
-  <title id="fig-intro-1-title">互联网不等于万维网：基础设施在下，应用在上</title>
-  <desc id="fig-intro-1-desc">下方是一个横向的互联网基础设施方框，只要搬数据；上方虚线框里并排三个应用：万维网、音视频与在线游戏、物联网设备，都由基础设施承载。</desc>
+  <title id="fig-intro-1-title">「互联网」的两个含义：基础设施，与它上面的应用生态</title>
+  <desc id="fig-intro-1-desc">上方虚线框是第二个含义：电商与社交、聊天与生成式 AI、游戏与音视频这些应用；下方是第一个含义：由 TCP、IP、BGP、DNS、OSPF 构成的基础设施，只负责把数据搬到该去的地方。本课程讲的是第一义。</desc>
 
   <defs>
     <style>
@@ -15,31 +15,29 @@
 
   <rect x="0" y="0" width="760" height="290" fill="#ffffff"/>
 
-  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">互联网不等于万维网：基础设施在下，应用在上</text>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">「互联网」的两个含义：基础设施，与它上面的应用生态</text>
 
-  <!-- 分组虚线框：应用层，x=22..738，y=66..164 -->
+  <!-- 第二义：应用生态，分组虚线框 x=22..738, y=66..164 -->
   <rect x="22" y="66" width="716" height="98" rx="10" fill="#f8fafc" stroke="#94a3b8" stroke-dasharray="6,4"/>
-  <text x="32" y="80" font-size="11" fill="#64748b">跑在互联网之上的应用</text>
+  <text x="32" y="80" font-size="11" fill="#64748b">第二义：建立在它上面的一整片应用生态</text>
 
-  <!-- 三个应用方块：y=94..148，宽 210，间距 28 -->
   <rect x="37" y="94" width="210" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
-  <text x="142" y="116" font-size="12" fill="#1e40af" text-anchor="middle">万维网</text>
-  <text x="142" y="134" font-size="12" fill="#1e40af" text-anchor="middle">浏览器里访问的网站</text>
+  <text x="142" y="116" font-size="12" fill="#1e40af" text-anchor="middle">电商、社交与万维网</text>
+  <text x="142" y="134" font-size="12" fill="#1e40af" text-anchor="middle">amazon、twitter</text>
 
   <rect x="275" y="94" width="210" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
-  <text x="380" y="116" font-size="12" fill="#1e40af" text-anchor="middle">音视频与在线游戏</text>
-  <text x="380" y="134" font-size="12" fill="#1e40af" text-anchor="middle">同一条基础设施也承载</text>
+  <text x="380" y="116" font-size="12" fill="#1e40af" text-anchor="middle">聊天与生成式 AI</text>
+  <text x="380" y="134" font-size="12" fill="#1e40af" text-anchor="middle">chatGPT</text>
 
   <rect x="513" y="94" width="210" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
-  <text x="618" y="116" font-size="12" fill="#1e40af" text-anchor="middle">物联网设备</text>
-  <text x="618" y="134" font-size="12" fill="#1e40af" text-anchor="middle">冰箱、汽车里的传感器</text>
+  <text x="618" y="116" font-size="12" fill="#1e40af" text-anchor="middle">游戏与音视频</text>
+  <text x="618" y="134" font-size="12" fill="#1e40af" text-anchor="middle">Instagram、魔兽世界</text>
 
-  <!-- 基础设施方块：x=22..738，y=214..268 -->
+  <!-- 第一义：基础设施 x=22..738, y=214..268 -->
   <rect x="22" y="214" width="716" height="54" rx="6" fill="#d1fae5" stroke="#22c55e"/>
-  <text x="380" y="236" font-size="12" fill="#166534" text-anchor="middle">互联网基础设施：硬件与软件的总和</text>
-  <text x="380" y="254" font-size="12" fill="#166534" text-anchor="middle">它只负责把数据从一台机器搬到另一台</text>
+  <text x="380" y="236" font-size="12" fill="#166534" text-anchor="middle">第一义：互联网基础设施（本课程讲的就是这一层）</text>
+  <text x="380" y="254" font-size="12" fill="#166534" text-anchor="middle">TCP、IP、BGP、DNS、OSPF 这一整套协议与设备，只负责把数据搬到该去的地方</text>
 
-  <!-- 承载关系：基础设施向上支撑三类应用 -->
   <path d="M142,209 L 142,159" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
   <path d="M380,209 L 380,159" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
   <path d="M618,209 L 618,159" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>

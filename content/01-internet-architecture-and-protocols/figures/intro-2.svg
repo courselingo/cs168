@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 325" width="760" height="325"
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 313" width="760" height="313"
      role="img" aria-labelledby="fig-intro-2-title fig-intro-2-desc">
-  <title id="fig-intro-2-title">省事的做法是建一张新网，可行的是把旧网连起来</title>
-  <desc id="fig-intro-2-desc">左列是「新建一张网」的代价：全世界的网络都得换掉、一家公司扛不住全球规模、升级要等唯一的老板点头；右列是「把已有网络互连」的代价：各家网络保持原样，只需约定一套共同协议，规模随网络数量增长。</desc>
+  <title id="fig-intro-2-title">它不是又一种网络技术，而是把已有网络连起来</title>
+  <desc id="fig-intro-2-desc">左列「再设计一套网络技术铺满全球」是 CourseLingo 的教学化简，不是源里的说法：源只说互联网不是又一种网络技术，而是把不同的网络连起来。左列的两条原因是网络技术早就存在、十万多个网络各有运营者；右列是源的做法：各片网络保留自己的技术，只要共同协议一致就能互通。</desc>
 
   <defs>
     <style>
@@ -13,35 +13,30 @@
     </marker>
   </defs>
 
-  <rect x="0" y="0" width="760" height="325" fill="#ffffff"/>
+  <rect x="0" y="0" width="760" height="313" fill="#ffffff"/>
 
-  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">省事的做法是建一张新网，可行的是把旧网连起来</text>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">它不是又一种网络技术，而是把已有网络连起来</text>
 
-  <!-- 左列：新建一张网 -->
   <rect x="22" y="66" width="344" height="54" rx="6" fill="#fce7f3" stroke="#ec4899"/>
-  <text x="194" y="88" font-size="12" fill="#9d174d" text-anchor="middle">做法一：新建一张网</text>
-  <text x="194" y="106" font-size="12" fill="#9d174d" text-anchor="middle">全世界的网络都得换成它的</text>
+  <text x="194" y="88" font-size="12" fill="#9d174d" text-anchor="middle">直觉：再设计一套网络技术</text>
+  <text x="194" y="106" font-size="12" fill="#9d174d" text-anchor="middle">铺满全球就解决了</text>
 
   <rect x="22" y="145" width="344" height="36" rx="6" fill="#fce7f3" stroke="#ec4899"/>
-  <text x="194" y="167" font-size="12" fill="#9d174d" text-anchor="middle">可现成的网络不可能一起换掉</text>
+  <text x="194" y="167" font-size="12" fill="#9d174d" text-anchor="middle">可网络技术早就存在了</text>
 
   <rect x="22" y="206" width="344" height="36" rx="6" fill="#fce7f3" stroke="#ec4899"/>
-  <text x="194" y="228" font-size="12" fill="#9d174d" text-anchor="middle">一家公司也扛不住全球规模</text>
+  <text x="194" y="228" font-size="12" fill="#9d174d" text-anchor="middle">十万多个网络各有运营者</text>
 
-  <rect x="22" y="267" width="344" height="36" rx="6" fill="#fce7f3" stroke="#ec4899"/>
-  <text x="194" y="289" font-size="12" fill="#9d174d" text-anchor="middle">升级要等唯一的老板点头</text>
-
-  <!-- 右列：把已有网络互连 -->
   <rect x="394" y="66" width="344" height="54" rx="6" fill="#d1fae5" stroke="#22c55e"/>
-  <text x="566" y="88" font-size="12" fill="#166534" text-anchor="middle">做法二：把已有网络互连</text>
-  <text x="566" y="106" font-size="12" fill="#166534" text-anchor="middle">各家网络保持原样</text>
+  <text x="566" y="88" font-size="12" fill="#166534" text-anchor="middle">互联网的实际做法</text>
+  <text x="566" y="106" font-size="12" fill="#166534" text-anchor="middle">把不同的网络连起来</text>
 
   <rect x="394" y="145" width="344" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
-  <text x="566" y="167" font-size="12" fill="#166534" text-anchor="middle">只需约定一套共同协议</text>
+  <text x="566" y="167" font-size="12" fill="#166534" text-anchor="middle">各片网络保留自己的技术</text>
 
   <rect x="394" y="206" width="344" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
-  <text x="566" y="228" font-size="12" fill="#166534" text-anchor="middle">规模随网络数量增长</text>
+  <text x="566" y="228" font-size="12" fill="#166534" text-anchor="middle">只要共同协议一致就能互通</text>
 
-  <rect x="394" y="267" width="344" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
-  <text x="566" y="289" font-size="12" fill="#166534" text-anchor="middle">一家出问题不拖垮全部</text>
+  <text x="380" y="268" font-size="11" fill="#64748b" text-anchor="middle">源的重点：互操作是互联网最重要的目标（s32）</text>
+  <text x="380" y="288" font-size="10" fill="#9d174d" text-anchor="middle">左列是我们的教学化简：源只说「不是又一种网络技术，而是把不同的网络连起来」</text>
 </svg>

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 278" width="760" height="278"
+     role="img" aria-labelledby="fig-intro-8-title fig-intro-8-desc">
+  <title id="fig-intro-8-title">三种服务模型被考虑过，互联网选了「尽力而为」</title>
+  <desc id="fig-intro-8-desc">上排是三个被考虑过但没有采用的候选模型：保证一定送达、保证在某个时间内送达、成功或失败都给回执；下排是互联网实际采用的那个：尽力而为，不保证是否送达、不保证何时送达，也不通知结果。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="278" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">三种服务模型被考虑过，互联网选了「尽力而为」</text>
+
+  <text x="380" y="68" font-size="11" fill="#64748b" text-anchor="middle">被考虑过、但没有采用的三种</text>
+
+  <rect x="22" y="86" width="220" height="54" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="132" y="117" font-size="12" fill="#9d174d" text-anchor="middle">候选一：保证一定送达</text>
+
+  <rect x="270" y="86" width="220" height="54" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="380" y="117" font-size="12" fill="#9d174d" text-anchor="middle">候选二：保证 X 内送达</text>
+
+  <rect x="518" y="86" width="220" height="54" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="628" y="117" font-size="12" fill="#9d174d" text-anchor="middle">候选三：成功或失败回执</text>
+
+  <text x="380" y="157" font-size="11" fill="#64748b" text-anchor="middle">互联网实际采用的服务模型</text>
+
+  <rect x="22" y="169" width="716" height="54" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="191" font-size="12" fill="#166534" text-anchor="middle">尽力而为（best effort）</text>
+  <text x="380" y="209" font-size="12" fill="#166534" text-anchor="middle">不保证是否送达、不保证何时送达，也不通知结果</text>
+
+  <text x="380" y="253" font-size="12" fill="#64748b" text-anchor="middle">承诺得越少，网络越简单；可靠性主要交给两端（源注明：这是指导思想，不是定理）</text>
+</svg>

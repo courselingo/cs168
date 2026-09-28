@@ -198,3 +198,16 @@ notes = "一条链路每秒能送多少比特"
 en = "data center"
 zh = "数据中心"
 notes = "把成千上万台服务器放在一起的机房集群"
+
+# ── 第 1 讲补入（2026-09-28；作者提出、复核充当第二人确认）──────
+[[term]]
+en = "narrow waist"
+zh = "窄腰"
+aliases = ["narrow-waist interface"]
+notes = "第 3 层只留一个协议（IP），上下都可以有很多种协议与技术；教材 Network Architecture 一章有同名小节，幻灯片写作 federation via a narrow waist interface"
+
+[[term]]
+en = "best-effort"
+zh = "尽力而为"
+aliases = ["best effort"]
+notes = "网络不承诺是否送达、不承诺何时送达，也不通知结果；可靠性交给两端自己实现"

@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 309" width="760" height="309"
      role="img" aria-labelledby="fig-intro-4-title fig-intro-4-desc">
   <title id="fig-intro-4-title">协议管两件事：报文长什么样，收到之后做什么</title>
-  <desc id="fig-intro-4-desc">Alice 与 Bob 之间按固定顺序交换四条报文：Alice 先说 hello，Bob 回 hello，Alice 才请求文件，Bob 再回文件内容。顺序本身就是约定的一部分：省掉开头的问候，双方就无法确认彼此在线。</desc>
+  <desc id="fig-intro-4-desc">Alice 与 Bob 之间按固定顺序交换四条报文：Alice 先说 hello，Bob 回 hello，Alice 才请求文件，Bob 再回文件内容。顺序本身就是约定的一部分（源只说协议规定谁先开口、怎么应答）；至于省掉开头的问候就失去一次确认机会，这是我们的推论，不是源里的原话。</desc>
 
   <defs>
     <style>
