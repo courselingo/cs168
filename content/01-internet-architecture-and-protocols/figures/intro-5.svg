@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 243" width="760" height="243"
      role="img" aria-labelledby="fig-intro-5-title fig-intro-5-desc">
   <title id="fig-intro-5-title">联邦的代价：升级「互联网」不是一个选项</title>
-  <desc id="fig-intro-5-desc">想做出别人没有的东西才算差异化，可互操作要求大家都支持同一个协议，而升级「互联网」不是一个选项；回环标出源里的结论：这就拖慢了创新。这条路径的后半段是课程幻灯片的原话。</desc>
+  <desc id="fig-intro-5-desc">互操作要求大家都支持同一个协议，于是源留下一个问句：你靠什么做出区别（本图的第二个框以问句形态呈现，不是肯定命题）。再往下，升级「互联网」不是一个选项，回环标出源里的结论：这就拖慢了创新。后半段是课程幻灯片的原话。</desc>
 
   <defs>
     <style>
@@ -18,12 +18,12 @@
   <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">联邦的代价：升级「互联网」不是一个选项</text>
 
   <rect x="22" y="76" width="220" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
-  <text x="132" y="98" font-size="12" fill="#1e40af" text-anchor="middle">想做出别人没有的东西</text>
-  <text x="132" y="116" font-size="12" fill="#1e40af" text-anchor="middle">才谈得上差异化</text>
+  <text x="132" y="98" font-size="12" fill="#1e40af" text-anchor="middle">互操作要求大家</text>
+  <text x="132" y="116" font-size="12" fill="#1e40af" text-anchor="middle">都支持同一个协议</text>
 
   <rect x="270" y="76" width="220" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
-  <text x="380" y="98" font-size="12" fill="#1e40af" text-anchor="middle">可互操作要求大家</text>
-  <text x="380" y="116" font-size="12" fill="#1e40af" text-anchor="middle">都支持同一个协议</text>
+  <text x="380" y="98" font-size="12" fill="#1e40af" text-anchor="middle">那你怎么做出区别</text>
+  <text x="380" y="116" font-size="12" fill="#1e40af" text-anchor="middle">（这是源留下的问句）</text>
 
   <rect x="518" y="76" width="220" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
   <text x="628" y="98" font-size="12" fill="#1e40af" text-anchor="middle">而升级「互联网」</text>

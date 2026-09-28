@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 278" width="760" height="278"
      role="img" aria-labelledby="fig-intro-8-title fig-intro-8-desc">
   <title id="fig-intro-8-title">三种服务模型被考虑过，互联网选了「尽力而为」</title>
-  <desc id="fig-intro-8-desc">上排是三个被考虑过但没有采用的候选模型：保证一定送达、保证在某个时间内送达、成功或失败都给回执；下排是互联网实际采用的那个：尽力而为，不保证是否送达、不保证何时送达，也不通知结果。</desc>
+  <desc id="fig-intro-8-desc">上排是三个被考虑过但没有采用的候选模型：保证一定送达、保证在某个时间内送达、成功或失败都给回执；下排是互联网实际采用的那个：尽力而为，不保证是否送达、不保证何时送达，也不通知结果。页脚注明：这是指导思想，不是定理。</desc>
 
   <defs>
     <style>
