@@ -123,7 +123,21 @@ def main(argv: list[str] | None = None) -> int:
     ad = root / "docs" / "audit"
     if not ad.exists():
         ad = root.parent.parent / "courselingo" / "docs" / "audit"  # 平台仓兜底
-    vdir = root.parent.parent / "preview" / "visual-review"
+    # ★ 配图复核报告的查找路径：**先看仓库内，再看工作区**。
+    #
+    # 本文件原先只指向 `root.parent.parent / "preview" / "visual-review"` ——
+    # **那是工作区目录，不在课程仓库里。**
+    # 结果：本地跑全绿、**CI 上必然失败**（实测：2026-09-28，cs168 提级那次
+    # `Validate` 报「intro-1..8 无复核报告」，因为 CI 只 checkout 课程仓库）。
+    #
+    # ⇒ 这条错与整个项目的头号错误同类：**闸门要求的证据，住在被检查的东西之外。**
+    #   修法不是让 CI 放宽，而是**让证据随产物一起走** ——
+    #   复核报告是证据，必须与它判定的那个版本**同仓库、同提交**。
+    #   （与 `附录九`「证据要落盘在下一个核对着会看的地方」同一条；
+    #     而这里「下一个核对着」就是 CI。）
+    vdirs = [root / "docs" / "audit" / "visual-review",
+             root.parent.parent / "preview" / "visual-review"]
+    vdir = next((d for d in vdirs if d.exists()), vdirs[0])
 
     # ★ 实测裁定表：允许「已实测证伪的复核结论」被显式覆盖。
     #   规则见 quality-audit.md 附录八 / 附录十一，说明见本文件末尾。
