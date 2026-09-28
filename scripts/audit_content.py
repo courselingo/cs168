@@ -42,8 +42,9 @@ MAX_FIG_PER_K = 2.8      # 上限：超过就是拿图凑数
 #   mapreduce（5 节 / 6981 字）按每节上限只有 12 张，密度 1.72 < 1.8 → 无解。
 #   度量互相矛盾时，应当删掉冗余的那一条，而不是让执行者去凑数。
 #   TARGET 仅作参考输出，不影响退出码。
-MAX_FIG_PER_SECTION = 2      # 每个内容小节最多几张（超过即 ERROR）
-LONG_SECTION_CJK = 1500      # 超过这个长度的小节放宽到 MAX_FIG_PER_SECTION + 1
+MAX_FIG_PER_SECTION = 2      # 【已降级为参考】见下方 MIN_FIG_GAP_CJK；不再作为闸门
+LONG_SECTION_CJK = 1500      # 【已降级为参考】同上
+MIN_FIG_GAP_CJK = 250        # 同一节里两张图平均不得近于每 250 汉字一张（防挤成一堆）
 MAX_GAP_CJK = 1200       # 连续多少汉字无图算「缺口」
 MAX_SENT_CJK = 120       # 单句最长汉字数
 MAX_SENT_AVG = 55        # 平均句长
@@ -153,15 +154,34 @@ def audit(path: Path, root: Path, systems: list[str] | None = None,
             n_here = len(IMG.findall(seg))
             if n_here == 0:
                 errs.append(f"[小节缺图] 「{title[:28]}」整节没有配图")
-            # ★ 上限比下限更重要：一个机制画三张以上就是把读者切晕
-            elif n_here > MAX_FIG_PER_SECTION:
+            else:
+                # ★ 2026-09-28 修正：固定张数上限降级成**带间距的松边界**。
+                #
+                # 旧写法 `n_here > MAX_FIG_PER_SECTION(+1)` 是**固定上限**。它当初防的是
+                # 「每节堆四五张碎图」（第一轮每节平均 3.02 张、最极端两节各 11 张），
+                # 但多轮校对后它开始**惩罚正确性**：内容越诚实越（加归属标注、源文依据、
+                # 边界条件）就越长，而固定上限不跟着长 —— GFS 三节余量一度只剩 34–39 个汉字，
+                # 作者为压回阈值**删掉了一句源文内容**。
+                #
+                # 我曾试过「按本节套用全课程的 MAX_FIG_PER_K」，**那个更糟**：
+                # 短节只配 1 张图就会超（300 字 + 1 图 = 3.33/千字），三门课立刻全红。
+                # 原因是 2.8 是**全课程平均**的上限，不是单节的。
+                #
+                # 现在用一对**间距**来表达：图和图之间
+                #     不小于 MIN_FIG_GAP_CJK（别挤成一堆）
+                #     不大于 MAX_GAP_CJK（别让读者久等）
+                # 也就是 `n_here ≤ 1 + seg_cjk / MIN_FIG_GAP_CJK`。
+                # 这与「单节版式最大同组 ≤1/3」（check_figures 管）合起来，
+                # 覆盖了原固定上限想防的两种情形，且**随内容长度自动放宽**。
                 seg_cjk = len(CJK.findall(seg))
-                cap = MAX_FIG_PER_SECTION + (1 if seg_cjk > LONG_SECTION_CJK else 0)
+                cap = 1 + seg_cjk // MIN_FIG_GAP_CJK
                 if n_here > cap:
                     errs.append(
                         f"[小节过密] 「{title[:26]}」{seg_cjk} 汉字配了 {n_here} 张图"
-                        f"（上限 {cap}）—— 同一机制切太碎，应当合并而不是各画一张"
+                        f"（上限 {cap} 张 ≈ 每 {MIN_FIG_GAP_CJK} 汉字不超过一张）"
+                        f"—— 图挤成一堆，应当合并而不是各画一张"
                     )
+
 
     # ---- C. 无图缺口 ----
     if imgs:
