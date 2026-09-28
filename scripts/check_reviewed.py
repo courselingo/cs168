@@ -93,6 +93,25 @@ def find_audit(ad: pathlib.Path, page: pathlib.Path, content_root: pathlib.Path)
 
 
 def main(argv: list[str] | None = None) -> int:
+    # ★ stdout 编码保护 —— 兄弟脚本都有，本脚本起初漏了。
+    #
+    # cs168-author 在 Windows 默认控制台（cp936 / Python 3.12）上实测：
+    #   四条件全满足 + cp936  -> UnicodeEncodeError: 'gbk' codec can't encode '\u2705'
+    #                            exit=1
+    #   四条件全满足 + utf-8  -> ✅ 通过，exit=0
+    # **也就是说：一个把所有 reviewed 条件都满足的页面，在 Windows 上仍然 exit 1。**
+    #
+    # 更坏的是它的**两种失效方向不对称**：
+    #   · 有问题时：崩在 ❌ 那行，exit 恰好也是 1 —— 于是这个 bug **隐形**，
+    #     只是把真正的原因吞掉（看到的是一个 UnicodeEncodeError，不是那几条问题）；
+    #   · 没问题时：**致命的假阴性**，而且看起来像「内容不过」。
+    # CI 跑在 Linux/UTF-8 上不受影响，所以它只会在人手动核 reviewing 时骗人。
+    for s in (sys.stdout, sys.stderr):
+        try:
+            s.reconfigure(encoding="utf-8", errors="replace")
+        except (AttributeError, OSError, ValueError):
+            pass
+
     ap = argparse.ArgumentParser(description="把关 status=reviewed 的前置条件")
     ap.add_argument("--root", required=True)
     ap.add_argument("--strict", action="store_true", help="draft 页的提示也计入退出码")
