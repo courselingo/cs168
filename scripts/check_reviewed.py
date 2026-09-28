@@ -42,6 +42,24 @@ CJK = re.compile(r"[\u4e00-\u9fff]")
 H2 = re.compile(r"(?m)^##\s+(.+)$")
 
 
+# ★★ 哈希必须**与行尾符无关** —— 否则「本地通过、CI 失败」是必然的。
+#
+# 实测（2026-09-28，mit-6.006 提级那次）：
+#   工作区 peak-finding-1.svg = **CRLF** 47 处，SHA256 前16 = `7D016EFDD7E15438`
+#   git HEAD 里的同一文件      = **LF**          SHA256 前16 = `4ADB2DF9FF520C8E`
+#   全仓 86 个被跟踪文件里，**51 个的工作区字节 ≠ git 字节**（而 `git status` 干净，
+#   因为 git 在比较时会做行尾归一化）。
+#   于是 CI 的 `check_reviewed.py` 报「报告核的是旧版」—— **报告没错，文件也没错，
+#   错的是「哈希」这个标识符：它把表示的差异当成了内容的差异。**
+#
+# ⇒ 凡计算用于**跨机器比对**的哈希，先做行尾归一化（CRLF → LF）。
+#   这与 `附录七` 同源：标识符必须只随它该随的东西变。
+def nhash(path: pathlib.Path) -> str:
+    """行尾归一化后的 SHA256（大写十六进制）。CRLF 与 LF 得到同一个值。"""
+    b = path.read_bytes().replace(b"\r\n", b"\n")
+    return hashlib.sha256(b).hexdigest().upper()
+
+
 def split_fm(text: str) -> dict[str, str]:
     if not text.startswith("+++"):
         return {}
@@ -258,7 +276,7 @@ def main(argv: list[str] | None = None) -> int:
                     unreadable.append(f"{f.stem}:报告里没有 `复核对象 SHA256`，无法确认它核对的是哪一版")
                 else:
                     recorded = m.group(1).upper()
-                    h = hashlib.sha256(f.read_bytes()).hexdigest().upper()
+                    h = nhash(f)
                     if not h.startswith(recorded[:16]) and not recorded.startswith(h[:16]):
                         bad.append(f"{f.stem}:可用（但报告核的是旧版：报告 {recorded[:16]} / 现值 {h[:16]}）")
         # ★★ 应用实测裁定 —— **但裁定只对它作出时已存在的报告有效。**
@@ -282,7 +300,7 @@ def main(argv: list[str] | None = None) -> int:
                 rep = vdir / f"{root.name}__{name}.md"
                 if name in adj:
                     basis, target = adj[name]
-                    cur = (hashlib.sha256(rep.read_bytes()).hexdigest().upper()
+                    cur = (nhash(rep)
                            if rep.exists() else "")
                     if not target:
                         reason = f"{name}:裁定未钉住报告哈希（第 5 列「针对报告」为空）"
