@@ -496,16 +496,16 @@ CB114BDF7CE8F98E  scripts/check_figures.py
 现补齐。**本记录自身不列**（自指字段无法在表内自证），其余全部落表。
 
 ```text
-SHA256（2026-09-28，第十轮修正后冻结版 t4）
+SHA256（2026-09-28，第十一轮修正后冻结版 t5 —— 送 reviewed 提级的一版）
 
 内容
-E79CE10A144A2502C0D24153668169E830FD6C01F081513AB2F9ED1BEDB29967  content/01-internet-architecture-and-protocols/index.md
+325D3F1DD1803AF141C84D7E92BE4694503D760171AF83B6075B7DC3B40F03FC  content/01-internet-architecture-and-protocols/index.md
 E7728038906505813E72F713782E07595396DF2599434720DE7650B77D5CA5AA  content/01-internet-architecture-and-protocols/figures/intro-1.svg
 5BF5093CA99719B69A79EC9DE281CDCC5CBE355E1C3E638257D6C747CECC5465  content/01-internet-architecture-and-protocols/figures/intro-2.svg
 100599B1E92BB78CA987C0929C25A4B5A4E1360752A16342879AB5E34F053B02  content/01-internet-architecture-and-protocols/figures/intro-3.svg
 1864938874C28F460041739DA27850AFB74BE561051424A4C630C773A450D206  content/01-internet-architecture-and-protocols/figures/intro-4.svg
 B40C8ACF2356F50D7918D29DAC57D972DBE8F608F238735331F6D39D816E8EEF  content/01-internet-architecture-and-protocols/figures/intro-5.svg
-98F223BDE354847664A8D421896B2BF885B76FEE0175A3F244A9AF8786E3AEE4  content/01-internet-architecture-and-protocols/figures/intro-6.svg
+3B83C1731A4F38DFEAF2F40D546115F90ACF5FD0444BC8FD8823BE580D090119  content/01-internet-architecture-and-protocols/figures/intro-6.svg
 E5CD664175C0C04F836EAD38B251A30143838059C6D30FE4E641416E292531D5  content/01-internet-architecture-and-protocols/figures/intro-7.svg
 FB15889C75C8987EDABF11A48EFDDED1C68E6FB3AFE54782B1A23D5677473835  content/01-internet-architecture-and-protocols/figures/intro-8.svg
 DB1E9E897D77AE8E4675A902813B94779CDB5E42600577BB18BA0F21F9E92B26  content/01-internet-architecture-and-protocols/figures/intro-9.svg
@@ -703,6 +703,33 @@ Lead 已把「视觉复核结论必须按类型分开处理」（**文字类直�
 **记录一句**：`附录十一` 把几何类单列并要求实测，这一条正是它的用例 ——
 **属性读不出来（`x=22` / `x=738` 确实对称），但渲染后墨迹不对称**。
 **只看属性会判「不成立」，只看目测会说不清差多少；量了才知道差 8px、以及为什么。**
+
+### 10.14 第十一轮：`intro-6` 最后一条（跨度说明与其所指范围脱节）
+
+复核者确认「**数字与对齐均自洽、无碰线溢出；两端标签与端点刻度对齐良好；标题、算式、注释三处数字口径一致**，
+幻灯片 8,400 万的差异已被图中显式声明」⇒ **上一轮量的 8px 修好了**。只剩一条：
+
+> 「整段说明文字挂在右端点且**缺跨段视觉标注**」—— 「这一整段是往返」说的是**整条轴的跨度**，
+> 却被挂在右端点下方，**与其所指范围在位置上脱节**，易被误读为只描述右端一小段。
+
+**处置：取 Lead 建议的 ①（只挪文字，不动已核准的几何）**，做法与理由：
+
+| 改动 | 说明 |
+| --- | --- |
+| 右端标签缩回成纯端点标签：`回应到达：这一整段是往返` → **`回应到达`** | 两端标签从此**同构**（`请求发出` / `回应到达`），各自只表示端点 |
+| **新增居中跨度说明**（轴上方，y=152）：**「这一段（请求发出 → 回应到达）是往返」** | **像素实测墨迹 283.5..476.0 → 中心 379.75**（画布中线 380）⇒ 居中成立；上下净空 13.75 / 21.25（房规下限 10） |
+| 不新增图形（**没做②**） | **理由：跨度端头已经存在** —— 轴两端本来就有竖直刻度（x=22 与 x=738），它们就是这一段的两个端头。**缺的从来不是端头，而是「说明居中压在它上面」**。② 要动轴线附近元素，而这一页已因对齐来回两次，风险大于收益 |
+
+**改后复核用实测**（供核对者复核，同一套 2× 渲染 + Pillow 管线）：
+
+```text
+时间轴实线      21.5 .. 738.0
+左标签墨迹      22.5 .. 64.5      ← 距左端 1.0px
+右标签墨迹     695.0 .. 737.0     ← 距右端 1.0px（上一轮是 730.0，差 8.0）
+跨度说明墨迹   283.5 .. 476.0     ← 中心 379.75（画布中线 380）
+```
+
+⇒ **左右标签对称（各 1.0px）、跨度说明落在中线上** —— 三条都是墨迹实测，不是属性读数。
 
 ---
 

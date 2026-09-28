@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 312" width="760" height="312"
      role="img" aria-labelledby="fig-intro-6-title fig-intro-6-desc">
   <title id="fig-intro-6-title">消息在路上时，本机 CPU 已执行约 8,250 万个周期（幻灯片写的是 8,400 万，源自己算不拢）</title>
-  <desc id="fig-intro-6-desc">同一条时间轴上的两件事：上半是请求从伯克利发出、到回应从纽约回来这一段往返 27.5 毫秒的传输时间；下半是同一段时间里一颗 3 GHz 的 CPU 执行掉的周期数。橙色那行照图内数据自己算：3 GHz × 27.5 毫秒 = 8,250 万个周期；标题把 8,250 万与幻灯片写的 8,400 万并列，并点明源自己算不拢。两条横线的左右两端互相对齐，表示这是同一段时间。</desc>
+  <desc id="fig-intro-6-desc">同一条时间轴上的两件事：上半是请求从伯克利发出、到回应从纽约回来这一段往返 27.5 毫秒的传输时间；下半是同一段时间里一颗 3 GHz 的 CPU 执行掉的周期数。时间轴上方那行说明整条轴这一段就是往返，两端刻度就是它的两个端点。橙色那行照图内数据自己算：3 GHz × 27.5 毫秒 = 8,250 万个周期；标题把 8,250 万与幻灯片写的 8,400 万并列，并点明源自己算不拢。两条横线的左右两端互相对齐，表示这是同一段时间。</desc>
 
   <defs>
     <style>
@@ -22,13 +22,16 @@
   <text x="380" y="98" font-size="12" fill="#1e40af" text-anchor="middle">请求出去、回应回来，都在网络上传输</text>
   <text x="380" y="116" font-size="12" fill="#1e40af" text-anchor="middle">伯克利到纽约 4,125 公里，往返 27.5 毫秒</text>
 
-  <!-- 时间轴：整段是往返；两端刻度即「同一段时间」的两个端点 -->
+  <!-- 跨度说明居中放在轴上方：左右两端刻度就是这一段的两个端头，位置本身就表达「整段」 -->
+  <text x="380" y="152" font-size="11" fill="#64748b" text-anchor="middle">这一段（请求发出 → 回应到达）是往返</text>
+
+  <!-- 时间轴：两端刻度即这一段的两个端点 -->
   <path d="M22,176 L 738,176" fill="none" stroke="#64748b"/>
   <path d="M22,170 L 22,182" fill="none" stroke="#64748b"/>
   <path d="M738,170 L 738,182" fill="none" stroke="#64748b"/>
   <text x="22" y="202" font-size="11" fill="#64748b">请求发出</text>
-  <!-- 右端标签不用括号收尾：括号的右侧边距会让墨迹比锚点早结束 8px，与左端不对称 -->
-  <text x="738" y="202" font-size="11" fill="#64748b" text-anchor="end">回应到达：这一整段是往返</text>
+  <!-- 右端标签只留端点本身，且不用括号收尾：括号的右侧边距会让墨迹比锚点早结束 8px，与左端不对称 -->
+  <text x="738" y="202" font-size="11" fill="#64748b" text-anchor="end">回应到达</text>
 
   <!-- 同一段时间里的周期流：虚线首尾都落在 22/738（716 ÷ 10 = 71 段，两端各以实线起收） -->
   <path d="M22,231 L 738,231" fill="none" stroke="#f59e0b" stroke-width="2" stroke-dasharray="6,4"/>
