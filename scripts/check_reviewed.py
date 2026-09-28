@@ -154,16 +154,37 @@ def main(argv: list[str] | None = None) -> int:
         # 配图复核
         figs = sorted((p.parent / "figures").glob("*.svg"))
         bad = []
+        unreadable = []
         for f in figs:
             rep = vdir / f"{root.name}__{f.stem}.md"
             if not rep.exists():
+                # ★ 没有报告 ≠ 通过。缺证据就是缺证据。
+                #   但「配图从没复核过」在 draft 阶段是常态，
+                #   所以只在 reviewed 页上算问题（本函数只在 reviewed 页里跑）。
+                unreadable.append(f"{f.stem}:无复核报告")
                 continue
             t = rep.read_text(encoding="utf-8", errors="replace")
-            v = next((x for x in ("有错误", "需小修", "可用") if f"判定：{x}" in t), "?")
-            if v in ("有错误", "需小修"):
+            # ★★ 判定必须**读得出来**，否则算问题 —— 不能静默放行。
+            #
+            # cs168 的复核者发现了这个洞：闸门是字面子串匹配，
+            # 而如果报告写成 `**判定**：可用`（中间夹了 `**`），子串不匹配 ⇒ 取到 "?"，
+            # 而下面的 `if v in ("有错误","需小修")` 对 "?" 为假 ⇒ **静默放行**。
+            # 也就是说：**把判定写成加粗体，就能让这道闸门失效，而且不留痕迹。**
+            #
+            # 一条闸门对「读不懂的输入」必须**失败关闭**（fail closed），不能「当作没问题」。
+            # 这正是本项目反复出现的那一类：**绿灯的理由是错的**。
+            v = next((x for x in ("有错误", "需小修", "可用") if f"判定：{x}" in t), None)
+            if v is None:
+                # 给一条可操作的修法：告诉它要写成纯文本
+                unreadable.append(
+                    f"{f.stem}:读不出判定（报告里必须有一行**纯文本** `判定：可用` / "
+                    f"`判定：需小修` / `判定：有错误`；写成 `**判定**：…` 会匹配不上）")
+            elif v in ("有错误", "需小修"):
                 bad.append(f"{f.stem}:{v}")
         if bad:
             prob.append("配图有这样未处理的复核结论：" + ", ".join(bad[:8]))
+        if unreadable:
+            prob.append("配图复核证据不完整（**缺证据不等于通过**）：" + ", ".join(unreadable[:8]))
 
         if prob:
             errs.append(f"{rel} —— status={status}")
