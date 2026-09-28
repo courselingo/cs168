@@ -141,10 +141,23 @@ def main(argv: list[str] | None = None) -> int:
 
     # ★ 实测裁定表：允许「已实测证伪的复核结论」被显式覆盖。
     #   规则见 quality-audit.md 附录八 / 附录十一 / 附录十二，说明见本文件末尾。
+    #
+    # ★★ 裁定必须钉住**它所反驳的那份报告**（按内容哈希，不按时间）。
+    #
+    # 我先写的是「按 mtime 比较」：报告比裁定新 ⇒ 裁定不适用。
+    # **本地测试通过，CI 上立刻失败** ——
+    #   实测报错：`intro-6:裁定早于这份新报告（裁定 1790607479 < 报告 1790607479）`
+    #   **两个时间戳印出来一模一样**，而分支却判成了「更新」。
+    # 根因：**在干净检出里，git 把仓库里所有文件的 mtime 设成检出那一刻** ⇒
+    #   **同一个仓库内比较 mtime 是没有任何意义的**（谁先谁后是任意的）。
+    #
+    # ⇒ 改成**内容哈希**：裁定表每行可写第 5 列「针对报告」，填那份报告 SHA256 的前 16 位。
+    #   · 该列匹配当前报告 ⇒ 裁定生效（它反驳的正是这一份）；
+    #   · 不匹配 / 该列空 ⇒ **不生效**，按新报告处置（旧的写法仍可用，只是不再覆盖）。
+    # **这与 `附录五`、`附录七` 是同一条：结论绑「它被作出时的那个状态」，而状态的标识符是哈希，不是时间。**
     adj_path = ad / "visual-adjudications.md"
-    adj: dict[str, tuple[str, float]] = {}   # 图 -> (依据, 裁定表写入时刻)
+    adj: dict[str, tuple[str, str]] = {}   # 图 -> (依据, 针对的报告哈希前缀)
     if adj_path.exists():
-        adj_mtime = adj_path.stat().st_mtime
         for ln in adj_path.read_text(encoding="utf-8", errors="replace").splitlines():
             if not ln.strip().startswith("|"):
                 continue
@@ -152,11 +165,15 @@ def main(argv: list[str] | None = None) -> int:
             if len(cells) < 4:
                 continue
             fig, orig, verdict, basis = cells[0], cells[1], cells[2], cells[3]
+            # 列序：| 图 | 原判定 | 裁定 | 依据 | 裁定人 | 针对报告 |
+            # 只取十六进制字符 —— 单元格里常写成 `ABCD…`（反引号），直接比较会差一位。
+            target = "".join(ch for ch in (cells[5] if len(cells) > 5 else "").upper()
+                             if ch in "0123456789ABCDEF")
             if fig in ("图", "----", "---") or set(fig) <= set("-: "):
                 continue
             # 只认「可用」，且依据必须**含数字**（= 有实测值，不是一句主观判断）
             if verdict == "可用" and re.search(r"\d", basis):
-                adj[fig] = (basis, adj_mtime)
+                adj[fig] = (basis, target)
 
     pages = sorted(content.rglob("index.md"))
     errs: list[str] = []
@@ -254,8 +271,9 @@ def main(argv: list[str] | None = None) -> int:
         # 根因：**裁定是「对某一次判定的反驳」，不是「对这张图的永久结论」。**
         # 把它当成后者，就等于把「那次判定错了」扩写成「这张图以后都没问题」。
         #
-        # ⇒ 判据：**裁定的生效范围 = 它作出时已存在的那些报告。**
-        #   报告比裁定更新 ⇒ 裁定不适用 ⇒ 那份新报告必须被单独处置（重新裁，或照它改）。
+        # ⇒ 判据：**裁定的生效范围 = 它明确钉住的那一份报告。**
+        #   按**内容哈希**钉（不按时间 —— 见文件上方 attach 时的长注：干净检出里 mtime 全相同）。
+        #   报告对不上 ⇒ 裁定不适用 ⇒ 那份新报告必须被单独处置（重新裁，或照它改）。
         #   **这与 `附录五`（一次复核的结论只对它所看的版本成立）是同一个形状，只是对象换成了裁定。**
         if adj:
             kept = []
@@ -263,9 +281,17 @@ def main(argv: list[str] | None = None) -> int:
                 name = item.split(":")[0]
                 rep = vdir / f"{root.name}__{name}.md"
                 if name in adj:
-                    basis, adj_mtime = adj[name]
-                    if rep.exists() and rep.stat().st_mtime > adj_mtime:
-                        reason = f"{name}:裁定早于这份新报告（裁定 {adj_mtime:.0f} < 报告 {rep.stat().st_mtime:.0f}）"
+                    basis, target = adj[name]
+                    cur = (hashlib.sha256(rep.read_bytes()).hexdigest().upper()
+                           if rep.exists() else "")
+                    if not target:
+                        reason = f"{name}:裁定未钉住报告哈希（第 5 列「针对报告」为空）"
+                        kept.append(reason)
+                        print(f"      ! {reason} ⇒ 裁定不适用，按新报告处置")
+                        continue
+                    if not cur.startswith(target[:16]):
+                        reason = (f"{name}:裁定针对的是另一份报告"
+                                  f"（裁定钉 {target[:16]} / 现值 {cur[:16] or '无报告'}）")
                         kept.append(reason)
                         print(f"      ! {reason} ⇒ 裁定不适用，按新报告处置")
                         continue
