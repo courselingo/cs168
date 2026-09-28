@@ -133,7 +133,24 @@ def main(argv: list[str] | None = None) -> int:
     root = pathlib.Path(args.root).resolve()
     files = sorted((root / "content").rglob("index.md"))
     if args.section:
-        files = [f for f in files if args.section in str(f)]
+        # ★ 路径分隔符必须归一化再比。
+        #   旧写法是 `args.section in str(f)`，而 Windows 上 str(f) 用**反斜杠**，
+        #   于是 `--section papers/mapreduce`（正斜杠）永远匹配不上 ——
+        #   **扫了 0 个文件，却打印「合计 0 处」，看起来像一次干净的通过。**
+        #   这是 mit65840-author 实测发现的（他用 `--section mapreduce` 得到 39 处，
+        #   而 `--section papers/mapreduce` 得到 0 处）。
+        #   **一个匹配不到任何文件的过滤器，是「绿灯的理由是错的」的又一个变体。**
+        want = args.section.replace("\\", "/").strip("/")
+        files = [f for f in files
+                 if want in str(f.relative_to(root)).replace("\\", "/")]
+        if not files:
+            print(f"✗ --section {args.section!r} 没有匹配到任何 index.md。")
+            print(f"  这不是「没有问题」，是**过滤器写错了**。")
+            print(f"  content/ 下的实际小节：")
+            for p in sorted((root / "content").iterdir()):
+                if p.is_dir():
+                    print(f"    {p.name}")
+            return 2
 
     total = 0
     WHY = {c: w for c, w, _ in PATTERNS}
