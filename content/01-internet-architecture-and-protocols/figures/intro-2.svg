@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 313" width="760" height="313"
      role="img" aria-labelledby="fig-intro-2-title fig-intro-2-desc">
-  <title id="fig-intro-2-title">它不是又一种网络技术，而是把已有网络连起来</title>
-  <desc id="fig-intro-2-desc">左列「再设计一套网络技术铺满全球」是 CourseLingo 的教学化简，不是源里的说法：源只说互联网不是又一种网络技术，而是把不同的网络连起来。左列的两条原因是网络技术早就存在、十万多个网络各有运营者；右列是源的做法：各片网络保留自己的技术，只要共同协议一致就能互通。</desc>
+  <title id="fig-intro-2-title">不是又一种网络技术，而是把不同的网络连起来</title>
+  <desc id="fig-intro-2-desc">标题与右列都直接用源里的说法：不是又一种网络技术，而是把不同的网络连起来（说的是互联网）。左列「再设计一套网络技术铺满全球」是 CourseLingo 的教学化简，不是源里的说法；左列的两条原因是网络技术早就存在、十万多个网络各有运营者。右列是源的做法：各片网络保留自己的技术，只要共同协议一致就能互通。</desc>
 
   <defs>
     <style>

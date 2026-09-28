@@ -496,12 +496,12 @@ CB114BDF7CE8F98E  scripts/check_figures.py
 现补齐。**本记录自身不列**（自指字段无法在表内自证），其余全部落表。
 
 ```text
-SHA256（2026-09-28，第八轮修正后冻结版 t2）
+SHA256（2026-09-28，第九轮修正后冻结版 t3）
 
 内容
-FE842A39DE617F3F32817C4FA85FBC74C6FA7E2B5949845AABABFD9DFA5A662E  content/01-internet-architecture-and-protocols/index.md
-993F0BFA6C179C94AC14778F9FF959655EDD3169203E076089BB84BD149F6321  content/01-internet-architecture-and-protocols/figures/intro-1.svg
-4D721C125262A2D2D1F1E0AEC676E405C8C787D4994CD4B648FDC6A0E5F4E863  content/01-internet-architecture-and-protocols/figures/intro-2.svg
+0CB7213F85BDEB38ADCFB9224F7B30136A226C062C64D8CD10B9E61A434BFB0F  content/01-internet-architecture-and-protocols/index.md
+E7728038906505813E72F713782E07595396DF2599434720DE7650B77D5CA5AA  content/01-internet-architecture-and-protocols/figures/intro-1.svg
+5BF5093CA99719B69A79EC9DE281CDCC5CBE355E1C3E638257D6C747CECC5465  content/01-internet-architecture-and-protocols/figures/intro-2.svg
 100599B1E92BB78CA987C0929C25A4B5A4E1360752A16342879AB5E34F053B02  content/01-internet-architecture-and-protocols/figures/intro-3.svg
 1864938874C28F460041739DA27850AFB74BE561051424A4C630C773A450D206  content/01-internet-architecture-and-protocols/figures/intro-4.svg
 B40C8ACF2356F50D7918D29DAC57D972DBE8F608F238735331F6D39D816E8EEF  content/01-internet-architecture-and-protocols/figures/intro-5.svg
@@ -519,13 +519,17 @@ E7368F5683777D0D6DBAA4DD627B75998B669BCCF312C1953A87568AFDD2CFF8  course.toml
 9B170A0301AF72AE2ABE1E8666818DC0BF9BD6A906FFE8C01C7003A115CD50AC  scripts/layout_check.py
 550D856533345E7B0D51A6BB016D60C35D36DCC51BD95722EE92471108086E8C  scripts/validate.py
 CB114BDF7CE8F98EFDE26F502888D4705987D3848A4694A1EBB434F7707D7FA1  scripts/check_figures.py
-65CD5EC03180F496B2F6798758FFC08416C729187621A0B2034D9DF243C22285  scripts/check_reviewed.py
+26CC05939E915B7FE6E3725910601EE9DF22CF216F94F6816A5B9F5A0B4D6FE2  scripts/check_reviewed.py
+F3DEE789AB6912DBC93E62FE2A6F4048C273F3E8A722ECF8D43185945ACB1D5A  scripts/check_evidence.py
 ```
 
-> **第八轮的工具变化**：`check_reviewed.py` 在这一轮里**改了两次**
-> （`76B5967B…` 原版[有 Windows 编码 bug] → `CAE465E9…` Lead 首修 → **`65CD5EC0…` 现版**）。
-> **本记录里的验收结论都是用 `65CD5EC0…` 那版跑出来的**；其余六个工具未变。
-> 每一次换版都意味着**旧判定不可复现** —— 所以这行必须跟着改，不能只改内容哈希。
+> **第九轮的工具变化，值得单独记**：`check_reviewed.py` **又改了两次**
+> （`65CD5EC0…` → … → **`26CC0593…`**），并且**新增了 `check_evidence.py`**（派活前查「证据在不在磁盘上」，exit 0）。
+> ⇒ **这正是「工具也是会变的参照」的活标本**：本轮我两次算完哈希、表刚写完，工具就变了。
+> **所以「验收所依据的工具版本」必须在冻结那一刻重算一次**，不能沿用上一轮的表 —— 我照做了（上表为最后一次同步后实测）。
+
+> **第九轮只动了三样**：`index.md`（`intro-1` 的 alt）、`intro-1.svg`、`intro-2.svg`（只改标题与 desc，几何未动）。
+> 工具与其余七个字段与 t2 相同 —— **同一张表既要能复现内容，也要能复现判定环境**。
 
 > **第七轮的工具变化（必须记）**：`check_reviewed.py` 与 `direction_scan.py` 都换了版本
 > （`76B5967B…` → `CAE465E9…` / `5D1A2125…` → `8A30C979…`）——
@@ -649,6 +653,26 @@ audit_content.py
    （我第一版写成 0px，被房规报了两条 warning）。
    ⇒ 这两处**我按房规做，并把房规原文当依据留档** —— 若复核者坚持「必须相接」，那要改的是**房规**，不是这张图。
 
+### 10.12 第九轮：`intro-1` 两条（都真）+ `intro-2` **只改文字那条**
+
+Lead 已把「视觉复核结论必须按类型分开处理」（**文字类直接采信 / 几何类认定前必须实测 / 不得用几何主张推翻实测**）
+立成 `quality-audit.md` 附录十一，并建了裁定机制 `docs/audit/visual-adjudications.md`。本轮照它分：
+
+| 图 | 复核意见 | 类型 | 处置 |
+| --- | --- | --- | --- |
+| `intro-1` | 注释「为应用提供承载」**归属不明**：左置、只靠近第一支箭头，与另两支很远，读者只能猜它是三支箭头的统一说明 | **文字类（指代）** | 采纳。注释**移到图下居中并自带范围**：「**三支向上箭头表示同一件事：下面这一层为上面三片应用提供承载**」——参照 `intro-4` 的做法给归属第二条依据（**措辞点名指代对象**，且全图只有这一条注释，无竞争候选） |
+| `intro-1` | 品牌名大小写：`amazon / twitter / chatGPT` | **文字类** | 采纳，改为 `Amazon、Twitter`、`ChatGPT` |
+| `intro-2` | **标题与落款对同一句源话用了两个措辞**：标题写「而是把**已有**网络连起来」，落款却写「源只说……而是把**不同**的网络连起来」 | **文字类** | 采纳。标题改为与落款所引源话**逐字节一致**：「不是又一种网络技术，而是把不同的网络连起来」（`-ceq` 实测 True） |
+| `intro-2` | 「左列比右列宽五分之一以上，整体偏左」 | **几何类** | **不改。** Lead 读 SVG 属性核实：六个框全 `width=344`、左列 `x=22..366`、右列 `x=394..738`、三行完全一致；且这是**同一条意见第三次**出现（「宽约一成」→ 栅格实测 **0.0%** → 「宽五分之一以上」）。**已由 `visual-adjudications.md` 裁定为「不成立」** |
+
+**记一笔为什么这条分法重要**：这条几何主张，本项目**差点为它改两次一张已被实测证明正确的图**（第二轮与这一轮）。
+按类型分开之后，同一份报告里**真的那条（标题/落款冲突）不再被连同假的几何那条一起丢掉** ——
+此前只有「整条采信」或「整条怀疑」两种做法，**两种都会出错**。
+
+**教训（自查）**：我验证 `intro-1` 的品牌名时写了 `-match '>amazon|>twitter'`，得到「小写残留 True」的**假警报** ——
+**PowerShell 的 `-match` 默认不区分大小写**；改用 `-cmatch` 后确认文件里只有正确大小写。
+**又一次「工具的行为要先用实验确认」**（与 1.2/1.8 那次同源）。
+
 ---
 
 ## 11. 机检（六项；作者自查，仅代表机检通过）
@@ -665,9 +689,9 @@ $t = "D:\Vibe_Workspace\courselingo\courses\cs168"
 & $py "$t\scripts\layout_check.py" $t                      # 9 图 → 最大组 1（11%），阈值 1/3，exit 0
 ```
 
-正文 5190 汉字；破折号 0；加粗 0；问号 3；`[[term:]]` 42 处；**最长句 82 汉字**（上限 120，余 38）、平均 23.49（按 `audit_content.py` 自带的 `sentences()`）；密度 **1.73**、尾部缺口 **1183**（上限 1200，余 17）。
+正文 5214 汉字；破折号 0；加粗 0；问号 3；`[[term:]]` 42 处；**最长句 82 汉字**（上限 120，余 38）、平均 23.49（按 `audit_content.py` 自带的 `sentences()`）；密度 **1.73**、尾部缺口 **1183**（上限 1200，余 17）。
 （§10.4 更正：此前的「平均句长 23.5 / 23.7」来自作者自写的切分器，**口径不对**，以工具自身为准。
-§10.8 更正：alt 计入汉字数，但不计入句子 —— 上面这 5062 里含 alt。）
+§10.8 更正：alt 计入汉字数，但不计入句子 —— 上面这个数字里含 alt。）
 工具版本见 §10.5（内容哈希与工具哈希必须成对记录）。
 
 > **机检全绿不等于讲懂了。** 事实、完整、讲懂、诚实只能由「不是作者的审校人 + 一个没读过源材料的陌生读者」判断 —— 见 `quality-audit.md` §10。
