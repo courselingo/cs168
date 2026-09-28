@@ -1,0 +1,200 @@
+# CourseLingo 术语表 —— 本项目的核心资产
+#
+# 规则：key 默认由 en 推导（小写、空格转连字符）。
+#   例如 en = "local area network" -> 正文中写 [[term:local-area-network]]
+# 正文里出现 glossary 的 en 原词却忘了打标记，validate.py 会报 WARN（术语漂移的前兆）。
+# 每新增一条，都要问：这个译法在全课程都成立吗？
+#
+# 本表覆盖 CS168 前几讲的公共词汇（第 1 讲 + 分层与协议这一条线）。
+# 冻结声明会在术语评审后补进 PR 描述，见 docs/SOP.md §4。
+
+# ── 总体概念 ──────────────────────────────────────────────
+[[term]]
+en = "Internet"
+zh = "互联网"
+notes = "被互连起来的全球网络之网；与「万维网」不是一回事"
+
+[[term]]
+en = "World Wide Web"
+zh = "万维网"
+aliases = ["Web"]
+notes = "跑在互联网之上的应用集合（浏览器里访问的那部分）"
+
+[[term]]
+en = "infrastructure"
+zh = "基础设施"
+notes = "支撑数据传送的硬件与软件总和"
+
+[[term]]
+en = "architecture"
+zh = "架构"
+notes = "本课程里指「设计目标、约束与取舍的总体安排」，不是代码结构"
+
+[[term]]
+en = "trade-off"
+zh = "权衡"
+notes = "一项设计换来的好处与付出的代价，两者必须一起看"
+
+# ── 协议与标准 ────────────────────────────────────────────
+[[term]]
+en = "protocol"
+zh = "协议"
+notes = "通信双方约定的报文格式与应答规则"
+
+[[term]]
+en = "syntax"
+zh = "语法"
+notes = "报文长什么样：字段怎么摆、比特怎么排"
+
+[[term]]
+en = "semantics"
+zh = "语义"
+notes = "收到报文之后该做什么、什么条件下才允许发"
+
+[[term]]
+en = "RFC"
+zh = "RFC 文档"
+aliases = ["Request for Comments"]
+notes = "互联网标准的公开文档编号体系；协议常以 RFC 编号被引用"
+
+[[term]]
+en = "IETF"
+zh = "互联网工程任务组"
+notes = "负责互联网协议标准化的组织，RFC 由它发布"
+
+[[term]]
+en = "IEEE"
+zh = "电气电子工程师学会"
+notes = "偏底层电气与链路层的标准组织"
+
+[[term]]
+en = "interoperability"
+zh = "互操作性"
+notes = "不同厂商、不同运营商实现之间能直接对接"
+
+# ── 运营与规模 ────────────────────────────────────────────
+[[term]]
+en = "federation"
+zh = "联邦"
+notes = "各自独立运营、又必须互相配合的一群主体构成一个整体"
+
+[[term]]
+en = "ISP"
+zh = "互联网服务提供商"
+aliases = ["Internet service provider"]
+notes = "拥有并运营互联网设施的组织，如运营商与云厂商"
+
+[[term]]
+en = "scalability"
+zh = "可扩展性"
+notes = "规模涨几个数量级之后设计还成立"
+
+[[term]]
+en = "asynchronous"
+zh = "异步"
+notes = "发出去之后不等对端回话就继续往下做"
+
+# ── 网络元件 ──────────────────────────────────────────────
+[[term]]
+en = "end host"
+zh = "端主机"
+notes = "真正收发数据的机器：服务器、笔记本、手机"
+
+[[term]]
+en = "switch"
+zh = "交换机"
+notes = "自己不收发数据、只为端主机转发数据的机器"
+
+[[term]]
+en = "router"
+zh = "路由器"
+notes = "在多个网络之间转发分组的设备；教材里与交换机常混用"
+
+[[term]]
+en = "link"
+zh = "链路"
+notes = "两台机器之间的一条直接连接，用什么技术都可以"
+
+[[term]]
+en = "local area network"
+zh = "局域网"
+aliases = ["LAN"]
+notes = "用链路把一片区域内的机器连起来形成的小网络"
+
+[[term]]
+en = "packet"
+zh = "分组"
+aliases = ["包"]
+notes = "在网络里被整块传送的数据单元；本书统一用「分组」"
+
+[[term]]
+en = "header"
+zh = "首部"
+notes = "附加在数据前面的元信息，交代这包数据该去哪儿、怎么处理"
+
+[[term]]
+en = "IP address"
+zh = "IP 地址"
+notes = "全局范围内用来指认一台机器的编号"
+
+# ── 分层 ──────────────────────────────────────────────────
+[[term]]
+en = "layering"
+zh = "分层"
+notes = "把「把数据送到地球另一端」拆成几件各自能独立完成的小事"
+
+[[term]]
+en = "encapsulation"
+zh = "封装"
+notes = "上层整块数据被放进下层载荷里，下层再补自己的首部"
+
+[[term]]
+en = "physical layer"
+zh = "物理层"
+notes = "把比特变成能在介质上传输的信号"
+
+[[term]]
+en = "link layer"
+zh = "链路层"
+notes = "在一条链路或一片局域网内把分组送到对端"
+
+[[term]]
+en = "network layer"
+zh = "网络层"
+notes = "跨越多片局域网把分组送到任意目的地；教材里也叫 Internet layer"
+
+[[term]]
+en = "transport layer"
+zh = "传输层"
+notes = "在端主机之间提供进程级的数据通道"
+
+[[term]]
+en = "application layer"
+zh = "应用层"
+notes = "直接面向用户的那一层，如万维网、DNS、音视频"
+
+[[term]]
+en = "routing"
+zh = "路由"
+notes = "决定一条路怎么走：算出路由表"
+
+[[term]]
+en = "forwarding"
+zh = "转发"
+notes = "按已有的路由此刻把分组送出去；与「路由」是两件事"
+
+# ── 后续几讲会用到，先冻结译法 ──────────────────────────────
+[[term]]
+en = "congestion control"
+zh = "拥塞控制"
+notes = "根据网络拥堵程度调整发送速率"
+
+[[term]]
+en = "bandwidth"
+zh = "带宽"
+notes = "一条链路每秒能送多少比特"
+
+[[term]]
+en = "data center"
+zh = "数据中心"
+notes = "把成千上万台服务器放在一起的机房集群"

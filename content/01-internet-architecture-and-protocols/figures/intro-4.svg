@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 309" width="760" height="309"
+     role="img" aria-labelledby="fig-intro-4-title fig-intro-4-desc">
+  <title id="fig-intro-4-title">协议管两件事：报文长什么样，收到之后做什么</title>
+  <desc id="fig-intro-4-desc">Alice 与 Bob 之间按固定顺序交换四条报文：Alice 先说 hello，Bob 回 hello，Alice 才请求文件，Bob 再回文件内容。顺序本身就是约定的一部分：省掉开头的问候，双方就无法确认彼此在线。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="309" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">协议管两件事：报文长什么样，收到之后做什么</text>
+
+  <!-- 两端：Alice 在左，Bob 在右 -->
+  <rect x="22" y="66" width="344" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="194" y="88" font-size="12" fill="#1e40af" text-anchor="middle">Alice（发送方）</text>
+
+  <rect x="394" y="66" width="344" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="566" y="88" font-size="12" fill="#166534" text-anchor="middle">Bob（接收方）</text>
+
+  <!-- 两端的时间轴 -->
+  <path d="M194,102 L 194,240" fill="none" stroke="#94a3b8" stroke-dasharray="6,4"/>
+  <path d="M566,102 L 566,240" fill="none" stroke="#94a3b8" stroke-dasharray="6,4"/>
+
+  <!-- 四条报文，顺序固定 -->
+  <path d="M199,118 L 555,118" fill="none" stroke="#3b82f6" marker-end="url(#arrow)"/>
+  <path d="M561,152 L 205,152" fill="none" stroke="#22c55e" marker-end="url(#arrow)"/>
+  <path d="M199,186 L 555,186" fill="none" stroke="#3b82f6" marker-end="url(#arrow)"/>
+  <path d="M561,220 L 205,220" fill="none" stroke="#22c55e" marker-end="url(#arrow)"/>
+
+  <text x="380" y="138" font-size="11" fill="#1e293b" text-anchor="middle">① Alice 先说 hello</text>
+  <text x="380" y="172" font-size="11" fill="#1e293b" text-anchor="middle">② Bob 回一个 hello</text>
+  <text x="380" y="206" font-size="11" fill="#1e293b" text-anchor="middle">③ Alice 请求文件</text>
+  <text x="380" y="240" font-size="11" fill="#1e293b" text-anchor="middle">④ Bob 回文件内容</text>
+
+  <text x="380" y="262" font-size="12" fill="#1e293b" text-anchor="middle">语法：这几句话在线上写成一串 0 和 1</text>
+  <text x="380" y="284" font-size="12" fill="#1e293b" text-anchor="middle">语义：Bob 先 hello，Alice 才允许请求文件</text>
+</svg>

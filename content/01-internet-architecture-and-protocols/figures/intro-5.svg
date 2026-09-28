@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 243" width="760" height="243"
+     role="img" aria-labelledby="fig-intro-5-title fig-intro-5-desc">
+  <title id="fig-intro-5-title">联邦的僵局：新功能要等所有人一起改</title>
+  <desc id="fig-intro-5-desc">想加一个新功能，可别的网络不认识它，于是必须所有人都改才用得上；而回环上的那句话说明为什么进度会卡住：没人愿意先改，因为先改对先改的人没有好处。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="243" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">联邦的僵局：新功能要等所有人一起改</text>
+
+  <rect x="22" y="76" width="220" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="132" y="98" font-size="12" fill="#1e40af" text-anchor="middle">我想加一个新功能</text>
+  <text x="132" y="116" font-size="12" fill="#1e40af" text-anchor="middle">只有我有</text>
+
+  <rect x="270" y="76" width="220" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="98" font-size="12" fill="#1e40af" text-anchor="middle">可别人的网络</text>
+  <text x="380" y="116" font-size="12" fill="#1e40af" text-anchor="middle">不认识这个功能</text>
+
+  <rect x="518" y="76" width="220" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="628" y="98" font-size="12" fill="#1e40af" text-anchor="middle">那就得所有人都改</text>
+  <text x="628" y="116" font-size="12" fill="#1e40af" text-anchor="middle">才用得上</text>
+
+  <!-- 一路向右的推进 -->
+  <path d="M247,103 L 259,103" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+  <path d="M495,103 L 507,103" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+
+  <!-- 回环：又绕回起点，于是谁都不愿意先动 -->
+  <path d="M628,135 C 628,196 132,196 132,141" fill="none" stroke="#ec4899" marker-end="url(#arrow)"/>
+  <text x="380" y="218" font-size="12" fill="#9d174d" text-anchor="middle">可没人愿意先改</text>
+</svg>

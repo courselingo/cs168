@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 287" width="760" height="287"
+     role="img" aria-labelledby="fig-intro-6-title fig-intro-6-desc">
+  <title id="fig-intro-6-title">消息在路上时，本机已经又执行了几百万条指令</title>
+  <desc id="fig-intro-6-desc">同一条时间轴上的两件事：上半是消息跨半个地球在网络上传输的几十毫秒，下半是这段时间里本机 CPU 连续执行的指令。数据跑不过光速，所以发出去的那一刻，消息里描述的世界已经开始过期。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="287" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">消息在路上时，本机已经又执行了几百万条指令</text>
+
+  <!-- 时间轴上：消息在途 -->
+  <rect x="22" y="76" width="716" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="98" font-size="12" fill="#1e40af" text-anchor="middle">消息在网络上传输</text>
+  <text x="380" y="116" font-size="12" fill="#1e40af" text-anchor="middle">跨半个地球，路上要待几十毫秒</text>
+
+  <!-- 时间轴 -->
+  <path d="M22,176 L 738,176" fill="none" stroke="#64748b"/>
+  <path d="M22,170 L 22,182" fill="none" stroke="#64748b"/>
+  <path d="M738,170 L 738,182" fill="none" stroke="#64748b"/>
+  <text x="22" y="202" font-size="11" fill="#64748b">消息发出</text>
+  <text x="738" y="202" font-size="11" fill="#64748b" text-anchor="end">消息到达</text>
+
+  <!-- 时间轴下：同一段时间里的指令流 -->
+  <path d="M22,231 L 738,231" fill="none" stroke="#f59e0b" stroke-width="2" stroke-dasharray="3,12"/>
+  <text x="380" y="262" font-size="12" fill="#b45309" text-anchor="middle">同一段时间里，本机 CPU 又执行了几百万条指令</text>
+</svg>

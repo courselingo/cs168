@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 303" width="760" height="303"
+     role="img" aria-labelledby="fig-intro-7-title fig-intro-7-desc">
+  <title id="fig-intro-7-title">四个目标互相拉扯，没有一项做到最优</title>
+  <desc id="fig-intro-7-desc">全球连通、各自独立运营、成本可控、允许演进四项要求同时压在互联网的设计上，箭头都指向中心：任何一项被推到极致都会挤掉另一项。互联网不是最优解，而是把每一项都放进了可接受的范围。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="303" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">四个目标互相拉扯，没有一项做到最优</text>
+
+  <rect x="280" y="72" width="200" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="94" font-size="12" fill="#1e40af" text-anchor="middle">全球连通</text>
+
+  <rect x="22" y="145" width="230" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="137" y="167" font-size="12" fill="#1e40af" text-anchor="middle">各自独立运营</text>
+
+  <rect x="280" y="136" width="200" height="54" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380" y="158" font-size="12" fill="#6b21a8" text-anchor="middle">互联网的设计目标</text>
+  <text x="380" y="176" font-size="12" fill="#6b21a8" text-anchor="middle">四项都要顾到</text>
+
+  <rect x="508" y="145" width="230" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="623" y="167" font-size="12" fill="#1e40af" text-anchor="middle">成本可控</text>
+
+  <rect x="280" y="218" width="200" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="240" font-size="12" fill="#1e40af" text-anchor="middle">允许演进</text>
+
+  <!-- 四项要求都压向同一个设计 -->
+  <path d="M380,113 L 380,125" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+  <path d="M257,163 L 269,163" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+  <path d="M503,163 L 491,163" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+  <path d="M380,213 L 380,201" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+
+  <text x="380" y="278" font-size="12" fill="#64748b" text-anchor="middle">互联网不是最优解，而是把每一项都放进了可接受的范围</text>
+</svg>

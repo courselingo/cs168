@@ -1,0 +1,139 @@
+# CourseLingo 课程元数据
+
+[course]
+id = "cs168"
+title = "Introduction to the Internet: Architecture and Protocols"
+title_zh = "计算机网络导论"
+institution = "UC Berkeley"
+course_number = "CS 168"
+homepage = "https://cs168.io/"
+source_language = "en"
+target_language = "zh"
+
+# ★ 授权闸门。逐页核实记录见下面的 notes 与平台仓库
+# docs/course-selection.md §3.2 / §5。
+[license]
+# 教材（textbook.cs168.io）的条款**已实际核实**：根页 License 段逐字给出 CC BY-SA 4.0，
+# 附 rel="license" 与徽章。核实对象与逐页边界见 notes。
+verified = true
+terms = "CC BY-SA 4.0（在线教材 textbook.cs168.io；课程站 sp25/fa26 未声明任何许可）"
+evidence_url = "https://textbook.cs168.io/"
+checked_at = "2026-09-28"
+allows_commercial = true     # CC BY-SA 4.0 无 NC —— 本站是全场唯一「译文可商用」的一门
+allows_derivatives = true    # 翻译属于改编，BY-SA 允许；须以同协议发布
+share_alike = true           # ★ SA 传染：由教材衍生的产出必须以 CC BY-SA 4.0 发布
+
+# 教材这一份材料允许转载（CC BY-SA 4.0，需署名 + 同协议）；
+# 课程站的材料（讲义/项目/讨论）一份声明都没有。
+# 一个课程级字段表达不了这两件事，按更保守的一侧填 unknown：
+# 我们**不转载课程站的原始材料**。教材是否转载，看将要产出的具体页面。
+redistribution = "unknown"
+
+# 课程专属补充条款：banners.py 会把它附在每页授权提示条的最后。
+# 引的是课程站 **Collaboration Policy** 的原文（2026-09-28 抓 /policies/ 逐字）。
+# 注意这是**学术诚信条款，不是许可条款** —— 但结论一样是「我们不做」。
+banner_extra = "本课程的 Collaboration Policy 明确要求不得公开项目与作业解答（逐字：「DO NOT POST SOLUTIONS TO PROJECTS ONLINE.」「Publicly posting your solutions for any reason, including for your resume.」「This applies even after the semester is over.」）⇒ 解答类内容永久排除，不因授权宽严而改变。"
+
+notes = '''
+逐页核实（2026-09-28，本机 curl -x socks5h://127.0.0.1:7892 抓原始 HTML 后逐字检索）。
+检索词：rel="license"、creativecommons.org/licenses/*、i.creativecommons.org、copyright、
+all rights reserved、licen[cs]e。**从不过滤标签后再搜**（徽章证据全在 href 里）。
+
+★ 抓到的必须**确实是那一页**（对应 catalog 坑十二 / 坑十三）。
+  章节 URL 一律从根页的**导航链接**里取，不靠猜；逐页核对 <title> 与字节数，确认不是 404 空壳。
+  实测（字节数 / title）：/ 22,239 B（Home）、/intro/intro.html 28,259 B（Introduction to the
+  Internet）、/intro/layers.html 34,565 B（Layers of the Internet）、/intro/architecture.html
+  30,492 B（Network Architecture）、/glossary.html 41,561 B（Glossary）、/routing/bgp.html
+  37,856 B（Border Gateway Protocol (BGP)）—— 五个字节数与标题**各不相同**，是真页面。
+  反例：课程站的 /schedule/ /assignments/ /projects/ /notes/ 全部返回 **13,850 B、title 为
+  「404 | CS 168 …」**。多个 URL 字节数完全相同 = 空壳信号，在空壳上数「0 处声明」没有意义。
+  另：cs168.io 只是 285 B 的跳转壳（<title>Redirecting to https://fa26.cs168.io</title>），
+  真站在当学期子域，已跟到跳转终点抓 fa26。
+
+一、教材站 textbook.cs168.io —— 唯一取得许可依据的来源
+  https://textbook.cs168.io/                 rel="license"=2  CC 链接=2  徽章=1  版权声明=0
+    逐字：「This work is licensed under a Creative Commons Attribution-ShareAlike 4.0
+    International License.」所在小节标题为「License」，与 Disclaimer / Diagrams /
+    PDF Version / Corrections / Source and Changelog 同属该页的前言部分。
+    HTML：<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+          <img alt="Creative Commons License" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" />
+  https://textbook.cs168.io/intro/intro.html          rel="license"=0  CC 链接=0  版权声明=0
+  https://textbook.cs168.io/intro/layers.html         rel="license"=0  CC 链接=0  版权声明=0
+  https://textbook.cs168.io/intro/architecture.html   rel="license"=0  CC 链接=0  版权声明=0
+  https://textbook.cs168.io/glossary.html             rel="license"=0  CC 链接=0  版权声明=0
+  https://textbook.cs168.io/routing/bgp.html          rel="license"=0  CC 链接=0  版权声明=0
+  ★ **各章页面本身没有声明**，声明只在根页。这与 6.824「徽章只在主页」形状相似，
+    差别在于：6.824 的主页是**站点页脚**里的通用徽章，而这里是**一部书的版权页（colophon）**，
+    句子主语是「This work」，且各章无任何相反声明（没有 "except where otherwise noted"）。
+    据此判 textbook = true；**这一条需要第二人独立复核**（SOP 阶段② 双人签字）。
+    若复核认为「必须逐章取证」，把 materials.textbook 改回 false 即可 —— 本讲是
+    explanation 模式，改与不改都不影响已产出的内容，影响的是将来能否出译文。
+
+二、课程站 —— 零声明，按未核实处理（B 级：仅原创讲解）
+  https://cs168.io/  → 跳转 https://fa26.cs168.io/（当前学期）
+  https://fa26.cs168.io/                 rel="license"=0  CC 链接=0  copyright=0  licen[cs]e=4
+  https://fa26.cs168.io/policies/        同上（licen[cs]e=4 全是图标库注释）
+  https://fa26.cs168.io/calendar/        同上
+  https://fa26.cs168.io/resources/       同上
+  https://sp25.cs168.io/                 同上
+  https://sp25.cs168.io/policies/        同上
+  https://sp25.cs168.io/calendar/        同上
+  那 4 次 "license" 命中**全部**是主题自带的图标库注释，逐字为：
+    <!-- Feather. MIT License: https://github.com/feathericons/feather/blob/master/LICENSE -->
+    <!-- Bootstrap Icons. MIT License: https://github.com/twbs/icons/blob/main/LICENSE.md -->
+  ⇒ 课程站**一个字都没有表态**。这就是 course-selection.md §1.5 坑九（「MIT 命中数不可用」）。
+
+三、讲义 / 幻灯片 / 视频 / 作业 —— 逐项**都未声明**
+  * 幻灯片：课程站 calendar 里指向的是 docs.google.com/presentation 外链（Google 平台条款）。
+  * 视频：指向 youtube.com/playlist 外链（YouTube 平台条款）。
+  * 讨论课材料：sp25.cs168.io/assets/discussions/*.pdf（站点自有文件，而站点无声明）。
+  * 项目：sp25/fa26 的 /proj1/ /proj2/ /proj3/ 页面 rel="license"=0、copyright=0。
+  * 作业答案：sp25 站上确实挂着 disc*-sols.pdf，而 /policies/ 的 Collaboration Policy
+    **逐字**要求：「DO NOT POST SOLUTIONS TO PROJECTS ONLINE.」「Posting solution code to any
+    assignment in a public place (e.g. a public git repository, a pull request visible to all
+    students, mediafire, …). This applies even after the semester is over.」「Publicly posting
+    your solutions for any reason, including for your resume.」
+    ⇒ 项目与作业解答**永久排除**，与授权宽严无关；已写进 banner_extra。
+    ⚠️ 这一段是学术诚信条款，**不是许可条款** —— 不能拿它当课程的许可依据来引用。
+
+四、教材仓库 berkeley-cs168/textbook —— 无 LICENSE 文件
+  default_branch = main（从仓库页 JSON 取得）；
+  main/LICENSE、master/LICENSE、gh-pages/LICENSE(.md/.txt) 全部 404（响应正文 "404: Not Found"）。
+  main/README.md 存在但**不含任何许可措辞**。
+  ⇒ 仓库侧无依据；教材的许可依据只有渲染后的根页。此项与 course-selection.md §5 第 10 项一致。
+
+结论（落到【按材料类型】的字段上，见下表）：
+  * textbook = true  —— 教材可翻译、可转载，须署名 + **以 CC BY-SA 4.0 发布衍生作品**；
+  * notes / slides / video / other = false —— 课程站材料未声明，只做原创讲解，
+    不产出逐字稿，不注入双语原文对照；
+  * 作业 / 项目答案：永久排除，不因授权宽严而改变。
+'''
+
+# 按材料类型逐项核实。一旦写了这个表，授权闸门就**只认它**，不再看 verified。
+# 所以绝不能顺手写一版全 false 的「假装核实过」——这里是逐页查过之后的真实取值。
+[license.materials]
+textbook = true      # 教材根页有逐字许可声明（见 notes 一）
+notes = false        # 课程站讲义/笔记：0 声明
+slides = false       # 幻灯片在 Google Slides 外链，平台条款另计，未核实
+video = false        # 视频在 YouTube 外链，平台条款另计，未核实
+other = false        # 项目页、讨论课 PDF：站内自有文件，但站点 0 声明
+
+[output]
+default_mode = "explanation"
+
+# ── 内容审计的「点名对象」（audit_content.py 读这里）──────────────────
+# 通用脚本里的默认名单偏分布式系统；计算机网络课点的是协议、工具与命令行。
+[audit]
+named_systems = [
+  "IP", "IPv4", "TCP", "UDP", "TCP/IP", "DNS", "HTTP", "HTTPS", "TLS", "QUIC",
+  "BGP", "OSPF", "Ethernet", "Wi-Fi", "ARP", "DHCP", "NAT", "RFC", "socket",
+  "Wireshark", "traceroute", "ping", "mininet", "Linux", "Chrome",
+  "Firefox", "Zoom", "AT&T", "Amazon Web Services", "Netflix",
+]
+named_systems_min = 5
+
+# ── 站点（GitHub Pages）──────────────────────────────────────────────
+# build_site.py 用这两项生成 MkDocs 的 repo_url / site_url。
+[site]
+repo = "courselingo/cs168"
+url = "https://courselingo.github.io/cs168/"
