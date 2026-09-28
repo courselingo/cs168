@@ -125,6 +125,24 @@ def main(argv: list[str] | None = None) -> int:
         ad = root.parent.parent / "courselingo" / "docs" / "audit"  # 平台仓兜底
     vdir = root.parent.parent / "preview" / "visual-review"
 
+    # ★ 实测裁定表：允许「已实测证伪的复核结论」被显式覆盖。
+    #   规则见 quality-audit.md 附录八 / 附录十一，说明见本文件末尾。
+    adj_path = ad / "visual-adjudications.md"
+    adjudications: dict[str, str] = {}
+    if adj_path.exists():
+        for ln in adj_path.read_text(encoding="utf-8", errors="replace").splitlines():
+            if not ln.strip().startswith("|"):
+                continue
+            cells = [c.strip() for c in ln.strip().strip("|").split("|")]
+            if len(cells) < 4:
+                continue
+            fig, orig, verdict, basis = cells[0], cells[1], cells[2], cells[3]
+            if fig in ("图", "----", "---") or set(fig) <= set("-: "):
+                continue
+            # 只认「可用」，且依据必须**含数字**（= 有实测值，不是一句主观判断）
+            if verdict == "可用" and re.search(r"\d", basis):
+                adjudications[fig] = basis
+
     pages = sorted(content.rglob("index.md"))
     errs: list[str] = []
     notes: list[str] = []
@@ -211,6 +229,16 @@ def main(argv: list[str] | None = None) -> int:
                     h = hashlib.sha256(f.read_bytes()).hexdigest().upper()
                     if not h.startswith(recorded[:16]) and not recorded.startswith(h[:16]):
                         bad.append(f"{f.stem}:可用（但报告核的是旧版：报告 {recorded[:16]} / 现值 {h[:16]}）")
+        # ★ 应用实测裁定：若某条「需小修」已被实测证伪并留档，则移出阻塞列表。
+        if adjudications:
+            kept = []
+            for item in bad:
+                name = item.split(":")[0]
+                if name in adjudications:
+                    print(f"      · {name}：复核结论被实测裁定覆盖（{adjudications[name][:40]}…）")
+                    continue
+                kept.append(item)
+            bad = kept
         if bad:
             prob.append("配图有这样未处理的复核结论：" + ", ".join(bad[:8]))
         if unreadable:
