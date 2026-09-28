@@ -2,7 +2,7 @@
 title = "互联网是怎么连起来的：分层与协议"
 lecture = 1
 slug = "internet-architecture-and-protocols"
-status = "draft"
+status = "reviewed"
 source_kind = "textbook"
 source_url = "https://textbook.cs168.io/intro/intro.html"
 source_title = "Introduction to the Internet"
