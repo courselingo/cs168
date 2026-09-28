@@ -276,7 +276,7 @@ CA0E3C7EB34BD121235A25917E4365C7D4DEC1274674B705ACAB2D712E26FF5A  content/01-int
 7454126C553452161C4D4CB053BB0A6418C3F4BFEF29C231C70D883EEB87A1B3  glossary.toml
 ```
 
-> 本记录自己的哈希不列在此表：写入本表这个动作就会改变它（自指）。它在**交付消息**里给出。
+> 本记录自己的哈希不列在此表：写入本表这个动作就会改变它（自指）。**其余全部哈希见 §10.9。**
 > **冻结约定**：复检期间如再改动，即为新版本、需重新核对 —— 上一轮就是因为文件在复检期间被改过
 > （line 111/117/159），核对者只能按某个版本下结论。
 
@@ -435,7 +435,7 @@ audit_content.py  A. 配图密度
 
 ```text
 SHA256（2026-09-28，第六次送检）
-见交付消息（先算后写；本记录自指字段照例不列）
+见 **§10.9**（内容 + 工具哈希全集；原先这里写「见交付消息」，等于记录里没有值，已改）
 ```
 
 **★ 验收所依据的工具版本必须一起钉住**（本轮工具在中途被更新过；SHA256 前 16 位）：
@@ -464,7 +464,43 @@ CB114BDF7CE8F98E  scripts/check_figures.py
 > 3. 往 §9–溯源区间加正文时，**先跑 `audit_content.py --strict`**，别靠阈值心算；顺带**记下工具版本**。
 
 > **写哈希的纪律（我在第五轮犯了两次）**：两次都先写占位哈希、后算真值，虽在同轮内替换，但**不该发生** ——
-> 冻结值只能"先算后写"，占位值一旦离开编辑过程就是假证据。第六轮起本记录不再列自指哈希。
+> 冻结值只能"先算后写"，占位值一旦离开编辑过程就是假证据。第六轮起本记录不再列**自指**哈希。
+
+### 10.9 冻结哈希全集（内容 + 工具成对；`check_reviewed.py` 要的那一条）
+
+**此前这里写的是「见交付消息」，等于记录里没有哈希值** —— 而 `check_reviewed.py` 四条件之一
+（附录七：内容哈希与工具哈希必须落在**审核记录里**）要的正是**记录内可查的值**，不是一句指路。
+现补齐。**本记录自身不列**（自指字段无法在表内自证），其余全部落表。
+
+```text
+SHA256（2026-09-28，提交 be276e9 冻结版）
+
+内容
+BB03F1A5751E451ED991C08701C1A4E3783391FA5A3A0818F7C1601A7FCF40DB  content/01-internet-architecture-and-protocols/index.md
+993F0BFA6C179C94AC14778F9FF959655EDD3169203E076089BB84BD149F6321  content/01-internet-architecture-and-protocols/figures/intro-1.svg
+4D721C125262A2D2D1F1E0AEC676E405C8C787D4994CD4B648FDC6A0E5F4E863  content/01-internet-architecture-and-protocols/figures/intro-2.svg
+100599B1E92BB78CA987C0929C25A4B5A4E1360752A16342879AB5E34F053B02  content/01-internet-architecture-and-protocols/figures/intro-3.svg
+6EE26D448F9CB6DDEE42E30F9A948493E5F5161C77BC8961867021FB7D2D5868  content/01-internet-architecture-and-protocols/figures/intro-4.svg
+9406D26FCCD9EAF5A615F8EDFA2CAB4C85FBD7D2803AAC72B17405E7A417A215  content/01-internet-architecture-and-protocols/figures/intro-5.svg
+2C78962701601ADFAB5BFDFD1BD4B3A5F9B573305C4D961DB2D4B198F7F5BC32  content/01-internet-architecture-and-protocols/figures/intro-6.svg
+E5CD664175C0C04F836EAD38B251A30143838059C6D30FE4E641416E292531D5  content/01-internet-architecture-and-protocols/figures/intro-7.svg
+FB15889C75C8987EDABF11A48EFDDED1C68E6FB3AFE54782B1A23D5677473835  content/01-internet-architecture-and-protocols/figures/intro-8.svg
+DB1E9E897D77AE8E4675A902813B94779CDB5E42600577BB18BA0F21F9E92B26  content/01-internet-architecture-and-protocols/figures/intro-9.svg
+700E3A69F298B7EF2BE4FACAAB36640F29924D74AA509B9873A48688A92211E6  glossary.toml
+E7368F5683777D0D6DBAA4DD627B75998B669BCCF312C1953A87568AFDD2CFF8  course.toml
+
+工具
+333FD1B2F1EABDFA30B8633FA34273EA8B6EAEF1A40FFF58FC5EFF86160050C2  scripts/audit_content.py
+14536180FC2F661776F29FAB82D382603B4603EA0BB8DAD7AC96DF96EDC53DF8  scripts/check_style.py
+5D1A21252F7BC873D7B6D43A2EDADB9A1D3A62161A70C4CE6C8419A29D5726B9  scripts/direction_scan.py
+9B170A0301AF72AE2ABE1E8666818DC0BF9BD6A906FFE8C01C7003A115CD50AC  scripts/layout_check.py
+550D856533345E7B0D51A6BB016D60C35D36DCC51BD95722EE92471108086E8C  scripts/validate.py
+CB114BDF7CE8F98EFDE26F502888D4705987D3848A4694A1EBB434F7707D7FA1  scripts/check_figures.py
+76B5967BDA2C03097233BE67EEC99AD395607E87953372050E9EC4BF0282A868  scripts/check_reviewed.py
+```
+
+**纪律**：这张表是**「先算后写」**的 —— 值由同一条命令一次算出、原样粘贴，无占位符、无手改。
+**改内容即须在同一次提交里改此表**，否则表即失效。
 
 ---
 
