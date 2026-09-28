@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 312" width="760" height="312"
      role="img" aria-labelledby="fig-intro-6-title fig-intro-6-desc">
-  <title id="fig-intro-6-title">消息在路上时，本机 CPU 已执行约 8,400 万个周期（幻灯片给的数）</title>
-  <desc id="fig-intro-6-desc">同一条时间轴上的两件事：上半是请求从伯克利发出、到回应从纽约回来这一段往返 27.5 毫秒的传输时间；下半是同一段时间里一颗 3 GHz 的 CPU 执行掉的周期数。橙色那行照图内数据自己算：3 GHz × 27.5 毫秒 = 8,250 万个周期；标题里的 8,400 万是幻灯片给的数，两者差 150 万，源自己算不拢。两条横线的左右两端互相对齐，表示这是同一段时间。</desc>
+  <title id="fig-intro-6-title">消息在路上时，本机 CPU 已执行约 8,250 万个周期（幻灯片写的是 8,400 万，源自己算不拢）</title>
+  <desc id="fig-intro-6-desc">同一条时间轴上的两件事：上半是请求从伯克利发出、到回应从纽约回来这一段往返 27.5 毫秒的传输时间；下半是同一段时间里一颗 3 GHz 的 CPU 执行掉的周期数。橙色那行照图内数据自己算：3 GHz × 27.5 毫秒 = 8,250 万个周期；标题把 8,250 万与幻灯片写的 8,400 万并列，并点明源自己算不拢。两条横线的左右两端互相对齐，表示这是同一段时间。</desc>
 
   <defs>
     <style>
@@ -15,7 +15,7 @@
 
   <rect x="0" y="0" width="760" height="312" fill="#ffffff"/>
 
-  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">消息在路上时，本机 CPU 已执行约 8,400 万个周期（幻灯片给的数）</text>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">消息在路上时，本机 CPU 已执行约 8,250 万个周期（幻灯片写的是 8,400 万，源自己算不拢）</text>
 
   <!-- 时间轴上：请求往返在途 -->
   <rect x="22" y="76" width="716" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
@@ -27,7 +27,8 @@
   <path d="M22,170 L 22,182" fill="none" stroke="#64748b"/>
   <path d="M738,170 L 738,182" fill="none" stroke="#64748b"/>
   <text x="22" y="202" font-size="11" fill="#64748b">请求发出</text>
-  <text x="738" y="202" font-size="11" fill="#64748b" text-anchor="end">回应到达（这一整段是往返）</text>
+  <!-- 右端标签不用括号收尾：括号的右侧边距会让墨迹比锚点早结束 8px，与左端不对称 -->
+  <text x="738" y="202" font-size="11" fill="#64748b" text-anchor="end">回应到达：这一整段是往返</text>
 
   <!-- 同一段时间里的周期流：虚线首尾都落在 22/738（716 ÷ 10 = 71 段，两端各以实线起收） -->
   <path d="M22,231 L 738,231" fill="none" stroke="#f59e0b" stroke-width="2" stroke-dasharray="6,4"/>

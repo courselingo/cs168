@@ -496,16 +496,16 @@ CB114BDF7CE8F98E  scripts/check_figures.py
 现补齐。**本记录自身不列**（自指字段无法在表内自证），其余全部落表。
 
 ```text
-SHA256（2026-09-28，第九轮修正后冻结版 t3）
+SHA256（2026-09-28，第十轮修正后冻结版 t4）
 
 内容
-0CB7213F85BDEB38ADCFB9224F7B30136A226C062C64D8CD10B9E61A434BFB0F  content/01-internet-architecture-and-protocols/index.md
+E79CE10A144A2502C0D24153668169E830FD6C01F081513AB2F9ED1BEDB29967  content/01-internet-architecture-and-protocols/index.md
 E7728038906505813E72F713782E07595396DF2599434720DE7650B77D5CA5AA  content/01-internet-architecture-and-protocols/figures/intro-1.svg
 5BF5093CA99719B69A79EC9DE281CDCC5CBE355E1C3E638257D6C747CECC5465  content/01-internet-architecture-and-protocols/figures/intro-2.svg
 100599B1E92BB78CA987C0929C25A4B5A4E1360752A16342879AB5E34F053B02  content/01-internet-architecture-and-protocols/figures/intro-3.svg
 1864938874C28F460041739DA27850AFB74BE561051424A4C630C773A450D206  content/01-internet-architecture-and-protocols/figures/intro-4.svg
 B40C8ACF2356F50D7918D29DAC57D972DBE8F608F238735331F6D39D816E8EEF  content/01-internet-architecture-and-protocols/figures/intro-5.svg
-C6493BF8B4E441809B6996167B8D38460F209EE1B82DD4FBD137A692FDE60D10  content/01-internet-architecture-and-protocols/figures/intro-6.svg
+98F223BDE354847664A8D421896B2BF885B76FEE0175A3F244A9AF8786E3AEE4  content/01-internet-architecture-and-protocols/figures/intro-6.svg
 E5CD664175C0C04F836EAD38B251A30143838059C6D30FE4E641416E292531D5  content/01-internet-architecture-and-protocols/figures/intro-7.svg
 FB15889C75C8987EDABF11A48EFDDED1C68E6FB3AFE54782B1A23D5677473835  content/01-internet-architecture-and-protocols/figures/intro-8.svg
 DB1E9E897D77AE8E4675A902813B94779CDB5E42600577BB18BA0F21F9E92B26  content/01-internet-architecture-and-protocols/figures/intro-9.svg
@@ -672,6 +672,37 @@ Lead 已把「视觉复核结论必须按类型分开处理」（**文字类直�
 **教训（自查）**：我验证 `intro-1` 的品牌名时写了 `-match '>amazon|>twitter'`，得到「小写残留 True」的**假警报** ——
 **PowerShell 的 `-match` 默认不区分大小写**；改用 `-cmatch` 后确认文件里只有正确大小写。
 **又一次「工具的行为要先用实验确认」**（与 1.2/1.8 那次同源）。
+
+### 10.13 第十轮：`intro-6` 从「有错误」升到「需小修」，剩两条
+
+复核者明确认可已改部分：「算式与距离—时间换算均正确，**数字差异已显式披露**」，
+并自己验了「4,125 公里往返按光速恰为 27.5 毫秒」⇒ **「图内自算不拢」彻底闭合。**
+
+| # | 复核意见 | 类型 | 处置 |
+| --- | --- | --- | --- |
+| ① | **标题能单独被读，而它给出一个与图内算式不符的数**：标题只写 8,400 万，橙色行写 8,250 万 ⇒ 只看标题的读者会带走错的那个 | **文字类** | 采纳。标题改为**把两个数并列、主结论用自算值**：「消息在路上时，本机 CPU 已执行约 **8,250** 万个周期（幻灯片写的是 **8,400** 万，源自己算不拢）」。**主结论自己成立，源的数仍在、仍标出处**（与正文的写法一致） |
+| ② | 时间轴**右端**标签「回应到达（这一整段是往返）」**右缘比刻度/蓝框/橙虚线向内缩进约半个字宽**，而左端「请求发出」与刻度齐平 ⇒ 两端不对称 | **几何类（必须渲染实测）** | **实测确认成立，已改** —— 三个数见下 |
+
+**② 的实测与处置（`附录十一` ② 的完整走一遍）**
+
+```text
+2× 渲染 + Pillow 量墨迹（SVG 坐标）      改前            改后
+时间轴实线右端                            738.0           738.0
+橙色虚线右端                              737.5           737.5
+右端竖刻度右缘                            738.0           738.0
+右标签墨迹右端                            730.0  ← 缩 8.0  737.0  ← 缩 1.0
+左标签墨迹左端                             22.5  ← 缩 1.0   22.5
+```
+
+⇒ **复核者说对了**：右端缩进 **8.0px**（11px 字号 ≈ 0.73 个字宽），左端只缩 1.0px，**两端确实不对称**。
+**成因**：`text-anchor="end"` 对齐的是**字形推进宽度**，而结尾的「）」**右侧边距**不带墨迹
+⇒ 锚点到了 738，**墨迹提前 8px 结束**。**这是「编码位置的对齐」与「视觉墨迹的对齐」之差**。
+**修法**：把右标签的结尾从括号改成普通汉字——`回应到达：这一整段是往返`（1 个标点换来两侧对称），
+改后缩进 **1.0px，与左端一致**（比给 `x` 打偏移更稳：不再依赖某个具体字形的边距）。
+
+**记录一句**：`附录十一` 把几何类单列并要求实测，这一条正是它的用例 ——
+**属性读不出来（`x=22` / `x=738` 确实对称），但渲染后墨迹不对称**。
+**只看属性会判「不成立」，只看目测会说不清差多少；量了才知道差 8px、以及为什么。**
 
 ---
 
