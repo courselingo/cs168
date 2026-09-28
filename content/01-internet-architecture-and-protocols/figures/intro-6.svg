@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 287" width="760" height="287"
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 312" width="760" height="312"
      role="img" aria-labelledby="fig-intro-6-title fig-intro-6-desc">
   <title id="fig-intro-6-title">消息在路上时，本机 CPU 已执行约 8,400 万个周期</title>
-  <desc id="fig-intro-6-desc">同一条时间轴上的两件事：上半是消息从伯克利到纽约、往返 27.5 毫秒的传输时间；下半是同一段时间里一颗 3 GHz 的 CPU 执行掉的周期数。数据跑不过光速，所以发出去的那一刻，消息里描述的世界已经开始过期。</desc>
+  <desc id="fig-intro-6-desc">同一条时间轴上的两件事：上半是请求从伯克利发出、到回应从纽约回来这一段往返 27.5 毫秒的传输时间；下半是同一段时间里一颗 3 GHz 的 CPU 执行掉的周期数。图内并注明：8,400 万是幻灯片给的数，按往返 27.5 毫秒现算是 8,250 万，源自己算不拢。</desc>
 
   <defs>
     <style>
@@ -13,23 +13,25 @@
     </marker>
   </defs>
 
-  <rect x="0" y="0" width="760" height="287" fill="#ffffff"/>
+  <rect x="0" y="0" width="760" height="312" fill="#ffffff"/>
 
   <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">消息在路上时，本机 CPU 已执行约 8,400 万个周期</text>
 
-  <!-- 时间轴上：消息在途 -->
+  <!-- 时间轴上：请求往返在途 -->
   <rect x="22" y="76" width="716" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
-  <text x="380" y="98" font-size="12" fill="#1e40af" text-anchor="middle">消息在网络上传输</text>
+  <text x="380" y="98" font-size="12" fill="#1e40af" text-anchor="middle">请求出去、回应回来，都在网络上传输</text>
   <text x="380" y="116" font-size="12" fill="#1e40af" text-anchor="middle">伯克利到纽约 4,125 公里，往返 27.5 毫秒</text>
 
-  <!-- 时间轴 -->
+  <!-- 时间轴：整段是往返 -->
   <path d="M22,176 L 738,176" fill="none" stroke="#64748b"/>
   <path d="M22,170 L 22,182" fill="none" stroke="#64748b"/>
   <path d="M738,170 L 738,182" fill="none" stroke="#64748b"/>
-  <text x="22" y="202" font-size="11" fill="#64748b">消息发出</text>
-  <text x="738" y="202" font-size="11" fill="#64748b" text-anchor="end">消息到达</text>
+  <text x="22" y="202" font-size="11" fill="#64748b">请求发出</text>
+  <text x="738" y="202" font-size="11" fill="#64748b" text-anchor="end">回应到达（这一整段是往返）</text>
 
   <!-- 时间轴下：同一段时间里的周期流 -->
   <path d="M22,231 L 738,231" fill="none" stroke="#f59e0b" stroke-width="2" stroke-dasharray="3,12"/>
   <text x="380" y="262" font-size="12" fill="#b45309" text-anchor="middle">同一段时间里，3 GHz 的 CPU 已执行 8,400 万个周期</text>
+
+  <text x="380" y="288" font-size="10" fill="#64748b" text-anchor="middle">8,400 万是幻灯片给的数；按往返 27.5 毫秒现算是 8,250 万，源自己算不拢</text>
 </svg>
