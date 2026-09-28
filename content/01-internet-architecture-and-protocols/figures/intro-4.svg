@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 309" width="760" height="309"
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 341" width="760" height="341"
      role="img" aria-labelledby="fig-intro-4-title fig-intro-4-desc">
   <title id="fig-intro-4-title">协议管两件事：报文长什么样，收到之后做什么</title>
-  <desc id="fig-intro-4-desc">Alice 与 Bob 之间按固定顺序交换四条报文：Alice 先说 hello，Bob 回 hello，Alice 才请求文件，Bob 再回文件内容。顺序本身就是约定的一部分（源只说协议规定谁先开口、怎么应答）；至于省掉开头的问候就失去一次确认机会，这是我们的推论，不是源里的原话。</desc>
+  <desc id="fig-intro-4-desc">Alice 与 Bob 之间按固定顺序交换四条报文，每条标签就写在自己那条箭头下面：Alice 先向右说 hello，Bob 再向左回一个 hello，Alice 才请求文件，Bob 再回文件内容（标签里的箭头方向就是报文的方向）。顺序本身就是约定的一部分（源只说协议规定谁先开口、怎么应答）；至于省掉开头的问候就失去一次确认机会，这是我们的推论，不是源里的原话。</desc>
 
   <defs>
     <style>
@@ -13,7 +13,7 @@
     </marker>
   </defs>
 
-  <rect x="0" y="0" width="760" height="309" fill="#ffffff"/>
+  <rect x="0" y="0" width="760" height="341" fill="#ffffff"/>
 
   <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">协议管两件事：报文长什么样，收到之后做什么</text>
 
@@ -25,20 +25,22 @@
   <text x="566" y="88" font-size="12" fill="#166534" text-anchor="middle">Bob（接收方）</text>
 
   <!-- 两端的时间轴 -->
-  <path d="M194,102 L 194,240" fill="none" stroke="#94a3b8" stroke-dasharray="6,4"/>
-  <path d="M566,102 L 566,240" fill="none" stroke="#94a3b8" stroke-dasharray="6,4"/>
+  <path d="M194,102 L 194,268" fill="none" stroke="#94a3b8" stroke-dasharray="6,4"/>
+  <path d="M566,102 L 566,268" fill="none" stroke="#94a3b8" stroke-dasharray="6,4"/>
 
-  <!-- 四条报文，顺序固定 -->
+  <!-- 四条报文，顺序固定；标签紧贴自己那条箭头（箭头间距 44，标签距本箭头 11.8、距下一条 21.3） -->
   <path d="M199,118 L 555,118" fill="none" stroke="#3b82f6" marker-end="url(#arrow)"/>
-  <path d="M561,152 L 205,152" fill="none" stroke="#22c55e" marker-end="url(#arrow)"/>
-  <path d="M199,186 L 555,186" fill="none" stroke="#3b82f6" marker-end="url(#arrow)"/>
-  <path d="M561,220 L 205,220" fill="none" stroke="#22c55e" marker-end="url(#arrow)"/>
+  <text x="380" y="138" font-size="11" fill="#1e293b" text-anchor="middle">① Alice 先说 hello →</text>
 
-  <text x="380" y="138" font-size="11" fill="#1e293b" text-anchor="middle">① Alice 先说 hello</text>
-  <text x="380" y="172" font-size="11" fill="#1e293b" text-anchor="middle">② Bob 回一个 hello</text>
-  <text x="380" y="206" font-size="11" fill="#1e293b" text-anchor="middle">③ Alice 请求文件</text>
-  <text x="380" y="240" font-size="11" fill="#1e293b" text-anchor="middle">④ Bob 回文件内容</text>
+  <path d="M561,162 L 205,162" fill="none" stroke="#22c55e" marker-end="url(#arrow)"/>
+  <text x="380" y="182" font-size="11" fill="#1e293b" text-anchor="middle">② ← Bob 回一个 hello</text>
 
-  <text x="380" y="262" font-size="12" fill="#1e293b" text-anchor="middle">语法：这几句话在线上写成一串 0 和 1</text>
-  <text x="380" y="284" font-size="12" fill="#1e293b" text-anchor="middle">语义：Bob 先回 hello，Alice 才被允许请求文件</text>
+  <path d="M199,206 L 555,206" fill="none" stroke="#3b82f6" marker-end="url(#arrow)"/>
+  <text x="380" y="226" font-size="11" fill="#1e293b" text-anchor="middle">③ Alice 请求文件 →</text>
+
+  <path d="M561,250 L 205,250" fill="none" stroke="#22c55e" marker-end="url(#arrow)"/>
+  <text x="380" y="270" font-size="11" fill="#1e293b" text-anchor="middle">④ ← Bob 回文件内容</text>
+
+  <text x="380" y="294" font-size="12" fill="#1e293b" text-anchor="middle">语法：这几句话在线上写成一串 0 和 1</text>
+  <text x="380" y="316" font-size="12" fill="#1e293b" text-anchor="middle">语义：Bob 先回 hello，Alice 才被允许请求文件</text>
 </svg>

@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 255" width="760" height="255"
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 259" width="760" height="259"
      role="img" aria-labelledby="fig-intro-5-title fig-intro-5-desc">
   <title id="fig-intro-5-title">联邦的代价：升级「互联网」不是一个选项</title>
-  <desc id="fig-intro-5-desc">三个框一路向右：互操作要求大家都支持同一个协议，于是源留下一个问句「你靠什么做出区别」，再往下，升级「互联网」不是一个选项。粉色弧线是回环，标出源里的结论：整条链的后果是创新被拖慢。图内灰字注明：中间那个框是源留下的问句，不是已成立的命题。</desc>
+  <desc id="fig-intro-5-desc">三个框一路向右：互操作要求大家都支持同一个协议；中间那个框换成另一种颜色、并带问号，标出它是源留下的问句「你靠什么做出区别」，而不是和左右两个框一样的命题；再往下，升级「互联网」不是一个选项。粉色弧线两端对着左右两个框的下边（各留房规的 5px），表示绕回起点；源里的结论是整条链的后果：创新被拖慢。图内灰字注明：中间那个框是源留下的问句，不是已成立的命题。</desc>
 
   <defs>
     <style>
@@ -13,17 +13,20 @@
     </marker>
   </defs>
 
-  <rect x="0" y="0" width="760" height="255" fill="#ffffff"/>
+  <rect x="0" y="0" width="760" height="259" fill="#ffffff"/>
 
   <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">联邦的代价：升级「互联网」不是一个选项</text>
 
+  <!-- 命题一 -->
   <rect x="22" y="76" width="220" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
   <text x="132" y="98" font-size="12" fill="#1e40af" text-anchor="middle">互操作要求大家</text>
   <text x="132" y="116" font-size="12" fill="#1e40af" text-anchor="middle">都支持同一个协议</text>
 
-  <rect x="270" y="76" width="220" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
-  <text x="380" y="107" font-size="12" fill="#1e40af" text-anchor="middle">那你怎么做出区别</text>
+  <!-- 问句：换一种颜色 + 问号，让「它是问句」由框自己说出来（虚线框会破坏房规的块间距，故用色差） -->
+  <rect x="270" y="76" width="220" height="54" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380" y="107" font-size="12" fill="#6b21a8" text-anchor="middle">那你怎么做出区别？</text>
 
+  <!-- 命题二 -->
   <rect x="518" y="76" width="220" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
   <text x="628" y="98" font-size="12" fill="#1e40af" text-anchor="middle">而升级「互联网」</text>
   <text x="628" y="116" font-size="12" fill="#1e40af" text-anchor="middle">不是一个选项</text>
@@ -32,9 +35,11 @@
   <path d="M247,103 L 259,103" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
   <path d="M495,103 L 507,103" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
 
-  <!-- 回环：绕回起点，源里的结论是创新被拖慢 -->
+  <!-- 回环：两端对着左右两框的下边，各留 5px（房规） -->
   <path d="M628,135 C 628,196 132,196 132,141" fill="none" stroke="#ec4899" marker-end="url(#arrow)"/>
-  <text x="380" y="206" font-size="11" fill="#9d174d" text-anchor="middle">整条链的后果：创新被拖慢</text>
 
-  <text x="380" y="232" font-size="10" fill="#64748b" text-anchor="middle">中间那个框是源留下的问句，不是已成立的命题</text>
+  <!-- 整条链的后果：用正文色，不再用粉色，免得看起来像弧线的标注 -->
+  <text x="380" y="210" font-size="12" fill="#1e293b" text-anchor="middle">整条链的后果：创新被拖慢</text>
+
+  <text x="380" y="234" font-size="10" fill="#64748b" text-anchor="middle">中间那个框是源留下的问句，不是已成立的命题</text>
 </svg>

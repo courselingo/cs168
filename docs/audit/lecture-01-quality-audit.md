@@ -496,16 +496,16 @@ CB114BDF7CE8F98E  scripts/check_figures.py
 现补齐。**本记录自身不列**（自指字段无法在表内自证），其余全部落表。
 
 ```text
-SHA256（2026-09-28，第七轮修正后冻结版 t1）
+SHA256（2026-09-28，第八轮修正后冻结版 t2）
 
 内容
-54220AE40CF51F74425BB3FAA3EC064DA2A3490EA9B02DB96A51709DBF6BB3F5  content/01-internet-architecture-and-protocols/index.md
+FE842A39DE617F3F32817C4FA85FBC74C6FA7E2B5949845AABABFD9DFA5A662E  content/01-internet-architecture-and-protocols/index.md
 993F0BFA6C179C94AC14778F9FF959655EDD3169203E076089BB84BD149F6321  content/01-internet-architecture-and-protocols/figures/intro-1.svg
 4D721C125262A2D2D1F1E0AEC676E405C8C787D4994CD4B648FDC6A0E5F4E863  content/01-internet-architecture-and-protocols/figures/intro-2.svg
 100599B1E92BB78CA987C0929C25A4B5A4E1360752A16342879AB5E34F053B02  content/01-internet-architecture-and-protocols/figures/intro-3.svg
-6EE26D448F9CB6DDEE42E30F9A948493E5F5161C77BC8961867021FB7D2D5868  content/01-internet-architecture-and-protocols/figures/intro-4.svg
-9406D26FCCD9EAF5A615F8EDFA2CAB4C85FBD7D2803AAC72B17405E7A417A215  content/01-internet-architecture-and-protocols/figures/intro-5.svg
-2C78962701601ADFAB5BFDFD1BD4B3A5F9B573305C4D961DB2D4B198F7F5BC32  content/01-internet-architecture-and-protocols/figures/intro-6.svg
+1864938874C28F460041739DA27850AFB74BE561051424A4C630C773A450D206  content/01-internet-architecture-and-protocols/figures/intro-4.svg
+B40C8ACF2356F50D7918D29DAC57D972DBE8F608F238735331F6D39D816E8EEF  content/01-internet-architecture-and-protocols/figures/intro-5.svg
+C6493BF8B4E441809B6996167B8D38460F209EE1B82DD4FBD137A692FDE60D10  content/01-internet-architecture-and-protocols/figures/intro-6.svg
 E5CD664175C0C04F836EAD38B251A30143838059C6D30FE4E641416E292531D5  content/01-internet-architecture-and-protocols/figures/intro-7.svg
 FB15889C75C8987EDABF11A48EFDDED1C68E6FB3AFE54782B1A23D5677473835  content/01-internet-architecture-and-protocols/figures/intro-8.svg
 DB1E9E897D77AE8E4675A902813B94779CDB5E42600577BB18BA0F21F9E92B26  content/01-internet-architecture-and-protocols/figures/intro-9.svg
@@ -519,8 +519,13 @@ E7368F5683777D0D6DBAA4DD627B75998B669BCCF312C1953A87568AFDD2CFF8  course.toml
 9B170A0301AF72AE2ABE1E8666818DC0BF9BD6A906FFE8C01C7003A115CD50AC  scripts/layout_check.py
 550D856533345E7B0D51A6BB016D60C35D36DCC51BD95722EE92471108086E8C  scripts/validate.py
 CB114BDF7CE8F98EFDE26F502888D4705987D3848A4694A1EBB434F7707D7FA1  scripts/check_figures.py
-CAE465E92EDF38CADC57D3DA2958500FF0898A61BB321A542A0008829CFFD819  scripts/check_reviewed.py
+65CD5EC03180F496B2F6798758FFC08416C729187621A0B2034D9DF243C22285  scripts/check_reviewed.py
 ```
+
+> **第八轮的工具变化**：`check_reviewed.py` 在这一轮里**改了两次**
+> （`76B5967B…` 原版[有 Windows 编码 bug] → `CAE465E9…` Lead 首修 → **`65CD5EC0…` 现版**）。
+> **本记录里的验收结论都是用 `65CD5EC0…` 那版跑出来的**；其余六个工具未变。
+> 每一次换版都意味着**旧判定不可复现** —— 所以这行必须跟着改，不能只改内容哈希。
 
 > **第七轮的工具变化（必须记）**：`check_reviewed.py` 与 `direction_scan.py` 都换了版本
 > （`76B5967B…` → `CAE465E9…` / `5D1A2125…` → `8A30C979…`）——
@@ -624,6 +629,26 @@ audit_content.py
 ⇒ **用 1 个汉字换回 36 个汉字的最长句余量**，同时把「再加一个页码项就顶穿」这个已知脆弱点拆掉了。
 若 Lead 认为不该动，回退只需把子项并回一行。
 
+### 10.11 第八轮图件复核（`intro-4` / `intro-5` / `intro-6`）：同一族的「图能被读成与文字相反」
+
+三条意见**同族**，Lead 已把它立成 `quality-audit.md` 附录十：
+**把事实写进图内文字，不等于让图的视觉语言/主陈述说同一件事 —— 两者都要。**
+
+| 图 | 病 | 处置（让**主陈述自己**成立，而不是再加一句澄清） |
+| --- | --- | --- |
+| `intro-4` | 标签 y **正好落在相邻两条箭头中点**（138 在 118 与 152 之间）⇒ ①「Alice 先说 hello」可被读成标注它**下面**那条绿箭头（Bob→Alice），**读成方向反转**；而 ④ 下方无箭头、归属唯一，**与前三个排法不统一** | 箭头间距 34 → **44**；四个标签统一放在**自己那条箭头下方 20px**（像素实测：距本箭头 **11.5px**、距下一条 **22.0px**，约 2:1）；**标签内加方向箭头**：`① Alice 先说 hello →`、`② ← Bob 回一个 hello`、`③ Alice 请求文件 →`、`④ ← Bob 回文件内容`。视图高度 309 → 341 |
+| `intro-5` | 澄清只在灰字页脚，**主视觉仍是三个一模一样的实线框**（读成三个命题）；后果文字**与弧线同色且紧贴**（像弧线的标注）；弧线两端被读作「悬空」 | 问句框**换成紫色 `#f3e8ff/#a855f7/#6b21a8` + 加问号**（像素实测：中框填充 `(243,232,255)`，左右两框 `(219,234,254)` ⇒ 视觉区分成立）；后果文字改用**正文色 `#1e293b`**，不再像弧线标注；弧线两端按**房规的 5px** 对着左右框下边（实测起点 y≈135 有粉色墨、箭头尖 y≈133–139 有箭头灰）。**灰字页脚保留**（附录二要求归属落在图内可见文字 + alt） |
+| `intro-6` | **主结论与图内数据冲突**：标题与橙行都断言 8,400 万，而图内数据（27.5ms × 3GHz）算得 8,250 万；澄清只在灰字页脚 | **让图内算术自己算得拢**：橙行改为「**同一段时间里：3 GHz × 27.5 毫秒 = 8,250 万个周期**」；标题保留 8,400 万但**加标出处**「（幻灯片给的数）」；灰字页脚保留并把差额说清。正文同步改：主陈述改成 8,250 万，源的 8,400 万标明出处。另：橙色**虚线右端与时间轴刻度对齐**（`stroke-dasharray` 由 `3,12` 改 **`6,4`**，716 ÷ 10 = 71 段、首尾都落在实线上；像素实测轴 `21.5..738.0`、橙线 `22.0..737.5`） |
+
+**两处房规反馈（值得记，因为它们限制了修法的可选集）**：
+
+1. 我第一版把问句框做成**虚线框**，房规立刻报 `[block-spacing] 水平间距 276px 超过 30px` ——
+   因为**房规把虚线框当成「分组容器」而不是同排的块**，于是左右两个实线框成了相邻兄弟、中间那 276px 被判「过松」。
+   ⇒ **「换虚线框」这条建议在本项目房规下不可行**，改用**色差 + 问号**达成同一个目的。
+2. **弧线两端做不到「接到框边」**：房规明确要求起点距源框 5px、箭头尖停在目标框外 5px
+   （我第一版写成 0px，被房规报了两条 warning）。
+   ⇒ 这两处**我按房规做，并把房规原文当依据留档** —— 若复核者坚持「必须相接」，那要改的是**房规**，不是这张图。
+
 ---
 
 ## 11. 机检（六项；作者自查，仅代表机检通过）
@@ -640,7 +665,7 @@ $t = "D:\Vibe_Workspace\courselingo\courses\cs168"
 & $py "$t\scripts\layout_check.py" $t                      # 9 图 → 最大组 1（11%），阈值 1/3，exit 0
 ```
 
-正文 5135 汉字；破折号 0；加粗 0；问号 3；`[[term:]]` 42 处；**最长句 82 汉字**（上限 120，余 38）、平均 23.52（按 `audit_content.py` 自带的 `sentences()`）；密度 **1.75**、尾部缺口 **1183**（上限 1200，余 17）。
+正文 5190 汉字；破折号 0；加粗 0；问号 3；`[[term:]]` 42 处；**最长句 82 汉字**（上限 120，余 38）、平均 23.49（按 `audit_content.py` 自带的 `sentences()`）；密度 **1.73**、尾部缺口 **1183**（上限 1200，余 17）。
 （§10.4 更正：此前的「平均句长 23.5 / 23.7」来自作者自写的切分器，**口径不对**，以工具自身为准。
 §10.8 更正：alt 计入汉字数，但不计入句子 —— 上面这 5062 里含 alt。）
 工具版本见 §10.5（内容哈希与工具哈希必须成对记录）。

@@ -33,6 +33,7 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import pathlib
 import re
 import sys
@@ -186,6 +187,30 @@ def main(argv: list[str] | None = None) -> int:
                     f"**完全没有判定行**不行）")
             elif v in ("有错误", "需小修"):
                 bad.append(f"{f.stem}:{v}")
+            elif v == "可用":
+                # ★★ 「可用」也必须**对这一版**才作数。
+                #
+                # 报告里写着 `复核对象 SHA256(前16)：XXXX`。若当前 SVG 的哈希与它不符，
+                # 说明**图在复核之后被改过** —— 那条「可用」是对旧版说的，不算数。
+                #
+                # 为什么要有这一步，而不是靠「刷新时别改图」这种纪律：
+                # **我在同一天里两次让刷新与作者的编辑赛跑**（6.006 一次、cs168 一次），
+                # 两次都是「我这边在复核、作者那边在改」。纪律挡住我，代码才挡得住所有人。
+                # 而 `附录五` 早已写明：**一次复核的结论只对它看过的那一版成立。**
+                # 报告里既然已经有哈希，就没有理由不校它。
+                # 取「SHA256」之后第一段 ≥16 位的十六进制。
+                # **不能**写成 `SHA256[^0-9A-F]*([0-9A-F]{16,})` —— 报告的前缀是 `(前16)：`，
+                # 而 `前16` 里的 `1` `6` **本身就是十六进制字符**，`[^0-9A-F]*` 在此停下，
+                # 捕获组从 `16` 开始、只拿两位就断。**第一次就是这么写的，实测才看出来** ——
+                # 「写的时候看起来对」与「跑出来对」是两件事。
+                m = re.search(r"(?i)SHA256(?:.{0,24}?)([0-9A-F]{16,64})", t)
+                if not m:
+                    unreadable.append(f"{f.stem}:报告里没有 `复核对象 SHA256`，无法确认它核对的是哪一版")
+                else:
+                    recorded = m.group(1).upper()
+                    h = hashlib.sha256(f.read_bytes()).hexdigest().upper()
+                    if not h.startswith(recorded[:16]) and not recorded.startswith(h[:16]):
+                        bad.append(f"{f.stem}:可用（但报告核的是旧版：报告 {recorded[:16]} / 现值 {h[:16]}）")
         if bad:
             prob.append("配图有这样未处理的复核结论：" + ", ".join(bad[:8]))
         if unreadable:
