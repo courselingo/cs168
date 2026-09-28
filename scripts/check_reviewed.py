@@ -140,10 +140,11 @@ def main(argv: list[str] | None = None) -> int:
     vdir = next((d for d in vdirs if d.exists()), vdirs[0])
 
     # ★ 实测裁定表：允许「已实测证伪的复核结论」被显式覆盖。
-    #   规则见 quality-audit.md 附录八 / 附录十一，说明见本文件末尾。
+    #   规则见 quality-audit.md 附录八 / 附录十一 / 附录十二，说明见本文件末尾。
     adj_path = ad / "visual-adjudications.md"
-    adjudications: dict[str, str] = {}
+    adj: dict[str, tuple[str, float]] = {}   # 图 -> (依据, 裁定表写入时刻)
     if adj_path.exists():
+        adj_mtime = adj_path.stat().st_mtime
         for ln in adj_path.read_text(encoding="utf-8", errors="replace").splitlines():
             if not ln.strip().startswith("|"):
                 continue
@@ -155,7 +156,7 @@ def main(argv: list[str] | None = None) -> int:
                 continue
             # 只认「可用」，且依据必须**含数字**（= 有实测值，不是一句主观判断）
             if verdict == "可用" and re.search(r"\d", basis):
-                adjudications[fig] = basis
+                adj[fig] = (basis, adj_mtime)
 
     pages = sorted(content.rglob("index.md"))
     errs: list[str] = []
@@ -243,13 +244,32 @@ def main(argv: list[str] | None = None) -> int:
                     h = hashlib.sha256(f.read_bytes()).hexdigest().upper()
                     if not h.startswith(recorded[:16]) and not recorded.startswith(h[:16]):
                         bad.append(f"{f.stem}:可用（但报告核的是旧版：报告 {recorded[:16]} / 现值 {h[:16]}）")
-        # ★ 应用实测裁定：若某条「需小修」已被实测证伪并留档，则移出阻塞列表。
-        if adjudications:
+        # ★★ 应用实测裁定 —— **但裁定只对它作出时已存在的报告有效。**
+        #
+        # 起因（2026-09-28，实测）：我裁定 `peak-finding-4` 的四条几何主张不成立（都真被证伪了），
+        # 写进裁定表。随后新一轮复核对**同一张没改过的图**给出了**两条全新的、真实的**意见
+        # （「第 1 轮说明在框内、2/3 轮在框外，版式不统一」「第 2 行框外文字贴框过近」）。
+        # **而按「图名匹配就覆盖」的写法，那两条会被旧裁定一并压掉** —— 一个真的问题会被静默吞掉。
+        #
+        # 根因：**裁定是「对某一次判定的反驳」，不是「对这张图的永久结论」。**
+        # 把它当成后者，就等于把「那次判定错了」扩写成「这张图以后都没问题」。
+        #
+        # ⇒ 判据：**裁定的生效范围 = 它作出时已存在的那些报告。**
+        #   报告比裁定更新 ⇒ 裁定不适用 ⇒ 那份新报告必须被单独处置（重新裁，或照它改）。
+        #   **这与 `附录五`（一次复核的结论只对它所看的版本成立）是同一个形状，只是对象换成了裁定。**
+        if adj:
             kept = []
             for item in bad:
                 name = item.split(":")[0]
-                if name in adjudications:
-                    print(f"      · {name}：复核结论被实测裁定覆盖（{adjudications[name][:40]}…）")
+                rep = vdir / f"{root.name}__{name}.md"
+                if name in adj:
+                    basis, adj_mtime = adj[name]
+                    if rep.exists() and rep.stat().st_mtime > adj_mtime:
+                        reason = f"{name}:裁定早于这份新报告（裁定 {adj_mtime:.0f} < 报告 {rep.stat().st_mtime:.0f}）"
+                        kept.append(reason)
+                        print(f"      ! {reason} ⇒ 裁定不适用，按新报告处置")
+                        continue
+                    print(f"      · {name}：复核结论被实测裁定覆盖（{basis[:40]}…）")
                     continue
                 kept.append(item)
             bad = kept
