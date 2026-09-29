@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 294" width="760" height="294"
+     role="img" aria-labelledby="fig-ttm-3-title fig-ttm-3-desc">
+  <title id="fig-ttm-3-title">锯齿：涨到 W_max 丢一个包，砍半，再涨回去</title>
+  <desc id="fig-ttm-3-desc">一条时间轴向右延伸。窗口先沿斜线向上爬到 W_max，到顶的那一刻标着丢包，接着竖直落到一半，再重新斜着往上爬，一共画了三个这样的周期，每个周期的顶点都标着丢包。图下方在中段两个丢包之间注明：两次丢包之间是 1/2 W_max 个 RTT。右下角标出时间的方向。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="294" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">锯齿：涨到 W_max 丢一个包，砍半，再涨回去</text>
+  <path d="M25,246 L735,246" fill="none" stroke="#64748b" stroke-width="1.5"/>
+  <path d="M72,186 Q 152,141 232,96" fill="none" stroke="#3b82f6" stroke-width="2"/>
+  <path d="M232,96 L232,186" fill="none" stroke="#ef4444" stroke-width="2"/>
+  <path d="M232,186 Q 352,141 472,96" fill="none" stroke="#3b82f6" stroke-width="2"/>
+  <path d="M472,96 L472,186" fill="none" stroke="#ef4444" stroke-width="2"/>
+  <path d="M472,186 Q 592,141 712,96" fill="none" stroke="#3b82f6" stroke-width="2"/>
+  <path d="M712,96 L712,186" fill="none" stroke="#ef4444" stroke-width="2"/>
+  <text x="46" y="88" font-size="11" fill="#64748b" text-anchor="middle">W_max</text>
+  <text x="232" y="74" font-size="11" fill="#64748b" text-anchor="middle">丢包</text>
+  <text x="472" y="74" font-size="11" fill="#64748b" text-anchor="middle">丢包</text>
+  <text x="712" y="74" font-size="11" fill="#64748b" text-anchor="middle">丢包</text>
+  <text x="352" y="216" font-size="11" fill="#64748b" text-anchor="middle">两次丢包之间：1/2 W_max 个 RTT</text>
+  <text x="700" y="268" font-size="11" fill="#64748b" text-anchor="middle">时间</text>
+</svg>

@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 350" width="760" height="350"
+     role="img" aria-labelledby="fig-ttm-2-title fig-ttm-2-desc">
+  <title id="fig-ttm-2-title">模型成立要接受的五条假设</title>
+  <desc id="fig-ttm-2-desc">第一行三格：① 单条连接，这一讲只看一条，别的连接不参与；② 忽略慢启动，只研究锯齿的稳定段，起步阶段不算；③ RTT 取固定值，把它当成常数，不随网络变化。第二行两格：④ 窗口涨到 W_max 时丢一个包，W_max 是窗口的上限，一个周期只丢这一个；⑤ 丢包由重复确认发现，因为只丢一个，不会走到超时。第三行一条横格注明措辞：源文把这个 W_max 写成「最大瓶颈带宽」，但它一直被当窗口大小用，本讲按窗口读。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="350" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">模型成立要接受的五条假设</text>
+  <rect x="22" y="76" width="221" height="72" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="132.5" y="98.2" font-size="12" fill="#1e40af" text-anchor="middle">① 单条连接</text>
+  <text x="132.5" y="116.2" font-size="12" fill="#1e40af" text-anchor="middle">这一讲只看一条</text>
+  <text x="132.5" y="134.2" font-size="12" fill="#1e40af" text-anchor="middle">别的连接不参与</text>
+  <rect x="268" y="76" width="221" height="72" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="378.5" y="98.2" font-size="12" fill="#b45309" text-anchor="middle">② 忽略慢启动</text>
+  <text x="378.5" y="116.2" font-size="12" fill="#b45309" text-anchor="middle">只研究锯齿的稳定段</text>
+  <text x="378.5" y="134.2" font-size="12" fill="#b45309" text-anchor="middle">起步阶段不算</text>
+  <rect x="514" y="76" width="221" height="72" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="624.5" y="98.2" font-size="12" fill="#166534" text-anchor="middle">③ RTT 取固定值</text>
+  <text x="624.5" y="116.2" font-size="12" fill="#166534" text-anchor="middle">把它当成常数</text>
+  <text x="624.5" y="134.2" font-size="12" fill="#166534" text-anchor="middle">不随网络变化</text>
+  <rect x="22" y="174" width="345" height="72" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="194.5" y="196.2" font-size="12" fill="#9d174d" text-anchor="middle">④ 涨到 W_max 时丢一个包</text>
+  <text x="194.5" y="214.2" font-size="12" fill="#9d174d" text-anchor="middle">W_max 是窗口的上限</text>
+  <text x="194.5" y="232.2" font-size="12" fill="#9d174d" text-anchor="middle">一个周期只丢这一个</text>
+  <rect x="392" y="174" width="345" height="72" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="564.5" y="196.2" font-size="12" fill="#6b21a8" text-anchor="middle">⑤ 丢包由重复确认发现</text>
+  <text x="564.5" y="214.2" font-size="12" fill="#6b21a8" text-anchor="middle">因为只丢一个</text>
+  <text x="564.5" y="232.2" font-size="12" fill="#6b21a8" text-anchor="middle">不会走到超时</text>
+  <rect x="22" y="272" width="715" height="54" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="379.5" y="294.2" font-size="12" fill="#6b21a8" text-anchor="middle">源文把这个 W_max 写成「最大瓶颈带宽」</text>
+  <text x="379.5" y="312.2" font-size="12" fill="#6b21a8" text-anchor="middle">但它一直被当窗口大小用，本讲按窗口读</text>
+</svg>

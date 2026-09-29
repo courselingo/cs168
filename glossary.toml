@@ -728,3 +728,23 @@ notes = "additive increase, multiplicative decrease：慢加、快减。四种�
 en = "BBR"
 zh = "BBR 协议"
 notes = "Google 在 2016 年提出的基于延迟的拥塞控制，用来说明延迟这条信号在实践中可行；源文只给到这一句（第 22 讲）"
+
+[[term]]
+en = "throughput"
+zh = "吞吐量"
+notes = "单位时间内成功送达的数据量。TCP 的吞吐量不是一个固定值，它随丢包率与往返时间变化；本讲把它写成 RTT 与丢包率的函数（第 24 讲）"
+
+[[term]]
+en = "loss rate"
+zh = "丢包率"
+notes = "发送的分组里被丢掉的比例，源文记作 p。吞吐量模型的另一半输入：两次丢包之间发 N 个分组、丢 1 个，则 p = 1/N（第 24 讲）"
+
+[[term]]
+en = "rate-based congestion control"
+zh = "基于速率的拥塞控制"
+notes = "源文也叫 equation-based：不按丢包动态调速率的规则办，而是测出 RTT 与丢包率、代进吞吐量公式，按算出的速率恒速发（第 24 讲）"
+
+[[term]]
+en = "TCP-friendly"
+zh = "TCP 友好"
+notes = "替代实现的判据：与 TCP 共存时该降速就降速，因而不会比同样情形下的 TCP 多吃带宽；一条链路上两种实现混跑也能公平分享（第 24 讲）"

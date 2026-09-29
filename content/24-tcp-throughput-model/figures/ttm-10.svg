@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 293" width="760" height="293"
+     role="img" aria-labelledby="fig-ttm-10-title fig-ttm-10-desc">
+  <title id="fig-ttm-10-title">锯齿换成平稳速率</title>
+  <desc id="fig-ttm-10-desc">上半部分是一条时间轴和一组锯齿：窗口反复从谷底斜着爬回顶点，再竖直砍到谷底，一共四个这样的周期；图上方写着 TCP：丢包砍半，再线性涨回来。下半部分是一条笔直的水平绿线，旁边写着按速率：先测 RTT 与丢包率 p，再按公式恒速发，表示照公式恒速发送时速率不上下摆动。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="293" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">锯齿换成平稳速率</text>
+  <path d="M22,150 L738,150" fill="none" stroke="#64748b" stroke-width="1.5"/>
+  <path d="M22,150 Q 96,125 170,100" fill="none" stroke="#3b82f6" stroke-width="2"/>
+  <path d="M170,100 L170,150" fill="none" stroke="#ef4444" stroke-width="2"/>
+  <path d="M170,150 Q 255,125 340,100" fill="none" stroke="#3b82f6" stroke-width="2"/>
+  <path d="M340,100 L340,150" fill="none" stroke="#ef4444" stroke-width="2"/>
+  <path d="M340,150 Q 425,125 510,100" fill="none" stroke="#3b82f6" stroke-width="2"/>
+  <path d="M510,100 L510,150" fill="none" stroke="#ef4444" stroke-width="2"/>
+  <path d="M510,150 Q 595,125 680,100" fill="none" stroke="#3b82f6" stroke-width="2"/>
+  <path d="M680,100 L680,150" fill="none" stroke="#ef4444" stroke-width="2"/>
+  <text x="380" y="72" font-size="11" fill="#64748b" text-anchor="middle">TCP：丢包砍半，再线性涨回来</text>
+  <path d="M22,240 L738,240" fill="none" stroke="#22c55e" stroke-width="2.5"/>
+  <text x="380" y="268" font-size="11" fill="#64748b" text-anchor="middle">按速率：先测 RTT 与丢包率 p，再按公式恒速发</text>
+</svg>

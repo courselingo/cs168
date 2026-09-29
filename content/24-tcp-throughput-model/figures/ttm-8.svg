@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 260" width="760" height="260"
+     role="img" aria-labelledby="fig-ttm-8-title fig-ttm-8-desc">
+  <title id="fig-ttm-8-title">代回去：化简成只剩 RTT 与 p</title>
+  <desc id="fig-ttm-8-desc">三格从上往下：第一格是带窗口的式子，吞吐量 = 3/4 W_max × MSS / RTT；第二格把 W_max 换成刚解出来的 2√2 / √(3p)；第三格化简，3/4 乘 2√2 再除以 √3 正好是 √(3/2)，于是吞吐量 = √(3/2) × MSS / (RTT √p)，式子里只剩下 RTT 与 p。两处向下的小箭头表示代入与化简。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="260" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">代回去：化简成只剩 RTT 与 p</text>
+  <rect x="22" y="76" width="715" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="379.5" y="98.2" font-size="12" fill="#1e40af" text-anchor="middle">吞吐量 = 3/4 W_max × MSS / RTT</text>
+  <rect x="22" y="138" width="715" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="379.5" y="160.2" font-size="12" fill="#b45309" text-anchor="middle">= 3/4 × (2√2 / √(3p)) × MSS / RTT</text>
+  <rect x="22" y="200" width="715" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="379.5" y="222.2" font-size="12" fill="#166534" text-anchor="middle">吞吐量 = √(3/2) × MSS / (RTT √p)</text>
+  <path d="M380,117 Q 380,122 380,127" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+  <path d="M380,179 Q 380,184 380,189" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+</svg>

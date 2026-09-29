@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 314" width="760" height="314"
+     role="img" aria-labelledby="fig-ttm-5-title fig-ttm-5-desc">
+  <title id="fig-ttm-5-title">从窗口到速率：先换成字节，再除以 RTT</title>
+  <desc id="fig-ttm-5-desc">三格从上到下：第一格说平均窗口是 3/4 W_max 个分组，窗口按分组算，因为每个 RTT 加 1 个分组；第二格把分组换成字节，3/4 W_max 乘 MSS，一个分组能装 MSS 字节；第三格再除以 RTT，得到速率 = 3/4 W_max × MSS / RTT，因为窗口就是每个 RTT 能送的数据量。两处向下的小箭头把三格串成一条换算链。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="314" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">从窗口到速率：先换成字节，再除以 RTT</text>
+  <rect x="22" y="76" width="716" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="98.2" font-size="12" fill="#1e40af" text-anchor="middle">平均窗口 = 3/4 W_max 个分组</text>
+  <text x="380" y="116.2" font-size="12" fill="#1e40af" text-anchor="middle">窗口按分组算，因为每个 RTT 加 1 个分组</text>
+  <rect x="22" y="156" width="716" height="54" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="178.2" font-size="12" fill="#b45309" text-anchor="middle">换成字节：3/4 W_max × MSS</text>
+  <text x="380" y="196.2" font-size="12" fill="#b45309" text-anchor="middle">一个分组能装 MSS 字节</text>
+  <rect x="22" y="236" width="716" height="54" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="258.2" font-size="12" fill="#166534" text-anchor="middle">除以 RTT：速率 = 3/4 W_max × MSS / RTT</text>
+  <text x="380" y="276.2" font-size="12" fill="#166534" text-anchor="middle">窗口是每个 RTT 能送的数据量</text>
+  <path d="M380,135 Q 380,140 380,145" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+  <path d="M380,215 Q 380,220 380,225" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+</svg>
