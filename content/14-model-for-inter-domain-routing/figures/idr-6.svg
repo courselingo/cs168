@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 308" width="760" height="308"
+     role="img" aria-labelledby="fig-idr-6-title fig-idr-6-desc">
+  <title id="fig-idr-6-title">政策由每个 AS 自己定，协议不问为什么</title>
+  <desc id="fig-idr-6-desc">四张卡片是教材举的四条政策例子：不替 AS#2046 转发、我的流量优先走 AS#10、除非不得已别过 AS#54、工作日走 AS#12 周末走 AS#13。前两条说的是我怎样对待别人的流量、别人该如何对待我的流量，最后一条说明政策还会随时间变。下面两行点出协议的态度：它允许每个 AS 自己定政策，但不要求你说出为什么，也不要求你公开这些偏好。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="308" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">政策由每个 AS 自己定，协议不问为什么</text>
+  <rect x="22" y="70" width="343" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="193.5" y="92" font-size="12" fill="#1e40af" text-anchor="middle">不替 AS#2046 的流量转发</text>
+  <text x="193.5" y="110" font-size="12" fill="#1e40af" text-anchor="middle">我怎样对待别人的流量</text>
+  <rect x="395" y="70" width="343" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="566.5" y="92" font-size="12" fill="#1e40af" text-anchor="middle">我的流量优先走 AS#10</text>
+  <text x="566.5" y="110" font-size="12" fill="#1e40af" text-anchor="middle">别人该如何对待我的流量</text>
+  <rect x="22" y="151" width="343" height="54" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="193.5" y="173" font-size="12" fill="#b45309" text-anchor="middle">除非不得已，别过 AS#54</text>
+  <text x="193.5" y="191" font-size="12" fill="#b45309" text-anchor="middle">别人该如何对待我的流量</text>
+  <rect x="395" y="151" width="343" height="54" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="566.5" y="173" font-size="12" fill="#b45309" text-anchor="middle">工作日走 AS#12，周末走 AS#13</text>
+  <text x="566.5" y="191" font-size="12" fill="#b45309" text-anchor="middle">政策还会随时间变</text>
+  <rect x="22" y="232" width="716" height="54" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="254" font-size="12" fill="#166534" text-anchor="middle">协议允许每个 AS 自己定政策，但不要求它说出理由</text>
+  <text x="380" y="272" font-size="12" fill="#166534" text-anchor="middle">也不要求它公开自己的偏好、客户与提供者是谁</text>
+</svg>

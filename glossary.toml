@@ -211,3 +211,56 @@ en = "best-effort"
 zh = "尽力而为"
 aliases = ["best effort"]
 notes = "网络不承诺是否送达、不承诺何时送达，也不通知结果；可靠性交给两端自己实现"
+
+# ── 第 14 讲补入（2026-09-29；作者提出、术语随该讲一并送审）────────
+# 这一讲的主题就是「域间路由的模型」，下面这批词是该讲的核心词汇，
+# 先冻结译法，供第 14 讲与后续 BGP 相关各讲共用。
+
+[[term]]
+en = "autonomous system"
+zh = "自治系统"
+aliases = ["AS"]
+notes = "由一个运营者统一管理的一片或多片本地网络；域间路由把它抽象成 AS 图上的一个节点"
+
+[[term]]
+en = "ASN"
+zh = "自治系统编号"
+aliases = ["autonomous system number"]
+notes = "向 IANA 注册后拿到的全局唯一编号；教材点名 UC Berkeley 的 ASN 是 25"
+
+[[term]]
+en = "stub autonomous system"
+zh = "末端自治系统"
+aliases = ["stub AS"]
+notes = "只为 AS 内部的主机收发分组、不替别的 AS 转发；类比域内模型里的端主机"
+
+[[term]]
+en = "transit autonomous system"
+zh = "中转自治系统"
+aliases = ["transit AS"]
+notes = "替别的 AS 转发分组、靠卖连通性赚钱；类比域内模型里的路由器"
+
+[[term]]
+en = "customer-provider relationship"
+zh = "客户-提供者关系"
+notes = "客户付钱、提供者给连通性的商业关系；AS 图里的箭头从提供者指向客户，且这类关系不成环"
+
+[[term]]
+en = "peering"
+zh = "对等互联"
+notes = "两个 AS 互相送的流量大致相当、通常互不付费；图里画成一条没有箭头的边"
+
+[[term]]
+en = "Tier 1"
+zh = "一级网络"
+notes = "没有提供者（没有入边）的 AS，且彼此两两对等；教材给出的现实数量约为 20 个"
+
+[[term]]
+en = "policy-based routing"
+zh = "基于政策的路由"
+notes = "每个 AS 自己定偏好，协议算出的路径要尊重这些偏好；与「全局最小代价」相对，且协议不要求 AS 公开政策"
+
+[[term]]
+en = "valley-free"
+zh = "无山谷"
+notes = "路径先上坡到峰、再一路下坡，不出现「先下坡又掉头走上坡」的形状；横向的对等边只能出现在峰上"

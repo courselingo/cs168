@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 335" width="760" height="335"
+     role="img" aria-labelledby="fig-idr-7-title fig-idr-7-desc">
+  <title id="fig-idr-7-title">第一条规则：宁走客户，不走对等，最后才走提供者</title>
+  <desc id="fig-idr-7-desc">三条方框是第一条规则给出的偏好顺序：下一跳是客户时我收得到钱，最优先；没有客户可选就走对等，不赚不赔；只有提供者可选时才走它，因为那要我自己付钱。最下面一行是换成距离向量的说法：不再挑我知道的最短路，而是挑让下一跳最赚钱的那条路。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="335" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">第一条规则：宁走客户，不走对等，最后才走提供者</text>
+  <rect x="22" y="70" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="92" font-size="12" fill="#166534" text-anchor="middle">（1）下一跳是客户：客户付我钱，最优先</text>
+  <rect x="22" y="133" width="716" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="155" font-size="12" fill="#b45309" text-anchor="middle">（2）没有客户可选，就走对等：不赚不赔</text>
+  <rect x="22" y="196" width="716" height="36" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="380" y="218" font-size="12" fill="#9d174d" text-anchor="middle">（3）只有提供者可选才走它：这一趟我得付钱</text>
+  <rect x="22" y="259" width="716" height="54" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380" y="281" font-size="12" fill="#6b21a8" text-anchor="middle">换成距离向量的说法：不再挑我知道的最短路</text>
+  <text x="380" y="299" font-size="12" fill="#6b21a8" text-anchor="middle">而是挑让下一跳最赚钱的那条路</text>
+</svg>

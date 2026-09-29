@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 335" width="760" height="335"
+     role="img" aria-labelledby="fig-idr-9-title fig-idr-9-desc">
+  <title id="fig-idr-9-title">例子：D 到 E 的两条候选路径</title>
+  <desc id="fig-idr-9-desc">上面一条链是路径一，分组按 D、B、A、C、E 的顺序走；下面一条链是路径二，按 D、B、C、E 的顺序走，跳过了 A。D 和 E 是末端 AS，B 和 C 是中转 AS：路径一里 B 和 C 都要付钱给 A，路径二里 B 和 C 改成对等，互不付费。两条路都能被沿途的中转 AS 接受，最后 B 按第一条规则挑了不用付钱的路径二。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="335" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">例子：D 到 E 的两条候选路径</text>
+  <rect x="22" y="70" width="122" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="83" y="92" font-size="12" fill="#1e40af" text-anchor="middle">D</text>
+  <rect x="170" y="70" width="122" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="231" y="92" font-size="12" fill="#b45309" text-anchor="middle">B</text>
+  <rect x="319" y="70" width="122" height="36" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380" y="92" font-size="12" fill="#6b21a8" text-anchor="middle">A</text>
+  <rect x="467" y="70" width="122" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="528" y="92" font-size="12" fill="#b45309" text-anchor="middle">C</text>
+  <rect x="616" y="70" width="122" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="677" y="92" font-size="12" fill="#1e40af" text-anchor="middle">E</text>
+  <path d="M149,88 L165,88" fill="none" stroke="#a855f7" stroke-width="1.5"/>
+  <path d="M297,88 L314,88" fill="none" stroke="#a855f7" stroke-width="1.5"/>
+  <path d="M446,88 L462,88" fill="none" stroke="#a855f7" stroke-width="1.5"/>
+  <path d="M594,88 L611,88" fill="none" stroke="#a855f7" stroke-width="1.5"/>
+  <rect x="95" y="133" width="122" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="156" y="155" font-size="12" fill="#1e40af" text-anchor="middle">D</text>
+  <rect x="244" y="133" width="122" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="305" y="155" font-size="12" fill="#b45309" text-anchor="middle">B</text>
+  <rect x="393" y="133" width="122" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="454" y="155" font-size="12" fill="#b45309" text-anchor="middle">C</text>
+  <rect x="542" y="133" width="122" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="603" y="155" font-size="12" fill="#1e40af" text-anchor="middle">E</text>
+  <path d="M222,151 L239,151" fill="none" stroke="#a855f7" stroke-width="1.5"/>
+  <path d="M371,151 L388,151" fill="none" stroke="#a855f7" stroke-width="1.5"/>
+  <path d="M520,151 L537,151" fill="none" stroke="#a855f7" stroke-width="1.5"/>
+  <rect x="22" y="196" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="218" font-size="12" fill="#166534" text-anchor="middle">路径一 D-B-A-C-E：B 与 C 都要付钱给 A；路径二 D-B-C-E：B 与 C 对等，互不付费</text>
+  <rect x="22" y="259" width="716" height="54" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="380" y="281" font-size="12" fill="#9d174d" text-anchor="middle">两条路都合法，B 按第一条规则挑了不付钱的路径二</text>
+  <text x="380" y="299" font-size="12" fill="#9d174d" text-anchor="middle">建对等要铺线路、装设备，省下的钱得先盖过这笔开销</text>
+</svg>

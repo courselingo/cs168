@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 335" width="760" height="335"
+     role="img" aria-labelledby="fig-idr-1-title fig-idr-1-desc">
+  <title id="fig-idr-1-title">把一片网络抽象成一个节点，连起来就是 AS 图</title>
+  <desc id="fig-idr-1-desc">第一行左右两框是抽象这一步：左边是一片网络内部的细节，主机、路由器、交换机全归同一个运营者管；右边把它抽象成一个自治系统（AS），对外只算一个节点。第二行把 AS 图说清楚：节点是一个 AS，边是两个 AS 之间的连接。第三行画出三个节点连成的 AS 图。最后一行给出分工：域内协议管一片网络内部，域间协议管网络与网络之间。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="335" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">把一片网络抽象成一个节点，连起来就是 AS 图</text>
+  <rect x="22" y="70" width="330" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="187" y="92" font-size="12" fill="#1e40af" text-anchor="middle">一片网络内部：主机、路由器</text>
+  <text x="187" y="110" font-size="12" fill="#1e40af" text-anchor="middle">还有交换机，全归同一个人管</text>
+  <rect x="380" y="70" width="358" height="54" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="559" y="92" font-size="12" fill="#166534" text-anchor="middle">抽象成一个自治系统（AS）</text>
+  <text x="559" y="110" font-size="12" fill="#166534" text-anchor="middle">对外只算一个节点</text>
+  <path d="M357,97 L369,97" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="22" y="151" width="716" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="173" font-size="12" fill="#b45309" text-anchor="middle">AS 图：节点是一个 AS，边是两个 AS 之间的连接</text>
+  <rect x="22" y="214" width="220" height="36" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="132" y="236" font-size="12" fill="#6b21a8" text-anchor="middle">网络 1</text>
+  <rect x="270" y="214" width="220" height="36" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380" y="236" font-size="12" fill="#6b21a8" text-anchor="middle">网络 2</text>
+  <rect x="518" y="214" width="220" height="36" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="628" y="236" font-size="12" fill="#6b21a8" text-anchor="middle">网络 3</text>
+  <path d="M247,232 L259,232" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M495,232 L507,232" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="22" y="277" width="716" height="36" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="380" y="299" font-size="12" fill="#9d174d" text-anchor="middle">域内协议管一片网络内部，域间协议管网络与网络之间</text>
+</svg>

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 272" width="760" height="272"
+     role="img" aria-labelledby="fig-idr-2-title fig-idr-2-desc">
+  <title id="fig-idr-2-title">从一个人手工批准，到九万多个 AS</title>
+  <desc id="fig-idr-2-desc">左边是早期：IANA 由 Jon Postel 一个人手工管理，谁想注册新的 AS 都得等他批准。右边是今天：九万多个自治系统，美国拥有的 AS 最多。下面一行给出 UC Berkeley 的例子，它的 ASN 是 25，因为拿得早所以编号很小；ASN 全局唯一，名单由 IANA 维护。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="272" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">从一个人手工批准，到九万多个 AS</text>
+  <rect x="22" y="70" width="343" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="193.5" y="92" font-size="12" fill="#1e40af" text-anchor="middle">早期：Jon Postel 一个人管</text>
+  <text x="193.5" y="110" font-size="12" fill="#1e40af" text-anchor="middle">想注册 AS 得等他批准</text>
+  <rect x="395" y="70" width="343" height="54" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="566.5" y="92" font-size="12" fill="#b45309" text-anchor="middle">今天：90,000 多个自治系统</text>
+  <text x="566.5" y="110" font-size="12" fill="#b45309" text-anchor="middle">美国拥有的 AS 最多</text>
+  <path d="M370,97 L384,97" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="22" y="151" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="173" font-size="12" fill="#166534" text-anchor="middle">UC Berkeley 的 ASN 是 25：拿得早，所以号很小</text>
+  <rect x="22" y="214" width="716" height="36" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380" y="236" font-size="12" fill="#6b21a8" text-anchor="middle">ASN 全局唯一，注册名单由 IANA 维护</text>
+</svg>
