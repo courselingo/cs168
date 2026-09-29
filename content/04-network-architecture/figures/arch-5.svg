@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 203" width="760" height="203"
+     role="img" aria-labelledby="fig-arch-5-title fig-arch-5-desc">
+  <title id="fig-arch-5-title">一个词两种意思：物理端口与逻辑端口</title>
+  <desc id="fig-arch-5-desc">左边是物理端口，也就是交换机上真正插链路的地方，说的是插在哪；右边是逻辑端口，也就是第四层首部里的一个数字，用来区分分组属于哪个应用，说的是交给谁。套接字是操作系统把应用接到网络栈上的机制，它绑在一个逻辑端口号上。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="203" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">一个词两种意思：物理端口与逻辑端口</text>
+
+  <rect x="22" y="76" width="344" height="72" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="194" y="98" font-size="12" fill="#166534" text-anchor="middle">物理端口</text>
+  <text x="194" y="116" font-size="12" fill="#166534" text-anchor="middle">交换机上插网线的那个口</text>
+  <text x="194" y="134" font-size="12" fill="#166534" text-anchor="middle">说的是「插在哪」</text>
+
+  <rect x="394" y="76" width="344" height="72" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="566" y="98" font-size="12" fill="#1e40af" text-anchor="middle">逻辑端口</text>
+  <text x="566" y="116" font-size="12" fill="#1e40af" text-anchor="middle">第四层首部里的一个数字</text>
+  <text x="566" y="134" font-size="12" fill="#1e40af" text-anchor="middle">说的是「交给谁」</text>
+
+  <text x="380" y="178" font-size="10" fill="#64748b" text-anchor="middle">套接字是操作系统把应用接到网络栈上的机制，它绑在一个逻辑端口号上</text>
+</svg>

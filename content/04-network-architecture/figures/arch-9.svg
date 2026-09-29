@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 256" width="760" height="256"
+     role="img" aria-labelledby="fig-arch-9-title fig-arch-9-desc">
+  <title id="fig-arch-9-title">架构的三笔账</title>
+  <desc id="fig-arch-9-desc">三笔代价：复杂度被推给了两端，网络只做尽力而为，可靠传输要应用自己实现；窄腰既是力量也是单点，所有人说 IP 才连得起来，而 IP 极难替换；傻交换机省了成本也留了门，当年没算进去的安全问题，今天要用别的办法补。架构不是选一个正确答案，而是选定一组取舍并接受后果。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="256" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">架构的三笔账</text>
+
+  <rect x="22" y="76" width="716" height="36" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="380" y="98" font-size="12" fill="#1e293b" text-anchor="middle">复杂度推给了两端：网络只做尽力而为，可靠传输要应用自己实现</text>
+
+  <rect x="22" y="137" width="716" height="36" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="380" y="159" font-size="12" fill="#1e293b" text-anchor="middle">窄腰既是力量也是单点：所有人说 IP 才连得起来，而 IP 极难替换</text>
+
+  <rect x="22" y="198" width="716" height="36" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="380" y="220" font-size="12" fill="#1e293b" text-anchor="middle">傻交换机省了成本也留了门：当年没算的安全问题，今天要另想办法补</text>
+</svg>

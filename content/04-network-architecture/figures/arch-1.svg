@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 185" width="760" height="185"
+     role="img" aria-labelledby="fig-arch-1-title fig-arch-1-desc">
+  <title id="fig-arch-1-title">两种看法：从下往上拼，从上往下问</title>
+  <desc id="fig-arch-1-desc">左边是前面几讲的看法：从最底下的零件开始，一层层拼出全貌。右边是这一讲的看法：从上往下看，问那几个贯穿全局的选择为什么是那样。这些选择只是众多可能中的一种，很多是很多年前做的，关于什么是最好的设计，争论至今还在。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="185" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">两种看法：从下往上拼，从上往下问</text>
+
+  <rect x="22" y="76" width="344" height="54" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="194" y="98" font-size="12" fill="#1e293b" text-anchor="middle">前面几讲：从下往上</text>
+  <text x="194" y="116" font-size="12" fill="#1e293b" text-anchor="middle">先有零件，再拼出全貌</text>
+
+  <rect x="394" y="76" width="344" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="566" y="98" font-size="12" fill="#1e40af" text-anchor="middle">这一讲：从上往下</text>
+  <text x="566" y="116" font-size="12" fill="#1e40af" text-anchor="middle">问那几个贯穿全局的选择</text>
+
+  <text x="380" y="160" font-size="10" fill="#64748b" text-anchor="middle">这些选择只是众多可能中的一种，是很多年前做的，争论至今还在</text>
+</svg>

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 279" width="760" height="279"
+     role="img" aria-labelledby="fig-arch-3-title fig-arch-3-desc">
+  <title id="fig-arch-3-title">窄腰：上面与下面都可以有很多协议，中间只有一个</title>
+  <desc id="fig-arch-3-desc">上排是第七层的多个协议，比如 HTTP 与 NTP；下排是第二层的多个协议，比如以太网与 Wi-Fi。中间第三层只有一个协议 IP，所有人都必须同意说它，分组才能跨过互联网。两头宽、中间窄，这就是窄腰。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="279" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">窄腰：上面与下面都可以有很多协议，中间只有一个</text>
+
+  <rect x="22" y="66" width="222" height="36" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="133" y="88" font-size="12" fill="#6b21a8" text-anchor="middle">第七层：HTTP</text>
+
+  <rect x="269" y="66" width="222" height="36" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380" y="88" font-size="12" fill="#6b21a8" text-anchor="middle">第七层：NTP</text>
+
+  <rect x="516" y="66" width="222" height="36" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="627" y="88" font-size="12" fill="#6b21a8" text-anchor="middle">还可以有别</text>
+
+  <rect x="22" y="127" width="716" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="149" font-size="12" fill="#b45309" text-anchor="middle">第三层：只有 IP，互联网上每个人都必须同意说它</text>
+
+  <rect x="22" y="188" width="222" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="133" y="210" font-size="12" fill="#166534" text-anchor="middle">第二层：以太网</text>
+
+  <rect x="269" y="188" width="222" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="210" font-size="12" fill="#166534" text-anchor="middle">第二层：Wi-Fi</text>
+
+  <rect x="516" y="188" width="222" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="627" y="210" font-size="12" fill="#166534" text-anchor="middle">还可以有别</text>
+
+  <text x="380" y="254" font-size="10" fill="#64748b" text-anchor="middle">这一处被迫达成的一致，正是全世界能互相通信的前提</text>
+</svg>

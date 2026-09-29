@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 246" width="760" height="246"
+     role="img" aria-labelledby="fig-arch-2-title fig-arch-2-desc">
+  <title id="fig-arch-2-title">两个当年很激进的选择，今天各自遇到麻烦</title>
+  <desc id="fig-arch-2-desc">两行对照。第一行：当年按联邦的方式建，互相独立的运营者合作；今天出现了软件定义网络，是一种更集中的管理方式。第二行：当年把交换机有意做傻，只转发不解析；今天会有洪水攻击，交换机可能需要能识别它。早期设计者并没有考虑这个安全上的含义。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="246" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">两个当年很激进的选择，今天各自遇到麻烦</text>
+
+  <rect x="22" y="66" width="344" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="194" y="88" font-size="12" fill="#1e40af" text-anchor="middle">当年：按联邦的方式建</text>
+  <text x="194" y="106" font-size="12" fill="#1e40af" text-anchor="middle">互相独立的运营者合作</text>
+
+  <rect x="394" y="66" width="344" height="54" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="566" y="88" font-size="12" fill="#6b21a8" text-anchor="middle">后来：软件定义网络</text>
+  <text x="566" y="106" font-size="12" fill="#6b21a8" text-anchor="middle">一种更集中的管理方式</text>
+
+  <rect x="22" y="145" width="344" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="194" y="167" font-size="12" fill="#1e40af" text-anchor="middle">当年：交换机有意做傻</text>
+  <text x="194" y="185" font-size="12" fill="#1e40af" text-anchor="middle">只转发，不解析数据</text>
+
+  <rect x="394" y="145" width="344" height="54" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="566" y="167" font-size="12" fill="#9d174d" text-anchor="middle">后来：要防洪水攻击</text>
+  <text x="566" y="185" font-size="12" fill="#9d174d" text-anchor="middle">交换机可能需要能识别它</text>
+
+  <text x="380" y="222" font-size="10" fill="#64748b" text-anchor="middle">当年做选择时，安全这件事根本没有被纳入考虑</text>
+</svg>
