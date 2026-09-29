@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 348.5" width="760" height="348.5"
+     role="img" aria-labelledby="fig-dns-1-title fig-dns-1-desc">
+  <title id="fig-dns-1-title">这一讲站到第七层，以及名字与地址两套索引</title>
+  <desc id="fig-dns-1-desc">上排五格是源文那张分层图，从第七层应用（DNS、HTTP）往下到第一层物理（光纤、铜线），每格写明层号与这一层的代表。第二行一条说明这一讲的位置：前面二十几讲都在下面四层，这一讲站到最上面那一层，而第 26 讲还在传输层谈路由器帮忙。第三行两格是两套索引：人这一侧用可读的名字（google.com 与 eecs.berkeley.edu），机器那一侧用 IP 地址（172.217.4.174 与 23.195.69.108）。最后一条是 DNS 做的翻译：把名字换成地址。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="348.5" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">这一讲站到第七层，以及名字与地址两套索引</text>
+  <rect x="25" y="64" width="122" height="60" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="86" y="82.5" font-size="10" fill="#6b21a8" text-anchor="middle">第七层</text>
+  <text x="86" y="97.5" font-size="10" fill="#6b21a8" text-anchor="middle">应用</text>
+  <text x="86" y="112.5" font-size="10" fill="#6b21a8" text-anchor="middle">DNS、HTTP</text>
+  <rect x="172" y="64" width="122" height="60" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="233" y="82.5" font-size="10" fill="#1e40af" text-anchor="middle">第四层</text>
+  <text x="233" y="97.5" font-size="10" fill="#1e40af" text-anchor="middle">传输</text>
+  <text x="233" y="112.5" font-size="10" fill="#1e40af" text-anchor="middle">TCP、UDP</text>
+  <rect x="319" y="64" width="122" height="60" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="82.5" font-size="10" fill="#166534" text-anchor="middle">第三层</text>
+  <text x="380" y="97.5" font-size="10" fill="#166534" text-anchor="middle">网络</text>
+  <text x="380" y="112.5" font-size="10" fill="#166534" text-anchor="middle">IP</text>
+  <rect x="466" y="64" width="122" height="60" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="527" y="82.5" font-size="10" fill="#b45309" text-anchor="middle">第二层</text>
+  <text x="527" y="97.5" font-size="10" fill="#b45309" text-anchor="middle">链路</text>
+  <text x="527" y="112.5" font-size="10" fill="#b45309" text-anchor="middle">Ethernet</text>
+  <rect x="613" y="64" width="122" height="60" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="674" y="82.5" font-size="10" fill="#1e293b" text-anchor="middle">第一层</text>
+  <text x="674" y="97.5" font-size="10" fill="#1e293b" text-anchor="middle">物理</text>
+  <text x="674" y="112.5" font-size="10" fill="#1e293b" text-anchor="middle">光纤、铜线</text>
+  <rect x="25" y="152" width="710" height="33" rx="6" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="380" y="172.35" font-size="11" fill="#1e40af" text-anchor="middle">这一讲的位置：前面二十几讲都在下面四层，这一讲站到最上面那一层；第 26 讲还在传输层谈路由器帮忙</text>
+  <rect x="25" y="213" width="342.5" height="49.5" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="196.25" y="233.35" font-size="11" fill="#1e40af" text-anchor="middle">人这一侧：可读的名字</text>
+  <text x="196.25" y="249.85" font-size="11" fill="#1e40af" text-anchor="middle">google.com、eecs.berkeley.edu</text>
+  <rect x="392.5" y="213" width="342.5" height="49.5" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="563.75" y="233.35" font-size="11" fill="#1e40af" text-anchor="middle">机器那一侧：IP 地址</text>
+  <text x="563.75" y="249.85" font-size="11" fill="#1e40af" text-anchor="middle">172.217.4.174、23.195.69.108</text>
+  <rect x="25" y="290.5" width="710" height="33" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380" y="310.85" font-size="11" fill="#6b21a8" text-anchor="middle">DNS 做的翻译：把名字换成地址（源文：the protocol that translates between the two）</text>
+</svg>

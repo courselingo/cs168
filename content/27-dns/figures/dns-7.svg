@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 411" width="760" height="411"
+     role="img" aria-labelledby="fig-dns-7-title fig-dns-7-desc">
+  <title id="fig-dns-7-title">DNS 报文：头部字段与四段记录</title>
+  <desc id="fig-dns-7-desc">上面三排是头部与计数，每格写明它的作用：标识（16 位，每条查询随机选，响应原样带回）、标志（16 位，QR 区分查询与响应，RD 表示希望递归）、问题数（实践里恒为 1）、答案数、授权数与附加数（后三个只在响应里出现）。第四排四格是四段记录：问题记录、答案记录、授权记录与附加记录。最下面一条说明标志里还能写状态：NOERROR 表示成功，NXDOMAIN 表示名字不存在，而查询类型实际只用到 QUERY。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="411" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">DNS 报文：头部字段与四段记录</text>
+  <rect x="25" y="64" width="342.5" height="45" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="196.25" y="82.5" font-size="10" fill="#1e40af" text-anchor="middle">标识</text>
+  <text x="196.25" y="97.5" font-size="10" fill="#1e40af" text-anchor="middle">16 位，每条查询随机选，响应原样带回</text>
+  <rect x="392.5" y="64" width="342.5" height="45" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="563.75" y="82.5" font-size="10" fill="#1e40af" text-anchor="middle">标志</text>
+  <text x="563.75" y="97.5" font-size="10" fill="#1e40af" text-anchor="middle">16 位，QR 区分查询与响应，RD 表示希望递归</text>
+  <rect x="25" y="137" width="342.5" height="45" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="196.25" y="155.5" font-size="10" fill="#1e40af" text-anchor="middle">问题数</text>
+  <text x="196.25" y="170.5" font-size="10" fill="#1e40af" text-anchor="middle">实践里恒为 1</text>
+  <rect x="392.5" y="137" width="342.5" height="45" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="563.75" y="155.5" font-size="10" fill="#1e40af" text-anchor="middle">答案数</text>
+  <text x="563.75" y="170.5" font-size="10" fill="#1e40af" text-anchor="middle">响应里才有</text>
+  <rect x="25" y="210" width="342.5" height="45" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="196.25" y="228.5" font-size="10" fill="#1e40af" text-anchor="middle">授权数</text>
+  <text x="196.25" y="243.5" font-size="10" fill="#1e40af" text-anchor="middle">响应里才有</text>
+  <rect x="392.5" y="210" width="342.5" height="45" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="563.75" y="228.5" font-size="10" fill="#1e40af" text-anchor="middle">附加数</text>
+  <text x="563.75" y="243.5" font-size="10" fill="#1e40af" text-anchor="middle">响应里才有</text>
+  <rect x="25" y="283" width="158.75" height="45" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="104.375" y="301.5" font-size="10" fill="#1e293b" text-anchor="middle">问题记录</text>
+  <text x="104.375" y="316.5" font-size="10" fill="#1e293b" text-anchor="middle">一条查询</text>
+  <rect x="208.75" y="283" width="158.75" height="45" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="288.125" y="301.5" font-size="10" fill="#1e293b" text-anchor="middle">答案记录</text>
+  <text x="288.125" y="316.5" font-size="10" fill="#1e293b" text-anchor="middle">直接答案</text>
+  <rect x="392.5" y="283" width="158.75" height="45" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="471.875" y="301.5" font-size="10" fill="#1e293b" text-anchor="middle">授权记录</text>
+  <text x="471.875" y="316.5" font-size="10" fill="#1e293b" text-anchor="middle">下一跳是谁</text>
+  <rect x="576.25" y="283" width="158.75" height="45" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="655.625" y="301.5" font-size="10" fill="#1e293b" text-anchor="middle">附加记录</text>
+  <text x="655.625" y="316.5" font-size="10" fill="#1e293b" text-anchor="middle">下一跳的地址</text>
+  <rect x="25" y="356" width="710" height="30" rx="6" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="380" y="374.5" font-size="10" fill="#1e40af" text-anchor="middle">标志里还能表示状态：NOERROR 表示成功，NXDOMAIN 表示名字不存在；查询类型实际只用到 QUERY</text>
+</svg>

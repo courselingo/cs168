@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 341" width="760" height="341"
+     role="img" aria-labelledby="fig-dns-5-title fig-dns-5-desc">
+  <title id="fig-dns-5-title">一次概念上的查询：三轮问答，从根走到答案</title>
+  <desc id="fig-dns-5-desc">上面一条说明这类查询总是从根开始、逐级被转交，直到有一台知道答案。下面三排是三轮问答。第一轮问根服务器，它回答不知道，但把查询转给负责 .edu 的 a.edu-servers.net（192.5.6.30）。第二轮问 .edu 那一台，它仍然没有答案，把查询转给负责 berkeley.edu 的 adns1.berkeley.edu（128.32.136.3）。第三轮问 berkeley.edu 那一台，它给出答案：eecs.berkeley.edu 的地址是 23.185.0.1，拿到之后存进缓存。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="341" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">一次概念上的查询：三轮问答，从根走到答案</text>
+  <rect x="25" y="64" width="710" height="33" rx="6" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="380" y="84.35" font-size="11" fill="#1e40af" text-anchor="middle">一次概念上的查询：总是从根开始，逐级被转交，直到有一台知道答案</text>
+  <rect x="25" y="125" width="220" height="45" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="135" y="151" font-size="10" fill="#1e40af" text-anchor="middle">第一轮：问根服务器</text>
+  <rect x="270" y="125" width="220" height="45" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="151" font-size="10" fill="#1e40af" text-anchor="middle">它回答「我不知道」</text>
+  <rect x="515" y="125" width="220" height="45" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="625" y="143.5" font-size="10" fill="#1e40af" text-anchor="middle">但把我转给 .edu 那台</text>
+  <text x="625" y="158.5" font-size="10" fill="#1e40af" text-anchor="middle">a.edu-servers.net / 192.5.6.30</text>
+  <rect x="25" y="198" width="220" height="45" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="135" y="224" font-size="10" fill="#166534" text-anchor="middle">第二轮：问 .edu 那台</text>
+  <rect x="270" y="198" width="220" height="45" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="224" font-size="10" fill="#166534" text-anchor="middle">它仍然没有答案</text>
+  <rect x="515" y="198" width="220" height="45" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="625" y="216.5" font-size="10" fill="#166534" text-anchor="middle">把我转给 berkeley.edu 那台</text>
+  <text x="625" y="231.5" font-size="10" fill="#166534" text-anchor="middle">adns1.berkeley.edu / 128.32.136.3</text>
+  <rect x="25" y="271" width="220" height="45" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="135" y="297" font-size="10" fill="#b45309" text-anchor="middle">第三轮：问 berkeley.edu 那台</text>
+  <rect x="270" y="271" width="220" height="45" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="297" font-size="10" fill="#b45309" text-anchor="middle">它给出答案</text>
+  <rect x="515" y="271" width="220" height="45" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="625" y="289.5" font-size="10" fill="#b45309" text-anchor="middle">eecs.berkeley.edu 的地址是 23.185.0.1</text>
+  <text x="625" y="304.5" font-size="10" fill="#b45309" text-anchor="middle">拿到之后存进缓存</text>
+</svg>

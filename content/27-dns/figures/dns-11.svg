@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 414" width="760" height="414"
+     role="img" aria-labelledby="fig-dns-11-title fig-dns-11-desc">
+  <title id="fig-dns-11-title">商业侧的四件事：顶级域、根与任播、邮件、负载均衡</title>
+  <desc id="fig-dns-11-desc">上排两格是名字的买卖与顶级域那一侧：ICANN 管根区域，它把根区域的一部分下放给顶级域；顶级域可以购买，注册价 150,000 美元，到 2024 年已有超过 1,500 个。第二排两格接着说买卖的细节：域名从父级区域买下来，买的时候要把自己的名字服务器告诉父级；更靠下的名字服务器常由注册商运营，公司也会为自己的应用跑一套。第三排两格是根那一层：全球只有 13 个根地址，靠任播铺成上千个镜像，f 根有 3,000 多个镜像，根提示里的生存时间是 42 天。最后一排两格是 DNS 的另外两种用法：MX 记录把域名指向邮件服务器，值里带优先级，先试数字最小的那台；多条 A 记录与按来源区分的回答被用来做负载均衡，源文那次实验里旧金山是20 毫秒，俄勒冈那个地址在源文里写作 35 秒。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="414" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">商业侧的四件事：顶级域、根与任播、邮件、负载均衡</text>
+  <rect x="25" y="64" width="710" height="33" rx="6" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="380" y="84.35" font-size="11" fill="#1e40af" text-anchor="middle">商业侧的四件事：名字怎么卖、根那一层怎么撑住、以及 DNS 的另外两种用法</text>
+  <rect x="25" y="125" width="342.5" height="45" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="196.25" y="143.5" font-size="10" fill="#1e40af" text-anchor="middle">ICANN 管根区域</text>
+  <text x="196.25" y="158.5" font-size="10" fill="#1e40af" text-anchor="middle">它把根区域的一部分下放给顶级域</text>
+  <rect x="392.5" y="125" width="342.5" height="45" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="563.75" y="143.5" font-size="10" fill="#1e40af" text-anchor="middle">顶级域可以买</text>
+  <text x="563.75" y="158.5" font-size="10" fill="#1e40af" text-anchor="middle">注册价 150,000 美元，到 2024 年超过 1,500 个</text>
+  <rect x="25" y="198" width="342.5" height="45" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="196.25" y="216.5" font-size="10" fill="#166534" text-anchor="middle">域名从父级买下来</text>
+  <text x="196.25" y="231.5" font-size="10" fill="#166534" text-anchor="middle">买的时候要把自己的名字服务器告诉父级</text>
+  <rect x="392.5" y="198" width="342.5" height="45" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="563.75" y="216.5" font-size="10" fill="#166534" text-anchor="middle">更靠下的名字服务器</text>
+  <text x="563.75" y="231.5" font-size="10" fill="#166534" text-anchor="middle">常由注册商运营；公司也会为自己的应用跑一套</text>
+  <rect x="25" y="271" width="342.5" height="45" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="196.25" y="289.5" font-size="10" fill="#b45309" text-anchor="middle">13 个根地址</text>
+  <text x="196.25" y="304.5" font-size="10" fill="#b45309" text-anchor="middle">靠任播铺成上千个镜像</text>
+  <rect x="392.5" y="271" width="342.5" height="45" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="563.75" y="289.5" font-size="10" fill="#b45309" text-anchor="middle">f 根有 3,000 多个镜像</text>
+  <text x="563.75" y="304.5" font-size="10" fill="#b45309" text-anchor="middle">根提示里的生存时间是 42 天</text>
+  <rect x="25" y="344" width="342.5" height="45" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="196.25" y="362.5" font-size="10" fill="#6b21a8" text-anchor="middle">MX 记录把域名指向邮件服务器</text>
+  <text x="196.25" y="377.5" font-size="10" fill="#6b21a8" text-anchor="middle">值里带优先级，先试数字最小的那台</text>
+  <rect x="392.5" y="344" width="342.5" height="45" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="563.75" y="362.5" font-size="10" fill="#6b21a8" text-anchor="middle">多条 A 记录与按来源区分的回答</text>
+  <text x="563.75" y="377.5" font-size="10" fill="#6b21a8" text-anchor="middle">用来分摊压力；旧金山 20 毫秒，俄勒冈那个地址源文写作 35 秒</text>
+</svg>

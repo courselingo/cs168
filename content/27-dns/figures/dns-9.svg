@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 338" width="760" height="338"
+     role="img" aria-labelledby="fig-dns-9-title fig-dns-9-desc">
+  <title id="fig-dns-9-title">真实的一次查询：dig 走三步，每步的头部计数都在变</title>
+  <desc id="fig-dns-9-desc">上排三格是第一步：问根服务器 198.41.0.4，拿到授权 13 条（.edu 的 NS 指向 a.edu-servers.net）与附加 27 条（a.edu-servers.net 的地址是 192.5.6.30）。第二排三格是第二步：问 192.5.6.30，拿到授权 3 条（adns1、adns2 与 adns3.berkeley.edu）与附加 5 条。第三排三格是第三步：问 128.32.136.3，拿到答案 1 条（eecs.berkeley.edu，生存时间 86400 秒、类别 IN、类型 A、值 23.185.0.1）。最下面一条说明根提示文件的作用与缓存的效果。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="338" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">真实的一次查询：dig 走三步，每步的头部计数都在变</text>
+  <rect x="25" y="64" width="220" height="45" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="135" y="90" font-size="10" fill="#1e40af" text-anchor="middle">第一步：问根 198.41.0.4</text>
+  <rect x="270" y="64" width="220" height="45" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="82.5" font-size="10" fill="#1e40af" text-anchor="middle">授权 13 条</text>
+  <text x="380" y="97.5" font-size="10" fill="#1e40af" text-anchor="middle">.edu 的 NS 指向 a.edu-servers.net</text>
+  <rect x="515" y="64" width="220" height="45" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="625" y="82.5" font-size="10" fill="#1e40af" text-anchor="middle">附加 27 条</text>
+  <text x="625" y="97.5" font-size="10" fill="#1e40af" text-anchor="middle">a.edu-servers.net 的地址是 192.5.6.30</text>
+  <rect x="25" y="137" width="220" height="45" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="135" y="163" font-size="10" fill="#166534" text-anchor="middle">第二步：问 192.5.6.30</text>
+  <rect x="270" y="137" width="220" height="45" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="155.5" font-size="10" fill="#166534" text-anchor="middle">授权 3 条</text>
+  <text x="380" y="170.5" font-size="10" fill="#166534" text-anchor="middle">adns1、adns2、adns3.berkeley.edu</text>
+  <rect x="515" y="137" width="220" height="45" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="625" y="155.5" font-size="10" fill="#166534" text-anchor="middle">附加 5 条</text>
+  <text x="625" y="170.5" font-size="10" fill="#166534" text-anchor="middle">给出这三台的地址</text>
+  <rect x="25" y="210" width="220" height="45" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="135" y="236" font-size="10" fill="#b45309" text-anchor="middle">第三步：问 128.32.136.3</text>
+  <rect x="270" y="210" width="220" height="45" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="228.5" font-size="10" fill="#b45309" text-anchor="middle">答案 1 条</text>
+  <text x="380" y="243.5" font-size="10" fill="#b45309" text-anchor="middle">eecs.berkeley.edu</text>
+  <rect x="515" y="210" width="220" height="45" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="625" y="228.5" font-size="10" fill="#b45309" text-anchor="middle">生存时间 86400 秒、类别 IN、类型 A</text>
+  <text x="625" y="243.5" font-size="10" fill="#b45309" text-anchor="middle">值 23.185.0.1</text>
+  <rect x="25" y="283" width="710" height="30" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="380" y="301.5" font-size="10" fill="#1e293b" text-anchor="middle">根提示文件把根服务器的名字与地址硬编码在解析器里；缓存让多数查询跳过前几步，直接用缓存里的记录</text>
+</svg>

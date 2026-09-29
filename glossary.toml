@@ -788,3 +788,78 @@ notes = "IP 首部里由路由器置位的拥塞信号，缩写成 ECN；接收�
 en = "deficit round robin"
 zh = "赤字轮询"
 notes = "公平排队在高速路由器里的近似实现，源文举的例子；现代路由器一般用近似，并把队列数开得比连接数少（第 26 讲）"
+
+[[term]]
+en = "Domain Name System"
+zh = "域名系统"
+notes = "把人类可读的名字翻译成 IP 地址的那套系统；本课程里只取它的第一个应用场景"
+
+[[term]]
+en = "name server"
+zh = "名字服务器"
+notes = "专门回答 DNS 请求的服务器；一台名字服务器负责一个区域，它自己也有域名与 IP 地址"
+
+[[term]]
+en = "name resolution"
+zh = "名字解析"
+notes = "把一个域名翻成对应 IP 地址的过程"
+
+[[term]]
+en = "zone"
+zh = "区域"
+notes = "某个组织有权管理的那一部分名字空间；一个区域有一台或多台名字服务器为它应答"
+
+[[term]]
+en = "root server"
+zh = "根服务器"
+notes = "名字空间树最顶层的那批服务器，它的区域写成点号"
+
+[[term]]
+en = "recursive resolver"
+zh = "递归解析器"
+notes = "替终端主机去逐个问名字服务器、并把最终答案带回来的服务器"
+
+[[term]]
+en = "stub resolver"
+zh = "存根解析器"
+notes = "主机上那一小段负责把查询交给递归解析器的代码；它自己也可以有缓存"
+
+[[term]]
+en = "resource record"
+zh = "资源记录"
+notes = "DNS 报文里的键值对；键写成名字、类别与类型，值写成生存时间与数据"
+
+[[term]]
+en = "time-to-live"
+zh = "生存时间"
+notes = "一条记录可以被缓存多少秒；源文在报文里沿用了 TTL 这个缩写"
+
+[[term]]
+en = "anycast"
+zh = "任播"
+notes = "多台镜像对外宣告同一个 IP 地址，于是谁离得近就由谁来应答"
+
+[[term]]
+en = "top-level domain"
+zh = "顶级域"
+notes = "根区域下面那一层区域，例如 com、edu、uk"
+
+[[term]]
+en = "MX record"
+zh = "MX 记录"
+notes = "把域名映射到邮件服务器的资源记录，值里还带一个优先级"
+
+[[term]]
+en = "registrar"
+zh = "注册商"
+notes = "持有一批区域的商业机构，用户向它购买区域里的域名，由它把名字到地址的映射加进名字服务器"
+
+[[term]]
+en = "load balancing"
+zh = "负载均衡"
+notes = "把同一个域名对应到多个 IP 地址，或按请求来源返回不同地址，用来摊开访问压力"
+
+[[term]]
+en = "cache"
+zh = "缓存"
+notes = "把已经查到的记录留在本地或解析器上一段时间，避免重复去问"

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 351.5" width="760" height="351.5"
+     role="img" aria-labelledby="fig-dns-3-title fig-dns-3-desc">
+  <title id="fig-dns-3-title">设计目标与「一台装不下」，以及域名与区域不是一回事</title>
+  <desc id="fig-dns-3-desc">上排两格是源文列的两条设计目标：可扩展（主机极多、查询量极大、主机不断增删）与高可用轻量快（几乎每次连接都以一次查询开始，不能有单点故障）。中间一条说明集中式为什么不行：没有一台服务器大到存下所有域名，也没有一台快到扛住全世界的查询量。第二排两格是解法与它的效果：用一组名字服务器，每台只管一个区域，于是彼此不需要知道对方的域名。最后一条是容易混的细节：名字服务器自己也是普通主机（a.edu-servers.net 与 192.5.6.30），域名里带 .net 却回答 .edu 区域的查询。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="351.5" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">设计目标与「一台装不下」，以及域名与区域不是一回事</text>
+  <rect x="25" y="64" width="342.5" height="49.5" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="196.25" y="84.35" font-size="11" fill="#1e40af" text-anchor="middle">设计目标一：可扩展</text>
+  <text x="196.25" y="100.85" font-size="11" fill="#1e40af" text-anchor="middle">主机极多、每秒查询量极大、主机不断增删</text>
+  <rect x="392.5" y="64" width="342.5" height="49.5" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="563.75" y="84.35" font-size="11" fill="#1e40af" text-anchor="middle">设计目标二：高可用、轻量、快</text>
+  <text x="563.75" y="100.85" font-size="11" fill="#1e40af" text-anchor="middle">几乎每次连接都以一次查询开始；不能有单点故障</text>
+  <rect x="25" y="141.5" width="710" height="33" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="161.85" font-size="11" fill="#b45309" text-anchor="middle">集中式为什么不行：没有一台服务器大到存下所有域名，也没有一台快到扛住全世界的查询量</text>
+  <rect x="25" y="202.5" width="342.5" height="66" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="196.25" y="231.1" font-size="11" fill="#166534" text-anchor="middle">解法：一组名字服务器</text>
+  <text x="196.25" y="247.6" font-size="11" fill="#166534" text-anchor="middle">每台只负责一个区域</text>
+  <rect x="392.5" y="202.5" width="342.5" height="66" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="563.75" y="222.85" font-size="11" fill="#166534" text-anchor="middle">于是彼此不需要知道</text>
+  <text x="563.75" y="239.35" font-size="11" fill="#166534" text-anchor="middle">.com 那台不必知道 wikipedia.org</text>
+  <text x="563.75" y="255.85" font-size="11" fill="#166534" text-anchor="middle">berkeley.edu 那台不必知道 stanford.edu</text>
+  <rect x="25" y="296.5" width="710" height="30" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="380" y="315" font-size="10" fill="#1e293b" text-anchor="middle">容易混的一点：名字服务器自己也是普通主机（a.edu-servers.net / 192.5.6.30），域名里带 .net 却回答 .edu 区域的查询</text>
+</svg>

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 314" width="760" height="314"
+     role="img" aria-labelledby="fig-dns-8-title fig-dns-8-desc">
+  <title id="fig-dns-8-title">一条记录的结构与几种主要类型</title>
+  <desc id="fig-dns-8-desc">上面一条是记录的形式：一条记录等于键加值，键是名字、类别与类型这个三元组（互联网里类别恒为 IN），值是生存时间与数据。第二排四格是四种主要类型各自的映射方向：A 把域名映射到 IPv4 地址、AAAA 把域名映射到 IPv6 地址、NS 把区域映射到域名、CNAME 用于别名，名字与值都是域名。下面一条是端口约定：所有名字服务器在 UDP 的 53 号端口上听查询。最下面一条给出生时间的例子：源文三次 dig 里的 172800 秒等于 48 小时，86400 秒等于一天。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="314" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">一条记录的结构与几种主要类型</text>
+  <rect x="25" y="64" width="710" height="33" rx="6" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="380" y="84.35" font-size="11" fill="#1e40af" text-anchor="middle">一条记录 = 键 + 值；键是「名字、类别、类型」三元组（互联网里类别恒为 IN），值是「生存时间、数据」</text>
+  <rect x="25" y="125" width="158.75" height="45" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="104.375" y="143.5" font-size="10" fill="#166534" text-anchor="middle">A</text>
+  <text x="104.375" y="158.5" font-size="10" fill="#166534" text-anchor="middle">域名 → IPv4 地址</text>
+  <rect x="208.75" y="125" width="158.75" height="45" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="288.125" y="143.5" font-size="10" fill="#166534" text-anchor="middle">AAAA</text>
+  <text x="288.125" y="158.5" font-size="10" fill="#166534" text-anchor="middle">域名 → IPv6 地址</text>
+  <rect x="392.5" y="125" width="158.75" height="45" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="471.875" y="143.5" font-size="10" fill="#166534" text-anchor="middle">NS</text>
+  <text x="471.875" y="158.5" font-size="10" fill="#166534" text-anchor="middle">区域 → 域名</text>
+  <rect x="576.25" y="125" width="158.75" height="45" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="655.625" y="143.5" font-size="10" fill="#166534" text-anchor="middle">CNAME</text>
+  <text x="655.625" y="158.5" font-size="10" fill="#166534" text-anchor="middle">别名，名字与值都是域名</text>
+  <rect x="25" y="198" width="710" height="30" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="216.5" font-size="10" fill="#b45309" text-anchor="middle">端口约定：所有名字服务器在 UDP 的 53 号端口上听查询，这个号固定不变，大家才知道该找哪个端口</text>
+  <rect x="25" y="256" width="710" height="33" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="380" y="276.35" font-size="11" fill="#1e293b" text-anchor="middle">生存时间的例子：源文三次 dig 里出现的 172800 秒等于 48 小时，86400 秒等于一天</text>
+</svg>

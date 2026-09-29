@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 365" width="760" height="365"
+     role="img" aria-labelledby="fig-dns-6-title fig-dns-6-desc">
+  <title id="fig-dns-6-title">存根解析器与递归解析器的分工，以及一个区域里的多台名字服务器</title>
+  <desc id="fig-dns-6-desc">上排两格是两侧的分工：主机这一侧是存根解析器，把查询发出去再收答案；网络那一侧是递归解析器，替你去逐个问名字服务器、做完全部工作。第二排三格是解析器地址的三个来源：接入时被告知、手工填一个（1.1.1.1 与 8.8.8.8）或由家里的路由器充当。第三排两格是缓存：解析器的缓存更大，因为它是替很多主机问的；存根解析器也可以留属于自己的一小份。最下面一条是冗余：每个区域都有多台功能相同的名字服务器，惯例要求两台、实践里多数至少三台，通常一台主、其余是镜像。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="365" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">存根解析器与递归解析器的分工，以及一个区域里的多台名字服务器</text>
+  <rect x="25" y="64" width="342.5" height="49.5" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="196.25" y="84.35" font-size="11" fill="#1e40af" text-anchor="middle">主机这一侧</text>
+  <text x="196.25" y="100.85" font-size="11" fill="#1e40af" text-anchor="middle">存根解析器：把查询发出去，收答案回来</text>
+  <rect x="392.5" y="64" width="342.5" height="49.5" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="563.75" y="84.35" font-size="11" fill="#1e40af" text-anchor="middle">网络那一侧</text>
+  <text x="563.75" y="100.85" font-size="11" fill="#1e40af" text-anchor="middle">递归解析器：替你去逐个问名字服务器，做完全部工作</text>
+  <rect x="25" y="141.5" width="220" height="60" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="135" y="167.5" font-size="10" fill="#1e293b" text-anchor="middle">解析器地址从哪来</text>
+  <text x="135" y="182.5" font-size="10" fill="#1e293b" text-anchor="middle">接入互联网时有人告诉你</text>
+  <rect x="270" y="141.5" width="220" height="60" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="380" y="160" font-size="10" fill="#1e293b" text-anchor="middle">或者手工填一个</text>
+  <text x="380" y="175" font-size="10" fill="#1e293b" text-anchor="middle">1.1.1.1 是 Cloudflare 运营的</text>
+  <text x="380" y="190" font-size="10" fill="#1e293b" text-anchor="middle">8.8.8.8 是 Google 运营的</text>
+  <rect x="515" y="141.5" width="220" height="60" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="625" y="167.5" font-size="10" fill="#1e293b" text-anchor="middle">或者由家里的路由器充当</text>
+  <text x="625" y="182.5" font-size="10" fill="#1e293b" text-anchor="middle">离你近，所以更快</text>
+  <rect x="25" y="229.5" width="342.5" height="49.5" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="196.25" y="249.85" font-size="11" fill="#166534" text-anchor="middle">解析器的缓存更大</text>
+  <text x="196.25" y="266.35" font-size="11" fill="#166534" text-anchor="middle">它服务很多主机，别人刚问过你就能直接拿答案</text>
+  <rect x="392.5" y="229.5" width="342.5" height="49.5" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="563.75" y="249.85" font-size="11" fill="#166534" text-anchor="middle">存根解析器也可以留自己的小缓存</text>
+  <text x="563.75" y="266.35" font-size="11" fill="#166534" text-anchor="middle">有些查询在这一层就答掉了</text>
+  <rect x="25" y="307" width="710" height="33" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="327.35" font-size="11" fill="#b45309" text-anchor="middle">冗余：每个区域都有多台名字服务器，功能完全相同；惯例要求两台，实践里多数至少三台；通常一台主、其余是镜像</text>
+</svg>

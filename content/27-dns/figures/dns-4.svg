@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 366" width="760" height="366"
+     role="img" aria-labelledby="fig-dns-4-title fig-dns-4-desc">
+  <title id="fig-dns-4-title">名字空间是一棵树：根、顶级域、二级域与更下面</title>
+  <desc id="fig-dns-4-desc">从上到下四层。第一层是根，区域写作一个点，它拥有所有域名。第二层是三个顶级域格子：edu、com，以及 uk 与 fr 与 jp 这类国家顶级域。第三层是二级域：berkeley.edu 与 mit.edu。第四层是更下面的三个格子：ischool.berkeley.edu、math.berkeley.edu 与 eecs.berkeley.edu。最下面一条说明层级的关系：越往下区域越小，父级不必认识具体的名字，只要认识子级的区域、域名与地址，就能把查询转交下去。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="366" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">名字空间是一棵树：根、顶级域、二级域与更下面</text>
+  <rect x="25" y="64" width="710" height="36" rx="6" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="380" y="86.2" font-size="12" fill="#1e40af" text-anchor="middle">第一层：根，区域写作一个点；它拥有所有域名</text>
+  <rect x="25" y="128" width="220" height="33" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="135" y="148.35" font-size="11" fill="#1e40af" text-anchor="middle">第二层：edu</text>
+  <rect x="270" y="128" width="220" height="33" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="148.35" font-size="11" fill="#1e40af" text-anchor="middle">第二层：com</text>
+  <rect x="515" y="128" width="220" height="33" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="625" y="148.35" font-size="11" fill="#1e40af" text-anchor="middle">第二层：uk、fr、jp 等国家顶级域</text>
+  <rect x="25" y="189" width="342.5" height="33" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="196.25" y="209.35" font-size="11" fill="#166534" text-anchor="middle">第三层：berkeley.edu</text>
+  <rect x="392.5" y="189" width="342.5" height="33" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="563.75" y="209.35" font-size="11" fill="#166534" text-anchor="middle">第三层：mit.edu</text>
+  <rect x="25" y="250" width="220" height="30" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="135" y="268.5" font-size="10" fill="#b45309" text-anchor="middle">第四层：ischool.berkeley.edu</text>
+  <rect x="270" y="250" width="220" height="30" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="268.5" font-size="10" fill="#b45309" text-anchor="middle">第四层：math.berkeley.edu</text>
+  <rect x="515" y="250" width="220" height="30" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="625" y="268.5" font-size="10" fill="#b45309" text-anchor="middle">第四层：eecs.berkeley.edu</text>
+  <rect x="25" y="308" width="710" height="33" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="380" y="328.35" font-size="11" fill="#1e293b" text-anchor="middle">越往下区域越小；父级不必认识具体的名字，只要认识子级的区域、域名与地址，就能把查询转交下去</text>
+</svg>
