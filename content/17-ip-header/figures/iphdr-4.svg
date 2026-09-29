@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 205" width="760" height="205"
+     role="img" aria-labelledby="fig-iphdr-4-title fig-iphdr-4-desc">
+  <title id="fig-iphdr-4-title">分片、服务类型与选项：三处「曾经想要、后来收窄」的设计</title>
+  <desc id="fig-iphdr-4-desc">三格并排：分片用标识（16 位）、标志（3 位）与偏移（13 位）把过大的分组切开、在链路另一端重组，它能在硬件里做但有额外开销，所以现代互联网尽量避免、并把 MTU 尽量标准化为 1500 字节；服务类型（8 位）原本想让应用按需请求不同投递形式，如今被重新定义成某种优先级概念，例如 DSCP 与 ECN；选项原本允许源路由、记录路径、时间戳等高级处理，但现代实现几乎总是禁用，因为它们迫使首部变长、比定长难处理得多。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="205" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">三处被收窄的设计</text>
+
+  <rect x="22" y="76" width="222" height="72" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="133" y="98" font-size="12" fill="#1e40af" text-anchor="middle">分片</text>
+  <text x="133" y="116" font-size="12" fill="#1e40af" text-anchor="middle">标识 16 + 标志 3 + 偏移 13</text>
+  <text x="133" y="134" font-size="12" fill="#1e40af" text-anchor="middle">能做但要尽量避免</text>
+
+  <rect x="269" y="76" width="222" height="72" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="98" font-size="12" fill="#b45309" text-anchor="middle">服务类型 ToS</text>
+  <text x="380" y="116" font-size="12" fill="#b45309" text-anchor="middle">原意：按需选择投递</text>
+  <text x="380" y="134" font-size="12" fill="#b45309" text-anchor="middle">如今：优先级（DSCP/ECN）</text>
+
+  <rect x="516" y="76" width="222" height="72" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="627" y="98" font-size="12" fill="#9d174d" text-anchor="middle">选项</text>
+  <text x="627" y="116" font-size="12" fill="#9d174d" text-anchor="middle">源路由、记录路径、时间戳</text>
+  <text x="627" y="134" font-size="12" fill="#9d174d" text-anchor="middle">几乎总被禁用</text>
+
+  <text x="380" y="180" font-size="10" fill="#64748b" text-anchor="middle">选项之所以被关掉，是因为它让首部变成变长，正是那两条目标要避免的</text>
+</svg>

@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 211" width="760" height="211"
+     role="img" aria-labelledby="fig-iphdr-7-title fig-iphdr-7-desc">
+  <title id="fig-iphdr-7-title">首部层面的五类攻击面</title>
+  <desc id="fig-iphdr-7-desc">三格并排：假冒源地址（IP spoofing）可以让被冒充的主机被错误归咎、或让回信寄到被冒充者那里，而它又让拒绝服务攻击更难被过滤，因为服务器难以区分攻击流量与正常流量；滥用服务类型可以让恶意用户自设高优先级，或者发伪造的高优先级分组让被冒充的主机替他付钱；让路由器做额外工作有两招，发大分组逼它分片、加一堆选项逼它处理，都能耗尽处理能力；此外用 TTL 逐跳探测可以画出路径上的路由器，这一招叫 traceroute，也有人认为它是诊断工具而非攻击；改协议号或校验和字段则会因非法而被丢弃，实际攻击不存在。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="211" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">首部层面的攻击面</text>
+
+  <rect x="22" y="66" width="222" height="90" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="133" y="88" font-size="12" fill="#9d174d" text-anchor="middle">① 假冒源地址</text>
+  <text x="133" y="106" font-size="12" fill="#9d174d" text-anchor="middle">被冒充者背锅</text>
+  <text x="133" y="124" font-size="12" fill="#9d174d" text-anchor="middle">回信寄给他</text>
+  <text x="133" y="142" font-size="12" fill="#9d174d" text-anchor="middle">② DoS 更难过滤</text>
+
+  <rect x="269" y="66" width="222" height="90" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="88" font-size="12" fill="#b45309" text-anchor="middle">③ 滥用服务类型</text>
+  <text x="380" y="106" font-size="12" fill="#b45309" text-anchor="middle">自设高优先级</text>
+  <text x="380" y="124" font-size="12" fill="#b45309" text-anchor="middle">或让被冒充者付钱</text>
+  <text x="380" y="142" font-size="12" fill="#b45309" text-anchor="middle">④ 逼路由器分片与处理选项</text>
+
+  <rect x="516" y="66" width="222" height="90" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="627" y="88" font-size="12" fill="#1e40af" text-anchor="middle">⑤ TTL 逐跳探测</text>
+  <text x="627" y="106" font-size="12" fill="#1e40af" text-anchor="middle">TTL 1、2、3…</text>
+  <text x="627" y="124" font-size="12" fill="#1e40af" text-anchor="middle">逐个发现路由器</text>
+  <text x="627" y="142" font-size="12" fill="#1e40af" text-anchor="middle">这就是 traceroute</text>
+
+  <text x="380" y="186" font-size="10" fill="#64748b" text-anchor="middle">IP 本身没有任何内建的安全防护；改协议号或校验和只会让分组被丢弃</text>
+</svg>

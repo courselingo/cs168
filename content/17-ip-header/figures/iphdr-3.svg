@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 205" width="760" height="205"
+     role="img" aria-labelledby="fig-iphdr-3-title fig-iphdr-3-desc">
+  <title id="fig-iphdr-3-title">TTL 管环路，校验和管首部损坏</title>
+  <desc id="fig-iphdr-3-desc">左栏是 TTL：分组可能在环里打转，而转发是纳秒级、路由收敛是毫秒到秒级，一直等它收敛既慢又浪费带宽；于是每经过一跳把 TTL 减一，减到 0 就丢弃并回一条错误消息给源，这条错误消息是规范要求的、但实践中并不总会发出。右栏是校验和：只覆盖 IP 首部，能发现首部损坏、发现不了载荷损坏，这正是端到端原则的落点；又因为 TTL 每跳都在变，校验和必须在每一台路由器上重算。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="205" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">出错怎么办</text>
+
+  <rect x="22" y="76" width="344" height="72" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="194" y="98" font-size="12" fill="#1e40af" text-anchor="middle">TTL：每跳减一</text>
+  <text x="194" y="116" font-size="12" fill="#1e40af" text-anchor="middle">减到 0 就丢弃</text>
+  <text x="194" y="134" font-size="12" fill="#1e40af" text-anchor="middle">规范要求回错误消息</text>
+
+  <rect x="394" y="76" width="344" height="72" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="566" y="98" font-size="12" fill="#166534" text-anchor="middle">校验和：只覆盖首部</text>
+  <text x="566" y="116" font-size="12" fill="#166534" text-anchor="middle">载荷由端主机自己检查</text>
+  <text x="566" y="134" font-size="12" fill="#166534" text-anchor="middle">TTL 变 ⇒ 每台路由器重算</text>
+
+  <text x="380" y="180" font-size="10" fill="#64748b" text-anchor="middle">一个可能的替代设计：把 TTL 排除在校验和之外，省掉这份重算</text>
+</svg>

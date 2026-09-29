@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 177" width="760" height="177"
+     role="img" aria-labelledby="fig-iphdr-6-title fig-iphdr-6-desc">
+  <title id="fig-iphdr-6-title">IPv6 的取向：能交给端主机的就交出去，真正的 IP 层问题留在原处</title>
+  <desc id="fig-iphdr-6-desc">左栏是交给端主机的部分：分片与重发、校验和验证与重传损坏的分组，这些工作由端主机做更合适，因为端主机处理的分组数远少于路由器。右栏是留在 IP 层的部分：跳数限制（也就是 TTL）本质上就是 IP 层面的问题，端主机做不了——分组在网里绕圈，端主机怎么帮得上忙。此外有几个字段只是改名不改功能：分组长度改成载荷长度、TTL 改成跳数限制、服务类型改成流量类别。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="177" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">IPv6 的取向</text>
+
+  <rect x="22" y="66" width="344" height="54" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="194" y="88" font-size="12" fill="#166534" text-anchor="middle">交给端主机</text>
+  <text x="194" y="106" font-size="12" fill="#166534" text-anchor="middle">分片重发、校验与重传</text>
+
+  <rect x="394" y="66" width="344" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="566" y="88" font-size="12" fill="#1e40af" text-anchor="middle">留在 IP 层</text>
+  <text x="566" y="106" font-size="12" fill="#1e40af" text-anchor="middle">跳数限制：端主机帮不上忙</text>
+
+  <text x="380" y="152" font-size="10" fill="#64748b" text-anchor="middle">版本号不变；总长度改叫载荷长度、TTL 改叫跳数限制、服务类型改叫流量类别</text>
+</svg>

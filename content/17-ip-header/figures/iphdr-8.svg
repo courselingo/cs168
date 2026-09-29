@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 195" width="760" height="195"
+     role="img" aria-labelledby="fig-iphdr-8-title fig-iphdr-8-desc">
+  <title id="fig-iphdr-8-title">现代缓解：发生在 ISP 层面，而不是 IP 协议本身</title>
+  <desc id="fig-iphdr-8-desc">左栏是禁止自设服务类型：原本发送方可以自己给分组设优先级，而现代互联网里 ISP 不允许端主机设置服务类型字段。右栏是检测与拦截：很多 ISP 有工具来检测并拦截伪造源地址的分组。两栏合起来说明一件事：最初的设计没有挡住这些攻击，今天的修补主要发生在运营者层面，而不是靠修改 IP 协议。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="195" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">现代怎么缓解</text>
+
+  <rect x="22" y="66" width="344" height="72" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="194" y="88" font-size="12" fill="#1e40af" text-anchor="middle">不许端主机自设 ToS</text>
+  <text x="194" y="106" font-size="12" fill="#1e40af" text-anchor="middle">优先级不再由发送方说了算</text>
+  <text x="194" y="124" font-size="12" fill="#1e40af" text-anchor="middle">由 ISP 把关</text>
+
+  <rect x="394" y="66" width="344" height="72" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="566" y="88" font-size="12" fill="#166534" text-anchor="middle">检测并拦截伪造源</text>
+  <text x="566" y="106" font-size="12" fill="#166534" text-anchor="middle">很多 ISP 有这类工具</text>
+  <text x="566" y="124" font-size="12" fill="#166534" text-anchor="middle">冒充源地址因此更难</text>
+
+  <text x="380" y="170" font-size="10" fill="#64748b" text-anchor="middle">最初的互联网设计没有挡住这些攻击：修补发生在运营者层面</text>
+</svg>

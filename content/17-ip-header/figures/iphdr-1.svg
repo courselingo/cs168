@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 187" width="760" height="187"
+     role="img" aria-labelledby="fig-iphdr-1-title fig-iphdr-1-desc">
+  <title id="fig-iphdr-1-title">首部的两条目标：尽可能小、尽可能简单</title>
+  <desc id="fig-iphdr-1-desc">左栏是尽可能小：互联网上发出的每一个分组都要带上 IP 首部，所以哪怕只增加一个字节，也会显著增加全网的带宽消耗。右栏是尽可能简单：每台路由器与端主机都要处理它，处理起来复杂就会拖慢整个互联网；而且理想情况下首部要能纯硬件处理，因此不能假设处理它时可以用通用 CPU 的各种操作。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="187" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">首部的两条设计目标</text>
+
+  <rect x="22" y="76" width="344" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="194" y="98" font-size="12" fill="#1e40af" text-anchor="middle">尽可能小</text>
+  <text x="194" y="116" font-size="12" fill="#1e40af" text-anchor="middle">多一个字节 ⇒ 全网带宽都涨</text>
+
+  <rect x="394" y="76" width="344" height="54" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="566" y="98" font-size="12" fill="#166534" text-anchor="middle">尽可能简单</text>
+  <text x="566" y="116" font-size="12" fill="#166534" text-anchor="middle">要能纯硬件处理</text>
+
+  <text x="380" y="162" font-size="10" fill="#64748b" text-anchor="middle">凡是让首部变大或变复杂的设计，后面都会被解释为什么被砍掉</text>
+</svg>
