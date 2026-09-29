@@ -294,6 +294,25 @@ def check_body(rel: str, body: str, rep: Report, glossary_index: dict[str, tuple
                 f"键请写成 [[term:{slugify(m.group(1))}]]",
             )
 
+    # ★ 术语名被写了两遍（2026-09-29 加，起因见 quality-audit 附录六十四）
+    #   `build_site.py` 的 label = f"{zh}（{en}）" if used[key] == 1 else zh
+    #   ⇒ 模板**两种情况下都会渲染 en 与 zh** ⇒ 标记后面手打 `（en，zh）` **永远多余**，
+    #     渲染出来是「路由器（router）（router，路由器）」。
+    #   ★ 判据的误报率**可证明为 0**（由模板源码保证）⇒ 所以它是**硬错误**，不是警告。
+    #   ★ 而加它的起因：cs168 一门课有 203 处（一位作者的习惯被后面的讲次照抄），
+    #     而另外三门课 0 处 ⇒ 光修不够，它会再长回来。
+    for _m in re.finditer(
+            r"\[\[term:([A-Za-z0-9_.\-]+)\]\]\s*[（(]\s*([^，,）)]+?)\s*[，,]\s*([^）)]+?)\s*[）)]",
+            body):
+        _k, _a, _b = _m.group(1), _m.group(2).strip(), _m.group(3).strip()
+        _g = glossary_index.get(_k)
+        if _g and _a.lower() == str(_g[0]).lower() and _b == str(_g[1]):
+            rep.error(
+                rel,
+                f"术语名被写了两遍：[[term:{_k}]]（{_a}，{_b}）"
+                f" —— 模板已渲染「{_g[1]}（{_g[0]}）」，那个括号是多余的（页面上会重复显示）",
+            )
+
     # 原文转载探测 + 术语漂移
     # ★ 2026-09-29（附录六十）：漂移判据跳过**尾巴小节**（溯源/脉络回顾/读完应该能回答）——
     #   那里是给核对者看的笔记，打术语标记没有意义；实测剩下的警告全是这一类的假阳性。

@@ -597,3 +597,49 @@ notes = "把没被确认的数据再发一遍；两个触发条件是盯住窗�
 en = "flag"
 zh = "标志位"
 notes = "TCP 首部里可以置 1 或置 0 的比特；置 1 表示该标志生效，本讲用到的是 SYN 与 ACK（FIN 与 RST 在结束连接一节）"
+
+# ── 第 21 讲补入（2026-09-29；拥塞控制原理，供第 21–26 讲共用）────────
+# 第 21 讲是拥塞控制的起点：拥塞的代价、1986 年那次拥塞崩溃、它为什么难、
+# 好算法的目标，以及预留 / 定价 / 动态调整这三条设计路线。
+# 下面这批词是该讲的核心词汇，后面拥塞控制各讲会反复用到，先冻结译法。
+# ★ 加之前把候选英文原词在**前 20 讲正文**里逐条扫过（grep content/**/index.md）：
+#   congestion collapse / dynamic adjustment / fairness / pricing /
+#   host-based / router-assisted —— 出现 **0 次**。
+#   唯一的例外不在正文里：router-assisted 只作为第 26 讲的 slug 出现在
+#   docs/lecture-manifest.md（该文件不是内容页，漂移判据不扫它）。
+# ★ `reservation`（预留）**故意没有登记**：英文原词已在第 5 讲
+#   （05-designing-resource-sharing，RSVP 那一段）出现 3 次，登记会让那一页报漂移；
+#   本讲作者按规矩不动别人的目录，留给后续统一处理。
+# ★ 键一律用连字符形式（[[term:]] 只接受 [A-Za-z0-9_.-]）。
+
+[[term]]
+en = "congestion collapse"
+zh = "拥塞崩溃"
+notes = "网络容量因为大量重发而大幅下降的状态；教材给的例子是 1986 年 10 月 Berkeley 到 Lawrence Berkeley Lab 那条链路吞吐从 32 Kbps 掉到 40 bps，而启用 TCP 拥塞控制之后互联网再没出现过它"
+
+[[term]]
+en = "dynamic adjustment"
+zh = "动态调整"
+notes = "主机动态地学当前的拥塞程度、再据此调整发送速率；教材说今天所有现代算法都走这条路，它实用是因为容易推广（不需要商业模式，也不假定用户提前知道带宽）"
+
+[[term]]
+en = "host-based congestion control"
+zh = "主机侧拥塞控制"
+aliases = ["host-based"]
+notes = "发送方自己盯着表现、自己调速率，路由器不提供任何特殊支持；当年改 TCP 的那个补丁属于这一类，与「路由器协助」相对"
+
+[[term]]
+en = "router-assisted congestion control"
+zh = "路由器协助拥塞控制"
+aliases = ["router-assisted"]
+notes = "路由器把拥塞信息明确地送回发送方（有的只送一个比特，有的直接给出建议速率）；拥塞发生在路由器上，所以路由器有条件提供这类信息"
+
+[[term]]
+en = "fairness"
+zh = "公平"
+notes = "每条连接分到的可用容量应该一样多；教材把严格定义留到后面，先只用这个粗略说法，它与效率一起构成算法的两个目标"
+
+[[term]]
+en = "pricing"
+zh = "定价"
+notes = "按拥堵程度收钱来分配带宽（收费快车道、节假日机票都是这个形状）；没有大规模部署，原因是需要一套把付款与拥塞连起来的商业模式"
