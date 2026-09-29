@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 288" width="760" height="288"
+     role="img" aria-labelledby="fig-ccp-8-title fig-ccp-8-desc">
+  <title id="fig-ccp-8-title">三个目标与两个反例</title>
+  <desc id="fig-ccp-8-desc">上方两个并排的框。左边是要效率：链路不该被压垮，时延与丢包要尽量小，容量也别闲着。右边是要公平：每条连接分到的可用容量应该一样多，正式定义后面再给。下方一个通栏框给出两个反例：让所有人拼命快发，得到拥塞；让所有人拼命慢发，得到闲置的容量；只顾一个目标、牺牲另一个，都是坏解法。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="288" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">三个目标与两个反例</text>
+
+  <rect x="22" y="76" width="344" height="90" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="194" y="98" font-size="12" fill="#1e40af" text-anchor="middle">要效率</text>
+  <text x="194" y="116" font-size="12" fill="#1e40af" text-anchor="middle">链路不该被压垮</text>
+  <text x="194" y="134" font-size="12" fill="#1e40af" text-anchor="middle">时延与丢包要尽量小</text>
+  <text x="194" y="152" font-size="12" fill="#1e40af" text-anchor="middle">容量也别闲着</text>
+  <rect x="394" y="76" width="344" height="90" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="566" y="98" font-size="12" fill="#166534" text-anchor="middle">要公平</text>
+  <text x="566" y="116" font-size="12" fill="#166534" text-anchor="middle">每条连接分到的</text>
+  <text x="566" y="134" font-size="12" fill="#166534" text-anchor="middle">可用容量应该一样多</text>
+  <text x="566" y="152" font-size="12" fill="#166534" text-anchor="middle">正式定义后面再给</text>
+  <rect x="22" y="194" width="716" height="72" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="216" font-size="12" fill="#b45309" text-anchor="middle">两个反例：让所有人拼命快发，得到拥塞</text>
+  <text x="380" y="234" font-size="12" fill="#b45309" text-anchor="middle">让所有人拼命慢发，得到闲置的容量</text>
+  <text x="380" y="252" font-size="12" fill="#b45309" text-anchor="middle">只顾一个目标、牺牲另一个，都是坏解法</text>
+</svg>

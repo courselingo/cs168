@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 354" width="760" height="354"
+     role="img" aria-labelledby="fig-ccd-6-title fig-ccd-6-desc">
+  <title id="fig-ccd-6-title">两个连接的一张图：效率线与公平线</title>
+  <desc id="fig-ccd-6-desc">一张二维图，横轴 X1 与纵轴 X2 是两条连接各自的速率，容量取 C=1。效率线 X1+X2=1 从左上到右下，线上的点都把带宽用满，线以上的点拥塞，线以下的点没用满。公平线 X1=X2 从左下到右上，线上的点两条连接平分带宽。两条线交在理想点 (0.5, 0.5)，那个点既有效率又公平。右下一格列出两条线的含义。最下方注明 C=1 时的三个例子：(0.2,0.5) 只用到 0.7 的带宽，(0.7,0.5) 已经拥塞，(0.7,0.3) 有效率但不公平。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="354" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">两个连接的一张图：效率线与公平线</text>
+
+  <path d="M24,300 L280,300" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M24,300 L24,80" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <path d="M24,120 Q114,210 204,300" fill="none" stroke="#3b82f6" stroke-width="1.5"/>
+  <path d="M24,300 Q114,210 204,120" fill="none" stroke="#22c55e" stroke-width="1.5"/>
+
+  <circle cx="114" cy="210" r="5" fill="#f59e0b"/>
+
+  <text x="114" y="100" font-size="12" fill="#1f2937" text-anchor="middle">理想点 (0.5, 0.5)</text>
+  <path d="M114,114 L114,203" fill="none" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4 4"/>
+
+  <rect x="340" y="110" width="398" height="108" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="539" y="132" font-size="12" fill="#6b21a8" text-anchor="middle">横轴 X1、纵轴 X2：两条连接各自的速率</text>
+  <text x="539" y="150" font-size="12" fill="#6b21a8" text-anchor="middle">效率线 X1+X2=C：线上每个点都把带宽用满</text>
+  <text x="539" y="168" font-size="12" fill="#6b21a8" text-anchor="middle">线以上是拥塞，线以下是没用满</text>
+  <text x="539" y="186" font-size="12" fill="#6b21a8" text-anchor="middle">公平线 X1=X2：线上两条连接平分带宽</text>
+  <text x="539" y="204" font-size="12" fill="#6b21a8" text-anchor="middle">两条线的交点又有效率又公平，就是理想点</text>
+
+  <text x="380" y="330" font-size="10" fill="#64748b" text-anchor="middle">C=1 时的三个例子：(0.2,0.5) 只用到 0.7 的带宽；(0.7,0.5) 已经拥塞；(0.7,0.3) 有效率但不公平</text>
+</svg>

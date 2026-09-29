@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 320" width="760" height="320"
+     role="img" aria-labelledby="fig-ccd-5-title fig-ccd-5-desc">
+  <title id="fig-ccd-5-title">两边的代价不对等：发多了比发少了更糟</title>
+  <desc id="fig-ccd-5-desc">上排两格是两种偏离。左边速率太高：链路拥塞、分组被丢，别人的连接也被牵连，代价是丢包、重发、更慢。右边速率太低：带宽没吃满，但不会把网络推进拥塞，代价只是自己慢一点。下排一条横格说明两边的代价不对等：太高会伤害网络，丢包会把别的连接一起拖慢；太低只是自己吃亏，网络还是好的。最下方注明 AIMD 顺着这个不对称来：没有拥塞时慢慢加，一碰到拥塞就大幅往回收。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="320" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">两边的代价不对等：发多了比发少了更糟</text>
+
+  <rect x="22" y="76" width="345" height="90" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="194" y="98" font-size="12" fill="#9d174d" text-anchor="middle">速率太高</text>
+  <text x="194" y="116" font-size="12" fill="#9d174d" text-anchor="middle">链路拥塞，分组被丢</text>
+  <text x="194" y="134" font-size="12" fill="#9d174d" text-anchor="middle">别人的连接也被牵连</text>
+  <text x="194" y="152" font-size="12" fill="#9d174d" text-anchor="middle">代价：丢包、重发、更慢</text>
+
+  <rect x="393" y="76" width="345" height="90" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="566" y="98" font-size="12" fill="#166534" text-anchor="middle">速率太低</text>
+  <text x="566" y="116" font-size="12" fill="#166534" text-anchor="middle">带宽没吃满</text>
+  <text x="566" y="134" font-size="12" fill="#166534" text-anchor="middle">但不会把网络推进拥塞</text>
+  <text x="566" y="152" font-size="12" fill="#166534" text-anchor="middle">代价：自己慢一点</text>
+
+  <rect x="22" y="192" width="716" height="72" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="214" font-size="12" fill="#1e40af" text-anchor="middle">两边的代价不对等</text>
+  <text x="380" y="232" font-size="12" fill="#1e40af" text-anchor="middle">高是伤害网络：丢包会把别的连接一起拖慢</text>
+  <text x="380" y="250" font-size="12" fill="#1e40af" text-anchor="middle">低只是自己吃亏，网络还是好的</text>
+
+  <text x="380" y="297" font-size="10" fill="#64748b" text-anchor="middle">AIMD 就顺着这个不对称：没有拥塞时慢慢加，一碰到拥塞就大幅往回收</text>
+</svg>

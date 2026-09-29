@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 354" width="760" height="354"
+     role="img" aria-labelledby="fig-ccd-10-title fig-ccd-10-desc">
+  <title id="fig-ccd-10-title">AIMD：差距每循环一次就减半，最后走到公平线</title>
+  <desc id="fig-ccd-10-desc">一张二维图，横轴与纵轴是两条连接各自的速率，容量 C=5，绿线是公平线 X1=X2。蓝线是 AIMD 的走法：每次加 1、每次减半，十个状态一路来回折，但整体越来越靠近公平线；橙点标出目标 (2.5, 2.5)，它正落在公平线上。右下一格写明结论：加 1 让两个数一起加、差距不变，减半让两个数一起减半、差距也减半，两个动作只有靠近和不变两种，所以差距一直往 0 走。最下方注明教材的走查最后停在 (2.625, 2.75)。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="354" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">AIMD：差距每循环一次就减半</text>
+
+  <path d="M24,300 L236,300" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M24,300 L24,80" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <path d="M24,300 Q112,212 200,124" fill="none" stroke="#22c55e" stroke-width="1.5"/>
+
+  <path d="M68,212 Q90,190 112,168" fill="none" stroke="#3b82f6" stroke-width="1.5"/>
+  <path d="M112,168 Q134,146 156,124" fill="none" stroke="#3b82f6" stroke-width="1.5"/>
+  <path d="M156,124 Q123,168 90,212" fill="none" stroke="#3b82f6" stroke-width="1.5"/>
+  <path d="M90,212 Q112,190 134,168" fill="none" stroke="#3b82f6" stroke-width="1.5"/>
+  <path d="M134,168 Q107,201 79,234" fill="none" stroke="#3b82f6" stroke-width="1.5"/>
+  <path d="M79,234 Q101,212 123,190" fill="none" stroke="#3b82f6" stroke-width="1.5"/>
+  <path d="M123,190 Q145,168 167,146" fill="none" stroke="#3b82f6" stroke-width="1.5"/>
+  <path d="M167,146 Q132,185 96,223" fill="none" stroke="#3b82f6" stroke-width="1.5"/>
+  <path d="M96,223 Q118,201 140,179" fill="none" stroke="#3b82f6" stroke-width="1.5"/>
+
+  <circle cx="68" cy="212" r="3" fill="#3b82f6"/>
+  <circle cx="112" cy="168" r="3" fill="#3b82f6"/>
+  <circle cx="156" cy="124" r="3" fill="#3b82f6"/>
+  <circle cx="90" cy="212" r="3" fill="#3b82f6"/>
+  <circle cx="134" cy="168" r="3" fill="#3b82f6"/>
+  <circle cx="79" cy="234" r="3" fill="#3b82f6"/>
+  <circle cx="123" cy="190" r="3" fill="#3b82f6"/>
+  <circle cx="167" cy="146" r="3" fill="#3b82f6"/>
+  <circle cx="96" cy="223" r="3" fill="#3b82f6"/>
+  <circle cx="140" cy="179" r="3" fill="#3b82f6"/>
+
+  <circle cx="134" cy="190" r="5" fill="#f59e0b"/>
+
+  <rect x="290" y="126" width="448" height="108" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="514" y="148" font-size="12" fill="#1e40af" text-anchor="middle">每次加 1、每次减半，容量 C=5</text>
+  <text x="514" y="166" font-size="12" fill="#1e40af" text-anchor="middle">走一遍：(1,2)、(2,3)、(3,4)、(1.5,2)、(2.5,3)……</text>
+  <text x="514" y="184" font-size="12" fill="#1e40af" text-anchor="middle">加 1 让两个数一起加，差距不变</text>
+  <text x="514" y="202" font-size="12" fill="#1e40af" text-anchor="middle">减半让两个数一起减半，差距也减半</text>
+  <text x="514" y="220" font-size="12" fill="#1e40af" text-anchor="middle">两个动作只有靠近和不变，差距一直往 0 走</text>
+
+  <text x="380" y="330" font-size="10" fill="#64748b" text-anchor="middle">教材的走查最后停在 (2.625, 2.75)，两条连接越来越接近公平点 (2.5, 2.5)</text>
+</svg>

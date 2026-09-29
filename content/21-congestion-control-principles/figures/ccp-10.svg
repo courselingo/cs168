@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 370" width="760" height="370"
+     role="img" aria-labelledby="fig-ccp-10-title fig-ccp-10-desc">
+  <title id="fig-ccp-10-title">三条设计路线：预留、定价、动态调整</title>
+  <desc id="fig-ccp-10-desc">三格自上而下。第一格：预留，发送方提前申请带宽、连接结束再还回去，难点是让一条预留贯穿整个网络本身就不容易，而且它假定发送方提前知道自己需要多少带宽。第二格：定价，按拥堵程度收钱、付得多就走得快，高速公路的收费快车道与节假日的机票都是这个形状，它没有大规模部署，因为需要一套把付款与拥塞连起来的商业模式。第三格：动态调整，主机自己学当前的拥塞程度、自己调速率，今天所有现代算法都走这条路，它不需要商业模式，也不假定用户提前知道带宽。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="370" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">三条设计路线：预留、定价、动态调整</text>
+
+  <rect x="22" y="76" width="716" height="72" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="380" y="98" font-size="12" fill="#9d174d" text-anchor="middle">预留：发送方提前申请带宽，连接结束再还回去</text>
+  <text x="380" y="116" font-size="12" fill="#9d174d" text-anchor="middle">难点：让一条预留贯穿整个网络本身就不容易</text>
+  <text x="380" y="134" font-size="12" fill="#9d174d" text-anchor="middle">而且它假定发送方提前知道自己需要多少带宽</text>
+  <rect x="22" y="176" width="716" height="72" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="198" font-size="12" fill="#b45309" text-anchor="middle">定价：按拥堵程度收钱，付得多就走得快</text>
+  <text x="380" y="216" font-size="12" fill="#b45309" text-anchor="middle">高速公路的收费快车道、节假日的机票都是这个形状</text>
+  <text x="380" y="234" font-size="12" fill="#b45309" text-anchor="middle">没有大规模部署：需要一套把付款与拥塞连起来的商业模式</text>
+  <rect x="22" y="276" width="716" height="72" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="298" font-size="12" fill="#1e40af" text-anchor="middle">动态调整：主机自己学当前的拥塞程度，自己调速率</text>
+  <text x="380" y="316" font-size="12" fill="#1e40af" text-anchor="middle">今天所有现代算法都走这条路</text>
+  <text x="380" y="334" font-size="12" fill="#1e40af" text-anchor="middle">它不需要商业模式，也不假定用户提前知道带宽</text>
+</svg>

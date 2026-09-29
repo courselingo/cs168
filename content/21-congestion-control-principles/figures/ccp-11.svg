@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 288" width="760" height="288"
+     role="img" aria-labelledby="fig-ccp-11-title fig-ccp-11-desc">
+  <title id="fig-ccp-11-title">主机侧与路由器协助：拥塞信号怎么回到发送方</title>
+  <desc id="fig-ccp-11-desc">上方两个并排的框。左边是主机侧：发送方自己盯着表现、自己调速率，路由器不提供特殊支持，当年那个 TCP 补丁属于这一类。右边是路由器协助：路由器把拥塞信息明确送回发送方，有的只送一个比特，有的直接告诉该用多快。下方一个通栏框说明两类都靠路由器那一边提供拥塞信号，区别是明确回信，还是让发送方从丢包与时延里自己推断。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="288" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">主机侧与路由器协助：拥塞信号怎么回到发送方</text>
+
+  <rect x="22" y="76" width="344" height="108" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="194" y="98" font-size="12" fill="#1e40af" text-anchor="middle">主机侧</text>
+  <text x="194" y="116" font-size="12" fill="#1e40af" text-anchor="middle">发送方自己盯着表现</text>
+  <text x="194" y="134" font-size="12" fill="#1e40af" text-anchor="middle">自己调速率</text>
+  <text x="194" y="152" font-size="12" fill="#1e40af" text-anchor="middle">路由器不提供特殊支持</text>
+  <text x="194" y="170" font-size="12" fill="#1e40af" text-anchor="middle">当年那个 TCP 补丁属于这一类</text>
+  <rect x="394" y="76" width="344" height="108" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="566" y="98" font-size="12" fill="#166534" text-anchor="middle">路由器协助</text>
+  <text x="566" y="116" font-size="12" fill="#166534" text-anchor="middle">路由器把拥塞信息</text>
+  <text x="566" y="134" font-size="12" fill="#166534" text-anchor="middle">明确送回发送方</text>
+  <text x="566" y="152" font-size="12" fill="#166534" text-anchor="middle">有的只送一个比特</text>
+  <text x="566" y="170" font-size="12" fill="#166534" text-anchor="middle">有的直接告诉该用多快</text>
+  <rect x="22" y="212" width="716" height="54" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="234" font-size="12" fill="#b45309" text-anchor="middle">两类都靠路由器那一边提供拥塞信号</text>
+  <text x="380" y="252" font-size="12" fill="#b45309" text-anchor="middle">区别是明确回信，还是让发送方从丢包与时延里自己推断</text>
+</svg>

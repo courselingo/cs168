@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 403" width="760" height="403"
+     role="img" aria-labelledby="fig-cci-9-title fig-cci-9-desc">
+  <title id="fig-cci-9-title">快恢复的三条规则</title>
+  <desc id="fig-cci-9-desc">三格自上而下。第一格是进入：收到 3 个重复确认后，SSTHRESH 设成 CWND/2 记住新的安全速率，CWND 设成 CWND/2 + 3，那个 3 就是刚收到的 3 个重复确认。第二格是加宽：在快恢复模式里，每多收到一个重复确认就让 CWND 加 1，发送方因此能继续发新分组。第三格是退出：收到新的、非重复的确认时把 CWND 设成 SSTHRESH，而 SSTHRESH 一直记着减半后本来想发到的速率。最下方注明这三条规则合起来就是快恢复模式。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="403" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">快恢复的三条规则</text>
+
+  <rect x="22" y="76" width="715" height="72" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="379.5" y="98" font-size="12" fill="#1e40af" text-anchor="middle">① 进入：收到 3 个重复确认</text>
+  <text x="379.5" y="116" font-size="12" fill="#1e40af" text-anchor="middle">SSTHRESH = CWND/2，记住新的安全速率</text>
+  <text x="379.5" y="134" font-size="12" fill="#1e40af" text-anchor="middle">CWND = CWND/2 + 3，那个 3 就是刚收到的 3 个重复确认</text>
+
+  <rect x="22" y="174" width="715" height="72" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="379.5" y="196" font-size="12" fill="#b45309" text-anchor="middle">② 加宽：每多一个重复确认</text>
+  <text x="379.5" y="214" font-size="12" fill="#b45309" text-anchor="middle">CWND 加 1，窗口继续人为加宽</text>
+  <text x="379.5" y="232" font-size="12" fill="#b45309" text-anchor="middle">发送方因此能继续发新分组，不必等重发的那一个</text>
+
+  <rect x="22" y="272" width="715" height="72" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="379.5" y="294" font-size="12" fill="#166534" text-anchor="middle">③ 退出：收到新的、非重复的确认</text>
+  <text x="379.5" y="312" font-size="12" fill="#166534" text-anchor="middle">CWND = SSTHRESH</text>
+  <text x="379.5" y="330" font-size="12" fill="#166534" text-anchor="middle">SSTHRESH 一直记着减半后本来想发到的速率</text>
+  <text x="380" y="378" font-size="10" fill="#64748b" text-anchor="middle">这三条规则合起来就是快恢复模式</text>
+</svg>

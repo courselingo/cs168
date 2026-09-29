@@ -703,3 +703,28 @@ notes = "源文把 Reno 加上快恢复称作 TCP New Reno，并说本讲实现�
 en = "selective acknowledgment"
 zh = "选择性确认"
 notes = "让确认能说出收到了哪一段而不只是累积到哪；源文的例子是「13 之前的都收到了，另外 18 也收到了」，通常缩写成 SACK"
+
+[[term]]
+en = "packet loss"
+zh = "丢包"
+notes = "主机侧判断拥塞的两条信号之一（另一条是延迟）：信号没有歧义，TCP 本来就在为它检测；代价是会被损坏与乱序污染，而且报得晚（第 22 讲）"
+
+[[term]]
+en = "additive increase"
+zh = "加法增加"
+notes = "每轮给速率加上一个固定的数（加法变动的是两个数的差，同加同减差不变）；与乘法减少合成 AIMD（第 22 讲）"
+
+[[term]]
+en = "multiplicative decrease"
+zh = "乘法减少"
+notes = "每轮把速率乘上一个固定的因子（通常是减半，乘法变动的是两个数的比）；与加法增加合成 AIMD（第 22 讲）"
+
+[[term]]
+en = "AIMD"
+zh = "加法增加乘法减少"
+notes = "additive increase, multiplicative decrease：慢加、快减。四种加减组合里唯一会让两条连接的差距收敛到 0 的那种（第 22 讲）"
+
+[[term]]
+en = "BBR"
+zh = "BBR 协议"
+notes = "Google 在 2016 年提出的基于延迟的拥塞控制，用来说明延迟这条信号在实践中可行；源文只给到这一句（第 22 讲）"

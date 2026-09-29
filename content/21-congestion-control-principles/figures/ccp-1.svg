@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 191" width="760" height="191"
+     role="img" aria-labelledby="fig-ccp-1-title fig-ccp-1-desc">
+  <title id="fig-ccp-1-title">拥塞的因果链：从排队到时延再到丢包</title>
+  <desc id="fig-ccp-1-desc">四格横排，按因果从左到右。第一格：输入速率超过输出速率。第二格：路由器只能把分组排队。第三格：排队让时延变大。第四格：队列满了，还进来的分组被丢掉。下方一行注解说明输入速率长期超过输出速率时，拥塞就从排队开始。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="191" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">拥塞的因果链：从排队到时延再到丢包</text>
+
+  <rect x="22" y="76" width="158" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="101" y="98" font-size="12" fill="#1e40af" text-anchor="middle">输入速率超过</text>
+  <text x="101" y="116" font-size="12" fill="#1e40af" text-anchor="middle">输出速率</text>
+  <rect x="208" y="76" width="158" height="54" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="287" y="98" font-size="12" fill="#b45309" text-anchor="middle">路由器只能</text>
+  <text x="287" y="116" font-size="12" fill="#b45309" text-anchor="middle">把分组排队</text>
+  <rect x="394" y="76" width="158" height="54" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="473" y="98" font-size="12" fill="#b45309" text-anchor="middle">排队让时延</text>
+  <text x="473" y="116" font-size="12" fill="#b45309" text-anchor="middle">变大</text>
+  <rect x="580" y="76" width="158" height="54" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="659" y="98" font-size="12" fill="#9d174d" text-anchor="middle">队列满了</text>
+  <text x="659" y="116" font-size="12" fill="#9d174d" text-anchor="middle">还来的被丢掉</text>
+  <path d="M185,103 L197,103" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M371,103 L383,103" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M557,103 L569,103" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="380" y="166" font-size="10" fill="#64748b" text-anchor="middle">输入速率长期超过输出速率，拥塞就从排队开始</text>
+</svg>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 370" width="760" height="370"
+     role="img" aria-labelledby="fig-ccp-3-title fig-ccp-3-desc">
+  <title id="fig-ccp-3-title">1986 年 10 月的拥塞崩溃与它的修法</title>
+  <desc id="fig-ccp-3-desc">三格自上而下。第一格：1986 年 10 月互联网出现一连串拥塞崩溃，源文举的例子是 Berkeley 到 Lawrence Berkeley Lab 的一条链路，两处相距约 400 码，吞吐从 32 Kbps 掉到 40 bps。第二格：当时看到网络里有成千上万份同一个分组的拷贝，因为每个发送方都在重发被丢掉的分组，而且重发的速率一点不降。第三格：修法是让 TCP 窗口的大小跟着丢包动态调整，TCP 在操作系统里所以路由器不用升级、应用也不用改，补丁只有几行代码，此后互联网再没出现拥塞崩溃。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="370" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">1986 年 10 月的拥塞崩溃与它的修法</text>
+
+  <rect x="22" y="76" width="716" height="72" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="380" y="98" font-size="12" fill="#9d174d" text-anchor="middle">1986 年 10 月：互联网出现一连串拥塞崩溃</text>
+  <text x="380" y="116" font-size="12" fill="#9d174d" text-anchor="middle">源文举的例子是 Berkeley 到 Lawrence Berkeley Lab 的一条链路</text>
+  <text x="380" y="134" font-size="12" fill="#9d174d" text-anchor="middle">两处相距约 400 码，吞吐从 32 Kbps 掉到 40 bps</text>
+  <rect x="22" y="176" width="716" height="72" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="198" font-size="12" fill="#1e40af" text-anchor="middle">当时看到的：网络里有成千上万份同一个分组的拷贝</text>
+  <text x="380" y="216" font-size="12" fill="#1e40af" text-anchor="middle">因为每个发送方都在重发被丢掉的分组</text>
+  <text x="380" y="234" font-size="12" fill="#1e40af" text-anchor="middle">而且重发的速率一点不降</text>
+  <rect x="22" y="276" width="716" height="72" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="298" font-size="12" fill="#166534" text-anchor="middle">修法：让 TCP 窗口的大小跟着丢包动态调整</text>
+  <text x="380" y="316" font-size="12" fill="#166534" text-anchor="middle">TCP 在操作系统里，所以路由器不用升级、应用也不用改</text>
+  <text x="380" y="334" font-size="12" fill="#166534" text-anchor="middle">补丁只有几行代码，此后互联网再没出现拥塞崩溃</text>
+</svg>

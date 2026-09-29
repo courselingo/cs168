@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 370" width="760" height="370"
+     role="img" aria-labelledby="fig-ccp-5-title fig-ccp-5-desc">
+  <title id="fig-ccp-5-title">同一个发送方，三个目的地三种速率</title>
+  <desc id="fig-ccp-5-desc">三格自上而下，都是同一个发送方 A 面对不同目的地。第一格：A 到 C，路径上有 10 Gbps 的容量，所以 A 可以按 10 Gbps 发，目的地不同答案就不同。第二格：A 到 F，瓶颈链路是 2 Gbps，所以 A 大概应该按 2 Gbps 发，瓶颈就是路径上容量最小的那条链路。第三格：A 到 E 看走哪条路，走下面经过 R3 可以按 10 Gbps 发，走上面经过 R2 只能按 1 Gbps 发。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="370" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">同一个发送方，三个目的地三种速率</text>
+
+  <rect x="22" y="76" width="716" height="72" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="98" font-size="12" fill="#1e40af" text-anchor="middle">A 到 C：路径上有 10 Gbps 的容量</text>
+  <text x="380" y="116" font-size="12" fill="#1e40af" text-anchor="middle">所以 A 可以按 10 Gbps 发</text>
+  <text x="380" y="134" font-size="12" fill="#1e40af" text-anchor="middle">目的地不同，答案就不同</text>
+  <rect x="22" y="176" width="716" height="72" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="198" font-size="12" fill="#b45309" text-anchor="middle">A 到 F：瓶颈链路是 2 Gbps</text>
+  <text x="380" y="216" font-size="12" fill="#b45309" text-anchor="middle">所以 A 大概应该按 2 Gbps 发</text>
+  <text x="380" y="234" font-size="12" fill="#b45309" text-anchor="middle">瓶颈就是路径上容量最小的那条链路</text>
+  <rect x="22" y="276" width="716" height="72" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="380" y="298" font-size="12" fill="#9d174d" text-anchor="middle">A 到 E：看走哪条路</text>
+  <text x="380" y="316" font-size="12" fill="#9d174d" text-anchor="middle">走下面经过 R3，可以按 10 Gbps 发</text>
+  <text x="380" y="334" font-size="12" fill="#9d174d" text-anchor="middle">走上面经过 R2，只能按 1 Gbps 发</text>
+</svg>

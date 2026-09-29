@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 305" width="760" height="305"
+     role="img" aria-labelledby="fig-cci-1-title fig-cci-1-desc">
+  <title id="fig-cci-1-title">两个窗口取小的那个</title>
+  <desc id="fig-cci-1-desc">第一行三格：CWND 是发送方算出的速率，管网络能承受多快；RWND 是接收方报的剩余空间，管内存能装多少；窗口取两者里更小的那个，只有窗口内的字节允许在途。三格之间各有一支向右的箭头。第二行一条横格：本讲假设 RWND 比 CWND 大，所以瓶颈在网络而不在接收方内存；接收方内存先见底时，调大 CWND 也没用。最下方注明窗口从第一个未确认字节向右延伸，只能靠确认号变大而右滑。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="305" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">两个窗口取小的那个</text>
+
+  <rect x="22" y="76" width="221" height="72" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="132.5" y="98" font-size="12" fill="#1e40af" text-anchor="middle">① CWND：拥塞窗口</text>
+  <text x="132.5" y="116" font-size="12" fill="#1e40af" text-anchor="middle">发送方算出的速率</text>
+  <text x="132.5" y="134" font-size="12" fill="#1e40af" text-anchor="middle">网络能承受多快</text>
+
+  <rect x="269" y="76" width="221" height="72" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="379.5" y="98" font-size="12" fill="#b45309" text-anchor="middle">② RWND：通告窗口</text>
+  <text x="379.5" y="116" font-size="12" fill="#b45309" text-anchor="middle">接收方报的剩余空间</text>
+  <text x="379.5" y="134" font-size="12" fill="#b45309" text-anchor="middle">内存能装多少</text>
+
+  <rect x="516" y="76" width="221" height="72" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="626.5" y="98" font-size="12" fill="#166534" text-anchor="middle">③ 窗口取更小的那个</text>
+  <text x="626.5" y="116" font-size="12" fill="#166534" text-anchor="middle">min(CWND, RWND)</text>
+  <text x="626.5" y="134" font-size="12" fill="#166534" text-anchor="middle">只有窗口内允许在途</text>
+  <path d="M248,112 L 258,112" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+  <path d="M495,112 L 505,112" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+
+  <rect x="22" y="174" width="715" height="72" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="379.5" y="196" font-size="12" fill="#6b21a8" text-anchor="middle">本讲假设 RWND 比 CWND 大</text>
+  <text x="379.5" y="214" font-size="12" fill="#6b21a8" text-anchor="middle">所以瓶颈在网络，不在接收方的内存</text>
+  <text x="379.5" y="232" font-size="12" fill="#6b21a8" text-anchor="middle">接收方内存先见底时调大 CWND 也没用</text>
+  <text x="380" y="280" font-size="10" fill="#64748b" text-anchor="middle">窗口从第一个未确认字节向右延伸，只能靠确认号变大而右滑</text>
+</svg>

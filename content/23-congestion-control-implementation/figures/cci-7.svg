@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 367" width="760" height="367"
+     role="img" aria-labelledby="fig-cci-7-title fig-cci-7-desc">
+  <title id="fig-cci-7-title">运行例子：101 丢了，102 到 110 到齐</title>
+  <desc id="fig-cci-7-desc">第一行四格：第一格是丢掉的 101，后面三格是陆续到达的 102 到 110。第二行一条横格：接收方收到 102 到 110，每次都回 ack(101)，因为下一个期望的编号还是 101，第 3 个重复确认来自 104 并触发重发 101。第三行一条横格：重发的 101 到达后接收方回 ack(111)，因为 102 到 110 早就收到了，发送方在这一整段时间里发不出新分组。最下方注明只丢一个分组、发送方却停了一大段时间，这就是快恢复要修的问题。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="367" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">运行例子：101 丢了，102 到 110 到齐</text>
+
+  <rect x="22" y="76" width="159.5" height="36" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="101" y="98" font-size="12" fill="#9d174d" text-anchor="middle">101 丢掉</text>
+
+  <rect x="207.5" y="76" width="159.5" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="287" y="98" font-size="12" fill="#1e40af" text-anchor="middle">102 103 104</text>
+
+  <rect x="393" y="76" width="159.5" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="472" y="98" font-size="12" fill="#b45309" text-anchor="middle">105 106 107</text>
+
+  <rect x="578.5" y="76" width="159.5" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="658" y="98" font-size="12" fill="#166534" text-anchor="middle">108 109 110</text>
+
+  <rect x="22" y="138" width="716" height="72" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="160" font-size="12" fill="#1e40af" text-anchor="middle">接收方收到 102 到 110，每次都回 ack(101)</text>
+  <text x="380" y="178" font-size="12" fill="#1e40af" text-anchor="middle">因为下一个期望的编号还是 101</text>
+  <text x="380" y="196" font-size="12" fill="#1e40af" text-anchor="middle">第 3 个重复确认（来自 104）触发重发 101</text>
+
+  <rect x="22" y="236" width="716" height="72" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="258" font-size="12" fill="#166534" text-anchor="middle">重发的 101 到达后，接收方回 ack(111)</text>
+  <text x="380" y="276" font-size="12" fill="#166534" text-anchor="middle">102 到 110 早就收到了，下一个期望的编号是 111</text>
+  <text x="380" y="294" font-size="12" fill="#166534" text-anchor="middle">发送方在这一整段时间里发不出新分组</text>
+  <text x="380" y="342" font-size="10" fill="#64748b" text-anchor="middle">只丢一个分组，发送方却停了一大段时间，这就是快恢复要修的问题</text>
+</svg>

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 361" width="760" height="361"
+     role="img" aria-labelledby="fig-ccp-7-title fig-ccp-7-desc">
+  <title id="fig-ccp-7-title">间接竞争：新连接让 A 涨到 1.5 Gbps</title>
+  <desc id="fig-ccp-7-desc">三格自上而下，是一次变化的三步。第一格：A–F 与 B–E 共用那条 2 Gbps 链路，各分到 1 Gbps，这时 A 发 1 Gbps。第二格：新连接 G–D 与 B–E 共用一条 1 Gbps 链路，两条都得让到 0.5 Gbps，于是 B–E 在那条 2 Gbps 链路上只剩 0.5 Gbps。第三格：空出来的额度让 A 可以涨到 1.5 Gbps，而 G–D 与 A–F 一条链路都不共用。下方一行注解说明新连接与 A–F 毫不相干，却让 A 变快了。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="361" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">间接竞争：新连接让 A 涨到 1.5 Gbps</text>
+
+  <rect x="22" y="76" width="716" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="98" font-size="12" fill="#1e40af" text-anchor="middle">A–F 与 B–E 共用那条 2 Gbps 链路：各分到 1 Gbps</text>
+  <text x="380" y="116" font-size="12" fill="#1e40af" text-anchor="middle">这时 A 发 1 Gbps</text>
+  <rect x="22" y="158" width="716" height="54" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="180" font-size="12" fill="#b45309" text-anchor="middle">新连接 G–D 与 B–E 共用一条 1 Gbps 链路：两条都得让到 0.5 Gbps</text>
+  <text x="380" y="198" font-size="12" fill="#b45309" text-anchor="middle">于是 B–E 在那条 2 Gbps 链路上只剩 0.5 Gbps</text>
+  <rect x="22" y="240" width="716" height="54" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="380" y="262" font-size="12" fill="#9d174d" text-anchor="middle">空出来的额度让 A 可以涨到 1.5 Gbps</text>
+  <text x="380" y="280" font-size="12" fill="#9d174d" text-anchor="middle">G–D 与 A–F 一条链路都不共用</text>
+  <text x="380" y="336" font-size="10" fill="#64748b" text-anchor="middle">新连接与 A–F 毫不相干，却让 A 变快了</text>
+</svg>

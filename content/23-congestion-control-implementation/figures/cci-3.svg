@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 403" width="760" height="403"
+     role="img" aria-labelledby="fig-cci-3-title fig-cci-3-desc">
+  <title id="fig-cci-3-title">三种事件与三种反应</title>
+  <desc id="fig-cci-3-desc">三格自上而下：新的确认说明刚发出去的数据穿过了网络、没有丢，反应是把窗口调大；3 个重复确认说明孤立丢包，丢了一个分组而后面的分组还在陆续到达，反应是把窗口调小；超时说明一次丢了很多，因为等到计时器烧完才发现、连 3 个重复确认都没凑够，反应是回到慢启动重新探一遍。最下方注明把窗口更新挂到 TCP 本来就在响应的这三种事件上，就是事件驱动更新。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="403" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">三种事件与三种反应</text>
+
+  <rect x="22" y="76" width="715" height="72" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="379.5" y="98" font-size="12" fill="#1e40af" text-anchor="middle">① 新的确认：网络不挤</text>
+  <text x="379.5" y="116" font-size="12" fill="#1e40af" text-anchor="middle">刚发出去的数据穿过了网络，没有丢</text>
+  <text x="379.5" y="134" font-size="12" fill="#1e40af" text-anchor="middle">反应：把窗口调大</text>
+
+  <rect x="22" y="174" width="715" height="72" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="379.5" y="196" font-size="12" fill="#b45309" text-anchor="middle">② 3 个重复确认：孤立丢包</text>
+  <text x="379.5" y="214" font-size="12" fill="#b45309" text-anchor="middle">丢了一个分组，后面的分组还在陆续到达</text>
+  <text x="379.5" y="232" font-size="12" fill="#b45309" text-anchor="middle">反应：把窗口调小</text>
+
+  <rect x="22" y="272" width="715" height="72" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="379.5" y="294" font-size="12" fill="#166534" text-anchor="middle">③ 超时：一次丢很多</text>
+  <text x="379.5" y="312" font-size="12" fill="#166534" text-anchor="middle">等到计时器烧完才发现，连 3 个重复确认都没凑够</text>
+  <text x="379.5" y="330" font-size="12" fill="#166534" text-anchor="middle">反应：回到慢启动，重新探一遍</text>
+  <text x="380" y="378" font-size="10" fill="#64748b" text-anchor="middle">把窗口更新挂到 TCP 本来就在响应的这三种事件上，就是事件驱动更新</text>
+</svg>

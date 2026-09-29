@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 354" width="760" height="354"
+     role="img" aria-labelledby="fig-ccd-7-title fig-ccd-7-desc">
+  <title id="fig-ccd-7-title">AIAD：三个状态落在同一条直线上，差距一步没变</title>
+  <desc id="fig-ccd-7-desc">一张二维图，横轴与纵轴是两条连接各自的速率，容量 C=5，绿线是公平线 X1=X2。蓝线是 AIAD 的走法：每次加 1、每次减 2，三个状态 (1,3)、(2,4)、(0,2) 都落在同一条直线上，这条直线和公平线平行，到公平线的距离一直不变。右下一格写明这条路走下来的结论：加法和减法都不改变两个数的差，起点不公平，绕一圈回来还是不公平。最下方注明教材给的四个状态依次是 (1,3)、(2,4)、(0,2)、(1,3)，回到原点，差距一直是 2。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="354" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">AIAD：三个状态落在同一条直线上</text>
+
+  <path d="M26,300 L238,300" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M26,300 L26,80" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <path d="M26,300 Q114,212 202,124" fill="none" stroke="#22c55e" stroke-width="1.5"/>
+  <path d="M26,212 Q70,168 114,124" fill="none" stroke="#3b82f6" stroke-width="1.5"/>
+
+  <circle cx="26" cy="212" r="4" fill="#3b82f6"/>
+  <circle cx="70" cy="168" r="4" fill="#3b82f6"/>
+  <circle cx="114" cy="124" r="4" fill="#3b82f6"/>
+
+  <rect x="290" y="120" width="448" height="108" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="514" y="142" font-size="12" fill="#1e40af" text-anchor="middle">每次加 1、每次减 2，容量 C=5</text>
+  <text x="514" y="160" font-size="12" fill="#1e40af" text-anchor="middle">三个点 (1,3)、(2,4)、(0,2) 落在同一条直线上</text>
+  <text x="514" y="178" font-size="12" fill="#1e40af" text-anchor="middle">这条直线和公平线平行，到公平线的距离不变</text>
+  <text x="514" y="196" font-size="12" fill="#1e40af" text-anchor="middle">加同一个数或减同一个数，两个数的差不变</text>
+  <text x="514" y="214" font-size="12" fill="#1e40af" text-anchor="middle">起点不公平，绕一圈回来还是不公平</text>
+
+  <text x="380" y="330" font-size="10" fill="#64748b" text-anchor="middle">教材的四个状态依次是 (1,3)、(2,4)、(0,2)、(1,3)：回到原点，差距一直是 2</text>
+</svg>

@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 320" width="760" height="320"
+     role="img" aria-labelledby="fig-ccd-3-title fig-ccd-3-desc">
+  <title id="fig-ccd-3-title">起始速率：加法爬升太慢，乘法爬升才可行</title>
+  <desc id="fig-ccd-3-desc">上排两格是两种爬升方式。左边加法爬升：每 100ms 往速率上加 0.5 Mbps，带宽 1 Mbps 时 2 轮就到了，也就是 200ms；带宽 1 Gbps 时要 2000 轮，也就是 200 秒，太久了。右边乘法爬升也就是慢启动：每一轮把速率翻倍，带宽越大需要的轮数越少，碰上丢包就停，安全速率取碰上前那一档，也就是丢包速率的一半。下排一条横格说明结论：改成乘法以后，加法要 2000 轮的场合只需很少几轮，起点故意取得很小，几乎一定远低于真实带宽。最下方注明源文举的两个带宽是 1 Mbps 与 1 Gbps，也就是 1000 Mbps。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="320" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">起始速率：加法爬升太慢，乘法爬升才可行</text>
+
+  <rect x="22" y="76" width="345" height="90" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="194" y="98" font-size="12" fill="#9d174d" text-anchor="middle">加法爬升</text>
+  <text x="194" y="116" font-size="12" fill="#9d174d" text-anchor="middle">每 100ms 加 0.5 Mbps</text>
+  <text x="194" y="134" font-size="12" fill="#9d174d" text-anchor="middle">带宽 1 Mbps：2 轮＝200ms</text>
+  <text x="194" y="152" font-size="12" fill="#9d174d" text-anchor="middle">带宽 1 Gbps：2000 轮＝200 秒</text>
+
+  <rect x="393" y="76" width="345" height="90" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="566" y="98" font-size="12" fill="#166534" text-anchor="middle">乘法爬升（慢启动）</text>
+  <text x="566" y="116" font-size="12" fill="#166534" text-anchor="middle">每一轮把速率翻倍</text>
+  <text x="566" y="134" font-size="12" fill="#166534" text-anchor="middle">带宽越大，需要的轮数越少</text>
+  <text x="566" y="152" font-size="12" fill="#166534" text-anchor="middle">碰上丢包就停，安全速率取一半</text>
+
+  <rect x="22" y="192" width="716" height="72" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="214" font-size="12" fill="#1e40af" text-anchor="middle">改成乘法以后，轮数不再跟着带宽成正比地涨</text>
+  <text x="380" y="232" font-size="12" fill="#1e40af" text-anchor="middle">加法要 2000 轮的场合，翻倍只需要很少几轮</text>
+  <text x="380" y="250" font-size="12" fill="#1e40af" text-anchor="middle">起点故意取得很小，几乎一定远低于真实带宽</text>
+
+  <text x="380" y="297" font-size="10" fill="#64748b" text-anchor="middle">源文举的两个带宽：1 Mbps 与 1 Gbps＝1000 Mbps，两种在真实网络里都会出现</text>
+</svg>

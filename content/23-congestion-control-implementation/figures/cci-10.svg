@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 403" width="760" height="403"
+     role="img" aria-labelledby="fig-cci-10-title fig-cci-10-desc">
+  <title id="fig-cci-10-title">三种模式各自怎么处理三种事件</title>
+  <desc id="fig-cci-10-desc">三格自上而下。第一格是慢启动：新的确认让 CWND 加 1，一个 RTT 翻一倍；3 个重复确认去快恢复，超时留下并把 CWND 归 1，CWND 超过 SSTHRESH 就去拥塞避免。第二格是拥塞避免：新的确认给 CWND 加上 1/CWND，一个 RTT 加 1；3 个重复确认去快恢复，超时去慢启动。第三格是快恢复：重复确认让 CWND 加 1 继续加宽；新的确认让 CWND 回到 SSTHRESH 并转去拥塞避免，超时去慢启动。最下方注明这套状态机只用三种模式、一个 CWND、一个 SSTHRESH、一个重复确认计数和一个计时器。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="403" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">三种模式各自怎么处理三种事件</text>
+
+  <rect x="22" y="76" width="715" height="72" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="379.5" y="98" font-size="12" fill="#1e40af" text-anchor="middle">① 慢启动</text>
+  <text x="379.5" y="116" font-size="12" fill="#1e40af" text-anchor="middle">新的确认：CWND 加 1，一个 RTT 翻一倍</text>
+  <text x="379.5" y="134" font-size="12" fill="#1e40af" text-anchor="middle">3 个重复确认去快恢复，超时留下并把 CWND 归 1，CWND 超过 SSTHRESH 去拥塞避免</text>
+
+  <rect x="22" y="174" width="715" height="72" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="379.5" y="196" font-size="12" fill="#b45309" text-anchor="middle">② 拥塞避免</text>
+  <text x="379.5" y="214" font-size="12" fill="#b45309" text-anchor="middle">新的确认：CWND 加 1/CWND，一个 RTT 加 1</text>
+  <text x="379.5" y="232" font-size="12" fill="#b45309" text-anchor="middle">3 个重复确认去快恢复，超时去慢启动</text>
+
+  <rect x="22" y="272" width="715" height="72" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="379.5" y="294" font-size="12" fill="#166534" text-anchor="middle">③ 快恢复</text>
+  <text x="379.5" y="312" font-size="12" fill="#166534" text-anchor="middle">重复确认：CWND 加 1，窗口继续人为加宽</text>
+  <text x="379.5" y="330" font-size="12" fill="#166534" text-anchor="middle">新的确认：CWND 回到 SSTHRESH 并转去拥塞避免，超时去慢启动</text>
+  <text x="380" y="378" font-size="10" fill="#64748b" text-anchor="middle">三种模式、一个 CWND、一个 SSTHRESH、一个重复确认计数、一个计时器</text>
+</svg>

@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 291" width="760" height="291"
+     role="img" aria-labelledby="fig-cci-6-title fig-cci-6-desc">
+  <title id="fig-cci-6-title">TCP 锯齿：指数上升、砍半、线性上升、再砍半</title>
+  <desc id="fig-cci-6-desc">一条时间轴：横轴向右是时间，纵轴向上是速率。开头一段曲线陡直上升，是慢启动的指数增长；撞上丢包后速率竖直砍半；接着四段平缓的线性上升，每段结束时再竖直砍半，形状反复上下，就是锯齿。图上标出慢启动的一段与 AIMD 的若干段，最下方注明每砍半一次 AIMD 就重新线性往上爬，形状因此反复上下。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="291" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">TCP 锯齿：指数上升、砍半、线性上升、再砍半</text>
+
+  <path d="M25,246 L25,62" fill="none" stroke="#64748b" stroke-width="1.5"/>
+  <path d="M25,246 L735,246" fill="none" stroke="#64748b" stroke-width="1.5"/>
+  <path d="M25,244 C 80,238 120,196 152,96" fill="none" stroke="#3b82f6" stroke-width="2"/>
+  <path d="M152,96 L152,150" fill="none" stroke="#ef4444" stroke-width="2"/>
+  <path d="M152,150 Q 232,123 312,96" fill="none" stroke="#3b82f6" stroke-width="2"/>
+  <path d="M312,96 L312,150" fill="none" stroke="#ef4444" stroke-width="2"/>
+  <path d="M312,150 Q 392,123 472,96" fill="none" stroke="#3b82f6" stroke-width="2"/>
+  <path d="M472,96 L472,150" fill="none" stroke="#ef4444" stroke-width="2"/>
+  <path d="M472,150 Q 552,123 632,96" fill="none" stroke="#3b82f6" stroke-width="2"/>
+  <path d="M632,96 L632,150" fill="none" stroke="#ef4444" stroke-width="2"/>
+  <path d="M632,150 Q 684,123 735,96" fill="none" stroke="#3b82f6" stroke-width="2"/>
+  <text x="110" y="72" font-size="10" fill="#64748b" text-anchor="middle">慢启动：指数上升</text>
+  <text x="390" y="72" font-size="10" fill="#64748b" text-anchor="middle">AIMD：线性上升，丢包砍半</text>
+  <text x="370" y="266" font-size="10" fill="#64748b" text-anchor="middle">每砍半一次，AIMD 就重新线性往上爬，形状因此反复上下</text>
+  <text x="700" y="266" font-size="10" fill="#64748b" text-anchor="middle">时间</text>
+</svg>

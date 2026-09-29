@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 308" width="760" height="308"
+     role="img" aria-labelledby="fig-ccp-2-title fig-ccp-2-desc">
+  <title id="fig-ccp-2-title">负载与时延：曲线在虚线之前就抬头</title>
+  <desc id="fig-ccp-2-desc">一张示意图：横轴是负载，纵轴是时延。蓝色曲线随负载上升，越到后面越陡，末端带箭头；红色虚线标出这条链路的容量所在的位置。曲线在到达红色虚线之前就已经抬头，图上的文字点出这一点；还有两处文字分别标出纵轴是时延、红色虚线那里是链路容量。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow-blue" markerWidth="12" markerHeight="12" refX="3" refY="6"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L12,6 L0,12 L3,6 z" fill="#3b82f6"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="308" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">负载与时延：曲线在虚线之前就抬头</text>
+
+  <rect x="22" y="76" width="716" height="210" rx="4" fill="#f8fafc" stroke="#94a3b8" stroke-dasharray="6,4"/>
+  <path d="M60,96 L60,262" fill="none" stroke="#94a3b8" stroke-width="1.5"/>
+  <path d="M60,262 L700,262" fill="none" stroke="#94a3b8" stroke-width="1.5"/>
+  <path d="M60,262 C300,252 560,220 700,100" fill="none" stroke="#3b82f6" stroke-width="2" marker-end="url(#arrow-blue)"/>
+  <path d="M520,96 L520,262" fill="none" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <text x="300" y="180" font-size="12" fill="#1e40af" text-anchor="middle">不用等到虚线，曲线早就抬头了</text>
+  <text x="560" y="116" font-size="12" fill="#64748b" text-anchor="start">链路容量在这里</text>
+  <text x="88" y="100" font-size="12" fill="#64748b" text-anchor="start">时延</text>
+  <text x="690" y="248" font-size="12" fill="#64748b" text-anchor="middle">负载</text>
+</svg>

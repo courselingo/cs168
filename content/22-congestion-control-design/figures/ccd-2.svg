@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 320" width="760" height="320"
+     role="img" aria-labelledby="fig-ccd-2-title fig-ccd-2-desc">
+  <title id="fig-ccd-2-title">两种拥塞信号：丢包与延迟</title>
+  <desc id="fig-ccd-2-desc">上排两格是两条判断依据。左边是丢包：TCP 用的就是它，好处是信号没有歧义，而且 TCP 为了重发本来就在检测丢包。右边是延迟：量一个分组从发出到收到确认的时间，延迟一直变大就是拥塞的信号，但这个量多年来很难测准，近年才有 BBR 这样的做法。下排一条横格列出丢包的三个代价：损坏会被误当成拥塞，乱序会被误当成丢包，更要紧的是它来得晚。最下方注明延迟会因为队列长度与别人的流量而起伏，所以难测准，而丢包干脆却报得迟。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="320" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">两种拥塞信号：丢包与延迟</text>
+
+  <rect x="22" y="76" width="345" height="90" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="194" y="98" font-size="12" fill="#9d174d" text-anchor="middle">信号一：丢包</text>
+  <text x="194" y="116" font-size="12" fill="#9d174d" text-anchor="middle">TCP 用的就是它</text>
+  <text x="194" y="134" font-size="12" fill="#9d174d" text-anchor="middle">好处：信号没有歧义</text>
+  <text x="194" y="152" font-size="12" fill="#9d174d" text-anchor="middle">而且 TCP 本来就在查丢包</text>
+
+  <rect x="393" y="76" width="345" height="90" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="566" y="98" font-size="12" fill="#1e40af" text-anchor="middle">信号二：延迟</text>
+  <text x="566" y="116" font-size="12" fill="#1e40af" text-anchor="middle">量发出到收到确认的时间</text>
+  <text x="566" y="134" font-size="12" fill="#1e40af" text-anchor="middle">延迟在变大就是信号</text>
+  <text x="566" y="152" font-size="12" fill="#1e40af" text-anchor="middle">多年来难测准，近年有 BBR</text>
+
+  <rect x="22" y="192" width="716" height="72" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="214" font-size="12" fill="#166534" text-anchor="middle">丢包这个信号有三个代价</text>
+  <text x="380" y="232" font-size="12" fill="#166534" text-anchor="middle">损坏会被误当成拥塞，乱序会被误当成丢包</text>
+  <text x="380" y="250" font-size="12" fill="#166534" text-anchor="middle">更要紧的是它来得晚：等到丢包，路由器队列早就满了</text>
+
+  <text x="380" y="297" font-size="10" fill="#64748b" text-anchor="middle">延迟会因队列长度与别人的流量而起伏，所以难测准；丢包干脆，但报得太迟</text>
+</svg>

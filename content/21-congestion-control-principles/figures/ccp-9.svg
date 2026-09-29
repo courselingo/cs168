@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 316" width="760" height="316"
+     role="img" aria-labelledby="fig-ccp-9-title fig-ccp-9-desc">
+  <title id="fig-ccp-9-title">系统层面的三条要求</title>
+  <desc id="fig-ccp-9-desc">三格自上而下。第一格：可扩展，连接数与流量涨上去之后还成立，算法不能只在今天这个规模上管用。第二格：去中心化，没有谁能看见整个网络，每个发送方自己决定自己那份。第三格：能适应变化，拓扑会变，连接会建了又拆，所以不能只学一次。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="316" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">系统层面的三条要求</text>
+
+  <rect x="22" y="76" width="716" height="54" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380" y="98" font-size="12" fill="#6b21a8" text-anchor="middle">可扩展：连接数与流量涨上去之后还成立</text>
+  <text x="380" y="116" font-size="12" fill="#6b21a8" text-anchor="middle">算法不能只在今天这个规模上管用</text>
+  <rect x="22" y="158" width="716" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="180" font-size="12" fill="#1e40af" text-anchor="middle">去中心化：没有谁能看见整个网络</text>
+  <text x="380" y="198" font-size="12" fill="#1e40af" text-anchor="middle">每个发送方自己决定自己那份</text>
+  <rect x="22" y="240" width="716" height="54" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="262" font-size="12" fill="#166534" text-anchor="middle">能适应变化：拓扑会变，连接会建了又拆</text>
+  <text x="380" y="280" font-size="12" fill="#166534" text-anchor="middle">所以不能只学一次</text>
+</svg>

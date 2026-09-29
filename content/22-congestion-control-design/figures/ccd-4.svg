@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 305" width="760" height="305"
+     role="img" aria-labelledby="fig-ccd-4-title fig-ccd-4-desc">
+  <title id="fig-ccd-4-title">四种加减组合：AIMD 是唯一会收敛的那种</title>
+  <desc id="fig-ccd-4-desc">四格按两行两列排开，每一格是一种加减组合。AIAD 是加法增加配加法减少，两个数的差距一直不变；AIMD 是加法增加配乘法减少，差距每次减半，所以会收敛；MIAD 是乘法增加配加法减少，差距被翻倍，越来越不公平；MIMD 是乘法增加配乘法减少，两个数的比值一直不变。最下方注明源文把 MIMD 的第二项写成乘法增加，按其余三行应当是乘法减少。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="305" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">四种加减组合：AIMD 是唯一会收敛的那种</text>
+
+  <rect x="22" y="76" width="345" height="72" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="194" y="98" font-size="12" fill="#1e40af" text-anchor="middle">AIAD：加法增加，加法减少</text>
+  <text x="194" y="116" font-size="12" fill="#1e40af" text-anchor="middle">加法只管快慢的一半</text>
+  <text x="194" y="134" font-size="12" fill="#1e40af" text-anchor="middle">两个数的差距一直不变</text>
+
+  <rect x="393" y="76" width="345" height="72" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="566" y="98" font-size="12" fill="#166534" text-anchor="middle">AIMD：加法增加，乘法减少</text>
+  <text x="566" y="116" font-size="12" fill="#166534" text-anchor="middle">慢加、快减</text>
+  <text x="566" y="134" font-size="12" fill="#166534" text-anchor="middle">差距每次减半，会收敛</text>
+
+  <rect x="22" y="174" width="345" height="72" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="194" y="196" font-size="12" fill="#9d174d" text-anchor="middle">MIAD：乘法增加，加法减少</text>
+  <text x="194" y="214" font-size="12" fill="#9d174d" text-anchor="middle">差距被翻倍</text>
+  <text x="194" y="232" font-size="12" fill="#9d174d" text-anchor="middle">越调越不公平</text>
+
+  <rect x="393" y="174" width="345" height="72" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="566" y="196" font-size="12" fill="#b45309" text-anchor="middle">MIMD：乘法增加，乘法减少</text>
+  <text x="566" y="214" font-size="12" fill="#b45309" text-anchor="middle">两个数的比值一直不变</text>
+  <text x="566" y="232" font-size="12" fill="#b45309" text-anchor="middle">快增快减，公平性没变化</text>
+
+  <text x="380" y="280" font-size="10" fill="#64748b" text-anchor="middle">源文把 MIMD 的第二项写成乘法增加，按其余三行应当是乘法减少</text>
+</svg>

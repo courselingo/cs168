@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 385" width="760" height="385"
+     role="img" aria-labelledby="fig-cci-8-title fig-cci-8-desc">
+  <title id="fig-cci-8-title">快恢复：每个重复确认把窗口人为加宽</title>
+  <desc id="fig-cci-8-desc">第一行四格按先后顺序：第三个重复确认把 CWND 减到 5 再加宽 3，得到 8，窗口是 101 到 108；105 的重复确认让它变成 9，窗口到 109；106 的重复确认让它变成 10，窗口到 110；107 的重复确认让它变成 11，窗口到 111，终于能发 111。第二行一条横格说加宽的道理：已确认的加在途的正好等于 CWND，在途始终是 5 个。第三行一条横格说收尾：重发的 101 被确认、ack(111) 回来后 CWND 恢复成 5，窗口是 111 到 115，而 111 到 114 早就发走了，这时只需要补 115。最下方注明孤立丢包因此不再让发送方停下来。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="385" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">快恢复：每个重复确认把窗口人为加宽</text>
+
+  <rect x="22" y="76" width="159.5" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="101" y="98" font-size="12" fill="#1e40af" text-anchor="middle">① CWND = 5 + 3 = 8</text>
+  <text x="101" y="116" font-size="12" fill="#1e40af" text-anchor="middle">窗口 101 到 108</text>
+
+  <rect x="207.5" y="76" width="159.5" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="287" y="98" font-size="12" fill="#1e40af" text-anchor="middle">② 105 的重复确认</text>
+  <text x="287" y="116" font-size="12" fill="#1e40af" text-anchor="middle">CWND 9，窗口到 109</text>
+
+  <rect x="393" y="76" width="159.5" height="54" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="472" y="98" font-size="12" fill="#b45309" text-anchor="middle">③ 106 的重复确认</text>
+  <text x="472" y="116" font-size="12" fill="#b45309" text-anchor="middle">CWND 10，窗口到 110</text>
+
+  <rect x="578.5" y="76" width="159.5" height="54" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="658" y="98" font-size="12" fill="#166534" text-anchor="middle">④ 107 的重复确认</text>
+  <text x="658" y="116" font-size="12" fill="#166534" text-anchor="middle">CWND 11，窗口到 111</text>
+
+  <rect x="22" y="156" width="716" height="72" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380" y="178" font-size="12" fill="#6b21a8" text-anchor="middle">每个重复确认把窗口人为加宽 1</text>
+  <text x="380" y="196" font-size="12" fill="#6b21a8" text-anchor="middle">已确认的加在途的正好等于 CWND，在途始终是 5 个</text>
+  <text x="380" y="214" font-size="12" fill="#6b21a8" text-anchor="middle">107 那条之后窗口到 111，终于能发 111</text>
+
+  <rect x="22" y="254" width="716" height="72" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="276" font-size="12" fill="#166534" text-anchor="middle">重发的 101 被确认，ack(111) 回来</text>
+  <text x="380" y="294" font-size="12" fill="#166534" text-anchor="middle">CWND 恢复成本来想要的 5，窗口 111 到 115</text>
+  <text x="380" y="312" font-size="12" fill="#166534" text-anchor="middle">111 到 114 早就发走了，这时只需要补 115</text>
+  <text x="380" y="360" font-size="10" fill="#64748b" text-anchor="middle">孤立丢包因此不再让发送方停下来，窗口不再卡在第一个未确认字节上</text>
+</svg>

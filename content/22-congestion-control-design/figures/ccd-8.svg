@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 354" width="760" height="354"
+     role="img" aria-labelledby="fig-ccd-8-title fig-ccd-8-desc">
+  <title id="fig-ccd-8-title">MIMD：三个状态在同一条过原点的线上，比值一步没变</title>
+  <desc id="fig-ccd-8-desc">一张二维图，横轴与纵轴是两条连接各自的速率，容量 C=5，绿线是公平线 X1=X2。蓝线是 MIMD 的走法：每次翻倍、每次除以 4，三个状态 (0.5,1)、(1,2)、(2,4) 都落在同一条过原点的线上，X2 一直是 X1 的两倍，这条线不会更靠近公平线。右下一格写明这条路走下来的结论：乘一个数或除一个数，两个数的比值不变。最下方注明教材给的四个状态依次是 (0.5,1)、(1,2)、(2,4)、(0.5,1)，回到原点，比值一直是 2。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="354" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">MIMD：三个状态在同一条过原点的线上</text>
+
+  <path d="M24,300 L236,300" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M24,300 L24,80" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <path d="M24,300 Q112,212 200,124" fill="none" stroke="#22c55e" stroke-width="1.5"/>
+  <path d="M46,256 Q79,190 112,124" fill="none" stroke="#3b82f6" stroke-width="1.5"/>
+
+  <circle cx="46" cy="256" r="4" fill="#3b82f6"/>
+  <circle cx="68" cy="212" r="4" fill="#3b82f6"/>
+  <circle cx="112" cy="124" r="4" fill="#3b82f6"/>
+
+  <rect x="290" y="130" width="448" height="90" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="514" y="152" font-size="12" fill="#1e40af" text-anchor="middle">每次翻倍、每次除以 4，容量 C=5</text>
+  <text x="514" y="170" font-size="12" fill="#1e40af" text-anchor="middle">三个点 (0.5,1)、(1,2)、(2,4) 在同一条过原点的线上</text>
+  <text x="514" y="188" font-size="12" fill="#1e40af" text-anchor="middle">X2 一直是 X1 的两倍，这条线到公平线的距离不变</text>
+  <text x="514" y="206" font-size="12" fill="#1e40af" text-anchor="middle">乘一个数或除一个数，两个数的比值不变</text>
+
+  <text x="380" y="330" font-size="10" fill="#64748b" text-anchor="middle">教材的四个状态依次是 (0.5,1)、(1,2)、(2,4)、(0.5,1)：回到原点，比值一直是 2</text>
+</svg>

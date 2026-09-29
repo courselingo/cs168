@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 252" width="760" height="252"
+     role="img" aria-labelledby="fig-ccp-6-title fig-ccp-6-desc">
+  <title id="fig-ccp-6-title">两条连接共用一条 2 Gbps 的链路</title>
+  <desc id="fig-ccp-6-desc">上方两个并排的框：左边是 A 与 F 的连接，路径上经过 R1–R2；右边是 B 与 E 的连接，路径上也经过 R1–R2。下方一个通栏框说明两条路径都在 R1–R2 这条链路上撞在一起，它的容量是 2 Gbps，想公平地用这条链路的容量，A 与 B 大概各发 1 Gbps。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="252" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">两条连接共用一条 2 Gbps 的链路</text>
+
+  <rect x="22" y="76" width="344" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="194" y="98" font-size="12" fill="#1e40af" text-anchor="middle">A 与 F 的连接</text>
+  <text x="194" y="116" font-size="12" fill="#1e40af" text-anchor="middle">路径上经过 R1–R2</text>
+  <rect x="394" y="76" width="344" height="54" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="566" y="98" font-size="12" fill="#166534" text-anchor="middle">B 与 E 的连接</text>
+  <text x="566" y="116" font-size="12" fill="#166534" text-anchor="middle">路径上也经过 R1–R2</text>
+  <rect x="22" y="158" width="716" height="72" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="180" font-size="12" fill="#b45309" text-anchor="middle">两条路径都在 R1–R2 这条链路上撞在一起，它的容量是 2 Gbps</text>
+  <text x="380" y="198" font-size="12" fill="#b45309" text-anchor="middle">想公平地用这条链路的容量</text>
+  <text x="380" y="216" font-size="12" fill="#b45309" text-anchor="middle">A 与 B 大概各发 1 Gbps</text>
+</svg>

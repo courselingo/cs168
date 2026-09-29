@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 357" width="760" height="357"
+     role="img" aria-labelledby="fig-cci-11-title fig-cci-11-desc">
+  <title id="fig-cci-11-title">四个变体在丢包之后各自怎么做</title>
+  <desc id="fig-cci-11-desc">四行两列，左边一列是变体名，右边一列是它在丢包之后的做法。TCP Tahoe 遇到 3 个重复确认就把 CWND 重置为 1，不减半；TCP Reno 遇到 3 个重复确认把 CWND 减半，遇到超时才重置为 1；TCP New Reno 与 Reno 相同但加了快恢复，也就是本讲实现的这一套；TCP-SACK 在确认里带上更多细节，例如 13 之前都收到、18 也收到。最下方注明变体换的只是丢包后退多远、退完之后怎么回来。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="357" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">四个变体在丢包之后各自怎么做</text>
+
+  <rect x="22" y="76" width="345" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="194.5" y="98" font-size="12" fill="#1e40af" text-anchor="middle">TCP Tahoe</text>
+
+  <rect x="393" y="76" width="345" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="565.5" y="98" font-size="12" fill="#1e40af" text-anchor="middle">3 个重复确认就重置为 1，不减半</text>
+
+  <rect x="22" y="138" width="345" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="194.5" y="160" font-size="12" fill="#b45309" text-anchor="middle">TCP Reno</text>
+
+  <rect x="393" y="138" width="345" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="565.5" y="160" font-size="12" fill="#b45309" text-anchor="middle">重复确认减半；超时重置为 1</text>
+
+  <rect x="22" y="200" width="345" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="194.5" y="222" font-size="12" fill="#166534" text-anchor="middle">TCP New Reno</text>
+
+  <rect x="393" y="200" width="345" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="565.5" y="222" font-size="12" fill="#166534" text-anchor="middle">与 Reno 相同，但加了快恢复</text>
+
+  <rect x="22" y="262" width="345" height="36" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="194.5" y="284" font-size="12" fill="#6b21a8" text-anchor="middle">TCP-SACK</text>
+
+  <rect x="393" y="262" width="345" height="36" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="565.5" y="284" font-size="12" fill="#6b21a8" text-anchor="middle">确认里带更多细节（例如 18 也收到）</text>
+  <text x="380" y="332" font-size="10" fill="#64748b" text-anchor="middle">变体换的只是丢包后退多远、退完之后怎么回来</text>
+</svg>

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 354" width="760" height="354"
+     role="img" aria-labelledby="fig-ccd-9-title fig-ccd-9-desc">
+  <title id="fig-ccd-9-title">MIAD：差距越来越大，一个连接最后归零</title>
+  <desc id="fig-ccd-9-desc">一张二维图，横轴与纵轴是两条连接各自的速率，容量 C=5，绿线是公平线 X1=X2。蓝线是 MIAD 的走法：每次翻倍、每次减 1，五个状态 (1,3)、(2,6)、(1,5)、(0,4)、(0,8) 一路往左上走，X1 最终变成 0，之后翻倍依然是 0，于是蓝线最后贴着纵轴往上走。右下一格写明结论：翻倍会把两个数的差距也翻倍，减 1 对两个数同时减、差距不变，所以差距只会变大或不变，最后一个人占满带宽。最下方注明教材说这条路走到头就是最不公平的分配。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="354" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">MIAD：差距越来越大，一个连接最后归零</text>
+
+  <path d="M26,300 L238,300" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M26,300 L26,80" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <path d="M26,300 Q114,256 202,212" fill="none" stroke="#22c55e" stroke-width="1.5"/>
+
+  <path d="M70,234 Q92,201 114,168" fill="none" stroke="#3b82f6" stroke-width="1.5"/>
+  <path d="M114,168 Q92,179 70,190" fill="none" stroke="#3b82f6" stroke-width="1.5"/>
+  <path d="M70,190 Q48,201 26,212" fill="none" stroke="#3b82f6" stroke-width="1.5"/>
+  <path d="M26,212 L26,124" fill="none" stroke="#3b82f6" stroke-width="1.5"/>
+
+  <circle cx="70" cy="234" r="4" fill="#3b82f6"/>
+  <circle cx="114" cy="168" r="4" fill="#3b82f6"/>
+  <circle cx="70" cy="190" r="4" fill="#3b82f6"/>
+  <circle cx="26" cy="212" r="4" fill="#3b82f6"/>
+  <circle cx="26" cy="124" r="4" fill="#3b82f6"/>
+
+  <rect x="290" y="110" width="448" height="126" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="514" y="132" font-size="12" fill="#1e40af" text-anchor="middle">每次翻倍、每次减 1，容量 C=5</text>
+  <text x="514" y="150" font-size="12" fill="#1e40af" text-anchor="middle">走一遍：(1,3)、(2,6)、(1,5)、(0,4)、(0,8)</text>
+  <text x="514" y="168" font-size="12" fill="#1e40af" text-anchor="middle">翻倍把差距也翻倍：(X2-X1) 变成 2(X2-X1)</text>
+  <text x="514" y="186" font-size="12" fill="#1e40af" text-anchor="middle">减 1 对两个数同时减，差距不变</text>
+  <text x="514" y="204" font-size="12" fill="#1e40af" text-anchor="middle">差距只会变大或不变，不会变小</text>
+  <text x="514" y="222" font-size="12" fill="#1e40af" text-anchor="middle">最后一个人占满带宽，另一个永远是 0</text>
+
+  <text x="380" y="330" font-size="10" fill="#64748b" text-anchor="middle">教材说这条路走到头就是最不公平的分配：X2 拿全部带宽，X1 一个字节也没有</text>
+</svg>
