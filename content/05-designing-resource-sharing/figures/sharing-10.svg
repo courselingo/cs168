@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 193" width="760" height="193"
+     role="img" aria-labelledby="fig-sharing-10-title fig-sharing-10-desc">
+  <title id="fig-sharing-10-title">现实与历史：电路交换只剩少数场景，1990 年代的转向失败了</title>
+  <desc id="fig-sharing-10-desc">左边是今天还在用的电路交换：RSVP 用在小型局域网里，而且是让路由器而不是端主机互相预约带宽；专线比如 MPLS 电路与租用线路，按公司粒度、以年计，比普通接入贵得多。右边是 1990 年代那段历史：政府停止出资、控制权转到商业公司，业界以为要转向电路交换，结果失败了。真正推动增长的是邮件和网页，不是语音和电视。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="193" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">现实与历史</text>
+
+  <rect x="22" y="66" width="344" height="72" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="194" y="88" font-size="12" fill="#166534" text-anchor="middle">今天还在用的电路交换</text>
+  <text x="194" y="106" font-size="12" fill="#166534" text-anchor="middle">RSVP：小范围局域网内由路由器预约</text>
+  <text x="194" y="124" font-size="12" fill="#166534" text-anchor="middle">专线：按公司粒度、以年计、贵得多</text>
+
+  <rect x="394" y="66" width="344" height="72" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="566" y="88" font-size="12" fill="#9d174d" text-anchor="middle">1990 年代那段历史</text>
+  <text x="566" y="106" font-size="12" fill="#9d174d" text-anchor="middle">控制权转到商业公司，业界以为要转向它</text>
+  <text x="566" y="124" font-size="12" fill="#9d174d" text-anchor="middle">结果失败：推动增长的是邮件和网页</text>
+
+  <text x="380" y="168" font-size="10" fill="#64748b" text-anchor="middle">用户和开发者也适应了分组交换：视频卡顿时，大家已经习惯画质自动降下来</text>
+</svg>

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 235" width="760" height="235"
+     role="img" aria-labelledby="fig-sharing-8-title fig-sharing-8-desc">
+  <title id="fig-sharing-8-title">第三把尺子：出故障时谁更扛得住</title>
+  <desc id="fig-sharing-8-desc">左列是分组交换：路由器坏了就换一条路走，端主机什么都不用改。右列是电路交换：主机要自己发现故障、重发预约请求，还要释放旧路径上的预约，而新请求还可能被拒绝。一台路由器下线时，如果此前有上百万条流经过它，上百万条预约就要同时重建，这种故障模式很难扛。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="235" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">第三把尺子：出故障时谁更扛得住</text>
+
+  <rect x="22" y="66" width="344" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="194" y="88" font-size="12" fill="#1e40af" text-anchor="middle">分组交换：路由器坏了</text>
+  <text x="194" y="106" font-size="12" fill="#1e40af" text-anchor="middle">把分组换一条路发出去</text>
+
+  <rect x="394" y="66" width="344" height="54" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="566" y="88" font-size="12" fill="#9d174d" text-anchor="middle">电路交换：路由器坏了</text>
+  <text x="566" y="106" font-size="12" fill="#9d174d" text-anchor="middle">网络和主机都得做不少事</text>
+
+  <rect x="22" y="145" width="344" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="194" y="167" font-size="12" fill="#166534" text-anchor="middle">端主机什么都不用改</text>
+
+  <rect x="394" y="145" width="344" height="36" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="566" y="167" font-size="12" fill="#9d174d" text-anchor="middle">发现故障、重发预约、释放旧预约</text>
+
+  <text x="380" y="210" font-size="10" fill="#64748b" text-anchor="middle">一台路由器下线，上百万条流的预约要同时重建，这种模式很难扛</text>
+</svg>

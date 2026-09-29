@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 185" width="760" height="185"
+     role="img" aria-labelledby="fig-sharing-6-title fig-sharing-6-desc">
+  <title id="fig-sharing-6-title">第一把尺子：抽象好不好用</title>
+  <desc id="fig-sharing-6-desc">左边是对开发者：电路交换保证预留的带宽，行为更可预测；右边是对网络运营者：电路交换让运营者知道每个用户要多少带宽，才好按量收费。这一项上电路交换更占优，前提是一切顺利。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="185" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">第一把尺子：抽象好不好用</text>
+
+  <rect x="22" y="76" width="344" height="54" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="194" y="98" font-size="12" fill="#6b21a8" text-anchor="middle">对开发者</text>
+  <text x="194" y="116" font-size="12" fill="#6b21a8" text-anchor="middle">带宽有保证，行为更可预测</text>
+
+  <rect x="394" y="76" width="344" height="54" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="566" y="98" font-size="12" fill="#6b21a8" text-anchor="middle">对网络运营者</text>
+  <text x="566" y="116" font-size="12" fill="#6b21a8" text-anchor="middle">知道每人要多少，才好按量收费</text>
+
+  <text x="380" y="160" font-size="10" fill="#64748b" text-anchor="middle">就像租云上的一台机器：知道规格，性能才好推理</text>
+</svg>

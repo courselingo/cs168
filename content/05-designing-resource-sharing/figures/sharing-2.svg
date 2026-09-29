@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 221" width="760" height="221"
+     role="img" aria-labelledby="fig-sharing-2-title fig-sharing-2-desc">
+  <title id="fig-sharing-2-title">两种算容量的办法：峰值之和，与逐点相加后的整体峰值</title>
+  <desc id="fig-sharing-2-desc">上面是笨办法：把 A 的峰值 X 与 B 的峰值 Y 相加来分配容量，可两个峰值并不同时出现，于是浪费。下面是更好的办法：先把两条需求曲线逐点相加，再取整体曲线的峰值，容量更小，但要随时间动态调整分给每个人的份额。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="221" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">两种算容量的办法</text>
+
+  <rect x="22" y="66" width="716" height="36" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="380" y="88" font-size="12" fill="#9d174d" text-anchor="middle">笨办法：A 的峰值 X 加 B 的峰值 Y（两个峰值不同时出现，于是浪费）</text>
+
+  <path d="M380,107 L 380,116" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+
+  <rect x="22" y="127" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="149" font-size="12" fill="#166534" text-anchor="middle">更好的办法：两条曲线逐点相加，再取整体曲线的峰值（容量更小）</text>
+
+  <text x="380" y="196" font-size="10" fill="#64748b" text-anchor="middle">按整体峰值分配，就不能再静态切份额了，只能随时间动态调整</text>
+</svg>

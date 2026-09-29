@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 293" width="760" height="293"
+     role="img" aria-labelledby="fig-sharing-3-title fig-sharing-3-desc">
+  <title id="fig-sharing-3-title">统计复用的前提、赌注与代价</title>
+  <desc id="fig-sharing-3-desc">前提是整体需求的峰值远小于各自需求峰值的总和；赌注是不按最坏情况预留容量，而是指望峰值不要同时出现；代价是峰值真的撞在一起时，分组会被延迟或丢弃。金融交易所有时因此选择自建专用网络，因为它们在峰值期间更在意连通性，也付得起这笔额外成本。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="293" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">统计复用的前提、赌注与代价</text>
+
+  <rect x="22" y="76" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="98" font-size="12" fill="#166534" text-anchor="middle">前提：整体需求的峰值，远小于各自需求峰值的总和</text>
+
+  <rect x="22" y="137" width="716" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="159" font-size="12" fill="#b45309" text-anchor="middle">赌注：不按最坏情况预留，指望峰值不要同时出现</text>
+
+  <rect x="22" y="198" width="716" height="36" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="380" y="220" font-size="12" fill="#9d174d" text-anchor="middle">代价：峰值真撞上时，分组被延迟或丢弃</text>
+
+  <text x="380" y="268" font-size="10" fill="#64748b" text-anchor="middle">金融交易所宁可自建专网：峰值期间它更在意连通性，也付得起这笔钱</text>
+</svg>

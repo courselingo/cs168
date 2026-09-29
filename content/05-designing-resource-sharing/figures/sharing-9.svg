@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 310" width="760" height="310"
+     role="img" aria-labelledby="fig-sharing-9-title fig-sharing-9-desc">
+  <title id="fig-sharing-9-title">第四把尺子：实现难度与状态共识</title>
+  <desc id="fig-sharing-9-desc">三串必须回答的设计问题：确认怎么回，二同意了怎么知道三和四也同意；请求或确认在路上丢了怎么办，只能超时删除预约让主机重来；根本问题是状态共识，每台路由器都要记住这份状态并对它达成一致。Paxos 这类协议极其复杂，平时只跑在四五台机器上，而电路交换等于要求互联网在互联网规模上跑它。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="310" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">第四把尺子：实现难度与状态共识</text>
+
+  <rect x="22" y="76" width="716" height="54" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="98" font-size="12" fill="#b45309" text-anchor="middle">确认怎么回？</text>
+  <text x="380" y="116" font-size="12" fill="#b45309" text-anchor="middle">第二台同意了，它怎么知道第三台、第四台也同意了</text>
+
+  <rect x="22" y="155" width="716" height="54" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="177" font-size="12" fill="#b45309" text-anchor="middle">请求或确认在路上丢了怎么办？</text>
+  <text x="380" y="195" font-size="12" fill="#b45309" text-anchor="middle">可能的应对是设超时、删掉预约，于是主机只能重新来一次</text>
+
+  <rect x="22" y="234" width="716" height="54" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="380" y="256" font-size="12" fill="#9d174d" text-anchor="middle">根本问题：状态共识（state consensus）</text>
+  <text x="380" y="274" font-size="12" fill="#9d174d" text-anchor="middle">每台路由器都要记住这份状态，而且要对「它是什么」达成一致</text>
+</svg>
