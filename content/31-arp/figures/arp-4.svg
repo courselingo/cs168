@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 335" width="760" height="335"
+     role="img" aria-labelledby="fig-arp-4-title fig-arp-4-desc">
+  <title id="fig-arp-4-title">ARP 请求是广播、回应是单播，各自的地址怎么填</title>
+  <desc id="fig-arp-4-desc">上排两格是请求：源 MAC 是发起询问的那台机器，目的 MAC 是全 1 的广播地址 FF:FF:FF:FF:FF:FF。第二排两格是回应：源 MAC 是持有被问地址的那台机器，目的 MAC 是最初发起询问的那台机器。中间一条给出源文配图上的批注：ARP requests are broadcast 与 ARP responses are unicast。最下面一条是这一节的边界：ARP 直接跑在第二层上，它的包都在以太网上收发，不走 IP。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="335" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">ARP 请求是广播、回应是单播，各自的地址怎么填</text>
+  <rect x="25" y="64" width="342.5" height="49.5" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="196.25" y="84.35" font-size="11" fill="#1e40af" text-anchor="middle">请求的源 MAC</text>
+  <text x="196.25" y="100.85" font-size="11" fill="#1e40af" text-anchor="middle">发起询问的那台机器</text>
+  <rect x="392.5" y="64" width="342.5" height="49.5" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="563.75" y="84.35" font-size="11" fill="#b45309" text-anchor="middle">请求的目的 MAC</text>
+  <text x="563.75" y="100.85" font-size="11" fill="#b45309" text-anchor="middle">FF:FF:FF:FF:FF:FF（全 1 的广播地址）</text>
+  <rect x="25" y="141.5" width="342.5" height="49.5" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="196.25" y="161.85" font-size="11" fill="#166534" text-anchor="middle">回应的源 MAC</text>
+  <text x="196.25" y="178.35" font-size="11" fill="#166534" text-anchor="middle">持有被问地址的那台机器</text>
+  <rect x="392.5" y="141.5" width="342.5" height="49.5" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="563.75" y="161.85" font-size="11" fill="#166534" text-anchor="middle">回应的目的 MAC</text>
+  <text x="563.75" y="178.35" font-size="11" fill="#166534" text-anchor="middle">最初发起询问的那台机器</text>
+  <rect x="25" y="219" width="710" height="30" rx="6" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="380" y="237.5" font-size="10" fill="#1e40af" text-anchor="middle">源文配图上的批注：ARP requests are broadcast 与 ARP responses are unicast</text>
+  <rect x="25" y="277" width="710" height="33" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380" y="297.35" font-size="11" fill="#6b21a8" text-anchor="middle">另一条边界：ARP 直接跑在第二层上，它的包都在以太网上收发，不走 IP</text>
+</svg>

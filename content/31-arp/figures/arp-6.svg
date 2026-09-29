@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 338" width="760" height="338"
+     role="img" aria-labelledby="fig-arp-6-title fig-arp-6-desc">
+  <title id="fig-arp-6-title">IPv6 的邻居发现：把请求组播给一个按 IP 末几位划出的组</title>
+  <desc id="fig-arp-6-desc">上排两格是两组机器各自的听法：IP 以 78:90AB 结尾的那组听组播地址 33:33:FF:78:90:AB，以 12:3456 结尾的那组听 33:33:FF:12:34:56。中间一条说明邻居发现不广播，而是把请求组播给一个特定的组，每台机器按自己的 IP 决定听哪个组。第三排两格是拼接规则（组地址前缀 33:33:FF 加上目标 IP 的最后三字节）与两个消息的名字（请求叫邻居请求，带映射的回应叫邻居通告）。最下面一条给出配图里的实例：A 只把请求组播给 12:3456 那一组，另外一组不受打扰。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="338" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">IPv6 的邻居发现：把请求组播给一个按 IP 末几位划出的组</text>
+  <rect x="25" y="64" width="342.5" height="45" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="196.25" y="82.5" font-size="10" fill="#1e40af" text-anchor="middle">第一组：IP 以 78:90AB 结尾</text>
+  <text x="196.25" y="97.5" font-size="10" fill="#1e40af" text-anchor="middle">听组播地址 33:33:FF:78:90:AB</text>
+  <rect x="392.5" y="64" width="342.5" height="45" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="563.75" y="82.5" font-size="10" fill="#166534" text-anchor="middle">第二组：IP 以 12:3456 结尾</text>
+  <text x="563.75" y="97.5" font-size="10" fill="#166534" text-anchor="middle">听组播地址 33:33:FF:12:34:56</text>
+  <rect x="25" y="137" width="710" height="30" rx="6" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="380" y="155.5" font-size="10" fill="#1e40af" text-anchor="middle">邻居发现不广播，而是把请求组播给一个特定的组；每台机器按自己的 IP 决定听哪个组</text>
+  <rect x="25" y="195" width="342.5" height="60" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="196.25" y="213.5" font-size="10" fill="#b45309" text-anchor="middle">拼接规则</text>
+  <text x="196.25" y="228.5" font-size="10" fill="#b45309" text-anchor="middle">组地址前缀 33:33:FF</text>
+  <text x="196.25" y="243.5" font-size="10" fill="#b45309" text-anchor="middle">加上目标 IP 的最后三字节</text>
+  <rect x="392.5" y="195" width="342.5" height="60" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="563.75" y="213.5" font-size="10" fill="#6b21a8" text-anchor="middle">两个消息的名字</text>
+  <text x="563.75" y="228.5" font-size="10" fill="#6b21a8" text-anchor="middle">请求叫邻居请求</text>
+  <text x="563.75" y="243.5" font-size="10" fill="#6b21a8" text-anchor="middle">带映射的回应叫邻居通告</text>
+  <rect x="25" y="283" width="710" height="30" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="380" y="301.5" font-size="10" fill="#1e293b" text-anchor="middle">配图里的实例：A 只把请求组播给 12:3456 那一组，另外一组不受打扰</text>
+</svg>

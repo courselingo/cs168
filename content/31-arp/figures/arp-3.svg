@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 362" width="760" height="362"
+     role="img" aria-labelledby="fig-arp-3-title fig-arp-3-desc">
+  <title id="fig-arp-3-title">ARP 的四步：查缓存、广播请求、单播回应、写进缓存</title>
+  <desc id="fig-arp-3-desc">上排两格是第一步与第二步：先查自己的缓存看是否已经知道 1.2.3.4 的 MAC，缓存是空的所以必须去问；然后广播询问本地网络上所有人 1.2.3.4 的 MAC 地址是什么。第二排两格是第三步：持有这个 IP 的机器单播回应自己的 MAC 是 ca:fe:f0:0d:be:ef，其余机器忽略这次请求。第三排两格是第四步：把这条映射写进缓存，配图给的过期时间是 1 小时；以及缓存为什么要过期（IP 不是永久分配的，可能换机器也可能换地址）。最下面一条声明这四步用的是配图那一组地址，与正文举例的 192.0.2.1 不是同一组。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="362" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">ARP 的四步：查缓存、广播请求、单播回应、写进缓存</text>
+  <rect x="25" y="64" width="342.5" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="196.25" y="80.65" font-size="9" fill="#1e40af" text-anchor="middle">第一步：查缓存</text>
+  <text x="196.25" y="94.15" font-size="9" fill="#1e40af" text-anchor="middle">看是否已经知道 1.2.3.4 的 MAC</text>
+  <text x="196.25" y="107.65" font-size="9" fill="#1e40af" text-anchor="middle">缓存是空的，所以必须去问</text>
+  <rect x="392.5" y="64" width="342.5" height="54" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="563.75" y="80.65" font-size="9" fill="#b45309" text-anchor="middle">第二步：广播请求</text>
+  <text x="563.75" y="94.15" font-size="9" fill="#b45309" text-anchor="middle">问本地网络上所有人</text>
+  <text x="563.75" y="107.65" font-size="9" fill="#b45309" text-anchor="middle">1.2.3.4 的 MAC 地址是什么</text>
+  <rect x="25" y="146" width="342.5" height="54" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="196.25" y="162.65" font-size="9" fill="#166534" text-anchor="middle">第三步：单播回应</text>
+  <text x="196.25" y="176.15" font-size="9" fill="#166534" text-anchor="middle">持有 1.2.3.4 的机器回答</text>
+  <text x="196.25" y="189.65" font-size="9" fill="#166534" text-anchor="middle">我的 MAC 是 ca:fe:f0:0d:be:ef</text>
+  <rect x="392.5" y="146" width="342.5" height="54" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="563.75" y="169.4" font-size="9" fill="#1e293b" text-anchor="middle">其余机器忽略这次请求</text>
+  <text x="563.75" y="182.9" font-size="9" fill="#1e293b" text-anchor="middle">不是这个 IP 的机器不必处理</text>
+  <rect x="25" y="228" width="342.5" height="54" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="196.25" y="244.65" font-size="9" fill="#6b21a8" text-anchor="middle">第四步：写进缓存</text>
+  <text x="196.25" y="258.15" font-size="9" fill="#6b21a8" text-anchor="middle">IP 1.2.3.4 对应那条 MAC</text>
+  <text x="196.25" y="271.65" font-size="9" fill="#6b21a8" text-anchor="middle">配图给的过期时间是 1 小时</text>
+  <rect x="392.5" y="228" width="342.5" height="54" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="563.75" y="251.4" font-size="9" fill="#1e293b" text-anchor="middle">缓存为什么要过期</text>
+  <text x="563.75" y="264.9" font-size="9" fill="#1e293b" text-anchor="middle">IP 不是永久分配的：可能换机器，也可能换地址</text>
+  <rect x="25" y="310" width="710" height="27" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="326.65" font-size="9" fill="#b45309" text-anchor="middle">这四步的地址是配图那一组（1.2.3.4 与 ca:fe:f0:0d:be:ef），与正文举例的 192.0.2.1 不是同一组</text>
+</svg>

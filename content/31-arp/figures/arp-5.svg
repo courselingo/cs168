@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 339.5" width="760" height="339.5"
+     role="img" aria-labelledby="fig-arp-5-title fig-arp-5-desc">
+  <title id="fig-arp-5-title">ARP 与转发表配合：一条子网条目覆盖整段，用掩码判断归属</title>
+  <desc id="fig-arp-5-desc">上排两格是一条子网条目覆盖整段地址的做法与它的好处：转发表里只有一条把整个子网映射成 direct；同一链路有多台主机时，用 ARP 之后就能只单播给目标那台而不打扰别人。中间一条给出配图里的实例：R1 是 192.0.2.254，总线上有 192.0.2.1 与 192.0.2.2，而 R1 表里那条实际条目是 192.0.2.0/24 对 Direct。第三排两格是这段里唯一要动笔算的地方：把范围写成掩码（固定位写 1、不固定位写 0，于是 192.0.2.0/24 变成 255.255.255.0），以及判断归属的办法（把地址与掩码做按位与，结果等于 192.0.2.0 就在范围内）。最下面一条把跨跳时变与不变分开：第二层的目的地址每一跳都要换成下一跳的 MAC，第三层的目的地址自始至终不变。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="339.5" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">ARP 与转发表配合：一条子网条目覆盖整段，用掩码判断归属</text>
+  <rect x="25" y="64" width="342.5" height="49.5" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="196.25" y="84.35" font-size="11" fill="#1e40af" text-anchor="middle">转发表里只有一条</text>
+  <text x="196.25" y="100.85" font-size="11" fill="#1e40af" text-anchor="middle">把整个子网那一段地址映射成 direct</text>
+  <rect x="392.5" y="64" width="342.5" height="49.5" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="563.75" y="84.35" font-size="11" fill="#166534" text-anchor="middle">同链路多台主机的场景</text>
+  <text x="563.75" y="100.85" font-size="11" fill="#166534" text-anchor="middle">用 ARP 之后就能只单播给目标那台，不打扰别人</text>
+  <rect x="25" y="141.5" width="710" height="27" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="380" y="158.15" font-size="9" fill="#1e293b" text-anchor="middle">配图里的实例：R1 是 192.0.2.254，总线上有 192.0.2.1 与 192.0.2.2；R1 表里那条是 192.0.2.0/24 对 Direct</text>
+  <rect x="25" y="196.5" width="342.5" height="60" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="196.25" y="215" font-size="10" fill="#b45309" text-anchor="middle">写成掩码</text>
+  <text x="196.25" y="230" font-size="10" fill="#b45309" text-anchor="middle">固定位写 1、不固定位写 0</text>
+  <text x="196.25" y="245" font-size="10" fill="#b45309" text-anchor="middle">于是 192.0.2.0/24 变成 255.255.255.0</text>
+  <rect x="392.5" y="196.5" width="342.5" height="60" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="563.75" y="215" font-size="10" fill="#b45309" text-anchor="middle">判断归属</text>
+  <text x="563.75" y="230" font-size="10" fill="#b45309" text-anchor="middle">把地址与掩码做按位与</text>
+  <text x="563.75" y="245" font-size="10" fill="#b45309" text-anchor="middle">结果等于 192.0.2.0 就在范围内</text>
+  <rect x="25" y="284.5" width="710" height="30" rx="6" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="380" y="303" font-size="10" fill="#1e40af" text-anchor="middle">跨跳时：第二层的目的地址每一跳都要换成下一跳的 MAC，第三层的目的地址自始至终不变</text>
+</svg>

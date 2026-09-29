@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 378.5" width="760" height="378.5"
+     role="img" aria-labelledby="fig-arp-2-title fig-arp-2-desc">
+  <title id="fig-arp-2-title">先判断本地还是外地，再决定翻译谁的地址</title>
+  <desc id="fig-arp-2-desc">上面一条是转发表里的两条依据。第二排两格是这两条依据各自的写法与含义：子网条目例如 192.0.2.0/24 标成 direct，意思是这一段地址都在本地；默认路由说其余所有非本地的目的地都转发给路由器。第三排两格是两种情形各自要翻译的对象：目的在本地就翻译那台机器的 MAC，目的在外地就翻译路由器的 MAC。第四排三格是「全体广播」的两条代价（强迫每个人解析每个包；第二层不止一条链路时交换机还得洪泛）与源文给的做法（先翻译地址，再在第二层单播）。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="378.5" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">先判断本地还是外地，再决定翻译谁的地址</text>
+  <rect x="25" y="64" width="710" height="36" rx="6" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="380" y="86.2" font-size="12" fill="#1e40af" text-anchor="middle">转发表里的两条依据</text>
+  <rect x="25" y="128" width="342.5" height="60" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="196.25" y="146.5" font-size="10" fill="#1e40af" text-anchor="middle">子网条目</text>
+  <text x="196.25" y="161.5" font-size="10" fill="#1e40af" text-anchor="middle">例如 192.0.2.0/24 标成 direct</text>
+  <text x="196.25" y="176.5" font-size="10" fill="#1e40af" text-anchor="middle">意思是这一段地址都在本地</text>
+  <rect x="392.5" y="128" width="342.5" height="60" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="563.75" y="146.5" font-size="10" fill="#1e40af" text-anchor="middle">默认路由</text>
+  <text x="563.75" y="161.5" font-size="10" fill="#1e40af" text-anchor="middle">其余所有非本地的目的地</text>
+  <text x="563.75" y="176.5" font-size="10" fill="#1e40af" text-anchor="middle">都转发给路由器</text>
+  <rect x="25" y="216" width="342.5" height="49.5" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="196.25" y="236.35" font-size="11" fill="#166534" text-anchor="middle">目的在本地</text>
+  <text x="196.25" y="252.85" font-size="11" fill="#166534" text-anchor="middle">把目的 IP 翻译成那台机器的 MAC</text>
+  <rect x="392.5" y="216" width="342.5" height="49.5" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="563.75" y="236.35" font-size="11" fill="#166534" text-anchor="middle">目的在外地</text>
+  <text x="563.75" y="252.85" font-size="11" fill="#166534" text-anchor="middle">把路由器的 IP 翻译成路由器的 MAC</text>
+  <rect x="25" y="293.5" width="220" height="60" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="135" y="312" font-size="10" fill="#b45309" text-anchor="middle">全体广播的代价一</text>
+  <text x="135" y="327" font-size="10" fill="#b45309" text-anchor="middle">强迫每个人解析每个包</text>
+  <text x="135" y="342" font-size="10" fill="#b45309" text-anchor="middle">才能判断是不是给自己的</text>
+  <rect x="270" y="293.5" width="220" height="60" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="312" font-size="10" fill="#b45309" text-anchor="middle">全体广播的代价二</text>
+  <text x="380" y="327" font-size="10" fill="#b45309" text-anchor="middle">第二层不止一条链路时</text>
+  <text x="380" y="342" font-size="10" fill="#b45309" text-anchor="middle">交换机还得把包在所有链路上洪泛</text>
+  <rect x="515" y="293.5" width="220" height="60" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="625" y="319.5" font-size="10" fill="#6b21a8" text-anchor="middle">源文给的做法</text>
+  <text x="625" y="334.5" font-size="10" fill="#6b21a8" text-anchor="middle">先翻译地址，再在第二层单播</text>
+</svg>
