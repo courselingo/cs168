@@ -21,7 +21,7 @@ output_mode = "explanation"
 
 先说清楚这一页要讲的是什么：[[term:internet]]（Internet）这个名字，指的是一整套把网络连起来的做法。
 
-搭任何网络，第一步都一样：得先有办法把一个信号送过空间。邮政里这一步是邮差、马车、卡车或信鸽；互联网里要送的是比特（bit），也就是 1 和 0，能用的技术有电线上的电压、无线电台的电磁波、光纤里的光脉冲。教材在这里划了一条明确的边界：
+搭任何网络，第一步都一样：得先有办法把一个信号送过空间。邮政里这一步是邮差、驿马快递（Pony Express）、卡车或信鸽；互联网里要送的是比特（bit），也就是 1 和 0，能用的技术有电线上的电压、无线电台的电磁波、光纤里的光脉冲。教材在这里划了一条明确的边界：
 
 > "There are entire fields of electrical engineering dedicated to sending signals across space, but we won't go into detail in this class."
 > （把信号送过空间，是有整个电气工程学科在研究的事；这门课不细讲。）
@@ -56,7 +56,7 @@ output_mode = "explanation"
 > "One possible approach is to add a bunch of links between different local networks, but this doesn't seem very efficient. (What if the two local networks were in different continents?)"
 > （一种可能的做法是在两个局域网之间加一堆链路，可这看起来不太高效。要是这两片网络在不同的洲呢。）
 
-教材的反问点到了要害。机器数一多，需要拉的线会按平方级长；而距离一远，单独拉一条长线就更不划算。更要紧的是，这么连出来的东西没法长大：每加一片网络，就要跟已有的每一片都连一遍。
+教材的反问点到了要害。机器数一多，需要拉的线会按平方级长；而距离一远，单独拉一条长线就更不划算。更要紧的是，这么连出来的东西没法长大：每加一片网络，就要跟已有的每一片都连一遍。（**「平方级」「长不大」「每加一片就要跟每一片连一遍」这三步是我们的推理**：源文在这里只说了「不太高效」，并反问了「要是这两片网络在不同的洲呢」。）
 
 ![左图的每台机器都要跟对面连一条线；右图只让两台设备对接](figures/layers-3.svg)
 
@@ -79,7 +79,7 @@ output_mode = "explanation"
 > "We'll also need to make sure that there's enough capacity on these links to carry our data."
 > （还要保证这些链路上有足够的容量把数据送过去。）
 
-链路够不够宽、堵住了怎么办，这是[[term:congestion-control]]（congestion control）那一章的主题。教材还补了一句容易被忽略的话：除了设备，这门课也要研究**运营这些设备的人**。互联网的运营者是[[term:isp]]（ISP，互联网服务提供商），比如 AT&T、亚马逊云，甚至伯克利自己。他们会按自己的商业与政治考量做决定，例如一条海底光缆修好之后，别的 ISP 想借道可能要被收费。
+链路够不够宽、堵住了怎么办，这是[[term:congestion-control]]（congestion control）那一章的主题。教材还补了一句容易被忽略的话：除了设备，这门课也要研究**运营这些设备的人**。互联网的运营者是[[term:isp]]（ISP，互联网服务提供商），比如 AT&T、亚马逊云，甚至伯克利自己。他们会按自己的商业与政治考量做决定，例如 AT&T 修了一条海底光缆，别的 ISP 想借道，就可能要被它收费。
 
 ![两片网络各设一个交换设备，只把这两台设备连起来；旁边标出两个待解问题](figures/layers-4.svg)
 
@@ -111,9 +111,9 @@ output_mode = "explanation"
 
 ## 七、第三层的服务模型：尽力而为
 
-到这里，似乎已经能往全世界送数据了，为什么不停下。教材说第三层还剩两个问题，先看第一个：服务模型。
+到这里，似乎已经能往全世界送数据了，为什么不停下。教材说第三层（[[term:network-layer]]，教材叫 Internet Layer）还剩两个问题，先看第一个：服务模型。
 
-所谓[[term:protocol]]（protocol）之外，这里要谈的是另一件事：网络对用户承诺什么。教材把服务模型说成网络与用户之间的合同，写明网络支持什么、不支持什么。可以想象的合同有好几种。
+同一层除了[[term:protocol]]（protocol）本身，还要说清它对上面承诺什么。这就是服务模型：网络与用户之间的一份约定，写明网络支持什么、不支持什么。教材把服务模型说成网络与用户之间的合同，写明网络支持什么、不支持什么。可以想象的合同有好几种。
 
 > "The network guarantees that data is delivered. Or, the network guarantees that data is delivered within some time limit. Or, the network doesn't guarantee delivery, but promises to report an error on failure."
 > （网络保证数据送达；或者保证在某个时限内送达；再或者不保证送达，但承诺失败时报错。）
@@ -125,7 +125,7 @@ output_mode = "explanation"
 > "One major reason is, it is much easier to build networks that satisfy these weaker demands."
 > （一个主要原因是，满足这些更弱要求的网络要好建得多。）
 
-承诺越弱，要对付的情况越少，网络就越容易做大、做便宜。这一层拿掉的那些保证并没有消失，它们被搬到了上面几层去补。
+承诺越弱，要对付的情况越少，网络就越容易做大、做便宜。这一层拿掉的那些保证并没有消失，上面几层要自己把它们补回来。（**这半句是我们的推论**：源文在解释「为什么选最弱的承诺」时只给了一条理由，重发与排序是到传输层才展开的。）
 
 ![四种服务模型并排：保证送达、限时送达、失败报错，以及互联网选的尽力而为](figures/layers-7.svg)
 
@@ -188,5 +188,5 @@ output_mode = "explanation"
 - 教材：CS 168 Textbook（UC Berkeley CS168 课程教材），原文链接同上
 - 授权依据：教材站根页声明 CC BY-SA 4.0；本文为本仓库原创中文讲解，按该节顺序重讲，关键句给出英文原文与中译，**未逐句全译**，配图自绘
 - 结构说明：本讲的章节顺序**跟随教材该节的推进顺序**（物理层 → 链路层 → 网际层 → 网络的网络 → 抽象的层次 → 服务模型 → 分组 → 传输层 → 应用层）；
-  「代价与边界」一段是我们的归纳，教材该节没有单列小标题
+  第十节末段那笔「分层不是不要代价」的账是我们的归纳（**页面里没有单列「代价与边界」小节**），教材该节也没有这一节
 - 相关：第 1 讲（`/intro/intro.html`）是总览，本讲把「分层」这一条线单独讲透；第 3 讲讲首部、第 4 讲讲架构
