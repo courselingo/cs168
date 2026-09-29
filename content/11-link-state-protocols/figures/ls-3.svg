@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 221" width="760" height="221"
+     role="img" aria-labelledby="fig-ls-3-title fig-ls-3-desc">
+  <title id="fig-ls-3-title">四条一致性要求</title>
+  <desc id="fig-ls-3-desc">四个条件并排：所有路由器对拓扑有一致的认识，否则一条链路坏了只有一台知道，大家就在不同的图上算路径；都在找最小代价路径，否则结果不一致；所有代价为正，否则可能出现负权环；用同一套打破平局的规则，这样并列最短路时大家会选同一条。满足这四条之后，路由器哪怕用不同算法也会算出相同路径。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="221" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">四条一致性要求</text>
+
+  <rect x="22" y="76" width="160" height="72" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="102" y="98" font-size="12" fill="#1e40af" text-anchor="middle">同一张图</text>
+  <text x="102" y="116" font-size="12" fill="#1e40af" text-anchor="middle">有人不知道</text>
+  <text x="102" y="134" font-size="12" fill="#1e40af" text-anchor="middle">链路已经坏了</text>
+
+  <rect x="207" y="76" width="160" height="72" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="287" y="98" font-size="12" fill="#1e40af" text-anchor="middle">都找最小代价</text>
+  <text x="287" y="116" font-size="12" fill="#1e40af" text-anchor="middle">有人偏好更贵的路</text>
+  <text x="287" y="134" font-size="12" fill="#1e40af" text-anchor="middle">结果就不一致</text>
+
+  <rect x="392" y="76" width="160" height="72" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="472" y="98" font-size="12" fill="#1e40af" text-anchor="middle">代价为正</text>
+  <text x="472" y="116" font-size="12" fill="#1e40af" text-anchor="middle">负代价会造出</text>
+  <text x="472" y="134" font-size="12" fill="#1e40af" text-anchor="middle">负权环</text>
+
+  <rect x="577" y="76" width="160" height="72" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="657" y="98" font-size="12" fill="#166534" text-anchor="middle">同一套平局规则</text>
+  <text x="657" y="116" font-size="12" fill="#166534" text-anchor="middle">并列最短路时</text>
+  <text x="657" y="134" font-size="12" fill="#166534" text-anchor="middle">大家选同一条</text>
+
+  <text x="380" y="196" font-size="10" fill="#64748b" text-anchor="middle">两条都合法的最短路合起来可能是环路：每台只管自己的下一跳</text>
+</svg>

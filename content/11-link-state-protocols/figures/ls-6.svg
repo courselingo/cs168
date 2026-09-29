@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 205" width="760" height="205"
+     role="img" aria-labelledby="fig-ls-6-title fig-ls-6-desc">
+  <title id="fig-ls-6-title">解法：第一次见到就转发并记下，之后再见到就不转发</title>
+  <desc id="fig-ls-6-desc">左边是第一次见到某条消息：把它转发给所有邻居，同时记下「这条我见过了」，反正这条信息本来也要用来拼网络图。右边是以后再见到同一条消息：不再转发。为了让路由器能认出同一条消息，可以给消息加一个时间戳，或者任何对每条消息唯一的计数。加了这条之后偶尔还会有重复消息，但不会再无限发下去。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="205" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">同一条消息只转发一次</text>
+
+  <rect x="22" y="76" width="344" height="72" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="194" y="98" font-size="12" fill="#166534" text-anchor="middle">第一次见到</text>
+  <text x="194" y="116" font-size="12" fill="#166534" text-anchor="middle">转发给所有邻居，并记下见过</text>
+  <text x="194" y="134" font-size="12" fill="#166534" text-anchor="middle">这条信息本来也要用来拼图</text>
+
+  <rect x="394" y="76" width="344" height="72" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="566" y="98" font-size="12" fill="#9d174d" text-anchor="middle">以后再见到</text>
+  <text x="566" y="116" font-size="12" fill="#9d174d" text-anchor="middle">不再转发</text>
+  <text x="566" y="134" font-size="12" fill="#9d174d" text-anchor="middle">靠时间戳认出同一条消息</text>
+
+  <text x="380" y="180" font-size="10" fill="#64748b" text-anchor="middle">加了这条之后偶尔仍会有重复，但不会再无限发下去</text>
+</svg>

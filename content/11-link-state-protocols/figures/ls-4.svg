@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 221" width="760" height="221"
+     role="img" aria-labelledby="fig-ls-4-title fig-ls-4-desc">
+  <title id="fig-ls-4-title">学到整张图的三件事</title>
+  <desc id="fig-ls-4-desc">三列并排：用 hello 消息发现邻居，每台路由器向所有邻居打招呼，并定期重发，连续错过几次就认为对方消失；用泛滥把信息传遍全网，把宣告发给所有邻居，而且收到别人的宣告也要转发给所有邻居；再靠定期重发防止消息丢失，这个办法沿用距离向量那一讲。三件事做完，每台路由器才能拼出整张网络图。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="221" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">学到整张图的三件事</text>
+
+  <rect x="22" y="76" width="222" height="72" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="133" y="98" font-size="12" fill="#1e40af" text-anchor="middle">hello 发现邻居</text>
+  <text x="133" y="116" font-size="12" fill="#1e40af" text-anchor="middle">向所有邻居打招呼</text>
+  <text x="133" y="134" font-size="12" fill="#1e40af" text-anchor="middle">错过几次就认为消失</text>
+
+  <rect x="269" y="76" width="222" height="72" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="98" font-size="12" fill="#1e40af" text-anchor="middle">泛滥传遍全网</text>
+  <text x="380" y="116" font-size="12" fill="#1e40af" text-anchor="middle">发给所有邻居</text>
+  <text x="380" y="134" font-size="12" fill="#1e40af" text-anchor="middle">收到的也转发出去</text>
+
+  <rect x="516" y="76" width="222" height="72" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="627" y="98" font-size="12" fill="#166534" text-anchor="middle">定期重发</text>
+  <text x="627" y="116" font-size="12" fill="#166534" text-anchor="middle">防止消息丢失</text>
+  <text x="627" y="134" font-size="12" fill="#166534" text-anchor="middle">沿用距离向量的老办法</text>
+
+  <text x="380" y="196" font-size="10" fill="#64748b" text-anchor="middle">邻居、链路代价、目的地位置，都要靠这三件事收集齐</text>
+</svg>

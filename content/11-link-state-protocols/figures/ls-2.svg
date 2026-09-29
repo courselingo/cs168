@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 189" width="760" height="189"
+     role="img" aria-labelledby="fig-ls-2-title fig-ls-2-desc">
+  <title id="fig-ls-2-title">有了全图，算最短路是一道熟题</title>
+  <desc id="fig-ls-2-desc">拿到全局视野之后，找到每个目的地的最短路就变成一道熟悉的最短路径题：对每个目的地算出最短路，然后把这条路上的下一跳记进转发表。路径的其余部分在转发时并不需要用到。用什么算法都行，比如 Bellman-Ford、Dijkstra、广度优先搜索，只要每台路由器算出的结果彼此一致。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="189" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">算最短路：只记下一跳</text>
+
+  <rect x="22" y="76" width="716" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="98" font-size="12" fill="#1e40af" text-anchor="middle">对每个目的地算出最短路，把这条路上的下一跳记下来</text>
+  <text x="380" y="116" font-size="12" fill="#1e40af" text-anchor="middle">路径的其余部分在转发时用不到</text>
+
+  <text x="380" y="164" font-size="10" fill="#64748b" text-anchor="middle">Bellman-Ford、Dijkstra、广度优先都可以；麻烦不在算法，而在「大家算得一致」</text>
+</svg>

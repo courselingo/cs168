@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 293" width="760" height="293"
+     role="img" aria-labelledby="fig-ls-7-title fig-ls-7-desc">
+  <title id="fig-ls-7-title">收敛：先检测、再传遍、最后各自重算</title>
+  <desc id="fig-ls-7-desc">三步自上而下：先等变化被检测到，比如一条链路坏掉；再等新信息传遍全网；然后各路由器重算自己的转发表项。在这段时间里，有些路由器还在用旧图、有些已经用新图，于是路由状态可能无效，出现死胡同、环路，或者并非最小代价的路径。教材的例子是 R3-A 链路坏了，R3 知道而别人不知道，R3 把分组发给 R1，R1 却还发给 R3。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="293" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">收敛要等三步</text>
+
+  <rect x="22" y="76" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="98" font-size="12" fill="#1e40af" text-anchor="middle">一、等变化被检测到，比如一条链路坏掉</text>
+
+  <rect x="22" y="137" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="159" font-size="12" fill="#1e40af" text-anchor="middle">二、等新信息泛滥到全网</text>
+
+  <rect x="22" y="198" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="220" font-size="12" fill="#166534" text-anchor="middle">三、各路由器重算自己的转发表项</text>
+
+  <text x="380" y="268" font-size="10" fill="#64748b" text-anchor="middle">这期间有人用旧图、有人用新图，于是可能出现死胡同、环路或非最小代价</text>
+</svg>

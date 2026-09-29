@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 211" width="760" height="211"
+     role="img" aria-labelledby="fig-ls-8-title fig-ls-8-desc">
+  <title id="fig-ls-8-title">两类做法的取舍：信任邻居的宣称，还是掌握全图</title>
+  <desc id="fig-ls-8-desc">左栏是两类做法的差别：距离向量里收到宣告时并不清楚路径的全部细节，只能相信邻居宣称的东西；链路状态里知道整张图的拓扑，于是更清楚分组实际会走什么路径。收敛方面距离向量可能更慢，要等邻居重算并重新宣告；链路状态可以让大家同时泛滥并重算。右栏是决定性的那条：链路状态要求每台了解整个网络，而运营者不愿向竞争对手暴露路由器位置与链路带宽，所以它适合小的本地网络，全球范围靠两类协议结合。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="211" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">和距离向量比</text>
+
+  <rect x="22" y="66" width="344" height="90" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="194" y="88" font-size="12" fill="#1e40af" text-anchor="middle">信任邻居的宣称</text>
+  <text x="194" y="106" font-size="12" fill="#1e40af" text-anchor="middle">不知道路径的全部细节</text>
+  <text x="194" y="124" font-size="12" fill="#1e40af" text-anchor="middle">收敛可能更慢</text>
+  <text x="194" y="142" font-size="12" fill="#1e40af" text-anchor="middle">要一级级等邻居重算</text>
+
+  <rect x="394" y="66" width="344" height="90" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="566" y="88" font-size="12" fill="#166534" text-anchor="middle">掌握整张图</text>
+  <text x="566" y="106" font-size="12" fill="#166534" text-anchor="middle">知道路径实际会怎么走</text>
+  <text x="566" y="124" font-size="12" fill="#166534" text-anchor="middle">大家可以同时泛滥并重算</text>
+  <text x="566" y="142" font-size="12" fill="#166534" text-anchor="middle">但要求每台知道全网</text>
+
+  <text x="380" y="186" font-size="10" fill="#64748b" text-anchor="middle">运营者不愿暴露拓扑与带宽，所以链路状态留在本地网络，全球靠两类结合</text>
+</svg>
