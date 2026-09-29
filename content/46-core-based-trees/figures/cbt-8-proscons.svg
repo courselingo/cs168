@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 389" width="760" height="389"
+     role="img" aria-labelledby="fig-cbt-8-proscons-title fig-cbt-8-proscons-desc">
+  <title id="fig-cbt-8-proscons-title">其他的利与弊：单点故障、与单播路由解耦、以及 PIM-DM 与 PIM-SM 的对应</title>
+  <desc id="fig-cbt-8-proscons-desc">CBT 的根是单点故障，容错需要多个 core；DVMRP 是距离向量的扩展因而与单播协议紧耦合，而 CBT 与单播路由解耦（用转发表但不关心其来源）。选型上：一个源发给大组用 DVMRP（PIM-DM），小组成员散落在大网络里用 CBT（PIM-SM）；两种今天都还在用。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="389" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">其他的利与弊：单点故障、与单播路由解耦、以及 PIM-DM 与 PIM-SM 的对应</text>
+  <rect x="22" y="64" width="716" height="36" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="380" y="86" font-size="12" fill="#9d174d" text-anchor="middle">根是单点故障；要容错就得让树有多个 core（可行但更复杂）</text>
+  <rect x="22" y="125" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="147" font-size="12" fill="#1e40af" text-anchor="middle">DVMRP 是距离向量的扩展 ⇒ 多播协议与单播协议紧耦合，改一个要改另一个</text>
+  <rect x="22" y="186" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="208" font-size="12" fill="#166534" text-anchor="middle">CBT 与单播路由解耦：它用单播转发表（把 join 送到根），但不关心这些表怎么来的</text>
+  <rect x="22" y="247" width="716" height="36" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380" y="269" font-size="12" fill="#6b21a8" text-anchor="middle">选型：一个源发给大组 ⇒ DVMRP（PIM-DM）；小组成员散落在大网络 ⇒ CBT（PIM-SM）</text>
+  <rect x="22" y="308" width="716" height="36" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380" y="330" font-size="12" fill="#6b21a8" text-anchor="middle">两种今天都还在用，没有绝对更好，只有场景匹配</text>
+  <text x="380" y="366" font-size="10" fill="#64748b" text-anchor="middle">两条路线都不是错的，它们各自对应一类场景</text>
+</svg>

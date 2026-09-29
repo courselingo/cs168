@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 389" width="760" height="389"
+     role="img" aria-labelledby="fig-cbt-1-definition-title fig-cbt-1-definition-desc">
+  <title id="fig-cbt-1-definition-title">CBT 的定义：一个目的组一棵树，树碰到该组每个成员；它与 DVMRP 的树没有共同点</title>
+  <desc id="fig-cbt-1-definition-desc">多播路由的目标不变（把目的为某个组的分组送到所有成员），但 CBT 换了一种做法：每个目的组各有一棵树，树只要碰到该组的每个成员即可；源文提醒不要把 CBT 的树与 DVMRP 的树混着理解，先当作两件毫无共同点的事。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="389" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">CBT 的定义：一个目的组一棵树，树碰到该组每个成员；它与 DVMRP 的树没有共同点</text>
+  <rect x="22" y="64" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="86" font-size="12" fill="#1e40af" text-anchor="middle">目标没变：目的地址是一个组，路由器协同把分组送到所有成员</text>
+  <rect x="22" y="125" width="716" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="147" font-size="12" fill="#b45309" text-anchor="middle">做法换了：CBT（Core-Based Tree）与 DVMRP 完全不同</text>
+  <rect x="22" y="186" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="208" font-size="12" fill="#166534" text-anchor="middle">一个目的组一棵树：树只要碰到该组的每一个成员就算数</text>
+  <rect x="22" y="247" width="716" height="36" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="380" y="269" font-size="12" fill="#9d174d" text-anchor="middle">源文提醒：不要把 CBT 的树与 DVMRP 的树混在一起想，先当成毫无共同点的两件事</text>
+  <rect x="22" y="308" width="716" height="36" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380" y="330" font-size="12" fill="#6b21a8" text-anchor="middle">最后再回来比较两种协议各自怎么扩展</text>
+  <text x="380" y="366" font-size="10" fill="#64748b" text-anchor="middle">树是按「组」建的，而不是按「源」建的</text>
+</svg>

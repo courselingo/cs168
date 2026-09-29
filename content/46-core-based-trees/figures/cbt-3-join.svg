@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 389" width="760" height="389"
+     role="img" aria-labelledby="fig-cbt-3-join-title fig-cbt-3-join-desc">
+  <title id="fig-cbt-3-join-title">加入：成员单播一条 join 给 core，沿途路由器都加入树，各自记下父与子</title>
+  <desc id="fig-cbt-3-join-desc">成员单播一条 join 给 core，消息沿途经过的每台路由器都加入这棵树，于是 core 到新成员之间有了通路；每台路由器把收到 join 的那条链路当作自己的孩子、把指向根的下一跳当作自己的父，各记各的，没有全局大脑。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="389" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">加入：成员单播一条 join 给 core，沿途路由器都加入树，各自记下父与子</text>
+  <rect x="22" y="64" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="86" font-size="12" fill="#1e40af" text-anchor="middle">成员想加入：单播一条 join 消息给 core</text>
+  <rect x="22" y="125" width="716" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="147" font-size="12" fill="#b45309" text-anchor="middle">这条消息沿途经过的每一台路由器都加入这棵树</text>
+  <rect x="22" y="186" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="208" font-size="12" fill="#166534" text-anchor="middle">于是 core 到新成员之间有了一条通路</text>
+  <rect x="22" y="247" width="716" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="269" font-size="12" fill="#b45309" text-anchor="middle">收到 join 的路由器：进来那条链路是自己的孩子（背离根），出去那条（指向根的下一跳）是自己的父</text>
+  <rect x="22" y="308" width="716" height="36" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="380" y="330" font-size="12" fill="#9d174d" text-anchor="middle">每台路由器只记自己的父与子，没有全局大脑在维护这棵树</text>
+  <text x="380" y="366" font-size="10" fill="#64748b" text-anchor="middle">树是分布式记住的，每台路由器只负责自己那一格</text>
+</svg>

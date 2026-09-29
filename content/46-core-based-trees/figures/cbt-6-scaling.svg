@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 450" width="760" height="450"
+     role="img" aria-labelledby="fig-cbt-6-scaling-title fig-cbt-6-scaling-desc">
+  <title id="fig-cbt-6-scaling-title">扩展性：DVMRP 每个源每个组一棵树，而 CBT 每个组只有一棵树；并且 CBT 不需要全网泛洪</title>
+  <desc id="fig-cbt-6-scaling-desc">DVMRP 要维护「每个源、每个目的组」一棵树，而 CBT 每个目的组只有一棵树、且对所有源相同，于是状态量从「源乘组」降到「组」；另外 CBT 没有任何一步需要泛洪给全网，所以非成员永远不会收到分组（而 DVMRP 的修剪状态被周期清除时会把分组泛洪给包括非成员在内的全网）。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="450" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">扩展性：DVMRP 每个源每个组一棵树，而 CBT 每个组只有一棵树；并且 CBT 不需要全网泛洪</text>
+  <rect x="22" y="64" width="716" height="36" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="380" y="86" font-size="12" fill="#9d174d" text-anchor="middle">DVMRP 的账：路由器要维护「每个源、每个目的组」一棵树</text>
+  <rect x="22" y="125" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="147" font-size="12" fill="#1e40af" text-anchor="middle">每棵树表示的是「从某一个源到某一个组所有成员」的最短路径</text>
+  <rect x="22" y="186" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="208" font-size="12" fill="#166534" text-anchor="middle">CBT 的账：一个目的组一棵树，而且对所有源都是同一棵</text>
+  <rect x="22" y="247" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="269" font-size="12" fill="#166534" text-anchor="middle">于是状态量从「源乘组」降成「组」</text>
+  <rect x="22" y="308" width="716" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="330" font-size="12" fill="#b45309" text-anchor="middle">另一个好处：CBT 没有任何一步需要泛洪给全网，所以非成员永远不会收到分组</text>
+  <rect x="22" y="369" width="716" height="36" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="380" y="391" font-size="12" fill="#9d174d" text-anchor="middle">（DVMRP 的修剪状态会被周期清除，一清除就会泛洪给全网包括非成员）</text>
+  <text x="380" y="427" font-size="10" fill="#64748b" text-anchor="middle">状态量从「源乘组」降到「组」</text>
+</svg>

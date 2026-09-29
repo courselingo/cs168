@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 389" width="760" height="389"
+     role="img" aria-labelledby="fig-cbt-7-efficiency-title fig-cbt-7-efficiency-desc">
+  <title id="fig-cbt-7-efficiency-title">效率：CBT 的树不涉及发送者，所以没有最优性保证；而效率取决于 core，最优 core 又不可求</title>
+  <desc id="fig-cbt-7-efficiency-desc">DVMRP 的树是从发送者出发的最小代价树，而 CBT 的树不涉及发送者，因此不再保证最优路径，它用效率换扩展性；效率高度依赖 core 的选择（配图里三种选择各有一条路径不是最优），而最优 core 不可求，实践中常手工选。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="389" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">效率：CBT 的树不涉及发送者，所以没有最优性保证；而效率取决于 core，最优 core 又不可求</text>
+  <rect x="22" y="64" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="86" font-size="12" fill="#1e40af" text-anchor="middle">DVMRP 建的是从发送者到所有成员的最小代价树，所以路径最优</text>
+  <rect x="22" y="125" width="716" height="36" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="380" y="147" font-size="12" fill="#9d174d" text-anchor="middle">CBT 的树根本不涉及发送者 ⇒ 没有最优性保证，路径不一定最小代价</text>
+  <rect x="22" y="186" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="208" font-size="12" fill="#166534" text-anchor="middle">一句话：CBT 用效率换扩展性</text>
+  <rect x="22" y="247" width="716" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="269" font-size="12" fill="#b45309" text-anchor="middle">效率高度依赖「选了哪个 core」：配图里三种选择各有一条路径不是最优</text>
+  <rect x="22" y="308" width="716" height="36" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380" y="330" font-size="12" fill="#6b21a8" text-anchor="middle">最优 core 不可求（成员随时进出），实践中常常由运维人员手工选</text>
+  <text x="380" y="366" font-size="10" fill="#64748b" text-anchor="middle">扩展性是买来的，付款方式是最优性</text>
+</svg>

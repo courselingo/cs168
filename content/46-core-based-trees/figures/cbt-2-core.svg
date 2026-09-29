@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 389" width="760" height="389"
+     role="img" aria-labelledby="fig-cbt-2-core-title fig-cbt-2-core-desc">
+  <title id="fig-cbt-2-core-title">核心：事先选定的一个任意路由器，有单播地址、不是组成员，组到 core 的映射可以用 DNS 发布</title>
+  <desc id="fig-cbt-2-core-desc">core 是树的根，是网络里某个事先选定的任意路由器；它有单播 IP 地址所以谁都能单播给它；不同组可以用不同 core，而组到 core 的映射假设人人皆知（可以用 DNS 这类机制发布）；core 本身不是组成员。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="389" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">核心：事先选定的一个任意路由器，有单播地址、不是组成员，组到 core 的映射可以用 DNS 发布</text>
+  <rect x="22" y="64" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="86" font-size="12" fill="#1e40af" text-anchor="middle">树要有根，根就叫 core：网络里某个任意的路由器，而且事先选好</text>
+  <rect x="22" y="125" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="147" font-size="12" fill="#166534" text-anchor="middle">core 是路由器，所以它有单播 IP 地址，谁都能单播给它</text>
+  <rect x="22" y="186" width="716" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="208" font-size="12" fill="#b45309" text-anchor="middle">一个目的组一棵树，不同组可以用不同的 core</text>
+  <rect x="22" y="247" width="716" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="269" font-size="12" fill="#b45309" text-anchor="middle">假设人人知道「组到 core」的映射（源文说这可以用 DNS 这类东西发布）</text>
+  <rect x="22" y="308" width="716" height="36" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="380" y="330" font-size="12" fill="#9d174d" text-anchor="middle">core 不是组成员：这个模型里加入与离开的是主机，不是路由器</text>
+  <text x="380" y="366" font-size="10" fill="#64748b" text-anchor="middle">core 有三个身份：树的根、可被单播到达的路由器、但不是成员</text>
+</svg>
