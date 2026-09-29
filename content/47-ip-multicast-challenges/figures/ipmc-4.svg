@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 401" width="760" height="401"
+     role="img" aria-labelledby="fig-ipmc-4-title fig-ipmc-4-desc">
+  <title id="fig-ipmc-4-title">可靠这一关：ack 与 nack 各自的麻烦，以及用纠错码绕开</title>
+  <desc id="fig-ipmc-4-desc">上面一条说明这一关的出发点：跟单播一样，IP 组播也是尽力而为，包可能到了一部分组员手里、没到全部。第二排两格是两种补救各自的毛病：加确认时，组里有几百万成员时单个发送方处理不了几百万个确认；否定确认时，组员收到就什么都不发、没收到才发一条 nack，同样会让单个发送方被压垮。第三排三格是恢复方式的两难：再组播给整个组会让已经收到的人再收到一份副本、浪费带宽；只单播给发过 nack 的人在很多人没收到时同样浪费、极端情形是第一条链路就丢了包；哪种更好并不显然，取决于有多少组员收到了。第四排三格是实践里的做法与代价：根本不实现可靠性；或者把冗余编码进数据流（纠错码），靠数据本身纠正丢包与损坏；代价是同样数据要用更多比特，例如 5 个包的数据量可能发 10 个包，而这 10 个里任意 5 个可重建出原始数据。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="401" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">可靠这一关：ack 与 nack 各自的麻烦，以及用纠错码绕开</text>
+  <rect x="25" y="64" width="710" height="33" rx="6" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="380" y="84.35" font-size="11" fill="#1e40af" text-anchor="middle">跟单播一样，IP 组播也是尽力而为：包可能到了一部分组员手里，没到全部</text>
+  <rect x="25" y="125" width="342.5" height="60" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="196.25" y="143.5" font-size="10" fill="#b45309" text-anchor="middle">加确认的毛病</text>
+  <text x="196.25" y="158.5" font-size="10" fill="#b45309" text-anchor="middle">组里有几百万成员时</text>
+  <text x="196.25" y="173.5" font-size="10" fill="#b45309" text-anchor="middle">单个发送方处理不了几百万个确认</text>
+  <rect x="392.5" y="125" width="342.5" height="60" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="563.75" y="143.5" font-size="10" fill="#b45309" text-anchor="middle">否定确认的毛病</text>
+  <text x="563.75" y="158.5" font-size="10" fill="#b45309" text-anchor="middle">收到就什么都不发，没收到才发一条 nack</text>
+  <text x="563.75" y="173.5" font-size="10" fill="#b45309" text-anchor="middle">同样会让单个发送方被压垮</text>
+  <rect x="25" y="213" width="220" height="60" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="135" y="231.5" font-size="10" fill="#b45309" text-anchor="middle">恢复方式一：再组播给整个组</text>
+  <text x="135" y="246.5" font-size="10" fill="#b45309" text-anchor="middle">已经收到的人会再收到一份副本</text>
+  <text x="135" y="261.5" font-size="10" fill="#b45309" text-anchor="middle">浪费带宽</text>
+  <rect x="270" y="213" width="220" height="60" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="231.5" font-size="10" fill="#b45309" text-anchor="middle">恢复方式二：只单播给发过 nack 的人</text>
+  <text x="380" y="246.5" font-size="10" fill="#b45309" text-anchor="middle">很多人没收到时同样浪费</text>
+  <text x="380" y="261.5" font-size="10" fill="#b45309" text-anchor="middle">极端情形是第一条链路就丢了包</text>
+  <rect x="515" y="213" width="220" height="60" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="625" y="231.5" font-size="10" fill="#1e293b" text-anchor="middle">哪种更好</text>
+  <text x="625" y="246.5" font-size="10" fill="#1e293b" text-anchor="middle">并不显然</text>
+  <text x="625" y="261.5" font-size="10" fill="#1e293b" text-anchor="middle">取决于有多少组员收到了</text>
+  <rect x="25" y="301" width="220" height="75" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="135" y="334.5" font-size="10" fill="#166534" text-anchor="middle">实践做法一</text>
+  <text x="135" y="349.5" font-size="10" fill="#166534" text-anchor="middle">根本不实现可靠性</text>
+  <rect x="270" y="301" width="220" height="75" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="327" font-size="10" fill="#166534" text-anchor="middle">实践做法二</text>
+  <text x="380" y="342" font-size="10" fill="#166534" text-anchor="middle">把冗余编码进数据流（纠错码）</text>
+  <text x="380" y="357" font-size="10" fill="#166534" text-anchor="middle">靠数据本身纠正丢包与损坏</text>
+  <rect x="515" y="301" width="220" height="75" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="625" y="319.5" font-size="10" fill="#166534" text-anchor="middle">代价</text>
+  <text x="625" y="334.5" font-size="10" fill="#166534" text-anchor="middle">同样数据要用更多比特</text>
+  <text x="625" y="349.5" font-size="10" fill="#166534" text-anchor="middle">5 个包的数据量可能发 10 个包</text>
+  <text x="625" y="364.5" font-size="10" fill="#166534" text-anchor="middle">任意 5 个可重建</text>
+</svg>

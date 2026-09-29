@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 356" width="760" height="356"
+     role="img" aria-labelledby="fig-ipmc-3-title fig-ipmc-3-desc">
+  <title id="fig-ipmc-3-title">拥塞控制这一关：一条速率要照顾容量不同的多条路径</title>
+  <desc id="fig-ipmc-3-desc">上面一条说明这一关的问题：一个源沿交付树发给很多接收者时该挑什么发送速率。第二条说明流量会走很多条路径、而每条路径的容量可能不同。第二排三格是那个两难与结论：只发 1 Mbps 不会压垮任何链路、但别的路径上的容量白白空着；发 100 Mbps 把性能拉满、但某些链路会过载；结论是源的速率该取多少没有清楚的答案。第三排三格是实践里的一个解法：按性能把组分开、定义四个不同的组播组；每组收到的是同一路视频但画质不同；接收者试着加入不同的组，看哪一个给它的性能最好。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="356" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">拥塞控制这一关：一条速率要照顾容量不同的多条路径</text>
+  <rect x="25" y="64" width="710" height="33" rx="6" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="380" y="84.35" font-size="11" fill="#1e40af" text-anchor="middle">一个源沿交付树发给很多接收者：它该挑什么发送速率</text>
+  <rect x="25" y="125" width="710" height="30" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="380" y="143.5" font-size="10" fill="#1e293b" text-anchor="middle">流量会走很多条路径，而每条路径的容量可能不同</text>
+  <rect x="25" y="183" width="220" height="60" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="135" y="201.5" font-size="10" fill="#1e40af" text-anchor="middle">只发 1 Mbps</text>
+  <text x="135" y="216.5" font-size="10" fill="#1e40af" text-anchor="middle">不会压垮任何一条链路</text>
+  <text x="135" y="231.5" font-size="10" fill="#1e40af" text-anchor="middle">但别的路径上的容量白白空着</text>
+  <rect x="270" y="183" width="220" height="60" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="201.5" font-size="10" fill="#b45309" text-anchor="middle">发 100 Mbps</text>
+  <text x="380" y="216.5" font-size="10" fill="#b45309" text-anchor="middle">把性能拉满</text>
+  <text x="380" y="231.5" font-size="10" fill="#b45309" text-anchor="middle">但某些链路会过载</text>
+  <rect x="515" y="183" width="220" height="60" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="625" y="201.5" font-size="10" fill="#6b21a8" text-anchor="middle">结论</text>
+  <text x="625" y="216.5" font-size="10" fill="#6b21a8" text-anchor="middle">源的速率该取多少</text>
+  <text x="625" y="231.5" font-size="10" fill="#6b21a8" text-anchor="middle">没有清楚的答案</text>
+  <rect x="25" y="271" width="220" height="60" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="135" y="289.5" font-size="10" fill="#166534" text-anchor="middle">实践里的一个解法</text>
+  <text x="135" y="304.5" font-size="10" fill="#166534" text-anchor="middle">按性能把组分开</text>
+  <text x="135" y="319.5" font-size="10" fill="#166534" text-anchor="middle">定义四个不同的组播组</text>
+  <rect x="270" y="271" width="220" height="60" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="289.5" font-size="10" fill="#166534" text-anchor="middle">每组收到什么</text>
+  <text x="380" y="304.5" font-size="10" fill="#166534" text-anchor="middle">同一路视频</text>
+  <text x="380" y="319.5" font-size="10" fill="#166534" text-anchor="middle">但画质不同</text>
+  <rect x="515" y="271" width="220" height="60" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="625" y="289.5" font-size="10" fill="#166534" text-anchor="middle">接收者怎么做</text>
+  <text x="625" y="304.5" font-size="10" fill="#166534" text-anchor="middle">试着加入不同的组</text>
+  <text x="625" y="319.5" font-size="10" fill="#166534" text-anchor="middle">看哪一个给它的性能最好</text>
+</svg>

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 409.5" width="760" height="409.5"
+     role="img" aria-labelledby="fig-ipmc-2-title fig-ipmc-2-desc">
+  <title id="fig-ipmc-2-title">算账这一关：两幅不同的 AS 图，以及组大小查不到</title>
+  <desc id="fig-ipmc-2-desc">上面一条说明 IP 组播的服务模型与现代运营商的生意模型根本性地不合。第二排两格是第一幅图（对等关系）与它引出的问题：两边本应交换等量流量，而 B 收一个包、发很多包、用掉更多带宽；于是问 A 是否需要为此额外付给 B，源文说这是开放问题、没有清楚的答案。第三排三格是第二幅图（提供方与客户）与它引出的问题：B 向 A 付费买服务，而 A 要把组播包的副本转发到很多目的地；于是问这个包的收费是否该比单播高、该高多少，同样是开放问题。中间一条是更难的一层：模型不显式记录组的大小，想按目的组规模收费就无从确定，转发表只有各棵树上的父与子、没有最终接收者的总数。最下面一条是提醒：两处的 AS A 与 AS B 是两幅不同的图、两种不同的关系。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="409.5" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">算账这一关：两幅不同的 AS 图，以及组大小查不到</text>
+  <rect x="25" y="64" width="710" height="33" rx="6" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="380" y="84.35" font-size="11" fill="#1e40af" text-anchor="middle">IP 组播的服务模型与现代运营商的生意模型根本性地不合</text>
+  <rect x="25" y="125" width="342.5" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="196.25" y="141.65" font-size="9" fill="#1e40af" text-anchor="middle">第一幅图：对等关系</text>
+  <text x="196.25" y="155.15" font-size="9" fill="#1e40af" text-anchor="middle">两边本应交换等量流量</text>
+  <text x="196.25" y="168.65" font-size="9" fill="#1e40af" text-anchor="middle">而 B 收一个包、发很多包，用掉更多带宽</text>
+  <rect x="392.5" y="125" width="342.5" height="54" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="563.75" y="141.65" font-size="9" fill="#b45309" text-anchor="middle">于是问</text>
+  <text x="563.75" y="155.15" font-size="9" fill="#b45309" text-anchor="middle">A 需要为此额外付给 B 吗</text>
+  <text x="563.75" y="168.65" font-size="9" fill="#b45309" text-anchor="middle">开放问题，没有清楚的答案</text>
+  <rect x="25" y="207" width="342.5" height="67.5" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="196.25" y="230.4" font-size="9" fill="#166534" text-anchor="middle">第二幅图：提供方与客户</text>
+  <text x="196.25" y="243.9" font-size="9" fill="#166534" text-anchor="middle">B 向 A 付费买服务</text>
+  <text x="196.25" y="257.4" font-size="9" fill="#166534" text-anchor="middle">而 A 要把组播包的副本转发到很多目的地</text>
+  <rect x="392.5" y="207" width="342.5" height="67.5" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="563.75" y="223.65" font-size="9" fill="#b45309" text-anchor="middle">于是问</text>
+  <text x="563.75" y="237.15" font-size="9" fill="#b45309" text-anchor="middle">这个包的收费是否该比单播高</text>
+  <text x="563.75" y="250.65" font-size="9" fill="#b45309" text-anchor="middle">该高多少</text>
+  <text x="563.75" y="264.15" font-size="9" fill="#b45309" text-anchor="middle">同样是开放问题</text>
+  <rect x="25" y="302.5" width="710" height="27" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380" y="319.15" font-size="9" fill="#6b21a8" text-anchor="middle">更难的一层：模型不显式记录组的大小，想按目的组规模收费就无从确定；转发表只有各棵树上的父与子，没有最终接收者的总数</text>
+  <rect x="25" y="357.5" width="710" height="27" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="380" y="374.15" font-size="9" fill="#1e293b" text-anchor="middle">提醒：两处的 AS A 与 AS B 是两幅不同的图、两种不同的关系，不是同一组关系</text>
+</svg>

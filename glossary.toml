@@ -1126,3 +1126,11 @@ en = "CBT"
 zh = "核心树协议"
 key = "cbt"
 notes = "先选一个核心点、让所有成员接到它上面的多播路由协议；与 DVMRP 目标相同、二选一"
+
+# ── 第 46 讲（Core-Based Trees）新增 ──────────────────────────────────────
+
+[[term]]
+en = "core-based tree"
+zh = "核心树"
+key = "core-based-tree"
+notes = "每个目的组一棵、树根是事先选定的 core 的多播转发树；对所有源相同，成员按组分别记父与子"

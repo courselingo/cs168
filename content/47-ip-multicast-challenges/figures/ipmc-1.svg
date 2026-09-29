@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 403.5" width="760" height="403.5"
+     role="img" aria-labelledby="fig-ipmc-1-title fig-ipmc-1-desc">
+  <title id="fig-ipmc-1-title">域内可以，域间很难：两个理由与一个现实结论</title>
+  <desc id="fig-ipmc-1-desc">上面一条说明这一讲要逐条检查的第一关。第二排两格是能力边界：IGMP、DVMRP、CBT 这些协议用在域内组播路由上；它们不容易扩展到域间组播路由。第三排两格是源文给的两个理由：扩展性方面，地球规模跑 DVMRP 时剪枝状态一被删除就把包洪泛到整个互联网；主权与隐私方面，地球规模跑 CBT 时核心路由器可能落在别人的网络里。中间一条是可以尝试的方向：多个核心，每个网络一个，彼此通信。最下面一条是现实结论：实践里域间组播路由几乎没有被采纳。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="403.5" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">域内可以，域间很难：两个理由与一个现实结论</text>
+  <rect x="25" y="64" width="710" height="33" rx="6" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="380" y="84.35" font-size="11" fill="#1e40af" text-anchor="middle">域内可以，域间不容易：这是这一讲要逐条检查的第一关</text>
+  <rect x="25" y="125" width="342.5" height="49.5" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="196.25" y="145.35" font-size="11" fill="#1e40af" text-anchor="middle">能做的</text>
+  <text x="196.25" y="161.85" font-size="11" fill="#1e40af" text-anchor="middle">IGMP、DVMRP、CBT 用在域内组播路由</text>
+  <rect x="392.5" y="125" width="342.5" height="49.5" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="563.75" y="145.35" font-size="11" fill="#b45309" text-anchor="middle">不容易扩到的</text>
+  <text x="563.75" y="161.85" font-size="11" fill="#b45309" text-anchor="middle">域间组播路由</text>
+  <rect x="25" y="202.5" width="342.5" height="60" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="196.25" y="221" font-size="10" fill="#b45309" text-anchor="middle">理由一：扩展性</text>
+  <text x="196.25" y="236" font-size="10" fill="#b45309" text-anchor="middle">地球规模跑 DVMRP 时</text>
+  <text x="196.25" y="251" font-size="10" fill="#b45309" text-anchor="middle">剪枝状态一被删就把包洪泛到整个互联网</text>
+  <rect x="392.5" y="202.5" width="342.5" height="60" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="563.75" y="221" font-size="10" fill="#b45309" text-anchor="middle">理由二：主权与隐私</text>
+  <text x="563.75" y="236" font-size="10" fill="#b45309" text-anchor="middle">地球规模跑 CBT 时</text>
+  <text x="563.75" y="251" font-size="10" fill="#b45309" text-anchor="middle">核心路由器可能落在别人的网络里</text>
+  <rect x="25" y="290.5" width="710" height="30" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="380" y="309" font-size="10" fill="#1e293b" text-anchor="middle">可以尝试的方向：多个核心，每个网络一个，彼此通信</text>
+  <rect x="25" y="348.5" width="710" height="30" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380" y="367" font-size="10" fill="#6b21a8" text-anchor="middle">现实结论：实践里域间组播路由几乎没有被采纳</text>
+</svg>
