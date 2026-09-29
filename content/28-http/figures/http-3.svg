@@ -30,7 +30,7 @@
   <text x="565.5" y="159.2" font-size="12" fill="#1e293b" text-anchor="middle">URL：对哪个资源做</text>
   <text x="194.5" y="220.2" font-size="12" fill="#1e293b" text-anchor="middle">HTTP/1.1</text>
   <text x="565.5" y="220.2" font-size="12" fill="#1e293b" text-anchor="middle">版本：用哪一版 HTTP</text>
-  <text x="194.5" y="281.2" font-size="12" fill="#1e40af" text-anchor="middle">target=alice&amp;amp;amount=10</text>
+  <text x="194.5" y="281.2" font-size="12" fill="#1e40af" text-anchor="middle">target=alice&amp;amount=10</text>
   <text x="565.5" y="281.2" font-size="12" fill="#1e293b" text-anchor="middle">内容：要送出去的数据（可选）</text>
   <text x="380.0" y="342.2" font-size="12" fill="#9d174d" text-anchor="middle">源文把前三段叫三部分，然后把可选内容单列出来</text>
   <text x="380.0" y="360.2" font-size="12" fill="#9d174d" text-anchor="middle">本页按四段读它：方法、URL、版本、内容</text>

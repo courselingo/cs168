@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760.0 147.5" width="760.0" height="147.5"
      role="img" aria-labelledby="fig-http-1-title fig-http-1-desc">
   <title id="fig-http-1-title">HTTP 的版本时间线：从换文档到换传输层</title>
-  <desc id="fig-http-1-desc">六个版本排成一条从左到右的链，每格是一个时刻与那一刻多出来的东西。1989 年 Tim Berners-Lee 在 CERN 想让科学家之间的文档互相链接；1991 年第一个版本编号 HTTP/0.9；1996 年 1.0 标准化；1997 年 1.1 标准化；2015 年第一次大改，引入服务器推送；2022 年换掉传输层，改跑 QUIC。1.0 到 1.1 只隔一年，而 1.1 撑了 20 多年。</desc>
+  <desc id="fig-http-1-desc">六个时刻排成一条从左到右的链，每格是一个时刻与那一刻多出来的东西。1989 年 Tim Berners-Lee 在 CERN 想让科学家之间的文档互相链接；1991 年第一个版本编号 HTTP/0.9；1996 年 1.0 标准化；1997 年 1.1 标准化；2015 年第一次大改，引入服务器推送；2022 年换掉传输层，改跑 QUIC。1.0 到 1.1 只隔一年，而 1.1 撑了 20 多年。</desc>
 
   <defs>
     <style>
