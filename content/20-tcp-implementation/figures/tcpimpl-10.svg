@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 269" width="760" height="269"
+     role="img" aria-labelledby="fig-tcpimpl-10-title fig-tcpimpl-10-desc">
+  <title id="fig-tcpimpl-10-title">TCP 首部的字段</title>
+  <desc id="fig-tcpimpl-10-desc">第一行三格：源端口 16 位与目的端口 16 位；序列号 32 位，存的是本段第一个字节的偏移；确认号 32 位，存的是收到过的最高连续序列号加一。第二行四格：校验和覆盖整个数据、不只是首部；通告窗口用来支撑流量控制与拥塞控制；首部长度以一个 4 字节的字为单位，没有额外选项时它是 5；标志位里有 SYN、ACK 这些位。最下方注明 16 位与 32 位是字段宽度，而首部长度以一个 4 字节的字为单位。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="269" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">TCP 首部的字段</text>
+
+  <rect x="22" y="76" width="221" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="132" y="98" font-size="12" fill="#1e40af" text-anchor="middle">源端口 16 位</text>
+  <text x="132" y="116" font-size="12" fill="#1e40af" text-anchor="middle">目的端口 16 位</text>
+
+  <rect x="269" y="76" width="221" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="379" y="98" font-size="12" fill="#1e40af" text-anchor="middle">序列号 32 位</text>
+  <text x="379" y="116" font-size="12" fill="#1e40af" text-anchor="middle">本段首字节的偏移</text>
+
+  <rect x="516" y="76" width="221" height="54" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="626" y="98" font-size="12" fill="#b45309" text-anchor="middle">确认号 32 位</text>
+  <text x="626" y="116" font-size="12" fill="#b45309" text-anchor="middle">最高连续编号 + 1</text>
+
+  <rect x="22" y="156" width="160" height="54" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="102" y="178" font-size="12" fill="#166534" text-anchor="middle">校验和</text>
+  <text x="102" y="196" font-size="12" fill="#166534" text-anchor="middle">覆盖整个数据</text>
+
+  <rect x="207" y="156" width="160" height="54" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="287" y="178" font-size="12" fill="#166534" text-anchor="middle">通告窗口</text>
+  <text x="287" y="196" font-size="12" fill="#166534" text-anchor="middle">流量与拥塞控制用</text>
+
+  <rect x="392" y="156" width="160" height="54" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="472" y="178" font-size="12" fill="#166534" text-anchor="middle">首部长度</text>
+  <text x="472" y="196" font-size="12" fill="#166534" text-anchor="middle">无选项时为 5</text>
+
+  <rect x="577" y="156" width="160" height="54" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="657" y="178" font-size="12" fill="#166534" text-anchor="middle">标志位</text>
+  <text x="657" y="196" font-size="12" fill="#166534" text-anchor="middle">SYN、ACK 这些</text>
+
+  <text x="380" y="244" font-size="10" fill="#64748b" text-anchor="middle">16 位与 32 位是字段宽度；首部长度以一个 4 字节的字为单位</text>
+</svg>

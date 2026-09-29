@@ -520,3 +520,80 @@ notes = "接收方为乱序到达的分组留出的内存；空间有限，因�
 en = "reordering"
 zh = "乱序"
 notes = "分组到达的次序与发出的次序不一致；字节流的抽象要求按序交付，所以乱序的分组要先缓冲"
+
+# ── 第 20 讲补入（2026-09-29；TCP 实现，供第 20–26 讲共用）────────
+# 第 20 讲是 TCP 的实现：把设计落到字节上（段与 MSS、字节编号与 ISN、状态、
+# 全双工、三次握手、FIN/RST、捎带确认、滑动窗口、重传、首部字段）。
+# 下面这批词是该讲的核心词汇，也是后面拥塞控制各讲反复要用的，先冻结译法。
+# ★ 加之前把候选英文原词在**前 19 讲正文**里逐条扫过（并复现 validate.py 的
+#   漂移正则，跳过已打标记的页）：
+#   TCP segment / maximum segment size / maximum transmission unit /
+#   initial sequence number / connection-oriented / full duplex /
+#   three-way handshake / sliding window / piggybacking / half-closed /
+#   retransmission / flag —— 出现 **0 次**（`ISN`/`FIN`/`RST`/`SYN` 那几个
+#   简单匹配命中全是 first / find / synchronize 之类的子串，按词边界正则不命中）。
+#   ⇒ 本批 12 条**不会**让任何更早的页面报漂移。
+# ★ 键一律用连字符形式（[[term:]] 只接受 [A-Za-z0-9_.-]）。
+
+[[term]]
+en = "TCP segment"
+zh = "TCP 段"
+notes = "发送方从字节流里攒出来、可以整段发出去的数据单位；攒满固定上限就发，或者等计时器到点发"
+
+[[term]]
+en = "maximum segment size"
+zh = "最大段长度"
+aliases = ["MSS"]
+notes = "一个 TCP 段能装多少字节；等于链路的 MTU 减掉 IP 首部与 TCP 首部，所以总比 MTU 小"
+
+[[term]]
+en = "maximum transmission unit"
+zh = "最大传输单元"
+aliases = ["MTU"]
+notes = "一条链路能作为一个整体承载的最大分组字节数；第 17 讲已用它讲过分片，本讲把它与 MSS 挂钩"
+
+[[term]]
+en = "initial sequence number"
+zh = "初始序列号"
+aliases = ["ISN"]
+notes = "一条字节流的起点编号；第一个字节编成 ISN+1，而 ISN 本身由 SYN 占掉，随机选是为了避免编号撞车与被人猜出来"
+
+[[term]]
+en = "connection-oriented"
+zh = "面向连接"
+notes = "两端要先建立连接、把状态初始化好才能送数据，用完还要拆除；与「每个分组独立处理」的第三层相对"
+
+[[term]]
+en = "full duplex"
+zh = "全双工"
+notes = "一条连接里两端可以同时发送与接收，因此一条连接带两条字节流，每个报文可以同时带数据与确认"
+
+[[term]]
+en = "three-way handshake"
+zh = "三次握手"
+notes = "用 SYN、SYN-ACK、ACK 三个报文，就两个方向各自的 ISN 达成一致；这也是字节流从 ISN+1 开始编号的原因"
+
+[[term]]
+en = "sliding window"
+zh = "滑动窗口"
+notes = "同一时刻允许在途的最大连续字节数；左边是第一个未确认字节，只能靠确认号变大而向右滑"
+
+[[term]]
+en = "piggybacking"
+zh = "捎带确认"
+notes = "压着确认不发，等自己有数据要发时一起发出去；TCP 允许它，但操作系统与应用互相看不见对方的安排，实践中常常发生不了"
+
+[[term]]
+en = "half-closed"
+zh = "半关闭"
+notes = "一端发了 FIN、承诺不再发数据但继续收数据时的连接状态；等另一端也发 FIN 并被确认，连接才真正关掉"
+
+[[term]]
+en = "retransmission"
+zh = "重传"
+notes = "把没被确认的数据再发一遍；两个触发条件是盯住窗口左边的单个计时器到点、或收到 K 个重复确认，满足一个就够"
+
+[[term]]
+en = "flag"
+zh = "标志位"
+notes = "TCP 首部里可以置 1 或置 0 的比特；置 1 表示该标志生效，本讲用到的是 SYN 与 ACK（FIN 与 RST 在结束连接一节）"

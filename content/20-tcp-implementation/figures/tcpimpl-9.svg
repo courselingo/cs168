@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 305" width="760" height="305"
+     role="img" aria-labelledby="fig-tcpimpl-9-title fig-tcpimpl-9-desc">
+  <title id="fig-tcpimpl-9-title">重传的两个触发条件</title>
+  <desc id="fig-tcpimpl-9-desc">第一行两格是两个触发条件。触发一是计时器到点：字节版本里不再每个分组一个计时器，只留一个，它盯的是窗口左边那个字节。触发二是收到 K 个重复确认，K 常见取 3，这 3 个重复确认说明后面 3 个分组已经被确认了。第二行一条横格说明两个条件满足其中一个就重发，重发的都是最左边那个还没被确认的段，而且每来一条新确认，计时器都要重置。最下方注明源文说这两个条件是「或」的关系，满足一个就够。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="305" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">重传的两个触发条件</text>
+
+  <rect x="22" y="76" width="344" height="72" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="194" y="98" font-size="12" fill="#1e40af" text-anchor="middle">触发一：计时器到点</text>
+  <text x="194" y="116" font-size="12" fill="#1e40af" text-anchor="middle">只留一个计时器</text>
+  <text x="194" y="134" font-size="12" fill="#1e40af" text-anchor="middle">它盯窗口左边那个字节</text>
+
+  <rect x="393" y="76" width="344" height="72" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="565" y="98" font-size="12" fill="#b45309" text-anchor="middle">触发二：K 个重复确认</text>
+  <text x="565" y="116" font-size="12" fill="#b45309" text-anchor="middle">K 常见取 3</text>
+  <text x="565" y="134" font-size="12" fill="#b45309" text-anchor="middle">说明后面 3 个已被确认</text>
+
+  <rect x="22" y="174" width="715" height="72" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="379" y="196" font-size="12" fill="#166534" text-anchor="middle">两个条件满足其中一个就重发</text>
+  <text x="379" y="214" font-size="12" fill="#166534" text-anchor="middle">重发的都是最左边那个还没被确认的段</text>
+  <text x="379" y="232" font-size="12" fill="#166534" text-anchor="middle">每来一条新确认，计时器都要重置</text>
+
+  <text x="380" y="280" font-size="10" fill="#64748b" text-anchor="middle">源文说这两个条件是「或」的关系，满足一个就够</text>
+</svg>

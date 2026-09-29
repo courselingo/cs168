@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 305" width="760" height="305"
+     role="img" aria-labelledby="fig-tcpimpl-6-title fig-tcpimpl-6-desc">
+  <title id="fig-tcpimpl-6-title">FIN 与 RST：两种结束连接的方式</title>
+  <desc id="fig-tcpimpl-6-desc">两格并排对比。左边是 FIN：我不再发数据了，但你如果还有数据要发，我照收，这时连接处于半关闭状态，而且这个 FIN 和别的分组一样也要被确认。右边是 RST：我不再发也不再收任何数据，它不需要对方同意，也不必被确认，发出去就可以把本地连接拆掉。下方一条横格说明正常关闭要两边各发一个 FIN，两个 FIN 都被确认之后连接才关掉，而 RST 是单方面宣布结束。最下方注明攻击者可以伪造并注入一个 RST 来掐断别人的连接。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="305" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">FIN 与 RST：两种结束连接的方式</text>
+
+  <rect x="22" y="76" width="344" height="90" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="194" y="98" font-size="12" fill="#9d174d" text-anchor="middle">FIN：我不再发数据了</text>
+  <text x="194" y="116" font-size="12" fill="#9d174d" text-anchor="middle">但你要发，我照收</text>
+  <text x="194" y="134" font-size="12" fill="#9d174d" text-anchor="middle">这时连接处于半关闭</text>
+  <text x="194" y="152" font-size="12" fill="#9d174d" text-anchor="middle">它和别的分组一样要被确认</text>
+
+  <rect x="393" y="76" width="344" height="90" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="565" y="98" font-size="12" fill="#6b21a8" text-anchor="middle">RST：我发也不收</text>
+  <text x="565" y="116" font-size="12" fill="#6b21a8" text-anchor="middle">不需要对方同意</text>
+  <text x="565" y="134" font-size="12" fill="#6b21a8" text-anchor="middle">不必被确认</text>
+  <text x="565" y="152" font-size="12" fill="#6b21a8" text-anchor="middle">发出去就能拆掉本地连接</text>
+
+  <rect x="22" y="192" width="715" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="379" y="223" font-size="12" fill="#1e40af" text-anchor="middle">正常关闭要两边各发一个 FIN、都被确认后才关；RST 是单方面宣布结束</text>
+
+  <text x="380" y="280" font-size="10" fill="#64748b" text-anchor="middle">攻击者可以伪造并注入一个 RST，把别人的连接整个掐断</text>
+</svg>

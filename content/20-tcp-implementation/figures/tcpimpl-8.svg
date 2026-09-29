@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 305" width="760" height="305"
+     role="img" aria-labelledby="fig-tcpimpl-8-title fig-tcpimpl-8-desc">
+  <title id="fig-tcpimpl-8-title">滑动窗口：字节流上一段连续的区间</title>
+  <desc id="fig-tcpimpl-8-desc">第一行三格按字节流从左到右排开：已确认的字节在窗口左边，已经滑过去了；窗口内的字节最多有 W 个，而且必须首尾相连；窗口外的字节还不能发，要等窗口右滑。两格之间各有一支向右的箭头，表示窗口整体往右滑动。第二行一条横格说明窗口只能靠右滑来腾地方，也就是确认号变大、左边的字节被确认掉；窗口中间被确认的字节，换不来右边的新额度。最下方注明窗口左边是第一个还没被确认的字节，宽度由流量控制与拥塞控制一起决定。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="305" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">滑动窗口：字节流上一段连续的区间</text>
+
+  <rect x="22" y="76" width="221" height="72" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="132" y="98" font-size="12" fill="#166534" text-anchor="middle">已确认的字节</text>
+  <text x="132" y="116" font-size="12" fill="#166534" text-anchor="middle">在窗口的左边</text>
+  <text x="132" y="134" font-size="12" fill="#166534" text-anchor="middle">已经滑过去了</text>
+
+  <rect x="269" y="76" width="221" height="72" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="379" y="98" font-size="12" fill="#1e40af" text-anchor="middle">窗口内的字节</text>
+  <text x="379" y="116" font-size="12" fill="#1e40af" text-anchor="middle">最多有 W 个</text>
+  <text x="379" y="134" font-size="12" fill="#1e40af" text-anchor="middle">必须首尾相连</text>
+
+  <rect x="516" y="76" width="221" height="72" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="626" y="98" font-size="12" fill="#b45309" text-anchor="middle">窗口外的字节</text>
+  <text x="626" y="116" font-size="12" fill="#b45309" text-anchor="middle">还不能发</text>
+  <text x="626" y="134" font-size="12" fill="#b45309" text-anchor="middle">要等窗口右滑</text>
+
+  <path d="M248,112 L 258,112" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+  <path d="M495,112 L 505,112" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+
+  <rect x="22" y="174" width="715" height="72" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="379" y="196" font-size="12" fill="#6b21a8" text-anchor="middle">窗口只能靠右滑来腾地方</text>
+  <text x="379" y="214" font-size="12" fill="#6b21a8" text-anchor="middle">也就是确认号变大：左边的字节被确认掉</text>
+  <text x="379" y="232" font-size="12" fill="#6b21a8" text-anchor="middle">窗口中间被确认的字节，换不来右边的新额度</text>
+
+  <text x="380" y="280" font-size="10" fill="#64748b" text-anchor="middle">窗口左边是第一个还没被确认的字节，宽度由流量控制与拥塞控制一起决定</text>
+</svg>

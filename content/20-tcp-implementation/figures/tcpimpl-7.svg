@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 323" width="760" height="323"
+     role="img" aria-labelledby="fig-tcpimpl-7-title fig-tcpimpl-7-desc">
+  <title id="fig-tcpimpl-7-title">捎带确认：协议允许，实现卡住</title>
+  <desc id="fig-tcpimpl-7-desc">第一行两格各说一边：操作系统看不见应用，不知道对方还会不会发数据，等下去可能等很久，于是常常先把确认单独发掉；应用也看不见操作系统，它活在字节流抽象上，脑子里没有分组这回事，也就无从考虑捎带。第二行一条横格给出例外，SYN-ACK 永远捎带，它一边确认一边带上自己的 ISN，因为整个握手都是操作系统在做。最下方注明协议允许捎带，是操作系统与应用之间的信息隔断让它经常发生不了。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="323" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">捎带确认：协议允许，实现卡住</text>
+
+  <rect x="22" y="76" width="344" height="90" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="194" y="98" font-size="12" fill="#1e40af" text-anchor="middle">操作系统看不见应用</text>
+  <text x="194" y="116" font-size="12" fill="#1e40af" text-anchor="middle">不知道对方还会不会发</text>
+  <text x="194" y="134" font-size="12" fill="#1e40af" text-anchor="middle">等下去可能等很久</text>
+  <text x="194" y="152" font-size="12" fill="#1e40af" text-anchor="middle">于是常常先单独把确认发掉</text>
+
+  <rect x="393" y="76" width="344" height="90" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="565" y="98" font-size="12" fill="#b45309" text-anchor="middle">应用看不见操作系统</text>
+  <text x="565" y="116" font-size="12" fill="#b45309" text-anchor="middle">它活在字节流抽象上</text>
+  <text x="565" y="134" font-size="12" fill="#b45309" text-anchor="middle">脑子里没有分组这回事</text>
+  <text x="565" y="152" font-size="12" fill="#b45309" text-anchor="middle">也就无从考虑捎带</text>
+
+  <rect x="22" y="192" width="715" height="72" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="379" y="214" font-size="12" fill="#166534" text-anchor="middle">例外：SYN-ACK 永远捎带</text>
+  <text x="379" y="232" font-size="12" fill="#166534" text-anchor="middle">它一边确认，一边带上自己的 ISN</text>
+  <text x="379" y="250" font-size="12" fill="#166534" text-anchor="middle">因为整个握手都是操作系统在做</text>
+
+  <text x="380" y="298" font-size="10" fill="#64748b" text-anchor="middle">协议允许捎带，是操作系统与应用之间的信息隔断让它经常发生不了</text>
+</svg>

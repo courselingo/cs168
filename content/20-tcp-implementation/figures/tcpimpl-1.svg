@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 205" width="760" height="205"
+     role="img" aria-labelledby="fig-tcpimpl-1-title fig-tcpimpl-1-desc">
+  <title id="fig-tcpimpl-1-title">从字节流到 TCP 段</title>
+  <desc id="fig-tcpimpl-1-desc">三步依次向右：应用只交来字节流，没有现成的分组，分组边界要 TCP 自己造；发送方把字节攒进一个桶，攒满最大段长度就发出去，攒不满就等那个「开始填新段就启动」的计时器到点，到点也照样发；发之前加上 TCP 首部，再交给 IP 层补 IP 首部，段加两层首部合称 TCP/IP 分组。下方注明最大段长度的来历：MSS 等于 MTU 减掉 IP 首部与 TCP 首部，所以 MSS 总比 MTU 小。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="205" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">从字节流到 TCP 段</text>
+
+  <rect x="22" y="76" width="221" height="72" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="132" y="98" font-size="12" fill="#1e40af" text-anchor="middle">① 应用只给字节流</text>
+  <text x="132" y="116" font-size="12" fill="#1e40af" text-anchor="middle">没有现成的分组</text>
+  <text x="132" y="134" font-size="12" fill="#1e40af" text-anchor="middle">边界要 TCP 自己造</text>
+
+  <rect x="269" y="76" width="221" height="72" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="379" y="98" font-size="12" fill="#b45309" text-anchor="middle">② 攒满 MSS 就发</text>
+  <text x="379" y="116" font-size="12" fill="#b45309" text-anchor="middle">不到 MSS 就等计时器</text>
+  <text x="379" y="134" font-size="12" fill="#b45309" text-anchor="middle">到点也照样发出去</text>
+
+  <rect x="516" y="76" width="221" height="72" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="626" y="98" font-size="12" fill="#166534" text-anchor="middle">③ 加 TCP 首部</text>
+  <text x="626" y="116" font-size="12" fill="#166534" text-anchor="middle">再交给 IP 层</text>
+  <text x="626" y="134" font-size="12" fill="#166534" text-anchor="middle">合称 TCP/IP 分组</text>
+
+  <path d="M248,112 L 258,112" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+  <path d="M495,112 L 505,112" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+
+  <text x="380" y="180" font-size="10" fill="#64748b" text-anchor="middle">MSS = MTU - IP 首部 - TCP 首部：所以 MSS 总比 MTU 小</text>
+</svg>

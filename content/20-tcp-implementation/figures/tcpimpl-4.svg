@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 305" width="760" height="305"
+     role="img" aria-labelledby="fig-tcpimpl-4-title fig-tcpimpl-4-desc">
+  <title id="fig-tcpimpl-4-title">全双工：一条连接带两条字节流</title>
+  <desc id="fig-tcpimpl-4-desc">第一行两格：A 到 B 的字节流，A 发出的序列号归它，B 回过来的确认号也指它；B 到 A 的字节流同理。两格之间有一支向右的箭头。第二行两格：一个分组可以做两件事，既带上自己要发的数据，又确认自己收到的数据；但方向不要搞混，序列号永远属于发送这个分组的那一端，确认号属于对方那条流。两支箭头一右一左，表示两个方向都能同时发。下方注明序列号属于发这个分组的那一端，确认号属于对方那条流。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="305" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">全双工：一条连接带两条字节流</text>
+
+  <rect x="22" y="76" width="344" height="72" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="194" y="98" font-size="12" fill="#1e40af" text-anchor="middle">A 到 B 的字节流</text>
+  <text x="194" y="116" font-size="12" fill="#1e40af" text-anchor="middle">A 发出的序列号归它</text>
+  <text x="194" y="134" font-size="12" fill="#1e40af" text-anchor="middle">B 回的确认号也指它</text>
+
+  <rect x="393" y="76" width="344" height="72" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="565" y="98" font-size="12" fill="#166534" text-anchor="middle">B 到 A 的字节流</text>
+  <text x="565" y="116" font-size="12" fill="#166534" text-anchor="middle">B 发出的序列号归它</text>
+  <text x="565" y="134" font-size="12" fill="#166534" text-anchor="middle">A 回的确认号也指它</text>
+
+  <rect x="22" y="174" width="344" height="72" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="194" y="196" font-size="12" fill="#6b21a8" text-anchor="middle">一个分组做两件事</text>
+  <text x="194" y="214" font-size="12" fill="#6b21a8" text-anchor="middle">带上自己要发的数据</text>
+  <text x="194" y="232" font-size="12" fill="#6b21a8" text-anchor="middle">再确认自己收到的数据</text>
+
+  <rect x="393" y="174" width="344" height="72" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="565" y="196" font-size="12" fill="#b45309" text-anchor="middle">但方向不要搞混</text>
+  <text x="565" y="214" font-size="12" fill="#b45309" text-anchor="middle">序列号属于发送方</text>
+  <text x="565" y="232" font-size="12" fill="#b45309" text-anchor="middle">确认号属于对方那条流</text>
+
+  <path d="M371,112 L 382,112" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+  <path d="M388,210 L 377,210" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+
+  <text x="380" y="280" font-size="10" fill="#64748b" text-anchor="middle">序列号属于发这个分组的那一端，确认号属于对方那条流</text>
+</svg>
