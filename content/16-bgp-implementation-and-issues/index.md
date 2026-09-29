@@ -1,6 +1,6 @@
 +++
 title = "BGP 的实现与它的问题"
-lecture = 17
+lecture = 16
 slug = "bgp-implementation-and-issues"
 status = "draft"
 source_kind = "textbook"
