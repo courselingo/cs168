@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 215" width="760" height="215"
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 225" width="760" height="225"
      role="img" aria-labelledby="fig-links-7-title fig-links-7-desc">
-  <title id="fig-links-7-title">管子里的分组：它的宽度就是发送时延</title>
-  <desc id="fig-links-7-desc">外框是管子，宽表示传播时延、高表示带宽；里面那块是正在被发送的分组，它的宽度就是发送时延，高度表示每个时间步放进管子的位数。管口左侧的箭头表示比特进入管子的方向。教材给的例子是链路每秒送 5 位、分组 20 位：每一秒有一列 5 位进入管子，需要 4 列，所以分组宽度是 4 秒，也就是发送时延。</desc>
+  <title id="fig-links-7-title">管子里的分组：宽度就是发送时延</title>
+  <desc id="fig-links-7-desc">外框是管子，宽表示传播时延、高表示带宽；里面那块是正在被发送的分组，它被分成 4 列，每列对应一个时间步放进去的位。教材给的例子是链路每秒送 5 位、分组 20 位，时间步按 1 秒算：每一秒有一列 5 位进入管子，需要 4 列，所以分组宽度是 4 秒，也就是发送时延。管口左侧的箭头表示比特进入管子的方向。教材同段另写过「11 秒」，但没有给出算法，按 20 ÷ 5 应为 4 秒。</desc>
 
   <defs>
     <style>
@@ -13,16 +13,26 @@
     </marker>
   </defs>
 
-  <rect x="0" y="0" width="760" height="215" fill="#ffffff"/>
+  <rect x="0" y="0" width="760" height="225" fill="#ffffff"/>
 
   <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">管子里的分组：宽度就是发送时延</text>
 
+  <text x="380" y="62" font-size="11" fill="#1e293b" text-anchor="middle">分组：宽 = 发送时延，高 = 每个时间步放进去的位数</text>
+
   <rect x="22" y="76" width="716" height="72" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+
   <path d="M40,114 L 110,114" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
   <text x="75" y="136" font-size="10" fill="#64748b" text-anchor="middle">比特进入</text>
-  <rect x="180" y="87" width="400" height="54" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
-  <text x="380" y="109" font-size="12" fill="#b45309" text-anchor="middle">正在发送的分组</text>
-  <text x="380" y="127" font-size="12" fill="#b45309" text-anchor="middle">宽 = 发送时延，高 = 每个时间步放进去的位数</text>
 
-  <text x="380" y="190" font-size="10" fill="#64748b" text-anchor="middle">例：每秒 5 位、分组 20 位 ⇒ 要 4 列，分组宽度 4 秒（教材同段另写的 11 秒与此不符）</text>
+  <rect x="180" y="87" width="400" height="54" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <path d="M280,87 L 280,141" fill="none" stroke="#f59e0b"/>
+  <path d="M380,87 L 380,141" fill="none" stroke="#f59e0b"/>
+  <path d="M480,87 L 480,141" fill="none" stroke="#f59e0b"/>
+  <text x="230" y="117" font-size="9" fill="#b45309" text-anchor="middle">1 列</text>
+  <text x="330" y="117" font-size="9" fill="#b45309" text-anchor="middle">2 列</text>
+  <text x="430" y="117" font-size="9" fill="#b45309" text-anchor="middle">3 列</text>
+  <text x="530" y="117" font-size="9" fill="#b45309" text-anchor="middle">4 列</text>
+
+  <text x="380" y="180" font-size="10" fill="#64748b" text-anchor="middle">教材例子：每秒 5 位、分组 20 位，时间步按 1 秒算 ⇒ 每步进入 1 列，共 4 列 = 4 秒</text>
+  <text x="380" y="200" font-size="10" fill="#64748b" text-anchor="middle">同段教材另写「11 秒」但未给算法；按 20 ÷ 5 应为 4 秒，本图照录并说明</text>
 </svg>

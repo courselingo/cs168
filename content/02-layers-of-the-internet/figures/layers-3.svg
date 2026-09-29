@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 297" width="760" height="297"
      role="img" aria-labelledby="fig-layers-3-title fig-layers-3-desc">
-  <title id="fig-layers-3-title">直觉做法要拉的线，比它想解决的问题还多</title>
-  <desc id="fig-layers-3-desc">左边是直觉做法：三台机器各自要拉一条线通到对面那一片网络的机器上，一共三条线；右边是换个做法：两片网络各出一台设备对接，机器再多也只连这一处。所以左边要拉的线随机器数增长，右边始终只有一条。</desc>
+  <title id="fig-layers-3-title">直觉做法要拉的线，会随机器数增长</title>
+  <desc id="fig-layers-3-desc">左栏是直觉做法：三台机器各自向下连一条线通到「对面那一片网络的每一台机器」，一共三条线，每条线对应一台本机，机器一多线就跟着多。右栏是换个做法：网络 A、对接设备、网络 B 依次用箭头连起来，对接设备再向下连到「两片网络之间只连这一处」，机器再多也只连这一处。</desc>
 
   <defs>
     <style>
@@ -15,11 +15,11 @@
 
   <rect x="0" y="0" width="760" height="297" fill="#ffffff"/>
 
-  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">直觉做法要拉的线，比它想解决的问题还多</text>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">直觉做法要拉的线，会随机器数增长</text>
 
   <rect x="22" y="66" width="344" height="54" rx="6" fill="#fce7f3" stroke="#ec4899"/>
   <text x="194" y="88" font-size="12" fill="#9d174d" text-anchor="middle">直觉：机器跟机器直接连</text>
-  <text x="194" y="106" font-size="12" fill="#9d174d" text-anchor="middle">对面有几台，这边每台都要各拉一条</text>
+  <text x="194" y="106" font-size="12" fill="#9d174d" text-anchor="middle">不经过任何中间设备</text>
 
   <rect x="394" y="66" width="344" height="54" rx="6" fill="#d1fae5" stroke="#22c55e"/>
   <text x="566" y="88" font-size="12" fill="#166534" text-anchor="middle">换个做法：只把两片网络对接</text>
@@ -38,10 +38,13 @@
   <text x="443" y="167" font-size="12" fill="#166534" text-anchor="middle">网络 A</text>
 
   <rect x="517" y="145" width="98" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
-  <text x="566" y="167" font-size="12" fill="#166534" text-anchor="middle">一台对接</text>
+  <text x="566" y="167" font-size="12" fill="#166534" text-anchor="middle">对接设备</text>
 
   <rect x="640" y="145" width="98" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
   <text x="689" y="167" font-size="12" fill="#166534" text-anchor="middle">网络 B</text>
+
+  <path d="M497,163 L 506,163" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+  <path d="M620,163 L 629,163" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
 
   <path d="M71,186 L 71,195" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
   <path d="M194,186 L 194,195" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
@@ -52,7 +55,7 @@
   <text x="194" y="228" font-size="12" fill="#1e293b" text-anchor="middle">对面那一片网络上的每一台机器</text>
 
   <rect x="394" y="206" width="344" height="36" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
-  <text x="566" y="228" font-size="12" fill="#1e293b" text-anchor="middle">两片网络之间只连这一条</text>
+  <text x="566" y="228" font-size="12" fill="#1e293b" text-anchor="middle">两片网络之间只连这一处</text>
 
-  <text x="380" y="272" font-size="10" fill="#64748b" text-anchor="middle">左边每条线对应一台机器，机器一多线就跟着多；右边始终只连一处，所以它能长大</text>
+  <text x="380" y="272" font-size="10" fill="#64748b" text-anchor="middle">左边每条线对应一台本机，机器一多线就跟着多；右边始终只连一处，所以它能长大</text>
 </svg>
