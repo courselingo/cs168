@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 205" width="760" height="205"
+     role="img" aria-labelledby="fig-bgp-3-title fig-bgp-3-desc">
+  <title id="fig-bgp-3-title">导入决定出站流量怎么走，导出决定愿意承载哪些入站流量</title>
+  <desc id="fig-bgp-3-desc">左栏是导入：收到同一目的地的多条广告时按策略挑一条，这个选择决定了本自治系统的出站流量往哪里发。右栏是导出：只导出自己满意的路由，导出某条路由就等于同意参与它、让别人沿它把分组转发给自己，所以导出决定的是愿意承载哪些入站流量。两栏方向相反，因为广告向外扩散、消息向内朝目的地走。后果是即使底层图连通，也不能保证每个自治系统都能到达其他每一个。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="205" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">两个动作，两个方向</text>
+
+  <rect x="22" y="76" width="344" height="72" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="194" y="98" font-size="12" fill="#1e40af" text-anchor="middle">导入：按策略挑一条</text>
+  <text x="194" y="116" font-size="12" fill="#1e40af" text-anchor="middle">决定出站流量往哪里发</text>
+  <text x="194" y="134" font-size="12" fill="#1e40af" text-anchor="middle">广告向外扩散</text>
+
+  <rect x="394" y="76" width="344" height="72" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="566" y="98" font-size="12" fill="#166534" text-anchor="middle">导出：只导出满意的路由</text>
+  <text x="566" y="116" font-size="12" fill="#166534" text-anchor="middle">决定愿意承载哪些入站流量</text>
+  <text x="566" y="134" font-size="12" fill="#166534" text-anchor="middle">导出即同意参与</text>
+
+  <text x="380" y="180" font-size="10" fill="#64748b" text-anchor="middle">图连通不等于处处可达：连通性成了策略的产物</text>
+</svg>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 177" width="760" height="177"
+     role="img" aria-labelledby="fig-bgp-5-title fig-bgp-5-desc">
+  <title id="fig-bgp-5-title">改动一：一个自治系统一个前缀，多个目的地聚合成一条</title>
+  <desc id="fig-bgp-5-desc">左栏是地址形式：距离向量里每个目的地有唯一地址，转发表把目的地映射到下一跳与距离；BGP 里每个自治系统用一个前缀标识，也就是系统内部所有机器共享同一个前缀。右栏是为什么必须聚合：一个提供者可能有几百个客户，若每个目的地都要在广告里单独描述一次，表会非常大，于是允许把多个目的地聚合成一条表项，并宣告一个包含它们全部的更一般的前缀。实践约定不为单个 IP 发宣告，24 位前缀通常是宣告的最小单位。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="177" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">改动一：聚合目的地</text>
+
+  <rect x="22" y="66" width="344" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="194" y="88" font-size="12" fill="#1e40af" text-anchor="middle">一个自治系统 = 一个前缀</text>
+  <text x="194" y="106" font-size="12" fill="#1e40af" text-anchor="middle">内部所有机器共享它</text>
+
+  <rect x="394" y="66" width="344" height="54" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="566" y="88" font-size="12" fill="#166534" text-anchor="middle">聚合成一条更一般的前缀</text>
+  <text x="566" y="106" font-size="12" fill="#166534" text-anchor="middle">最小宣告单位通常是 /24</text>
+
+  <text x="380" y="152" font-size="10" fill="#64748b" text-anchor="middle">与上一讲的 CIDR 一脉相承：聚合让表装得下，约定让聚合不碎片化</text>
+</svg>

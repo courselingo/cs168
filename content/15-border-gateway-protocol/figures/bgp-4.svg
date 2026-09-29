@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 211" width="760" height="211"
+     role="img" aria-labelledby="fig-bgp-4-title fig-bgp-4-desc">
+  <title id="fig-bgp-4-title">Gao-Rexford：导入偏好客户、对等、提供者，导出只在一侧有客户付钱时放行</title>
+  <desc id="fig-bgp-4-desc">三格并排：导入偏好顺序是客户宣告的路由优于对等体优于提供者，实践中还会加性能之类的打破平局规则；导出规则由钱款逻辑推出，来自客户的路由可以导出给所有人，来自对等体或提供者的路由只导出给客户，因为需要至少一侧有客户在付钱；在这些规则之上还有三条前提，AS 图必须分层、必须无环、并且所有自治系统都遵守规则，此时可以证明任意两点可达且最终收敛到稳态。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="211" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">Gao-Rexford 规则</text>
+
+  <rect x="22" y="66" width="222" height="90" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="133" y="88" font-size="12" fill="#1e40af" text-anchor="middle">导入偏好</text>
+  <text x="133" y="106" font-size="12" fill="#1e40af" text-anchor="middle">客户 &gt; 对等体</text>
+  <text x="133" y="124" font-size="12" fill="#1e40af" text-anchor="middle">&gt; 提供者</text>
+  <text x="133" y="142" font-size="12" fill="#1e40af" text-anchor="middle">另有性能等平局规则</text>
+
+  <rect x="269" y="66" width="222" height="90" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="88" font-size="12" fill="#b45309" text-anchor="middle">导出规则</text>
+  <text x="380" y="106" font-size="12" fill="#b45309" text-anchor="middle">来自客户：给所有人</text>
+  <text x="380" y="124" font-size="12" fill="#b45309" text-anchor="middle">来自对等/提供者：只给客户</text>
+  <text x="380" y="142" font-size="12" fill="#b45309" text-anchor="middle">要有一侧在付钱</text>
+
+  <rect x="516" y="66" width="222" height="90" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="627" y="88" font-size="12" fill="#166534" text-anchor="middle">三条前提</text>
+  <text x="627" y="106" font-size="12" fill="#166534" text-anchor="middle">AS 图分层</text>
+  <text x="627" y="124" font-size="12" fill="#166534" text-anchor="middle">AS 图无环</text>
+  <text x="627" y="142" font-size="12" fill="#166534" text-anchor="middle">所有人都遵守</text>
+
+  <text x="380" y="186" font-size="10" fill="#64748b" text-anchor="middle">满足这三条，才能保证「任意两个 AS 可达」与「稳态收敛」</text>
+</svg>

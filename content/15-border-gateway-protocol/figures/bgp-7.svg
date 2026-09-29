@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 205" width="760" height="205"
+     role="img" aria-labelledby="fig-bgp-7-title fig-bgp-7-desc">
+  <title id="fig-bgp-7-title">桩 AS：一条默认路由出去、一条静态路由进来，自己完全不跑 BGP</title>
+  <desc id="fig-bgp-7-desc">三格并排：只连一个提供者的桩 AS 把发往其他所有自治系统的分组都交给那家提供者，于是装一条硬编码的默认路由即可；反方向则由桩 AS 请提供者装一条静态路由，告诉提供者怎么把分组送到自己这里；提供者照常运行 BGP，把这条静态路由宣告给互联网其余部分，等于替桩 AS 宣告路由，桩 AS 从头到尾不必运行 BGP。互联网里大多数小型 AS 都是这样的桩 AS，它们像域内路由里的端主机，通常被忽略。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="205" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">桩 AS 怎么过日子</text>
+
+  <rect x="22" y="76" width="222" height="72" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="133" y="98" font-size="12" fill="#1e40af" text-anchor="middle">出去：默认路由</text>
+  <text x="133" y="116" font-size="12" fill="#1e40af" text-anchor="middle">全交给唯一的提供者</text>
+  <text x="133" y="134" font-size="12" fill="#1e40af" text-anchor="middle">一条硬编码就够</text>
+
+  <rect x="269" y="76" width="222" height="72" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="98" font-size="12" fill="#1e40af" text-anchor="middle">进来：静态路由</text>
+  <text x="380" y="116" font-size="12" fill="#1e40af" text-anchor="middle">请提供者装一条</text>
+  <text x="380" y="134" font-size="12" fill="#1e40af" text-anchor="middle">告诉别人怎么找自己</text>
+
+  <rect x="516" y="76" width="222" height="72" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="627" y="98" font-size="12" fill="#166534" text-anchor="middle">自己：不跑 BGP</text>
+  <text x="627" y="116" font-size="12" fill="#166534" text-anchor="middle">提供者替它宣告</text>
+  <text x="627" y="134" font-size="12" fill="#166534" text-anchor="middle">像域内路由里的端主机</text>
+
+  <text x="380" y="180" font-size="10" fill="#64748b" text-anchor="middle">互联网里大多数小型 AS 是桩 AS；我们通常只考虑真正参与 BGP 的中转 AS</text>
+</svg>

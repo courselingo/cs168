@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 187" width="760" height="187"
+     role="img" aria-labelledby="fig-bgp-1-title fig-bgp-1-desc">
+  <title id="fig-bgp-1-title">BGP 不是设计出来的最优解，而是边做边定的唯一解</title>
+  <desc id="fig-bgp-1-desc">两格并排：左边交代来历，互联网从政府集中控制转向商业实体，各家的私有策略在计算机科学里没有先例，协议只能边做边定，因此并不完美；右边是它的处境，虽然不完美但已被证明有效、有韧性，而且今天仍在服役，因为所有人都必须同意使用同一个域间路由协议，所以它只有一个。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="187" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">BGP 的来历</text>
+
+  <rect x="22" y="76" width="344" height="54" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="194" y="98" font-size="12" fill="#b45309" text-anchor="middle">边做边定</text>
+  <text x="194" y="116" font-size="12" fill="#b45309" text-anchor="middle">私有策略没有先例，协议不完美</text>
+
+  <rect x="394" y="76" width="344" height="54" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="566" y="98" font-size="12" fill="#166534" text-anchor="middle">但它有效、有韧性</text>
+  <text x="566" y="116" font-size="12" fill="#166534" text-anchor="middle">所有人必须用同一个，所以只有一个</text>
+
+  <text x="380" y="162" font-size="10" fill="#64748b" text-anchor="middle">它的形状更多来自「当时能谈成什么」，而不是「理论上最好是什么」</text>
+</svg>

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 223" width="760" height="223"
+     role="img" aria-labelledby="fig-bgp-2-title fig-bgp-2-desc">
+  <title id="fig-bgp-2-title">链路状态不尊重隐私与自主，距离向量允许各管各的</title>
+  <desc id="fig-bgp-2-desc">左栏是链路状态为什么不行：它要求每个自治系统把自己的策略告诉整个网络，否则别人无法算路，这侵犯隐私；它还要求所有人以一致的方式算路（例如都同意用最小代价），这侵犯自主。右栏是距离向量为什么可以：每个自治系统自行决定接受、拒绝与宣告什么，而且它不是全局协议，每个自治系统不必知道别人的策略也能算出有效路由。核心想法被保留下来，只是术语改为导出与导入。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="223" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">为什么以距离向量为起点</text>
+
+  <rect x="22" y="76" width="344" height="90" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="194" y="98" font-size="12" fill="#9d174d" text-anchor="middle">链路状态不合适</text>
+  <text x="194" y="116" font-size="12" fill="#9d174d" text-anchor="middle">要公开策略：侵犯隐私</text>
+  <text x="194" y="134" font-size="12" fill="#9d174d" text-anchor="middle">要一致算路：侵犯自主</text>
+  <text x="194" y="152" font-size="12" fill="#9d174d" text-anchor="middle">所以不适合当设计基础</text>
+
+  <rect x="394" y="76" width="344" height="90" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="566" y="98" font-size="12" fill="#166534" text-anchor="middle">距离向量合适</text>
+  <text x="566" y="116" font-size="12" fill="#166534" text-anchor="middle">各管各的接受与宣告</text>
+  <text x="566" y="134" font-size="12" fill="#166534" text-anchor="middle">不必知道别人的策略</text>
+  <text x="566" y="152" font-size="12" fill="#166534" text-anchor="middle">只看收到的广告</text>
+
+  <text x="380" y="198" font-size="10" fill="#64748b" text-anchor="middle">广告仍针对单个目的地，双方不断收发直到收敛；术语改为导出与导入</text>
+</svg>

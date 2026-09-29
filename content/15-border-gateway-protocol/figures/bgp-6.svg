@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 195" width="760" height="195"
+     role="img" aria-labelledby="fig-bgp-6-title fig-bgp-6-desc">
+  <title id="fig-bgp-6-title">改动二：广告里放完整路径，路径里见到自己就丢弃</title>
+  <desc id="fig-bgp-6-desc">左栏是距离向量的广告：A 宣告「我能以代价 1 到达目的地」，B 再宣告「我能以代价 2 到达」，看不出路径经过谁。右栏是路径向量的广告：A 宣告「我能以路径 [A] 到达」，B 宣告「我能以路径 [B, A] 到达」；这样只要检查路径里有没有自己，就能检测环路——路径包含自己说明分组会被送回自己，于是忽略这条广告、既不接受也不导出。完整路径还让「避免经过某个自治系统」这类策略可以先查再决定。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="195" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">改动二：从距离到路径</text>
+
+  <rect x="22" y="66" width="344" height="72" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="194" y="88" font-size="12" fill="#9d174d" text-anchor="middle">距离向量：只报代价</text>
+  <text x="194" y="106" font-size="12" fill="#9d174d" text-anchor="middle">「能以代价 1 到达」</text>
+  <text x="194" y="124" font-size="12" fill="#9d174d" text-anchor="middle">看不出路径经过谁</text>
+
+  <rect x="394" y="66" width="344" height="72" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="566" y="88" font-size="12" fill="#166534" text-anchor="middle">路径向量：报完整路径</text>
+  <text x="566" y="106" font-size="12" fill="#166534" text-anchor="middle">「能以路径 [B, A] 到达」</text>
+  <text x="566" y="124" font-size="12" fill="#166534" text-anchor="middle">路径里有自己就丢弃</text>
+
+  <text x="380" y="170" font-size="10" fill="#64748b" text-anchor="middle">多花的空间换来两样东西：环路可检测、策略可表达</text>
+</svg>
