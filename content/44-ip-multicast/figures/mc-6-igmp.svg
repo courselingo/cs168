@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 389" width="760" height="389"
+     role="img" aria-labelledby="fig-mc-6-igmp-title fig-mc-6-igmp-desc">
+  <title id="fig-mc-6-igmp-title">IGMP：路由器周期性发 Query，主机回 Report（也可以主动上报），长时间没有 Report 就作废</title>
+  <desc id="fig-mc-6-igmp-desc">IGMP 用两种消息维护本地成员关系：路由器周期性发出 Query 提问，主机用 Report 回答自己属于哪些组，也可以不等提问就主动上报；如果长时间收不到某个成员关系的 Report，路由器就认为它过期并作废。它只覆盖直连主机，相当于多播版本的静态路由。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="389" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">IGMP：路由器周期性发 Query，主机回 Report（也可以主动上报），长时间没有 Report 就作废</text>
+  <rect x="22" y="64" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="86" font-size="12" fill="#1e40af" text-anchor="middle">Query：路由器周期性向主机提问「你属于哪些组」</text>
+  <rect x="22" y="125" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="147" font-size="12" fill="#166534" text-anchor="middle">Report：主机回答「我属于这些组」</text>
+  <rect x="22" y="186" width="716" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="208" font-size="12" fill="#b45309" text-anchor="middle">主机也可以不等提问就主动上报（unsolicited Report）</text>
+  <rect x="22" y="247" width="716" height="36" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="380" y="269" font-size="12" fill="#9d174d" text-anchor="middle">长时间收不到某个成员关系的 Report，路由器就认为它过期并作废</text>
+  <rect x="22" y="308" width="716" height="36" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380" y="330" font-size="12" fill="#6b21a8" text-anchor="middle">对比：IGMP 之于多播，就像静态路由之于单播 —— 只知道家门口有谁</text>
+  <text x="380" y="366" font-size="10" fill="#64748b" text-anchor="middle">本地状态靠周期问答维护，全局转发交给另一块拼图</text>
+</svg>

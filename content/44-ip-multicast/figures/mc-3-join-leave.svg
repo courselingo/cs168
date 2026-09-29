@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 389" width="760" height="389"
+     role="img" aria-labelledby="fig-mc-3-join-leave-title fig-mc-3-join-leave-desc">
+  <title id="fig-mc-3-join-leave-title">加入与离开：主机只发出一个声明，而路由器之间要交换消息，把转发表更新到新的成员关系</title>
+  <desc id="fig-mc-3-join-leave-desc">主机声明加入或离开时都只用组地址来指明是哪个组；至少一台路由器会听到（例如家里的路由器），然后路由器之间互相协调、交换消息来更新各自的转发表。与单播相比，多播的转发表还要随成员的进出而变化。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="389" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">加入与离开：主机只发出一个声明，而路由器之间要交换消息，把转发表更新到新的成员关系</text>
+  <rect x="22" y="64" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="86" font-size="12" fill="#1e40af" text-anchor="middle">加入：主机声明它要加入的那个组的地址</text>
+  <rect x="22" y="125" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="147" font-size="12" fill="#1e40af" text-anchor="middle">离开：主机同样用组地址声明自己要离开</text>
+  <rect x="22" y="186" width="716" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="208" font-size="12" fill="#b45309" text-anchor="middle">至少一台路由器会听到（例如家里的路由器），然后路由器之间互相协调</text>
+  <rect x="22" y="247" width="716" height="36" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="380" y="269" font-size="12" fill="#9d174d" text-anchor="middle">配图注解：组成员关系变了，所以路由器之间要交换消息来更新各自的转发表</text>
+  <rect x="22" y="308" width="716" height="36" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380" y="330" font-size="12" fill="#6b21a8" text-anchor="middle">对比单播：单播的转发表只与拓扑有关，多播的同一张表还要随成员进出变化</text>
+  <text x="380" y="366" font-size="10" fill="#64748b" text-anchor="middle">声明由主机发，而维护状态是路由器的活</text>
+</svg>

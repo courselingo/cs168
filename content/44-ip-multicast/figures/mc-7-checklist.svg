@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 389" width="760" height="389"
+     role="img" aria-labelledby="fig-mc-7-checklist-title fig-mc-7-checklist-desc">
+  <title id="fig-mc-7-checklist-title">这一讲的三层结构：主机的三个动作、路由器的两块能力、IGMP 的两种消息</title>
+  <desc id="fig-mc-7-checklist-desc">整讲的三层结构：主机侧只有三个动作（发、加入、离开），它们最终都变成路由器的状态；路由器侧需要两块能力，本地那一块靠 IGMP 的 Query 与 Report 维持，全局那一块靠 DVMRP 或 CBT 二选一。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="389" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">这一讲的三层结构：主机的三个动作、路由器的两块能力、IGMP 的两种消息</text>
+  <rect x="22" y="64" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="86" font-size="12" fill="#1e40af" text-anchor="middle">主机侧三个动作：往组里发分组、声明加入、声明离开</text>
+  <rect x="22" y="125" width="716" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="147" font-size="12" fill="#b45309" text-anchor="middle">这三个动作最终都要变成路由器里的状态</text>
+  <rect x="22" y="186" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="208" font-size="12" fill="#166534" text-anchor="middle">路由器侧两块能力：本地那一块靠 IGMP 的问答维持</text>
+  <rect x="22" y="247" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="269" font-size="12" fill="#166534" text-anchor="middle">全局那一块靠 DVMRP 或 CBT 二选一</text>
+  <rect x="22" y="308" width="716" height="36" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380" y="330" font-size="12" fill="#6b21a8" text-anchor="middle">三层各自只需记住很少几件事，难点在它们如何互相支撑</text>
+  <text x="380" y="366" font-size="10" fill="#64748b" text-anchor="middle">三层结构：主机动作、路由器能力、IGMP 消息</text>
+</svg>

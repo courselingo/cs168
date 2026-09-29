@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 389" width="760" height="389"
+     role="img" aria-labelledby="fig-mc-2-addresses-title fig-mc-2-addresses-desc">
+  <title id="fig-mc-2-addresses-title">服务模型：一个组等于一段硬编码地址范围里的一个地址；主机只负责发，路由器负责协调</title>
+  <desc id="fig-mc-2-addresses-desc">每个多播组由一个 IP 地址定义，224.0.0.0 到 239.255.255.255 是硬编码的多播地址范围；主机侧只有三个动作（发到组、声明加入、声明离开），而且即使自己不是成员也可以往组里发；发送者不需要知道成员是谁，路由器会算出来。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="389" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">服务模型：一个组等于一段硬编码地址范围里的一个地址；主机只负责发，路由器负责协调</text>
+  <rect x="22" y="64" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="86" font-size="12" fill="#1e40af" text-anchor="middle">一个多播组由一个 IP 地址定义（不是由一份名单定义）</text>
+  <rect x="22" y="125" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="147" font-size="12" fill="#166534" text-anchor="middle">多播地址范围：224.0.0.0 到 239.255.255.255，这段是硬编码的</text>
+  <rect x="22" y="186" width="716" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="208" font-size="12" fill="#b45309" text-anchor="middle">看到目的地址落在这段范围里，所有人都知道这是一条多播分组</text>
+  <rect x="22" y="247" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="269" font-size="12" fill="#1e40af" text-anchor="middle">主机侧有三个动作：往组里发分组（自己不是成员也可以）、声明加入、声明离开</text>
+  <rect x="22" y="308" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="330" font-size="12" fill="#166534" text-anchor="middle">发送者不需要知道组里有谁，路由器会算出来</text>
+  <text x="380" y="366" font-size="10" fill="#64748b" text-anchor="middle">组身份等于地址，而成员关系是路由器要维护的状态</text>
+</svg>
