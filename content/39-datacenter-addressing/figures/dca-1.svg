@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 260.5" width="760" height="260.5"
+     role="img" aria-labelledby="fig-dca-1-title fig-dca-1-desc">
+  <title id="fig-dca-1-title">这一讲在数据中心那一段里的位置，以及它要解决的问题</title>
+  <desc id="fig-dca-1-desc">上面三格是这一段的前几讲各自管什么：拓扑看这个场景长什么样、有哪些约束；拥塞控制看排队延迟成为主导、小鼠会被大象堵住；路由看可以改造那两类协议算出所有通路。中间一条说明这一讲处理的是路由那一讲的后果：那些协议在数据中心里扩展得很差。最下面一条是它的答案：按物理拓扑分配地址，把通用网络里靠行政分级得到的层次自己造出来。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="260.5" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">这一讲在数据中心那一段里的位置，以及它要解决的问题</text>
+  <rect x="25" y="64" width="220" height="49.5" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="135" y="84.35" font-size="11" fill="#1e40af" text-anchor="middle">拓扑</text>
+  <text x="135" y="100.85" font-size="11" fill="#1e40af" text-anchor="middle">这个场景长什么样，有哪些约束</text>
+  <rect x="270" y="64" width="220" height="49.5" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="84.35" font-size="11" fill="#1e40af" text-anchor="middle">拥塞控制</text>
+  <text x="380" y="100.85" font-size="11" fill="#1e40af" text-anchor="middle">排队延迟成为主导，小鼠会被大象堵住</text>
+  <rect x="515" y="64" width="220" height="49.5" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="625" y="84.35" font-size="11" fill="#166534" text-anchor="middle">路由</text>
+  <text x="625" y="100.85" font-size="11" fill="#166534" text-anchor="middle">可以改造两类协议算出所有通路</text>
+  <rect x="25" y="141.5" width="710" height="33" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="161.85" font-size="11" fill="#b45309" text-anchor="middle">这一讲处理的是路由那一讲的后果：那些协议在数据中心里扩展得很差</text>
+  <rect x="25" y="202.5" width="710" height="33" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380" y="222.85" font-size="11" fill="#6b21a8" text-anchor="middle">答案是按物理拓扑分配地址，把通用网络里靠行政分级得到的层次自己造出来</text>
+</svg>

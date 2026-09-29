@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 250" width="760" height="250"
+     role="img" aria-labelledby="fig-dca-2-title fig-dca-2-desc">
+  <title id="fig-dca-2-title">两类路由协议各自扩展得不好的原因，以及商品交换机的资源约束</title>
+  <desc id="fig-dca-2-desc">上排三格是两类协议各自的问题：距离向量要为每一个目的地做一次通告，而量级意味着要通告十万个以上的目的地；链路状态要把通告沿每一条链路洪泛。中间一条说明在链路数量极多的 Clos 网络里这种洪泛同样很差。最下面一条是硬件那一侧的约束：常用便宜的商品交换机，内存与 CPU 有限，转发表不能太大。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="250" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">两类路由协议各自扩展得不好的原因，以及商品交换机的资源约束</text>
+  <rect x="25" y="64" width="220" height="45" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="135" y="82.5" font-size="10" fill="#b45309" text-anchor="middle">距离向量的毛病</text>
+  <text x="135" y="97.5" font-size="10" fill="#b45309" text-anchor="middle">要为每一个目的地做一次通告</text>
+  <rect x="270" y="64" width="220" height="45" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="82.5" font-size="10" fill="#b45309" text-anchor="middle">量级</text>
+  <text x="380" y="97.5" font-size="10" fill="#b45309" text-anchor="middle">意味着要通告 10 万个以上的目的地</text>
+  <rect x="515" y="64" width="220" height="45" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="625" y="82.5" font-size="10" fill="#b45309" text-anchor="middle">链路状态的毛病</text>
+  <text x="625" y="97.5" font-size="10" fill="#b45309" text-anchor="middle">要把通告沿每一条链路洪泛</text>
+  <rect x="25" y="137" width="710" height="30" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="380" y="155.5" font-size="10" fill="#1e293b" text-anchor="middle">在链路数量极多的 Clos 网络里，这种洪泛同样扩展得很差</text>
+  <rect x="25" y="195" width="710" height="30" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380" y="213.5" font-size="10" fill="#6b21a8" text-anchor="middle">硬件那一侧：常用便宜的商品交换机，内存与 CPU 有限，转发表不能太大</text>
+</svg>

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 283" width="760" height="283"
+     role="img" aria-labelledby="fig-dca-4-title fig-dca-4-desc">
+  <title id="fig-dca-4-title">按 pod、机架、服务器三层分配地址，以及 spine 路由器那四条表项</title>
+  <desc id="fig-dca-4-desc">上排三格是分配的三个层次与配图上的实例：一个 pod 一段（四个 pod 各拿一段 /16，配图里是 10.1 到 10.4 这四段）；一个机架一子段（每个 pod 里两个机架各拿一段 /24，例如 10.1.1.0/24 与 10.1.2.0/24）；一台服务器一个地址（例如 10.1.1.1 与 10.1.1.2，而一个 /24 就是 256 个地址）。中间一条说明地址本身就是位置的编码：读第三段分出机架，读第四段分出机架里的服务器。第三排两格是聚合的结果与转发时做的事：那台 spine 路由器只要四条表项、每个 pod 一条，与四个 /16 前缀一一对应；转发时检查前 16 位，就能把包送到对应的 pod。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="283" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">按 pod、机架、服务器三层分配地址，以及 spine 路由器那四条表项</text>
+  <rect x="25" y="64" width="220" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="135" y="80.65" font-size="9" fill="#1e40af" text-anchor="middle">一个 pod 一段</text>
+  <text x="135" y="94.15" font-size="9" fill="#1e40af" text-anchor="middle">四个 pod 各拿一段 /16</text>
+  <text x="135" y="107.65" font-size="9" fill="#1e40af" text-anchor="middle">配图里是 10.1 到 10.4 这四段</text>
+  <rect x="270" y="64" width="220" height="54" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="80.65" font-size="9" fill="#166534" text-anchor="middle">一个机架一子段</text>
+  <text x="380" y="94.15" font-size="9" fill="#166534" text-anchor="middle">每个 pod 里两个机架各拿一段 /24</text>
+  <text x="380" y="107.65" font-size="9" fill="#166534" text-anchor="middle">例如 10.1.1.0/24 与 10.1.2.0/24</text>
+  <rect x="515" y="64" width="220" height="54" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="625" y="80.65" font-size="9" fill="#b45309" text-anchor="middle">一台服务器一个地址</text>
+  <text x="625" y="94.15" font-size="9" fill="#b45309" text-anchor="middle">例如 10.1.1.1 与 10.1.1.2</text>
+  <text x="625" y="107.65" font-size="9" fill="#b45309" text-anchor="middle">一个 /24 就是 256 个地址</text>
+  <rect x="25" y="146" width="710" height="30" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380" y="164.5" font-size="10" fill="#6b21a8" text-anchor="middle">地址本身就是位置的编码：读第三段分出机架，读第四段分出机架里的服务器</text>
+  <rect x="25" y="204" width="342.5" height="54" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="196.25" y="220.65" font-size="9" fill="#166534" text-anchor="middle">聚合的结果</text>
+  <text x="196.25" y="234.15" font-size="9" fill="#166534" text-anchor="middle">那台 spine 路由器只要四条表项</text>
+  <text x="196.25" y="247.65" font-size="9" fill="#166534" text-anchor="middle">每个 pod 一条，与四个 /16 前缀一一对应</text>
+  <rect x="392.5" y="204" width="342.5" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="563.75" y="220.65" font-size="9" fill="#1e40af" text-anchor="middle">转发时做什么</text>
+  <text x="563.75" y="234.15" font-size="9" fill="#1e40af" text-anchor="middle">检查前 16 位</text>
+  <text x="563.75" y="247.65" font-size="9" fill="#1e40af" text-anchor="middle">就能把包转发到对应的 pod</text>
+</svg>

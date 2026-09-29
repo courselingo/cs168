@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 265" width="760" height="265"
+     role="img" aria-labelledby="fig-dca-5-title fig-dca-5-desc">
+  <title id="fig-dca-5-title">两个好处与一处代价</title>
+  <desc id="fig-dca-5-desc">上排两格是两个好处：转发表变小（能聚合路由、存更少的条目，四条而不是每台服务器一条）与更稳定（机架里增删主机时那台 spine 路由器不需要知道，只要分配方案不变，现有转发表就仍然正确）。中间一条是由此得到的结论：路由更新通常发生在链路与交换机故障时，而不是主机故障时。最下面一条是代价：把一台服务器搬到别的位置就得改它的地址，因为位置已经写进了地址里。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="265" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">两个好处与一处代价</text>
+  <rect x="25" y="64" width="342.5" height="60" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="196.25" y="82.5" font-size="10" fill="#166534" text-anchor="middle">好处一：表变小</text>
+  <text x="196.25" y="97.5" font-size="10" fill="#166534" text-anchor="middle">能聚合路由，在转发表里存更少的条目</text>
+  <text x="196.25" y="112.5" font-size="10" fill="#166534" text-anchor="middle">四条而不是每台服务器一条</text>
+  <rect x="392.5" y="64" width="342.5" height="60" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="563.75" y="82.5" font-size="10" fill="#166534" text-anchor="middle">好处二：更稳定</text>
+  <text x="563.75" y="97.5" font-size="10" fill="#166534" text-anchor="middle">机架里增删主机，spine 路由器不需要知道</text>
+  <text x="563.75" y="112.5" font-size="10" fill="#166534" text-anchor="middle">方案不变则现有转发表仍然正确</text>
+  <rect x="25" y="152" width="710" height="30" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380" y="170.5" font-size="10" fill="#6b21a8" text-anchor="middle">由此得到一条结论：路由更新通常发生在链路与交换机故障时，而不是主机故障时</text>
+  <rect x="25" y="210" width="710" height="30" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="228.5" font-size="10" fill="#b45309" text-anchor="middle">代价：把一台服务器搬到别的位置，就得改它的地址，因为位置已经写进了地址里</text>
+</svg>

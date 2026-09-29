@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 332" width="760" height="332"
+     role="img" aria-labelledby="fig-dca-3-title fig-dca-3-desc">
+  <title id="fig-dca-3-title">通用网络靠地理与组织层次分地址，而数据中心没有这样的层次</title>
+  <desc id="fig-dca-3-desc">上面一条说明通用网络靠层次化的 IP 地址解决这类扩展问题。第二排两格是它的做法与作用：更高级别的组织把地址段分给更小的组织（例如国家一级分给大学一级）；上层只要记住这一整段归谁，不必记住段里每一台机器。中间一条是数据中心缺的那一层：没有地理与组织上的层次可以用来组织地址。最下面一条给出方向：另找一样能被用来造层次的东西。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="332" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">通用网络靠地理与组织层次分地址，而数据中心没有这样的层次</text>
+  <rect x="25" y="64" width="710" height="33" rx="6" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="380" y="84.35" font-size="11" fill="#1e40af" text-anchor="middle">通用网络靠层次化的 IP 地址解决这类扩展问题</text>
+  <rect x="25" y="125" width="342.5" height="60" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="196.25" y="143.5" font-size="10" fill="#1e40af" text-anchor="middle">做法</text>
+  <text x="196.25" y="158.5" font-size="10" fill="#1e40af" text-anchor="middle">更高级别的组织把地址段分给更小的组织</text>
+  <text x="196.25" y="173.5" font-size="10" fill="#1e40af" text-anchor="middle">例如国家一级分给大学一级</text>
+  <rect x="392.5" y="125" width="342.5" height="60" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="563.75" y="143.5" font-size="10" fill="#166534" text-anchor="middle">作用</text>
+  <text x="563.75" y="158.5" font-size="10" fill="#166534" text-anchor="middle">上层只要记住这一整段归谁</text>
+  <text x="563.75" y="173.5" font-size="10" fill="#166534" text-anchor="middle">不必记住段里每一台机器</text>
+  <rect x="25" y="213" width="710" height="33" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="233.35" font-size="11" fill="#b45309" text-anchor="middle">数据中心缺的那一层：没有地理与组织上的层次可以用来组织地址</text>
+  <rect x="25" y="274" width="710" height="33" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380" y="294.35" font-size="11" fill="#6b21a8" text-anchor="middle">于是方向变成：另找一样能被用来造层次的东西</text>
+</svg>

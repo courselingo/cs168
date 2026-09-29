@@ -1062,3 +1062,47 @@ en = "oversubscription"
 zh = "超订"
 key = "oversubscription"
 notes = "满二分带宽与二分带宽之比，衡量瓶颈处被超载多少；2 Gbps 对 4 Gbps 即 2 倍超订（只能跑到全速 50%）"
+
+# ── 第 40 讲（虚拟化与封装）新增 ──────────────────────────────────────────
+
+[[term]]
+en = "virtualization"
+zh = "虚拟化"
+key = "virtualization"
+notes = "在一台物理服务器里跑一台或多台虚拟服务器，应用以为自己在独占机器"
+
+[[term]]
+en = "virtual machine"
+zh = "虚拟机"
+key = "virtual-machine"
+notes = "由 hypervisor 起出来的虚拟服务器；地址按现实层级（国家、组织）分配，与物理拓扑无关"
+
+[[term]]
+en = "hypervisor"
+zh = "虚拟机监视器"
+key = "hypervisor"
+notes = "跑在真硬件上的软件层，向应用端出与真硬件一样的接口，并把请求转交给硬件"
+
+[[term]]
+en = "virtual switch"
+zh = "虚拟交换机"
+key = "virtual-switch"
+notes = "跑在服务器软件里的交换机，接本机各虚拟机并接外部网络；负责封装与解封装"
+
+[[term]]
+en = "underlay"
+zh = "底层网"
+key = "underlay"
+notes = "管物理机之间路由的那一层，成员是 TOR 与 spine 等基础设施，靠物理拓扑的层次化地址扩展"
+
+[[term]]
+en = "overlay"
+zh = "覆盖网"
+key = "overlay"
+notes = "建在物理拓扑之上、只管虚拟机之间路由的那一层；每台虚拟机只需知道少数几台同伴"
+
+[[term]]
+en = "multi-tenancy"
+zh = "多租户"
+key = "multi-tenancy"
+notes = "一个数据中心里跑多个组织的应用；租户之间不协调地址，于是私有网段必然出现重复 IP"
