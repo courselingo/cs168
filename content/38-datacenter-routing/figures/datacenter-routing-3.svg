@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 205" width="760" height="205"
+     role="img" aria-labelledby="fig-dcr-3-title fig-dcr-3-desc">
+  <title id="fig-dcr-3-title">ECMP 把选路写成一个函数：输入分组，输出一条出链路</title>
+  <desc id="fig-dcr-3-desc">三行自上而下：ECMP 的目标是找出所有代价相同的最短路，再把分组在这些路之间做负载均衡；落到一台路由器上，分组到了而多条出链路都通向合法的最短路时，它需要一个函数，输入一个分组、输出一条链路的选择；而这个函数还必须真的把流量摊开，不能名义上有两条路、实际上还是挤在一条上。接下来两节就在讨论这个函数该怎么写。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="205" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">ECMP 的目标与那个函数</text>
+
+  <rect x="22" y="76" width="716" height="72" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="98" font-size="12" fill="#1e40af" text-anchor="middle">目标：找出所有代价相同的最短路，把分组在它们之间负载均衡</text>
+  <text x="380" y="116" font-size="12" fill="#1e40af" text-anchor="middle">路由器需要一个函数：输入一个分组，输出一条出链路的选择</text>
+  <text x="380" y="134" font-size="12" fill="#1e40af" text-anchor="middle">这个函数必须真的把流量摊开</text>
+
+  <text x="380" y="180" font-size="10" fill="#64748b" text-anchor="middle">函数写得好不好，决定这套办法能不能真的跑满</text>
+</svg>

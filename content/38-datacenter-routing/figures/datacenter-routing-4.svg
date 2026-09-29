@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 177" width="760" height="177"
+     role="img" aria-labelledby="fig-dcr-4-title fig-dcr-4-desc">
+  <title id="fig-dcr-4-title">轮流发：等代价不等于等时延，接收方只能缓冲等待</title>
+  <desc id="fig-dcr-4-desc">左栏是轮流发的做法：奇数分组走链路 1、偶数分组走链路 2，而代价是运营者用自己挑的度量定义的，所以两条代价相同的路完全可能一快一慢。右栏是后果：快路上的那一半先到，接收方手里缺着慢路上的那一半，只能把它们缓冲起来等，性能因此变差——乱序是这套办法亲手制造的。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="177" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">轮流发为什么不行</text>
+
+  <rect x="22" y="66" width="344" height="54" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="194" y="88" font-size="12" fill="#b45309" text-anchor="middle">奇数走链路 1，偶数走链路 2</text>
+  <text x="194" y="106" font-size="12" fill="#b45309" text-anchor="middle">而等代价不等于等时延</text>
+
+  <rect x="394" y="66" width="344" height="54" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="566" y="88" font-size="12" fill="#9d174d" text-anchor="middle">快路上的那一半先到</text>
+  <text x="566" y="106" font-size="12" fill="#9d174d" text-anchor="middle">接收方只能缓冲着等缺的那些</text>
+
+  <text x="380" y="152" font-size="10" fill="#64748b" text-anchor="middle">所以不能按「第几个分组」分，得让同一个连接的分组走同一条路</text>
+</svg>

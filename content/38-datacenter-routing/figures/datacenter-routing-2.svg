@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 223" width="760" height="223"
+     role="img" aria-labelledby="fig-dcr-2-title fig-dcr-2-desc">
+  <title id="fig-dcr-2-title">多个连接抢同一条路：两条流量压在一条链路上</title>
+  <desc id="fig-dcr-2-desc">左栏是两个连接挑了同一条路：所有链路都是 100 Gbps，A-B 与 C-D 都选了同一条路径，于是这条路上的两段链路各被压到 200 Gbps，谁都跑不满。右栏是两条连接分开走：各自跑满 100 Gbps，链路的数量一条都没变。两栏合起来说明，问题不是缺少链路，而是没有把已有的链路都用上。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="223" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">多个连接挤在同一条路上</text>
+
+  <rect x="22" y="76" width="344" height="90" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="194" y="98" font-size="12" fill="#9d174d" text-anchor="middle">两个连接都选同一条路</text>
+  <text x="194" y="116" font-size="12" fill="#9d174d" text-anchor="middle">路上两段链路各被压到 200 Gbps</text>
+  <text x="194" y="134" font-size="12" fill="#9d174d" text-anchor="middle">而它们的容量只有 100 Gbps</text>
+  <text x="194" y="152" font-size="12" fill="#9d174d" text-anchor="middle">结果是谁都跑不满</text>
+
+  <rect x="394" y="76" width="344" height="90" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="566" y="98" font-size="12" fill="#166534" text-anchor="middle">两条连接分开走</text>
+  <text x="566" y="116" font-size="12" fill="#166534" text-anchor="middle">各自跑满 100 Gbps</text>
+  <text x="566" y="134" font-size="12" fill="#166534" text-anchor="middle">链路一条也没多加</text>
+  <text x="566" y="152" font-size="12" fill="#166534" text-anchor="middle">差别只在选路</text>
+
+  <text x="380" y="198" font-size="10" fill="#64748b" text-anchor="middle">问题不是缺少链路，而是没有把已有的链路都用上</text>
+</svg>

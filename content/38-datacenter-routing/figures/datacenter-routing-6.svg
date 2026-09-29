@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 223" width="760" height="223"
+     role="img" aria-labelledby="fig-dcr-6-title fig-dcr-6-desc">
+  <title id="fig-dcr-6-title">五元组与按流均衡：同一条流走同一条路</title>
+  <desc id="fig-dcr-6-desc">四行自上而下：唯一标识一个连接需要五元组，也就是源 IP、目的 IP、协议、源端口、目的端口；协议这一项不能省，因为同样的 IP 与端口可能一个是 TCP 连接、一个是 UDP 连接；两个分组属于同一个连接，当且仅当它们的五元组相同；把五个值一起哈希，同一个连接的分组走同一条路径而不会乱序，不同连接则被分散到不同路径上，这种做法叫按流负载均衡。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="223" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">五元组与按流负载均衡</text>
+
+  <rect x="22" y="76" width="716" height="90" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="98" font-size="12" fill="#1e40af" text-anchor="middle">五元组：源 IP、目的 IP、协议、源端口、目的端口</text>
+  <text x="380" y="116" font-size="12" fill="#1e40af" text-anchor="middle">协议不能省：同样的 IP 与端口，可能一个是 TCP、一个是 UDP</text>
+  <text x="380" y="134" font-size="12" fill="#1e40af" text-anchor="middle">两个分组同属一个连接，当且仅当它们的五元组相同</text>
+  <text x="380" y="152" font-size="12" fill="#1e40af" text-anchor="middle">五个值一起哈希：同一条流走同一条路，不同的流被摊开</text>
+
+  <text x="380" y="198" font-size="10" fill="#64748b" text-anchor="middle">均衡的是连接的数量、不是大小；按大小均衡代价高而收益小，实践中不做</text>
+</svg>

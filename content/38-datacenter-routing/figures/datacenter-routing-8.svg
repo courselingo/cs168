@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 195" width="760" height="195"
+     role="img" aria-labelledby="fig-dcr-8-title fig-dcr-8-desc">
+  <title id="fig-dcr-8-title">多路径链路状态：算的不是一条最短路，而是全部最短路</title>
+  <desc id="fig-dcr-8-desc">左栏是链路状态原本的做法：靠泛滥让每台路由器都拿到完整的网络图，正常情况下每台算出到各目的地的一条最短路，据此填表。右栏是要支持多路径时的改法：每台改为算出所有最短路，于是转发表里一个目的地也可以有多个下一跳，和改过的距离向量协议一样，它们的最小代价必须相同。两类协议的改法不同，落点相同。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="195" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">多路径链路状态</text>
+
+  <rect x="22" y="66" width="344" height="72" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="194" y="88" font-size="12" fill="#1e40af" text-anchor="middle">原本：每台算一条最短路</text>
+  <text x="194" y="106" font-size="12" fill="#1e40af" text-anchor="middle">泛滥让每台都有完整的图</text>
+  <text x="194" y="124" font-size="12" fill="#1e40af" text-anchor="middle">表里一项一个下一跳</text>
+
+  <rect x="394" y="66" width="344" height="72" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="566" y="88" font-size="12" fill="#166534" text-anchor="middle">改法：每台算全部最短路</text>
+  <text x="566" y="106" font-size="12" fill="#166534" text-anchor="middle">一个目的地可以多个下一跳</text>
+  <text x="566" y="124" font-size="12" fill="#166534" text-anchor="middle">最小代价必须相同</text>
+
+  <text x="380" y="170" font-size="10" fill="#64748b" text-anchor="middle">两类协议怎么改可以有两种，必须共同保证的只有一条</text>
+</svg>

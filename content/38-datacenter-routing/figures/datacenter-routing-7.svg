@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 187" width="760" height="187"
+     role="img" aria-labelledby="fig-dcr-7-title fig-dcr-7-desc">
+  <title id="fig-dcr-7-title">多路径距离向量：相等就接受，一个目的地存多个等代价下一跳</title>
+  <desc id="fig-dcr-7-desc">三格并排：标准距离向量收到代价与已知最优相等的广告时是不接受的，多路径的改法把这一条翻过来，接受它并把两条都存进转发表；于是表里一个目的地可以映射到多个下一跳，只要它们的最小代价相同；转发时把五元组哈希，大约一半的连接走其中一个下一跳，另一半走另一个。改动只有这一处，但位置关键。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="187" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">多路径距离向量的改法</text>
+
+  <rect x="22" y="76" width="222" height="54" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="133" y="98" font-size="12" fill="#b45309" text-anchor="middle">收到等代价的广告</text>
+  <text x="133" y="116" font-size="12" fill="#b45309" text-anchor="middle">标准做法：不接受</text>
+
+  <rect x="269" y="76" width="222" height="54" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="98" font-size="12" fill="#166534" text-anchor="middle">改法：接受并记两条</text>
+  <text x="380" y="116" font-size="12" fill="#166534" text-anchor="middle">代价必须相同</text>
+
+  <rect x="516" y="76" width="222" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="627" y="98" font-size="12" fill="#1e40af" text-anchor="middle">转发时哈希五元组</text>
+  <text x="627" y="116" font-size="12" fill="#1e40af" text-anchor="middle">一半走一边</text>
+
+  <text x="380" y="162" font-size="10" fill="#64748b" text-anchor="middle">改动只有一处，但位置关键：转发表从一对一变成一对多</text>
+</svg>
