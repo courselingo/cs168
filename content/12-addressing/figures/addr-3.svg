@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 187" width="760" height="187"
+     role="img" aria-labelledby="fig-addr-3-title fig-addr-3-desc">
+  <title id="fig-addr-3-title">地址分两段：域间看网络 ID，域内看主机 ID</title>
+  <desc id="fig-addr-3-desc">上格是网络 ID：域间路由协议只看网络 ID，用它找网络与网络之间的路。下格是主机 ID：域内路由协议只看主机 ID，用它找同一个网络内部的路。这样各管一段，域间协议不关心网络内部的变化，域内协议不关心别的网络的变化，表也因此更小、更稳定。注意自己所在网络内部的主机仍要逐台写条目。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="187" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">地址分两段，各管一段</text>
+
+  <rect x="22" y="76" width="344" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="194" y="98" font-size="12" fill="#1e40af" text-anchor="middle">网络 ID</text>
+  <text x="194" y="116" font-size="12" fill="#1e40af" text-anchor="middle">域间协议看这一段</text>
+
+  <rect x="394" y="76" width="344" height="54" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="566" y="98" font-size="12" fill="#166534" text-anchor="middle">主机 ID</text>
+  <text x="566" y="116" font-size="12" fill="#166534" text-anchor="middle">域内协议看这一段</text>
+
+  <text x="380" y="162" font-size="10" fill="#64748b" text-anchor="middle">用通配符概括一整片网络，表更小；本地变化只动本地表，表更稳</text>
+</svg>

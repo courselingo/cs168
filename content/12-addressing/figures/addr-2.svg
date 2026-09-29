@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 223" width="760" height="223"
+     role="img" aria-labelledby="fig-addr-2-title fig-addr-2-desc">
+  <title id="fig-addr-2-title">IP 地址像邮政地址：数字里带着位置，而且不一定固定</title>
+  <desc id="fig-addr-2-desc">左栏是分层的位置信息：快递员用街道地址、楼里的秘书用房间号，不同场合用不同编址方式，而且地址按结构分配——三楼都以 3 开头、四楼都以 4 开头。右栏是 IP 地址的三个要点：每台主机一个唯一地址，服务于第三层路由；数字里带着位置信息；地址不一定是固定的，机器换位置可能拿到新地址，旧地址最终过期。IPv4 是 32 位，IPv6 是 128 位。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="223" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">地址里带着位置</text>
+
+  <rect x="22" y="76" width="344" height="90" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="194" y="98" font-size="12" fill="#1e40af" text-anchor="middle">像邮政系统一样分层</text>
+  <text x="194" y="116" font-size="12" fill="#1e40af" text-anchor="middle">快递员看街道地址</text>
+  <text x="194" y="134" font-size="12" fill="#1e40af" text-anchor="middle">秘书看房间号</text>
+  <text x="194" y="152" font-size="12" fill="#1e40af" text-anchor="middle">地址按结构分配</text>
+
+  <rect x="394" y="76" width="344" height="90" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="566" y="98" font-size="12" fill="#166534" text-anchor="middle">IP 地址的三个要点</text>
+  <text x="566" y="116" font-size="12" fill="#166534" text-anchor="middle">每台主机一个唯一地址</text>
+  <text x="566" y="134" font-size="12" fill="#166534" text-anchor="middle">数字里带着位置信息</text>
+  <text x="566" y="152" font-size="12" fill="#166534" text-anchor="middle">不固定：搬家会换地址</text>
+
+  <text x="380" y="198" font-size="10" fill="#64748b" text-anchor="middle">IPv4 是 32 位，IPv6 是 128 位；路由思路相同，本讲尽量用短的那个</text>
+</svg>

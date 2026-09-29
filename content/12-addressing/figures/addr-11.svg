@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 215" width="760" height="215"
+     role="img" aria-labelledby="fig-addr-11-title fig-addr-11-desc">
+  <title id="fig-addr-11-title">IPv6：128 位足够宽，实践按 /32 /48 /64 分层</title>
+  <desc id="fig-addr-11-desc">左边是为什么换：IPv4 地址迟早不够用，于是换成 128 位的 IPv6；这个空间大到可以简单地把网络 ID 与主机 ID 各固定 64 位都永远用不完，甚至可以让网络与主机自己挑一个 64 位前缀、只要确认没被别人占用。右边是实践中怎么分：地区注册局通常给 ISP 分 32 位前缀，ISP 给组织分 48 位，组织再给子网分 64 位；IPv6 里一般见不到比 /64 更长前缀。统一长度还有个好处：看到 /32 就能猜到那是一个 ISP。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="215" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">IPv6：128 位</text>
+
+  <rect x="22" y="86" width="344" height="72" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="194" y="108" font-size="12" fill="#1e40af" text-anchor="middle">为什么换</text>
+  <text x="194" y="126" font-size="12" fill="#1e40af" text-anchor="middle">IPv4 地址会用完</text>
+  <text x="194" y="144" font-size="12" fill="#1e40af" text-anchor="middle">128 位宽到可 64/64 对半分</text>
+
+  <rect x="394" y="86" width="344" height="72" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="566" y="108" font-size="12" fill="#166534" text-anchor="middle">实践中怎么分</text>
+  <text x="566" y="126" font-size="12" fill="#166534" text-anchor="middle">ISP 拿 /32、组织拿 /48</text>
+  <text x="566" y="144" font-size="12" fill="#166534" text-anchor="middle">子网拿 /64，不会更长</text>
+
+  <text x="380" y="190" font-size="10" fill="#64748b" text-anchor="middle">前缀长度统一之后，看到 /32 通常就知道那是一个 ISP</text>
+</svg>

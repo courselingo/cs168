@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 205" width="760" height="205"
+     role="img" aria-labelledby="fig-addr-1-title fig-addr-1-desc">
+  <title id="fig-addr-1-title">一个目的地一行，撑不到整个互联网</title>
+  <desc id="fig-addr-1-desc">左栏是距离向量的代价：要为互联网上的每一台主机发一条宣告。右栏是链路状态的代价：每台路由器都要知道整个互联网的网络图。而且只要有任何一台主机加入或离开，都得重新计算、重新收敛。出路不在协议上，而在编址方式上。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="205" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">规模问题出在「一个目的地一行」</text>
+
+  <rect x="22" y="76" width="344" height="72" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="194" y="98" font-size="12" fill="#9d174d" text-anchor="middle">跑距离向量</text>
+  <text x="194" y="116" font-size="12" fill="#9d174d" text-anchor="middle">每台主机都要一条宣告</text>
+  <text x="194" y="134" font-size="12" fill="#9d174d" text-anchor="middle">主机一变动就得重算</text>
+
+  <rect x="394" y="76" width="344" height="72" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="566" y="98" font-size="12" fill="#b45309" text-anchor="middle">跑链路状态</text>
+  <text x="566" y="116" font-size="12" fill="#b45309" text-anchor="middle">每台路由器都要知道整张图</text>
+  <text x="566" y="134" font-size="12" fill="#b45309" text-anchor="middle">规模与收敛都受不了</text>
+
+  <text x="380" y="180" font-size="10" fill="#64748b" text-anchor="middle">出路不在协议上，而在编址方式上</text>
+</svg>

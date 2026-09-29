@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 293" width="760" height="293"
+     role="img" aria-labelledby="fig-addr-4-title fig-addr-4-desc">
+  <title id="fig-addr-4-title">默认路由：先查具体与范围，最后落到通配符</title>
+  <desc id="fig-addr-4-desc">三步自上而下：先查具体主机的条目，比如 3.1；再查范围条目，比如 2. 开头的整片网络；都匹配不上，才落到通配符 .（也就是星号），把剩下的全部交给同一台路由器。这就是默认路由。大多数主机只有一条硬编码的默认路由，比如家里电脑只写「全部交给家里的路由器」，这也是端主机不必参与路由协议的原因。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="293" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">默认路由</text>
+
+  <rect x="22" y="70" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="92" font-size="12" fill="#1e40af" text-anchor="middle">一、先查具体主机，比如 3.1</text>
+
+  <rect x="22" y="135" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="157" font-size="12" fill="#1e40af" text-anchor="middle">二、再查范围，比如 2. 开头的整片网络</text>
+
+  <rect x="22" y="200" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="222" font-size="12" fill="#166534" text-anchor="middle">三、都匹配不上，落到通配符：剩下的统统交给一台路由器</text>
+
+  <text x="380" y="268" font-size="10" fill="#64748b" text-anchor="middle">端主机只有一条硬编码的默认路由，所以不必参与路由协议</text>
+</svg>

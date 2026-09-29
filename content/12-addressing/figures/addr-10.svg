@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 195" width="760" height="195"
+     role="img" aria-labelledby="fig-addr-10-title fig-addr-10-desc">
+  <title id="fig-addr-10-title">多宿：范围重叠时，最具体的优先</title>
+  <desc id="fig-addr-10-desc">左边是加了一条直连链路之后：原来的聚合路由说去 AT&amp;T 及其下属走 R2，现在必须再加一行，说明去 Stanford 的走 R7。右边是后果：转发表里出现互相重叠的范围，于是需要一条裁决规则——先匹配范围更窄的条目，匹配不上再退到更宽的范围，最后才落到默认路由。这就叫最具体的优先。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="195" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">多宿：聚合不是万能的</text>
+
+  <rect x="22" y="66" width="344" height="72" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="194" y="88" font-size="12" fill="#1e40af" text-anchor="middle">给 Stanford 加一条直连</text>
+  <text x="194" y="106" font-size="12" fill="#1e40af" text-anchor="middle">聚合路由之外</text>
+  <text x="194" y="124" font-size="12" fill="#1e40af" text-anchor="middle">必须再加一行</text>
+
+  <rect x="394" y="66" width="344" height="72" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="566" y="88" font-size="12" fill="#b45309" text-anchor="middle">范围开始重叠</text>
+  <text x="566" y="106" font-size="12" fill="#b45309" text-anchor="middle">先匹配更窄的条目</text>
+  <text x="566" y="124" font-size="12" fill="#b45309" text-anchor="middle">再退到更宽的范围</text>
+
+  <text x="380" y="170" font-size="10" fill="#64748b" text-anchor="middle">这就是「最具体的优先」，也是默认路由能放在最后兜底的原因</text>
+</svg>

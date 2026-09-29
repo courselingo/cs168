@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 189" width="760" height="189"
+     role="img" aria-labelledby="fig-addr-7-title fig-addr-7-desc">
+  <title id="fig-addr-7-title">多层分配：从 ICANN 到具体主机</title>
+  <desc id="fig-addr-7-desc">箭头依次向右，是地址的分发链条：ICANN 拥有全部 IP 地址，把地址块发给代表国家或地区的地区互联网注册局（RIPE 管欧盟、ARIN 管北美、APNIC 管亚太、LACNIC 管南美、AFRINIC 管非洲）；地区注册局再把其中一部分发给大组织或 ISP（即本地互联网注册局），由它们把单个 IP 分给主机。每一层固定多少位取决于要分出去多少个地址，而父机构固定过的位会一路保留，越往下分、固定的位越多。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="189" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">地址是一层层分下来的</text>
+
+  <rect x="22" y="76" width="160" height="54" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="102" y="98" font-size="12" fill="#166534" text-anchor="middle">ICANN</text>
+  <text x="102" y="116" font-size="12" fill="#166534" text-anchor="middle">拥有全部地址</text>
+
+  <rect x="207" y="76" width="160" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="287" y="98" font-size="12" fill="#1e40af" text-anchor="middle">地区注册局</text>
+  <text x="287" y="116" font-size="12" fill="#1e40af" text-anchor="middle">按地区分块</text>
+
+  <rect x="392" y="76" width="160" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="472" y="98" font-size="12" fill="#1e40af" text-anchor="middle">本地注册局</text>
+  <text x="472" y="116" font-size="12" fill="#1e40af" text-anchor="middle">大组织与 ISP</text>
+
+  <rect x="577" y="76" width="160" height="54" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="657" y="98" font-size="12" fill="#b45309" text-anchor="middle">具体主机</text>
+  <text x="657" y="116" font-size="12" fill="#b45309" text-anchor="middle">拿到单个地址</text>
+
+  <path d="M187,103 L 196,103" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+  <path d="M372,103 L 381,103" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+  <path d="M557,103 L 566,103" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+
+  <text x="380" y="164" font-size="10" fill="#64748b" text-anchor="middle">每层固定的位数取决于分出去多少地址；父层固定过的位一路保留</text>
+</svg>

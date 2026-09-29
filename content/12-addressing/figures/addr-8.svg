@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 225" width="760" height="225"
+     role="img" aria-labelledby="fig-addr-8-title fig-addr-8-desc">
+  <title id="fig-addr-8-title">斜杠记法与网络掩码：同一个 IP 可以代表不同范围</title>
+  <desc id="fig-addr-8-desc">上格是斜杠记法：写固定的前缀、未固定的位补零、转成点分十进制，斜杠后写固定了多少位；8 位前缀与 12 位前缀都会写成 192.0.0.0，只是斜杠后的数字不同，所以同一串字符代表两个不同范围，光看字面看不出包含关系。下格是网络掩码：固定的位写 1、未固定的位写 0 再转成点分十进制，例如 /29 对应 255.255.255.248；把地址与掩码按位与，主机位会被清零，只剩网络位。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="225" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">两种写法，说的是同一件事</text>
+
+  <rect x="22" y="70" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="92" font-size="12" fill="#1e40af" text-anchor="middle">斜杠记法：192.0.0.0/8 与 192.0.0.0/12 是同一串字符、两个范围</text>
+
+  <rect x="22" y="135" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="157" font-size="12" fill="#166534" text-anchor="middle">网络掩码：/29 写 29 个 1 加 3 个 0，就是 255.255.255.248</text>
+
+  <text x="380" y="200" font-size="10" fill="#64748b" text-anchor="middle">斜杠更好读，掩码好在一次按位与就能把主机位清零</text>
+</svg>

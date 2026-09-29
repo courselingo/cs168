@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 177" width="760" height="177"
+     role="img" aria-labelledby="fig-addr-9-title fig-addr-9-desc">
+  <title id="fig-addr-9-title">CIDR 聚合：三条路由并成一条</title>
+  <desc id="fig-addr-9-desc">左边是聚合之前：R6 要为 AT&amp;T、UCB、Stanford 各写一行转发表。右边是聚合之后：UCB 的 4.12.0.0/16 与 Stanford 的 4.29.0.0/16 都落在 AT&amp;T 的 4.0.0.0/8 里面，于是 R6 只需要一行，让 AT&amp;T 及其下属全部走同一个下一跳。这就是多层分配带来的好处：不只能聚合同一片网络内的主机，还能把多片网络聚成一条路由。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="177" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">聚合：三条并成一条</text>
+
+  <rect x="22" y="66" width="344" height="54" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="194" y="88" font-size="12" fill="#9d174d" text-anchor="middle">聚合之前</text>
+  <text x="194" y="106" font-size="12" fill="#9d174d" text-anchor="middle">AT&amp;T、UCB、Stanford 各一行</text>
+
+  <rect x="394" y="66" width="344" height="54" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="566" y="88" font-size="12" fill="#166534" text-anchor="middle">聚合之后</text>
+  <text x="566" y="106" font-size="12" fill="#166534" text-anchor="middle">一个小范围落在大范围里，只留一行</text>
+
+  <text x="380" y="152" font-size="10" fill="#64748b" text-anchor="middle">4.12.0.0/16 与 4.29.0.0/16 都落在 4.0.0.0/8 里</text>
+</svg>
