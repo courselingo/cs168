@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 450" width="760" height="450"
+     role="img" aria-labelledby="fig-dct-6-clos-title fig-dct-6-clos-desc">
+  <title id="fig-dct-6-clos-title">拓扑三选一：大交换机、树、Clos</title>
+  <desc id="fig-dct-6-clos-desc">拓扑有三种思路：一台巨型交换机能达到满二分带宽但端口多、容量大、还是单点故障；树形拓扑端口与带宽低，但两侧之间那条链路是瓶颈，靠上层加粗链路可以恢复满二分带宽；Clos 用大量便宜商品件与巨量路径取胜，扩展时加同样的交换机。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="450" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">拓扑三选一：大交换机、树、Clos</text>
+  <rect x="22" y="64" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="86" font-size="12" fill="#1e40af" text-anchor="middle">方案一：全部机柜接到一台巨型交换机 —— 能达到满二分带宽</text>
+  <rect x="22" y="125" width="716" height="36" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="380" y="147" font-size="12" fill="#9d174d" text-anchor="middle">代价：每柜一个端口（可能 2500 个）、容量要上 Pbps、且是单点故障</text>
+  <rect x="22" y="186" width="716" height="36" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380" y="208" font-size="12" fill="#6b21a8" text-anchor="middle">（源文故事：2000 年代 Google 请厂商做一万端口交换机，被拒绝）</text>
+  <rect x="22" y="247" width="716" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="269" font-size="12" fill="#b45309" text-anchor="middle">方案二：树形拓扑 —— 端口数与带宽都低，但两侧之间那一条链路就是瓶颈</text>
+  <rect x="22" y="308" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="330" font-size="12" fill="#166534" text-anchor="middle">修法：越上层用越宽的链路（下四路 100 Gbps、上两路 300 Gbps 即恢复满二分带宽）</text>
+  <rect x="22" y="369" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="391" font-size="12" fill="#166534" text-anchor="middle">方案三：Clos —— 用大量便宜商品件与巨量路径换高带宽，扩展靠加同样的交换机</text>
+  <text x="380" y="427" font-size="10" fill="#64748b" text-anchor="middle">同样的满二分带宽，比较的是谁更便宜、更能扩</text>
+</svg>

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 450" width="760" height="450"
+     role="img" aria-labelledby="fig-dct-7-fattree-title fig-dct-7-fattree-desc">
+  <title id="fig-dct-7-fattree-title">fat-tree 的计数：核心层 (k/2)² 台、每 pod (k/2)² 台主机</title>
+  <desc id="fig-dct-7-fattree-desc">k 元 fat tree 有 k 个 pod，每 pod k 台交换机分成 k/2 汇聚与 k/2 边缘；核心层有 (k/2)² 台交换机，每 pod 有 (k/2)² 台主机；切成两半要剪 (k/2)³ 条链路，恰好等于一边主机数，所以满二分带宽成立。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="450" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">fat-tree 的计数：核心层 (k/2)² 台、每 pod (k/2)² 台主机</text>
+  <rect x="22" y="64" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="86" font-size="12" fill="#1e40af" text-anchor="middle">k 元 fat tree：k 个 pod，每 pod k 台交换机（k/2 汇聚 + k/2 边缘），所以 k 取偶数</text>
+  <rect x="22" y="125" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="147" font-size="12" fill="#1e40af" text-anchor="middle">每台交换机 k 条链路，一半向上、一半向下；核心层每台交换机有 k 条链路通向 k 个 pod</text>
+  <rect x="22" y="186" width="716" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="208" font-size="12" fill="#b45309" text-anchor="middle">核心交换机台数：(k/2)² —— 汇聚层向上链路共 k³/4 条，除以每台核心交换机的 k 条</text>
+  <rect x="22" y="247" width="716" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="269" font-size="12" fill="#b45309" text-anchor="middle">每 pod 主机数：(k/2)²（k/2 台边缘交换机，各向下接 k/2 台主机）；全拓扑 k×(k/2)²</text>
+  <rect x="22" y="308" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="330" font-size="12" fill="#166534" text-anchor="middle">满二分带宽的计数：每台核心交换机向每边 k/2 条，共 (k/2)² 台 ⇒ 剪掉 (k/2)³ 条 = 左半边主机数</text>
+  <rect x="22" y="369" width="716" height="36" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="380" y="391" font-size="12" fill="#9d174d" text-anchor="middle">提醒：k = 4 有迷惑性（(k/2)² = k = 4 碰巧相等），看清结构要用 k = 6</text>
+  <text x="380" y="427" font-size="10" fill="#64748b" text-anchor="middle">每个数字都能从上一行推出来，这就是「可扩展」的含义</text>
+</svg>

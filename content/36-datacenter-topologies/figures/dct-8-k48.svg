@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 450" width="760" height="450"
+     role="img" aria-labelledby="fig-dct-8-k48-title fig-dct-8-k48-desc">
+  <title id="fig-dct-8-k48-title">k=48 的真实摆法：中间机柜与 12 个主机柜</title>
+  <desc id="fig-dct-8-k48-desc">k = 48 时一个 pod 有 24 台汇聚与 24 台边缘交换机、576 台主机；48 台交换机集中在中间机柜，周围 12 个机柜各 48 台主机；中间机柜 2304 个端口中，1152 个用于柜内互连、576 个接主机、576 个接核心层。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="450" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">k=48 的真实摆法：中间机柜与 12 个主机柜</text>
+  <rect x="22" y="64" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="86" font-size="12" fill="#1e40af" text-anchor="middle">原论文取 k = 48：一个 pod 里 24 台汇聚 + 24 台边缘、576 台主机</text>
+  <rect x="22" y="125" width="716" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="147" font-size="12" fill="#b45309" text-anchor="middle">把 48 台交换机放进中间一个机柜，周围 12 个机柜各放 48 台主机 ⇒ 所有机柜尺寸一致</text>
+  <rect x="22" y="186" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="208" font-size="12" fill="#166534" text-anchor="middle">中间机柜端口总数：48² = 2304 个</text>
+  <rect x="22" y="247" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="269" font-size="12" fill="#166534" text-anchor="middle">其中一半（1152 个）用于机柜内交换机互连（汇聚与边缘之间）</text>
+  <rect x="22" y="308" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="330" font-size="12" fill="#166534" text-anchor="middle">四分之一（576 个）用于边缘交换机接本 pod 主机</text>
+  <rect x="22" y="369" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="391" font-size="12" fill="#166534" text-anchor="middle">最后四分之一（576 个）用于汇聚交换机接核心层</text>
+  <text x="380" y="427" font-size="10" fill="#64748b" text-anchor="middle">端口预算对得上，机柜尺寸就能统一；中间摆交换机还省布线</text>
+</svg>

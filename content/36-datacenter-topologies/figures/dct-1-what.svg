@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 389" width="760" height="389"
+     role="img" aria-labelledby="fig-dct-1-what-title fig-dct-1-what-desc">
+  <title id="fig-dct-1-what-title">数据中心与对等点各优化什么：一个在意离别人近，一个在意空间、电力与冷却</title>
+  <desc id="fig-dct-1-what-desc">数据中心和对等点都属于同一家公司，但优化目标相反：数据中心在意空间、电力与冷却，常建在人少的地方；对等点在意距离，要靠近其他网络与公司，所以留在城里。数据中心可能需要几百倍于对等点的电力。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="389" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">数据中心与对等点各优化什么：一个在意离别人近，一个在意空间、电力与冷却</text>
+  <rect x="22" y="64" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="86" font-size="12" fill="#1e40af" text-anchor="middle">数据中心：由单一组织拥有，一栋楼里成百上千台机器协同工作</text>
+  <rect x="22" y="125" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="147" font-size="12" fill="#1e40af" text-anchor="middle">它属于「应用的基础设施」—— 你想访问的终端主机就住在里面</text>
+  <rect x="22" y="186" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="208" font-size="12" fill="#166534" text-anchor="middle">位置取向：空间、电力、冷却；常建在人少的地方，旁边有河或电站</text>
+  <rect x="22" y="247" width="716" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="269" font-size="12" fill="#b45309" text-anchor="middle">对等点：属于同一家公司的另一类网络，取向正相反 —— 要离别的网络近</text>
+  <rect x="22" y="308" width="716" height="36" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="380" y="330" font-size="12" fill="#9d174d" text-anchor="middle">量级对照：数据中心可能要几百倍于对等点的电力</text>
+  <text x="380" y="366" font-size="10" fill="#64748b" text-anchor="middle">同一家公司，两张网络，两种优化目标</text>
+</svg>

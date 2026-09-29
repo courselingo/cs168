@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 389" width="760" height="389"
+     role="img" aria-labelledby="fig-dct-4-rack-title fig-dct-4-rack-desc">
+  <title id="fig-dct-4-rack-title">机架与 TOR：柜内汇集与约 100 Gbps 上行</title>
+  <desc id="fig-dct-4-rack-desc">服务器装在机柜里，每柜 40 到 48 个插槽、每插槽 1 到 2 台服务器；每个机柜顶上一台 TOR 交换机，柜内每台服务器用约 100 Gbps 的上行链路接到它。目标是每台服务器都能与别的服务器满线速通信。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="389" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">机架与 TOR：柜内汇集与约 100 Gbps 上行</text>
+  <rect x="22" y="64" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="86" font-size="12" fill="#1e40af" text-anchor="middle">服务器装在机柜里：每柜 40 到 48 个插槽，每个插槽放 1 到 2 台服务器</text>
+  <rect x="22" y="125" width="716" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="147" font-size="12" fill="#b45309" text-anchor="middle">每个机柜顶上一台 TOR（top-of-rack）交换机，规模很小，只有一块转发芯片</text>
+  <rect x="22" y="186" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="208" font-size="12" fill="#166534" text-anchor="middle">柜内每台服务器用一条上行链路接到 TOR，容量通常约 100 Gbps</text>
+  <rect x="22" y="247" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="269" font-size="12" fill="#1e40af" text-anchor="middle">目标是让每台服务器都能和别的服务器以满线速通信</text>
+  <rect x="22" y="308" width="716" height="36" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380" y="330" font-size="12" fill="#6b21a8" text-anchor="middle">于是问题变成：互连度要做到什么程度才够</text>
+  <text x="380" y="366" font-size="10" fill="#64748b" text-anchor="middle">目标翻译成网络问题：满线速通信等于要求足够高的互连度</text>
+</svg>

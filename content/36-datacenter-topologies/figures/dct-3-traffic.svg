@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 389" width="760" height="389"
+     role="img" aria-labelledby="fig-dct-3-traffic-title fig-dct-3-traffic-desc">
+  <title id="fig-dct-3-traffic-title">南北与东西：一次用户请求在内部放大成几百个后端请求，而东西向流量大好几个数量级</title>
+  <desc id="fig-dct-3-traffic-desc">一次用户请求到达数据中心后，第一台服务器要向后端发起大量请求（2013 年 Facebook 论文给出平均 521 个）；进出数据中心的流量叫南北向，机器之间的流量叫东西向，后者比前者大好几个数量级并且还在增长。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="389" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">南北与东西：一次用户请求在内部放大成几百个后端请求，而东西向流量大好几个数量级</text>
+  <rect x="22" y="64" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="86" font-size="12" fill="#1e40af" text-anchor="middle">一次用户请求先在通用互联网上跑到数据中心的边缘路由器</text>
+  <rect x="22" y="125" width="716" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="147" font-size="12" fill="#b45309" text-anchor="middle">一台服务器凑不齐答案：广告、照片、帖子分别在别的机器上</text>
+  <rect x="22" y="186" width="716" height="36" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="380" y="208" font-size="12" fill="#9d174d" text-anchor="middle">于是一次请求在内部放大成几百个后端请求（2013 年 Facebook 论文：平均 521 个）</text>
+  <rect x="22" y="247" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="269" font-size="12" fill="#166534" text-anchor="middle">南北向：进出数据中心的流量（面向用户或其他数据中心）</text>
+  <rect x="22" y="308" width="716" height="36" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="380" y="330" font-size="12" fill="#9d174d" text-anchor="middle">东西向：机器之间的流量 —— 比南北向大好几个数量级，且随机器学习继续增长</text>
+  <text x="380" y="366" font-size="10" fill="#64748b" text-anchor="middle">既然流量几乎都在内部，内部这张网就是主角</text>
+</svg>
