@@ -28,7 +28,7 @@ output_mode = "explanation"
 
 发之前，发送方的 TCP 实现给这段数据加上 TCP [[term:header]]，里面放序列号、端口号这类元数据；加完交给 IP 层，IP 层再补上自己的首部。段加上这两层首部之后，有时被叫作 TCP/IP 分组，也可以等价地说：这是一个载荷为「TCP 首部加数据」的 IP 分组。
 
-**MSS 该定多大**？源文把它和 [[term:link]]上的 MTU 挂钩：IP 分组的大小受链路的[[term:maximum-transmission-unit]]限制，而 IP 分组里还得装下 IP 首部与 TCP 首部，所以[[term:maximum-segment-size]]（maximum segment size，最大段长度，源文简称 MSS）比 MTU 小一点点。照录源文的式子：
+**MSS 该定多大**？源文把它和 [[term:link]]上的 MTU 挂钩：IP 分组的大小受链路的[[term:maximum-transmission-unit]]限制（Ethernet 链路上这个数是 1500 字节），而 IP 分组里还得装下 IPv4 首部与 TCP 首部，所以[[term:maximum-segment-size]]（maximum segment size，最大段长度，源文简称 MSS）比 MTU 小一点点：没有选项时两条首部各占 20 字节，1500 减掉 40 就是 1460。照录源文的式子：
 
 MSS (TCP segment limit) = MTU (IP packet limit) - IP header size - TCP header size
 

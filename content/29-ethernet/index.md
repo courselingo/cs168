@@ -19,9 +19,9 @@ output_mode = "explanation"
 
 前面二十几讲画图时，每一条链路都只连两台机器。这一讲把镜头收进一个局域网内部，看那根线上到底发生了什么。源文开头就把尺度换了：
 
-> In particular, we'll look at forwarding and addressing at Layer 2.
->
-> 中译：具体地说，本节要看的是第二层的[[term:forwarding]]与寻址。这一段要放进上下文中读：前面二十几讲画的是跨长距离的[[term:wide-area-network]]，每条链路只连两台机器；本节换到另一个尺度，也就是一个[[term:local-area-network]]内部，例如你家里那台电脑与家用[[term:router]]组成的网络。
+> In this section, we'll focus on what happens inside a local area network, such as the network in your home with your computer and your home router. This is in contrast with the wide-area networks we've been seeing so far, which span longer distances.
+
+中译：本节看一个[[term:local-area-network]]内部发生了什么，例如你家里那台电脑与家用[[term:router]]组成的网络；这是与我们此前一直看的[[term:wide-area-network]]相对的，后者跨更长的距离。这一段里出现的第一件事是[[term:forwarding]]与寻址都发生在第二层。
 
 要解决的是两件事。第一件是转发：一个[[term:packet]]怎么从局域网里的主机送到路由器，而这里要看的是[[term:link-layer]]的转发与寻址，不是第三层那一套。第二件更特别：同一个局域网里的主机之间，能不能完全不经过路由器就互相发消息。源文对这一层的判断很直接：
 
@@ -37,7 +37,7 @@ output_mode = "explanation"
 
 源文先回头看我们画过的图：以前假设每条链路正好连两台机器；现实里一根线可以挂很多台机器。它用三张图把这层意思递进地摆出来，第三张是把路由器也看成线上的普通一员：
 
-> Ultimately, the wire doesn't really care what the connected machines are doing with the data they exchange.
+> We can abstract even further and note that at Layer 2, the router is really just a machine like any other (that happens to run routing protocols at higher layers).
 
 中译：说到底，线并不关心挂在上面的机器拿这些数据做什么。源文在紧邻的几句里把这一层再抽象了一步：在第二层看来，[[term:router]]真的只是一台和别的机器一样的机器，只不过它恰好在更高的层上跑[[term:routing]]协议。
 

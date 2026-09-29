@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 189" width="760" height="189"
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 302" width="760" height="302"
      role="img" aria-labelledby="fig-model-4-title fig-model-4-desc">
-  <title id="fig-model-4-title">用路由器把机器连起来：线更少、带宽够用、还能绕开故障</title>
-  <desc id="fig-model-4-desc">箭头依次向右：端主机接到路由器，路由器之间相连，再到另一端的端主机。这个拓扑比全互联用的链路少，带宽又比单链路多，而且对故障更稳健：某条链路断了，分组可以走另一条路径，仍然到达目的地。</desc>
+  <title id="fig-model-4-title">用路由器把机器连起来</title>
+  <desc id="fig-model-4-desc">箭头依次向右：端主机接到路由器，两台路由器之间有直连，另有一条经过中间路由器的绕行路，再到另一端的端主机。这个拓扑比全互联用的链路少，带宽又比单链路多，而且对故障更稳健：直连那条断了，分组可以沿绕行的那条走，仍然到达目的地。</desc>
 
   <defs>
     <style>
@@ -13,29 +13,36 @@
     </marker>
   </defs>
 
-  <rect x="0" y="0" width="760" height="189" fill="#ffffff"/>
+  <rect x="0" y="0" width="760" height="302" fill="#ffffff"/>
 
   <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">用路由器把机器连起来</text>
 
-  <rect x="22" y="76" width="160" height="54" rx="6" fill="#d1fae5" stroke="#22c55e"/>
-  <text x="102" y="98" font-size="12" fill="#166534" text-anchor="middle">端主机</text>
-  <text x="102" y="116" font-size="12" fill="#166534" text-anchor="middle">只连一台路由器</text>
+  <rect x="22" y="70" width="160" height="54" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="102" y="92.2" font-size="12" fill="#166534" text-anchor="middle">端主机</text>
+  <text x="102" y="110.2" font-size="12" fill="#166534" text-anchor="middle">只连一台路由器</text>
 
-  <rect x="207" y="76" width="160" height="54" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
-  <text x="287" y="98" font-size="12" fill="#b45309" text-anchor="middle">路由器</text>
-  <text x="287" y="116" font-size="12" fill="#b45309" text-anchor="middle">连着好几个邻居</text>
+  <rect x="207" y="70" width="160" height="54" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="287" y="92.2" font-size="12" fill="#b45309" text-anchor="middle">路由器</text>
+  <text x="287" y="110.2" font-size="12" fill="#b45309" text-anchor="middle">连着好几个邻居</text>
 
-  <rect x="392" y="76" width="160" height="54" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
-  <text x="472" y="98" font-size="12" fill="#b45309" text-anchor="middle">路由器</text>
-  <text x="472" y="116" font-size="12" fill="#b45309" text-anchor="middle">另一条路还在</text>
+  <rect x="392" y="70" width="160" height="54" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="472" y="92.2" font-size="12" fill="#b45309" text-anchor="middle">路由器</text>
+  <text x="472" y="110.2" font-size="12" fill="#b45309" text-anchor="middle">连着好几个邻居</text>
 
-  <rect x="577" y="76" width="160" height="54" rx="6" fill="#d1fae5" stroke="#22c55e"/>
-  <text x="657" y="98" font-size="12" fill="#166534" text-anchor="middle">端主机</text>
-  <text x="657" y="116" font-size="12" fill="#166534" text-anchor="middle">最终目的地</text>
+  <rect x="577" y="70" width="160" height="54" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="657" y="92.2" font-size="12" fill="#166534" text-anchor="middle">端主机</text>
+  <text x="657" y="110.2" font-size="12" fill="#166534" text-anchor="middle">最终目的地</text>
 
-  <path d="M187,103 L 196,103" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
-  <path d="M372,103 L 381,103" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
-  <path d="M557,103 L 566,103" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+  <rect x="300" y="184" width="160" height="54" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="206.2" font-size="12" fill="#b45309" text-anchor="middle">路由器</text>
+  <text x="380" y="224.2" font-size="12" fill="#b45309" text-anchor="middle">绕行的另一条路</text>
 
-  <text x="380" y="164" font-size="10" fill="#64748b" text-anchor="middle">线比全互联少、带宽比单链路多；断一条链路还能换路走</text>
+  <path d="M187,97 L 196,97" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M372,97 L 381,97" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M557,97 L 566,97" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <path d="M280,129 C 280,151 340,151 340,173" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M420,179 C 420,157 480,157 480,135" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <text x="380" y="278" font-size="10" fill="#64748b" text-anchor="middle">线比全互联少、带宽比单链路多；直连那条断了，分组还能走绕行的那条</text>
 </svg>
