@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 345.5" width="760" height="345.5"
+     role="img" aria-labelledby="fig-nat-2-title fig-nat-2-desc">
+  <title id="fig-nat-2-title">NAT 的基本动作：出向改写源地址并记一笔，入向查记录改回来</title>
+  <desc id="fig-nat-2-desc">上面一条是目标与办法：用一个公网地址代表本地网络里的很多台主机，办法是网关路由器改写头部。第二排三格是场景里的三方：店内 A、B、C 三个私有地址（不唯一），店外共用一个公网地址 R1（全球唯一），以及外部服务器 S 与 T。第三排三格是核心动作：出向把源地址改写成 R1；记一笔「来自 S 的回复要送给 A」；入向查记录并把目的地址改回 A。最下面一排三格是那个会出事的情形（Alice 与 Bob 都想跟 S 说话，回复到了就分不清给谁，方向是从第四层借逻辑端口来区分）。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="345.5" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">NAT 的基本动作：出向改写源地址并记一笔，入向查记录改回来</text>
+  <rect x="25" y="64" width="710" height="33" rx="6" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="380" y="84.35" font-size="11" fill="#1e40af" text-anchor="middle">目标：用一个公网地址代表本地网络里的很多台主机；办法是网关路由器改写头部</text>
+  <rect x="25" y="125" width="220" height="45" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="135" y="143.5" font-size="10" fill="#1e40af" text-anchor="middle">店内</text>
+  <text x="135" y="158.5" font-size="10" fill="#1e40af" text-anchor="middle">A、B、C 三个私有地址，不唯一</text>
+  <rect x="270" y="125" width="220" height="45" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="143.5" font-size="10" fill="#166534" text-anchor="middle">店外</text>
+  <text x="380" y="158.5" font-size="10" fill="#166534" text-anchor="middle">共用一个公网地址 R1，全球唯一</text>
+  <rect x="515" y="125" width="220" height="45" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="625" y="143.5" font-size="10" fill="#1e293b" text-anchor="middle">外部服务器</text>
+  <text x="625" y="158.5" font-size="10" fill="#1e293b" text-anchor="middle">S 与 T</text>
+  <rect x="25" y="198" width="220" height="49.5" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="135" y="218.35" font-size="11" fill="#1e40af" text-anchor="middle">出向</text>
+  <text x="135" y="234.85" font-size="11" fill="#1e40af" text-anchor="middle">把源地址改写成 R1</text>
+  <rect x="270" y="198" width="220" height="49.5" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="218.35" font-size="11" fill="#b45309" text-anchor="middle">记一笔</text>
+  <text x="380" y="234.85" font-size="11" fill="#b45309" text-anchor="middle">来自 S 的回复要送给 A</text>
+  <rect x="515" y="198" width="220" height="49.5" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="625" y="218.35" font-size="11" fill="#166534" text-anchor="middle">入向</text>
+  <text x="625" y="234.85" font-size="11" fill="#166534" text-anchor="middle">查记录，把目的地址改回 A</text>
+  <rect x="25" y="275.5" width="220" height="45" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="135" y="294" font-size="10" fill="#b45309" text-anchor="middle">出事的情形</text>
+  <text x="135" y="309" font-size="10" fill="#b45309" text-anchor="middle">Alice 与 Bob 都想跟 S 说话</text>
+  <rect x="270" y="275.5" width="220" height="45" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="294" font-size="10" fill="#b45309" text-anchor="middle">回复到了就分不清给谁</text>
+  <text x="380" y="309" font-size="10" fill="#b45309" text-anchor="middle">需要新的区分依据</text>
+  <rect x="515" y="275.5" width="220" height="45" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="625" y="294" font-size="10" fill="#6b21a8" text-anchor="middle">方向：从第四层借逻辑端口</text>
+  <text x="625" y="309" font-size="10" fill="#6b21a8" text-anchor="middle">两人各用一个端口</text>
+</svg>

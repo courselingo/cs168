@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 280" width="760" height="280"
+     role="img" aria-labelledby="fig-dhcp-6-title fig-dhcp-6-desc">
+  <title id="fig-dhcp-6-title">服务器怎么把 Offer 送回来</title>
+  <desc id="fig-dhcp-6-desc">第一行说明客户端此时还没有 IP 地址，服务器没法照常规「回给源地址」。中间两格是源文给的两种回法：一是直接把 Offer 广播出去，全网都能看到、由客户端自己认领；二是照 Discover 里带的源 MAC 把这个回答单播回去。最下面一行指出源文两处措辞的关系：第 2 节把 Offer 写成 unicast，第 4 节又说也可以广播，两句说的是同一件事的两个前提，能不能单播取决于服务器手里有没有可用的目的 MAC。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="280" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">服务器怎么把 Offer 送回来</text>
+  <rect x="25" y="64" width="710" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="86.2" font-size="12" fill="#1e40af" text-anchor="middle">客户端还没有 IP 地址，服务器没法照常规「回给源地址」</text>
+  <rect x="25" y="128" width="342.5" height="49.5" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="196.25" y="148.35" font-size="11" fill="#1e293b" text-anchor="middle">办法一：广播 Offer</text>
+  <text x="196.25" y="164.85" font-size="11" fill="#1e293b" text-anchor="middle">全网都能看到，由客户端自己认领</text>
+  <rect x="392.5" y="128" width="342.5" height="49.5" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="563.75" y="148.35" font-size="11" fill="#1e293b" text-anchor="middle">办法二：照源 MAC 单播</text>
+  <text x="563.75" y="164.85" font-size="11" fill="#1e293b" text-anchor="middle">Discover 里带着客户端的 MAC 地址</text>
+  <rect x="25" y="205.5" width="710" height="49.5" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="380" y="225.85" font-size="11" fill="#9d174d" text-anchor="middle">第 2 节把 Offer 写成 unicast，第 4 节又说也可以广播</text>
+  <text x="380" y="242.35" font-size="11" fill="#9d174d" text-anchor="middle">两句指的是同一件事的两个前提：能不能单播，取决于服务器手里有没有可用的目的 MAC</text>
+</svg>

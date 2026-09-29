@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 293.5" width="760" height="293.5"
+     role="img" aria-labelledby="fig-dhcp-2-title fig-dhcp-2-desc">
+  <title id="fig-dhcp-2-title">DHCP 的四步：谁先说话，谁回答</title>
+  <desc id="fig-dhcp-2-desc">第一行是四步依次排开，箭头从左边流到右边：客户端广播 Discover 求配置，有能力的服务器回一份 Offer，客户端广播 Request 说明自己选了哪一份，服务器最后回一个 Acknowledge 确认。第二行说明 Discover 与 Request 是广播，Offer 由服务器单独回给这个客户端。第三行解释第 3 步为什么也要广播：客户端可能收到不止一份 Offer，把选中的那一份讲给所有人听，被拒的 Offer 才能立刻放回去留给后面的客户端。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="293.5" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">DHCP 的四步：谁先说话，谁回答</text>
+  <rect x="25" y="64" width="155" height="49.5" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="102.5" y="84.35" font-size="11" fill="#1e40af" text-anchor="middle">1. Discover</text>
+  <text x="102.5" y="100.85" font-size="11" fill="#1e40af" text-anchor="middle">客户端广播求配置</text>
+  <rect x="210" y="64" width="155" height="49.5" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="287.5" y="84.35" font-size="11" fill="#166534" text-anchor="middle">2. Offer</text>
+  <text x="287.5" y="100.85" font-size="11" fill="#166534" text-anchor="middle">有能力的服务器回一份</text>
+  <rect x="395" y="64" width="155" height="49.5" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="472.5" y="84.35" font-size="11" fill="#1e40af" text-anchor="middle">3. Request</text>
+  <text x="472.5" y="100.85" font-size="11" fill="#1e40af" text-anchor="middle">客户端广播选了哪份</text>
+  <rect x="580" y="64" width="155" height="49.5" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="657.5" y="84.35" font-size="11" fill="#166534" text-anchor="middle">4. Acknowledge</text>
+  <text x="657.5" y="100.85" font-size="11" fill="#166534" text-anchor="middle">服务器确认这份请求</text>
+  <rect x="25" y="141.5" width="710" height="33" rx="6" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="380" y="161.85" font-size="11" fill="#1e40af" text-anchor="middle">Discover 与 Request 是广播；Offer 由服务器单独回给这个客户端</text>
+  <rect x="25" y="202.5" width="710" height="66" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="380" y="222.85" font-size="11" fill="#1e293b" text-anchor="middle">第 3 步为什么也要广播</text>
+  <text x="380" y="239.35" font-size="11" fill="#1e293b" text-anchor="middle">客户端可能收到不止一份 Offer</text>
+  <text x="380" y="255.85" font-size="11" fill="#1e293b" text-anchor="middle">它把选中的那一份讲给所有人听，被拒的 Offer 才能立刻放回去留给后面的客户端</text>
+  <path d="M185,88.75 L199,88.75" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M370,88.75 L384,88.75" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M555,88.75 L569,88.75" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+</svg>

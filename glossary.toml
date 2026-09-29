@@ -1032,3 +1032,19 @@ en = "Transport Layer Security"
 zh = "传输层安全"
 key = "tls"
 notes = "建在 TCP 之上的安全协议，双方交换密钥后把消息加密；HTTPS 就跑在它上面"
+
+[[term]]
+en = "subnet mask"
+zh = "子网掩码"
+notes = "固定位全 1、非固定位全 0；把掩码与本机 IP 按位与，就得到本地网络前缀"
+
+[[term]]
+en = "default gateway"
+zh = "默认网关"
+notes = "本地网络里那台路由器；凡是目的地址不在本地的包都先交给它"
+
+[[term]]
+en = "DHCP server"
+zh = "DHCP 服务器"
+key = "dhcp-server"
+notes = "手里有网关与 DNS 服务器的信息，还有一池可分配地址；在固定的 UDP 67 端口上等新机器来问"

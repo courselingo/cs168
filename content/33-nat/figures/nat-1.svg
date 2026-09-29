@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 338" width="760" height="338"
+     role="img" aria-labelledby="fig-nat-1-title fig-nat-1-desc">
+  <title id="fig-nat-1-title">IPv4 地址不够用，于是划出私有地址段，而私有地址上不了公网</title>
+  <desc id="fig-nat-1-desc">上面一条是动机：IPv4 只有 2 的 32 次方个地址，不够给互联网上每台主机分一个。第二排两格是两句补救：IPv6 是正解但它铺开相当慢；过渡办法是 RFC 1918 划出的三段私有地址（10.0.0.0/8、172.16.0.0/12、192.168.0.0/16）。第三排两格是私有地址的用处（不需要公网地址的网络都能用，家里也常用）与它带来的新问题（私有地址在公网上不可路由，回信回不来）。最下面一条说明所以要有一台路由器站在内外之间替所有人改写地址，这就是这一讲要补的接缝。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="338" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">IPv4 地址不够用，于是划出私有地址段，而私有地址上不了公网</text>
+  <rect x="25" y="64" width="710" height="33" rx="6" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="380" y="84.35" font-size="11" fill="#1e40af" text-anchor="middle">动机：IPv4 只有 2 的 32 次方个地址，不够给互联网上每台主机分一个</text>
+  <rect x="25" y="125" width="342.5" height="49.5" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="196.25" y="145.35" font-size="11" fill="#166534" text-anchor="middle">正解：IPv6</text>
+  <text x="196.25" y="161.85" font-size="11" fill="#166534" text-anchor="middle">地址足够多，但铺开相当慢</text>
+  <rect x="392.5" y="125" width="342.5" height="49.5" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="563.75" y="145.35" font-size="11" fill="#1e40af" text-anchor="middle">过渡：RFC 1918 私有地址</text>
+  <text x="563.75" y="161.85" font-size="11" fill="#1e40af" text-anchor="middle">10.0.0.0/8、172.16.0.0/12、192.168.0.0/16</text>
+  <rect x="25" y="202.5" width="342.5" height="49.5" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="196.25" y="222.85" font-size="11" fill="#1e293b" text-anchor="middle">私有地址的用处</text>
+  <text x="196.25" y="239.35" font-size="11" fill="#1e293b" text-anchor="middle">不需要公网地址的网络都能用；家里也常用</text>
+  <rect x="392.5" y="202.5" width="342.5" height="49.5" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="563.75" y="222.85" font-size="11" fill="#b45309" text-anchor="middle">带来的新问题</text>
+  <text x="563.75" y="239.35" font-size="11" fill="#b45309" text-anchor="middle">私有地址在公网上不可路由，回信回不来</text>
+  <rect x="25" y="280" width="710" height="33" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380" y="300.35" font-size="11" fill="#6b21a8" text-anchor="middle">所以要有一台路由器站在内外之间替所有人改写地址，而这就是这一讲要补的接缝</text>
+</svg>

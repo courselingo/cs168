@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 335" width="760" height="335"
+     role="img" aria-labelledby="fig-nat-4-title fig-nat-4-desc">
+  <title id="fig-nat-4-title">两种模式：PAT 要看得懂第四层并能编假端口，一对一翻译只改地址</title>
+  <desc id="fig-nat-4-desc">上面一条是那个公网地址的来路：家用路由器第一次连 ISP 时可以跑 DHCP 要一个。第二排两格补两句：先前讲的是主机跑 DHCP，源文特意补一句路由器也可以跑；ISP 的 DHCP 服务器回一个地址，这就是全网共享的那一个公网地址。第三排三格是三种模式与要求：PAT 就是能编假端口的那种；PAT 要求路由器看得懂第四层协议；更简单的模式只做一对一地址翻译。最下面一条给出一对一的例子（10.0.0.1 映到 42.0.2.1、10.0.0.2 映到 42.0.2.2），它省不下地址，但在别的场合有用。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="335" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">两种模式：PAT 要看得懂第四层并能编假端口，一对一翻译只改地址</text>
+  <rect x="25" y="64" width="710" height="33" rx="6" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="380" y="84.35" font-size="11" fill="#1e40af" text-anchor="middle">那一个公网地址从哪来：家用路由器第一次连 ISP 时可以跑 DHCP 要一个</text>
+  <rect x="25" y="125" width="342.5" height="49.5" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="196.25" y="145.35" font-size="11" fill="#1e293b" text-anchor="middle">先前讲的是主机跑 DHCP</text>
+  <text x="196.25" y="161.85" font-size="11" fill="#1e293b" text-anchor="middle">源文特意补一句：路由器也可以跑</text>
+  <rect x="392.5" y="125" width="342.5" height="49.5" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="563.75" y="145.35" font-size="11" fill="#1e40af" text-anchor="middle">ISP 的 DHCP 服务器回一个地址</text>
+  <text x="563.75" y="161.85" font-size="11" fill="#1e40af" text-anchor="middle">这就是全网共享的那一个公网地址</text>
+  <rect x="25" y="202.5" width="220" height="49.5" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="135" y="222.85" font-size="11" fill="#166534" text-anchor="middle">PAT（端口地址转换）</text>
+  <text x="135" y="239.35" font-size="11" fill="#166534" text-anchor="middle">就是能编假端口的那种</text>
+  <rect x="270" y="202.5" width="220" height="49.5" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="222.85" font-size="11" fill="#b45309" text-anchor="middle">PAT 的额外要求</text>
+  <text x="380" y="239.35" font-size="11" fill="#b45309" text-anchor="middle">路由器要看得懂第四层协议</text>
+  <rect x="515" y="202.5" width="220" height="49.5" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="625" y="222.85" font-size="11" fill="#1e40af" text-anchor="middle">更简单的模式</text>
+  <text x="625" y="239.35" font-size="11" fill="#1e40af" text-anchor="middle">只做一对一地址翻译</text>
+  <rect x="25" y="280" width="710" height="30" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="380" y="298.5" font-size="10" fill="#1e293b" text-anchor="middle">一对一的例子：10.0.0.1 映到 42.0.2.1、10.0.0.2 映到 42.0.2.2；它省不下地址，但别处有用</text>
+</svg>

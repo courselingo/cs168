@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 344" width="760" height="344"
+     role="img" aria-labelledby="fig-nat-3-title fig-nat-3-desc">
+  <title id="fig-nat-3-title">连端口一起改写：两个人挑同一个端口时，路由器给后来者编一个假端口</title>
+  <desc id="fig-nat-3-desc">上排两格是撞车：两人都挑了 50000 号端口，于是两条连接在路由器眼里一样，分不清回复属于哪一条。第二排三格是修补：路由器给后来者编一个假端口，把源 IP 与源端口一起改写，并记下「B 的 50000 被伪造为 60000」。第三排三格是回程的分辨与还原：回到 50000 的包一定是给 Alice 的，回到 60000 的包一定是给 Bob 的，而回程还要把假端口换回原来的端口号。最下面一条指出源文在这段里有一处自相矛盾（那句改写等号两边写成了同一串地址），本页照录并就地说清。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="344" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">连端口一起改写：两个人挑同一个端口时，路由器给后来者编一个假端口</text>
+  <rect x="25" y="64" width="342.5" height="49.5" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="196.25" y="84.35" font-size="11" fill="#b45309" text-anchor="middle">撞车</text>
+  <text x="196.25" y="100.85" font-size="11" fill="#b45309" text-anchor="middle">两人都挑了 50000 号端口</text>
+  <rect x="392.5" y="64" width="342.5" height="49.5" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="563.75" y="84.35" font-size="11" fill="#b45309" text-anchor="middle">于是两条连接在路由器眼里一样</text>
+  <text x="563.75" y="100.85" font-size="11" fill="#b45309" text-anchor="middle">分不清回复属于哪一条</text>
+  <rect x="25" y="141.5" width="220" height="49.5" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="135" y="161.85" font-size="11" fill="#1e40af" text-anchor="middle">修补</text>
+  <text x="135" y="178.35" font-size="11" fill="#1e40af" text-anchor="middle">路由器给后来者编一个假端口</text>
+  <rect x="270" y="141.5" width="220" height="49.5" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="161.85" font-size="11" fill="#1e40af" text-anchor="middle">改写范围</text>
+  <text x="380" y="178.35" font-size="11" fill="#1e40af" text-anchor="middle">源 IP 与源端口一起改写</text>
+  <rect x="515" y="141.5" width="220" height="49.5" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="625" y="161.85" font-size="11" fill="#1e293b" text-anchor="middle">记录</text>
+  <text x="625" y="178.35" font-size="11" fill="#1e293b" text-anchor="middle">B 的 50000 被伪造为 60000</text>
+  <rect x="25" y="219" width="220" height="45" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="135" y="237.5" font-size="10" fill="#166534" text-anchor="middle">回到 50000 的包</text>
+  <text x="135" y="252.5" font-size="10" fill="#166534" text-anchor="middle">一定是给 Alice 的</text>
+  <rect x="270" y="219" width="220" height="45" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="237.5" font-size="10" fill="#166534" text-anchor="middle">回到 60000 的包</text>
+  <text x="380" y="252.5" font-size="10" fill="#166534" text-anchor="middle">一定是给 Bob 的</text>
+  <rect x="515" y="219" width="220" height="45" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="625" y="237.5" font-size="10" fill="#6b21a8" text-anchor="middle">回程还要改回去</text>
+  <text x="625" y="252.5" font-size="10" fill="#6b21a8" text-anchor="middle">假端口必须换回原来的端口号</text>
+  <rect x="25" y="292" width="710" height="27" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="380" y="308.65" font-size="9" fill="#1e293b" text-anchor="middle">源文这里有一处自相矛盾：那句改写等号两边写成了同一串地址，本页照录并就地说清</text>
+</svg>

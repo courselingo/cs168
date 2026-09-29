@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 310" width="760" height="310"
+     role="img" aria-labelledby="fig-nat-6-title fig-nat-6-desc">
+  <title id="fig-nat-6-title">入向连接默认不通，以及 NAT 的三条安全与隐私影响</title>
+  <desc id="fig-nat-6-desc">上排两格是入向为什么默认走不通：外面的人没法把包发给一个私有地址；发给路由器地址的那个包是新连接的第一个包，表里没有关于它的信息。第二排三格是解法与配套：端口映射表（Alice 告诉路由器她在 28 号端口等请求）、动态协议（UPnP 与 NAT-PMP）以及谁会用它们（需要入向连接的应用，例如在线游戏）。第三排三格是三条安全与隐私影响：破坏端到端原则、默认挡入向但更像副作用而不是有意设计、以及改写地址带来的隐私副作用（服务器不知道最初的发送者是谁）。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="310" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">入向连接默认不通，以及 NAT 的三条安全与隐私影响</text>
+  <rect x="25" y="64" width="342.5" height="45" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="196.25" y="82.5" font-size="10" fill="#b45309" text-anchor="middle">入向为什么默认走不通（一）</text>
+  <text x="196.25" y="97.5" font-size="10" fill="#b45309" text-anchor="middle">外面的人没法把包发给一个私有地址</text>
+  <rect x="392.5" y="64" width="342.5" height="45" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="563.75" y="82.5" font-size="10" fill="#b45309" text-anchor="middle">入向为什么默认走不通（二）</text>
+  <text x="563.75" y="97.5" font-size="10" fill="#b45309" text-anchor="middle">发给路由器地址的包，是新连接的第一个包，表里没有信息</text>
+  <rect x="25" y="137" width="220" height="60" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="135" y="162.6" font-size="11" fill="#166534" text-anchor="middle">解法：端口映射表</text>
+  <text x="135" y="179.1" font-size="11" fill="#166534" text-anchor="middle">Alice 告诉路由器她在 28 号端口等请求</text>
+  <rect x="270" y="137" width="220" height="60" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="380" y="155.5" font-size="10" fill="#1e293b" text-anchor="middle">动态协议</text>
+  <text x="380" y="170.5" font-size="10" fill="#1e293b" text-anchor="middle">UPnP 与 NAT-PMP</text>
+  <text x="380" y="185.5" font-size="10" fill="#1e293b" text-anchor="middle">可以让开放端口被动态配置</text>
+  <rect x="515" y="137" width="220" height="60" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="625" y="163" font-size="10" fill="#1e293b" text-anchor="middle">谁会用</text>
+  <text x="625" y="178" font-size="10" fill="#1e293b" text-anchor="middle">需要入向连接的应用，例如在线游戏</text>
+  <rect x="25" y="225" width="220" height="60" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="135" y="251" font-size="10" fill="#6b21a8" text-anchor="middle">安全影响一</text>
+  <text x="135" y="266" font-size="10" fill="#6b21a8" text-anchor="middle">破坏端到端原则：默认不允许入向连接</text>
+  <rect x="270" y="225" width="220" height="60" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380" y="243.5" font-size="10" fill="#6b21a8" text-anchor="middle">安全影响二</text>
+  <text x="380" y="258.5" font-size="10" fill="#6b21a8" text-anchor="middle">挡入向像防火墙</text>
+  <text x="380" y="273.5" font-size="10" fill="#6b21a8" text-anchor="middle">但更像副作用，不是有意设计</text>
+  <rect x="515" y="225" width="220" height="60" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="625" y="243.5" font-size="10" fill="#6b21a8" text-anchor="middle">安全影响三</text>
+  <text x="625" y="258.5" font-size="10" fill="#6b21a8" text-anchor="middle">改写地址带来隐私副作用</text>
+  <text x="625" y="273.5" font-size="10" fill="#6b21a8" text-anchor="middle">服务器不知道最初的发送者是谁</text>
+</svg>

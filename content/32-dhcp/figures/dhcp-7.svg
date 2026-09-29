@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 341" width="760" height="341"
+     role="img" aria-labelledby="fig-dhcp-7-title fig-dhcp-7-desc">
+  <title id="fig-dhcp-7-title">SLAAC：前缀向路由器要，后一半用自己的 MAC 凑</title>
+  <desc id="fig-dhcp-7-desc">第一行说明 IPv6 地址更长，机器可以自己给自己凑一个唯一的地址，不必有人管一个地址池再往外租。中间两格是这地址的两半：前 64 位是本地网络前缀，向路由器要；后 64 位是接口标识，用自己的 MAC 地址位加工出来。下面一行说明前缀怎么来：邻居发现协议里的路由器请求广播出去问，路由器用路由器通告把前缀回过来。最下面一行给唯一性的理由与兜底：其他网络的前缀不同，同一段 MAC 位也不会出现在两台机器上，而 SLAAC 另外还有检测重复地址的机制，以防万一。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="341" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">SLAAC：前缀向路由器要，后一半用自己的 MAC 凑</text>
+  <rect x="25" y="64" width="710" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="86.2" font-size="12" fill="#1e40af" text-anchor="middle">IPv6 地址更长，机器可以自己凑一个唯一地址，不必有人管地址池</text>
+  <rect x="25" y="128" width="342.5" height="49.5" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="196.25" y="148.35" font-size="11" fill="#1e293b" text-anchor="middle">前 64 位：本地网络前缀</text>
+  <text x="196.25" y="164.85" font-size="11" fill="#1e293b" text-anchor="middle">向路由器要来的</text>
+  <rect x="392.5" y="128" width="342.5" height="49.5" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="563.75" y="148.35" font-size="11" fill="#1e293b" text-anchor="middle">后 64 位：接口标识</text>
+  <text x="563.75" y="164.85" font-size="11" fill="#1e293b" text-anchor="middle">把自己的 MAC 地址位加工成主机位</text>
+  <rect x="25" y="205.5" width="710" height="33" rx="6" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="380" y="225.85" font-size="11" fill="#1e40af" text-anchor="middle">前缀从哪来：邻居发现里，路由器请求播出去问，路由器通告把前缀回过来</text>
+  <rect x="25" y="266.5" width="710" height="49.5" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="286.85" font-size="11" fill="#166534" text-anchor="middle">为什么别人不会有同一个地址：其他网络的前缀不同，同一段 MAC 位也不会出现在两台机器上</text>
+  <text x="380" y="303.35" font-size="11" fill="#166534" text-anchor="middle">源文另外留了一道兜底：SLAAC 还有检测重复地址的机制，以防万一</text>
+</svg>

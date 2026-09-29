@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 293.5" width="760" height="293.5"
+     role="img" aria-labelledby="fig-dhcp-3-title fig-dhcp-3-desc">
+  <title id="fig-dhcp-3-title">谁在提供配置：本地服务器、中继与端口 67</title>
+  <desc id="fig-dhcp-3-desc">上排两格说服务器可以是谁：小网络里家用路由器自己就兼任 DHCP 服务器，一台机器同时干两件事；大网络里则单独有一台机器当服务器，不必在每个路由器里都跑这套代码。中间两行说明服务器必须和客户端在同一个局域网里，因为协议只在局域网内跑，而大网络里本地路由器可以把请求中继给远端那台真正跑协议的中心服务器。最下面一行说服务器手里有什么：网关与 DNS 服务器的信息，加上一池可分配的地址，而它监听的是固定的 UDP 67 端口。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="293.5" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">谁在提供配置：本地服务器、中继与端口 67</text>
+  <rect x="25" y="64" width="342.5" height="49.5" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="196.25" y="84.35" font-size="11" fill="#1e293b" text-anchor="middle">小网络：家用路由器兼任服务器</text>
+  <text x="196.25" y="100.85" font-size="11" fill="#1e293b" text-anchor="middle">一台机器同时干两件事</text>
+  <rect x="392.5" y="64" width="342.5" height="49.5" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="563.75" y="84.35" font-size="11" fill="#1e293b" text-anchor="middle">大网络：单独一台机器当服务器</text>
+  <text x="563.75" y="100.85" font-size="11" fill="#1e293b" text-anchor="middle">不必在每个路由器里都跑这套代码</text>
+  <rect x="25" y="141.5" width="710" height="49.5" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="380" y="161.85" font-size="11" fill="#1e293b" text-anchor="middle">服务器必须在同一个局域网里，因为协议只在局域网内跑</text>
+  <text x="380" y="178.35" font-size="11" fill="#1e293b" text-anchor="middle">大网络里本地路由器可以把请求中继给远端那台真正跑协议的中心服务器</text>
+  <rect x="25" y="219" width="710" height="49.5" rx="6" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="380" y="239.35" font-size="11" fill="#1e40af" text-anchor="middle">服务器手里有网关与 DNS 服务器的信息，还有一池可分配的地址</text>
+  <text x="380" y="255.85" font-size="11" fill="#1e40af" text-anchor="middle">它监听固定的 UDP 67 端口，等新机器来问</text>
+</svg>

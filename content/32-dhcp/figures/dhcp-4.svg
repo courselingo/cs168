@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 296.5" width="760" height="296.5"
+     role="img" aria-labelledby="fig-dhcp-4-title fig-dhcp-4-desc">
+  <title id="fig-dhcp-4-title">地址是借来的：租约、续租与回收</title>
+  <desc id="fig-dhcp-4-desc">第一行说明地址不是发给你，而是借给你，租约只在有限时间内有效，比如几小时到几天。中间三格是租约的三件事：租约生效、到期前必须续租、租约期内同一个地址不会许给别的客户端。最后一行说明没续上会怎样：地址到期后回到池子里，可以再分给后来的机器，所以「我的 IP 地址」在 DHCP 里是一个有时限的说法。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="296.5" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">地址是借来的：租约、续租与回收</text>
+  <rect x="25" y="64" width="710" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="86.2" font-size="12" fill="#1e40af" text-anchor="middle">地址不是发给你的，是借给你的：租约只在有限时间内有效（比如几小时到几天）</text>
+  <rect x="25" y="128" width="220" height="66" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="135" y="148.35" font-size="11" fill="#1e293b" text-anchor="middle">租约生效</text>
+  <text x="135" y="164.85" font-size="11" fill="#1e293b" text-anchor="middle">地址只借一段时间</text>
+  <text x="135" y="181.35" font-size="11" fill="#1e293b" text-anchor="middle">比如几小时到几天</text>
+  <rect x="270" y="128" width="220" height="66" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="380" y="148.35" font-size="11" fill="#1e293b" text-anchor="middle">到期前必须续租</text>
+  <text x="380" y="164.85" font-size="11" fill="#1e293b" text-anchor="middle">想继续用这个地址</text>
+  <text x="380" y="181.35" font-size="11" fill="#1e293b" text-anchor="middle">就得把租约续上</text>
+  <rect x="515" y="128" width="220" height="66" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="625" y="148.35" font-size="11" fill="#1e293b" text-anchor="middle">租约期内不再许人</text>
+  <text x="625" y="164.85" font-size="11" fill="#1e293b" text-anchor="middle">同一个地址不会</text>
+  <text x="625" y="181.35" font-size="11" fill="#1e293b" text-anchor="middle">同时给两个客户端</text>
+  <rect x="25" y="222" width="710" height="49.5" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="380" y="242.35" font-size="11" fill="#9d174d" text-anchor="middle">没续上的话，地址到期回到池子里，可以再分给后来的机器</text>
+  <text x="380" y="258.85" font-size="11" fill="#9d174d" text-anchor="middle">所以「我的 IP 地址」在 DHCP 里是一个有时限的说法</text>
+</svg>

@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 374" width="760" height="374"
+     role="img" aria-labelledby="fig-nat-5-title fig-nat-5-desc">
+  <title id="fig-nat-5-title">NAT 的代价与部署位置：尽量靠边缘，而 ISP 侧要跑 CGNAT</title>
+  <desc id="fig-nat-5-desc">上排三格是 NAT 给路由器加的三样活：除第三层头部外还要能解析第四层头部、要能改写第三层与第四层的头部、要维护一张连接状态表来跟踪所有流。第二排一条说明结果：每个包要更多 CPU 周期，每条流要更多内存。第三排三格是部署原则与两个方向相反的例子：放在尽量靠近网络边缘的地方以限制流的数量；家里那台路由器是好主意；高性能数据中心的路由器是坏主意。第四排三格是现实分布：今天几乎每个个人网络的 IPv4 都在跑小规模 NAT；IPv4 耗尽后 ISP 侧也要跑 CGNAT；而 IPv6 一般不用 NAT，因为地址足够多。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="374" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">NAT 的代价与部署位置：尽量靠边缘，而 ISP 侧要跑 CGNAT</text>
+  <rect x="25" y="64" width="220" height="45" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="135" y="82.5" font-size="10" fill="#b45309" text-anchor="middle">代价一</text>
+  <text x="135" y="97.5" font-size="10" fill="#b45309" text-anchor="middle">除第三层头部外，还要能解析第四层头部</text>
+  <rect x="270" y="64" width="220" height="45" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="82.5" font-size="10" fill="#b45309" text-anchor="middle">代价二</text>
+  <text x="380" y="97.5" font-size="10" fill="#b45309" text-anchor="middle">要能改写第三层与第四层的头部</text>
+  <rect x="515" y="64" width="220" height="45" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="625" y="82.5" font-size="10" fill="#b45309" text-anchor="middle">代价三</text>
+  <text x="625" y="97.5" font-size="10" fill="#b45309" text-anchor="middle">要维护连接状态表，跟踪所有流</text>
+  <rect x="25" y="137" width="710" height="30" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="380" y="155.5" font-size="10" fill="#1e293b" text-anchor="middle">代价的结果：每个包要更多 CPU 周期，每条流要更多内存</text>
+  <rect x="25" y="195" width="220" height="66" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="135" y="215.35" font-size="11" fill="#1e40af" text-anchor="middle">部署原则</text>
+  <text x="135" y="231.85" font-size="11" fill="#1e40af" text-anchor="middle">放在尽量靠近网络边缘的地方</text>
+  <text x="135" y="248.35" font-size="11" fill="#1e40af" text-anchor="middle">以限制穿过它的流的数量</text>
+  <rect x="270" y="195" width="220" height="66" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="223.6" font-size="11" fill="#166534" text-anchor="middle">好主意</text>
+  <text x="380" y="240.1" font-size="11" fill="#166534" text-anchor="middle">家里那台路由器，往外发连接的设备不多</text>
+  <rect x="515" y="195" width="220" height="66" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="625" y="223.6" font-size="11" fill="#b45309" text-anchor="middle">坏主意</text>
+  <text x="625" y="240.1" font-size="11" fill="#b45309" text-anchor="middle">高性能数据中心的路由器</text>
+  <rect x="25" y="289" width="220" height="60" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="135" y="315" font-size="10" fill="#1e40af" text-anchor="middle">现实：家用小规模 NAT</text>
+  <text x="135" y="330" font-size="10" fill="#1e40af" text-anchor="middle">今天几乎每个个人网络的 IPv4 都在跑</text>
+  <rect x="270" y="289" width="220" height="60" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="307.5" font-size="10" fill="#b45309" text-anchor="middle">ISP 侧：CGNAT</text>
+  <text x="380" y="322.5" font-size="10" fill="#b45309" text-anchor="middle">IPv4 耗尽后</text>
+  <text x="380" y="337.5" font-size="10" fill="#b45309" text-anchor="middle">ISP 也拿不出每户一个公网地址</text>
+  <rect x="515" y="289" width="220" height="60" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="625" y="315" font-size="10" fill="#166534" text-anchor="middle">IPv6 一般不用 NAT</text>
+  <text x="625" y="330" font-size="10" fill="#166534" text-anchor="middle">地址够给每一台计算机一个唯一的公网地址</text>
+</svg>

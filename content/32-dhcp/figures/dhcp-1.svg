@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 350" width="760" height="350"
+     role="img" aria-labelledby="fig-dhcp-1-title fig-dhcp-1-desc">
+  <title id="fig-dhcp-1-title">刚接入时配置表里空着的四格</title>
+  <desc id="fig-dhcp-1-desc">第一行说明一台机器刚接入网络时，配置表里有四格是空的。第二行是这四格：IP 地址、子网掩码、默认网关、DNS 递归解析器，它们都得由网络上的别人提供。第三行说明只有 MAC 地址不用问，它烧在硬件里、出厂就有，而 IP 地址按地理分配，接入新网络就得重新给一个。最后一行是手工填这四格的代价：每换一个网络都要重填一遍，普通用户多半不知道怎么填。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="350" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">刚接入时配置表里空着的四格</text>
+  <rect x="25" y="64" width="710" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="86.2" font-size="12" fill="#1e40af" text-anchor="middle">一台机器刚接入网络时，配置表里有四格是空的</text>
+  <rect x="25" y="128" width="155" height="33" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="102.5" y="148.35" font-size="11" fill="#1e40af" text-anchor="middle">IP 地址</text>
+  <rect x="210" y="128" width="155" height="33" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="287.5" y="148.35" font-size="11" fill="#1e40af" text-anchor="middle">子网掩码</text>
+  <rect x="395" y="128" width="155" height="33" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="472.5" y="148.35" font-size="11" fill="#1e40af" text-anchor="middle">默认网关</text>
+  <rect x="580" y="128" width="155" height="33" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="657.5" y="148.35" font-size="11" fill="#1e40af" text-anchor="middle">DNS 递归解析器</text>
+  <rect x="25" y="189" width="710" height="54" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="211.2" font-size="12" fill="#166534" text-anchor="middle">只有 MAC 地址不用问：它烧在硬件里，出厂就有</text>
+  <text x="380" y="229.2" font-size="12" fill="#166534" text-anchor="middle">IP 地址按地理分配，接入新网络就得重新给一个</text>
+  <rect x="25" y="271" width="710" height="54" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="380" y="293.2" font-size="12" fill="#9d174d" text-anchor="middle">也可以手工填这四格：每换一个网络都要重填一遍</text>
+  <text x="380" y="311.2" font-size="12" fill="#9d174d" text-anchor="middle">而且普通用户多半不知道怎么填</text>
+</svg>
