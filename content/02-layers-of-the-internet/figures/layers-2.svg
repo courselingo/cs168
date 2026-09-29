@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 201" width="760" height="201"
+     role="img" aria-labelledby="fig-layers-2-title fig-layers-2-desc">
+  <title id="fig-layers-2-title">一条链路，把两台机器连起来</title>
+  <desc id="fig-layers-2-desc">左边是机器 A，中间那条带箭头的线就是链路，右边是机器 B。链路可以用有线、无线、光纤等任何技术。把一片院子里彼此离得很近的机器都用链路连起来，就得到一片局域网。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="201" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">一条链路，把两台机器连起来</text>
+
+  <rect x="22" y="76" width="344" height="54" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="194" y="98" font-size="12" fill="#166534" text-anchor="middle">机器 A</text>
+  <text x="194" y="116" font-size="12" fill="#166534" text-anchor="middle">在这一头</text>
+
+  <rect x="394" y="76" width="344" height="54" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="566" y="98" font-size="12" fill="#166534" text-anchor="middle">机器 B</text>
+  <text x="566" y="116" font-size="12" fill="#166534" text-anchor="middle">在那一头</text>
+
+  <path d="M371,103 L 383,103" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+
+  <text x="380" y="152" font-size="11" fill="#1e293b" text-anchor="middle">中间的箭头就是链路：有线、无线、光纤都行</text>
+  <text x="380" y="176" font-size="10" fill="#64748b" text-anchor="middle">把一片院子里离得近的机器都用链路连起来，就得到一片局域网（LAN）</text>
+</svg>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 256" width="760" height="256"
+     role="img" aria-labelledby="fig-layers-10-title fig-layers-10-desc">
+  <title id="fig-layers-10-title">分层要付的三笔账</title>
+  <desc id="fig-layers-10-desc">三笔代价：每一层都要自己的一份首部，链路上跑的字节比原始数据多；只能跟相邻层说话，跳层不被允许，想为底层做优化会被结构挡住；上层对底下知道得越少，出问题越难定位是哪一层的问题。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="256" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">分层要付的三笔账</text>
+
+  <rect x="22" y="76" width="716" height="36" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="380" y="98" font-size="12" fill="#9d174d" text-anchor="middle">每层都要自己的首部：链路上跑的字节比原始数据多</text>
+
+  <rect x="22" y="137" width="716" height="36" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="380" y="159" font-size="12" fill="#9d174d" text-anchor="middle">只能跟相邻层说话：跳层不被允许，为底层做的优化会被结构挡住</text>
+
+  <rect x="22" y="198" width="716" height="36" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="380" y="220" font-size="12" fill="#9d174d" text-anchor="middle">看不见就管不着：上层对底下知道得越少，越难判断是哪一层出了问题</text>
+</svg>

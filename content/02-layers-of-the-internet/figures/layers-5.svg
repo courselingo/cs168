@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 220" width="760" height="220"
+     role="img" aria-labelledby="fig-layers-5-title fig-layers-5-desc">
+  <title id="fig-layers-5-title">网络的网络：一片片网络各自管自己，再互相连起来</title>
+  <desc id="fig-layers-5-desc">三片网络并排。每片网络内部用什么技术、怎么送数据，是它自己的事；对外只需要跟别的网络对接。端主机是在发信收信的机器，交换机自己不发也不收，只帮端主机互相通信。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="220" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">网络的网络：各自管自己，再互相连起来</text>
+
+  <rect x="22" y="76" width="220" height="72" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="132" y="98" font-size="12" fill="#1e40af" text-anchor="middle">网络 A</text>
+  <text x="132" y="116" font-size="12" fill="#1e40af" text-anchor="middle">自己定怎么送</text>
+  <text x="132" y="134" font-size="12" fill="#1e40af" text-anchor="middle">外面不管</text>
+
+  <rect x="270" y="76" width="220" height="72" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="98" font-size="12" fill="#1e40af" text-anchor="middle">网络 B</text>
+  <text x="380" y="116" font-size="12" fill="#1e40af" text-anchor="middle">自己定怎么送</text>
+  <text x="380" y="134" font-size="12" fill="#1e40af" text-anchor="middle">外面不管</text>
+
+  <rect x="518" y="76" width="220" height="72" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="628" y="98" font-size="12" fill="#1e40af" text-anchor="middle">网络 C</text>
+  <text x="628" y="116" font-size="12" fill="#1e40af" text-anchor="middle">自己定怎么送</text>
+  <text x="628" y="134" font-size="12" fill="#1e40af" text-anchor="middle">外面不管</text>
+
+  <path d="M247,112 L 259,112" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+  <path d="M495,112 L 507,112" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+
+  <text x="380" y="178" font-size="11" fill="#1e293b" text-anchor="middle">端主机是在发信收信的机器；交换机自己不发也不收，只帮端主机互相通信</text>
+  <text x="380" y="196" font-size="10" fill="#64748b" text-anchor="middle">分组一路上会跨过好几种链路技术，底下换成什么，第三层照样能用</text>
+</svg>

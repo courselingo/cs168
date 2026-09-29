@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 235" width="760" height="235"
+     role="img" aria-labelledby="fig-layers-3-title fig-layers-3-desc">
+  <title id="fig-layers-3-title">直觉做法：两片网络之间拉一堆线</title>
+  <desc id="fig-layers-3-desc">左边是直觉做法，两片网络里的每台机器都要跟对面连一条线，机器一多线就按平方长。右边是只把两台设备对接起来，线的数量不随机器数增长。这就是教材说「看起来不太高效」的那一步。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="235" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">直觉做法要拉的线，比它想解决的问题还多</text>
+
+  <rect x="22" y="66" width="344" height="54" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="194" y="88" font-size="12" fill="#9d174d" text-anchor="middle">直觉：机器跟机器直接连</text>
+  <text x="194" y="106" font-size="12" fill="#9d174d" text-anchor="middle">一台对一台，各拉一条线</text>
+
+  <rect x="22" y="150" width="98" height="36" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="71" y="172" font-size="12" fill="#9d174d" text-anchor="middle">1 号机</text>
+
+  <rect x="145" y="150" width="98" height="36" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="194" y="172" font-size="12" fill="#9d174d" text-anchor="middle">2 号机</text>
+
+  <rect x="268" y="150" width="98" height="36" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="317" y="172" font-size="12" fill="#9d174d" text-anchor="middle">3 号机</text>
+
+  <rect x="394" y="66" width="344" height="54" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="566" y="88" font-size="12" fill="#166534" text-anchor="middle">换个做法：只把两片网络对接</text>
+  <text x="566" y="106" font-size="12" fill="#166534" text-anchor="middle">机器有多少台都一样</text>
+
+  <rect x="394" y="150" width="98" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="443" y="172" font-size="12" fill="#166534" text-anchor="middle">网络 A</text>
+
+  <rect x="517" y="150" width="98" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="566" y="172" font-size="12" fill="#166534" text-anchor="middle">对接处</text>
+
+  <rect x="640" y="150" width="98" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="689" y="172" font-size="12" fill="#166534" text-anchor="middle">网络 B</text>
+
+  <text x="380" y="212" font-size="10" fill="#64748b" text-anchor="middle">机器一多，线按平方长；每加一片网络都要跟已有的每一片连一遍，这样就长不大</text>
+</svg>

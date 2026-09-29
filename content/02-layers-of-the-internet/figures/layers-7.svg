@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 247" width="760" height="247"
+     role="img" aria-labelledby="fig-layers-7-title fig-layers-7-desc">
+  <title id="fig-layers-7-title">四种可能的承诺，互联网选了最弱的那种</title>
+  <desc id="fig-layers-7-desc">四种可能的服务模型：保证一定送到、保证限时送到、不保证送到但失败报错、以及尽力而为。互联网选的是最弱的第四种，既不保证送到、也不报告结果，因为满足更弱要求的网络要好建得多。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="247" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">四种可能的承诺，互联网选了最弱的那种</text>
+
+  <rect x="22" y="66" width="344" height="54" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="194" y="88" font-size="12" fill="#1e293b" text-anchor="middle">第一种：保证一定送到</text>
+  <text x="194" y="106" font-size="12" fill="#1e293b" text-anchor="middle">送不到就算网络的错</text>
+
+  <rect x="394" y="66" width="344" height="54" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="566" y="88" font-size="12" fill="#1e293b" text-anchor="middle">第二种：保证限时送到</text>
+  <text x="566" y="106" font-size="12" fill="#1e293b" text-anchor="middle">连多久都替你兜住</text>
+
+  <rect x="22" y="145" width="344" height="54" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="194" y="167" font-size="12" fill="#1e293b" text-anchor="middle">第三种：不保证送到</text>
+  <text x="194" y="185" font-size="12" fill="#1e293b" text-anchor="middle">但失败时会报错</text>
+
+  <rect x="394" y="145" width="344" height="54" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="566" y="167" font-size="12" fill="#b45309" text-anchor="middle">第四种：尽力而为（选它）</text>
+  <text x="566" y="185" font-size="12" fill="#b45309" text-anchor="middle">不保证送到，也不报错</text>
+
+  <text x="380" y="222" font-size="10" fill="#64748b" text-anchor="middle">满足更弱要求的网络要好建得多，拿掉的保证被搬到了上面几层去补</text>
+</svg>

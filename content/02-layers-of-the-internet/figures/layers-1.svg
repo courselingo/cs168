@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 185" width="760" height="185"
+     role="img" aria-labelledby="fig-layers-1-title fig-layers-1-desc">
+  <title id="fig-layers-1-title">三种介质，同一件事：把比特送过空间</title>
+  <desc id="fig-layers-1-desc">三种可以采用的介质并排：电线上用电压的高低表示 1 和 0，无线电台用电磁波的强弱，光纤用光脉冲的有无。三者的技术差别很大，但要完成的任务完全一样，物理层不关心送的是什么内容。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="185" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">三种介质，同一件事：把比特送过空间</text>
+
+  <rect x="22" y="76" width="220" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="132" y="98" font-size="12" fill="#1e40af" text-anchor="middle">电线</text>
+  <text x="132" y="116" font-size="12" fill="#1e40af" text-anchor="middle">电压的高低</text>
+
+  <rect x="270" y="76" width="220" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="98" font-size="12" fill="#1e40af" text-anchor="middle">无线电</text>
+  <text x="380" y="116" font-size="12" fill="#1e40af" text-anchor="middle">电磁波的强弱</text>
+
+  <rect x="518" y="76" width="220" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="628" y="98" font-size="12" fill="#1e40af" text-anchor="middle">光纤</text>
+  <text x="628" y="116" font-size="12" fill="#1e40af" text-anchor="middle">光脉冲的有无</text>
+
+  <text x="380" y="160" font-size="11" fill="#64748b" text-anchor="middle">物理层不关心送的是什么内容，只把比特变成物理量、再在另一头还原</text>
+</svg>
