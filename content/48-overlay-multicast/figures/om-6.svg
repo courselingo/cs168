@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 210" width="760" height="210"
+     role="img" aria-labelledby="fig-om-6-title fig-om-6-desc">
+  <title id="fig-om-6-title">覆盖组播的两条代价与它今天的地位</title>
+  <desc id="fig-om-6-desc">上排两格是两条代价：额外开销（封装与解封装要花额外的时间与算力，这会影响性能）；它不是互联网内建的（应用开发者必须自己实现覆盖组播，而 IP 组播里只要把包发给组地址）。最下面一条是源文最后的评价：尽管有这些代价，覆盖组播的性能已经足够好，所以它在今天的互联网上被普遍部署。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="210" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">覆盖组播的两条代价与它今天的地位</text>
+  <rect x="25" y="64" width="342.5" height="60" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="196.25" y="82.5" font-size="10" fill="#b45309" text-anchor="middle">代价一：额外开销</text>
+  <text x="196.25" y="97.5" font-size="10" fill="#b45309" text-anchor="middle">封装与解封装要花额外的时间与算力</text>
+  <text x="196.25" y="112.5" font-size="10" fill="#b45309" text-anchor="middle">这会影响性能</text>
+  <rect x="392.5" y="64" width="342.5" height="60" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="563.75" y="82.5" font-size="10" fill="#b45309" text-anchor="middle">代价二：不是互联网内建的</text>
+  <text x="563.75" y="97.5" font-size="10" fill="#b45309" text-anchor="middle">应用开发者必须自己实现覆盖组播</text>
+  <text x="563.75" y="112.5" font-size="10" fill="#b45309" text-anchor="middle">而 IP 组播里只要把包发给组地址</text>
+  <rect x="25" y="152" width="710" height="33" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="172.35" font-size="11" fill="#166534" text-anchor="middle">源文最后的评价：尽管有这些代价，覆盖组播的性能已经足够好，所以它在今天的互联网上被普遍部署</text>
+</svg>

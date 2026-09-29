@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 408" width="760" height="408"
+     role="img" aria-labelledby="fig-om-5-title fig-om-5-desc">
+  <title id="fig-om-5-title">性能：拉伸系数，以及好拓扑与坏拓扑的对照</title>
+  <desc id="fig-om-5-desc">上面一条说明覆盖网的性能高度依赖那张虚构的图：虚拟拓扑里的链路与代价应当准确反映对应的底层拓扑。第二排两格是好例子的两个数与它的结果：A 到 C 的底层路径穿过 3 台路由器所以赋低代价、D 到 G 穿过 5 台所以赋高代价；覆盖图上算出的最短路与底层最短路相当接近，A 到 G 走在相当接近最短路的路上。中间一条是坏例子：底层拓扑一点没变、只挪了虚拟链路的位置，算出的 A 到 G 路径是 A、C、B、E、F、G，于是包在底层走在差得多的路上。第三排三格是拉伸系数：它是底层路径代价与覆盖路径代价之比；那个算例里底层代价 4、覆盖代价 1，于是拉伸是 4；方向是高拉伸不好、理想是接近 1。最下面一条是怎么建出低拉伸的拓扑：运营者有时手工设计，自组织协议则一开始随机选邻居，此后定期搜索候选邻居并测量距离，最好的候选若优于最差的现邻居，就删掉最差、加入最好。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="408" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">性能：拉伸系数，以及好拓扑与坏拓扑的对照</text>
+  <rect x="25" y="64" width="710" height="33" rx="6" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="380" y="84.35" font-size="11" fill="#1e40af" text-anchor="middle">覆盖网的性能高度依赖那张虚构的图：虚拟拓扑里的链路与代价应当准确反映对应的底层拓扑</text>
+  <rect x="25" y="125" width="342.5" height="60" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="196.25" y="143.5" font-size="10" fill="#166534" text-anchor="middle">好例子的两个数</text>
+  <text x="196.25" y="158.5" font-size="10" fill="#166534" text-anchor="middle">A 到 C 的底层路径穿过 3 台路由器，所以赋低代价</text>
+  <text x="196.25" y="173.5" font-size="10" fill="#166534" text-anchor="middle">D 到 G 穿过 5 台，所以赋高代价</text>
+  <rect x="392.5" y="125" width="342.5" height="60" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="563.75" y="143.5" font-size="10" fill="#166534" text-anchor="middle">好例子的结果</text>
+  <text x="563.75" y="158.5" font-size="10" fill="#166534" text-anchor="middle">覆盖图上算出的最短路与底层最短路相当接近</text>
+  <text x="563.75" y="173.5" font-size="10" fill="#166534" text-anchor="middle">A 到 G 走在相当接近最短路的路上</text>
+  <rect x="25" y="213" width="710" height="27" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="229.65" font-size="9" fill="#b45309" text-anchor="middle">坏例子：底层拓扑一点没变，只挪了虚拟链路的位置；算出的 A 到 G 路径是 A、C、B、E、F、G，于是包在底层走在差得多的路上</text>
+  <rect x="25" y="268" width="220" height="60" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="135" y="294" font-size="10" fill="#6b21a8" text-anchor="middle">拉伸系数</text>
+  <text x="135" y="309" font-size="10" fill="#6b21a8" text-anchor="middle">底层路径代价与覆盖路径代价之比</text>
+  <rect x="270" y="268" width="220" height="60" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380" y="286.5" font-size="10" fill="#6b21a8" text-anchor="middle">那个算例</text>
+  <text x="380" y="301.5" font-size="10" fill="#6b21a8" text-anchor="middle">底层代价 4、覆盖代价 1</text>
+  <text x="380" y="316.5" font-size="10" fill="#6b21a8" text-anchor="middle">于是拉伸是 4</text>
+  <rect x="515" y="268" width="220" height="60" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="625" y="286.5" font-size="10" fill="#6b21a8" text-anchor="middle">好坏方向</text>
+  <text x="625" y="301.5" font-size="10" fill="#6b21a8" text-anchor="middle">高拉伸不好：底层路径长了好几倍</text>
+  <text x="625" y="316.5" font-size="10" fill="#6b21a8" text-anchor="middle">理想是接近 1</text>
+  <rect x="25" y="356" width="710" height="27" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="380" y="372.65" font-size="9" fill="#1e293b" text-anchor="middle">怎么建出低拉伸的拓扑：运营者有时手工设计；自组织协议则一开始随机选邻居，此后定期搜索候选邻居并测量距离，最好的候选若优于最差的现邻居，就删掉最差、加入最好</text>
+</svg>

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 429" width="760" height="429"
+     role="img" aria-labelledby="fig-om-2-title fig-om-2-desc">
+  <title id="fig-om-2-title">覆盖网与底层网：虚构的虚拟链路架在真实链路上</title>
+  <desc id="fig-om-2-desc">上面一条是办法：画一张虚拟拓扑，让主机之间直接相连。第二条把虚构性说透：这些虚拟链路现实中并不对应物理链路，沿它发一个包仍然要穿过好几台真实路由器与链路。第二排两格是画上它之后能做什么（假装所有主机在一个很小的本地网络里，于是它们能在彼此之间跑组播路由算法，例如建一棵以 D 为核心的核心树）与一次虚拟链路发送的真实代价（要转发给 D 与 B 就得发两个单播包，一个写 A 到 D、一个写 A 到 B）。第三排三格是责任的翻转与对比：终端主机在第七层跑组播协议、扮演虚拟路由器、自己建表并沿虚拟链路转发；路由器完全不必考虑组播、跑标准单播协议就行；而 IP 组播里是路由器跑组播协议、主机只要把包发给一个组地址。第四排三格是两层的名字与它们之间的封装：覆盖网由虚拟链路构成、表也基于虚拟链路（例如收到来自 A 的包就转发给 C 与 D）；底层网由真实链路与路由器构成、表基于物理链路（例如到 G 的下一跳是 R2）；两层靠封装接起来，内层头部写覆盖网的目的地、外层头部写虚拟链路的下一跳并单播过去。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="429" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">覆盖网与底层网：虚构的虚拟链路架在真实链路上</text>
+  <rect x="25" y="64" width="710" height="33" rx="6" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="380" y="84.35" font-size="11" fill="#1e40af" text-anchor="middle">办法：画一张虚拟拓扑，让主机之间直接相连</text>
+  <rect x="25" y="125" width="710" height="27" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="141.65" font-size="9" fill="#b45309" text-anchor="middle">源文紧接着说透：这些虚拟链路是虚构的，现实中并不对应物理链路；沿它发一个包仍然要穿过好几台真实路由器与链路</text>
+  <rect x="25" y="180" width="342.5" height="60" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="196.25" y="198.5" font-size="10" fill="#1e40af" text-anchor="middle">画上它之后能做什么</text>
+  <text x="196.25" y="213.5" font-size="10" fill="#1e40af" text-anchor="middle">假装所有主机在一个很小的本地网络里</text>
+  <text x="196.25" y="228.5" font-size="10" fill="#1e40af" text-anchor="middle">于是它们能在彼此之间跑组播路由算法，例如建一棵以 D 为核心的核心树</text>
+  <rect x="392.5" y="180" width="342.5" height="60" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="563.75" y="198.5" font-size="10" fill="#1e40af" text-anchor="middle">一次虚拟链路发送的真实代价</text>
+  <text x="563.75" y="213.5" font-size="10" fill="#1e40af" text-anchor="middle">要转发给 D 与 B 就得发两个单播包</text>
+  <text x="563.75" y="228.5" font-size="10" fill="#1e40af" text-anchor="middle">一个写 A 到 D，一个写 A 到 B</text>
+  <rect x="25" y="268" width="220" height="54" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="135" y="284.65" font-size="9" fill="#166534" text-anchor="middle">责任的翻转：终端主机</text>
+  <text x="135" y="298.15" font-size="9" fill="#166534" text-anchor="middle">在第七层跑组播协议，扮演虚拟路由器</text>
+  <text x="135" y="311.65" font-size="9" fill="#166534" text-anchor="middle">自己建表、知道出向虚拟链路、沿它转发</text>
+  <rect x="270" y="268" width="220" height="54" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="284.65" font-size="9" fill="#166534" text-anchor="middle">责任的翻转：路由器</text>
+  <text x="380" y="298.15" font-size="9" fill="#166534" text-anchor="middle">完全不必考虑组播</text>
+  <text x="380" y="311.65" font-size="9" fill="#166534" text-anchor="middle">跑标准单播协议就可以</text>
+  <rect x="515" y="268" width="220" height="54" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="625" y="284.65" font-size="9" fill="#1e293b" text-anchor="middle">与 IP 组播对比</text>
+  <text x="625" y="298.15" font-size="9" fill="#1e293b" text-anchor="middle">那时是路由器跑组播协议</text>
+  <text x="625" y="311.65" font-size="9" fill="#1e293b" text-anchor="middle">主机只要把包发给一个组地址</text>
+  <rect x="25" y="350" width="220" height="54" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="135" y="366.65" font-size="9" fill="#6b21a8" text-anchor="middle">覆盖网</text>
+  <text x="135" y="380.15" font-size="9" fill="#6b21a8" text-anchor="middle">虚拟链路构成，表基于虚拟链路</text>
+  <text x="135" y="393.65" font-size="9" fill="#6b21a8" text-anchor="middle">例如收到来自 A 的包就转发给 C 与 D</text>
+  <rect x="270" y="350" width="220" height="54" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380" y="366.65" font-size="9" fill="#6b21a8" text-anchor="middle">底层网</text>
+  <text x="380" y="380.15" font-size="9" fill="#6b21a8" text-anchor="middle">真实链路与路由器构成，表基于物理链路</text>
+  <text x="380" y="393.65" font-size="9" fill="#6b21a8" text-anchor="middle">例如到 G 的下一跳是 R2</text>
+  <rect x="515" y="350" width="220" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="625" y="366.65" font-size="9" fill="#1e40af" text-anchor="middle">两层靠封装接起来</text>
+  <text x="625" y="380.15" font-size="9" fill="#1e40af" text-anchor="middle">内层头部写覆盖网的目的地</text>
+  <text x="625" y="393.65" font-size="9" fill="#1e40af" text-anchor="middle">外层头部写虚拟链路的下一跳，单播过去</text>
+</svg>

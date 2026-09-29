@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 295" width="760" height="295"
+     role="img" aria-labelledby="fig-om-4-title fig-om-4-desc">
+  <title id="fig-om-4-title">覆盖组播的五条好处</title>
+  <desc id="fig-om-4-desc">上面一条是第一条也是最大的那条：部署容易，因为从底层网路由器看，覆盖网只是又一个收发单播包的应用，路由器与协议不需要任何改动。第二排两格是第二、三条：不需要标准化（每个应用用自己的实现或协议，不必在不同应用之间统一）；自由定义目标（自己画虚拟拓扑、自己设链路代价、自己算路径，有的组在乎时延、有的在乎吞吐）。第三排三格是第四、五条与一类不寻常的模型：访问控制更容易（实现可以被定制成只允许被授权的用户参与，什么叫授权由每个应用自己决定）；各自决定生意模型（可以定制成跟踪用量并据此收费，例如跟踪谁在看直播并据此收费）；而点对点文件共享可能被用来非法传播，这样的系统可能希望不跟踪用户。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="295" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">覆盖组播的五条好处</text>
+  <rect x="25" y="64" width="710" height="30" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="82.5" font-size="10" fill="#166534" text-anchor="middle">好处一：部署容易。从底层网路由器看，覆盖网只是又一个收发单播包的应用，路由器与协议不需要任何改动</text>
+  <rect x="25" y="122" width="342.5" height="60" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="196.25" y="140.5" font-size="10" fill="#1e40af" text-anchor="middle">好处二：不需要标准化</text>
+  <text x="196.25" y="155.5" font-size="10" fill="#1e40af" text-anchor="middle">每个应用用自己的实现或协议</text>
+  <text x="196.25" y="170.5" font-size="10" fill="#1e40af" text-anchor="middle">不必在不同应用之间统一</text>
+  <rect x="392.5" y="122" width="342.5" height="60" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="563.75" y="140.5" font-size="10" fill="#1e40af" text-anchor="middle">好处三：自由定义目标</text>
+  <text x="563.75" y="155.5" font-size="10" fill="#1e40af" text-anchor="middle">自己画虚拟拓扑、自己设链路代价、自己算路径</text>
+  <text x="563.75" y="170.5" font-size="10" fill="#1e40af" text-anchor="middle">有的组在乎时延，有的在乎吞吐</text>
+  <rect x="25" y="210" width="220" height="60" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="135" y="228.5" font-size="10" fill="#6b21a8" text-anchor="middle">好处四：访问控制更容易</text>
+  <text x="135" y="243.5" font-size="10" fill="#6b21a8" text-anchor="middle">实现可以被定制成只允许被授权的用户参与</text>
+  <text x="135" y="258.5" font-size="10" fill="#6b21a8" text-anchor="middle">什么叫授权由每个应用自己决定</text>
+  <rect x="270" y="210" width="220" height="60" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380" y="228.5" font-size="10" fill="#6b21a8" text-anchor="middle">好处五：各自决定生意模型</text>
+  <text x="380" y="243.5" font-size="10" fill="#6b21a8" text-anchor="middle">可以定制成跟踪用量并据此收费</text>
+  <text x="380" y="258.5" font-size="10" fill="#6b21a8" text-anchor="middle">例如跟踪谁在看直播并据此收费</text>
+  <rect x="515" y="210" width="220" height="60" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="625" y="229.65" font-size="9" fill="#1e293b" text-anchor="middle">还有更不寻常的模型</text>
+  <text x="625" y="243.15" font-size="9" fill="#1e293b" text-anchor="middle">点对点文件共享可能被用来非法传播</text>
+  <text x="625" y="256.65" font-size="9" fill="#1e293b" text-anchor="middle">这样的系统可能希望不跟踪用户</text>
+</svg>

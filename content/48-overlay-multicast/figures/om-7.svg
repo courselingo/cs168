@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 335" width="760" height="335"
+     role="img" aria-labelledby="fig-om-7-title fig-om-7-desc">
+  <title id="fig-om-7-title">责任从路由器手里交到终端主机手里</title>
+  <desc id="fig-om-7-desc">上面一条说明这张图要把这一讲串起来的一句话。下面四格是那组对照：IP 组播那一侧，大部分甚至全部路由器得懂组播协议，而终端主机只要把包发给一个组地址；覆盖组播这一侧，只有参与其中的节点要懂协议，终端主机扮演虚拟路由器、自己建表与封装；换来的是底层网不用改任何东西、不必标准化、访问控制与生意模型自己做主；付出的是封装与解封装的开销以及开发者得自己实现。最下面一条说明这也是这一段的收束：IP 组播停在域内，而覆盖组播用把责任交给终端主机换来部署上的可行性。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="335" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">责任从路由器手里交到终端主机手里</text>
+  <rect x="25" y="64" width="710" height="33" rx="6" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="380" y="84.35" font-size="11" fill="#1e40af" text-anchor="middle">一句话把这一讲串起来：责任从路由器手里交到终端主机手里</text>
+  <rect x="25" y="125" width="342.5" height="49.5" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="196.25" y="145.35" font-size="11" fill="#1e293b" text-anchor="middle">IP 组播那一侧</text>
+  <text x="196.25" y="161.85" font-size="11" fill="#1e293b" text-anchor="middle">大部分甚至全部路由器得懂组播协议</text>
+  <rect x="392.5" y="125" width="342.5" height="49.5" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="563.75" y="145.35" font-size="11" fill="#166534" text-anchor="middle">覆盖组播这一侧</text>
+  <text x="563.75" y="161.85" font-size="11" fill="#166534" text-anchor="middle">只有参与其中的节点要懂协议</text>
+  <rect x="25" y="202.5" width="342.5" height="49.5" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="196.25" y="222.85" font-size="11" fill="#1e40af" text-anchor="middle">换来什么</text>
+  <text x="196.25" y="239.35" font-size="11" fill="#1e40af" text-anchor="middle">底层网不用改任何东西，不必标准化</text>
+  <rect x="392.5" y="202.5" width="342.5" height="49.5" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="563.75" y="222.85" font-size="11" fill="#b45309" text-anchor="middle">付出什么</text>
+  <text x="563.75" y="239.35" font-size="11" fill="#b45309" text-anchor="middle">封装与解封装的开销，开发者得自己实现</text>
+  <rect x="25" y="280" width="710" height="30" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380" y="298.5" font-size="10" fill="#6b21a8" text-anchor="middle">这也是这一段的收束：IP 组播停在域内，而覆盖组播用「把责任交给终端主机」换来部署上的可行性</text>
+</svg>
