@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 211" width="760" height="211"
+     role="img" aria-labelledby="fig-wl-7-title fig-wl-7-desc">
+  <title id="fig-wl-7-title">环境在变：缓慢的自由空间损耗、成片起伏的阴影、细粒度抖动的多径衰落</title>
+  <desc id="fig-wl-7-desc">三格并排：自由空间路径损耗随距离缓慢而稳定地下降，来自平方反比；阴影是障碍物挡住信号、信号只能绕射或反射过去，收端因此更弱，而它不一定单调，走过一栋楼时可能先弱后强；多径衰落是信号在障碍物上反射折射后有几份错开的副本到达收端，相位不同就互相干涉，带来非常细粒度的起伏。设备不动时强度是曲线上的一个点，移动就在曲线上走，环境一变曲线本身也变。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="211" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">环境变化带来的三张图</text>
+
+  <rect x="22" y="66" width="222" height="90" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="133" y="88" font-size="12" fill="#1e40af" text-anchor="middle">自由空间路径损耗</text>
+  <text x="133" y="106" font-size="12" fill="#1e40af" text-anchor="middle">缓慢、稳定下降</text>
+  <text x="133" y="124" font-size="12" fill="#1e40af" text-anchor="middle">来自平方反比</text>
+  <text x="133" y="142" font-size="12" fill="#1e40af" text-anchor="middle">可预测</text>
+
+  <rect x="269" y="66" width="222" height="90" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="88" font-size="12" fill="#b45309" text-anchor="middle">阴影</text>
+  <text x="380" y="106" font-size="12" fill="#b45309" text-anchor="middle">障碍物挡住信号</text>
+  <text x="380" y="124" font-size="12" fill="#b45309" text-anchor="middle">绕射或反射过去</text>
+  <text x="380" y="142" font-size="12" fill="#b45309" text-anchor="middle">不一定单调</text>
+
+  <rect x="516" y="66" width="222" height="90" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="627" y="88" font-size="12" fill="#9d174d" text-anchor="middle">多径衰落</text>
+  <text x="627" y="106" font-size="12" fill="#9d174d" text-anchor="middle">多份副本错开到达</text>
+  <text x="627" y="124" font-size="12" fill="#9d174d" text-anchor="middle">相位不同互相干涉</text>
+  <text x="627" y="142" font-size="12" fill="#9d174d" text-anchor="middle">起伏非常细</text>
+
+  <text x="380" y="186" font-size="10" fill="#64748b" text-anchor="middle">总效果是三张图相加：设备不动是一个点，动起来就在曲线上走</text>
+</svg>

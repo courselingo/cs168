@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 223" width="760" height="223"
+     role="img" aria-labelledby="fig-wl-6-title fig-wl-6-desc">
+  <title id="fig-wl-6-title">链路预算：把每一段的增益与损耗直接加减</title>
+  <desc id="fig-wl-6-desc">四行自上而下：接收功率等于发射功率加上所有增益、减去所有损耗，再与接收机灵敏度比较，预算为正链路可用、为负则不可用；分贝是取对数的写法，所以加法代替乘法，放大一千倍是加 30 dB，衰减到百分之一是减 20 dB；例子中发射 10 dB，三段电缆与避雷器损耗 0.44、0.1、2.21 dB，发信天线加 25 dB，十公里空间损耗 120 dB，收信天线加 25 dB，再损耗 0.44、0.1、2.21 dB，得到 −65.5 dB；灵敏度是 −80 dB，所以链路可用，余量 14.5 dB。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="223" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">链路预算</text>
+
+  <rect x="22" y="76" width="716" height="90" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="98" font-size="12" fill="#1e40af" text-anchor="middle">接收功率 = 发射功率 + 所有增益 − 所有损耗，再与接收机灵敏度比较</text>
+  <text x="380" y="116" font-size="12" fill="#1e40af" text-anchor="middle">用分贝算就能加减代替乘除：放大一千倍是加 30 dB，衰减到百分之一是减 20 dB</text>
+  <text x="380" y="134" font-size="12" fill="#1e40af" text-anchor="middle">例子：10 dB 出发，电缆与避雷器损耗，天线各加 25 dB，空间损耗 120 dB</text>
+  <text x="380" y="152" font-size="12" fill="#1e40af" text-anchor="middle">得到 −65.5 dB，而灵敏度是 −80 dB，预算为正，链路余量 14.5 dB</text>
+
+  <text x="380" y="198" font-size="10" fill="#64748b" text-anchor="middle">余量为负链路就不工作；余量越高，越能扛干扰</text>
+</svg>

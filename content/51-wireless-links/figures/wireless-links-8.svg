@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 211" width="760" height="211"
+     role="img" aria-labelledby="fig-wl-8-title fig-wl-8-desc">
+  <title id="fig-wl-8-title">CSMA 的两个经典问题：隐藏终端在收端碰撞，暴露终端白白放弃机会</title>
+  <desc id="fig-wl-8-desc">左栏是隐藏终端：A 与 C 都要发给 B，A 先发，而 C 听不到 A 的信号于是也发，于是在 B 处碰撞；问题是两个发送方互相听不到，无法察觉对方在发。右栏是暴露终端：B 发给 A、C 发给 D，B 的信号传到了 C，C 听到后保持沉默，但其实 B 与 C 本可以同时发，碰撞只会发生在 B 与 C 之间，两个接收方 A 与 D 都察觉不到。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="211" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">CSMA 的两个经典问题</text>
+
+  <rect x="22" y="66" width="344" height="90" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="194" y="88" font-size="12" fill="#9d174d" text-anchor="middle">隐藏终端</text>
+  <text x="194" y="106" font-size="12" fill="#9d174d" text-anchor="middle">A 与 C 都发给 B</text>
+  <text x="194" y="124" font-size="12" fill="#9d174d" text-anchor="middle">C 听不到 A，于是也发</text>
+  <text x="194" y="142" font-size="12" fill="#9d174d" text-anchor="middle">碰撞发生在 B 处</text>
+
+  <rect x="394" y="66" width="344" height="90" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="566" y="88" font-size="12" fill="#b45309" text-anchor="middle">暴露终端</text>
+  <text x="566" y="106" font-size="12" fill="#b45309" text-anchor="middle">B 发给 A、C 发给 D</text>
+  <text x="566" y="124" font-size="12" fill="#b45309" text-anchor="middle">C 听到 B 的信号就沉默</text>
+  <text x="566" y="142" font-size="12" fill="#b45309" text-anchor="middle">其实两边本可以同时发</text>
+
+  <text x="380" y="186" font-size="10" fill="#64748b" text-anchor="middle">一个要求发不成的碰撞，一个白白放弃机会</text>
+</svg>

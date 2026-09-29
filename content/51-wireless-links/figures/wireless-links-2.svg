@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 187" width="760" height="187"
+     role="img" aria-labelledby="fig-wl-2-title fig-wl-2-desc">
+  <title id="fig-wl-2-title">有线默认私有，无线默认共享，想反过来都要额外付出代价</title>
+  <desc id="fig-wl-2-desc">左栏是有线：一根线连两台设备，把它变成挂多台设备的总线需要额外工作，外部信号很难干扰（可以加屏蔽层），用电压传数据，高电压是 1、低电压是 0。右栏是无线：信号向各方向辐射，默认就是共享的，要做成私有链路反而需要额外工作，也很难屏蔽外部干扰，用无线电波承载数据。差别不在能不能，而在不做额外工作时会怎样。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="187" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">默认属性正好相反</text>
+
+  <rect x="22" y="76" width="344" height="54" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="194" y="98" font-size="12" fill="#166534" text-anchor="middle">有线：默认私有（点对点）</text>
+  <text x="194" y="116" font-size="12" fill="#166534" text-anchor="middle">能屏蔽，用电压传比特</text>
+
+  <rect x="394" y="76" width="344" height="54" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="566" y="98" font-size="12" fill="#9d174d" text-anchor="middle">无线：默认共享</text>
+  <text x="566" y="116" font-size="12" fill="#9d174d" text-anchor="middle">信号四散，难屏蔽，用无线电波</text>
+
+  <text x="380" y="162" font-size="10" fill="#64748b" text-anchor="middle">想做私有链路，无线反而要额外工作</text>
+</svg>

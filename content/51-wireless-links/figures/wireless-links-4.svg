@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 205" width="760" height="205"
+     role="img" aria-labelledby="fig-wl-4-title fig-wl-4-desc">
+  <title id="fig-wl-4-title">SINR 决定信号比噪声强多少，香农容量决定这条信道最多能跑多少</title>
+  <desc id="fig-wl-4-desc">四行自上而下：噪声始终存在，本底那部分叫噪声底，干扰指别的发送方发出的信号；SINR 是信号功率除以干扰加噪声功率，无量纲，用分贝表示时 0 dB 对应比值 1、增加 10 dB 对应 10 倍；噪声越大就要用更大的功率发，也可以用纠错码带来的编码增益补救；香农容量给出单位时间能发的数据上限，带宽越大或 SINR 越高上限越高，电话系统的例子是 3 kHz 带宽、约 20 dB 的 SINR，容量约 20 kbps。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="205" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">噪声、干扰与两个公式</text>
+
+  <rect x="22" y="76" width="716" height="72" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="98" font-size="12" fill="#1e40af" text-anchor="middle">SINR = 信号功率 ÷（干扰功率 + 噪声功率），无量纲比值</text>
+  <text x="380" y="116" font-size="12" fill="#1e40af" text-anchor="middle">用分贝写：0 dB 是比值 1，增加 10 dB 是比值 10 倍</text>
+  <text x="380" y="134" font-size="12" fill="#1e40af" text-anchor="middle">香农容量：带宽越大、SINR 越高，单位时间能发的越多</text>
+
+  <text x="380" y="180" font-size="10" fill="#64748b" text-anchor="middle">电话系统：3 kHz 带宽、约 20 dB 的 SINR，容量约 20 kbps</text>
+</svg>

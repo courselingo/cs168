@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 205" width="760" height="205"
+     role="img" aria-labelledby="fig-wl-1-title fig-wl-1-desc">
+  <title id="fig-wl-1-title">四个差异都落在第一层与第二层，其中一条例外会破坏端到端原则</title>
+  <desc id="fig-wl-1-desc">左栏列四个差异：无线是共享介质而无线不是、无线信号随距离衰减而无线不衰减、无线环境会快速变化、无线的碰撞更难检测。右栏说这些差异主要影响第一层与第二层，并指出其中一个例外：为了性能把可靠性实现在第二层，也就是主动破坏端到端原则，这一条留到后面讲。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="205" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">四个关键差异</text>
+
+  <rect x="22" y="76" width="344" height="72" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="194" y="98" font-size="12" fill="#1e40af" text-anchor="middle">共享介质、随距离衰减</text>
+  <text x="194" y="116" font-size="12" fill="#1e40af" text-anchor="middle">环境快速变化</text>
+  <text x="194" y="134" font-size="12" fill="#1e40af" text-anchor="middle">碰撞更难检测</text>
+
+  <rect x="394" y="76" width="344" height="72" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="566" y="98" font-size="12" fill="#b45309" text-anchor="middle">主要落在第一、二层</text>
+  <text x="566" y="116" font-size="12" fill="#b45309" text-anchor="middle">有一个例外</text>
+  <text x="566" y="134" font-size="12" fill="#b45309" text-anchor="middle">为性能在二层做可靠性</text>
+
+  <text x="380" y="180" font-size="10" fill="#64748b" text-anchor="middle">那个例外会主动破坏端到端原则，后面几讲会回来用它</text>
+</svg>

@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 187" width="760" height="187"
+     role="img" aria-labelledby="fig-wl-9-title fig-wl-9-desc">
+  <title id="fig-wl-9-title">MACA 的顺序：RTS 请求、CTS 由接收方放行并警告、DS 宣布发送、然后是数据与确认</title>
+  <desc id="fig-wl-9-desc">箭头依次向右四步：发送方先发 RTS 请求发送、附带数据长度；接收方回 CTS 放行，同时警告自己范围内的人保持安静，这一步解决了隐藏终端；MACAW 又加了 DS，由发送方宣布自己要发多少比特，并强制发送方范围内的人安静；最后是数据与接收方的确认。听到 RTS 要安静一个时隙以免冲掉 CTS，随后听到 CTS 就要在整个数据传送期间安静。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="187" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">MACA 与 MACAW 的顺序</text>
+
+  <rect x="22" y="76" width="160" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="102" y="98" font-size="12" fill="#1e40af" text-anchor="middle">RTS 请求</text>
+  <text x="102" y="116" font-size="12" fill="#1e40af" text-anchor="middle">带上数据长度</text>
+
+  <rect x="207" y="76" width="160" height="54" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="287" y="98" font-size="12" fill="#b45309" text-anchor="middle">CTS 放行</text>
+  <text x="287" y="116" font-size="12" fill="#b45309" text-anchor="middle">并警告范围内的人</text>
+
+  <rect x="392" y="76" width="160" height="54" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="472" y="98" font-size="12" fill="#9d174d" text-anchor="middle">DS 宣布</text>
+  <text x="472" y="116" font-size="12" fill="#9d174d" text-anchor="middle">我要发多少比特</text>
+
+  <rect x="577" y="76" width="160" height="54" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="657" y="98" font-size="12" fill="#166534" text-anchor="middle">数据与确认</text>
+  <text x="657" y="116" font-size="12" fill="#166534" text-anchor="middle">确认换来可靠性</text>
+
+  <path d="M187,103 L 196,103" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+  <path d="M372,103 L 381,103" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+  <path d="M557,103 L 566,103" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+
+  <text x="380" y="162" font-size="10" fill="#64748b" text-anchor="middle">RTS 是请求，DS 是确认请求已被批准，两者不重复</text>
+</svg>

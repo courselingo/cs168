@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 187" width="760" height="187"
+     role="img" aria-labelledby="fig-wl-10-title fig-wl-10-desc">
+  <title id="fig-wl-10-title">MACAW 的三项补充：共用竞争窗口、DS 补同步、RRTS 让接收方替发送方争抢</title>
+  <desc id="fig-wl-10-desc">三格并排：MACA 的退避不公平，赢家一直赢，改法是让所有人共用同一个竞争窗口，窗口值放在分组首部里，收到就跟着设，更新也更温和（失败乘 1.5、成功减 1）；DS 除了解开暴露终端，还让发送方告诉所有人下一轮争抢何时开始；RRTS 则让接收方替发送方去争抢，听到 RRTS 就安静两个时隙。教材最后留了一个未解情形：RRTS 只在听到 RTS 时才发，而接收方可能根本听不到 RTS。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="187" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">MACAW 的几项补充</text>
+
+  <rect x="22" y="76" width="222" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="133" y="98" font-size="12" fill="#1e40af" text-anchor="middle">共用同一个竞争窗口</text>
+  <text x="133" y="116" font-size="12" fill="#1e40af" text-anchor="middle">失败乘 1.5、成功减 1</text>
+
+  <rect x="269" y="76" width="222" height="54" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="98" font-size="12" fill="#b45309" text-anchor="middle">DS 补同步</text>
+  <text x="380" y="116" font-size="12" fill="#b45309" text-anchor="middle">告诉大家下一轮何时开始</text>
+
+  <rect x="516" y="76" width="222" height="54" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="627" y="98" font-size="12" fill="#166534" text-anchor="middle">RRTS 补同步</text>
+  <text x="627" y="116" font-size="12" fill="#166534" text-anchor="middle">接收方替发送方争抢</text>
+
+  <text x="380" y="162" font-size="10" fill="#64748b" text-anchor="middle">教材说明 MACAW 的原始论文把一个情形留着没有解决</text>
+</svg>

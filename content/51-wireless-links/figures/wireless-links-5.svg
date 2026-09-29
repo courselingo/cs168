@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 223" width="760" height="223"
+     role="img" aria-labelledby="fig-wl-5-title fig-wl-5-desc">
+  <title id="fig-wl-5-title">自由空间模型：信号摊在半径 r 的球面上，于是功率按距离平方衰减</title>
+  <desc id="fig-wl-5-desc">左栏是平方反比定律：信号向各方向辐射，某一瞬间铺在半径 r 的球面上，球面积 4πr² 按距离平方增长，所以接收功率与距离平方成反比，距离翻倍只剩四分之一；右栏是 Friis 方程的两个因子：两端天线增益、来自平方反比定律的因子、以及接收天线有效孔径 λ²/4π（公式里的 (4π)² 正是这两个 4π 相乘）。自由空间是理想模型，现实有障碍物就达不到这个值。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="223" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">自由空间模型</text>
+
+  <rect x="22" y="76" width="344" height="90" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="194" y="98" font-size="12" fill="#1e40af" text-anchor="middle">平方反比定律</text>
+  <text x="194" y="116" font-size="12" fill="#1e40af" text-anchor="middle">铺在半径 r 的球面上</text>
+  <text x="194" y="134" font-size="12" fill="#1e40af" text-anchor="middle">球面积 4πr² 按平方长</text>
+  <text x="194" y="152" font-size="12" fill="#1e40af" text-anchor="middle">距离翻倍只剩四分之一</text>
+
+  <rect x="394" y="76" width="344" height="90" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="566" y="98" font-size="12" fill="#166534" text-anchor="middle">Friis 方程</text>
+  <text x="566" y="116" font-size="12" fill="#166534" text-anchor="middle">两端增益 × 平方反比</text>
+  <text x="566" y="134" font-size="12" fill="#166534" text-anchor="middle">再乘接收天线有效孔径</text>
+  <text x="566" y="152" font-size="12" fill="#166534" text-anchor="middle">孔径是 λ²/4π</text>
+
+  <text x="380" y="198" font-size="10" fill="#64748b" text-anchor="middle">自由空间是理想模型：现实有障碍物，实际达不到这个理想值</text>
+</svg>

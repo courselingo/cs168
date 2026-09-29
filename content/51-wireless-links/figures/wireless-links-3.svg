@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 205" width="760" height="205"
+     role="img" aria-labelledby="fig-wl-3-title fig-wl-3-desc">
+  <title id="fig-wl-3-title">调制：数据信号叠在高频载波上，AM 改高度，FM 改胖瘦</title>
+  <desc id="fig-wl-3-desc">三格并排：直接画 0 与 1 得到的波形频率太低，而低频信号又弱又难传，所以先要一个频率固定的载波，它不携带信息但容易传；幅度调制按数据信号改变载波高度，发 1 就高、发 0 就矮；频率调制改变载波的频率，发 1 就瘦（频率高）、发 0 就胖（频率低）。此外还有相位调制以及幅度与相位的组合。接收端要从被调制的波形里把 0 与 1 重新提取出来。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="205" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">把数据编进电磁波</text>
+
+  <rect x="22" y="76" width="222" height="72" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="133" y="98" font-size="12" fill="#1e40af" text-anchor="middle">载波</text>
+  <text x="133" y="116" font-size="12" fill="#1e40af" text-anchor="middle">频率固定、不载信息</text>
+  <text x="133" y="134" font-size="12" fill="#1e40af" text-anchor="middle">但高频好传</text>
+
+  <rect x="269" y="76" width="222" height="72" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="98" font-size="12" fill="#b45309" text-anchor="middle">幅度调制 AM</text>
+  <text x="380" y="116" font-size="12" fill="#b45309" text-anchor="middle">1 高、0 矮</text>
+  <text x="380" y="134" font-size="12" fill="#b45309" text-anchor="middle">改的是高度</text>
+
+  <rect x="516" y="76" width="222" height="72" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="627" y="98" font-size="12" fill="#166534" text-anchor="middle">频率调制 FM</text>
+  <text x="627" y="116" font-size="12" fill="#166534" text-anchor="middle">1 瘦、0 胖</text>
+  <text x="627" y="134" font-size="12" fill="#166534" text-anchor="middle">改的是频率</text>
+
+  <text x="380" y="180" font-size="10" fill="#64748b" text-anchor="middle">接收端要把调制波形里的 0 与 1 重新提取出来</text>
+</svg>
