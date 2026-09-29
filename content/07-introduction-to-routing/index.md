@@ -19,7 +19,7 @@ output_mode = "explanation"
 
 前面几讲把分层、首部、[[term:link]]都讲过了，可一直回避了第三讲留下的那个问题：交换机收到一个[[term:packet]]之后，怎么知道该往哪个口[[term:forwarding]]，才能让它更靠近目的地。这一讲要解决的就是这个问题，它是 Routing 这一部分的入口。
 
-教材把问题摆得很直白：机器 A 和机器 B 都连着[[term:internet]]，可它们之间并没有直接连着。A 要把消息发给 B，它怎么知道该往哪里发，消息才会最终抵达 B；而这个消息在[[term:routing]]的意义上究竟会走出一条什么路径。
+教材把问题摆得很直白：机器 A 和机器 B 都连着[[term:internet]]，可它们之间并没有直接连着。A 要把消息发给 B，它怎么知道该往哪里发，消息才会最终抵达 B；而这个消息在[[term:routing]]的意义上究竟会走出一条什么路径——真机上把这条路径逐跳打出来的工具就是 traceroute。
 
 > "How does machine A know where to send the message, so that the message will eventually reach machine B? What path will the message take through the network to reach its destination of machine B? In this unit, we'll be studying routing to answer these questions."
 > （机器 A 怎么知道该把消息发到哪里，消息才会最终到达机器 B？消息在网络里会走出一条什么路径，才到达目的地 B？这一部分就是研究路由来回答这些问题的。）
@@ -45,7 +45,7 @@ output_mode = "explanation"
 
 不是这个想法不好，而是它太大了：一台[[term:router]]不可能知道全世界每一台机器的路由信息，也不可能在每台机器变动时同步一遍。这一点后面还会反复出现，它是整门课的一条主线。
 
-具体地说，一台路由器要存下全世界每一台机器的可达信息，还要在每次有人接入或断开时把变化同步一遍；这两件事的代价都随机器数量增长，而互联网的机器数量是全世界级的。规模问题在这里第一次出现，后面每一讲都会以不同形式回来找它：路由表有多大、协议报文发多少、故障时要收敛多久。
+具体地说，一台路由器要存下全世界每一台机器的可达信息（第三层的 IP 路由表就是这份东西），还要在每次有人接入或断开时把变化同步一遍；这两件事的代价都随机器数量增长，而互联网的机器数量是全世界级的。规模问题在这里第一次出现，后面每一讲都会以不同形式回来找它：路由表有多大、协议报文发多少、故障时要收敛多久。
 
 ![一个巨型协议要覆盖全世界每一台机器，规模上做不到](figures/routing-intro-3.svg)
 

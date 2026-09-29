@@ -17,7 +17,7 @@ output_mode = "explanation"
 
 ## 一、先看两种明显不好的做法
 
-上一讲把问题写清楚了，这一讲要解决的是「答案长什么样」。教材先给答案起了个名字：用一套[[term:routing]]协议算出来的结果，叫路由状态（routing state）。
+上一讲把问题写清楚了，这一讲要解决的是「答案长什么样」。教材先给答案起了个名字：用一套[[term:routing]]协议算出来的结果，叫路由状态（routing state）——算它的是域内的 OSPF 还是域间的 BGP 都一样。
 
 > "You can think of a routing state as a set of rules that each router uses to forward packets it receives."
 > （可以把路由状态理解成一套规则，每台路由器用它来转发收到的分组。）
@@ -175,12 +175,12 @@ output_mode = "explanation"
 
 ## 十、静态路由：手工填表和它仍然必要的地方
 
-最后是一种「不靠协议」的造表方式：由运营者手工往转发表里写条目，这叫静态路由（static routing）。教材对它很坦诚。
+最后是一种「不靠协议」的造表方式：由运营者手工往转发表里写条目，这叫静态路由（static routing）——在 Linux 上敲一条 `ip route`，加的就是这一种。教材对它很坦诚。
 
 > "Static routing by itself isn't practical (e.g. not scalable, prone to human error), but even with a routing protocol implemented, some routes still need to be manually created by operators."
 > （静态路由本身并不实用，比如不扩展、容易出错；但即使实现了路由协议，仍有一些路由需要运营者手工创建。）
 
-手工的那部分可以理解成基础项：[[term:protocol]]在这些「平凡」的路由之上，再去算更复杂的路由。教材给了两类例子。一类是**直接路由**（也叫连接路由）：如果一台机器跟我们直连，就手工配一条通往它的路由。你家里的路由器跟你电脑之间有一条链路，它就能在表里为你电脑加一条条目，这个条目是「告诉它这里有连接」得到的，不是跑协议跑出来的。另一类是把某些**永远不变**的目的地硬编码进表里，哪怕并不直连，这样无论协议在做什么，这条路由都稳稳待在那里。
+手工的那部分可以理解成基础项：[[term:protocol]]在这些「平凡」的路由之上，再去算更复杂的路由。教材给了两类例子。一类是**直接路由**（也叫连接路由）：如果一台机器跟我们直连，就手工配一条通往它的路由。你家里的路由器跟你电脑之间有一条链路（Wi-Fi 或 Ethernet 网线），它就能在表里为你电脑加一条条目，这个条目是「告诉它这里有连接」得到的，不是跑协议跑出来的。另一类是把某些**永远不变**的目的地硬编码进表里，哪怕并不直连，这样无论协议在做什么，这条路由都稳稳待在那里。
 
 ![静态路由：运营者手工填表，直连的直接路由与硬编码的固定路由](figures/solutions-10.svg)
 

@@ -83,7 +83,7 @@ output_mode = "explanation"
 > "We'll also need to make sure that there's enough capacity on these links to carry our data."
 > （还要保证这些链路上有足够的容量把数据送过去。）
 
-链路够不够宽、堵住了怎么办，这是[[term:congestion-control]]（congestion control）那一章的主题。教材还补了一句容易被忽略的话：除了设备，这门课也要研究**运营这些设备的人**。互联网的运营者是[[term:isp]]，比如 AT&T、亚马逊云，甚至伯克利自己。他们会按自己的商业与政治考量做决定，例如 AT&T 修了一条海底光缆，别的 ISP 想借道，就可能要被它收费。
+链路够不够宽、堵住了怎么办，这是[[term:congestion-control]]（congestion control）那一章的主题。教材还补了一句容易被忽略的话：除了设备，这门课也要研究**运营这些设备的人**。互联网的运营者是[[term:isp]]，比如 AT&T、Amazon Web Services（AWS），甚至伯克利自己。他们会按自己的商业与政治考量做决定，例如 AT&T 修了一条海底光缆，别的 ISP 想借道，就可能要被它收费。
 
 ![两片网络各设一个交换设备，只把这两台设备连起来；旁边标出两个待解问题](figures/layers-4.svg)
 
@@ -91,7 +91,7 @@ output_mode = "explanation"
 
 ## 五、网络的网络：家里的信与邮局的信
 
-有了交换机，互联网就有了「网络的网络」这个形状：一片片小网络各自管自己的事，再互相连起来。教材特别提醒，不同链路可以用完全不同的第二层技术，有线以太网、光纤、无线蜂窝都行。在这一片网络内部怎么送，是第二层的事；而把「能在一段链路上送」当作积木、拼出「能送到互联网上任何地方」，是第三层的事。一个分组一路上会跨过很多种链路。
+有了交换机，互联网就有了「网络的网络」这个形状：一片片小网络各自管自己的事，再互相连起来。教材特别提醒，不同链路可以用完全不同的第二层技术，有线 Ethernet、光纤、无线蜂窝都行。在这一片网络内部怎么送，是第二层的事；而把「能在一段链路上送」当作积木、拼出「能送到互联网上任何地方」，是第三层的事。一个分组一路上会跨过很多种链路。
 
 类比里有一个区分值得单独记：家庭是在**寄信和收信**的，邮局自己不寄也不收，它的存在只是为了帮别的家庭把信送到。
 
@@ -158,7 +158,7 @@ output_mode = "explanation"
 
 两个问题到齐了：大东西要切开，而切开之后的每一份都可能丢。教材的解法是再加一层。
 
-[[term:transport-layer]]（transport layer）把第三层当作积木，在上面另做一个协议，负责把丢掉的分组重发、把数据切成合适的大小、把到达顺序乱掉的分组重新排好。这一层的意义可以用一句话概括：
+[[term:transport-layer]]（transport layer）把第三层当作积木，在上面另做一个协议——TCP 就在这一层：它负责把丢掉的分组重发、把数据切成合适的大小、把到达顺序乱掉的分组重新排好。这一层的意义可以用一句话概括：
 
 > "The transport layer protocol allows us to stop thinking in terms of packets, and start thinking in terms of flows, streams of packets that are exchanged between two endpoints."
 > （传输层让我们不必再按分组思考，而可以按「流」来思考，也就是两个端点之间交换的一串分组。）

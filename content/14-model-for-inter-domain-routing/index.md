@@ -17,7 +17,7 @@ output_mode = "explanation"
 
 ## 一、域内已经解决，域间要的是一个模型
 
-前面几讲把域内路由讲完了：距离向量与链路状态协议（比如 OSPF、IS-IS）都能在一片本地网络内部，把分组送到任何一台主机。而互联网是网络之网，分组要跨越的是网络与网络之间那一段。
+前面几讲把域内路由讲完了：距离向量与链路状态协议（比如 OSPF、IS-IS）都能在一片本地网络内部，把分组送到任何一台主机。而互联网是网络之网，分组要跨越的是网络与网络之间那一段——那一段上跑的就是 BGP。
 
 > "Recall from earlier that routing is performed in a network of networks. We've seen distance-vector and link-state protocols that can be used to implement intra-domain routing, which allows packets to be sent within a local network."
 > （回顾一下：路由是在网络之网里进行的。我们已经见过距离向量与链路状态协议，它们能做域内路由，让分组在一片本地网络内送达。）

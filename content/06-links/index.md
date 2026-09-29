@@ -33,7 +33,7 @@ output_mode = "explanation"
 > "If we multiply the bandwidth and the propagation delay, we get the bandwidth-delay product (BDP). Intuitively, this is the capacity of the link, or the number of bits that exist on the link at any given instant."
 > （把带宽和传播时延相乘，就得到带宽时延积；直觉上它是这条链路的容量，也就是任意一个瞬间链路上一共有多少位。）
 
-用管子的说法：灌满管子然后让时间停住，此刻管子里的水量就是容量。教材还顺手交代了一个常见词：延迟（latency）。在链路的语境下，延迟就是传播时延；但这个词也用在别的地方，比如端主机到端主机、跨过好几条链路的延迟。它本身没有正式定义，要看上下文。
+用管子的说法：灌满管子然后让时间停住，此刻管子里的水量就是容量。教材还顺手交代了一个常见词：延迟（latency）。在链路的语境下，延迟就是传播时延；但这个词也用在别的地方，比如端主机到端主机、跨过好几条链路的延迟，`ping` 量出来的就是这一种。它本身没有正式定义，要看上下文。
 
 ![一条链路的三个属性，以及它们在管子类比里各自对应什么](figures/links-1.svg)
 
@@ -92,7 +92,7 @@ output_mode = "explanation"
 > "For a real-world example, consider a video call. If the video quality is poor, you probably have insufficient bandwidth (and shortening propagation delay won't help). By contrast, if there's a delay between the time you speak and the time the other person answers, the propagation delay is probably too long (and more bandwidth won't help)."
 > （举个现实例子：视频通话里画质差，多半是带宽不够，此时缩短传播时延没有用；反过来，如果你说完话对方过一会儿才回应，那多半是传播时延太长，此时把带宽加大也没有用。）
 
-这句话值得逐字记住，因为它把**症状与病因的对应方向**钉死了：画质差对应带宽不足，回话慢对应传播时延过长；而两个补救办法各自治不了对方的病。
+这句话值得逐字记住，因为它把**症状与病因的对应方向**钉死了：在 Zoom 这类视频通话里，画质差对应带宽不足，回话慢对应传播时延过长；而两个补救办法各自治不了对方的病。
 
 ![两个症状与两个病因的对应关系，以及各自无效的那种补救](figures/links-5.svg)
 
@@ -151,7 +151,7 @@ output_mode = "explanation"
 
 如果进来的一直比出去的多，那就是持续过载：出口链路的容量根本撑不住这个进入速率。这时候把队列填满也没用，交换机只能把[[term:forwarding]]不出去的分组丢掉。
 
-教材给了运营者能做的两件事。一是按需扩容：如果发现某台交换机经常过载，就升级链路，而这可能需要人工操作。二是让发送方放慢，也就是后面的[[term:congestion-control]]要讲的内容。但教材也说了实话：**过载没有根治办法**，这正是[[term:internet]]（Internet）只承诺[[term:best-effort]]的原因。
+教材给了运营者能做的两件事。一是按需扩容：如果发现某台交换机经常过载，就升级链路，而这可能需要人工操作。二是让发送方放慢，也就是后面的[[term:congestion-control]]要讲的内容，而真正动手的是 TCP。但教材也说了实话：**过载没有根治办法**，这正是[[term:internet]]（Internet）只承诺[[term:best-effort]]的原因，第三层的 IP 就是这么定的。
 
 有了队列这个概念，分组时延的公式要补上第三项。
 
