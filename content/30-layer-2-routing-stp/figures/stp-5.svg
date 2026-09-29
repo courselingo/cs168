@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430.5" width="760" height="430.5"
+     role="img" aria-labelledby="fig-stp-5-title fig-stp-5-desc">
+  <title id="fig-stp-5-title">选根与三种端口状态</title>
+  <desc id="fig-stp-5-desc">上排两格是根交换机的选法：每台交换机有一个 ID，由优先级与 MAC 地址拼成；比较时优先级更小者 ID 更小，相同则 MAC 更小者ID 更小。中间一条说明 ID 最小的那台就是根，管理员也可以把优先级全留默认。第三排三格是三种端口状态的定义：指定端口指向远离根的方向；根端口指向根且在到根最小代价路径上；被阻塞端口指向根但不是根端口。第四排三格是源文给的三类判定情形：代价不同（R6 朝 R3 是 2、朝 R4 是 3）、平局（R4 两侧都是 2，下一跳 ID 更小的赢）与等距（R4 与 R5 同为 2，用 ID 定向）。最下面一条说明主机不参与这个协议。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="430.5" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">选根与三种端口状态</text>
+  <rect x="25" y="64" width="342.5" height="49.5" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="196.25" y="84.35" font-size="11" fill="#1e40af" text-anchor="middle">交换机 ID</text>
+  <text x="196.25" y="100.85" font-size="11" fill="#1e40af" text-anchor="middle">优先级（管理员手工设置）加这台交换机的 MAC 地址</text>
+  <rect x="392.5" y="64" width="342.5" height="49.5" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="563.75" y="84.35" font-size="11" fill="#1e40af" text-anchor="middle">怎么比</text>
+  <text x="563.75" y="100.85" font-size="11" fill="#1e40af" text-anchor="middle">优先级更小者 ID 更小；相同则 MAC 更小者 ID 更小</text>
+  <rect x="25" y="141.5" width="710" height="30" rx="6" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="380" y="160" font-size="10" fill="#1e40af" text-anchor="middle">根交换机就是 ID 最小的那一台；管理员可以把优先级全留默认，那样 MAC 最小的会被选成根</text>
+  <rect x="25" y="199.5" width="220" height="45" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="135" y="218" font-size="10" fill="#166534" text-anchor="middle">指定端口</text>
+  <text x="135" y="233" font-size="10" fill="#166534" text-anchor="middle">指向远离根的方向</text>
+  <rect x="270" y="199.5" width="220" height="45" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="218" font-size="10" fill="#166534" text-anchor="middle">根端口</text>
+  <text x="380" y="233" font-size="10" fill="#166534" text-anchor="middle">指向根，且在到根最小代价路径上</text>
+  <rect x="515" y="199.5" width="220" height="45" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="625" y="218" font-size="10" fill="#b45309" text-anchor="middle">被阻塞端口</text>
+  <text x="625" y="233" font-size="10" fill="#b45309" text-anchor="middle">指向根，但不是根端口</text>
+  <rect x="25" y="272.5" width="220" height="75" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="135" y="291" font-size="10" fill="#1e293b" text-anchor="middle">代价不同</text>
+  <text x="135" y="306" font-size="10" fill="#1e293b" text-anchor="middle">R6 朝 R3 是 2</text>
+  <text x="135" y="321" font-size="10" fill="#1e293b" text-anchor="middle">朝 R4 是 3</text>
+  <text x="135" y="336" font-size="10" fill="#1e293b" text-anchor="middle">于是朝 R3 的是根端口</text>
+  <rect x="270" y="272.5" width="220" height="75" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="380" y="298.5" font-size="10" fill="#1e293b" text-anchor="middle">平局</text>
+  <text x="380" y="313.5" font-size="10" fill="#1e293b" text-anchor="middle">R4 朝 R2 与朝 R3 都是 2</text>
+  <text x="380" y="328.5" font-size="10" fill="#1e293b" text-anchor="middle">下一跳 ID 更小的那条赢</text>
+  <rect x="515" y="272.5" width="220" height="75" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="625" y="291" font-size="10" fill="#1e293b" text-anchor="middle">等距</text>
+  <text x="625" y="306" font-size="10" fill="#1e293b" text-anchor="middle">R4 与 R5 离根同为 2</text>
+  <text x="625" y="321" font-size="10" fill="#1e293b" text-anchor="middle">通向 ID 更高者</text>
+  <text x="625" y="336" font-size="10" fill="#1e293b" text-anchor="middle">视为指向远离根</text>
+  <rect x="25" y="375.5" width="710" height="30" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380" y="394" font-size="10" fill="#6b21a8" text-anchor="middle">主机不参与这个协议，是交换机们互相配合完成</text>
+</svg>

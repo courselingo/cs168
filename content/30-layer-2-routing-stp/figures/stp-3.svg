@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 408" width="760" height="408"
+     role="img" aria-labelledby="fig-stp-3-title fig-stp-3-desc">
+  <title id="fig-stp-3-title">洪泛与学习交换机：学的是发送方，不是接收方</title>
+  <desc id="fig-stp-3-desc">上排两格是洪泛与那个小优化：收到包就从每个端口发出去，但不用再从收到的那个端口发回去。第二排一条是洪泛的两个大毛病：浪费带宽，以及包会打转把网络压垮。第三排两格是学习交换机的关键观察（来的包会告诉你发送方在哪）与容易搞反的一点（来的包不能告诉你接收方在哪）。第四排三格是两条规则：把发送方与来路端口写进表；目的地已知就按表转发，否则从除来路以外的端口洪泛。最下面一条是表项要带生存时间，让失效的路由自己过期。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="408" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">洪泛与学习交换机：学的是发送方，不是接收方</text>
+  <rect x="25" y="64" width="342.5" height="49.5" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="196.25" y="84.35" font-size="11" fill="#1e40af" text-anchor="middle">洪泛</text>
+  <text x="196.25" y="100.85" font-size="11" fill="#1e40af" text-anchor="middle">收到一个包就从每一个端口发出去</text>
+  <rect x="392.5" y="64" width="342.5" height="49.5" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="563.75" y="84.35" font-size="11" fill="#1e40af" text-anchor="middle">一个小优化</text>
+  <text x="563.75" y="100.85" font-size="11" fill="#1e40af" text-anchor="middle">不用把包再从收到的那个端口发回去</text>
+  <rect x="25" y="141.5" width="710" height="33" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="161.85" font-size="11" fill="#b45309" text-anchor="middle">两个大毛病：一个浪费带宽，副本发给了并不需要它的机器；另一个是包会打转，把网络压垮</text>
+  <rect x="25" y="202.5" width="342.5" height="49.5" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="196.25" y="222.85" font-size="11" fill="#166534" text-anchor="middle">学习交换机的关键观察</text>
+  <text x="196.25" y="239.35" font-size="11" fill="#166534" text-anchor="middle">来的包会告诉你发送方在哪</text>
+  <rect x="392.5" y="202.5" width="342.5" height="49.5" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="563.75" y="222.85" font-size="11" fill="#1e293b" text-anchor="middle">容易搞反的一点</text>
+  <text x="563.75" y="239.35" font-size="11" fill="#1e293b" text-anchor="middle">来的包不能告诉你接收方在哪</text>
+  <rect x="25" y="280" width="220" height="45" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="135" y="298.5" font-size="10" fill="#1e40af" text-anchor="middle">规则一</text>
+  <text x="135" y="313.5" font-size="10" fill="#1e40af" text-anchor="middle">把发送方与来路端口写进转发表</text>
+  <rect x="270" y="280" width="220" height="45" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="298.5" font-size="10" fill="#1e40af" text-anchor="middle">规则二</text>
+  <text x="380" y="313.5" font-size="10" fill="#1e40af" text-anchor="middle">目的地已在表里就按表转发</text>
+  <rect x="515" y="280" width="220" height="45" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="625" y="298.5" font-size="10" fill="#1e40af" text-anchor="middle">否则</text>
+  <text x="625" y="313.5" font-size="10" fill="#1e40af" text-anchor="middle">从除来路以外的所有端口洪泛出去</text>
+  <rect x="25" y="353" width="710" height="30" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380" y="371.5" font-size="10" fill="#6b21a8" text-anchor="middle">表项要带生存时间，到期就删，这样失效的路由会自己过期</text>
+</svg>

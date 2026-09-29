@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 256" width="760" height="256"
+     role="img" aria-labelledby="fig-stp-2-title fig-stp-2-desc">
+  <title id="fig-stp-2-title">三种第二层拓扑：单链路、全网状，以及引入交换机</title>
+  <desc id="fig-stp-2-desc">上排三格是源文比的三种做法：单链路（带宽只有一条链路的量、要排队、还会有冲突）、全网状（每一对主机一条专用链路、难以扩展）与引入交换机（包在拓扑里被逐跳转发到目的地）。中间一条说明引入交换机就与第三层一样引入了路由问题：交换机得决定把包往哪里转发。最下面一条是源文的提醒：这些第二层协议里有些毛病，让它们没法被扩展到全球的第三层网络上去。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="256" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">三种第二层拓扑：单链路、全网状，以及引入交换机</text>
+  <rect x="25" y="64" width="220" height="45" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="135" y="82.5" font-size="10" fill="#1e293b" text-anchor="middle">单链路</text>
+  <text x="135" y="97.5" font-size="10" fill="#1e293b" text-anchor="middle">带宽只有一条链路的量；要排队；还会有冲突</text>
+  <rect x="270" y="64" width="220" height="45" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="380" y="82.5" font-size="10" fill="#1e293b" text-anchor="middle">全网状</text>
+  <text x="380" y="97.5" font-size="10" fill="#1e293b" text-anchor="middle">每一对主机一条专用链路，难以扩展</text>
+  <rect x="515" y="64" width="220" height="45" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="625" y="82.5" font-size="10" fill="#1e293b" text-anchor="middle">引入交换机</text>
+  <text x="625" y="97.5" font-size="10" fill="#1e293b" text-anchor="middle">包在拓扑里被逐跳转发到目的地</text>
+  <rect x="25" y="137" width="710" height="33" rx="6" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="380" y="157.35" font-size="11" fill="#1e40af" text-anchor="middle">引入交换机就与第三层一样引入了路由问题：交换机得决定把包往哪里转发</text>
+  <rect x="25" y="198" width="710" height="33" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380" y="218.35" font-size="11" fill="#6b21a8" text-anchor="middle">源文提醒：这些第二层协议里有些毛病，让它们没法被扩展到全球的第三层网络上去</text>
+</svg>

@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 347" width="760" height="347"
+     role="img" aria-labelledby="fig-stp-7-title fig-stp-7-desc">
+  <title id="fig-stp-7-title">BPDU 带什么，收到之后怎么比</title>
+  <desc id="fig-stp-7-desc">上排两格是协议的起点与持续状态：一开始每台交换机都以为根就是自己、到根代价是 0；此后持续记录它认为的根、到那个根的最佳已知路径与代价。第二排两格是 BPDU 里的两件信息（我认为根是谁、我离根有多远）与源文给的例子（根是 R2，我到 R2 的代价是 7）。第三排两格是两种更好的情形：它给出的根 ID 更小就改用新的根；根相同但路径更好就改用新路径。最下面一条是代价的算法：邻居广告里报的代价加上你到邻居那条直连链路的代价。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="347" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">BPDU 带什么，收到之后怎么比</text>
+  <rect x="25" y="64" width="342.5" height="49.5" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="196.25" y="84.35" font-size="11" fill="#1e40af" text-anchor="middle">一开始</text>
+  <text x="196.25" y="100.85" font-size="11" fill="#1e40af" text-anchor="middle">每台交换机都以为根就是自己，到根的代价是 0</text>
+  <rect x="392.5" y="64" width="342.5" height="49.5" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="563.75" y="84.35" font-size="11" fill="#1e40af" text-anchor="middle">此后持续记录</text>
+  <text x="563.75" y="100.85" font-size="11" fill="#1e40af" text-anchor="middle">我认为的根是谁、到它的最佳已知路径、代价</text>
+  <rect x="25" y="141.5" width="342.5" height="49.5" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="196.25" y="161.85" font-size="11" fill="#166534" text-anchor="middle">BPDU 带两件信息</text>
+  <text x="196.25" y="178.35" font-size="11" fill="#166534" text-anchor="middle">我认为根是谁，以及我离根有多远</text>
+  <rect x="392.5" y="141.5" width="342.5" height="49.5" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="563.75" y="161.85" font-size="11" fill="#1e293b" text-anchor="middle">源文给的例子</text>
+  <text x="563.75" y="178.35" font-size="11" fill="#1e293b" text-anchor="middle">根是 R2，我到 R2 的代价是 7</text>
+  <rect x="25" y="219" width="342.5" height="45" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="196.25" y="237.5" font-size="10" fill="#b45309" text-anchor="middle">更好的情形一</text>
+  <text x="196.25" y="252.5" font-size="10" fill="#b45309" text-anchor="middle">它给出的根 ID 更小，就改用新的根</text>
+  <rect x="392.5" y="219" width="342.5" height="45" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="563.75" y="237.5" font-size="10" fill="#b45309" text-anchor="middle">更好的情形二</text>
+  <text x="563.75" y="252.5" font-size="10" fill="#b45309" text-anchor="middle">根相同但路径更好，就改用这条新路径</text>
+  <rect x="25" y="292" width="710" height="30" rx="6" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="380" y="310.5" font-size="10" fill="#1e40af" text-anchor="middle">代价按距离向量的办法算：邻居广告里报的代价，加上你到邻居那条直连链路的代价</text>
+</svg>

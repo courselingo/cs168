@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 324.5" width="760" height="324.5"
+     role="img" aria-labelledby="fig-stp-8-title fig-stp-8-desc">
+  <title id="fig-stp-8-title">BPDU 交换例子的三步，以及源文那处自相矛盾</title>
+  <desc id="fig-stp-8-desc">上排三格是第一步：R3 广告根 R3 距离 0，R1 因为广告的根更差而拒绝，R6 接受并算出 0 加 1 等于 1。第二排三格是第二步：R1 广告根 R1 距离 0，R2 与 R3 都接受并变成 1，再往下 R4 变成 2、R6 也变成 2。第三排三格是第三步：R5 听到 R4 变成 3，R6 听到 R4 时 3 比 2 差于是拒绝，而 R7 那一步源文写的是拒绝、给出的却是接受的动作。最下面一条说明收敛之后如何用状态定出根端口、指定端口与被阻塞端口。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="324.5" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">BPDU 交换例子的三步，以及源文那处自相矛盾</text>
+  <rect x="25" y="64" width="220" height="40.5" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="135" y="80.65" font-size="9" fill="#1e40af" text-anchor="middle">R3 的初始广告</text>
+  <text x="135" y="94.15" font-size="9" fill="#1e40af" text-anchor="middle">根 R3，距离 0</text>
+  <rect x="270" y="64" width="220" height="40.5" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="380" y="80.65" font-size="9" fill="#1e293b" text-anchor="middle">R1 收到</text>
+  <text x="380" y="94.15" font-size="9" fill="#1e293b" text-anchor="middle">广告的根更差，拒绝</text>
+  <rect x="515" y="64" width="220" height="40.5" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="625" y="80.65" font-size="9" fill="#166534" text-anchor="middle">R6 收到</text>
+  <text x="625" y="94.15" font-size="9" fill="#166534" text-anchor="middle">接受，0 加 1 等于 1</text>
+  <rect x="25" y="132.5" width="220" height="40.5" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="135" y="149.15" font-size="9" fill="#1e40af" text-anchor="middle">R1 的广告</text>
+  <text x="135" y="162.65" font-size="9" fill="#1e40af" text-anchor="middle">根 R1，距离 0</text>
+  <rect x="270" y="132.5" width="220" height="40.5" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="149.15" font-size="9" fill="#166534" text-anchor="middle">R2 与 R3 都接受</text>
+  <text x="380" y="162.65" font-size="9" fill="#166534" text-anchor="middle">各自变成到根距离 1</text>
+  <rect x="515" y="132.5" width="220" height="40.5" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="625" y="149.15" font-size="9" fill="#166534" text-anchor="middle">再往下</text>
+  <text x="625" y="162.65" font-size="9" fill="#166534" text-anchor="middle">R4 变成 2，R6 也变成 2</text>
+  <rect x="25" y="201" width="220" height="40.5" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="135" y="217.65" font-size="9" fill="#166534" text-anchor="middle">R5 听到 R4</text>
+  <text x="135" y="231.15" font-size="9" fill="#166534" text-anchor="middle">变成到根距离 3</text>
+  <rect x="270" y="201" width="220" height="40.5" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="380" y="217.65" font-size="9" fill="#1e293b" text-anchor="middle">R6 听到 R4</text>
+  <text x="380" y="231.15" font-size="9" fill="#1e293b" text-anchor="middle">3 比 2 差，拒绝</text>
+  <rect x="515" y="201" width="220" height="40.5" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="625" y="217.65" font-size="9" fill="#b45309" text-anchor="middle">R7 那一步</text>
+  <text x="625" y="231.15" font-size="9" fill="#b45309" text-anchor="middle">源文写拒绝，却给了接受的动作</text>
+  <rect x="25" y="269.5" width="710" height="30" rx="6" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="380" y="288" font-size="10" fill="#1e40af" text-anchor="middle">收敛之后：知道去根的最佳路径就能定根端口；按邻居报的距离定指定端口与被阻塞端口</text>
+</svg>

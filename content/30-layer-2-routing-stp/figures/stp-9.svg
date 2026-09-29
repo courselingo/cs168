@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 277" width="760" height="277"
+     role="img" aria-labelledby="fig-stp-9-title fig-stp-9-desc">
+  <title id="fig-stp-9-title">学习交换机的两个阶段：先洪泛学会发送方，再按表转发</title>
+  <desc id="fig-stp-9-desc">上面一条是例子的设定：A 发给 B 时所有表都是空的，B 回给 A 时表里已经有了条目。第二排三格是阶段一：A 发给 B，R1 学会 A 在 1 号端口方向，R2 与 R4 也学会 A，R3 与 R5 同样，一路都在洪泛；C 与 B 收到后检查头部，C 丢弃而 B 收下。第三排三格是阶段二：B 回给 A，R3 先学会 B 并发现表里已经有 A，于是按下一跳转发而不再洪泛，R2 与 R1 同样处理；随着表里的条目变多，洪泛越来越少。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="277" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">学习交换机的两个阶段：先洪泛学会发送方，再按表转发</text>
+  <rect x="25" y="64" width="710" height="33" rx="6" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="380" y="84.35" font-size="11" fill="#1e40af" text-anchor="middle">学习交换机的例子：A 发给 B 时表还是空的，B 回给 A 时表已经有了</text>
+  <rect x="25" y="125" width="220" height="49.5" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="135" y="145.35" font-size="11" fill="#1e40af" text-anchor="middle">阶段一：A 发给 B</text>
+  <text x="135" y="161.85" font-size="11" fill="#1e40af" text-anchor="middle">R1 学会 A 在 1 号端口方向</text>
+  <rect x="270" y="125" width="220" height="49.5" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="145.35" font-size="11" fill="#1e40af" text-anchor="middle">R2 与 R4 也学会 A</text>
+  <text x="380" y="161.85" font-size="11" fill="#1e40af" text-anchor="middle">R3 与 R5 同样，一路洪泛</text>
+  <rect x="515" y="125" width="220" height="49.5" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="625" y="145.35" font-size="11" fill="#1e293b" text-anchor="middle">C 与 B 收到后检查头部</text>
+  <text x="625" y="161.85" font-size="11" fill="#1e293b" text-anchor="middle">C 丢弃，B 收下</text>
+  <rect x="25" y="202.5" width="220" height="49.5" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="135" y="222.85" font-size="11" fill="#166534" text-anchor="middle">阶段二：B 回给 A</text>
+  <text x="135" y="239.35" font-size="11" fill="#166534" text-anchor="middle">R3 先学会 B，并发现表里有 A</text>
+  <rect x="270" y="202.5" width="220" height="49.5" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="222.85" font-size="11" fill="#166534" text-anchor="middle">于是按下一跳转发</text>
+  <text x="380" y="239.35" font-size="11" fill="#166534" text-anchor="middle">不再洪泛；R2 与 R1 同样</text>
+  <rect x="515" y="202.5" width="220" height="49.5" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="625" y="222.85" font-size="11" fill="#166534" text-anchor="middle">结果</text>
+  <text x="625" y="239.35" font-size="11" fill="#166534" text-anchor="middle">表里的条目越多，洪泛越少</text>
+</svg>

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 277" width="760" height="277"
+     role="img" aria-labelledby="fig-stp-1-title fig-stp-1-desc">
+  <title id="fig-stp-1-title">从一根线到一张链路网：这一讲要解决的那个障碍</title>
+  <desc id="fig-stp-1-desc">上排两格是尺度的变化：这一讲之前是一根线挂多台机器，这一讲把一根线换成一张链路网，问题变成包往哪走。第二排两格是第 29 讲留下的尾巴（第二层自己也能转发、甚至能跑二层自己的路由协议）与两个挡路的地方（MAC 地址没法聚合；环路会一直绕下去）。最下面一条点明这一讲的主题是第二个障碍：帧里没有可以减一的计数器。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="277" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">从一根线到一张链路网：这一讲要解决的那个障碍</text>
+  <rect x="25" y="64" width="342.5" height="49.5" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="196.25" y="84.35" font-size="11" fill="#1e293b" text-anchor="middle">这一讲之前</text>
+  <text x="196.25" y="100.85" font-size="11" fill="#1e293b" text-anchor="middle">一根线上挂多台机器；共享介质、侦听与退避</text>
+  <rect x="392.5" y="64" width="342.5" height="49.5" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="563.75" y="84.35" font-size="11" fill="#1e40af" text-anchor="middle">这一讲</text>
+  <text x="563.75" y="100.85" font-size="11" fill="#1e40af" text-anchor="middle">一根线换成一张链路网；包往哪走</text>
+  <rect x="25" y="141.5" width="342.5" height="49.5" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="196.25" y="161.85" font-size="11" fill="#166534" text-anchor="middle">第 29 讲留下的尾巴</text>
+  <text x="196.25" y="178.35" font-size="11" fill="#166534" text-anchor="middle">第二层自己也能转发，甚至能跑二层自己的路由协议</text>
+  <rect x="392.5" y="141.5" width="342.5" height="49.5" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="563.75" y="161.85" font-size="11" fill="#b45309" text-anchor="middle">两个挡路的地方</text>
+  <text x="563.75" y="178.35" font-size="11" fill="#b45309" text-anchor="middle">MAC 地址没法聚合；环路会一直绕下去</text>
+  <rect x="25" y="219" width="710" height="33" rx="6" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="380" y="239.35" font-size="11" fill="#1e40af" text-anchor="middle">这一讲的主题是第二个：帧里没有可以减一的计数器，所以一旦成环，帧会一直绕下去</text>
+</svg>

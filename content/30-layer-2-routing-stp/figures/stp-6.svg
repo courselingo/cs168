@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 335" width="760" height="335"
+     role="img" aria-labelledby="fig-stp-6-title fig-stp-6-desc">
+  <title id="fig-stp-6-title">为什么被阻塞端口可以安全关掉，而指定链路要留给对面</title>
+  <desc id="fig-stp-6-desc">上排两格是做法与一个括注：每台交换机假装被阻塞端口不存在，不发也不收用户数据；但 STP 自己的报文仍可进出，这样拓扑变化时能重新打开端口。第二排两格是两段推理：被阻塞端口指向根，说明对面更近，不会靠它走向根；指定链路指向远离根，对面更远，可能靠你走向根，所以留给对面自己决定。第三排一条是这条策略的性质：每条链路只由更远的那一侧关掉，更近的那一侧总是把它定成指定端口。最下面一条是指定端口这个名字的来历：链路上还挂着主机时，主机把数据发往指定端口而不是被阻塞端口，这样数据只走一条路径。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="335" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">为什么被阻塞端口可以安全关掉，而指定链路要留给对面</text>
+  <rect x="25" y="64" width="342.5" height="49.5" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="196.25" y="84.35" font-size="11" fill="#1e40af" text-anchor="middle">做法</text>
+  <text x="196.25" y="100.85" font-size="11" fill="#1e40af" text-anchor="middle">假装被阻塞端口不存在，不发也不收用户数据</text>
+  <rect x="392.5" y="64" width="342.5" height="49.5" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="563.75" y="84.35" font-size="11" fill="#1e293b" text-anchor="middle">一个括注</text>
+  <text x="563.75" y="100.85" font-size="11" fill="#1e293b" text-anchor="middle">STP 自己的报文仍可进出，这样拓扑变化时能重新打开端口</text>
+  <rect x="25" y="141.5" width="342.5" height="49.5" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="196.25" y="161.85" font-size="11" fill="#166534" text-anchor="middle">为什么安全</text>
+  <text x="196.25" y="178.35" font-size="11" fill="#166534" text-anchor="middle">被阻塞端口指向根，说明对面更近，不会靠它走向根</text>
+  <rect x="392.5" y="141.5" width="342.5" height="49.5" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="563.75" y="161.85" font-size="11" fill="#b45309" text-anchor="middle">指定链路</text>
+  <text x="563.75" y="178.35" font-size="11" fill="#b45309" text-anchor="middle">对面更远，可能靠你走向根，所以留给对面自己决定</text>
+  <rect x="25" y="219" width="710" height="33" rx="6" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="380" y="239.35" font-size="11" fill="#1e40af" text-anchor="middle">性质：每条链路只由更远的那一侧关掉；更近的那一侧总是把它定成指定端口</text>
+  <rect x="25" y="280" width="710" height="30" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380" y="298.5" font-size="10" fill="#6b21a8" text-anchor="middle">名字的来历：链路上还挂着主机时，主机把数据发往指定端口而不是被阻塞端口，这样数据只走一条路径</text>
+</svg>
