@@ -25,16 +25,16 @@ output_mode = "explanation"
 教材把这件事分成两个词：**域内**（intra-domain）说的是网络内部，**域间**（inter-domain）说的是网络与网络之间。这一讲要解决的就是后者，而解决之前先得有个模型，能把「一片网络」和「网络之间怎么连」说清楚。
 
 > "In this section, we'll build a model that will allow us to define inter-domain routing protocols, which can send packets between different local networks."
-> （这一节要建一个模型，用来定义域间路由[[term:protocol]]（protocol，协议）；这些协议把分组送到不同的本地网络之间。）
+> （这一节要建一个模型，用来定义域间路由[[term:protocol]]；这些协议把分组送到不同的本地网络之间。）
 
-模型的第一步，是给「一片网络」一个正式名字：[[term:autonomous-system]]（autonomous system，自治系统），也就是由一个运营者统一管理的一片或多片本地网络。Google 就是一个例子：员工电脑在一张本地网络里，数据中心在另一张本地网络里，但两张都归同一家公司控制，只部署一套域内协议就够。
+模型的第一步，是给「一片网络」一个正式名字：[[term:autonomous-system]]，也就是由一个运营者统一管理的一片或多片本地网络。Google 就是一个例子：员工电脑在一张本地网络里，数据中心在另一张本地网络里，但两张都归同一家公司控制，只部署一套域内协议就够。
 
 第二步是抽象：把 AS 内部的路由器与主机统统藏起来，把整个 AS 当成一个实体。
 
 > "we can abstract away all of the individual routers and hosts within the AS, and treat the AS as a single entity"
 > （我们可以把 AS 内部那一台台路由器和主机抽象掉，把整个 AS 当成一个实体。）
 
-抽象之后画出来的图，节点是一个 AS，边是两个 AS 之间的连接。教材给了它两个名字：域间拓扑（inter-domain topology），或者 **AS 图**（AS graph）。[[term:routing]]（routing，路由）这件事在这里也被切成两半：域内协议在节点内部找路，域间协议在节点之间找路，算出来的是通往目的 [[term:ip-address]]（IP address，IP 地址）前缀的下一跳。
+抽象之后画出来的图，节点是一个 AS，边是两个 AS 之间的连接。教材给了它两个名字：域间拓扑（inter-domain topology），或者 **AS 图**（AS graph）。[[term:routing]]这件事在这里也被切成两半：域内协议在节点内部找路，域间协议在节点之间找路，算出来的是通往目的 [[term:ip-address]]前缀的下一跳。
 
 ![把一片网络抽象成一个节点：内部细节收起来，AS 图上只留下节点与边](figures/idr-1.svg)
 
@@ -59,16 +59,16 @@ output_mode = "explanation"
 
 域内模型里我们分过端主机与路由器。域间模型做类似的事：把 AS 分成两类。
 
-[[term:stub-autonomous-system]]（stub AS，末端自治系统）只为本地网络里的主机提供连通性。它只替 AS 内部的主机收发[[term:packet]]（packet，分组），不替别的 AS 转发。
+[[term:stub-autonomous-system]]（stub AS，末端自治系统）只为本地网络里的主机提供连通性。它只替 AS 内部的主机收发[[term:packet]]，不替别的 AS 转发。
 
 > "A stub AS only sends and receives packets on behalf of hosts that are inside the AS, and does not forward packets between different ASes."
 > （末端 AS 只替 AS 内部的主机收发分组，不在不同的 AS 之间转发分组。）
 
 现实里的例子，是那些不做互联网生意的机构：只给员工上网的银行，只给师生上网的大学，UC Berkeley 也算。它们不负责承载别家的流量，世界上绝大多数 AS 都是末端 AS。
 
-另一类是[[term:transit-autonomous-system]]（transit AS，中转自治系统）：它替别的 AS 转发分组，可以在两个不同的 AS 之间把分组带过去。这类对应的就是靠卖连通性赚钱的公司，教材点名的是 AT&T 和 Verizon，还举了一家只服务加州的 [[term:isp]]（ISP，互联网服务提供商）：Sonic。
+另一类是[[term:transit-autonomous-system]]（transit AS，中转自治系统）：它替别的 AS 转发分组，可以在两个不同的 AS 之间把分组带过去。这类对应的就是靠卖连通性赚钱的公司，教材点名的是 AT&T 和 Verizon，还举了一家只服务加州的 [[term:isp]]：Sonic。
 
-这个分法和前面域内路由的模型对得上：末端 AS 相当于[[term:end-host]]（end host，端主机），中转 AS 相当于[[term:router]]（router，路由器）。教材也留了一个边界情况：Google、Microsoft、Amazon 这类公司手里的 AS，承载量与中转 AS 一样大甚至更大，但它们的主要角色是给自家服务收发流量，按定义更像末端 AS；近几年它们也开始替别家承载流量，于是又可以被算成中转 AS。
+这个分法和前面域内路由的模型对得上：末端 AS 相当于[[term:end-host]]，中转 AS 相当于[[term:router]]。教材也留了一个边界情况：Google、Microsoft、Amazon 这类公司手里的 AS，承载量与中转 AS 一样大甚至更大，但它们的主要角色是给自家服务收发流量，按定义更像末端 AS；近几年它们也开始替别家承载流量，于是又可以被算成中转 AS。
 
 ![末端 AS 像端主机，中转 AS 像路由器：只为自己人收发，还是替别人转发](figures/idr-3.svg)
 
@@ -78,13 +78,13 @@ output_mode = "explanation"
 
 AS 图里的边不是随便连的。两家现实中的组织之所以同意交换流量，是因为中间有商业关系。教材说，一对 AS 之间的关系只有两种可能。
 
-第一种是[[term:customer-provider-relationship]]（customer-provider relationship，客户-提供者关系）。客户出钱，提供者提供连通性。那家本地银行是客户，它付钱给 Verizon，换来上网的能力。
+第一种是[[term:customer-provider-relationship]]。客户出钱，提供者提供连通性。那家本地银行是客户，它付钱给 Verizon，换来上网的能力。
 
-第二种是[[term:peering]]（peering，对等互联）。两个对等的 AS 互相送的流量大致相当。现实中它们会签一份法律合同，通常约定：只要两个方向上的流量大致均衡，就不互相付钱。
+第二种是[[term:peering]]。两个对等的 AS 互相送的流量大致相当。现实中它们会签一份法律合同，通常约定：只要两个方向上的流量大致均衡，就不互相付钱。
 
 关系画进图里是这样的：箭头从提供者指向客户，对等则是一条没有箭头的边。所以一张 AS 图里可以同时有带箭头的边和不带箭头的边。于是末端 AS 在图上只剩入边，别人给它连通性，它不替别人提供连通性；中转 AS 则是提供者，出边的箭头表示它在卖连通性。
 
-这里有一个很容易搞混的点，教材专门说了：箭头的方向说的是谁付钱，不是分组往哪走。就算是一条有向边，分组也能两个方向都走，客户付的正是「能往[[term:internet]]（Internet，互联网）其它地方收发分组」这件事。
+这里有一个很容易搞混的点，教材专门说了：箭头的方向说的是谁付钱，不是分组往哪走。就算是一条有向边，分组也能两个方向都走，客户付的正是「能往[[term:internet]]其它地方收发分组」这件事。
 
 > "Note that the direction of the arrow does not tell us anything about what direction the packets are being sent."
 > （注意，箭头的方向并不能告诉我们分组在往哪个方向送。）
@@ -118,7 +118,7 @@ AS 图里的边不是随便连的。两家现实中的组织之所以同意交�
 
 域内的目标是找到又有效又好的路：有效指没有环路、没有死胡同，好指代价最小。域间依然要求有效，但「好」得重新定义。
 
-原因在于，每个 AS 都有自己的商业目标和商业关系，彼此情况不同。域内模型里，一台路由器和另一台路由器没有本质区别；域间模型里，一个 AS 和另一个 AS 差别很大。于是协议的做法是：让每个 AS 自己定[[term:policy-based-routing]]（policy-based routing，基于政策的路由），协议算出来的路径要尊重这些政策。教材举了四条政策例子。
+原因在于，每个 AS 都有自己的商业目标和商业关系，彼此情况不同。域内模型里，一台路由器和另一台路由器没有本质区别；域间模型里，一个 AS 和另一个 AS 差别很大。于是协议的做法是：让每个 AS 自己定[[term:policy-based-routing]]，协议算出来的路径要尊重这些政策。教材举了四条政策例子。
 
 - 「我不想让 AS#2046 的流量穿我的网。」说的是我怎样对待别人的流量。
 - 「我的流量，我希望由 AS#10 来带，而不是 AS#4。」说的是别人该如何对待我的流量。
@@ -128,7 +128,7 @@ AS 图里的边不是随便连的。两家现实中的组织之所以同意交�
 协议不关心你为什么这么定：你可以因为对方是竞争对手而拒绝承载它的流量，协议不需要知道这个理由。这和前面几讲的最小代价路由是两回事。那是一个全局最小化问题，所有路由器在解同一道题；而基于政策的路由里，每个 AS 只关心自己的政策，没有一个大家合作求解的全局问题。
 
 > "Least-cost was a global minimization problem, where every router was trying to solve the same problem."
-> （最小代价是一个全局最小化问题，每台[[term:router]]（router，路由器）都在解同一道题。）
+> （最小代价是一个全局最小化问题，每台[[term:router]]都在解同一道题。）
 
 政策这件事还有另一面，教材放在末尾讲：AS 想要**自主**（autonomy），也就是自己随便定政策，不用跟别人协调，也不用担心协议允不允许；AS 也想要**隐私**（privacy），不愿意把自己的偏好和关系明确告诉别人。比如一个 AS 不应该需要告诉所有人，自己的哪些邻居是客户、哪些是提供者、哪些是对等。
 
@@ -190,7 +190,7 @@ AS 图里的边不是随便连的。两家现实中的组织之所以同意交�
 
 两条路都成立，B 该走哪条？按第一条规则，B 偏好最赚钱的路，而不是最短的路。走 B-A-C-E 时下一跳是提供者 A，得付钱；走 B-C-E 时下一跳是对等 C，不用付钱。所以 B 选了后者，最终路径是 D-B-C-E。
 
-教材最后补了一句很实在的话：既然对等能省钱，为什么不是每个 AS 都去建对等？因为建一条[[term:link]]（link，链路）要铺物理设施，比如往地下埋线，省下的钱得先盖过这笔开销。
+教材最后补了一句很实在的话：既然对等能省钱，为什么不是每个 AS 都去建对等？因为建一条[[term:link]]要铺物理设施，比如往地下埋线，省下的钱得先盖过这笔开销。
 
 ![D 到 E 的两条候选路径：一条穿过 A 要付钱，一条走对等不付钱](figures/idr-9.svg)
 
@@ -198,7 +198,7 @@ AS 图里的边不是随便连的。两家现实中的组织之所以同意交�
 
 ## 十、单峰路径：路不会走进山谷
 
-把所有 AS 的选择放在一起看，会得到一个整体形状。教材的说法是：AS 图里的路径永远是[[term:valley-free]]（valley-free，无山谷）的。在层级结构里逐条数，能推出三条规则。
+把所有 AS 的选择放在一起看，会得到一个整体形状。教材的说法是：AS 图里的路径永远是[[term:valley-free]]的。在层级结构里逐条数，能推出三条规则。
 
 - 上坡之后，可以接对等、接下坡，或者继续上坡。上一跳是付我钱的客户，我乐意把分组转给谁都行。
 - 对等边之后，只能接下坡。上一跳没付我钱，我就需要下一跳是付我钱的客户。

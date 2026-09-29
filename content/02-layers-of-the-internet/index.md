@@ -83,7 +83,7 @@ output_mode = "explanation"
 > "We'll also need to make sure that there's enough capacity on these links to carry our data."
 > （还要保证这些链路上有足够的容量把数据送过去。）
 
-链路够不够宽、堵住了怎么办，这是[[term:congestion-control]]（congestion control）那一章的主题。教材还补了一句容易被忽略的话：除了设备，这门课也要研究**运营这些设备的人**。互联网的运营者是[[term:isp]]（ISP，互联网服务提供商），比如 AT&T、亚马逊云，甚至伯克利自己。他们会按自己的商业与政治考量做决定，例如 AT&T 修了一条海底光缆，别的 ISP 想借道，就可能要被它收费。
+链路够不够宽、堵住了怎么办，这是[[term:congestion-control]]（congestion control）那一章的主题。教材还补了一句容易被忽略的话：除了设备，这门课也要研究**运营这些设备的人**。互联网的运营者是[[term:isp]]，比如 AT&T、亚马逊云，甚至伯克利自己。他们会按自己的商业与政治考量做决定，例如 AT&T 修了一条海底光缆，别的 ISP 想借道，就可能要被它收费。
 
 ![两片网络各设一个交换设备，只把这两台设备连起来；旁边标出两个待解问题](figures/layers-4.svg)
 

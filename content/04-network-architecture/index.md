@@ -24,7 +24,7 @@ output_mode = "explanation"
 > "These designs are just one of many possible designs, and many design choices were made years ago, before the Internet grew to its current scale. Other designs exist, and debates still exist about what the best design is."
 > （这些设计只是众多可能设计中的一种；很多选择是很多年前做的，那时互联网还没有长到今天的规模。别的设计也存在，关于什么是最好的设计，争论至今还在。）
 
-按这个态度看，[[term:architecture]]（architecture，架构）不是一份标准答案，而是一组取舍。教材说，这些设计取向既决定了互联网为什么这样运转，也决定了能在它上面造出什么样的应用；而在当年，它们与既有系统的做法相去甚远。
+按这个态度看，[[term:architecture]]不是一份标准答案，而是一组取舍。教材说，这些设计取向既决定了互联网为什么这样运转，也决定了能在它上面造出什么样的应用；而在当年，它们与既有系统的做法相去甚远。
 
 ![上往下看的架构视角：先定一套通用的底层，应用长在它上面](figures/arch-1.svg)
 
@@ -73,7 +73,7 @@ output_mode = "explanation"
 > "Ultimately, everybody on the Internet must agree to speak IP so that packets can be sent across the Internet."
 > （归根到底，互联网上的每个人都必须同意说 IP，分组才可能跨过互联网。）
 
-两头宽、中间窄，形状像一个沙漏。[[term:narrow-waist]]（narrow waist，窄腰）这个名字就是从这里来的：它是一处被迫达成的一致，也正是这一处一致，换来了全世界能互相通信。
+两头宽、中间窄，形状像一个沙漏。[[term:narrow-waist]]这个名字就是从这里来的：它是一处被迫达成的一致，也正是这一处一致，换来了全世界能互相通信。
 
 ![窄腰：上面与下面都可以有很多协议，中间只有一个](figures/arch-3.svg)
 
@@ -141,7 +141,7 @@ output_mode = "explanation"
 
 同一个道理被教材推广到写代码这件事上：让自己掌握把功能做正确的控制权，好过去依赖别人，因为别人的错你修不了。它还补了一句更硬的话：如果网络本身有 bug，靠网络保证可靠性其实保证不了，主机最后还是要自己端到端检查一遍，那么网络里那份可靠性就白做了。
 
-历史也走了这条路：**早期的互联网每条链路都做可靠性，而现代互联网在网络里只做[[term:best-effort]]（best-effort，尽力而为），把可靠性交给端主机**，这正是端到端原则的体现。教材的总结是两步推理：有些应用要求必须在端到端实现才能保证正确；而端到端实现本身已经足够，所以网络里再加一份功能只会带来不必要的复杂度与成本，却帮不上达成要求。
+历史也走了这条路：**早期的互联网每条链路都做可靠性，而现代互联网在网络里只做[[term:best-effort]]，把可靠性交给端主机**，这正是端到端原则的体现。教材的总结是两步推理：有些应用要求必须在端到端实现才能保证正确；而端到端实现本身已经足够，所以网络里再加一份功能只会带来不必要的复杂度与成本，却帮不上达成要求。
 
 ![两种做法并排：在网络里做可靠性，与只在端主机做可靠性](figures/arch-6.svg)
 

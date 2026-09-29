@@ -17,7 +17,7 @@ output_mode = "explanation"
 
 ## 一、换一条完全不同的思路
 
-上一讲的距离向量让每台路由器只跟邻居交换消息。这一讲要解决的正是它的反面：如果让**每台[[term:router]]（router，路由器）都拿到整张网络的图**，[[term:routing]]（routing，路由）会变成什么样。这就是链路状态（link-state）这一类协议。
+上一讲的距离向量让每台路由器只跟邻居交换消息。这一讲要解决的正是它的反面：如果让**每台[[term:router]]都拿到整张网络的图**，[[term:routing]]会变成什么样。这就是链路状态（link-state）这一类协议。
 
 教材先把两类做法的分工说清楚。距离向量是分布式协作计算：每台节点根据邻居算出的结果，只算自己那一份，合起来才是完整答案，而且它只需要邻居给的局部信息，看不到整张图。链路状态正好相反。
 
@@ -27,11 +27,11 @@ output_mode = "explanation"
 教材还给了一句话的概括。
 
 > "Link-state protocols in one sentence: Every router learns the full network graph, and then runs shortest-paths on the graph to populate the forwarding table."
-> （一句话概括：每台路由器学到完整的网络图，然后在图上跑最短路，据此把[[term:forwarding]]（forwarding，转发）表填起来。）
+> （一句话概括：每台路由器学到完整的网络图，然后在图上跑最短路，据此把[[term:forwarding]]表填起来。）
 
-这条路要分两步走：先学到整张图（每条[[term:link]]（link，链路）的状态、代价，以及每个目的地的位置），再在图上跑算法算出怎么把[[term:packet]]（packet，分组）送到每个目的地。教材先讲第二步，再讲第一步。
+这条路要分两步走：先学到整张图（每条[[term:link]]的状态、代价，以及每个目的地的位置），再在图上跑算法算出怎么把[[term:packet]]送到每个目的地。教材先讲第二步，再讲第一步。
 
-链路状态[[term:protocol]]（protocol，协议）通常是域内协议，真实世界里两个主要的例子是 IS-IS（Intermediate System to Intermediate System）与 OSPF（Open Shortest Path First），今天都在广泛部署。
+链路状态[[term:protocol]]通常是域内协议，真实世界里两个主要的例子是 IS-IS（Intermediate System to Intermediate System）与 OSPF（Open Shortest Path First），今天都在广泛部署。
 
 ![距离向量靠邻居的结果，链路状态靠自己的整张图](figures/ls-1.svg)
 
@@ -127,10 +127,10 @@ output_mode = "explanation"
 
 第二，收敛的快慢。按实现不同，距离向量可能更慢：网络一变，得等邻居重算并重新宣告，我们才能更新自己的表；然后我们的邻居又要等我们，如此一级级往外。链路状态里，所有人都可以迅速泛滥新信息、同时重算。
 
-第三，也是决定性的：[[term:scalability]]（scalability，可扩展性）。链路状态适合小的本地网络，却**不适合全球[[term:internet]]（Internet，互联网）**，因为它要求每台路由器都了解整个网络。
+第三，也是决定性的：[[term:scalability]]。链路状态适合小的本地网络，却**不适合全球[[term:internet]]**，因为它要求每台路由器都了解整个网络。
 
 > "On the global Internet, operators might not want to reveal their network topology (e.g. where their routers are located, the bandwidth of their links) to competitors."
-> （在全球互联网上，运营者可能并不愿意向竞争对手暴露自己的网络拓扑，比如路由器在哪里、链路的[[term:bandwidth]]（bandwidth，带宽）是多少。）
+> （在全球互联网上，运营者可能并不愿意向竞争对手暴露自己的网络拓扑，比如路由器在哪里、链路的[[term:bandwidth]]是多少。）
 
 所以实践中，大多数网络把距离向量与链路状态结合起来用。
 

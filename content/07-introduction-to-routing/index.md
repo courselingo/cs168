@@ -17,14 +17,14 @@ output_mode = "explanation"
 
 ## 一、问题：两台机器并不直连，消息怎么找到路
 
-前面几讲把分层、首部、[[term:link]]（link，链路）都讲过了，可一直回避了第三讲留下的那个问题：交换机收到一个[[term:packet]]（packet，分组）之后，怎么知道该往哪个口[[term:forwarding]]（forwarding，转发），才能让它更靠近目的地。这一讲要解决的就是这个问题，它是 Routing 这一部分的入口。
+前面几讲把分层、首部、[[term:link]]都讲过了，可一直回避了第三讲留下的那个问题：交换机收到一个[[term:packet]]之后，怎么知道该往哪个口[[term:forwarding]]，才能让它更靠近目的地。这一讲要解决的就是这个问题，它是 Routing 这一部分的入口。
 
-教材把问题摆得很直白：机器 A 和机器 B 都连着[[term:internet]]（Internet，互联网），可它们之间并没有直接连着。A 要把消息发给 B，它怎么知道该往哪里发，消息才会最终抵达 B；而这个消息在[[term:routing]]（routing，路由）的意义上究竟会走出一条什么路径。
+教材把问题摆得很直白：机器 A 和机器 B 都连着[[term:internet]]，可它们之间并没有直接连着。A 要把消息发给 B，它怎么知道该往哪里发，消息才会最终抵达 B；而这个消息在[[term:routing]]的意义上究竟会走出一条什么路径。
 
 > "How does machine A know where to send the message, so that the message will eventually reach machine B? What path will the message take through the network to reach its destination of machine B? In this unit, we'll be studying routing to answer these questions."
 > （机器 A 怎么知道该把消息发到哪里，消息才会最终到达机器 B？消息在网络里会走出一条什么路径，才到达目的地 B？这一部分就是研究路由来回答这些问题的。）
 
-这一部分会按四步推进：先给互联网建一个够用的模型，好把路由变成一个定义清楚的问题；再看路由问题的答案长什么样，什么样的答案算合法、算好；然后看几类[[term:protocol]]（protocol，协议）路由协议，它们用来生成这些答案；最后看寻址怎么让协议扩展到整个互联网，以及真实世界里用的硬件。
+这一部分会按四步推进：先给互联网建一个够用的模型，好把路由变成一个定义清楚的问题；再看路由问题的答案长什么样，什么样的答案算合法、算好；然后看几类[[term:protocol]]路由协议，它们用来生成这些答案；最后看寻址怎么让协议扩展到整个互联网，以及真实世界里用的硬件。
 
 ![从 A 到 B 并不直连，路径是这一部分要回答的问题](figures/routing-intro-1.svg)
 
@@ -43,7 +43,7 @@ output_mode = "explanation"
 > "However, this is infeasible in practice because of the scale of the Internet."
 > （然而，由于互联网的规模，这在实践中是不可行的。）
 
-不是这个想法不好，而是它太大了：一台[[term:router]]（router，路由器）不可能知道全世界每一台机器的路由信息，也不可能在每台机器变动时同步一遍。这一点后面还会反复出现，它是整门课的一条主线。
+不是这个想法不好，而是它太大了：一台[[term:router]]不可能知道全世界每一台机器的路由信息，也不可能在每台机器变动时同步一遍。这一点后面还会反复出现，它是整门课的一条主线。
 
 具体地说，一台路由器要存下全世界每一台机器的可达信息，还要在每次有人接入或断开时把变化同步一遍；这两件事的代价都随机器数量增长，而互联网的机器数量是全世界级的。规模问题在这里第一次出现，后面每一讲都会以不同形式回来找它：路由表有多大、协议报文发多少、故障时要收敛多久。
 
@@ -69,7 +69,7 @@ output_mode = "explanation"
 为什么域内协议可以各选各的，教材给的理由是：本地网络之间确实不一样。它列了一串差异来源，这份清单比结论更有意思。
 
 > "For example, they might differ in size: Some networks might have more machines than others. Or, the machines might be spread out over a wider physical area (e.g. the entire UC Berkeley campus), or a smaller area (e.g. your home). Networks can also differ in the bandwidth they need to support, the allowable failure rate, the number of support staff available, the age of the infrastructure, the amount of money available to build and support it, and so on."
-> （比如规模不同：有的网络机器多，有的少；覆盖的物理范围也不同，可能是一整个校园，也可能是你家。网络还可能在需要支撑的[[term:bandwidth]]（bandwidth，带宽）、允许的故障率、能投入的运维人手、[[term:infrastructure]]（infrastructure，基础设施）的新旧、能拿到的预算等方面各不相同。）
+> （比如规模不同：有的网络机器多，有的少；覆盖的物理范围也不同，可能是一整个校园，也可能是你家。网络还可能在需要支撑的[[term:bandwidth]]、允许的故障率、能投入的运维人手、[[term:infrastructure]]的新旧、能拿到的预算等方面各不相同。）
 
 规模、范围、带宽、容错要求、人手、设备新旧、预算，这些差异决定了同一套策略在一张网络里好用、换一张就未必。所以教材的结论是让每片网络自己选。
 

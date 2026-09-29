@@ -17,12 +17,12 @@ output_mode = "explanation"
 
 ## 一、起点：从一条最简单的宣告开始
 
-前面几讲把判据立好了，这一讲要解决的是：把那些判据变成一套真正能跑的协议。。距离向量（distance-vector）是三类[[term:routing]]（routing，路由）算法之一，另外两类是链路状态与路径向量。它有着很长的历史，在[[term:internet]]（Internet，互联网）与它的前身 ARPANET 上用了很多年，原型[[term:protocol]]（protocol，协议）是 RIP（Routing Information Protocol）。
+前面几讲把判据立好了，这一讲要解决的是：把那些判据变成一套真正能跑的协议。。距离向量（distance-vector）是三类[[term:routing]]算法之一，另外两类是链路状态与路径向量。它有着很长的历史，在[[term:internet]]与它的前身 ARPANET 上用了很多年，原型[[term:protocol]]是 RIP（Routing Information Protocol）。
 
-教材从一个空网络开始推：每台[[term:router]]（router，路由器）的转发表都是空的，目标是把它们填好，让任何地方都能把[[term:packet]]（packet，分组）送到目的地 A（一台[[term:end-host]]，end host）。第一步很朴素。
+教材从一个空网络开始推：每台[[term:router]]的转发表都是空的，目标是把它们填好，让任何地方都能把[[term:packet]]送到目的地 A（一台[[term:end-host]]，end host）。第一步很朴素。
 
 > "To start, A can tell R1: 'I am A.' Now, R1 knows how to forward packets to A."
-> （一开始，A 可以告诉 R1：「我是 A。」于是 R1 就知道该怎么把分组[[term:forwarding]]（forwarding，转发）给 A 了。）
+> （一开始，A 可以告诉 R1：「我是 A。」于是 R1 就知道该怎么把分组[[term:forwarding]]给 A 了。）
 
 R1 有了通往 A 的路，就转告邻居 R2 和 R3：「我是 R1，我能到 A。」于是 R2、R3 知道了把分组交给 R1 就能到 A。它们再往下传，一层层铺开，直到所有人的表都填满。教材把这个过程总结成两条动作：听到有人宣称能到 A，就记下是谁说的；一旦自己有了路，就转告所有邻居。
 
@@ -57,7 +57,7 @@ R1 有了通往 A 的路，就转告邻居 R2 和 R3：「我是 R1，我能到 
 听到一条路时有三种情况：表里没有这个目的地，就接受；新路比已知的更好，就替换；新路比已知的更差，就忽略。这里有一个极易算错的地方：比较的不能只是宣告里的那个数。
 
 > "When someone advertises a path, the cost via that path is actually the sum of two numbers: The link cost from you to the neighbor, plus the cost from the neighbor to the destination (as advertised by the neighbor)."
-> （别人宣告一条路径时，经由这条路径的代价其实是两个数之和：你到那个邻居的[[term:link]]（link，链路）代价，加上邻居到目的地的代价。）
+> （别人宣告一条路径时，经由这条路径的代价其实是两个数之和：你到那个邻居的[[term:link]]代价，加上邻居到目的地的代价。）
 
 教材给了具体例子：听到「我是 R1，A 离我 5」，这条路对你来说是 1（你到 R1 的链路代价）加 5，等于 6。后来又听到「我是 R2，A 离我 3」，看起来 3 更小，但对你来说是 10 加 3 等于 13，比 6 差，所以不更新，分组继续发给 R1。
 
@@ -75,7 +75,7 @@ R1 有了通往 A 的路，就转告邻居 R2 和 R3：「我是 R1，我能到 
 Bellman-Ford 是另一个依赖松弛的最短路算法，而且比 Dijkstra 更简单：反复遍历所有边、对每条边做松弛，直到所有最短路都出来。但教材提醒，你在数据结构课上学过的那份代码，直接拿来当路由协议并不好用，因为路由协议必须是分布式的，而且是异步的。
 
 - 分布式：没有一台中心机器跑整个算法，每台路由器在看不到整张图的情况下，只算出自己那一份答案，也就是把自己的表填好。
-- 异步：整个协议是[[term:asynchronous]]（asynchronous，异步）的：所有路由器可以同时跑，没有谁规定松弛的顺序，也没有谁规定宣告发出的顺序。
+- 异步：整个协议是[[term:asynchronous]]的：所有路由器可以同时跑，没有谁规定松弛的顺序，也没有谁规定宣告发出的顺序。
 
 所以这一讲设计的，是一个分布式、异步版本的 Bellman-Ford。教材还交代了一个术语：把「我是 R1，我能以代价 5 到 A」这样的消息发出去，叫宣告或广告一条路由（announcing / advertising a route），这条广告包含三个值：目的地、你的身份、从你到目的地的总代价。
 

@@ -17,9 +17,9 @@ output_mode = "explanation"
 
 ## 一、一条链路的三个属性
 
-分层的图景已经有了，这一讲把镜头推近到一条[[term:link]]（link，链路）上，看一个[[term:packet]]（packet，分组）是怎么被送上这条线、又花多久到达对面。这一讲要解决的是这样一个问题：怎么用几个数字把一条链路的性能说清楚。链路的另一头是[[term:end-host]]（end host，端主机），中间串着的则是交换机与路由器。
+分层的图景已经有了，这一讲把镜头推近到一条[[term:link]]上，看一个[[term:packet]]是怎么被送上这条线、又花多久到达对面。这一讲要解决的是这样一个问题：怎么用几个数字把一条链路的性能说清楚。链路的另一头是[[term:end-host]]，中间串着的则是交换机与路由器。
 
-教材给出三个属性。第一个是[[term:bandwidth]]（bandwidth，带宽）。
+教材给出三个属性。第一个是[[term:bandwidth]]。
 
 > "The bandwidth of a link tells us how many bits we can send on the link per unit time. Intuitively, this is the speed of the link."
 > （链路的带宽告诉我们单位时间内能在这条链路上送多少位；直觉上它就是这条链路的速度。）
@@ -141,7 +141,7 @@ output_mode = "explanation"
 > "This is called transient overload, and it's extremely common at switches in the Internet."
 > （这叫做瞬时过载，在互联网的交换机上极其常见。）
 
-应对的办法是[[term:switch]]（switch，交换机）维护一个队列：两个分组同时到了，就把其中一个放进队列，另一个先发出去。任何时刻，交换机可以选发一个刚到的分组，也可以选发队列里的一个，这个选择由分组调度算法决定，而调度算法有很多种设计，后面会看。没有新分组进来的时候，交换机就把队列排空。队列的价值就在于吸收这种瞬时突发。
+应对的办法是[[term:switch]]维护一个队列：两个分组同时到了，就把其中一个放进队列，另一个先发出去。任何时刻，交换机可以选发一个刚到的分组，也可以选发队列里的一个，这个选择由分组调度算法决定，而调度算法有很多种设计，后面会看。没有新分组进来的时候，交换机就把队列排空。队列的价值就在于吸收这种瞬时突发。
 
 ![瞬时过载：一个分组先进队列，另一个直接发出去](figures/links-9.svg)
 
@@ -149,9 +149,9 @@ output_mode = "explanation"
 
 ## 十、持续过载：只能丢包，以及为什么只承诺尽力而为
 
-如果进来的一直比出去的多，那就是持续过载：出口链路的容量根本撑不住这个进入速率。这时候把队列填满也没用，交换机只能把[[term:forwarding]]（forwarding，转发）不出去的分组丢掉。
+如果进来的一直比出去的多，那就是持续过载：出口链路的容量根本撑不住这个进入速率。这时候把队列填满也没用，交换机只能把[[term:forwarding]]不出去的分组丢掉。
 
-教材给了运营者能做的两件事。一是按需扩容：如果发现某台交换机经常过载，就升级链路，而这可能需要人工操作。二是让发送方放慢，也就是后面的[[term:congestion-control]]（congestion control，拥塞控制）要讲的内容。但教材也说了实话：**过载没有根治办法**，这正是[[term:internet]]（Internet）只承诺[[term:best-effort]]（best-effort，尽力而为）的原因。
+教材给了运营者能做的两件事。一是按需扩容：如果发现某台交换机经常过载，就升级链路，而这可能需要人工操作。二是让发送方放慢，也就是后面的[[term:congestion-control]]要讲的内容。但教材也说了实话：**过载没有根治办法**，这正是[[term:internet]]（Internet）只承诺[[term:best-effort]]的原因。
 
 有了队列这个概念，分组时延的公式要补上第三项。
 

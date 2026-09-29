@@ -17,16 +17,16 @@ output_mode = "explanation"
 
 ## 一、容量有限，可同时在线的人很多
 
-[[term:link]]（link，链路）和[[term:switch]]（switch，交换机）的容量都是有限的。这一讲要解决的就是由此而来的那个设计问题：这些资源该怎么在许多使用者之间分配。
+[[term:link]]和[[term:switch]]的容量都是有限的。这一讲要解决的就是由此而来的那个设计问题：这些资源该怎么在许多使用者之间分配。
 
-先把要分配的东西说清楚。一条流（flow）是两台[[term:end-host]]（end host，端主机）之间交换的一串[[term:packet]]（packet，分组），比如你和朋友的一次视频通话。[[term:internet]]（Internet）要同时支撑很多条流，而容量是有限的。
+先把要分配的东西说清楚。一条流（flow）是两台[[term:end-host]]之间交换的一串[[term:packet]]，比如你和朋友的一次视频通话。[[term:internet]]（Internet）要同时支撑很多条流，而容量是有限的。
 
 教材给出的做法是统计复用（statistical multiplexing）：按需求动态分配资源，而不是给每个人切一块固定的份额。
 
 > "We often say that the network resources are statistically multiplexed, which means that we'll dynamically allocate resources to users based on their demand, instead of partitioning a fixed share of resources to users."
 > （我们常说网络资源是统计复用的，意思是按用户的需求动态分配资源，而不是把资源切成固定份额分给用户。）
 
-教材用的类比是你自己的电脑：它不会预先切一半 CPU 给 Firefox、一半给 Zoom，然后各自只准用自己的那一半，而是按各程序当下的需要动态分配。统计复用在今天的计算机领域几乎到处都是，比如云计算里，不同公司动态共享同一个[[term:data-center]]（data center，数据中心）的资源。
+教材用的类比是你自己的电脑：它不会预先切一半 CPU 给 Firefox、一半给 Zoom，然后各自只准用自己的那一半，而是按各程序当下的需要动态分配。统计复用在今天的计算机领域几乎到处都是，比如云计算里，不同公司动态共享同一个[[term:data-center]]的资源。
 
 ![静态划分与统计复用：一边是预先切好份额，一边是按需动态分配](figures/sharing-1.svg)
 
@@ -83,7 +83,7 @@ output_mode = "explanation"
 
 教材换了一个日常的类比：一家生意很好的餐厅，桌子有限，客人很多。有两种分桌子的办法，一种是让客人预订，另一种是先到先得。网络里的两种做法正好对应这两种。
 
-先说先到先得。它的正式名字叫 [[term:best-effort]]（best-effort，尽力而为）：每个人把数据直接送进网络，不做任何预约，然后听天由命，网络不保证有足够的[[term:bandwidth]]（bandwidth，带宽）满足你的需求。它的代表设计是分组交换（packet switching）。
+先说先到先得。它的正式名字叫 [[term:best-effort]]：每个人把数据直接送进网络，不做任何预约，然后听天由命，网络不保证有足够的[[term:bandwidth]]满足你的需求。它的代表设计是分组交换（packet switching）。
 
 > "The canonical design for best-effort is called packet switching. The switch looks at each packet independently and forwards the packet closer to its destination. The switches don't think about flows or reservations."
 > （尽力而为的代表设计叫分组交换：交换机独立地看每一个分组，把它转发到离目的地更近的地方，交换机不考虑流，也不考虑预约。）
@@ -102,7 +102,7 @@ output_mode = "explanation"
 
 分组交换的做法前面几讲已经讲透了，电路交换则需要看一遍它完整的流程。教材把它拆成四步。
 
-第一步是选路。流开始时，两端主机要先确定一条穿过网络的路径，也就是一串交换机和链路的序列。这里教材让你先放一放细节：找路径要靠某种[[term:routing]]（routing，路由）算法，而路由算法还没讲，所以这一步暂时当作魔法。
+第一步是选路。流开始时，两端主机要先确定一条穿过网络的路径，也就是一串交换机和链路的序列。这里教材让你先放一放细节：找路径要靠某种[[term:routing]]算法，而路由算法还没讲，所以这一步暂时当作魔法。
 
 第二步是预约。源主机沿着这条路径，向目的地发一条专门的预约请求消息；一路上每台交换机都会知道这件事。如果每台交换机都同意，预约就成立了，一条由交换机组成的电路就在源和目的地之间建立起来。
 
@@ -156,7 +156,7 @@ output_mode = "explanation"
 
 第三把尺子问的是规模变大之后，两种做法各自怎么应对故障。这一项上，**分组交换更好**。
 
-如果一台[[term:router]]（router，路由器）坏了，分组换一条路走就行，端主机什么都不用改。教材在这里也留了一句将来的伏笔：具体怎么绕路还没讲，但路由算法确实很擅长对故障做出调整。
+如果一台[[term:router]]坏了，分组换一条路走就行，端主机什么都不用改。教材在这里也留了一句将来的伏笔：具体怎么绕路还没讲，但路由算法确实很擅长对故障做出调整。
 
 电路交换这边，事情就多了。路径上的路由器坏了，网络固然也要找一条新路径，但端主机还有不少活要干：它得想办法发现故障，得重发一条预约请求，还得把旧路径上的预约释放掉。而且还有一个躲不开的问题：如果这条新的预约请求被拒绝了呢。
 
@@ -182,7 +182,7 @@ output_mode = "explanation"
 > "The fundamental problem that makes circuit switching complicated is state consensus. All the routers have to keep track of extra state, and they all have to agree on what that state is."
 > （让电路交换变得复杂的根本问题是状态共识：所有路由器都要额外跟踪一份状态，而且它们都得对这份状态是什么达成一致。）
 
-教材拿 Paxos 做了对比：为了让多个处理器就状态达成一致，人们发明了极其复杂的[[term:protocol]]（protocol，协议）；而在实践中，这类算法通常只跑在四五台服务器上。电路交换相当于要求互联网在互联网的规模上跑这件事，涉及上百万台路由器和上百万条流。
+教材拿 Paxos 做了对比：为了让多个处理器就状态达成一致，人们发明了极其复杂的[[term:protocol]]；而在实践中，这类算法通常只跑在四五台服务器上。电路交换相当于要求互联网在互联网的规模上跑这件事，涉及上百万台路由器和上百万条流。
 
 最后把两个总结并排放在一起：电路交换用预留带宽给应用带来更好的性能，也给开发者更可预测的行为；分组交换则更高效地共享带宽，没有启动时间，故障恢复更容易，实现上也更简单，因为路由器要操心的事更少。
 

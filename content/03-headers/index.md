@@ -24,7 +24,7 @@ output_mode = "explanation"
 
 教材的类比很直接：你把一封没装信封的信直接塞给邮局，邮局也不知道该怎么办。要让邮局能办事，得把信装进信封，再在信封上写上收件人地址。
 
-网络里的做法一模一样：发分组的时候，要额外挂上一段元数据，告诉承载数据的[[term:infrastructure]]（infrastructure）该怎么处理这个分组。这段元数据叫[[term:header]]（header，首部），剩下那部分才是一封信的内容，叫载荷（payload）。教材把两边的分工说得很清楚。
+网络里的做法一模一样：发分组的时候，要额外挂上一段元数据，告诉承载数据的[[term:infrastructure]]（infrastructure）该怎么处理这个分组。这段元数据叫[[term:header]]，剩下那部分才是一封信的内容，叫载荷（payload）。教材把两边的分工说得很清楚。
 
 > "In the analogy, the post office shouldn't be reading the contents of my letter. It should only read what's on the envelope to decide how to send my letter."
 > （类比里，邮局不该去读我信里的内容，它只该看信封上写了什么，据此决定怎么送。）

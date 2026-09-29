@@ -19,7 +19,7 @@ output_mode = "explanation"
 
 上一讲把问题提出来了，可要正式回答它，得先有一个够用的模型。这一讲要解决的就是这件事：把互联网抽象成一张图，让路由（[[term:routing]]，routing）变成一个能写下来、能判断对错的问题。
 
-教材的做法很朴素：把互联网看成一堆机器，加上一堆[[term:link]]（link，链路），每条链路连接其中两台机器。
+教材的做法很朴素：把互联网看成一堆机器，加上一堆[[term:link]]，每条链路连接其中两台机器。
 
 > "We can represent the network topology as a graph, where each node represents a machine, and each edge between two nodes represents a link between two machines."
 > （我们可以把网络拓扑表示成一张图：每个节点代表一台机器，两个节点之间的每条边代表两台机器之间的一条链路。）
@@ -37,9 +37,9 @@ output_mode = "explanation"
 第一种是全互联（full mesh）：在每一对机器之间都拉一条链路，于是每台机器都直连其他所有机器。它的毛病是长不大。
 
 > "If we tried to scale this to the size of the modern Internet, we'd need a wire connecting every pair of computers in the world."
-> （要是想把它扩大到现代[[term:internet]]（Internet，互联网）的规模，我们就需要一根线连接世界上每一对电脑。）
+> （要是想把它扩大到现代[[term:internet]]的规模，我们就需要一根线连接世界上每一对电脑。）
 
-更麻烦的是变化：新来一台电脑，就得在它和全世界其他每台电脑之间新建链路。不过教材也说了它在小场合的好处：每台机器都有到其他所有机器的专用链路，一对机器之间可以把这个[[term:bandwidth]]（bandwidth，带宽）用满，所以小规模下带宽很富裕。另外还有一句提醒：一般并不保证图是全连通的，也就是说，不能默认每台机器都有一条直连到其他所有机器的链路。
+更麻烦的是变化：新来一台电脑，就得在它和全世界其他每台电脑之间新建链路。不过教材也说了它在小场合的好处：每台机器都有到其他所有机器的专用链路，一对机器之间可以把这个[[term:bandwidth]]用满，所以小规模下带宽很富裕。另外还有一句提醒：一般并不保证图是全连通的，也就是说，不能默认每台机器都有一条直连到其他所有机器的链路。
 
 第二种是单链路（single link）：拿一条链路把所有机器都挂上去。这里教材临时破了自己刚立的规矩，允许一条链路连多于两台机器。它的好处是扩展容易：新来一台电脑，把线延长过去就行，不必新建一堆链路。代价是带宽。
 
@@ -54,16 +54,16 @@ output_mode = "explanation"
 
 两种极端都不合适，教材于是引入一个新的角色，并顺势给模型加了一条分类规则：每台机器要么是端主机，要么是路由器。
 
-[[term:end-host]]（end host，端主机）是接入互联网收发数据的机器。你电脑上跑着的浏览器算，谷歌那种收发搜索请求的服务器也算。它们会发出自己的[[term:packet]]（packet，分组），也可能成为别人分组的最终目的地，但通常不接收并转发那些「目的地不是自己」的中间分组。
+[[term:end-host]]是接入互联网收发数据的机器。你电脑上跑着的浏览器算，谷歌那种收发搜索请求的服务器也算。它们会发出自己的[[term:packet]]，也可能成为别人分组的最终目的地，但通常不接收并转发那些「目的地不是自己」的中间分组。
 
-[[term:router]]（router，路由器）正好相反：它的职责就是接收并转发中间分组，把它们往最终目的地推近。
+[[term:router]]正好相反：它的职责就是接收并转发中间分组，把它们往最终目的地推近。
 
 > "Routers, by contrast, are machines connected to the Internet responsible for receiving and forwarding intermediate packets closer to their final destination."
 > （路由器相反，是接入互联网、负责接收中间分组并把它们转发到离最终目的地更近的机器。）
 
 你家里的那台路由器是路由器，数据中心里的路由器也是路由器。教材提醒：这些机器通常不自己造分组，也通常不是分组的最终目的地。你上网是想把分组发给谷歌的服务器，而不是发给家里那台路由器。
 
-教材顺手交代了两件容易混的事。第一，路由器可以是合法的目的地，但这一部分里我们忽略这种情况；不过路由器自己可以作为发送方发出新分组。第二，路由器有时也被叫[[term:switch]]（switch，交换机）；两者历史上有区别，如今基本混用，本套讲义尽量统一用「路由器」。
+教材顺手交代了两件容易混的事。第一，路由器可以是合法的目的地，但这一部分里我们忽略这种情况；不过路由器自己可以作为发送方发出新分组。第二，路由器有时也被叫[[term:switch]]；两者历史上有区别，如今基本混用，本套讲义尽量统一用「路由器」。
 
 最后是一条画法约定，非常有用：**路由器画成方框，端主机画成圆圈**。在这张图里，路由器表现为通常连着好几个邻居的中间节点，端主机表现为通常只连一个或几个路由器的节点。教材也承认，现实里这两条都不总成立。
 
@@ -109,7 +109,7 @@ output_mode = "explanation"
 
 ## 六、模型里的分组：只看首部里的目的地址
 
-机器分好类了，接下来规定「在图上跑的东西」长什么样。教材在这里做了一个刻意的简化：每个分组就是一段[[term:header]]（header，首部）加一段载荷，暂时不管多层嵌套的首部。
+机器分好类了，接下来规定「在图上跑的东西」长什么样。教材在这里做了一个刻意的简化：每个分组就是一段[[term:header]]加一段载荷，暂时不管多层嵌套的首部。
 
 > "In the routing unit, we'll consider a simplified model where each packet has a header with metadata, and a payload with the application-level data. We'll ignore nested headers and multiple layers for now."
 > （在路由这一部分，我们用一个简化的模型：每个分组有一段带元数据的首部，和一段装着应用数据的载荷；暂时忽略嵌套的首部和多层结构。）
@@ -119,7 +119,7 @@ output_mode = "explanation"
 > "In the header, the main metadata field we're concerned with is the destination address."
 > （首部里我们最关心的元数据字段是目的地址。）
 
-路由器收到分组后，读首部里的这个字段，据此决定把分组往哪送。这个动作在第七讲出现过，就是[[term:forwarding]]（forwarding，转发）；而「到底该往哪送」这件事，就是路由要解决的核心问题。
+路由器收到分组后，读首部里的这个字段，据此决定把分组往哪送。这个动作在第七讲出现过，就是[[term:forwarding]]；而「到底该往哪送」这件事，就是路由要解决的核心问题。
 
 ![路由单元里的分组：首部加载荷，路由器只读目的地址](figures/model-6.svg)
 

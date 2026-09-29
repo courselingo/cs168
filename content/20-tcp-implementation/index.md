@@ -17,18 +17,18 @@ output_mode = "explanation"
 
 ## 一、从字节流到 TCP 段
 
-上一讲把 TCP 当成一套设计来谈：确认、计时器与往返时间怎么配合，窗口怎么给在途数据加上限，流量控制与拥塞控制各管什么，都讲过一遍了。这一讲要解决的是把这套设计落到代码里时冒出来的问题：应用交给 TCP 的是一串没有边界的字节，里面并没有一个现成的[[term:packet]]（packet，分组）。
+上一讲把 TCP 当成一套设计来谈：确认、计时器与往返时间怎么配合，窗口怎么给在途数据加上限，流量控制与拥塞控制各管什么，都讲过一遍了。这一讲要解决的是把这套设计落到代码里时冒出来的问题：应用交给 TCP 的是一串没有边界的字节，里面并没有一个现成的[[term:packet]]。
 
 > "In order to form packets out of bytes in the bytestream, we'll introduce a unit of data called a TCP segment."
 > （为了把字节流变成一个个分组，我们引入一个数据单位，叫 TCP 段。）
 
-先给一个直觉的比方：发送方的 TCP 实现拿一个桶，应用每交来一个字节就往里放一个；桶装到某个固定上限，就把这桶封成一个 [[term:tcp-segment]]（TCP segment，TCP 段）发出去，再换一个空桶等着。源文把那个上限叫固定最大段长度。
+先给一个直觉的比方：发送方的 TCP 实现拿一个桶，应用每交来一个字节就往里放一个；桶装到某个固定上限，就把这桶封成一个 [[term:tcp-segment]]发出去，再换一个空桶等着。源文把那个上限叫固定最大段长度。
 
-桶有可能填不满。应用写完一句话就停手，剩下的字节永远等不来。所以源文给的第二个机制是[[term:timer]]（timer，计时器）：每开始填一个新的空段就启动一个计时器，到点还没填满也照样把这段发出去。
+桶有可能填不满。应用写完一句话就停手，剩下的字节永远等不来。所以源文给的第二个机制是[[term:timer]]：每开始填一个新的空段就启动一个计时器，到点还没填满也照样把这段发出去。
 
-发之前，发送方的 TCP 实现给这段数据加上 TCP [[term:header]]（header，首部），里面放序列号、端口号这类元数据；加完交给 IP 层，IP 层再补上自己的首部。段加上这两层首部之后，有时被叫作 TCP/IP 分组，也可以等价地说：这是一个载荷为「TCP 首部加数据」的 IP 分组。
+发之前，发送方的 TCP 实现给这段数据加上 TCP [[term:header]]，里面放序列号、端口号这类元数据；加完交给 IP 层，IP 层再补上自己的首部。段加上这两层首部之后，有时被叫作 TCP/IP 分组，也可以等价地说：这是一个载荷为「TCP 首部加数据」的 IP 分组。
 
-**MSS 该定多大**？源文把它和 [[term:link]]（link，链路）上的 MTU 挂钩：IP 分组的大小受链路的[[term:maximum-transmission-unit]]（maximum transmission unit，最大传输单元）限制，而 IP 分组里还得装下 IP 首部与 TCP 首部，所以[[term:maximum-segment-size]]（maximum segment size，最大段长度，源文简称 MSS）比 MTU 小一点点。照录源文的式子：
+**MSS 该定多大**？源文把它和 [[term:link]]上的 MTU 挂钩：IP 分组的大小受链路的[[term:maximum-transmission-unit]]限制，而 IP 分组里还得装下 IP 首部与 TCP 首部，所以[[term:maximum-segment-size]]（maximum segment size，最大段长度，源文简称 MSS）比 MTU 小一点点。照录源文的式子：
 
 MSS (TCP segment limit) = MTU (IP packet limit) - IP header size - TCP header size
 
@@ -45,11 +45,11 @@ MSS (TCP segment limit) = MTU (IP packet limit) - IP header size - TCP header si
 > "In practice, instead of numbering individual segments, we assign a number to every byte in the bytestream."
 > （实践中，我们不给一个个段编号，改成给字节流里的每一个字节编号。）
 
-于是每个段的[[term:header]]里放的是本段第一个字节的编号，这个编号就是[[term:sequence-number]]（sequence number，序列号）。接收方靠它把段排回字节流里的位置。
+于是每个段的[[term:header]]里放的是本段第一个字节的编号，这个编号就是[[term:sequence-number]]。接收方靠它把段排回字节流里的位置。
 
 字节流要有起点，这个起点叫[[term:initial-sequence-number]]（initial sequence number，初始序列号，源文简称 ISN）。源文的规则是：第一个字节编号 ISN+1，第二个 ISN+2，第三个 ISN+3。
 
-确认也跟着换成字节。[[term:acknowledgment]]（acknowledgment，确认）号的含义，源文给了两个等价的说法：一是「到这个编号为止（不含它）的字节我都收到了」，二是「这是我最想收到的下一个字节」。
+确认也跟着换成字节。[[term:acknowledgment]]号的含义，源文给了两个等价的说法：一是「到这个编号为止（不含它）的字节我都收到了」，二是「这是我最想收到的下一个字节」。
 
 > "I have received all bytes up to, but not including, this number."
 > （到这个编号为止的字节我都收到了，但不包括这个编号本身。）
@@ -58,7 +58,7 @@ MSS (TCP segment limit) = MTU (IP packet limit) - IP header size - TCP header si
 
 这个例子的算术值得动手验一遍：第 140 到第 219 号字节一共 219 - 140 + 1 = 80 个，而 140 + 80 = 220，正好是那个确认号。源文把它推广成：首字节编号 X、段里 B 个字节，则这个段盖住 X 到 X+B-1 号，确认号回 X+B。
 
-源文还顺带走了一遍窗口为 1 的[[term:stop-and-wait]]（stop and wait，停等协议）：ISN 是 X，第一个分组序列号 X，第一条确认号 X+B，第二个分组序列号 X+B，第二条确认号 X+2B，第三个分组序列号 X+2B。注意这里和上面「第一个字节编号 ISN+1」差了 1，见溯源。
+源文还顺带走了一遍窗口为 1 的[[term:stop-and-wait]]：ISN 是 X，第一个分组序列号 X，第一条确认号 X+B，第二个分组序列号 X+B，第二条确认号 X+2B，第三个分组序列号 X+2B。注意这里和上面「第一个字节编号 ISN+1」差了 1，见溯源。
 
 ISN 为什么随机选？源文给了两层理由。历史上，设计者担心所有字节流都从 0 开始编号会撞车：一条连接从 0 开始发，发送方崩溃重启后又从 0 开始，接收方就分不清手里这个 0 号分组是崩溃前那条连接留下的，还是新连接发来的。实践中，随机的理由换成了安全：编号如果可预测，攻击者能推出来，进而伪造看起来来自发送方的分组。
 
@@ -72,7 +72,7 @@ TCP 也不是「每个分组自己管自己」那一套。源文说，TCP 需要
 
 发送方要记住哪些字节已经发出、还没被确认，还要维护一堆计时器，比如「不满的段什么时候发」那个、以及「什么时候重发」那个。接收方要记住那些乱序到达、还不能交给应用的字节。
 
-有了状态，每一条字节流就叫一条连接（源文里 connection 与 session 两个词并用），TCP 因此是[[term:connection-oriented]]（connection-oriented，面向连接）的协议。第三层可以把每个分组单独拿出来看，TCP 不行：两端得先把连接建起来、把状态初始化好，才能开始送数据；用完还得有个拆除动作，把两端为状态占的内存还回去。
+有了状态，每一条字节流就叫一条连接（源文里 connection 与 session 两个词并用），TCP 因此是[[term:connection-oriented]]的协议。第三层可以把每个分组单独拿出来看，TCP 不行：两端得先把连接建起来、把状态初始化好，才能开始送数据；用完还得有个拆除动作，把两端为状态占的内存还回去。
 
 ![状态在两端：发送方记住未确认的字节与计时器，接收方记住乱序的字节](figures/tcpimpl-3.svg)
 
@@ -85,7 +85,7 @@ TCP 也不是「每个分组自己管自己」那一套。源文说，TCP 需要
 > "both end hosts in the connection can send and receive data simultaneously, in the same connection"
 > （同一条连接里，两端主机可以同时发送和接收数据。）
 
-这就是[[term:full-duplex]]（full duplex，全双工）。做法是不再指定一个发送方和一个接收方，而是让一条连接带两条字节流：A 到 B 一条，B 到 A 一条。每个分组的首部里既有序列号也有确认号，两者各归各的方向：序列号说的是「我这条流上的字节」，确认号说的是「我从你那收到的字节」。
+这就是[[term:full-duplex]]。做法是不再指定一个发送方和一个接收方，而是让一条连接带两条字节流：A 到 B 一条，B 到 A 一条。每个分组的首部里既有序列号也有确认号，两者各归各的方向：序列号说的是「我这条流上的字节」，确认号说的是「我从你那收到的字节」。
 
 ![全双工：一条连接两条字节流，序列号与确认号各归一个方向](figures/tcpimpl-4.svg)
 
@@ -98,7 +98,7 @@ TCP 也不是「每个分组自己管自己」那一套。源文说，TCP 需要
 > "the two hosts perform a three-way handshake to agree on the ISNs in each direction."
 > （两台主机做一次三次握手，就两个方向各自的 ISN 达成一致。）
 
-这个[[term:three-way-handshake]]（three-way handshake，三次握手）由三个报文组成。第一个从 A 到 B，叫 SYN，把 A 的 ISN 放进序列号字段，意思是「A 到 B 的数据从这里开始编号」。第二个从 B 到 A，叫 SYN-ACK，把 B 的 ISN 放进序列号字段，同时在确认号里确认它收到了 A 的 ISN。第三个又从 A 到 B，叫 ACK，在确认号里确认它收到了 B 的 ISN。
+这个[[term:three-way-handshake]]由三个报文组成。第一个从 A 到 B，叫 SYN，把 A 的 ISN 放进序列号字段，意思是「A 到 B 的数据从这里开始编号」。第二个从 B 到 A，叫 SYN-ACK，把 B 的 ISN 放进序列号字段，同时在确认号里确认它收到了 A 的 ISN。第三个又从 A 到 B，叫 ACK，在确认号里确认它收到了 B 的 ISN。
 
 看完这三个报文，上一节那条「第一个字节编号 ISN+1」就有出处了：我发出一个 ISN，你回我的确认号是 ISN+1，意思是「这个 ISN 我收到了，接下来等你编号 ISN+1 的第一个字节」。
 
@@ -117,7 +117,7 @@ TCP 也不是「每个分组自己管自己」那一套。源文说，TCP 需要
 > "I will not send any more data, but I will continue to receive data if you have any more to send."
 > （我不再发数据了，但你如果还有数据要发，我照收。）
 
-这时连接处于[[term:half-closed]]（half-closed，半关闭）状态。这个 FIN 和别的分组一样要被确认。等对面也把数据发完、也发一个 FIN，这个 FIN 被确认之后，连接就关掉了。
+这时连接处于[[term:half-closed]]状态。这个 FIN 和别的分组一样要被确认。等对面也把数据发完、也发一个 FIN，这个 FIN 被确认之后，连接就关掉了。
 
 另一条路是 RST，用来单方面、不经对方同意就断：
 
@@ -138,7 +138,7 @@ RST 也能被拿来干坏事：攻击者伪造并注入一个 RST，就能把一
 
 全双工带来一个顺水推舟的机会：一个分组既能确认对方的数据，又能带上自己要发的新数据。
 
-接收方拿到一个分组、自己暂时没有数据要发时，有两个选择。一是立刻单独发一条确认；二是压着不发，等自己有数据要发的时候，再把确认和新数据一起发出去。后一种就叫[[term:piggybacking]]（piggybacking，捎带确认）。
+接收方拿到一个分组、自己暂时没有数据要发时，有两个选择。一是立刻单独发一条确认；二是压着不发，等自己有数据要发的时候，再把确认和新数据一起发出去。后一种就叫[[term:piggybacking]]。
 
 源文紧接着解释了为什么实践中经常不捎带，理由藏在 TCP 的实现位置里：TCP 在操作系统里，跟应用是分开的。
 
@@ -156,16 +156,16 @@ RST 也能被拿来干坏事：攻击者伪造并注入一个 RST，就能把一
 
 ## 八、滑动窗口
 
-之前讲分组的时候，[[term:window]]（window，窗口）指的是同一时刻最多多少个分组在途。换成字节之后，源文重新定义了它：
+之前讲分组的时候，[[term:window]]指的是同一时刻最多多少个分组在途。换成字节之后，源文重新定义了它：
 
 > "we'll define the sliding window as the maximum number of contiguous bytes that can be in flight at any given time."
 > （我们把滑动窗口定义成同一时刻允许在途的最大连续字节数。）
 
-这里的 contiguous（连续的）是这次改动真正带来的新限制。按分组算的时候，[[term:in-flight]]（in flight，在途）的可以是 5、7、8 这种不连续的分组；按字节算，在途的字节必须首尾相连、中间不留空洞，于是在字节流上圈出一段区间，也就是[[term:sliding-window]]（sliding window，滑动窗口）。
+这里的 contiguous（连续的）是这次改动真正带来的新限制。按分组算的时候，[[term:in-flight]]的可以是 5、7、8 这种不连续的分组；按字节算，在途的字节必须首尾相连、中间不留空洞，于是在字节流上圈出一段区间，也就是[[term:sliding-window]]。
 
 窗口的左边是第一个还没被确认的字节，由接收方给出的确认号决定。从这个字节起，往后 W 个字节一直到窗口右边，都可以在途。就算窗口里靠中间的一些字节已经被确认，也不能把窗口右边往外挪去发更多字节。源文说得明确：唯一的办法是窗口向右滑，也就是确认号变大。
 
-窗口有多宽，由[[term:flow-control]]（flow control，流量控制）与[[term:congestion-control]]（congestion control，拥塞控制）一起限制。就流量控制而言，宽度取自接收方通告的[[term:advertised-window]]（advertised window，通告窗口），而接收方是照自己那端还有多少[[term:buffer]]（buffer，缓冲区）空间来决定通告多少的。
+窗口有多宽，由[[term:flow-control]]与[[term:congestion-control]]一起限制。就流量控制而言，宽度取自接收方通告的[[term:advertised-window]]，而接收方是照自己那端还有多少[[term:buffer]]空间来决定通告多少的。
 
 ![滑动窗口：左边是第一个未确认字节，窗口内必须在途相连，只能靠确认号变大而右滑](figures/tcpimpl-8.svg)
 
@@ -173,16 +173,16 @@ RST 也能被拿来干坏事：攻击者伪造并注入一个 RST，就能把一
 
 ## 九、重传的两个触发条件
 
-源文说，[[term:retransmission]]（retransmission，重传）有两个触发条件，只要满足一个就要重发。
+源文说，[[term:retransmission]]有两个触发条件，只要满足一个就要重发。
 
 第一个是计时器：数据过了一段时间还没被确认。按分组算的时候，每个分组都自带一个计时器，到点还没被确认就把那个分组重发。换成字节之后，源文改了做法：不再每个字节一个、也不再每个分组一个，而是只留一个计时器，它盯的是第一个还没被确认的字节，也就是窗口的左边。
 
 > "instead of one timer per byte or per packet, we will only have a single timer, corresponding to the first unacknowledged byte (left side of the window)"
 > （不再每个字节或每个分组一个计时器，我们只留一个计时器，对应第一个还没被确认的字节，也就是窗口左边那个。）
 
-这个计时器到点，重发的是最左边那个还没被确认的段。计时器有多长跟[[term:round-trip-time]]（round-trip time，往返时间）有关，而往返时间是用「发出数据到收到确认」之间的时间量出来估的。源文还提醒：每来一条新的确认，窗口跟着变，这个计时器就要重置。
+这个计时器到点，重发的是最左边那个还没被确认的段。计时器有多长跟[[term:round-trip-time]]有关，而往返时间是用「发出数据到收到确认」之间的时间量出来估的。源文还提醒：每来一条新的确认，窗口跟着变，这个计时器就要重置。
 
-第二个条件来自一条推断：如果我已经开始收到后面分组的确认，那说明中间那段多半丢了。这条思路上一讲已经用过，也就是用后面的确认更早发现丢包，这一讲只是把它换到字节上。用累积确认时，判据是收到 K 个[[term:duplicate-ack]]（duplicate ack，重复确认），K 常见取 3。源文说这 3 个重复确认意味着后面 3 个分组已经被确认了。换成字节之后做法不变：收到 K 个重复确认，就重发最左边那个还没被确认的段。
+第二个条件来自一条推断：如果我已经开始收到后面分组的确认，那说明中间那段多半丢了。这条思路上一讲已经用过，也就是用后面的确认更早发现丢包，这一讲只是把它换到字节上。用累积确认时，判据是收到 K 个[[term:duplicate-ack]]，K 常见取 3。源文说这 3 个重复确认意味着后面 3 个分组已经被确认了。换成字节之后做法不变：收到 K 个重复确认，就重发最左边那个还没被确认的段。
 
 ![重传的两个触发条件：一个盯时间，一个盯确认的形态](figures/tcpimpl-9.svg)
 
@@ -196,13 +196,13 @@ RST 也能被拿来干坏事：攻击者伪造并注入一个 RST，就能把一
 
 序列号 32 位，源文说它是「本分组的第一个字节的字节偏移」；确认号也是 32 位，源文说它是「收到过的最高连续序列号加一」。这两个说法和第二节的字节编号是一回事：最高连续字节编号加一，正是「下一个想收到的字节编号」。
 
-[[term:checksum]]（checksum，校验和）覆盖的是整个数据，不只是首部，用来发现数据被损坏。这一点和 IP 首部不同，第 17 讲说过 IP 的校验和只覆盖首部。
+[[term:checksum]]覆盖的是整个数据，不只是首部，用来发现数据被损坏。这一点和 IP 首部不同，第 17 讲说过 IP 的校验和只覆盖首部。
 
 通告窗口也在这里，用来支撑流量控制与拥塞控制。
 
 首部长度字段的单位是 4 字节的字，源文说没有额外选项时它是 5。算一下就是 5 × 4 = 20 字节，这正好能填进第一节那条 MSS 式子里的 TCP 首部大小。
 
-然后是[[term:flag]]（flag，标志位）。源文先说了一句这些笔记里有四个相关标志位，但接着只解释了其中两个，另外两个（FIN 与 RST）是第六节讲的，见溯源。
+然后是[[term:flag]]。源文先说了一句这些笔记里有四个相关标志位，但接着只解释了其中两个，另外两个（FIN 与 RST）是第六节讲的，见溯源。
 
 SYN 标志在主机发送自己的 ISN 时打开，源文说它通常只在三次握手的前两个报文里被打开。ACK 标志在确认号有意义、真的用来确认数据时打开；如果我只想发数据、没有要确认的东西，就可以把它关掉，等于告诉对面别看确认号。
 

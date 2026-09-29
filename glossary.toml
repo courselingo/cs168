@@ -643,3 +643,63 @@ notes = "每条连接分到的可用容量应该一样多；教材把严格定�
 en = "pricing"
 zh = "定价"
 notes = "按拥堵程度收钱来分配带宽（收费快车道、节假日机票都是这个形状）；没有大规模部署，原因是需要一套把付款与拥塞连起来的商业模式"
+
+[[term]]
+en = "slow start"
+zh = "慢启动"
+notes = "TCP 从 1 个分组的窗口起步，每收到一个确认加 1，效果是每个 RTT 窗口翻一倍；撞上丢包时结束，并把 SSTHRESH 记成当前窗口的一半"
+
+[[term]]
+en = "slow start threshold"
+zh = "慢启动阈值"
+notes = "源文缩写成 SSTHRESH，用来记住慢启动探出来的不丢包最大安全速率；窗口超过它就切到加法增，初始为无穷大"
+
+[[term]]
+en = "congestion avoidance"
+zh = "拥塞避免"
+notes = "慢启动之后把窗口每个 RTT 加 1 个分组的那个阶段；本讲里它就是 AIMD 的加法增那一半"
+
+[[term]]
+en = "additive increase multiplicative decrease"
+zh = "加法增乘法减"
+notes = "没丢包就按每个确认 1/CWND 加窗口，丢了包就乘性地减；通常缩写成 AIMD"
+
+[[term]]
+en = "event-driven update"
+zh = "事件驱动更新"
+notes = "不按「每轮」这种测不准的节拍动窗口，改成挂到 TCP 本来就在响应的事件上：新确认、3 个重复确认、超时"
+
+[[term]]
+en = "fast retransmit"
+zh = "快速重传"
+notes = "收到 3 个重复确认就重发窗口最左边那个分组，不必等计时器烧完"
+
+[[term]]
+en = "fast recovery"
+zh = "快恢复"
+notes = "收到 3 个重复确认后临时进入的模式：CWND 设成 CWND/2 + 3，之后每个重复确认加 1 把窗口人为加宽，收到新的非重复确认时把 CWND 设回 SSTHRESH 并退出"
+
+[[term]]
+en = "sawtooth"
+zh = "锯齿"
+notes = "把速率画成时间的函数得到的形状：慢启动的指数上升、丢包砍半、AIMD 的线性上升、再砍半，反复上下"
+
+[[term]]
+en = "TCP Tahoe"
+zh = "TCP Tahoe"
+notes = "BSD 时期的变体之一；收到 3 个重复确认时把 CWND 重置为 1，而不是减半"
+
+[[term]]
+en = "TCP Reno"
+zh = "TCP Reno"
+notes = "收到 3 个重复确认时把 CWND 减半，遇到超时才把 CWND 重置为 1"
+
+[[term]]
+en = "TCP New Reno"
+zh = "TCP New Reno"
+notes = "源文把 Reno 加上快恢复称作 TCP New Reno，并说本讲实现的就是它；这条归法存疑，见第 23 讲溯源里的登记"
+
+[[term]]
+en = "selective acknowledgment"
+zh = "选择性确认"
+notes = "让确认能说出收到了哪一段而不只是累积到哪；源文的例子是「13 之前的都收到了，另外 18 也收到了」，通常缩写成 SACK"
