@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 328" width="760" height="328"
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-22 0 804 328" width="804" height="328"
      role="img" aria-labelledby="fig-dct-9-real-title fig-dct-9-real-desc">
   <title id="fig-dct-9-real-title">真实世界的拓扑：2008 与 2015 年的论文图里，任意两台主机之间都有多条路径，而变体共享同一个目标</title>
   <desc id="fig-dct-9-real-desc">真实世界的拓扑有很多变体：2008 年的图里任意两台终端主机之间已有多条路径，2015 年的论文探索了多种拓扑，而 2009 等年份也有不同摆法，它们共享的目标都是在任意两台服务器之间取得高带宽。</desc>
