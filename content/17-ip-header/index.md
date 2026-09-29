@@ -54,7 +54,7 @@ IP 协议要做四件事，字段就是为这四件事配的。
 
 分组也可能被损坏（比如线上比特受电气过程影响），所以首部里有校验和（16 位），校验不对就丢弃分组。这里有一处很关键的限定：
 
-> "Note that the IP checksum is only computed over the IP header. The checksum can only detect errors in the IP header, not errors in the IP payload. This reflects the end-to-end principle, where we enforce that the payload is checked by the end host, not the intermediate routers."
+> "Note that the IP [[term:checksum]] is only computed over the IP header. The checksum can only detect errors in the IP header, not errors in the IP payload. This reflects the end-to-end principle, where we enforce that the payload is checked by the end host, not the intermediate routers."
 > （注意 IP 校验和只覆盖 IP 首部：它只能发现首部里的错误，发现不了载荷里的错误。这正体现了端到端原则，载荷由端主机检查，而不是中间路由器。）
 
 还有一个实现上的连带后果：因为 TTL 每一跳都在变，校验和必须在每一台路由器上重算。教材提了一句可能的替代设计：把 TTL 排除在校验和之外，省掉路由器这份额外工作。

@@ -76,7 +76,7 @@ output_mode = "explanation"
 > "Each operator can choose the protocol that works best for them."
 > （每个运营者（比如一家 [[term:isp]]，ISP）都可以选最适合自己的那套协议。）
 
-在本地网络**内部**用的路由协议叫域内路由协议（intra-domain routing protocol），也叫内部网关协议（interior gateway protocol，IGP）。教材点了两个真实世界的例子：OSPF（Open Shortest Path First）和 IS-IS（Intermediate System to Intermediate System）。
+在本地网络**内部**用的路由协议叫域内路由协议（intra-domain routing protocol），也叫内部网关协议（[[term:interior-gateway-protocol]]，IGP）。教材点了两个真实世界的例子：OSPF（Open Shortest Path First）和 IS-IS（Intermediate System to Intermediate System）。
 
 ![每片网络的规模、范围、预算都不一样，所以域内协议可以各选各的](figures/routing-intro-5.svg)
 
@@ -91,7 +91,7 @@ output_mode = "explanation"
 
 于是结论顺理成章：正因为必须一致，全球规模上**只有一个**域间协议在跑。
 
-> "Because every network must agree to use the same inter-domain protocol, there is only one protocol implemented at scale on the Internet, namely BGP (Border Gateway Protocol)."
+> "Because every network must agree to use the same inter-domain protocol, there is only one protocol implemented at scale on the Internet, namely BGP ([[term:border-gateway-protocol]])."
 > （因为每片网络都必须同意使用同一个域间协议，所以互联网上大规模实现的协议只有一个，就是 BGP，边界网关协议。）
 
 这类协议叫域间路由协议（inter-domain routing protocol），也叫外部网关协议（exterior gateway protocol，EGP）。注意这里的方向：**域内是「可以不同」，域间是「必须相同」**，两个方向的理由正好相反，一个是差异太多，一个是差异太大而不能容忍。
