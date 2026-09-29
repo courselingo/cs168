@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 395" width="760" height="395"
+     role="img" aria-labelledby="fig-tcpd-8-title fig-tcpd-8-desc">
+  <title id="fig-tcpd-8-title">三种确认方式：单独确认、全信息确认、累积确认</title>
+  <desc id="fig-tcpd-8-desc">三种确认方式并排。单独确认是一条 ack 对一个分组，中间一条 ack 丢了，第 2 个分组就会白重发一次，信息最少也最脆。全信息确认把收到过的分组都列出来，ack 丢了也能靠后面的 ack 补上，代价是列表会越写越长，偶数号全丢时最长。累积确认只报「到几号为止全都收到」，永远只发一个数、不会变长，但丢包时变模糊，认不出该重发哪一个。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="395" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">三种确认方式</text>
+
+  <rect x="22" y="76" width="716" height="72" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="98" font-size="12" fill="#1e40af" text-anchor="middle">单独确认：一条 ack 对一个分组</text>
+  <text x="380" y="116" font-size="12" fill="#1e40af" text-anchor="middle">中间一条 ack 丢了，第 2 个分组会白重发一次</text>
+  <text x="380" y="134" font-size="12" fill="#1e40af" text-anchor="middle">信息最少，也最脆</text>
+
+  <rect x="22" y="176" width="716" height="72" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="198" font-size="12" fill="#b45309" text-anchor="middle">全信息确认：把收到过的分组都列出来</text>
+  <text x="380" y="216" font-size="12" fill="#b45309" text-anchor="middle">ack 丢了也能靠后面的 ack 补上</text>
+  <text x="380" y="234" font-size="12" fill="#b45309" text-anchor="middle">列表会越写越长，偶数号全丢时最长</text>
+
+  <rect x="22" y="276" width="716" height="72" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="298" font-size="12" fill="#166534" text-anchor="middle">累积确认：只报「到几号为止全都收到」</text>
+  <text x="380" y="316" font-size="12" fill="#166534" text-anchor="middle">永远只发一个数，不会变长</text>
+  <text x="380" y="334" font-size="12" fill="#166534" text-anchor="middle">丢包时变模糊：认不出该重发哪一个</text>
+
+  <text x="380" y="370" font-size="10" fill="#64748b" text-anchor="middle">三种的取舍在「精确」与「省事」之间来回</text>
+</svg>

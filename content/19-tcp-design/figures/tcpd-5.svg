@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 253" width="760" height="253"
+     role="img" aria-labelledby="fig-tcpd-5-title fig-tcpd-5-desc">
+  <title id="fig-tcpd-5-title">把管道填满：窗口太小，发送方会在等 ack 的时候空转</title>
+  <desc id="fig-tcpd-5-desc">同一个往返时间里的两条时间轴。上排窗口 W 等于 4：发出 1 到 4 之后就没得发了，只能等 ack，链路空转两格。下排窗口调大之后一直有分组在发：第 6 个分组刚发出，第一条 ack 就到了，所以窗口该是 6。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="253" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">把管道填满</text>
+
+  <text x="380" y="72" font-size="10" fill="#64748b" text-anchor="middle">W = 4：发完 4 个只能等 ack</text>
+
+  <rect x="22" y="90" width="96" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="70" y="112" font-size="12" fill="#1e40af" text-anchor="middle">1</text>
+
+  <rect x="146" y="90" width="96" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="194" y="112" font-size="12" fill="#1e40af" text-anchor="middle">2</text>
+
+  <rect x="270" y="90" width="96" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="318" y="112" font-size="12" fill="#1e40af" text-anchor="middle">3</text>
+
+  <rect x="394" y="90" width="96" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="442" y="112" font-size="12" fill="#1e40af" text-anchor="middle">4</text>
+
+  <rect x="518" y="90" width="96" height="36" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="566" y="112" font-size="12" fill="#9d174d" text-anchor="middle">空转</text>
+
+  <rect x="642" y="90" width="96" height="36" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="690" y="112" font-size="12" fill="#9d174d" text-anchor="middle">空转</text>
+
+  <text x="380" y="145" font-size="10" fill="#64748b" text-anchor="middle">W = 6：第 6 个刚发出，第一条 ack 就到了</text>
+
+  <rect x="22" y="154" width="96" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="70" y="176" font-size="12" fill="#166534" text-anchor="middle">1</text>
+
+  <rect x="146" y="154" width="96" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="194" y="176" font-size="12" fill="#166534" text-anchor="middle">2</text>
+
+  <rect x="270" y="154" width="96" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="318" y="176" font-size="12" fill="#166534" text-anchor="middle">3</text>
+
+  <rect x="394" y="154" width="96" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="442" y="176" font-size="12" fill="#166534" text-anchor="middle">4</text>
+
+  <rect x="518" y="154" width="96" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="566" y="176" font-size="12" fill="#166534" text-anchor="middle">5</text>
+
+  <rect x="642" y="154" width="96" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="690" y="176" font-size="12" fill="#166534" text-anchor="middle">6</text>
+
+  <text x="380" y="228" font-size="10" fill="#64748b" text-anchor="middle">格子代表同一个往返时间里发送方发出的分组，空转就是链路上没东西在走</text>
+</svg>

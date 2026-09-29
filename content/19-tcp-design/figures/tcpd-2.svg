@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 234" width="760" height="234"
+     role="img" aria-labelledby="fig-tcpd-2-title fig-tcpd-2-desc">
+  <title id="fig-tcpd-2-title">三种异常的处置：损坏、ack 丢失、分组被复制</title>
+  <desc id="fig-tcpd-2-desc">上排三种异常：分组损坏，校验和能看出来；ack 丢了，发送方会超时；分组在网络里被复制，接收方收到两份。下排是各自的处置：损坏可以回 nack，也可以什么都不做、等发送方超时；ack 丢了的话重发一次就够了，协议一个字都不用改；收到两份时接收方会回两条 ack，双方都能安全处理。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="234" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">分组坏了、ack 丢了、收到两份</text>
+
+  <rect x="22" y="76" width="220" height="54" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="132" y="98" font-size="12" fill="#9d174d" text-anchor="middle">分组损坏</text>
+  <text x="132" y="116" font-size="12" fill="#9d174d" text-anchor="middle">校验和能看出来</text>
+
+  <rect x="270" y="76" width="220" height="54" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="380" y="98" font-size="12" fill="#9d174d" text-anchor="middle">ack 丢了</text>
+  <text x="380" y="116" font-size="12" fill="#9d174d" text-anchor="middle">发送方会超时</text>
+
+  <rect x="518" y="76" width="220" height="54" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="628" y="98" font-size="12" fill="#9d174d" text-anchor="middle">分组被复制</text>
+  <text x="628" y="116" font-size="12" fill="#9d174d" text-anchor="middle">接收方收到两份</text>
+
+  <path d="M132,135 L132,147" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M380,135 L380,147" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M628,135 L628,147" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <rect x="22" y="158" width="220" height="54" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="132" y="180" font-size="12" fill="#b45309" text-anchor="middle">回 nack</text>
+  <text x="132" y="198" font-size="12" fill="#b45309" text-anchor="middle">或什么都不做、等超时</text>
+
+  <rect x="270" y="158" width="220" height="54" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="180" font-size="12" fill="#b45309" text-anchor="middle">重发一次</text>
+  <text x="380" y="198" font-size="12" fill="#b45309" text-anchor="middle">协议一个字都不用改</text>
+
+  <rect x="518" y="158" width="220" height="54" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="628" y="180" font-size="12" fill="#b45309" text-anchor="middle">回两条 ack</text>
+  <text x="628" y="198" font-size="12" fill="#b45309" text-anchor="middle">双方都能安全处理</text>
+</svg>

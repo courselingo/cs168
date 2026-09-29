@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 234" width="760" height="234"
+     role="img" aria-labelledby="fig-tlp-1-title fig-tlp-1-desc">
+  <title id="fig-tlp-1-title">一个分组在路上可能遇到的五种情况</title>
+  <desc id="fig-tlp-1-desc">五格并排：丢失，路由器队列满了就丢；损坏，路上被翻转了比特；乱序，发出的顺序与收到的顺序对不上；延迟，卡在队列里等一条链路空出来；重复，发送方只发一个却收到多份拷贝。最后一格说明教材称这种极少见。下方一行写清结论：第 3 层只承诺尽力而为，上面五种都没有任何保证。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="234" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">一个分组在路上可能遇到的五种情况</text>
+
+  <rect x="22" y="76" width="120" height="72" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="82" y="98" font-size="12" fill="#1e40af" text-anchor="middle">丢失</text>
+  <text x="82" y="116" font-size="12" fill="#1e40af" text-anchor="middle">dropped</text>
+  <text x="82" y="134" font-size="12" fill="#1e40af" text-anchor="middle">队列满了就丢</text>
+
+  <rect x="171" y="76" width="120" height="72" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="231" y="98" font-size="12" fill="#1e40af" text-anchor="middle">损坏</text>
+  <text x="231" y="116" font-size="12" fill="#1e40af" text-anchor="middle">corrupted</text>
+  <text x="231" y="134" font-size="12" fill="#1e40af" text-anchor="middle">比特被翻过来</text>
+
+  <rect x="320" y="76" width="120" height="72" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="98" font-size="12" fill="#1e40af" text-anchor="middle">乱序</text>
+  <text x="380" y="116" font-size="12" fill="#1e40af" text-anchor="middle">reordered</text>
+  <text x="380" y="134" font-size="12" fill="#1e40af" text-anchor="middle">到达顺序变了</text>
+
+  <rect x="469" y="76" width="120" height="72" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="529" y="98" font-size="12" fill="#1e40af" text-anchor="middle">延迟</text>
+  <text x="529" y="116" font-size="12" fill="#1e40af" text-anchor="middle">delayed</text>
+  <text x="529" y="134" font-size="12" fill="#1e40af" text-anchor="middle">等链路空出来</text>
+
+  <rect x="618" y="76" width="120" height="72" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="678" y="98" font-size="12" fill="#9d174d" text-anchor="middle">重复</text>
+  <text x="678" y="116" font-size="12" fill="#9d174d" text-anchor="middle">duplicated</text>
+  <text x="678" y="134" font-size="12" fill="#9d174d" text-anchor="middle">收得多份拷贝</text>
+
+  <text x="380" y="180" font-size="12" fill="#1e293b" text-anchor="middle">第 3 层只承诺尽力而为：上面五种都没有任何保证</text>
+
+  <text x="380" y="208" font-size="10" fill="#64748b" text-anchor="middle">教材把第五种单列一段，并说它实际上非常罕见</text>
+</svg>

@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 234" width="760" height="234"
+     role="img" aria-labelledby="fig-tcpd-1-title fig-tcpd-1-desc">
+  <title id="fig-tcpd-1-title">一个分组的可靠投递：确认取消计时器，超时触发重发</title>
+  <desc id="fig-tcpd-1-desc">两排流程。上排是正常路径：发送方发出分组，计时器开始跑，收到 ack 就撤销计时器，分组已送达、不必重发。下排是丢包路径：发送方发出分组，计时器到点仍然没有 ack，于是重发分组，接收方可能收到两份，能看出重复并丢掉多余的那份。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="234" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">一个分组的可靠投递</text>
+
+  <text x="380" y="64" font-size="10" fill="#64748b" text-anchor="middle">正常路径：确认到了就撤销计时器</text>
+
+  <rect x="22" y="76" width="158" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="101" y="98" font-size="12" fill="#1e40af" text-anchor="middle">发送方</text>
+  <text x="101" y="116" font-size="12" fill="#1e40af" text-anchor="middle">发出分组</text>
+
+  <rect x="208" y="76" width="158" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="287" y="98" font-size="12" fill="#1e40af" text-anchor="middle">计时器</text>
+  <text x="287" y="116" font-size="12" fill="#1e40af" text-anchor="middle">开始跑</text>
+
+  <rect x="394" y="76" width="158" height="54" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="473" y="98" font-size="12" fill="#166534" text-anchor="middle">收到 ack</text>
+  <text x="473" y="116" font-size="12" fill="#166534" text-anchor="middle">撤销计时器</text>
+
+  <rect x="580" y="76" width="158" height="54" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="659" y="98" font-size="12" fill="#166534" text-anchor="middle">分组送达</text>
+  <text x="659" y="116" font-size="12" fill="#166534" text-anchor="middle">不必重发</text>
+
+  <path d="M185,103 L197,103" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M371,103 L383,103" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M557,103 L569,103" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <text x="380" y="148" font-size="10" fill="#64748b" text-anchor="middle">丢包路径：计时器到点就重发</text>
+
+  <rect x="22" y="158" width="158" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="101" y="180" font-size="12" fill="#1e40af" text-anchor="middle">发送方</text>
+  <text x="101" y="198" font-size="12" fill="#1e40af" text-anchor="middle">发出分组</text>
+
+  <rect x="208" y="158" width="158" height="54" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="287" y="180" font-size="12" fill="#9d174d" text-anchor="middle">计时器到点</text>
+  <text x="287" y="198" font-size="12" fill="#9d174d" text-anchor="middle">仍没有 ack</text>
+
+  <rect x="394" y="158" width="158" height="54" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="473" y="180" font-size="12" fill="#b45309" text-anchor="middle">重发分组</text>
+  <text x="473" y="198" font-size="12" fill="#b45309" text-anchor="middle">对方可能收两份</text>
+
+  <rect x="580" y="158" width="158" height="54" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="659" y="180" font-size="12" fill="#166534" text-anchor="middle">看出重复</text>
+  <text x="659" y="198" font-size="12" fill="#166534" text-anchor="middle">丢掉多余那份</text>
+
+  <path d="M185,185 L197,185" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M371,185 L383,185" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M557,185 L569,185" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+</svg>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 287" width="760" height="287"
+     role="img" aria-labelledby="fig-tlp-9-title fig-tlp-9-desc">
+  <title id="fig-tlp-9-title">10 个分组编成 20 个，收到任意 15 个就能还原</title>
+  <desc id="fig-tlp-9-desc">上面一行是原来的 10 个分组，下面一行是编码之后的 20 个分组，长度正好是上面那一行的两倍，每个分组都带了冗余。再下面一格给出结论：只要收到这 20 个里的任意 15 个，原来的 10 个就能还原；一般写法是 k 个编码成 n 个，收到任意 k′ 个就能恢复原来的 k 个，而 k 小于 k′、k′ 小于 n。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="287" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">10 个分组编成 20 个，收到任意 15 个就能还原</text>
+
+  <rect x="22" y="76" width="300" height="40" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="172" y="100" font-size="12" fill="#1e40af" text-anchor="middle">原来的 10 个分组</text>
+
+  <rect x="22" y="141" width="600" height="40" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="322" y="165" font-size="12" fill="#6b21a8" text-anchor="middle">编码成 20 个分组，每个都带上冗余</text>
+
+  <rect x="22" y="211" width="716" height="54" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="380" y="233" font-size="12" fill="#9d174d" text-anchor="middle">只要收到这 20 个里的任意 15 个，原来的 10 个就能还原</text>
+  <text x="380" y="251" font-size="12" fill="#9d174d" text-anchor="middle">一般写法：k 个编码成 n 个，收到任意 k′ 个就能恢复原来的 k 个，k 小于 k′、k′ 小于 n</text>
+</svg>

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 315" width="760" height="315"
+     role="img" aria-labelledby="fig-tlp-5-title fig-tlp-5-desc">
+  <title id="fig-tlp-5-title">传输层的四件事</title>
+  <desc id="fig-tlp-5-desc">上方一格写清归类：前两件管这份数据是谁的，后两件管发得多快。四格排成两行两列：按端口解复用，靠端口号认进程，同一台机器上的应用分得开；连接抽象，应用按连接思考，不必管切段与重发；流量控制，限制发送速率，别把接收方压垮；拥塞控制，限制发送速率，别把网络压垮。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="315" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">传输层的四件事</text>
+
+  <rect x="22" y="64" width="716" height="36" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380" y="86" font-size="12" fill="#6b21a8" text-anchor="middle">前两件管「这份数据是谁的」，后两件管「发得多快」</text>
+
+  <rect x="22" y="125" width="344" height="72" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="194" y="147" font-size="12" fill="#1e40af" text-anchor="middle">按端口解复用</text>
+  <text x="194" y="165" font-size="12" fill="#1e40af" text-anchor="middle">靠端口号认进程</text>
+  <text x="194" y="183" font-size="12" fill="#1e40af" text-anchor="middle">同一台机器上的应用分得开</text>
+
+  <rect x="394" y="125" width="344" height="72" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="566" y="147" font-size="12" fill="#1e40af" text-anchor="middle">连接抽象</text>
+  <text x="566" y="165" font-size="12" fill="#1e40af" text-anchor="middle">应用按连接思考</text>
+  <text x="566" y="183" font-size="12" fill="#1e40af" text-anchor="middle">不必管切段与重发</text>
+
+  <rect x="22" y="222" width="344" height="72" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="194" y="244" font-size="12" fill="#b45309" text-anchor="middle">流量控制</text>
+  <text x="194" y="262" font-size="12" fill="#b45309" text-anchor="middle">限制发送速率</text>
+  <text x="194" y="280" font-size="12" fill="#b45309" text-anchor="middle">别把接收方压垮</text>
+
+  <rect x="394" y="222" width="344" height="72" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="566" y="244" font-size="12" fill="#b45309" text-anchor="middle">拥塞控制</text>
+  <text x="566" y="262" font-size="12" fill="#b45309" text-anchor="middle">限制发送速率</text>
+  <text x="566" y="280" font-size="12" fill="#b45309" text-anchor="middle">别把网络压垮</text>
+</svg>

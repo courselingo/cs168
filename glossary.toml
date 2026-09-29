@@ -408,3 +408,115 @@ notes = "目的地至少收到每个分组一次且未被损坏，但允许收�
 en = "exactly-once delivery"
 zh = "恰好一次交付"
 notes = "在至少一次之上把重复去掉，得到的效果；这是给应用看的那一层"
+
+# ── 第 19 讲补入（2026-09-29；TCP 设计，供第 19–26 讲共用）────────
+# 第 19 讲是 TCP 设计：确认与超时、窗口与在途、流量控制与拥塞控制、三种确认方式。
+# 下面这批词是该讲的核心词汇，也是后面 TCP 实现、拥塞控制各讲反复要用的，先冻结译法。
+# ★ 加之前把候选英文原词在**前 18 讲正文**里逐条扫过（grep 全仓 index.md）：
+#   one-way delay / round-trip time / acknowledgment / negative acknowledgement / timer /
+#   sequence number / in flight / stop and wait / window / advertised window /
+#   congestion window / bottleneck link / cumulative ack / full information ack /
+#   duplicate ack / buffer / reordering —— 出现 **0 次**；
+#   checksum 在第 17 讲的英文引文里出现 1 次（加完那一页会报 1 条漂移 WARN，
+#   第 17 讲「溯源」已有同类登记，留给定稿人补标记）；
+#   flow control 在第 18 讲的「溯源」段里出现，而该词条是第 18 讲自己加的 —— 是它的在制品。
+#   两条都不属于本讲的目录，本讲作者按规矩不动别人的页面。
+
+[[term]]
+en = "one-way delay"
+zh = "单向时延"
+notes = "一个分组从发送方走到接收方所花的时间；与往返时间相对"
+
+[[term]]
+en = "round-trip time"
+zh = "往返时间"
+aliases = ["RTT"]
+notes = "发送方到接收方、再加上回程的时间；确认与超时都以它为尺子，也是窗口大小的一个因子"
+
+[[term]]
+en = "acknowledgment"
+zh = "确认"
+aliases = ["ack"]
+notes = "接收方回给发送方的一条消息，说明某个分组已经收到；收到它就撤销计时器"
+
+[[term]]
+en = "negative acknowledgement"
+zh = "否定确认"
+aliases = ["nack"]
+notes = "接收方明确要求重发某分组的消息；教材说明 TCP 没有实现它，TCP 选择的是等超时"
+
+[[term]]
+en = "timer"
+zh = "计时器"
+notes = "发送方为每个已发出、还没被确认的分组开的倒计时；到点未收到确认就重发"
+
+[[term]]
+en = "timeout"
+zh = "超时"
+notes = "计时器到点仍未收到确认这件事；可靠性的兜底机制，代价是要等一个往返时间"
+
+[[term]]
+en = "checksum"
+zh = "校验和"
+notes = "首部里的检错字段；传输层的校验和与 IP 层的不是同一个，且这一层不是只覆盖首部"
+
+[[term]]
+en = "sequence number"
+zh = "序列号"
+notes = "挂在每个分组上的编号；让确认能对上具体分组，也让接收方把乱序的分组排回顺序"
+
+[[term]]
+en = "in flight"
+zh = "在途"
+notes = "分组已发出、对应的确认还没回来的状态；窗口限的就是它的数量"
+
+[[term]]
+en = "stop and wait"
+zh = "停等协议"
+notes = "分组 i 的确认到了才发分组 i+1；可靠但每个分组至少要花一个往返时间"
+
+[[term]]
+en = "window"
+zh = "窗口"
+notes = "允许同时有多少个分组在途的上限 W，不是一次能发几个；每收到一条确认就往前滑一格并补发"
+
+[[term]]
+en = "advertised window"
+zh = "通告窗口"
+notes = "接收方在确认里报出的缓冲区剩余空间；在途分组数不能超过它，这是流量控制的抓手"
+
+[[term]]
+en = "congestion window"
+zh = "拥塞窗口"
+aliases = ["cwnd"]
+notes = "发送方跑拥塞控制算法得到的输出，代表这条连接应得的那份瓶颈带宽；实践中窗口取它与通告窗口里更小的那个"
+
+[[term]]
+en = "bottleneck link"
+zh = "瓶颈链路"
+notes = "路径上带宽最小的那条链路；往返时间乘它的带宽就是「把管道填满」所需的窗口"
+
+[[term]]
+en = "full information ack"
+zh = "全信息确认"
+notes = "把已经收到过的分组都列出来的确认；丢了也能靠后面的确认补上，代价是列表越来越长"
+
+[[term]]
+en = "cumulative ack"
+zh = "累积确认"
+notes = "只报「到这个号为止、连同它前面的都收到了」的最大号；不会变长，但丢包时认不出该重发哪一个"
+
+[[term]]
+en = "duplicate ack"
+zh = "重复确认"
+notes = "内容与上一条相同、因而暴露了中间有空洞的确认；累积确认下重复到 K 次就可以判定那个分组丢了"
+
+[[term]]
+en = "buffer"
+zh = "缓冲区"
+notes = "接收方为乱序到达的分组留出的内存；空间有限，因此需要流量控制"
+
+[[term]]
+en = "reordering"
+zh = "乱序"
+notes = "分组到达的次序与发出的次序不一致；字节流的抽象要求按序交付，所以乱序的分组要先缓冲"

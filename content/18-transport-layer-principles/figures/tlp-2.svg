@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 220" width="760" height="220"
+     role="img" aria-labelledby="fig-tlp-2-title fig-tlp-2-desc">
+  <title id="fig-tlp-2-title">可靠性由两端补齐，中间的路由器不参与</title>
+  <desc id="fig-tlp-2-desc">左边是 A 的端主机，传输层跑在操作系统里，重发与去重都在这里做；中间两台中间路由器只按转发表往前送，不管重发与去重；右边是 B 的端主机，收到与 A 发出的一模一样、顺序也不变的字节流。下方两行总结：中间只做按转发表往前送这一件事，可靠性放在操作系统里是为了让每个应用不必各自再写一套。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="220" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">可靠性由两端补齐，中间的路由器不参与</text>
+
+  <rect x="22" y="68" width="170" height="72" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="107" y="90" font-size="12" fill="#166534" text-anchor="middle">A 的端主机</text>
+  <text x="107" y="108" font-size="12" fill="#166534" text-anchor="middle">传输层在操作系统里</text>
+  <text x="107" y="126" font-size="12" fill="#166534" text-anchor="middle">重发与去重都在这</text>
+
+  <rect x="220" y="68" width="146" height="72" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="293" y="90" font-size="12" fill="#9d174d" text-anchor="middle">中间路由器</text>
+  <text x="293" y="108" font-size="12" fill="#9d174d" text-anchor="middle">只按转发表送</text>
+  <text x="293" y="126" font-size="12" fill="#9d174d" text-anchor="middle">不管重发去重</text>
+
+  <rect x="394" y="68" width="146" height="72" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="467" y="90" font-size="12" fill="#9d174d" text-anchor="middle">中间路由器</text>
+  <text x="467" y="108" font-size="12" fill="#9d174d" text-anchor="middle">只按转发表送</text>
+  <text x="467" y="126" font-size="12" fill="#9d174d" text-anchor="middle">不管重发去重</text>
+
+  <rect x="568" y="68" width="170" height="72" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="653" y="90" font-size="12" fill="#166534" text-anchor="middle">B 的端主机</text>
+  <text x="653" y="108" font-size="12" fill="#166534" text-anchor="middle">收到完全一样的字节流</text>
+  <text x="653" y="126" font-size="12" fill="#166534" text-anchor="middle">顺序与内容都不变</text>
+
+  <path d="M197,104 L215,104" fill="none" stroke="#64748b" stroke-width="1.5"/>
+  <path d="M371,104 L389,104" fill="none" stroke="#64748b" stroke-width="1.5"/>
+  <path d="M545,104 L563,104" fill="none" stroke="#64748b" stroke-width="1.5"/>
+
+  <text x="380" y="170" font-size="12" fill="#1e293b" text-anchor="middle">中间只做一件事：按转发表把分组往前送</text>
+
+  <text x="380" y="196" font-size="10" fill="#64748b" text-anchor="middle">可靠性放在操作系统里，是为了让每个应用不必各自再写一套</text>
+</svg>

@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 274" width="760" height="274"
+     role="img" aria-labelledby="fig-tcpd-9-title fig-tcpd-9-desc">
+  <title id="fig-tcpd-9-title">累积确认下的重复 ack：数得清几条，认不出是哪几个</title>
+  <desc id="fig-tcpd-9-desc">上排是丢掉第 5 个分组时的四条 ack：它们依次在确认 4、6、7、8，但因为 5 没到，每一条累积确认都只会说「到 4 为止」，内容一模一样。下排是两种确认方式各自能推出的结论：累积确认看到同一内容的 ack 一共 4 条、后 3 条是重复，据此判定 5 丢了；全信息确认则会直接说清「到 4，另有 6、7、8」。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="274" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">累积确认下的重复 ack</text>
+
+  <rect x="22" y="76" width="158" height="72" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="101" y="98" font-size="12" fill="#9d174d" text-anchor="middle">收到 4</text>
+  <text x="101" y="116" font-size="12" fill="#9d174d" text-anchor="middle">ack 说</text>
+  <text x="101" y="134" font-size="12" fill="#9d174d" text-anchor="middle">到 4 为止</text>
+
+  <rect x="208" y="76" width="158" height="72" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="287" y="98" font-size="12" fill="#9d174d" text-anchor="middle">收到 6</text>
+  <text x="287" y="116" font-size="12" fill="#9d174d" text-anchor="middle">ack 说</text>
+  <text x="287" y="134" font-size="12" fill="#9d174d" text-anchor="middle">到 4 为止</text>
+
+  <rect x="394" y="76" width="158" height="72" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="473" y="98" font-size="12" fill="#9d174d" text-anchor="middle">收到 7</text>
+  <text x="473" y="116" font-size="12" fill="#9d174d" text-anchor="middle">ack 说</text>
+  <text x="473" y="134" font-size="12" fill="#9d174d" text-anchor="middle">到 4 为止</text>
+
+  <rect x="580" y="76" width="158" height="72" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="659" y="98" font-size="12" fill="#9d174d" text-anchor="middle">收到 8</text>
+  <text x="659" y="116" font-size="12" fill="#9d174d" text-anchor="middle">ack 说</text>
+  <text x="659" y="134" font-size="12" fill="#9d174d" text-anchor="middle">到 4 为止</text>
+
+  <path d="M101,153 L101,165" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M473,153 L473,165" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <rect x="22" y="176" width="344" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="194" y="198" font-size="12" fill="#1e40af" text-anchor="middle">同一内容的 ack 共 4 条</text>
+  <text x="194" y="216" font-size="12" fill="#1e40af" text-anchor="middle">后 3 条是重复，判定 5 丢了</text>
+
+  <rect x="394" y="176" width="344" height="54" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="566" y="198" font-size="12" fill="#6b21a8" text-anchor="middle">全信息确认会说清</text>
+  <text x="566" y="216" font-size="12" fill="#6b21a8" text-anchor="middle">到 4，另有 6、7、8</text>
+
+  <text x="380" y="250" font-size="10" fill="#64748b" text-anchor="middle">条数能告诉发送方「又到了几个」，认不出是哪几个</text>
+</svg>

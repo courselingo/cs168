@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 305" width="760" height="305"
+     role="img" aria-labelledby="fig-tlp-8-title fig-tlp-8-desc">
+  <title id="fig-tlp-8-title">需要可靠性就走 TCP，不需要就走 UDP</title>
+  <desc id="fig-tlp-8-desc">上面一格问：这份应用真的需要可靠性吗，两枚向下的箭头分出去。左边要可靠性就走 TCP，丢的会重发、乱序会修好、消息多大都行。右边不需要就走 UDP，不重发、不排序、不保证到达，一条消息最多一个分组。下方一行说明二选一：按需要选 UDP 或者 TCP，但不能两个都用。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="305" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">需要可靠性就走 TCP，不需要就走 UDP</text>
+
+  <rect x="290" y="64" width="180" height="54" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380" y="86" font-size="12" fill="#6b21a8" text-anchor="middle">先问一句</text>
+  <text x="380" y="104" font-size="12" fill="#6b21a8" text-anchor="middle">这份应用真的需要可靠性吗</text>
+
+  <path d="M330,123 L330,137" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M430,123 L430,137" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <rect x="22" y="148" width="344" height="72" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="194" y="170" font-size="12" fill="#166534" text-anchor="middle">要：用 TCP</text>
+  <text x="194" y="188" font-size="12" fill="#166534" text-anchor="middle">丢的会重发，乱序会修好</text>
+  <text x="194" y="206" font-size="12" fill="#166534" text-anchor="middle">消息多大都行，它替你切段</text>
+
+  <rect x="394" y="148" width="344" height="72" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="566" y="170" font-size="12" fill="#b45309" text-anchor="middle">不要：用 UDP</text>
+  <text x="566" y="188" font-size="12" fill="#b45309" text-anchor="middle">不重发、不排序、不保证到达</text>
+  <text x="566" y="206" font-size="12" fill="#b45309" text-anchor="middle">一条消息最多一个分组，大了自己拆</text>
+
+  <rect x="22" y="248" width="716" height="36" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="380" y="270" font-size="12" fill="#1e293b" text-anchor="middle">二选一：按需要选 UDP 或者 TCP，但不能两个都用</text>
+</svg>

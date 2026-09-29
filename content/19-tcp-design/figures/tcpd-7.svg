@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 234" width="760" height="234"
+     role="img" aria-labelledby="fig-tcpd-7-title fig-tcpd-7-desc">
+  <title id="fig-tcpd-7-title">三个上限一起看，窗口取其中最小的那个</title>
+  <desc id="fig-tcpd-7-desc">三个上限并排：按往返时间与瓶颈链路带宽算出来的窗口，用来把带宽喂满；接收方通告窗口，接收方能收下这么多；发送方自己的拥塞窗口，链路只让它发这么多。三条都要满足，所以窗口大小取三者里最小的那个。瓶颈带宽在实践中很难算，而且它总是不小于拥塞窗口，所以只用后两条也够。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="234" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">三个上限，取最小的那个</text>
+
+  <rect x="22" y="76" width="220" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="132" y="98" font-size="12" fill="#1e40af" text-anchor="middle">按 RTT 与瓶颈带宽算</text>
+  <text x="132" y="116" font-size="12" fill="#1e40af" text-anchor="middle">喂满带宽要这么多</text>
+
+  <rect x="270" y="76" width="220" height="54" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="98" font-size="12" fill="#b45309" text-anchor="middle">接收方的通告窗口</text>
+  <text x="380" y="116" font-size="12" fill="#b45309" text-anchor="middle">它最多能收这么多</text>
+
+  <rect x="518" y="76" width="220" height="54" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="628" y="98" font-size="12" fill="#6b21a8" text-anchor="middle">自己的拥塞窗口</text>
+  <text x="628" y="116" font-size="12" fill="#6b21a8" text-anchor="middle">链路只让我发这么多</text>
+
+  <path d="M132,135 L132,147" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M380,135 L380,147" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M628,135 L628,147" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <rect x="22" y="158" width="716" height="54" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="180" font-size="12" fill="#166534" text-anchor="middle">窗口大小 = 三者里最小的那个</text>
+  <text x="380" y="198" font-size="12" fill="#166534" text-anchor="middle">第一条难算、又总不小于第三条，所以只用后两条也够</text>
+</svg>

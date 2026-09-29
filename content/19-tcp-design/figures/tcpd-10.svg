@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 256" width="760" height="256"
+     role="img" aria-labelledby="fig-tcpd-10-title fig-tcpd-10-desc">
+  <title id="fig-tcpd-10-title">W = 6、K = 3：补发新分组与重发丢包同时进行</title>
+  <desc id="fig-tcpd-10-desc">上排是收到 ack 之后的四个动作：4 到就回 4 并补发 9，6 到就回 6 并补发 10，7 到就回 7 并补发 11，此时 3 后面已经有三条 ack，于是判定 3 丢了。下排是接着发生的两件事：重发 3，它本来就在途，所以窗口里仍然是 6 个在途；8 到就回 8 并补发 12，同时 5 后面也有三条 ack，于是重发 5。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="256" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">W = 6、K = 3：补发与重发同时进行</text>
+
+  <rect x="22" y="76" width="158" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="101" y="98" font-size="12" fill="#1e40af" text-anchor="middle">4 到，回 4</text>
+  <text x="101" y="116" font-size="12" fill="#1e40af" text-anchor="middle">补发 9</text>
+
+  <rect x="208" y="76" width="158" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="287" y="98" font-size="12" fill="#1e40af" text-anchor="middle">6 到，回 6</text>
+  <text x="287" y="116" font-size="12" fill="#1e40af" text-anchor="middle">补发 10</text>
+
+  <rect x="394" y="76" width="158" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="473" y="98" font-size="12" fill="#1e40af" text-anchor="middle">7 到，回 7</text>
+  <text x="473" y="116" font-size="12" fill="#1e40af" text-anchor="middle">补发 11</text>
+
+  <rect x="580" y="76" width="158" height="54" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="659" y="98" font-size="12" fill="#9d174d" text-anchor="middle">3 后已有 3 条 ack</text>
+  <text x="659" y="116" font-size="12" fill="#9d174d" text-anchor="middle">判定 3 丢了</text>
+
+  <rect x="22" y="158" width="344" height="54" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="194" y="180" font-size="12" fill="#b45309" text-anchor="middle">重发 3</text>
+  <text x="194" y="198" font-size="12" fill="#b45309" text-anchor="middle">3 本来就在途，窗口仍是 6</text>
+
+  <rect x="394" y="158" width="344" height="54" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="566" y="180" font-size="12" fill="#b45309" text-anchor="middle">8 到，回 8</text>
+  <text x="566" y="198" font-size="12" fill="#b45309" text-anchor="middle">补发 12；5 后也有 3 条 ack，重发 5</text>
+
+  <text x="380" y="232" font-size="10" fill="#64748b" text-anchor="middle">1 和 2 已确认，3 到 8 在途；重发的是已经在途的那个分组，所以不占窗口</text>
+</svg>

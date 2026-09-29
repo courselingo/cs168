@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 224" width="760" height="224"
+     role="img" aria-labelledby="fig-tcpd-6-title fig-tcpd-6-desc">
+  <title id="fig-tcpd-6-title">流量控制：接收方的乱序缓冲区还剩多少空间</title>
+  <desc id="fig-tcpd-6-desc">接收方的乱序缓冲区里已经放好了 1 和 2，4 和 5 到了，但 3 还没到，所以 4 和 5 只能先在内存里等着。缓冲区大小有限，接收方在 ack 里报出还剩多少空间，也就是通告窗口；发送方按这个数把窗口调小，在途分组数不能超过它。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="224" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">流量控制：让接收方不被压垮</text>
+
+  <rect x="22" y="76" width="716" height="76" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-dasharray="6,4"/>
+  <text x="32" y="90" font-size="11" fill="#64748b">接收方的乱序缓冲区</text>
+
+  <rect x="42" y="96" width="148" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="116" y="118" font-size="12" fill="#166534" text-anchor="middle">1</text>
+
+  <rect x="218" y="96" width="148" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="292" y="118" font-size="12" fill="#166534" text-anchor="middle">2</text>
+
+  <rect x="394" y="96" width="148" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="468" y="118" font-size="12" fill="#b45309" text-anchor="middle">4 乱序到了</text>
+
+  <rect x="570" y="96" width="148" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="644" y="118" font-size="12" fill="#b45309" text-anchor="middle">5 乱序到了</text>
+
+  <text x="380" y="180" font-size="10" fill="#64748b" text-anchor="middle">3 还没到，4 和 5 只能在内存里等着，不能交给应用</text>
+
+  <text x="380" y="200" font-size="10" fill="#64748b" text-anchor="middle">接收方在 ack 里报出剩余空间：在途分组数不能超过这个通告窗口</text>
+</svg>

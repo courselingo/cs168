@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 200" width="760" height="200"
+     role="img" aria-labelledby="fig-tcpd-4-title fig-tcpd-4-desc">
+  <title id="fig-tcpd-4-title">窗口的含义：允许同时有多少个分组还没被确认</title>
+  <desc id="fig-tcpd-4-desc">五个格子代表依次发出的五个分组：前两个已经确认，后三个发出去了、ack 还没回来，也就是在途，窗口 W 等于 3 指的就是最多允许有三个在途。每收到一条 ack，窗口就往前滑一格，并补发下一个分组。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="200" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">窗口：允许多少个在途</text>
+
+  <text x="156" y="92" font-size="10" fill="#64748b" text-anchor="middle">已确认</text>
+  <text x="529" y="92" font-size="10" fill="#64748b" text-anchor="middle">在途，窗口 W = 3</text>
+
+  <rect x="22" y="110" width="120" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="82" y="132" font-size="12" fill="#166534" text-anchor="middle">1</text>
+
+  <rect x="171" y="110" width="120" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="231" y="132" font-size="12" fill="#166534" text-anchor="middle">2</text>
+
+  <rect x="320" y="110" width="120" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="132" font-size="12" fill="#1e40af" text-anchor="middle">3</text>
+
+  <rect x="469" y="110" width="120" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="529" y="132" font-size="12" fill="#1e40af" text-anchor="middle">4</text>
+
+  <rect x="618" y="110" width="120" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="678" y="132" font-size="12" fill="#1e40af" text-anchor="middle">5</text>
+
+  <text x="380" y="176" font-size="10" fill="#64748b" text-anchor="middle">每收到一条 ack，窗口往前滑一格，并补发下一个分组</text>
+</svg>
