@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 284.5" width="760" height="284.5"
+     role="img" aria-labelledby="fig-mc-4-title fig-mc-4-desc">
+  <title id="fig-mc-4-title">四种投递模型，以及组播的两个细节</title>
+  <desc id="fig-mc-4-desc">上排四格是四种模型各自的定义：单播发给恰好一个目的地；任播发给一组可能目的地中的任何一个，这一组里有一个收到就够了；广播发给所有目的地，而「所有」要看语境、可以理解为本地网络里的全部主机；组播发给一个组里的所有成员。第二排两格是组播定义里值得单独记住的两个细节：成员资格是动态的，主机可以在任何时候加入或退出某个组；发送资格与成员资格不绑定，即使你自己不是这个组的成员，也可以往这个组发包。最下面一条是源文的两个例子：看直播的人全加入同一个组播组、流媒体服务再组播给整个组；让楼里所有打印机加入一个组，用户往这个组发包去找自己能用的打印机。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="284.5" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">四种投递模型，以及组播的两个细节</text>
+  <rect x="25" y="64" width="158.75" height="67.5" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="104.375" y="93.75" font-size="10" fill="#1e40af" text-anchor="middle">单播</text>
+  <text x="104.375" y="108.75" font-size="10" fill="#1e40af" text-anchor="middle">发给恰好一个目的地</text>
+  <rect x="208.75" y="64" width="158.75" height="67.5" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="288.125" y="87.4" font-size="9" fill="#166534" text-anchor="middle">任播</text>
+  <text x="288.125" y="100.9" font-size="9" fill="#166534" text-anchor="middle">发给一组可能目的地中的任何一个</text>
+  <text x="288.125" y="114.4" font-size="9" fill="#166534" text-anchor="middle">有一个收到就够了</text>
+  <rect x="392.5" y="64" width="158.75" height="67.5" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="471.875" y="80.65" font-size="9" fill="#b45309" text-anchor="middle">广播</text>
+  <text x="471.875" y="94.15" font-size="9" fill="#b45309" text-anchor="middle">发给所有目的地</text>
+  <text x="471.875" y="107.65" font-size="9" fill="#b45309" text-anchor="middle">所有要看语境</text>
+  <text x="471.875" y="121.15" font-size="9" fill="#b45309" text-anchor="middle">可理解为本地网络全部主机</text>
+  <rect x="576.25" y="64" width="158.75" height="67.5" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="655.625" y="93.75" font-size="10" fill="#6b21a8" text-anchor="middle">组播</text>
+  <text x="655.625" y="108.75" font-size="10" fill="#6b21a8" text-anchor="middle">发给一个组里的所有成员</text>
+  <rect x="25" y="159.5" width="342.5" height="45" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="196.25" y="178" font-size="10" fill="#6b21a8" text-anchor="middle">细节一：成员资格是动态的</text>
+  <text x="196.25" y="193" font-size="10" fill="#6b21a8" text-anchor="middle">主机可以在任何时候加入或退出某个组</text>
+  <rect x="392.5" y="159.5" width="342.5" height="45" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="563.75" y="178" font-size="10" fill="#6b21a8" text-anchor="middle">细节二：发送资格与成员资格不绑定</text>
+  <text x="563.75" y="193" font-size="10" fill="#6b21a8" text-anchor="middle">即使你自己不是成员，也可以往这个组发包</text>
+  <rect x="25" y="232.5" width="710" height="27" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="380" y="249.15" font-size="9" fill="#1e293b" text-anchor="middle">两个例子：看直播的人全加入同一个组播组，流媒体服务再组播给整个组；让楼里所有打印机加入一个组，用户往这个组发包去找打印机</text>
+</svg>

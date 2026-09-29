@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 207" width="760" height="207"
+     role="img" aria-labelledby="fig-mc-2-title fig-mc-2-desc">
+  <title id="fig-mc-2-title">群通信的例子，以及客户端-服务器为什么不自然</title>
+  <desc id="fig-mc-2-desc">上排三格是那些例子：常见的有两格（多人在线游戏、实时的内容分发如会议与体育直播；协作文档如多人同时编辑一份文档），更少见的用法一格（发现，例如给所有苹果设备发消息找最近的音箱；以及 AI 训练，后面的讲义再讲）。最下面一条说明客户端-服务器为什么不自然：一场多人游戏或一个视频会议里，既没有单独一个客户端，也没有单独一个服务器。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="207" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">群通信的例子，以及客户端-服务器为什么不自然</text>
+  <rect x="25" y="64" width="220" height="60" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="135" y="82.5" font-size="10" fill="#1e40af" text-anchor="middle">常见例子一</text>
+  <text x="135" y="97.5" font-size="10" fill="#1e40af" text-anchor="middle">多人在线游戏</text>
+  <text x="135" y="112.5" font-size="10" fill="#1e40af" text-anchor="middle">实时的内容分发：会议与体育直播</text>
+  <rect x="270" y="64" width="220" height="60" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="90" font-size="10" fill="#166534" text-anchor="middle">常见例子二</text>
+  <text x="380" y="105" font-size="10" fill="#166534" text-anchor="middle">协作文档，例如多人同时编辑一份文档</text>
+  <rect x="515" y="64" width="220" height="60" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="625" y="82.5" font-size="10" fill="#6b21a8" text-anchor="middle">更少见的用法</text>
+  <text x="625" y="97.5" font-size="10" fill="#6b21a8" text-anchor="middle">发现：给所有苹果设备发消息找最近的音箱</text>
+  <text x="625" y="112.5" font-size="10" fill="#6b21a8" text-anchor="middle">以及 AI 训练（后面的讲义再讲）</text>
+  <rect x="25" y="152" width="710" height="30" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="170.5" font-size="10" fill="#b45309" text-anchor="middle">为什么客户端-服务器在这里不自然：一场多人游戏或一个视频会议里，既没有单独一个客户端，也没有单独一个服务器</text>
+</svg>

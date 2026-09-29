@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 378" width="760" height="378"
+     role="img" aria-labelledby="fig-mc-3-title fig-mc-3-desc">
+  <title id="fig-mc-3-title">只用单播的代价，以及理想情况下的目标</title>
+  <desc id="fig-mc-3-desc">上面一条是最省事的答案：网络什么都不用支持，群通信完全可以用单播实现，也就是每次更新给组里其他人各发一个单播包。第二条是场景：你在美国，组里其他成员都在欧洲。第二排三格是两条代价与更自然的思路：代价一是同样一份数据的多份副本要一次次跨过那条昂贵的海底光缆，代价二是发送方被迫发出大量重复的单播包、一台服务器给几百万人直播就撑不住；更自然的思路是只发一个包过去，让那边的一台路由器或主机来分发副本。第四条是源文给的判据：理想情况下避免在同一条链路上发送重复副本，也就是每条链路只承载这个包一次，沿途没有组成员时可以是零次。最下面一条是这套做法的代价：需要网络提供额外支持，也需要开发一些新协议。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="378" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">只用单播的代价，以及理想情况下的目标</text>
+  <rect x="25" y="64" width="710" height="30" rx="6" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="380" y="82.5" font-size="10" fill="#1e40af" text-anchor="middle">最省事的答案：网络什么都不用支持，群通信完全可以用单播实现（每次更新给组里其他人各发一个单播包）</text>
+  <rect x="25" y="122" width="710" height="30" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="380" y="140.5" font-size="10" fill="#1e293b" text-anchor="middle">场景：你在美国，组里其他成员都在欧洲</text>
+  <rect x="25" y="180" width="220" height="60" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="135" y="198.5" font-size="10" fill="#b45309" text-anchor="middle">代价一</text>
+  <text x="135" y="213.5" font-size="10" fill="#b45309" text-anchor="middle">同样一份数据的多份副本</text>
+  <text x="135" y="228.5" font-size="10" fill="#b45309" text-anchor="middle">要一次次跨过那条昂贵的海底光缆</text>
+  <rect x="270" y="180" width="220" height="60" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="198.5" font-size="10" fill="#b45309" text-anchor="middle">代价二</text>
+  <text x="380" y="213.5" font-size="10" fill="#b45309" text-anchor="middle">发送方被迫发出大量重复的单播包</text>
+  <text x="380" y="228.5" font-size="10" fill="#b45309" text-anchor="middle">一台服务器给几百万人直播就撑不住</text>
+  <rect x="515" y="180" width="220" height="60" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="625" y="198.5" font-size="10" fill="#166534" text-anchor="middle">更自然的思路</text>
+  <text x="625" y="213.5" font-size="10" fill="#166534" text-anchor="middle">只发一个包过去</text>
+  <text x="625" y="228.5" font-size="10" fill="#166534" text-anchor="middle">让那边的一台路由器或主机来分发副本</text>
+  <rect x="25" y="268" width="710" height="27" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380" y="284.65" font-size="9" fill="#6b21a8" text-anchor="middle">源文给的判据：理想情况下避免在同一条链路上发送重复副本，每条链路只承载这个包一次；沿途没有组成员时可以是零次</text>
+  <rect x="25" y="323" width="710" height="30" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="380" y="341.5" font-size="10" fill="#1e293b" text-anchor="middle">代价：这个做法需要网络提供额外支持，也需要开发一些新协议</text>
+</svg>

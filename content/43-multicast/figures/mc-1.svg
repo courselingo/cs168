@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 315.5" width="760" height="315.5"
+     role="img" aria-labelledby="fig-mc-1-title fig-mc-1-desc">
+  <title id="fig-mc-1-title">从「一个源发给一个目的」到「一组主机在通信」：这一讲要动的前提</title>
+  <desc id="fig-mc-1-desc">上面一条是到这一讲为止的隐含前提：互联网的目标是在主机之间投递数据，而投递方式是单播。第二排三格是这个前提撑起来的东西：单播投递（一个源发给一个目的）、客户端-服务器模型（一个客户端与一个服务器交换数据）、以及建立在其上的协议（例如 HTTP、DNS、TCP 与 TLS）。中间一条说明这一讲要看的是这个前提不成立的情形：一组主机在互相通信。最下面一条是它要回答的问题：网络该怎么支持这类应用，才能让开发者写起来更容易。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="315.5" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">从「一个源发给一个目的」到「一组主机在通信」：这一讲要动的前提</text>
+  <rect x="25" y="64" width="710" height="30" rx="6" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="380" y="82.5" font-size="10" fill="#1e40af" text-anchor="middle">到这一讲为止的隐含前提：互联网的目标是在主机之间投递数据，而投递方式是单播</text>
+  <rect x="25" y="122" width="220" height="49.5" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="135" y="142.35" font-size="11" fill="#1e40af" text-anchor="middle">单播投递</text>
+  <text x="135" y="158.85" font-size="11" fill="#1e40af" text-anchor="middle">一个源把数据发给一个目的</text>
+  <rect x="270" y="122" width="220" height="49.5" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="142.35" font-size="11" fill="#166534" text-anchor="middle">客户端-服务器模型</text>
+  <text x="380" y="158.85" font-size="11" fill="#166534" text-anchor="middle">一个客户端与一个服务器交换数据</text>
+  <rect x="515" y="122" width="220" height="49.5" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="625" y="142.75" font-size="10" fill="#1e293b" text-anchor="middle">建立在其上的协议</text>
+  <text x="625" y="157.75" font-size="10" fill="#1e293b" text-anchor="middle">例如 HTTP、DNS、TCP 与 TLS</text>
+  <rect x="25" y="199.5" width="710" height="33" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="219.85" font-size="11" fill="#b45309" text-anchor="middle">这一讲要看的是这个前提不成立的情形：一组主机在互相通信</text>
+  <rect x="25" y="260.5" width="710" height="30" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380" y="279" font-size="10" fill="#6b21a8" text-anchor="middle">要回答的问题：网络该怎么支持这类应用，才能让开发者写起来更容易</text>
+</svg>
