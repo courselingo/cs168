@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 205" width="760" height="205"
+     role="img" aria-labelledby="fig-model-6-title fig-model-6-desc">
+  <title id="fig-model-6-title">路由单元里的分组：首部加载荷，路由器只读目的地址</title>
+  <desc id="fig-model-6-desc">左边是首部，装着元数据，路由最关心的是目的地址这一个字段；右边是载荷，装着应用层的数据，路由完全不关心它是图片、网页还是音频。路由器收到分组后读首部里的目的地址，据此决定往哪里转发，这就是路由要解决的核心问题。这里刻意忽略了嵌套的首部与多层结构。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="205" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">路由单元里的分组</text>
+
+  <rect x="22" y="76" width="344" height="54" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="194" y="98" font-size="12" fill="#b45309" text-anchor="middle">首部：元数据</text>
+  <text x="194" y="116" font-size="12" fill="#b45309" text-anchor="middle">只需要看目的地址</text>
+
+  <rect x="394" y="76" width="344" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="566" y="98" font-size="12" fill="#1e40af" text-anchor="middle">载荷：应用数据</text>
+  <text x="566" y="116" font-size="12" fill="#1e40af" text-anchor="middle">图片、网页还是音频都一样</text>
+
+  <text x="380" y="180" font-size="10" fill="#64748b" text-anchor="middle">路由器读目的地址，据此决定往哪里转发；嵌套首部与多层结构这里先忽略</text>
+</svg>

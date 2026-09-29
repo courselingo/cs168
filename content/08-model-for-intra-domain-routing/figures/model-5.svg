@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 221" width="760" height="221"
+     role="img" aria-labelledby="fig-model-5-title fig-model-5-desc">
+  <title id="fig-model-5-title">端主机不参与路由：出站消息全交给默认路由那台路由器</title>
+  <desc id="fig-model-5-desc">端主机通常只用一条链路连着一台路由器，它把出站消息统统交给这台路由器，由路由器去想怎么送到最终目的地。这个做法叫端主机的默认路由。因此设计路由协议时通常忽略端主机，只把它们当作目的地看待。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="221" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">端主机不参与路由</text>
+
+  <rect x="22" y="66" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="88" font-size="12" fill="#166534" text-anchor="middle">端主机：只用一条链路连着一台路由器</text>
+
+  <path d="M380,107 L 380,116" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+
+  <rect x="22" y="127" width="716" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="149" font-size="12" fill="#b45309" text-anchor="middle">出站消息统统交给它：这就是端主机的默认路由</text>
+
+  <text x="380" y="196" font-size="10" fill="#64748b" text-anchor="middle">所以设计协议时可以忽略端主机，只把它们当目的地</text>
+</svg>

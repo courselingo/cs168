@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 205" width="760" height="205"
+     role="img" aria-labelledby="fig-model-2-title fig-model-2-desc">
+  <title id="fig-model-2-title">全互联线太多，单链路带宽太挤</title>
+  <desc id="fig-model-2-desc">左栏是全互联：每两台机器之间都拉一条链路，每对机器可以把自己的专用链路带宽用满，但新机器加入就要跟全世界其他每台机器都新建链路，扩不到互联网的规模。右栏是单链路：一条链路挂上所有机器，新机器把线延长过去就行，但五台机器要抢同一条链路的带宽。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="205" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">两种最朴素的连法</text>
+
+  <rect x="22" y="76" width="344" height="72" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="194" y="98" font-size="12" fill="#9d174d" text-anchor="middle">全互联：每对机器一条线</text>
+  <text x="194" y="116" font-size="12" fill="#9d174d" text-anchor="middle">带宽富裕，但新机器要连所有人</text>
+  <text x="194" y="134" font-size="12" fill="#9d174d" text-anchor="middle">扩不到互联网的规模</text>
+
+  <rect x="394" y="76" width="344" height="72" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="566" y="98" font-size="12" fill="#b45309" text-anchor="middle">单链路：一条线挂上所有机器</text>
+  <text x="566" y="116" font-size="12" fill="#b45309" text-anchor="middle">加机器只要把线延长过去</text>
+  <text x="566" y="134" font-size="12" fill="#b45309" text-anchor="middle">但所有机器抢同一条带宽</text>
+
+  <text x="380" y="180" font-size="10" fill="#64748b" text-anchor="middle">一个线太多，一个带宽太挤；而且一般不保证图是全连通的</text>
+</svg>

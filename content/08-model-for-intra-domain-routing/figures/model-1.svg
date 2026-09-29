@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 245" width="760" height="245"
+     role="img" aria-labelledby="fig-model-1-title fig-model-1-desc">
+  <title id="fig-model-1-title">把网络画成一张图：节点是机器，边是链路</title>
+  <desc id="fig-model-1-desc">四个节点用带箭头的边连起来：上面三个依次相连，中间那个再向下连一格，说明图可以有分支。每个节点代表一台机器，每条边代表两台机器之间的一条链路。早期确实有链路连多于两台机器的情况，但现代网络里链路基本上总是恰好连接两台机器。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="245" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">把网络画成一张图</text>
+
+  <rect x="22" y="76" width="222" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="133" y="98" font-size="12" fill="#1e40af" text-anchor="middle">机器 1</text>
+  <text x="133" y="116" font-size="12" fill="#1e40af" text-anchor="middle">一个节点</text>
+
+  <rect x="269" y="76" width="222" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="98" font-size="12" fill="#1e40af" text-anchor="middle">机器 2</text>
+  <text x="380" y="116" font-size="12" fill="#1e40af" text-anchor="middle">一个节点</text>
+
+  <rect x="516" y="76" width="222" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="627" y="98" font-size="12" fill="#1e40af" text-anchor="middle">机器 3</text>
+  <text x="627" y="116" font-size="12" fill="#1e40af" text-anchor="middle">一个节点</text>
+
+  <rect x="269" y="155" width="222" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="177" font-size="12" fill="#166534" text-anchor="middle">机器 4：还可以有分支</text>
+
+  <path d="M249,103 L 258,103" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+  <path d="M496,103 L 505,103" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+  <path d="M380,135 L 380,144" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+
+  <text x="380" y="221" font-size="10" fill="#64748b" text-anchor="middle">节点是机器，边是链路；现代网络里一条链路只连两台机器</text>
+</svg>

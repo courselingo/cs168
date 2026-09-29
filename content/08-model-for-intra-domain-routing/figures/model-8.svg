@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 221" width="760" height="221"
+     role="img" aria-labelledby="fig-model-8-title fig-model-8-desc">
+  <title id="fig-model-8-title">拓扑会变，而路由器没有全局视角，所以协议必须是分布式的</title>
+  <desc id="fig-model-8-desc">左栏是拓扑会变：链路会在不可预料的时候坏掉，也会有新链路加进来，协议必须对这些变化保持稳健。右栏是没有全局视角：网络别处断了，其他路由器不会自动知道，得靠协议把信息传播出去。于是路由协议往往是分布式协议，每台路由器各自算出答案的一部分，而且单台路由器崩了以后要能重新学会自己那一份。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="221" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">拓扑会变，而且没人有全局视角</text>
+
+  <rect x="22" y="76" width="344" height="90" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="194" y="98" font-size="12" fill="#9d174d" text-anchor="middle">拓扑会变</text>
+  <text x="194" y="116" font-size="12" fill="#9d174d" text-anchor="middle">链路会在不可预料的时候坏掉</text>
+  <text x="194" y="134" font-size="12" fill="#9d174d" text-anchor="middle">也会有新链路加进来</text>
+  <text x="194" y="152" font-size="12" fill="#9d174d" text-anchor="middle">协议必须对这些变化稳健</text>
+
+  <rect x="394" y="76" width="344" height="90" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="566" y="98" font-size="12" fill="#1e40af" text-anchor="middle">没有全局视角</text>
+  <text x="566" y="116" font-size="12" fill="#1e40af" text-anchor="middle">别处断了不会自动知道</text>
+  <text x="566" y="134" font-size="12" fill="#1e40af" text-anchor="middle">得靠协议把信息传出去</text>
+  <text x="566" y="152" font-size="12" fill="#1e40af" text-anchor="middle">于是协议是分布式的</text>
+
+  <text x="380" y="196" font-size="10" fill="#64748b" text-anchor="middle">分布式还意味着：单台路由器崩了，协议要能帮它重新学会自己那一份答案</text>
+</svg>
