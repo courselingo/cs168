@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 362" width="760" height="362"
+     role="img" aria-labelledby="fig-eth-8-title fig-eth-8-desc">
+  <title id="fig-eth-8-title">MAC 地址的 48 位怎么划分，以及它和 IP 地址性质上的差别</title>
+  <desc id="fig-eth-8-desc">上排三格是 MAC 地址的写法与别称：48 位，通常写成十六进制、每两位用冒号隔开；源文给的例子是 f8:ff:c2:2b:36:16，六组共 48 位；它有时也叫 ether 地址或链路地址。第二排三格是这 48 位的划分：头 2 位是标志位，接着 22 位标识厂家，最后 24 位标识厂家地址空间里的具体机器。第三排两格把 MAC 与 IP 的性质对起来：MAC 出厂就烧进网卡、系统允许软件改、通常要求全球唯一；IP 加入网络时才拿到、与地理位置有关。最下面一条是为什么不用 IP 寻址：同一个链路上的主机可能只想互相发消息，根本没连上互联网，也就没有 IP 地址。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="362" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">MAC 地址的 48 位怎么划分，以及它和 IP 地址性质上的差别</text>
+  <rect x="25" y="64" width="220" height="60" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="135" y="82.5" font-size="10" fill="#1e40af" text-anchor="middle">MAC 地址长度</text>
+  <text x="135" y="97.5" font-size="10" fill="#1e40af" text-anchor="middle">48 位</text>
+  <text x="135" y="112.5" font-size="10" fill="#1e40af" text-anchor="middle">通常写成十六进制，每两位用冒号隔开</text>
+  <rect x="270" y="64" width="220" height="60" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="90" font-size="10" fill="#1e40af" text-anchor="middle">源文给的例子</text>
+  <text x="380" y="105" font-size="10" fill="#1e40af" text-anchor="middle">f8:ff:c2:2b:36:16，六组共 48 位</text>
+  <rect x="515" y="64" width="220" height="60" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="625" y="90" font-size="10" fill="#1e293b" text-anchor="middle">别名</text>
+  <text x="625" y="105" font-size="10" fill="#1e293b" text-anchor="middle">有时也叫 ether 地址或链路地址</text>
+  <rect x="25" y="152" width="220" height="49.5" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="135" y="172.35" font-size="11" fill="#166534" text-anchor="middle">头 2 位</text>
+  <text x="135" y="188.85" font-size="11" fill="#166534" text-anchor="middle">标志位</text>
+  <rect x="270" y="152" width="220" height="49.5" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="172.35" font-size="11" fill="#166534" text-anchor="middle">接着 22 位</text>
+  <text x="380" y="188.85" font-size="11" fill="#166534" text-anchor="middle">标识厂家</text>
+  <rect x="515" y="152" width="220" height="49.5" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="625" y="172.35" font-size="11" fill="#166534" text-anchor="middle">最后 24 位</text>
+  <text x="625" y="188.85" font-size="11" fill="#166534" text-anchor="middle">厂家地址空间里的具体机器</text>
+  <rect x="25" y="229.5" width="342.5" height="49.5" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="196.25" y="249.85" font-size="11" fill="#b45309" text-anchor="middle">MAC 地址</text>
+  <text x="196.25" y="266.35" font-size="11" fill="#b45309" text-anchor="middle">出厂就烧进网卡；系统允许软件改；通常要求全球唯一</text>
+  <rect x="392.5" y="229.5" width="342.5" height="49.5" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="563.75" y="249.85" font-size="11" fill="#b45309" text-anchor="middle">IP 地址</text>
+  <text x="563.75" y="266.35" font-size="11" fill="#b45309" text-anchor="middle">加入网络时才拿到；与地理位置有关</text>
+  <rect x="25" y="307" width="710" height="30" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380" y="325.5" font-size="10" fill="#6b21a8" text-anchor="middle">为什么不用 IP 寻址：同一个链路上的主机可能只想互相发消息，根本没有连上互联网，也就没有 IP 地址</text>
+</svg>

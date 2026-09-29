@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 405" width="760" height="405"
+     role="img" aria-labelledby="fig-eth-3-title fig-eth-3-desc">
+  <title id="fig-eth-3-title">多路访问协议的分类：固定分配、轮流、随机访问三条路</title>
+  <desc id="fig-eth-3-desc">上面一条是这棵分类树的根：多路访问协议，作用是让多台机器共用同一条链路。第二排三格是它的三支：固定分配把频率或时间切给每台机器；轮流按顺序决定谁说话；随机访问让人有话就说、撞了再退。第三排三格是固定分配的两种分法与它的两条毛病（频分复用与时分复用；总量有限、分出去的大多闲置）。第四排三格是轮流的两种做法与它的代价（轮询与令牌传递；复杂度）。最下面一条指出随机访问是下一节的主角，ALOHA、CSMA 与 CSMA/CD 都属于这一支。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="405" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">多路访问协议的分类：固定分配、轮流、随机访问三条路</text>
+  <rect x="25" y="64" width="710" height="36" rx="6" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="380" y="86.2" font-size="12" fill="#1e40af" text-anchor="middle">多路访问协议：让多台机器共用同一条链路</text>
+  <rect x="25" y="128" width="220" height="45" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="135" y="146.5" font-size="10" fill="#1e40af" text-anchor="middle">固定分配</text>
+  <text x="135" y="161.5" font-size="10" fill="#1e40af" text-anchor="middle">把频率或时间切给每台机器</text>
+  <rect x="270" y="128" width="220" height="45" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="146.5" font-size="10" fill="#1e40af" text-anchor="middle">轮流</text>
+  <text x="380" y="161.5" font-size="10" fill="#1e40af" text-anchor="middle">按顺序决定谁说话</text>
+  <rect x="515" y="128" width="220" height="45" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="625" y="146.5" font-size="10" fill="#1e40af" text-anchor="middle">随机访问</text>
+  <text x="625" y="161.5" font-size="10" fill="#1e40af" text-anchor="middle">有话就说，撞了再退</text>
+  <rect x="25" y="201" width="220" height="45" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="135" y="219.5" font-size="10" fill="#1e293b" text-anchor="middle">频分复用</text>
+  <text x="135" y="234.5" font-size="10" fill="#1e293b" text-anchor="middle">每台一个频段；AM/FM 广播与电视</text>
+  <rect x="270" y="201" width="220" height="45" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="380" y="219.5" font-size="10" fill="#1e293b" text-anchor="middle">时分复用</text>
+  <text x="380" y="234.5" font-size="10" fill="#1e293b" text-anchor="middle">每台一个固定时隙</text>
+  <rect x="515" y="201" width="220" height="45" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="625" y="219.5" font-size="10" fill="#b45309" text-anchor="middle">固定分配的毛病</text>
+  <text x="625" y="234.5" font-size="10" fill="#b45309" text-anchor="middle">总量有限；分出去的大多闲置</text>
+  <rect x="25" y="274" width="220" height="45" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="135" y="292.5" font-size="10" fill="#166534" text-anchor="middle">轮询</text>
+  <text x="135" y="307.5" font-size="10" fill="#166534" text-anchor="middle">中心协调者逐个问；蓝牙</text>
+  <rect x="270" y="274" width="220" height="45" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="292.5" font-size="10" fill="#166534" text-anchor="middle">令牌传递</text>
+  <text x="380" y="307.5" font-size="10" fill="#166534" text-anchor="middle">令牌在谁手上谁说话；IBM 令牌环与 FDDI</text>
+  <rect x="515" y="274" width="220" height="45" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="625" y="292.5" font-size="10" fill="#b45309" text-anchor="middle">轮流的代价</text>
+  <text x="625" y="307.5" font-size="10" fill="#b45309" text-anchor="middle">复杂度；节点之间要通信</text>
+  <rect x="25" y="347" width="710" height="33" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380" y="367.35" font-size="11" fill="#6b21a8" text-anchor="middle">随机访问是下一节的主角：ALOHA、CSMA、CSMA/CD 都属于这一支</text>
+</svg>

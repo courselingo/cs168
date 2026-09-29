@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 347" width="760" height="347"
+     role="img" aria-labelledby="fig-eth-6-title fig-eth-6-desc">
+  <title id="fig-eth-6-title">传播时延为什么会造成冲突，以及退避上限怎么翻倍</title>
+  <desc id="fig-eth-6-desc">上排三格是那个时延场景：A 听到安静先开始发；A 的信号传播需要时间，还没传到另一端的 B；B 也听到安静于是也发，两个信号在中途撞上。中间一条说明源文那张二维图的两种切法：横着切看到的是某一瞬间信号传到了哪里，纵着切看到的是线上某一点在时间里先收到哪些比特。下面两格是先听再发与边发边听各自解决了什么：前者只能减少冲突，后者不能消掉冲突但能更早发现。最下面两格是指数退避：这次从 [0, 4] 里随机取等待时间，撞了之后下次从 [0, 8] 里取。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="347" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">传播时延为什么会造成冲突，以及退避上限怎么翻倍</text>
+  <rect x="25" y="64" width="220" height="45" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="135" y="82.5" font-size="10" fill="#1e40af" text-anchor="middle">A 听到安静</text>
+  <text x="135" y="97.5" font-size="10" fill="#1e40af" text-anchor="middle">于是先开始发送</text>
+  <rect x="270" y="64" width="220" height="45" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="82.5" font-size="10" fill="#1e40af" text-anchor="middle">信号还没传到 B</text>
+  <text x="380" y="97.5" font-size="10" fill="#1e40af" text-anchor="middle">传播需要时间</text>
+  <rect x="515" y="64" width="220" height="45" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="625" y="82.5" font-size="10" fill="#b45309" text-anchor="middle">B 也听到安静</text>
+  <text x="625" y="97.5" font-size="10" fill="#b45309" text-anchor="middle">于是也开始发，两个信号在中途撞上</text>
+  <rect x="25" y="137" width="710" height="30" rx="6" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="380" y="155.5" font-size="10" fill="#1e40af" text-anchor="middle">二维图的两种切法：横着切是某一瞬间信号传到了哪里；纵着切是线上某一点在时间里先收到哪些比特</text>
+  <rect x="25" y="195" width="342.5" height="49.5" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="196.25" y="215.35" font-size="11" fill="#1e293b" text-anchor="middle">先听再发</text>
+  <text x="196.25" y="231.85" font-size="11" fill="#1e293b" text-anchor="middle">只能减少冲突，不能消掉</text>
+  <rect x="392.5" y="195" width="342.5" height="49.5" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="563.75" y="215.35" font-size="11" fill="#1e293b" text-anchor="middle">边发边听（CSMA/CD）</text>
+  <text x="563.75" y="231.85" font-size="11" fill="#1e293b" text-anchor="middle">不能消掉冲突，但能更早发现</text>
+  <rect x="25" y="272.5" width="342.5" height="49.5" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="196.25" y="292.85" font-size="11" fill="#166534" text-anchor="middle">指数退避</text>
+  <text x="196.25" y="309.35" font-size="11" fill="#166534" text-anchor="middle">这次从 [0, 4] 里随机取等待时间</text>
+  <rect x="392.5" y="272.5" width="342.5" height="49.5" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="563.75" y="292.85" font-size="11" fill="#166534" text-anchor="middle">撞了之后</text>
+  <text x="563.75" y="309.35" font-size="11" fill="#166534" text-anchor="middle">下次从 [0, 8] 里取，上限翻一倍</text>
+</svg>

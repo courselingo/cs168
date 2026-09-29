@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 287.5" width="760" height="287.5"
+     role="img" aria-labelledby="fig-eth-1-title fig-eth-1-desc">
+  <title id="fig-eth-1-title">分层：这一讲落到第二层，以及局域网与广域网两个尺度</title>
+  <desc id="fig-eth-1-desc">上排五格是源文那张分层图，第二层那一格标的是以太网。中间一条说明这一讲的位置：它落在第二层，按仓内清单是 /end-to-end/ 那一段的第一讲，该段一直排到第 35 讲。下面两格把两个尺度对起来：前面二十几讲的图是主机到主机、路由器到路由器，每条链路只连两台机器；这一讲的图是一个局域网内部，那根线上挂了好几台机器。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="287.5" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">分层：这一讲落到第二层，以及局域网与广域网两个尺度</text>
+  <rect x="25" y="64" width="122" height="60" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="86" y="82.5" font-size="10" fill="#6b21a8" text-anchor="middle">第七层</text>
+  <text x="86" y="97.5" font-size="10" fill="#6b21a8" text-anchor="middle">应用</text>
+  <text x="86" y="112.5" font-size="10" fill="#6b21a8" text-anchor="middle">DNS、HTTP</text>
+  <rect x="172" y="64" width="122" height="60" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="233" y="82.5" font-size="10" fill="#1e40af" text-anchor="middle">第四层</text>
+  <text x="233" y="97.5" font-size="10" fill="#1e40af" text-anchor="middle">传输</text>
+  <text x="233" y="112.5" font-size="10" fill="#1e40af" text-anchor="middle">TCP、UDP</text>
+  <rect x="319" y="64" width="122" height="60" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="82.5" font-size="10" fill="#166534" text-anchor="middle">第三层</text>
+  <text x="380" y="97.5" font-size="10" fill="#166534" text-anchor="middle">网络</text>
+  <text x="380" y="112.5" font-size="10" fill="#166534" text-anchor="middle">IP</text>
+  <rect x="466" y="64" width="122" height="60" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="527" y="82.5" font-size="10" fill="#b45309" text-anchor="middle">第二层</text>
+  <text x="527" y="97.5" font-size="10" fill="#b45309" text-anchor="middle">链路</text>
+  <text x="527" y="112.5" font-size="10" fill="#b45309" text-anchor="middle">Ethernet</text>
+  <rect x="613" y="64" width="122" height="60" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="674" y="82.5" font-size="10" fill="#1e293b" text-anchor="middle">第一层</text>
+  <text x="674" y="97.5" font-size="10" fill="#1e293b" text-anchor="middle">物理</text>
+  <text x="674" y="112.5" font-size="10" fill="#1e293b" text-anchor="middle">光纤、铜线</text>
+  <rect x="25" y="152" width="710" height="33" rx="6" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="380" y="172.35" font-size="11" fill="#1e40af" text-anchor="middle">这一讲落到第二层；按仓内清单，它是 /end-to-end/ 那一段的第一讲（第 29 到第 35 讲）</text>
+  <rect x="25" y="213" width="342.5" height="49.5" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="196.25" y="233.35" font-size="11" fill="#1e40af" text-anchor="middle">前面二十几讲的图</text>
+  <text x="196.25" y="249.85" font-size="11" fill="#1e40af" text-anchor="middle">主机到主机、路由器到路由器，每条链路只连两台机器</text>
+  <rect x="392.5" y="213" width="342.5" height="49.5" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="563.75" y="233.35" font-size="11" fill="#1e40af" text-anchor="middle">这一讲的图</text>
+  <text x="563.75" y="249.85" font-size="11" fill="#1e40af" text-anchor="middle">一个局域网内部，那根线上挂了好几台机器</text>
+</svg>

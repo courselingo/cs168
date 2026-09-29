@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 351.5" width="760" height="351.5"
+     role="img" aria-labelledby="fig-eth-2-title fig-eth-2-desc">
+  <title id="fig-eth-2-title">从两根线的链路，到一根线上的多台机器，再到「线不看身份」</title>
+  <desc id="fig-eth-2-desc">上排两格是递进的第一步与第二步：我们一直画的链路每条正好连两台机器；总线拓扑则是一根线挂多台机器。中间一条是第三步的说法：从线的角度看，路由器只是一台和别的机器一样的机器，线并不关心挂在上面的机器拿数据做什么。下面两格把这两种拓扑在局域网里的取舍比出来：网状拓扑要为每台新主机加一批线，不实用；总线拓扑常见而且实用。最下面一条是总线带来的新概念：共享介质，同一时刻线上只能承载一个信号，两个包不能同时在上面。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="351.5" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">从两根线的链路，到一根线上的多台机器，再到「线不看身份」</text>
+  <rect x="25" y="64" width="342.5" height="49.5" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="196.25" y="84.35" font-size="11" fill="#1e293b" text-anchor="middle">我们一直画的链路</text>
+  <text x="196.25" y="100.85" font-size="11" fill="#1e293b" text-anchor="middle">每条正好连两台机器</text>
+  <rect x="392.5" y="64" width="342.5" height="49.5" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="563.75" y="84.35" font-size="11" fill="#1e293b" text-anchor="middle">总线拓扑</text>
+  <text x="563.75" y="100.85" font-size="11" fill="#1e293b" text-anchor="middle">一根线挂多台机器</text>
+  <rect x="25" y="141.5" width="710" height="33" rx="6" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="380" y="161.85" font-size="11" fill="#1e40af" text-anchor="middle">从线的角度看，路由器只是一台和别的机器一样的机器；线不关心挂在上面的机器拿数据做什么</text>
+  <rect x="25" y="202.5" width="342.5" height="66" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="196.25" y="222.85" font-size="11" fill="#b45309" text-anchor="middle">网状拓扑</text>
+  <text x="196.25" y="239.35" font-size="11" fill="#b45309" text-anchor="middle">新来一台主机，就要给它和所有主机之间</text>
+  <text x="196.25" y="255.85" font-size="11" fill="#b45309" text-anchor="middle">各加一根线，局域网里不实用</text>
+  <rect x="392.5" y="202.5" width="342.5" height="66" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="563.75" y="231.1" font-size="11" fill="#166534" text-anchor="middle">总线拓扑</text>
+  <text x="563.75" y="247.6" font-size="11" fill="#166534" text-anchor="middle">所有机器挂在同一根线上，局域网里常见而且实用</text>
+  <rect x="25" y="296.5" width="710" height="30" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380" y="315" font-size="10" fill="#6b21a8" text-anchor="middle">单线总线带来共享介质：同一时刻线上只能承载一个信号，A 到 C 与 B 到 D 的两个包不能同时在上面</text>
+</svg>

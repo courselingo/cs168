@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 406.5" width="760" height="406.5"
+     role="img" aria-labelledby="fig-eth-9-title fig-eth-9-desc">
+  <title id="fig-eth-9-title">以太帧的字段，以及三种目的地各自的地址怎么填</title>
+  <desc id="fig-eth-9-desc">上面一条说明下面的字段顺序与字节数用的是源文配图上的标法。第二排五格是帧的头部与字段与字节数：前导码 7 字节、SFD 1 字节、目的 MAC 6 字节、源 MAC 6 字节、类型 2 字节。第三排三格是载荷与两个尾部字段：类型字段用来在 IPv4 与 IPv6 之间分流；FCS 4 字节，校验和覆盖整个包而不只覆盖头部；IPG 12 字节，是包之间的间隔。第四排三格是三种目的地各自怎么填目的地址：单播填某台机器的 MAC，不是自己就忽略；广播填 FF:FF:FF:FF:FF:FF，每个以太网里都一样；组播填组的地址，组地址第一位是 1，机器地址第一位是 0。最下面一条声明 SFD、FCS、IPG 的名字与字节数来自配图，源文正文只讲到前导码 7 字节、两个 MAC 地址、类型 2 字节与一个校验和。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="406.5" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">以太帧的字段，以及三种目的地各自的地址怎么填</text>
+  <rect x="25" y="64" width="710" height="33" rx="6" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="380" y="84.35" font-size="11" fill="#1e40af" text-anchor="middle">帧的字段按顺序与字节数（这一行是源文配图上的标法）</text>
+  <rect x="25" y="125" width="122" height="40.5" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="86" y="141.65" font-size="9" fill="#1e40af" text-anchor="middle">前导码</text>
+  <text x="86" y="155.15" font-size="9" fill="#1e40af" text-anchor="middle">7 字节</text>
+  <rect x="172" y="125" width="122" height="40.5" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="233" y="141.65" font-size="9" fill="#1e40af" text-anchor="middle">SFD</text>
+  <text x="233" y="155.15" font-size="9" fill="#1e40af" text-anchor="middle">1 字节</text>
+  <rect x="319" y="125" width="122" height="40.5" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="141.65" font-size="9" fill="#1e40af" text-anchor="middle">目的 MAC</text>
+  <text x="380" y="155.15" font-size="9" fill="#1e40af" text-anchor="middle">6 字节</text>
+  <rect x="466" y="125" width="122" height="40.5" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="527" y="141.65" font-size="9" fill="#1e40af" text-anchor="middle">源 MAC</text>
+  <text x="527" y="155.15" font-size="9" fill="#1e40af" text-anchor="middle">6 字节</text>
+  <rect x="613" y="125" width="122" height="40.5" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="674" y="141.65" font-size="9" fill="#1e40af" text-anchor="middle">类型</text>
+  <text x="674" y="155.15" font-size="9" fill="#1e40af" text-anchor="middle">2 字节</text>
+  <rect x="25" y="193.5" width="220" height="45" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="135" y="212" font-size="10" fill="#1e293b" text-anchor="middle">载荷</text>
+  <text x="135" y="227" font-size="10" fill="#1e293b" text-anchor="middle">类型字段用来在 IPv4 与 IPv6 之间分流</text>
+  <rect x="270" y="193.5" width="220" height="45" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="380" y="212" font-size="10" fill="#1e293b" text-anchor="middle">FCS</text>
+  <text x="380" y="227" font-size="10" fill="#1e293b" text-anchor="middle">4 字节，校验和覆盖整个包，不只覆盖头部</text>
+  <rect x="515" y="193.5" width="220" height="45" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="625" y="212" font-size="10" fill="#1e293b" text-anchor="middle">IPG</text>
+  <text x="625" y="227" font-size="10" fill="#1e293b" text-anchor="middle">12 字节，包之间的间隔</text>
+  <rect x="25" y="266.5" width="220" height="60" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="135" y="292.5" font-size="10" fill="#166534" text-anchor="middle">单播</text>
+  <text x="135" y="307.5" font-size="10" fill="#166534" text-anchor="middle">目的地址填一台机器的 MAC；不是自己就忽略</text>
+  <rect x="270" y="266.5" width="220" height="60" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="285" font-size="10" fill="#166534" text-anchor="middle">广播</text>
+  <text x="380" y="300" font-size="10" fill="#166534" text-anchor="middle">填 FF:FF:FF:FF:FF:FF</text>
+  <text x="380" y="315" font-size="10" fill="#166534" text-anchor="middle">每个以太网里都一样</text>
+  <rect x="515" y="266.5" width="220" height="60" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="625" y="285" font-size="10" fill="#166534" text-anchor="middle">组播</text>
+  <text x="625" y="300" font-size="10" fill="#166534" text-anchor="middle">填组的地址</text>
+  <text x="625" y="315" font-size="10" fill="#166534" text-anchor="middle">组地址第一位是 1，机器地址第一位是 0</text>
+  <rect x="25" y="354.5" width="710" height="27" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="371.15" font-size="9" fill="#b45309" text-anchor="middle">源文正文只讲到前导码 7 字节、两个 MAC 地址、类型 2 字节与一个校验和；SFD、FCS、IPG 的名字与字节数来自配图</text>
+</svg>

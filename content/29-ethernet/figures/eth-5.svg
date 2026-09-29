@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 271" width="760" height="271"
+     role="img" aria-labelledby="fig-eth-5-title fig-eth-5-desc">
+  <title id="fig-eth-5-title">随机访问的一轮：发出去、等确认、没确认就随机等待再发</title>
+  <desc id="fig-eth-5-desc">上排四格把一轮随机访问拆成四步：有话就把包发出去；接收方收到就回一个确认；如果撞了，两个包都坏，于是没有确认回来；发送方等一段随机时间再发一次。下面一条说明等待为什么要取随机值：让两台机器的重发时刻错开，避免在重发的时候又同时发。最下面一条指向更礼貌的版本：载波侦听多路访问，说话之前先听一听，线上安静了才开口。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="271" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">随机访问的一轮：发出去、等确认、没确认就随机等待再发</text>
+  <rect x="25" y="64" width="158.75" height="60" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="104.375" y="90" font-size="10" fill="#1e40af" text-anchor="middle">第一步</text>
+  <text x="104.375" y="105" font-size="10" fill="#1e40af" text-anchor="middle">有话就把包发出去</text>
+  <rect x="208.75" y="64" width="158.75" height="60" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="288.125" y="90" font-size="10" fill="#166534" text-anchor="middle">第二步</text>
+  <text x="288.125" y="105" font-size="10" fill="#166534" text-anchor="middle">接收方收到就回一个确认</text>
+  <rect x="392.5" y="64" width="158.75" height="60" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="471.875" y="82.5" font-size="10" fill="#b45309" text-anchor="middle">第三步</text>
+  <text x="471.875" y="97.5" font-size="10" fill="#b45309" text-anchor="middle">撞了则两个包都坏</text>
+  <text x="471.875" y="112.5" font-size="10" fill="#b45309" text-anchor="middle">没有确认回来</text>
+  <rect x="576.25" y="64" width="158.75" height="60" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="655.625" y="90" font-size="10" fill="#6b21a8" text-anchor="middle">第四步</text>
+  <text x="655.625" y="105" font-size="10" fill="#6b21a8" text-anchor="middle">等一段随机时间，再发一次</text>
+  <rect x="25" y="152" width="710" height="33" rx="6" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="380" y="172.35" font-size="11" fill="#1e40af" text-anchor="middle">等待取随机值的用意：让两台机器的重发时刻错开，不要在重发的时候又同时发</text>
+  <rect x="25" y="213" width="710" height="33" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="380" y="233.35" font-size="11" fill="#1e293b" text-anchor="middle">更礼貌的版本（CSMA）：先说之前听一听，线上安静了才开口</text>
+</svg>

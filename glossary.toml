@@ -863,3 +863,93 @@ notes = "把同一个域名对应到多个 IP 地址，或按请求来源返回�
 en = "cache"
 zh = "缓存"
 notes = "把已经查到的记录留在本地或解析器上一段时间，避免重复去问"
+
+[[term]]
+en = "Ethernet frame"
+zh = "以太帧"
+notes = "链路层的数据单元；以太网把它叫帧，字段与 IP 头部相似但有几处不同"
+
+[[term]]
+en = "MAC address"
+zh = "MAC 地址"
+notes = "链路层地址，48 位，按十六进制两位一组书写；厂家烧进网卡，通常全球唯一"
+
+[[term]]
+en = "shared media"
+zh = "共享介质"
+notes = "一根线上挂了多台机器时那根线本身；同一时刻线上只能承载一个信号"
+
+[[term]]
+en = "multiple access"
+zh = "多路访问"
+notes = "让多台机器共用同一条链路的那一类协议要解决的问题"
+
+[[term]]
+en = "collision"
+zh = "冲突"
+notes = "两台机器同时发送，信号叠加导致接收方解不出来，也认不出是谁发的"
+
+[[term]]
+en = "Carrier Sense Multiple Access"
+zh = "载波侦听多路访问"
+notes = "说话前先听一听的随机访问协议；听是指感测线上的信号"
+
+[[term]]
+en = "CSMA with Collision Detection"
+zh = "带冲突检测的载波侦听多路访问"
+notes = "在 CSMA 之上再加一条：说话的时候也一直听，听到别人也在说就立刻停"
+
+[[term]]
+en = "binary exponential backoff"
+zh = "二进制指数退避"
+notes = "每次重传再撞上冲突就把随机等待的上限翻一倍；人少时等得短，人多时才拉长"
+
+[[term]]
+en = "frequency-division multiplexing"
+zh = "频分复用"
+notes = "把频率切成几段，每台机器固定分到一段"
+
+[[term]]
+en = "time-division multiplexing"
+zh = "时分复用"
+notes = "把时间切成固定时隙，每台机器固定分到时隙"
+
+[[term]]
+en = "polling"
+zh = "轮询"
+notes = "由一个中心协调者按顺序逐个问：你有话要说吗"
+
+[[term]]
+en = "token passing"
+zh = "令牌传递"
+notes = "一个虚拟令牌在节点之间传，只有拿着令牌的节点可以说话"
+
+[[term]]
+en = "unicast"
+zh = "单播"
+notes = "帧只发给一台指定的机器"
+
+[[term]]
+en = "broadcast"
+zh = "广播"
+notes = "帧发给本地网络上的所有机器；目的地址写成全 1"
+
+[[term]]
+en = "multicast"
+zh = "组播"
+notes = "帧发给本地网络里属于某个组的所有机器；组地址的第一位是 1"
+
+[[term]]
+en = "preamble"
+zh = "前导码"
+notes = "帧开头 7 个字节，用来标出包的开始，把线上的包彼此分开"
+
+[[term]]
+en = "network interface card"
+zh = "网卡"
+notes = "机器里那块做收发的硬件；MAC 地址通常就烧在它上面"
+
+[[term]]
+en = "wide-area network"
+zh = "广域网"
+notes = "跨长距离的网络；这一讲换到它对面的那个尺度：一个局域网内部"

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 293.5" width="760" height="293.5"
+     role="img" aria-labelledby="fig-eth-4-title fig-eth-4-desc">
+  <title id="fig-eth-4-title">轮询与令牌传递各自的轮转方式</title>
+  <desc id="fig-eth-4-desc">上排两格是轮询的第一幕：协调者问 A 有没有话要说，A 说有，于是可以一直说到说完。第二排两格是轮询的第二幕：协调者接着问 B，B 说没有，于是立刻跳到 C，没有话说就不浪费任何资源。第三排两格换成令牌传递的两幕：令牌在 A 手上时 A 可以一直说；A 说完把令牌交给 B，而 B 没话说就立刻把令牌交给 C。源文配图里那两句原话分别是 A can speak for as long as it needs 与 B has nothing to say. It can immediately pass the token to C。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="293.5" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">轮询与令牌传递各自的轮转方式</text>
+  <rect x="25" y="64" width="342.5" height="49.5" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="196.25" y="84.35" font-size="11" fill="#1e40af" text-anchor="middle">轮询第一幕</text>
+  <text x="196.25" y="100.85" font-size="11" fill="#1e40af" text-anchor="middle">协调者问 A：你有话要说吗</text>
+  <rect x="392.5" y="64" width="342.5" height="49.5" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="563.75" y="84.35" font-size="11" fill="#166534" text-anchor="middle">A 回答有</text>
+  <text x="563.75" y="100.85" font-size="11" fill="#166534" text-anchor="middle">于是 A 可以一直说到说完</text>
+  <rect x="25" y="141.5" width="342.5" height="49.5" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="196.25" y="161.85" font-size="11" fill="#1e40af" text-anchor="middle">轮询第二幕</text>
+  <text x="196.25" y="178.35" font-size="11" fill="#1e40af" text-anchor="middle">协调者接着问 B，B 回答没有</text>
+  <rect x="392.5" y="141.5" width="342.5" height="49.5" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="563.75" y="161.85" font-size="11" fill="#166534" text-anchor="middle">于是立刻跳到 C</text>
+  <text x="563.75" y="178.35" font-size="11" fill="#166534" text-anchor="middle">没有话说就不浪费任何资源</text>
+  <rect x="25" y="219" width="342.5" height="49.5" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="196.25" y="239.35" font-size="11" fill="#b45309" text-anchor="middle">令牌传递第一幕</text>
+  <text x="196.25" y="255.85" font-size="11" fill="#b45309" text-anchor="middle">令牌在 A 手上，A 可以一直说</text>
+  <rect x="392.5" y="219" width="342.5" height="49.5" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="563.75" y="239.35" font-size="11" fill="#b45309" text-anchor="middle">令牌传递第二幕</text>
+  <text x="563.75" y="255.85" font-size="11" fill="#b45309" text-anchor="middle">A 说完把令牌交给 B；B 没话说就立刻交给 C</text>
+</svg>
