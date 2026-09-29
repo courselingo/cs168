@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 353" width="760" height="353"
+     role="img" aria-labelledby="fig-co-1-title fig-co-1-desc">
+  <title id="fig-co-1-title">从 AI 训练到那笔数据交换：这一讲要解决的问题在哪一步</title>
+  <desc id="fig-co-1-desc">上面一条是训练的黑箱视角：未训练的模型是一个填随机数的大矩阵，训练是在大数据集上跑大量矩阵乘法，输出是填上有用数字的矩阵。第二排三格是三种切法：把训练数据切开（每个节点训练不同的子集）、把模型切开（每个节点训练不同的子集）、把操作流水化（每个节点跑不同子集的操作）。第三排三格是三步循环：把任务切成子任务、每个节点跑一个；每个节点跑完之后大家交换大量状态；然后进入下一个任务、重复前两步。最下面一条说明我们把分布方式与交换内容都略过，焦点就是第二步那次数据交换以及怎么让它高效。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="353" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">从 AI 训练到那笔数据交换：这一讲要解决的问题在哪一步</text>
+  <rect x="25" y="64" width="710" height="30" rx="6" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="380" y="82.5" font-size="10" fill="#1e40af" text-anchor="middle">训练的黑箱视角：未训练的模型是一个填随机数的大矩阵，训练是在大数据集上跑大量矩阵乘法，输出是填上有用数字的矩阵</text>
+  <rect x="25" y="122" width="220" height="60" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="135" y="140.5" font-size="10" fill="#1e40af" text-anchor="middle">切法一</text>
+  <text x="135" y="155.5" font-size="10" fill="#1e40af" text-anchor="middle">把训练数据切开</text>
+  <text x="135" y="170.5" font-size="10" fill="#1e40af" text-anchor="middle">每个节点训练不同的子集</text>
+  <rect x="270" y="122" width="220" height="60" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="140.5" font-size="10" fill="#1e40af" text-anchor="middle">切法二</text>
+  <text x="380" y="155.5" font-size="10" fill="#1e40af" text-anchor="middle">把模型切开</text>
+  <text x="380" y="170.5" font-size="10" fill="#1e40af" text-anchor="middle">每个节点训练不同的子集</text>
+  <rect x="515" y="122" width="220" height="60" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="625" y="140.5" font-size="10" fill="#1e40af" text-anchor="middle">切法三</text>
+  <text x="625" y="155.5" font-size="10" fill="#1e40af" text-anchor="middle">把操作流水化</text>
+  <text x="625" y="170.5" font-size="10" fill="#1e40af" text-anchor="middle">每个节点跑不同子集的操作</text>
+  <rect x="25" y="210" width="220" height="60" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="135" y="228.5" font-size="10" fill="#166534" text-anchor="middle">第一步</text>
+  <text x="135" y="243.5" font-size="10" fill="#166534" text-anchor="middle">把任务切成子任务</text>
+  <text x="135" y="258.5" font-size="10" fill="#166534" text-anchor="middle">每个节点跑一个</text>
+  <rect x="270" y="210" width="220" height="60" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="228.5" font-size="10" fill="#b45309" text-anchor="middle">第二步</text>
+  <text x="380" y="243.5" font-size="10" fill="#b45309" text-anchor="middle">每个节点跑完之后</text>
+  <text x="380" y="258.5" font-size="10" fill="#b45309" text-anchor="middle">大家交换大量状态</text>
+  <rect x="515" y="210" width="220" height="60" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="625" y="228.5" font-size="10" fill="#1e293b" text-anchor="middle">第三步</text>
+  <text x="625" y="243.5" font-size="10" fill="#1e293b" text-anchor="middle">进入下一个任务</text>
+  <text x="625" y="258.5" font-size="10" fill="#1e293b" text-anchor="middle">重复前两步</text>
+  <rect x="25" y="298" width="710" height="30" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380" y="316.5" font-size="10" fill="#6b21a8" text-anchor="middle">我们把分布方式与交换内容都略过，焦点就是第二步那次数据交换，以及怎么让它高效</text>
+</svg>

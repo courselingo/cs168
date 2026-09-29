@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 399" width="760" height="399"
+     role="img" aria-labelledby="fig-co-7-title fig-co-7-desc">
+  <title id="fig-co-7-title">对偶与复合：三对对偶、一个特例，以及全归约的拆法</title>
+  <desc id="fig-co-7-desc">上面一条是判断对偶的办法：粗略地说一个操作是另一个的逆，而判断时忽略所有归约计算、只看输出里哪些格子被写入。第二排两格与第三排两格是三对对偶与那个特例：广播与归约（广播从根的 4 个格子读到全部 16 个格子，归约反过来从 16 个读到根的 4 个）；分散与收集（分散从根的 4 个格子读到第 i 个节点的第 i 个格子，收集反过来）；全收集与分散归约（全收集从第 i 个节点的第 i 个格子读到全部 16 个，分散归约反过来）；而全归约没有对偶，也可以看成它自己的对偶（从 16 个读到 16 个）。第四条是对偶为什么有用：对某个具体的拓扑与路由方案，一个操作与它的对偶性能相同、例如带宽用量相同，因为两者收发的数据总量一样。最下面一条是复合：用户可以组合多个操作，例如全归约等价于先做分散归约、再做全收集。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="399" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">对偶与复合：三对对偶、一个特例，以及全归约的拆法</text>
+  <rect x="25" y="64" width="710" height="30" rx="6" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="380" y="82.5" font-size="10" fill="#1e40af" text-anchor="middle">对偶：粗略地说一个操作是另一个的逆；判断时忽略所有归约计算，只看输出里哪些格子被写入</text>
+  <rect x="25" y="122" width="342.5" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="196.25" y="138.65" font-size="9" fill="#1e40af" text-anchor="middle">广播与归约</text>
+  <text x="196.25" y="152.15" font-size="9" fill="#1e40af" text-anchor="middle">广播从根的 4 个格子读到全部 16 个格子</text>
+  <text x="196.25" y="165.65" font-size="9" fill="#1e40af" text-anchor="middle">归约反过来：从 16 个读到根的 4 个</text>
+  <rect x="392.5" y="122" width="342.5" height="54" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="563.75" y="138.65" font-size="9" fill="#166534" text-anchor="middle">分散与收集</text>
+  <text x="563.75" y="152.15" font-size="9" fill="#166534" text-anchor="middle">分散从根的 4 个格子读到第 i 个节点的第 i 个格子</text>
+  <text x="563.75" y="165.65" font-size="9" fill="#166534" text-anchor="middle">收集反过来</text>
+  <rect x="25" y="204" width="342.5" height="54" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="196.25" y="220.65" font-size="9" fill="#166534" text-anchor="middle">全收集与分散归约</text>
+  <text x="196.25" y="234.15" font-size="9" fill="#166534" text-anchor="middle">全收集从第 i 个节点的第 i 个格子读到全部 16 个</text>
+  <text x="196.25" y="247.65" font-size="9" fill="#166534" text-anchor="middle">分散归约反过来</text>
+  <rect x="392.5" y="204" width="342.5" height="54" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="563.75" y="220.65" font-size="9" fill="#b45309" text-anchor="middle">全归约</text>
+  <text x="563.75" y="234.15" font-size="9" fill="#b45309" text-anchor="middle">它没有对偶</text>
+  <text x="563.75" y="247.65" font-size="9" fill="#b45309" text-anchor="middle">也可以看成它自己的对偶（从 16 个读到 16 个）</text>
+  <rect x="25" y="286" width="710" height="30" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380" y="304.5" font-size="10" fill="#6b21a8" text-anchor="middle">对偶为什么有用：对某个具体的拓扑与路由方案，一个操作与它的对偶性能相同（例如带宽用量相同），因为两者收发的数据总量一样</text>
+  <rect x="25" y="344" width="710" height="30" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="362.5" font-size="10" fill="#1e40af" text-anchor="middle">复合：用户可以组合多个操作。例如全归约等价于先做分散归约、再做全收集</text>
+</svg>

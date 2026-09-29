@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 283" width="760" height="283"
+     role="img" aria-labelledby="fig-co-8-title fig-co-8-desc">
+  <title id="fig-co-8-title">七个原语各自读哪些格子、写哪些格子</title>
+  <desc id="fig-co-8-desc">上面一条说明这张图把七个原语放成一张读写对照表，例子里 p 等于 4，所以每个节点 4 个格子、一共 16 个格子。第一排四格是四个关于重新分配的操作各自读哪里写哪里：广播读根的 4 个格子、写全部 16 个格子；分散读根的 4 个格子、写第 i 个节点的第 i 个格子；收集读第 i 个节点的第 i 个格子、写根的 4 个格子；全收集读第 i 个节点的第 i 个格子、写全部 16 个格子。第二排四格是三个关于归并的操作与一句话总结：归约读全部 16 个格子、写根的 4 个格子；全归约读全部 16 个格子、写全部 16 个格子；分散归约读全部 16 个格子、写第 i 个节点的第 i 个格子；而这句话总结的是，对偶就是把这些读与写对调。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="283" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">七个原语各自读哪些格子、写哪些格子</text>
+  <rect x="25" y="64" width="710" height="30" rx="6" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="380" y="82.5" font-size="10" fill="#1e40af" text-anchor="middle">七个原语各自读哪些格子、写哪些格子（例子里 p 等于 4，所以每个节点 4 个格子、一共 16 个格子）</text>
+  <rect x="25" y="122" width="158.75" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="104.375" y="138.65" font-size="9" fill="#1e40af" text-anchor="middle">广播</text>
+  <text x="104.375" y="152.15" font-size="9" fill="#1e40af" text-anchor="middle">读根的 4 个格子</text>
+  <text x="104.375" y="165.65" font-size="9" fill="#1e40af" text-anchor="middle">写全部 16 个格子</text>
+  <rect x="208.75" y="122" width="158.75" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="288.125" y="138.65" font-size="9" fill="#1e40af" text-anchor="middle">分散</text>
+  <text x="288.125" y="152.15" font-size="9" fill="#1e40af" text-anchor="middle">读根的 4 个格子</text>
+  <text x="288.125" y="165.65" font-size="9" fill="#1e40af" text-anchor="middle">写第 i 个节点的第 i 个格子</text>
+  <rect x="392.5" y="122" width="158.75" height="54" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="471.875" y="138.65" font-size="9" fill="#166534" text-anchor="middle">收集</text>
+  <text x="471.875" y="152.15" font-size="9" fill="#166534" text-anchor="middle">读第 i 个节点的第 i 个格子</text>
+  <text x="471.875" y="165.65" font-size="9" fill="#166534" text-anchor="middle">写根的 4 个格子</text>
+  <rect x="576.25" y="122" width="158.75" height="54" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="655.625" y="138.65" font-size="9" fill="#166534" text-anchor="middle">全收集</text>
+  <text x="655.625" y="152.15" font-size="9" fill="#166534" text-anchor="middle">读第 i 个节点的第 i 个格子</text>
+  <text x="655.625" y="165.65" font-size="9" fill="#166534" text-anchor="middle">写全部 16 个格子</text>
+  <rect x="25" y="204" width="158.75" height="54" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="104.375" y="220.65" font-size="9" fill="#6b21a8" text-anchor="middle">归约</text>
+  <text x="104.375" y="234.15" font-size="9" fill="#6b21a8" text-anchor="middle">读全部 16 个格子</text>
+  <text x="104.375" y="247.65" font-size="9" fill="#6b21a8" text-anchor="middle">写根的 4 个格子</text>
+  <rect x="208.75" y="204" width="158.75" height="54" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="288.125" y="220.65" font-size="9" fill="#6b21a8" text-anchor="middle">全归约</text>
+  <text x="288.125" y="234.15" font-size="9" fill="#6b21a8" text-anchor="middle">读全部 16 个格子</text>
+  <text x="288.125" y="247.65" font-size="9" fill="#6b21a8" text-anchor="middle">写全部 16 个格子</text>
+  <rect x="392.5" y="204" width="158.75" height="54" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="471.875" y="220.65" font-size="9" fill="#6b21a8" text-anchor="middle">分散归约</text>
+  <text x="471.875" y="234.15" font-size="9" fill="#6b21a8" text-anchor="middle">读全部 16 个格子</text>
+  <text x="471.875" y="247.65" font-size="9" fill="#6b21a8" text-anchor="middle">写第 i 个节点的第 i 个格子</text>
+  <rect x="576.25" y="204" width="158.75" height="54" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="655.625" y="227.4" font-size="9" fill="#1e293b" text-anchor="middle">一句话</text>
+  <text x="655.625" y="240.9" font-size="9" fill="#1e293b" text-anchor="middle">对偶就是把这些读与写对调</text>
+</svg>

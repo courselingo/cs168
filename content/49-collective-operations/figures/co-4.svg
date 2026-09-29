@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 360.5" width="760" height="360.5"
+     role="img" aria-labelledby="fig-co-4-title fig-co-4-desc">
+  <title id="fig-co-4-title">七个原语的设定与那个「四加三」的分类</title>
+  <desc id="fig-co-4-desc">第一排三格是输入与输出的规定：有 p 个节点而例子里取 p 等于 4，每个节点持有一个 p 元向量；数据在例子里是 4 个整数，也可以是矩阵的 4 行或训练数据的 4 个等大块；输出规定哪个格子里放哪个值，有时还会做聚合。第二排三格是操作之前的协调与执行方式：控制器先把各节点的编号与总数发下去；每个节点同时跑完全相同的代码，理想情况下各节点同时结束；如果有的节点比较慢，这个操作是阻塞的、必须等所有人做完才能往下走。第三条是那句总结：由控制器编排，它是同步的、同构的、阻塞的。最下面一条是分类：七个操作里四个关于重新分配，三个关于归并。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="360.5" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">七个原语的设定与那个「四加三」的分类</text>
+  <rect x="25" y="64" width="220" height="67.5" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="135" y="86.25" font-size="10" fill="#1e40af" text-anchor="middle">输入</text>
+  <text x="135" y="101.25" font-size="10" fill="#1e40af" text-anchor="middle">有 p 个节点，例子取 p 等于 4</text>
+  <text x="135" y="116.25" font-size="10" fill="#1e40af" text-anchor="middle">每个节点持有一个 p 元向量</text>
+  <rect x="270" y="64" width="220" height="67.5" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="80.65" font-size="9" fill="#1e40af" text-anchor="middle">数据可以是什么</text>
+  <text x="380" y="94.15" font-size="9" fill="#1e40af" text-anchor="middle">例子里是 4 个整数</text>
+  <text x="380" y="107.65" font-size="9" fill="#1e40af" text-anchor="middle">也可以是矩阵的 4 行</text>
+  <text x="380" y="121.15" font-size="9" fill="#1e40af" text-anchor="middle">或训练数据的 4 个等大块</text>
+  <rect x="515" y="64" width="220" height="67.5" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="625" y="80.65" font-size="9" fill="#1e40af" text-anchor="middle">输出</text>
+  <text x="625" y="94.15" font-size="9" fill="#1e40af" text-anchor="middle">元素按规定的方式在节点之间搬动</text>
+  <text x="625" y="107.65" font-size="9" fill="#1e40af" text-anchor="middle">输出规定哪个格子里放哪个值</text>
+  <text x="625" y="121.15" font-size="9" fill="#1e40af" text-anchor="middle">有时还会做聚合</text>
+  <rect x="25" y="159.5" width="220" height="60" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="135" y="185.5" font-size="10" fill="#1e293b" text-anchor="middle">操作之前</text>
+  <text x="135" y="200.5" font-size="10" fill="#1e293b" text-anchor="middle">控制器先把各节点的编号与总数发下去</text>
+  <rect x="270" y="159.5" width="220" height="60" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="178" font-size="10" fill="#166534" text-anchor="middle">执行方式</text>
+  <text x="380" y="193" font-size="10" fill="#166534" text-anchor="middle">每个节点同时跑完全相同的代码</text>
+  <text x="380" y="208" font-size="10" fill="#166534" text-anchor="middle">理想情况下各节点同时结束</text>
+  <rect x="515" y="159.5" width="220" height="60" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="625" y="178" font-size="10" fill="#b45309" text-anchor="middle">如果有的节点比较慢</text>
+  <text x="625" y="193" font-size="10" fill="#b45309" text-anchor="middle">这个操作是阻塞的</text>
+  <text x="625" y="208" font-size="10" fill="#b45309" text-anchor="middle">必须等所有人做完才能往下走</text>
+  <rect x="25" y="247.5" width="710" height="30" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380" y="266" font-size="10" fill="#6b21a8" text-anchor="middle">总结：由控制器编排，它是同步的（同时开始）、同构的（理想情况下同时结束）、阻塞的（必须等所有人做完）</text>
+  <rect x="25" y="305.5" width="710" height="30" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="380" y="324" font-size="10" fill="#1e293b" text-anchor="middle">分类：七个操作里四个关于重新分配（搬来搬去而不变换），三个关于归并（把很多块聚合成一个输出）</text>
+</svg>

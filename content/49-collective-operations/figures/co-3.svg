@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 327.5" width="760" height="327.5"
+     role="img" aria-labelledby="fig-co-3-title fig-co-3-desc">
+  <title id="fig-co-3-title">集合通信的三点不同</title>
+  <desc id="fig-co-3-desc">上面一条是那套定义与它的来历：教科书定义说一组节点作为某个群体计算的一部分、以协调的方式交换数据；这套概念几十年前出自超级计算机，近年因 AI 又活跃起来，实现有 NCCL、MSCCL 与 TCCL。下面三格是三点不同：通信高度结构化（此前事先不知道谁要通信，这里目标事先知道、是一组被严格编排好的交换与计算）；专用的网络基础设施（此前要支持同时发生的多条连接，这里常常只有这一个任务，于是能准确预测带宽用量）；数据在交换中被变换（此前的模型是发出一份拷贝，这里发出的与收到的不一定是同一份）。最下面一条是为什么要有原语：把这些基本集合操作当成分布式通信的 API，用少数几个积木拼出具体方案。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="327.5" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">集合通信的三点不同</text>
+  <rect x="25" y="64" width="710" height="30" rx="6" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="380" y="82.5" font-size="10" fill="#1e40af" text-anchor="middle">教科书定义：一组节点作为某个群体计算的一部分，以协调的方式交换数据</text>
+  <rect x="25" y="122" width="710" height="27" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="380" y="138.65" font-size="9" fill="#1e293b" text-anchor="middle">这套概念几十年前出自超级计算机，近年因 AI 又活跃起来（实现有 NCCL、MSCCL、TCCL）</text>
+  <rect x="25" y="177" width="220" height="67.5" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="135" y="193.65" font-size="9" fill="#1e40af" text-anchor="middle">不同一：通信高度结构化</text>
+  <text x="135" y="207.15" font-size="9" fill="#1e40af" text-anchor="middle">此前事先不知道谁要通信</text>
+  <text x="135" y="220.65" font-size="9" fill="#1e40af" text-anchor="middle">这里目标事先知道</text>
+  <text x="135" y="234.15" font-size="9" fill="#1e40af" text-anchor="middle">是一组被严格编排好的交换与计算</text>
+  <rect x="270" y="177" width="220" height="67.5" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="193.65" font-size="9" fill="#166534" text-anchor="middle">不同二：专用的网络基础设施</text>
+  <text x="380" y="207.15" font-size="9" fill="#166534" text-anchor="middle">此前要支持同时发生的多条连接</text>
+  <text x="380" y="220.65" font-size="9" fill="#166534" text-anchor="middle">这里常常只有这一个任务</text>
+  <text x="380" y="234.15" font-size="9" fill="#166534" text-anchor="middle">于是能准确预测带宽用量</text>
+  <rect x="515" y="177" width="220" height="67.5" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="625" y="200.4" font-size="9" fill="#b45309" text-anchor="middle">不同三：数据在交换中被变换</text>
+  <text x="625" y="213.9" font-size="9" fill="#b45309" text-anchor="middle">此前的模型是发出一份拷贝</text>
+  <text x="625" y="227.4" font-size="9" fill="#b45309" text-anchor="middle">这里发出的与收到的不一定是同一份</text>
+  <rect x="25" y="272.5" width="710" height="30" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380" y="291" font-size="10" fill="#6b21a8" text-anchor="middle">为什么要有原语：把这些基本集合操作当成分布式通信的 API，用少数几个积木拼出具体方案</text>
+</svg>

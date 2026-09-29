@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 295" width="760" height="295"
+     role="img" aria-labelledby="fig-co-9-title fig-co-9-desc">
+  <title id="fig-co-9-title">这一讲在整段里的位置</title>
+  <desc id="fig-co-9-desc">上面一条说明这张图讲的是这一讲在整段里的位置：从同一份数据送给很多人，换成每人一块、按编排互换或归并。第二排两格是两组对象的对照：前面几讲的对象是组播，同一份数据要送给很多接收者，关心的是别重复占用链路；这一讲的对象是 AI 训练，每个节点各持一块数据，关心的是按编排好的方式互换或归并。第三排两格是留下来给下一讲的两条前提（有些节点对比另一些连得更好，而专用网络上带宽用量可以被准确预测）与下一讲要做的事（把这些集合操作在网络里实现出来，而这一讲只定义了它们做什么）。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="295" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">这一讲在整段里的位置</text>
+  <rect x="25" y="64" width="710" height="30" rx="6" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="380" y="82.5" font-size="10" fill="#1e40af" text-anchor="middle">这一讲在整段里的位置：从「同一份数据送给很多人」换成「每人一块、按编排互换或归并」</text>
+  <rect x="25" y="122" width="342.5" height="60" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="196.25" y="140.5" font-size="10" fill="#1e293b" text-anchor="middle">前面几讲的对象</text>
+  <text x="196.25" y="155.5" font-size="10" fill="#1e293b" text-anchor="middle">组播：同一份数据要送给很多接收者</text>
+  <text x="196.25" y="170.5" font-size="10" fill="#1e293b" text-anchor="middle">关心的是别重复占用链路</text>
+  <rect x="392.5" y="122" width="342.5" height="60" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="563.75" y="140.5" font-size="10" fill="#1e40af" text-anchor="middle">这一讲的对象</text>
+  <text x="563.75" y="155.5" font-size="10" fill="#1e40af" text-anchor="middle">AI 训练：每个节点各持一块数据</text>
+  <text x="563.75" y="170.5" font-size="10" fill="#1e40af" text-anchor="middle">关心的是按编排好的方式互换或归并</text>
+  <rect x="25" y="210" width="342.5" height="60" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="196.25" y="228.5" font-size="10" fill="#166534" text-anchor="middle">留下来给下一讲的两条前提</text>
+  <text x="196.25" y="243.5" font-size="10" fill="#166534" text-anchor="middle">有些节点对比另一些连得更好</text>
+  <text x="196.25" y="258.5" font-size="10" fill="#166534" text-anchor="middle">而专用网络上带宽用量可以被准确预测</text>
+  <rect x="392.5" y="210" width="342.5" height="60" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="563.75" y="228.5" font-size="10" fill="#b45309" text-anchor="middle">下一讲要做的</text>
+  <text x="563.75" y="243.5" font-size="10" fill="#b45309" text-anchor="middle">把这些集合操作在网络里实现出来</text>
+  <text x="563.75" y="258.5" font-size="10" fill="#b45309" text-anchor="middle">而这一讲只定义了它们做什么</text>
+</svg>
