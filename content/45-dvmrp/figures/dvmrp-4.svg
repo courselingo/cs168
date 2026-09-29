@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 354.5" width="760" height="354.5"
+     role="img" aria-labelledby="fig-dvmrp-4-title fig-dvmrp-4-desc">
+  <title id="fig-dvmrp-4-title">父子从哪来：父来自单播转发表，子靠通告学到</title>
+  <desc id="fig-dvmrp-4-desc">上排三格是两件事的难度对比与子的来源：父不需要任何动作，因为这棵树与单播距离向量那棵树完全一样、单播转发表里通往根的下一跳就是你的父；子要靠子告诉你，因为转发表只有往根方向的下一跳、完全没有反方向上一跳的信息；于是每台路由器都向父发一条通告说「我是你的子」，父把这些通告存成一张新表。第二排两格是两张表的分工：单播转发表列出你的父，用来单播送往目的地、用来检查组播包是否来自父、以及用来向父发那类通告；组播转发表列出你的子，靠收到通告建成，用来把组播包转发给所有的子。最下面一条是关键观察：单播是为每一个目的地各建一棵树（每个目的地一个父），反过来之后是为每一个源各一棵树，所以表项要写明「从哪个源来」，例如从源 A 来就转发给子 R6 与 R7。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="354.5" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">父子从哪来：父来自单播转发表，子靠通告学到</text>
+  <rect x="25" y="64" width="220" height="60" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="135" y="82.5" font-size="10" fill="#166534" text-anchor="middle">父从哪来：不需要任何动作</text>
+  <text x="135" y="97.5" font-size="10" fill="#166534" text-anchor="middle">这棵树与单播距离向量那棵树完全一样</text>
+  <text x="135" y="112.5" font-size="10" fill="#166534" text-anchor="middle">单播转发表里通往根的下一跳就是你的父</text>
+  <rect x="270" y="64" width="220" height="60" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="82.5" font-size="10" fill="#b45309" text-anchor="middle">子从哪来：要靠子告诉你</text>
+  <text x="380" y="97.5" font-size="10" fill="#b45309" text-anchor="middle">转发表只有往根方向的下一跳</text>
+  <text x="380" y="112.5" font-size="10" fill="#b45309" text-anchor="middle">完全没有反方向的上一跳的信息</text>
+  <rect x="515" y="64" width="220" height="60" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="625" y="82.5" font-size="10" fill="#1e40af" text-anchor="middle">于是每台路由器都向父发通告</text>
+  <text x="625" y="97.5" font-size="10" fill="#1e40af" text-anchor="middle">我是你的子（在以某个节点为根的树里）</text>
+  <text x="625" y="112.5" font-size="10" fill="#1e40af" text-anchor="middle">父把这些通告存成一张新表</text>
+  <rect x="25" y="152" width="342.5" height="67.5" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="196.25" y="168.65" font-size="9" fill="#1e293b" text-anchor="middle">单播转发表：列出你的父</text>
+  <text x="196.25" y="182.15" font-size="9" fill="#1e293b" text-anchor="middle">用来单播送往目的地</text>
+  <text x="196.25" y="195.65" font-size="9" fill="#1e293b" text-anchor="middle">用来检查组播包是否来自父</text>
+  <text x="196.25" y="209.15" font-size="9" fill="#1e293b" text-anchor="middle">用来向父发那类通告</text>
+  <rect x="392.5" y="152" width="342.5" height="67.5" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="563.75" y="175.4" font-size="9" fill="#166534" text-anchor="middle">组播转发表：列出你的子</text>
+  <text x="563.75" y="188.9" font-size="9" fill="#166534" text-anchor="middle">靠收到通告建成</text>
+  <text x="563.75" y="202.4" font-size="9" fill="#166534" text-anchor="middle">用来把组播包转发给所有的子</text>
+  <rect x="25" y="247.5" width="710" height="27" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380" y="264.15" font-size="9" fill="#6b21a8" text-anchor="middle">关键观察一：单播是为每一个目的地各建一棵树，每个目的地一个父</text>
+  <rect x="25" y="302.5" width="710" height="27" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380" y="319.15" font-size="9" fill="#6b21a8" text-anchor="middle">关键观察二：反过来之后是为每一个源各一棵树，所以表项要写明「从哪个源来」，例如从源 A 来就转发给子 R6 与 R7</text>
+</svg>

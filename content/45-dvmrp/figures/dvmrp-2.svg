@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 323" width="760" height="323"
+     role="img" aria-labelledby="fig-dvmrp-2-title fig-dvmrp-2-desc">
+  <title id="fig-dvmrp-2-title">洪泛的浪费（R1 到 R4 之间每条路都走一遍）与「树」这个目标</title>
+  <desc id="fig-dvmrp-2-desc">上面一条说明例子：R1 与 R4 之间有多条路径，洪泛让包的副本沿每条路各走一遍。第二条说明结果：R4 把重复的副本全都丢掉，而带宽已经被重复的数据用掉了。第二排三格是理想、那个结构、以及目标：理想是包在任意一对路由器之间只走一条路；能保证这一点的结构是树（任意两个节点之间只有一条路径）；于是目标是构造一棵生成树，让每个人都只沿一条路径收到这个包。最下面一条是源文留的方向性的话：树可以从零建起，但可以更聪明一点、复用已经做过的工作。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="323" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">洪泛的浪费（R1 到 R4 之间每条路都走一遍）与「树」这个目标</text>
+  <rect x="25" y="64" width="710" height="30" rx="6" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="380" y="82.5" font-size="10" fill="#1e40af" text-anchor="middle">例子：R1 与 R4 之间有多条路径，洪泛让包的副本沿每条路各走一遍</text>
+  <rect x="25" y="122" width="710" height="30" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="380" y="140.5" font-size="10" fill="#1e293b" text-anchor="middle">结果：R4 把重复的副本全都丢掉，而带宽已经被重复的数据用掉了</text>
+  <rect x="25" y="180" width="220" height="60" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="135" y="198.5" font-size="10" fill="#166534" text-anchor="middle">理想</text>
+  <text x="135" y="213.5" font-size="10" fill="#166534" text-anchor="middle">包在任意一对路由器之间只走一条路</text>
+  <text x="135" y="228.5" font-size="10" fill="#166534" text-anchor="middle">任何一对都是如此</text>
+  <rect x="270" y="180" width="220" height="60" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="206" font-size="10" fill="#1e40af" text-anchor="middle">什么结构能保证这一点</text>
+  <text x="380" y="221" font-size="10" fill="#1e40af" text-anchor="middle">树：任意两个节点之间只有一条路径</text>
+  <rect x="515" y="180" width="220" height="60" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="625" y="198.5" font-size="10" fill="#1e40af" text-anchor="middle">于是目标</text>
+  <text x="625" y="213.5" font-size="10" fill="#1e40af" text-anchor="middle">构造一棵生成树</text>
+  <text x="625" y="228.5" font-size="10" fill="#1e40af" text-anchor="middle">让每个人都只沿一条路径收到这个包</text>
+  <rect x="25" y="268" width="710" height="30" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380" y="286.5" font-size="10" fill="#6b21a8" text-anchor="middle">源文留了一句方向性的话：树可以从零建起，但我们可以更聪明一点，复用已经做过的工作</text>
+</svg>

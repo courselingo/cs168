@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 408" width="760" height="408"
+     role="img" aria-labelledby="fig-dvmrp-5-title fig-dvmrp-5-desc">
+  <title id="fig-dvmrp-5-title">剪枝：从子往父传播，以及每源每组一条表项</title>
+  <desc id="fig-dvmrp-5-desc">上面一条是第二个问题与解法：包仍然发给所有人、包括不是成员的主机，解法是剪枝，把没有组员的分支剪掉。第二排三格是剪枝的方向与两种情形：方向是从子往父传播；最近的那一层是离主机最近的路由器用 IGMP 问主机、发现没有成员就向父发剪枝通告；更高的一层是两个子都剪掉之后父也可以把自己摘掉。第三条说明剪枝消息只发给直接父节点、不会被继续转发。第四条是那处照录说明：原文写的是 R11 and R2，而后文两条表项与括号里的说法用的都是 R12，三处合起来看 R2 应为 R12。第三排三格是表项怎么变与定期清空：每个源、每个目的组各一条（例如发往 G1 的给 R11 与 R12）；另一种说法是以前每个源一棵树、现在要每个源与每个目的组各一棵树；定期清空剪枝信息让后来加入的后代能重新接上，若仍无成员就再剪一次。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="408" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">剪枝：从子往父传播，以及每源每组一条表项</text>
+  <rect x="25" y="64" width="710" height="30" rx="6" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="380" y="82.5" font-size="10" fill="#1e40af" text-anchor="middle">第二个问题：包仍然发给所有人，包括不是成员的主机；解法是剪枝，把没有组员的分支剪掉</text>
+  <rect x="25" y="122" width="220" height="60" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="135" y="148" font-size="10" fill="#1e40af" text-anchor="middle">剪枝的方向</text>
+  <text x="135" y="163" font-size="10" fill="#1e40af" text-anchor="middle">从子往父传播</text>
+  <rect x="270" y="122" width="220" height="60" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="140.5" font-size="10" fill="#166534" text-anchor="middle">最近的那一层</text>
+  <text x="380" y="155.5" font-size="10" fill="#166534" text-anchor="middle">离主机最近的路由器用 IGMP 问主机</text>
+  <text x="380" y="170.5" font-size="10" fill="#166534" text-anchor="middle">发现没有成员就向父发剪枝通告</text>
+  <rect x="515" y="122" width="220" height="60" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="625" y="140.5" font-size="10" fill="#6b21a8" text-anchor="middle">更高的一层</text>
+  <text x="625" y="155.5" font-size="10" fill="#6b21a8" text-anchor="middle">两个子都剪掉之后</text>
+  <text x="625" y="170.5" font-size="10" fill="#6b21a8" text-anchor="middle">父也可以把自己摘掉</text>
+  <rect x="25" y="210" width="710" height="30" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="380" y="228.5" font-size="10" fill="#1e293b" text-anchor="middle">剪枝消息只发给你的直接父节点，不会被继续转发</text>
+  <rect x="25" y="268" width="710" height="27" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="284.65" font-size="9" fill="#b45309" text-anchor="middle">照录说明：原文写的是 R11 and R2，而后文两条表项与括号里的说法用的都是 R12；三处合起来看，R2 应为 R12。本页照录原句并就地说清</text>
+  <rect x="25" y="323" width="220" height="60" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="135" y="341.5" font-size="10" fill="#1e40af" text-anchor="middle">表项怎么变</text>
+  <text x="135" y="356.5" font-size="10" fill="#1e40af" text-anchor="middle">每个源、每个目的组各一条</text>
+  <text x="135" y="371.5" font-size="10" fill="#1e40af" text-anchor="middle">例如发往 G1 的给 R11 与 R12</text>
+  <rect x="270" y="323" width="220" height="60" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="341.5" font-size="10" fill="#1e40af" text-anchor="middle">另一种说法</text>
+  <text x="380" y="356.5" font-size="10" fill="#1e40af" text-anchor="middle">以前是每个源一棵树</text>
+  <text x="380" y="371.5" font-size="10" fill="#1e40af" text-anchor="middle">现在要每个源、每个目的组各一棵树</text>
+  <rect x="515" y="323" width="220" height="60" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="625" y="341.5" font-size="10" fill="#166534" text-anchor="middle">定期清空剪枝信息</text>
+  <text x="625" y="356.5" font-size="10" fill="#166534" text-anchor="middle">让后来加入的后代能重新接上</text>
+  <text x="625" y="371.5" font-size="10" fill="#166534" text-anchor="middle">若仍无成员就再剪一次</text>
+</svg>

@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 340" width="760" height="340"
+     role="img" aria-labelledby="fig-dvmrp-6-title fig-dvmrp-6-desc">
+  <title id="fig-dvmrp-6-title">DVMRP 的三组规则与它的得失</title>
+  <desc id="fig-dvmrp-6-desc">上排三格是三组规则各自的要点：路由规则两条（学父不需要动作，学子要每个人向父发通告）；转发规则两条（先用该源的单播表检查是否来自父，来自父就转发给那些没被剪掉的子，否则丢掉）；剪枝规则三条（收到子的剪枝就把它去掉，后代都不在组里就向父剪，并定期清空）。第二排两格是不好的地方：剪枝信息定期清空，那一刻包又开始被广播给所有人；转发表扩展性差，要为每个源与每个目的组各留一条。第三排三格是好的地方与那处代价：它是对距离向量的简单而优雅的扩展、复用了单播转发表；因此得到的树同时也是最小代价的树、给出从发送方到所有组员的最好路径，在这个意义上 IP 组播是最优的；而耦合的代价是换单播协议就得重新设计组播。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="340" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">DVMRP 的三组规则与它的得失</text>
+  <rect x="25" y="64" width="220" height="75" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="135" y="90" font-size="10" fill="#1e40af" text-anchor="middle">路由规则两条</text>
+  <text x="135" y="105" font-size="10" fill="#1e40af" text-anchor="middle">学父：不需要动作</text>
+  <text x="135" y="120" font-size="10" fill="#1e40af" text-anchor="middle">学子：每个人向父发通告</text>
+  <rect x="270" y="64" width="220" height="75" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="90" font-size="10" fill="#166534" text-anchor="middle">转发规则两条</text>
+  <text x="380" y="105" font-size="10" fill="#166534" text-anchor="middle">先用该源的单播表检查是否来自父</text>
+  <text x="380" y="120" font-size="10" fill="#166534" text-anchor="middle">来自父就转发给那些没被剪掉的子，否则丢掉</text>
+  <rect x="515" y="64" width="220" height="75" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="625" y="82.5" font-size="10" fill="#6b21a8" text-anchor="middle">剪枝规则三条</text>
+  <text x="625" y="97.5" font-size="10" fill="#6b21a8" text-anchor="middle">收到子的剪枝就把它去掉</text>
+  <text x="625" y="112.5" font-size="10" fill="#6b21a8" text-anchor="middle">后代都不在组里就向父剪</text>
+  <text x="625" y="127.5" font-size="10" fill="#6b21a8" text-anchor="middle">定期清空</text>
+  <rect x="25" y="167" width="342.5" height="60" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="196.25" y="185.5" font-size="10" fill="#b45309" text-anchor="middle">不好的地方一</text>
+  <text x="196.25" y="200.5" font-size="10" fill="#b45309" text-anchor="middle">剪枝信息定期清空</text>
+  <text x="196.25" y="215.5" font-size="10" fill="#b45309" text-anchor="middle">那一刻包又开始被广播给所有人</text>
+  <rect x="392.5" y="167" width="342.5" height="60" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="563.75" y="185.5" font-size="10" fill="#b45309" text-anchor="middle">不好的地方二</text>
+  <text x="563.75" y="200.5" font-size="10" fill="#b45309" text-anchor="middle">转发表扩展性差</text>
+  <text x="563.75" y="215.5" font-size="10" fill="#b45309" text-anchor="middle">要为每个源、每个目的组各留一条</text>
+  <rect x="25" y="255" width="220" height="60" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="135" y="273.5" font-size="10" fill="#166534" text-anchor="middle">好的地方</text>
+  <text x="135" y="288.5" font-size="10" fill="#166534" text-anchor="middle">对距离向量的简单而优雅的扩展</text>
+  <text x="135" y="303.5" font-size="10" fill="#166534" text-anchor="middle">复用了单播转发表</text>
+  <rect x="270" y="255" width="220" height="60" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="273.5" font-size="10" fill="#166534" text-anchor="middle">因此得到的树是最小代价的树</text>
+  <text x="380" y="288.5" font-size="10" fill="#166534" text-anchor="middle">它给出从发送方到所有组员的最好路径</text>
+  <text x="380" y="303.5" font-size="10" fill="#166534" text-anchor="middle">在这个意义上 IP 组播是最优的</text>
+  <rect x="515" y="255" width="220" height="60" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="625" y="273.5" font-size="10" fill="#1e293b" text-anchor="middle">耦合的代价</text>
+  <text x="625" y="288.5" font-size="10" fill="#1e293b" text-anchor="middle">把组播与单播绑在一起</text>
+  <text x="625" y="303.5" font-size="10" fill="#1e293b" text-anchor="middle">换单播协议就得重新设计组播</text>
+</svg>

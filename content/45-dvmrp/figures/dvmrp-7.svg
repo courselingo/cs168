@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 265" width="760" height="265"
+     role="img" aria-labelledby="fig-dvmrp-7-title fig-dvmrp-7-desc">
+  <title id="fig-dvmrp-7-title">这一讲用到的三样既有材料</title>
+  <desc id="fig-dvmrp-7-desc">上面一条说明这张图讲的是这一讲复用了哪三样既有材料。下面三格分别是：距离向量的交付树（原本指向目的地、根是目的地，反过来就是组播要的以源为根的树）；单播转发表（通往根的下一跳就是你的父，于是识别父这件事不需要新机制）；以及 IGMP（路由器用它去问直连的主机，从而知道有没有成员、要不要剪枝）。最下面一条是这一讲的一句话总结：组播要的是以源为根的树，而距离向量早就为每个目的地建好了以目的地为根的树，两者是同一张图的两个方向。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="265" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">这一讲用到的三样既有材料</text>
+  <rect x="25" y="64" width="710" height="30" rx="6" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="380" y="82.5" font-size="10" fill="#1e40af" text-anchor="middle">这一讲用到的三样既有材料：距离向量的交付树、单播转发表、以及 IGMP</text>
+  <rect x="25" y="122" width="220" height="60" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="135" y="140.5" font-size="10" fill="#1e40af" text-anchor="middle">距离向量的交付树</text>
+  <text x="135" y="155.5" font-size="10" fill="#1e40af" text-anchor="middle">原本指向目的地（根是目的地）</text>
+  <text x="135" y="170.5" font-size="10" fill="#1e40af" text-anchor="middle">反过来就是组播要的以源为根的树</text>
+  <rect x="270" y="122" width="220" height="60" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="140.5" font-size="10" fill="#166534" text-anchor="middle">单播转发表</text>
+  <text x="380" y="155.5" font-size="10" fill="#166534" text-anchor="middle">通往根的下一跳就是你的父</text>
+  <text x="380" y="170.5" font-size="10" fill="#166534" text-anchor="middle">于是识别父这件事不需要新机制</text>
+  <rect x="515" y="122" width="220" height="60" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="625" y="140.5" font-size="10" fill="#6b21a8" text-anchor="middle">IGMP</text>
+  <text x="625" y="155.5" font-size="10" fill="#6b21a8" text-anchor="middle">路由器用它去问直连的主机</text>
+  <text x="625" y="170.5" font-size="10" fill="#6b21a8" text-anchor="middle">从而知道有没有成员、要不要剪枝</text>
+  <rect x="25" y="210" width="710" height="30" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="380" y="228.5" font-size="10" fill="#1e293b" text-anchor="middle">一句话总结这一讲：组播要的是以源为根的树，而距离向量早就为每个目的地建好了以目的地为根的树，两者是同一张图的两个方向</text>
+</svg>

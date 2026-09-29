@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 356" width="760" height="356"
+     role="img" aria-labelledby="fig-dvmrp-3-title fig-dvmrp-3-desc">
+  <title id="fig-dvmrp-3-title">把单播的树反过来：根从目的地变成源，父子方向相反</title>
+  <desc id="fig-dvmrp-3-desc">上排两格把两棵树并排：单播那棵的根是目的地，每个人从子那里收包、把包转发给父，方向向上；把箭头全部反过来之后，根变成发送方，每个人从父那里收包、把包转发给子，方向向下。第二排两格是那套术语：每台路由器恰好有一个父、有零个或多个子；处在上端的是根，没有子节点的是叶。第三排第一格是转发规则：来自父就把它发给所有的子，来自别人（不是你的父）就把它丢掉。最下面一条说明这条规则为什么解决第一个问题：即使到你这里有多条路径，你也只会从父那里收到一次，别处的副本一律丢掉。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="356" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">把单播的树反过来：根从目的地变成源，父子方向相反</text>
+  <rect x="25" y="64" width="342.5" height="60" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="196.25" y="82.5" font-size="10" fill="#1e293b" text-anchor="middle">单播那棵树</text>
+  <text x="196.25" y="97.5" font-size="10" fill="#1e293b" text-anchor="middle">根是目的地</text>
+  <text x="196.25" y="112.5" font-size="10" fill="#1e293b" text-anchor="middle">每个人从子那里收包、把包转发给父，方向向上</text>
+  <rect x="392.5" y="64" width="342.5" height="60" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="563.75" y="82.5" font-size="10" fill="#166534" text-anchor="middle">把箭头全部反过来</text>
+  <text x="563.75" y="97.5" font-size="10" fill="#166534" text-anchor="middle">根变成发送方</text>
+  <text x="563.75" y="112.5" font-size="10" fill="#166534" text-anchor="middle">每个人从父那里收包、把包转发给子，方向向下</text>
+  <rect x="25" y="152" width="342.5" height="60" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="196.25" y="170.5" font-size="10" fill="#1e40af" text-anchor="middle">术语：父与子</text>
+  <text x="196.25" y="185.5" font-size="10" fill="#1e40af" text-anchor="middle">每台路由器恰好有一个父</text>
+  <text x="196.25" y="200.5" font-size="10" fill="#1e40af" text-anchor="middle">有零个或多个子</text>
+  <rect x="392.5" y="152" width="342.5" height="60" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="563.75" y="170.5" font-size="10" fill="#1e40af" text-anchor="middle">顶端与底部</text>
+  <text x="563.75" y="185.5" font-size="10" fill="#1e40af" text-anchor="middle">顶端是根</text>
+  <text x="563.75" y="200.5" font-size="10" fill="#1e40af" text-anchor="middle">没有子节点的是叶</text>
+  <rect x="25" y="240" width="710" height="33" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380" y="260.35" font-size="11" fill="#6b21a8" text-anchor="middle">组播的转发规则：来自父就把它发给所有的子；来自别人（不是你的父）就把它丢掉</text>
+  <rect x="25" y="301" width="710" height="30" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="380" y="319.5" font-size="10" fill="#1e293b" text-anchor="middle">这条规则解决第一个问题：即使到你这里有多条路径，你也只会从父那里收到一次，别处的副本一律丢掉</text>
+</svg>

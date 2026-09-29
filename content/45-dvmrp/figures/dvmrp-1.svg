@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 295" width="760" height="295"
+     role="img" aria-labelledby="fig-dvmrp-1-title fig-dvmrp-1-desc">
+  <title id="fig-dvmrp-1-title">组播路由的目标、最朴素的做法，以及它的两个主要问题</title>
+  <desc id="fig-dvmrp-1-desc">上面一条是组播路由的目标：包的目的地是一个组，路由器们要合作把它送到组里的所有成员。第二排三格是最朴素的做法与它的好处：洪泛就是收到包就把它从除入口之外的每个端口转发出去；它能用是因为保证了网络上每台主机都收到、于是也包含了目标组的所有成员；好处是概念上简单、不需要跑任何路由协议。第三排三格是两个主要问题与环路：主要问题一是同样的数据被沿多条路径重复发送、其实只需要走一条，主要问题二是数据被发给了根本不是成员的主机，另外环路会让同一个包在环里被无限转发、靠丢弃见过的包来解决。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="295" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">组播路由的目标、最朴素的做法，以及它的两个主要问题</text>
+  <rect x="25" y="64" width="710" height="30" rx="6" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="380" y="82.5" font-size="10" fill="#1e40af" text-anchor="middle">组播路由的目标：包的目的地是一个组，路由器们要合作把它送到组里的所有成员</text>
+  <rect x="25" y="122" width="220" height="60" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="135" y="148" font-size="10" fill="#1e40af" text-anchor="middle">最朴素的做法：洪泛</text>
+  <text x="135" y="163" font-size="10" fill="#1e40af" text-anchor="middle">收到包就从除入口外的每个端口转发出去</text>
+  <rect x="270" y="122" width="220" height="60" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="140.5" font-size="10" fill="#166534" text-anchor="middle">为什么能用</text>
+  <text x="380" y="155.5" font-size="10" fill="#166534" text-anchor="middle">保证网络上每台主机都收到</text>
+  <text x="380" y="170.5" font-size="10" fill="#166534" text-anchor="middle">于是也包含了目标组的所有成员</text>
+  <rect x="515" y="122" width="220" height="60" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="625" y="140.5" font-size="10" fill="#1e293b" text-anchor="middle">好处</text>
+  <text x="625" y="155.5" font-size="10" fill="#1e293b" text-anchor="middle">概念上简单</text>
+  <text x="625" y="170.5" font-size="10" fill="#1e293b" text-anchor="middle">不需要跑任何路由协议</text>
+  <rect x="25" y="210" width="220" height="60" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="135" y="228.5" font-size="10" fill="#b45309" text-anchor="middle">主要问题一</text>
+  <text x="135" y="243.5" font-size="10" fill="#b45309" text-anchor="middle">同样的数据被沿多条路径重复发送</text>
+  <text x="135" y="258.5" font-size="10" fill="#b45309" text-anchor="middle">其实只需要走一条</text>
+  <rect x="270" y="210" width="220" height="60" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="236" font-size="10" fill="#b45309" text-anchor="middle">主要问题二</text>
+  <text x="380" y="251" font-size="10" fill="#b45309" text-anchor="middle">数据被发给了根本不是成员的主机</text>
+  <rect x="515" y="210" width="220" height="60" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="625" y="228.5" font-size="10" fill="#6b21a8" text-anchor="middle">另外还有环路</text>
+  <text x="625" y="243.5" font-size="10" fill="#6b21a8" text-anchor="middle">同一个包在环里被无限转发</text>
+  <text x="625" y="258.5" font-size="10" fill="#6b21a8" text-anchor="middle">靠丢弃见过的包来解决</text>
+</svg>
