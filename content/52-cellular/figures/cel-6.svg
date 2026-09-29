@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 298" width="760" height="298"
+     role="img" aria-labelledby="fig-cel-6-title fig-cel-6-desc">
+  <title id="fig-cel-6-title">蜂窝核心网：两个数据面网关与两个控制面组件</title>
+  <desc id="fig-cel-6-desc">上面一条说明核心网是什么：每座基站有一条有线连接通到它，而它是后端基础设施、不面向用户。第二排三格是数据面：可以想成普通的路由器与交换机、在用户与网络其余部分之间转发包；无线网关是 RAN 与核心网之间的边界、基站把数据转发给其中一台；分组网关是蜂窝网与互联网之间的边界、数据最终在这里以标准 TCP/IP 包送出。第三排三格是控制面：传统互联网里没有这些组件、用户流量不会到达它们；数据库存客户信息（拥有哪些设备、什么套餐，以及设备现在连在哪座基站上）；移动性管理器是一台控制器、可以想成一颗 CPU，帮我们认证用户并在用户移动时更新配置。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="298" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">蜂窝核心网：两个数据面网关与两个控制面组件</text>
+  <rect x="25" y="64" width="710" height="33" rx="6" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="380" y="84.35" font-size="11" fill="#1e40af" text-anchor="middle">每座基站有一条有线连接通到蜂窝核心网；核心网是后端基础设施，不面向用户</text>
+  <rect x="25" y="125" width="220" height="60" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="135" y="143.5" font-size="10" fill="#1e40af" text-anchor="middle">数据面</text>
+  <text x="135" y="158.5" font-size="10" fill="#1e40af" text-anchor="middle">可以想成普通的路由器与交换机</text>
+  <text x="135" y="173.5" font-size="10" fill="#1e40af" text-anchor="middle">在用户与网络其余部分之间转发包</text>
+  <rect x="270" y="125" width="220" height="60" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="143.5" font-size="10" fill="#166534" text-anchor="middle">无线网关</text>
+  <text x="380" y="158.5" font-size="10" fill="#166534" text-anchor="middle">RAN 与核心网之间的边界</text>
+  <text x="380" y="173.5" font-size="10" fill="#166534" text-anchor="middle">基站把数据转发给其中一台</text>
+  <rect x="515" y="125" width="220" height="60" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="625" y="143.5" font-size="10" fill="#166534" text-anchor="middle">分组网关</text>
+  <text x="625" y="158.5" font-size="10" fill="#166534" text-anchor="middle">蜂窝网与互联网之间的边界</text>
+  <text x="625" y="173.5" font-size="10" fill="#166534" text-anchor="middle">数据最终在这里以标准 TCP/IP 包送出</text>
+  <rect x="25" y="213" width="220" height="60" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="135" y="239" font-size="10" fill="#b45309" text-anchor="middle">控制面：传统互联网里没有</text>
+  <text x="135" y="254" font-size="10" fill="#b45309" text-anchor="middle">用户流量不会到达这些组件</text>
+  <rect x="270" y="213" width="220" height="60" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380" y="231.5" font-size="10" fill="#6b21a8" text-anchor="middle">数据库</text>
+  <text x="380" y="246.5" font-size="10" fill="#6b21a8" text-anchor="middle">存客户信息：拥有哪些设备、什么套餐</text>
+  <text x="380" y="261.5" font-size="10" fill="#6b21a8" text-anchor="middle">以及设备现在连在哪座基站上</text>
+  <rect x="515" y="213" width="220" height="60" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="625" y="231.5" font-size="10" fill="#6b21a8" text-anchor="middle">移动性管理器</text>
+  <text x="625" y="246.5" font-size="10" fill="#6b21a8" text-anchor="middle">一台控制器，可以想成一颗 CPU</text>
+  <text x="625" y="261.5" font-size="10" fill="#6b21a8" text-anchor="middle">帮我们认证用户、并在用户移动时更新配置</text>
+</svg>

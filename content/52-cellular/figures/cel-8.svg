@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 302.5" width="760" height="302.5"
+     role="img" aria-labelledby="fig-cel-8-title fig-cel-8-desc">
+  <title id="fig-cel-8-title">三个标识各是什么：IMSI 跟订阅走，IMEI 跟设备走，电话号码又是另一样</title>
+  <desc id="fig-cel-8-desc">上面一条说明这张图比较的是三个标识。第一排三格是 IMSI 及其结构，以及它与 IP 地址的不同：IMSI 是国际移动用户识别码、与这次订阅绑定、存在 SIM 卡的硬件里；它的结构是前 3 位国家码、接着 2 到 3 位网络码、剩下的是用户识别号，整个不超过 15 位；它与 IP 地址不同，因为办一年套餐就一年用同一个 IMSI，而每次附着都可能拿到不同的 IP。第二排三格是 IMEI、电话号码与三者的关系：IMEI 是国际移动设备识别码、标识一台物理设备、编码厂商与型号且换套餐也不变；电话号码与 IMSI 或 IMEI 都不同、数字代表别的东西例如区号；而三者的关系是，一个套餐下两台手机会有两个 IMEI 但只有一个 IMSI，网络要把号码与某个 IMSI 关联起来才能确定套餐。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="302.5" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">三个标识各是什么：IMSI 跟订阅走，IMEI 跟设备走，电话号码又是另一样</text>
+  <rect x="25" y="64" width="710" height="30" rx="6" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="380" y="82.5" font-size="10" fill="#1e40af" text-anchor="middle">三个标识各是什么：IMSI 跟订阅走，IMEI 跟设备走，电话号码又是另一样</text>
+  <rect x="25" y="122" width="220" height="67.5" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="135" y="144.25" font-size="10" fill="#1e40af" text-anchor="middle">IMSI</text>
+  <text x="135" y="159.25" font-size="10" fill="#1e40af" text-anchor="middle">国际移动用户识别码，与这次订阅绑定</text>
+  <text x="135" y="174.25" font-size="10" fill="#1e40af" text-anchor="middle">存在 SIM 卡的硬件里</text>
+  <rect x="270" y="122" width="220" height="67.5" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="138.65" font-size="9" fill="#1e40af" text-anchor="middle">它的结构</text>
+  <text x="380" y="152.15" font-size="9" fill="#1e40af" text-anchor="middle">前 3 位是国家码</text>
+  <text x="380" y="165.65" font-size="9" fill="#1e40af" text-anchor="middle">接着 2 到 3 位是网络码，剩下是用户识别号</text>
+  <text x="380" y="179.15" font-size="9" fill="#1e40af" text-anchor="middle">整个不超过 15 位</text>
+  <rect x="515" y="122" width="220" height="67.5" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="625" y="145.4" font-size="9" fill="#b45309" text-anchor="middle">它与 IP 地址不同</text>
+  <text x="625" y="158.9" font-size="9" fill="#b45309" text-anchor="middle">办一年套餐就一年用同一个 IMSI</text>
+  <text x="625" y="172.4" font-size="9" fill="#b45309" text-anchor="middle">但每次附着都可能拿到不同的 IP</text>
+  <rect x="25" y="217.5" width="220" height="60" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="135" y="236" font-size="10" fill="#166534" text-anchor="middle">IMEI</text>
+  <text x="135" y="251" font-size="10" fill="#166534" text-anchor="middle">国际移动设备识别码，标识一台物理设备</text>
+  <text x="135" y="266" font-size="10" fill="#166534" text-anchor="middle">编码了厂商与型号，换套餐也不变</text>
+  <rect x="270" y="217.5" width="220" height="60" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="236" font-size="10" fill="#166534" text-anchor="middle">电话号码</text>
+  <text x="380" y="251" font-size="10" fill="#166534" text-anchor="middle">与 IMSI 或 IMEI 都不同</text>
+  <text x="380" y="266" font-size="10" fill="#166534" text-anchor="middle">数字代表别的东西，例如区号</text>
+  <rect x="515" y="217.5" width="220" height="60" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="625" y="237.15" font-size="9" fill="#6b21a8" text-anchor="middle">三者的关系</text>
+  <text x="625" y="250.65" font-size="9" fill="#6b21a8" text-anchor="middle">一个套餐下两台手机：两个 IMEI、一个 IMSI</text>
+  <text x="625" y="264.15" font-size="9" fill="#6b21a8" text-anchor="middle">网络要把号码与某个 IMSI 关联起来</text>
+</svg>

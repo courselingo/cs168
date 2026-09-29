@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 298" width="760" height="298"
+     role="img" aria-labelledby="fig-cel-1-title fig-cel-1-desc">
+  <title id="fig-cel-1-title">为什么值得单独讲：移动无线是标准，而传统互联网做不到</title>
+  <desc id="fig-cel-1-desc">上面一条是那件事本身：无线的移动连通已经是现代的标准，手机要能在你坐在行驶中的车里时上网。第二排两格说明传统互联网为什么做不到：你从卧室走到厨房还能上网，那只是因为还在家里那台无线路由器的范围内；而它不提供跨长距离的无缝连接，例如在一辆行驶的车上。第三排三格是量与判断、别的技术与未来的可能：今天超过一半的网页流量来自蜂窝设备、蜂窝是占主导的接入技术；别的技术有卫星与自由空间光通信，但蜂窝仍然占主导；而自动驾驶与虚拟现实这类应用可能把现网撑到贵得离谱，运营商也不以快速创新出名。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="298" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">为什么值得单独讲：移动无线是标准，而传统互联网做不到</text>
+  <rect x="25" y="64" width="710" height="33" rx="6" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="380" y="84.35" font-size="11" fill="#1e40af" text-anchor="middle">无线的移动连通已经是现代的标准：手机要能在你坐在行驶中的车里时上网</text>
+  <rect x="25" y="125" width="342.5" height="60" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="196.25" y="143.5" font-size="10" fill="#b45309" text-anchor="middle">传统互联网做不到</text>
+  <text x="196.25" y="158.5" font-size="10" fill="#b45309" text-anchor="middle">你从卧室走到厨房还能上网</text>
+  <text x="196.25" y="173.5" font-size="10" fill="#b45309" text-anchor="middle">那只是因为还在家里路由器的范围内</text>
+  <rect x="392.5" y="125" width="342.5" height="60" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="563.75" y="143.5" font-size="10" fill="#b45309" text-anchor="middle">它不提供什么</text>
+  <text x="563.75" y="158.5" font-size="10" fill="#b45309" text-anchor="middle">跨长距离的无缝连接</text>
+  <text x="563.75" y="173.5" font-size="10" fill="#b45309" text-anchor="middle">例如在一辆行驶的车上</text>
+  <rect x="25" y="213" width="220" height="60" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="135" y="231.5" font-size="10" fill="#1e40af" text-anchor="middle">量与判断</text>
+  <text x="135" y="246.5" font-size="10" fill="#1e40af" text-anchor="middle">今天超过一半的网页流量来自蜂窝设备</text>
+  <text x="135" y="261.5" font-size="10" fill="#1e40af" text-anchor="middle">蜂窝是占主导的接入技术</text>
+  <rect x="270" y="213" width="220" height="60" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="380" y="231.5" font-size="10" fill="#1e293b" text-anchor="middle">别的技术</text>
+  <text x="380" y="246.5" font-size="10" fill="#1e293b" text-anchor="middle">卫星、自由空间光通信</text>
+  <text x="380" y="261.5" font-size="10" fill="#1e293b" text-anchor="middle">蜂窝仍然占主导</text>
+  <rect x="515" y="213" width="220" height="60" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="625" y="231.5" font-size="10" fill="#6b21a8" text-anchor="middle">未来的可能</text>
+  <text x="625" y="246.5" font-size="10" fill="#6b21a8" text-anchor="middle">自动驾驶与虚拟现实这类应用</text>
+  <text x="625" y="261.5" font-size="10" fill="#6b21a8" text-anchor="middle">可能把现网撑到贵得离谱</text>
+</svg>

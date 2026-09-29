@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 231" width="760" height="231"
+     role="img" aria-labelledby="fig-cel-9-title fig-cel-9-desc">
+  <title id="fig-cel-9-title">移动带来的四个基本挑战</title>
+  <desc id="fig-cel-9-desc">四格分别是蜂窝要解决的四件事：发现（我一边移动，一边怎么知道该连哪一座基站）、认证（AT&amp;T 的基站可能只愿意给自己人提供连接）、无缝通信（我从一座基站的范围移出、进入另一座时，连接不能中断）、计费与追责（运营商怎么知道该向谁收钱，以及出了事该找谁）。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="231" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">移动带来的四个基本挑战</text>
+
+  <rect x="25" y="64" width="342.5" height="60" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="196.25" y="82.5" font-size="10" fill="#1e40af" text-anchor="middle">发现</text>
+  <text x="196.25" y="97.5" font-size="10" fill="#1e40af" text-anchor="middle">我一边移动</text>
+  <text x="196.25" y="112.5" font-size="10" fill="#1e40af" text-anchor="middle">一边怎么知道该连哪一座基站</text>
+
+  <rect x="392.5" y="64" width="342.5" height="60" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="563.75" y="82.5" font-size="10" fill="#b45309" text-anchor="middle">认证</text>
+  <text x="563.75" y="97.5" font-size="10" fill="#b45309" text-anchor="middle">某家运营商的基站</text>
+  <text x="563.75" y="112.5" font-size="10" fill="#b45309" text-anchor="middle">可能只愿意给自己人提供连接</text>
+
+  <rect x="25" y="149" width="342.5" height="60" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="196.25" y="167.5" font-size="10" fill="#166534" text-anchor="middle">无缝通信</text>
+  <text x="196.25" y="182.5" font-size="10" fill="#166534" text-anchor="middle">我从一座基站的范围移出</text>
+  <text x="196.25" y="197.5" font-size="10" fill="#166534" text-anchor="middle">进入另一座时，连接不能中断</text>
+
+  <rect x="392.5" y="149" width="342.5" height="60" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="563.75" y="167.5" font-size="10" fill="#6b21a8" text-anchor="middle">计费与追责</text>
+  <text x="563.75" y="182.5" font-size="10" fill="#6b21a8" text-anchor="middle">运营商怎么知道该向谁收钱</text>
+  <text x="563.75" y="197.5" font-size="10" fill="#6b21a8" text-anchor="middle">以及出了事该找谁</text>
+</svg>

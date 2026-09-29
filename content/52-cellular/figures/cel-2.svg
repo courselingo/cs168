@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 353" width="760" height="353"
+     role="img" aria-labelledby="fig-cel-2-title fig-cel-2-desc">
+  <title id="fig-cel-2-title">从电话网派生出来的三处不同，以及今天的定位</title>
+  <desc id="fig-cel-2-desc">上排两格是来历与第一台手机：根在老电话系统、最初是为了无线打电话而不是有线座机；第一台手机在 1983 年卖出、价格 4000 美元，按通胀算今天更贵。中间一条是那条最重要的历史线索：蜂窝是从电话网派生的、不是从互联网派生的，很多年里两者并行发展。第二排三格是三处不同：蜂窝用资源预留而互联网用分组交换；蜂窝常按单个用户思考而互联网大多按流或包思考；蜂窝按分钟计费而互联网一般不那么追踪用量。最下面一条是今天的定位：可以看成一个专门的第二层本地网络，负责与 TCP/IP 互联网打交道。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="353" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">从电话网派生出来的三处不同，以及今天的定位</text>
+  <rect x="25" y="64" width="342.5" height="60" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="196.25" y="82.5" font-size="10" fill="#1e40af" text-anchor="middle">来历</text>
+  <text x="196.25" y="97.5" font-size="10" fill="#1e40af" text-anchor="middle">根在老电话系统</text>
+  <text x="196.25" y="112.5" font-size="10" fill="#1e40af" text-anchor="middle">最初是为了无线打电话，而不是有线座机</text>
+  <rect x="392.5" y="64" width="342.5" height="60" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="563.75" y="82.5" font-size="10" fill="#1e40af" text-anchor="middle">第一台手机</text>
+  <text x="563.75" y="97.5" font-size="10" fill="#1e40af" text-anchor="middle">1983 年卖出</text>
+  <text x="563.75" y="112.5" font-size="10" fill="#1e40af" text-anchor="middle">价格 4000 美元（按通胀算今天更贵）</text>
+  <rect x="25" y="152" width="710" height="30" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380" y="170.5" font-size="10" fill="#6b21a8" text-anchor="middle">最重要的一条历史线索：蜂窝是从电话网派生的，不是从互联网派生的；很多年里两者并行发展</text>
+  <rect x="25" y="210" width="220" height="60" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="135" y="228.5" font-size="10" fill="#b45309" text-anchor="middle">不同一</text>
+  <text x="135" y="243.5" font-size="10" fill="#b45309" text-anchor="middle">蜂窝用资源预留</text>
+  <text x="135" y="258.5" font-size="10" fill="#b45309" text-anchor="middle">互联网用分组交换</text>
+  <rect x="270" y="210" width="220" height="60" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="228.5" font-size="10" fill="#b45309" text-anchor="middle">不同二</text>
+  <text x="380" y="243.5" font-size="10" fill="#b45309" text-anchor="middle">蜂窝常按单个用户思考</text>
+  <text x="380" y="258.5" font-size="10" fill="#b45309" text-anchor="middle">互联网大多按流或包思考</text>
+  <rect x="515" y="210" width="220" height="60" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="625" y="228.5" font-size="10" fill="#b45309" text-anchor="middle">不同三</text>
+  <text x="625" y="243.5" font-size="10" fill="#b45309" text-anchor="middle">蜂窝按分钟计费</text>
+  <text x="625" y="258.5" font-size="10" fill="#b45309" text-anchor="middle">互联网一般不那么追踪用量</text>
+  <rect x="25" y="298" width="710" height="30" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="316.5" font-size="10" fill="#166534" text-anchor="middle">今天的定位：可以看成一个专门的第二层本地网络，负责与 TCP/IP 互联网打交道</text>
+</svg>

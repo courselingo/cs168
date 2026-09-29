@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 350" width="760" height="350"
+     role="img" aria-labelledby="fig-cel-3-title fig-cel-3-desc">
+  <title id="fig-cel-3-title">标准与代际：谁来定标准，以及每一代改了什么</title>
+  <desc id="fig-cel-3-desc">第一排三格是标准的政治复杂度与两个机构：为了互通，所有厂商都要一致到物理层；3GPP 是关键的标准组织、设备厂商与电信公司都参与、由它提出标准；标准提交给 ITU，而 ITU 属于联合国、每个国家一票。第二条是代际的节奏：每 10 年引入一代新技术，5G 在 2020 年前后定义，6G 的规划会在 2020 年代后期开始。第二排两格是每一代改了什么：在多个维度上改进（峰值理论数据率、用户平均数据率、移动性、连接密度），通常好大约 10 倍；架构也从电话网的设计走向互联网的设计（1G 纯模拟，2G 与 3G 主要电路交换，从 4G 起分组交换）。最下面一条是那件必须知道的事：规范几千页、几百份文档、几乎没人完整读，而每换一代就改名，例如基站叫过 base station、nodeB、eNodeB、gNB，指的都是同一个东西。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="350" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">标准与代际：谁来定标准，以及每一代改了什么</text>
+  <rect x="25" y="64" width="220" height="60" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="135" y="90" font-size="10" fill="#b45309" text-anchor="middle">标准组织更政治</text>
+  <text x="135" y="105" font-size="10" fill="#b45309" text-anchor="middle">为了互通，所有厂商都要一致到物理层</text>
+  <rect x="270" y="64" width="220" height="60" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="82.5" font-size="10" fill="#1e40af" text-anchor="middle">3GPP</text>
+  <text x="380" y="97.5" font-size="10" fill="#1e40af" text-anchor="middle">关键的标准组织，设备厂商与电信公司都参与</text>
+  <text x="380" y="112.5" font-size="10" fill="#1e40af" text-anchor="middle">它提出标准</text>
+  <rect x="515" y="64" width="220" height="60" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="625" y="82.5" font-size="10" fill="#1e40af" text-anchor="middle">ITU</text>
+  <text x="625" y="97.5" font-size="10" fill="#1e40af" text-anchor="middle">标准提交给它；它属于联合国</text>
+  <text x="625" y="112.5" font-size="10" fill="#1e40af" text-anchor="middle">每个国家一票</text>
+  <rect x="25" y="152" width="710" height="30" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="380" y="170.5" font-size="10" fill="#1e293b" text-anchor="middle">每 10 年引入一代新技术：5G 在 2020 年前后定义，6G 的规划会在 2020 年代后期开始</text>
+  <rect x="25" y="210" width="342.5" height="60" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="196.25" y="228.5" font-size="10" fill="#166534" text-anchor="middle">每一代都在多个维度上改进</text>
+  <text x="196.25" y="243.5" font-size="10" fill="#166534" text-anchor="middle">峰值理论数据率、用户平均数据率</text>
+  <text x="196.25" y="258.5" font-size="10" fill="#166534" text-anchor="middle">移动性、连接密度，通常好大约 10 倍</text>
+  <rect x="392.5" y="210" width="342.5" height="60" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="563.75" y="228.5" font-size="10" fill="#166534" text-anchor="middle">架构也在逐代演化</text>
+  <text x="563.75" y="243.5" font-size="10" fill="#166534" text-anchor="middle">从电话网的设计走向互联网的设计</text>
+  <text x="563.75" y="258.5" font-size="10" fill="#166534" text-anchor="middle">1G 纯模拟；2G 与 3G 主要电路交换；从 4G 起分组交换</text>
+  <rect x="25" y="298" width="710" height="27" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="314.65" font-size="9" fill="#b45309" text-anchor="middle">必须知道的事：规范几千页、几百份文档，几乎没人完整读；每换一代就改名，例如基站叫过 base station、nodeB、eNodeB、gNB，指的都是同一个东西</text>
+</svg>

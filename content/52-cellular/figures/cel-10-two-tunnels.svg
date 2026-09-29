@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 222" width="760" height="222"
+     role="img" aria-labelledby="fig-cel-10-title fig-cel-10-desc">
+  <title id="fig-cel-10-title">隧道有两种做法：绕回归属地，或者在本地疏导</title>
+  <desc id="fig-cel-10-desc">上面一条说明为什么需要隧道：分组还是普通的 IP 分组，转发时只看外层，所以手机走到哪里，都可以把它的流量裹起来送到同一个出口。下面两格是两种做法：归属路由（把分组一路送回它登记的归属网络，再从那里出去，路径更长但状态简单）、本地疏导（就近从当前所在地的网关出去，路径更短，但要在中途改一次隧道的终点）。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="222" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">隧道有两种做法：绕回归属地，或者在本地疏导</text>
+
+  <rect x="25" y="64" width="710" height="33" rx="6" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="380" y="84.35" font-size="11" fill="#1e40af" text-anchor="middle">手机走到哪里，都把它的流量裹起来送到同一个出口</text>
+
+  <rect x="25" y="125" width="342.5" height="75" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="196.25" y="143.5" font-size="10" fill="#1e40af" text-anchor="middle">归属路由</text>
+  <text x="196.25" y="158.5" font-size="10" fill="#1e40af" text-anchor="middle">一路送回登记的归属网络</text>
+  <text x="196.25" y="173.5" font-size="10" fill="#1e40af" text-anchor="middle">再从那里出去</text>
+  <text x="196.25" y="188.5" font-size="10" fill="#1e40af" text-anchor="middle">路径更长，状态简单</text>
+
+  <rect x="392.5" y="125" width="342.5" height="75" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="563.75" y="143.5" font-size="10" fill="#166534" text-anchor="middle">本地疏导</text>
+  <text x="563.75" y="158.5" font-size="10" fill="#166534" text-anchor="middle">就近从当前所在地的网关出去</text>
+  <text x="563.75" y="173.5" font-size="10" fill="#166534" text-anchor="middle">路径更短</text>
+  <text x="563.75" y="188.5" font-size="10" fill="#166534" text-anchor="middle">但要在中途改一次隧道的终点</text>
+</svg>

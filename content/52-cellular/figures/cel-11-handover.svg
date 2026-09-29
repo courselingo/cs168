@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 240" width="760" height="240"
+     role="img" aria-labelledby="fig-cel-11-title fig-cel-11-desc">
+  <title id="fig-cel-11-title">切换为什么要分这么多步</title>
+  <desc id="fig-cel-11-desc">三格说明切换的难处：旧基站缓存的那些分组必须先转交给新基站，否则它们会丢；手机要和新基站重新确认一次，而这一步不能太久，否则通话会断；而如果手机在服务区边缘来回试探，就可能在新旧两座基站之间反复横跳。上面一条是量级：切换本身只要 0.01 到 0.1 秒，而发现一座新基站可能要 10 到 100 秒，两者差三个量级。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="240" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">切换为什么要分这么多步</text>
+
+  <rect x="25" y="64" width="710" height="33" rx="6" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="380" y="84.35" font-size="11" fill="#1e40af" text-anchor="middle">切换本身只要 0.01 到 0.1 秒，而发现一座新基站要 10 到 100 秒</text>
+
+  <rect x="25" y="125" width="220" height="90" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="135" y="158.5" font-size="10" fill="#1e40af" text-anchor="middle">旧基站缓存的分组</text>
+  <text x="135" y="173.5" font-size="10" fill="#1e40af" text-anchor="middle">必须先转交给新基站</text>
+  <text x="135" y="188.5" font-size="10" fill="#1e40af" text-anchor="middle">否则它们会丢</text>
+
+  <rect x="270" y="125" width="220" height="90" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="151" font-size="10" fill="#b45309" text-anchor="middle">手机要和新基站</text>
+  <text x="380" y="166" font-size="10" fill="#b45309" text-anchor="middle">重新确认一次</text>
+  <text x="380" y="181" font-size="10" fill="#b45309" text-anchor="middle">这一步不能太久</text>
+  <text x="380" y="196" font-size="10" fill="#b45309" text-anchor="middle">否则通话会断</text>
+
+  <rect x="515" y="125" width="220" height="90" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="625" y="158.5" font-size="10" fill="#9d174d" text-anchor="middle">在服务区边缘来回试探</text>
+  <text x="625" y="173.5" font-size="10" fill="#9d174d" text-anchor="middle">就可能在新旧两座基站</text>
+  <text x="625" y="188.5" font-size="10" fill="#9d174d" text-anchor="middle">之间反复横跳</text>
+</svg>

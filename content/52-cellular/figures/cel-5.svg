@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 384" width="760" height="384"
+     role="img" aria-labelledby="fig-cel-5-title fig-cel-5-desc">
+  <title id="fig-cel-5-title">基站这一侧：控制器调度频率与时间，相邻基站用不同频率</title>
+  <desc id="fig-cel-5-desc">上排三格是基站里的三样东西：天线在塔上收发；无线收发机把数字比特转换成模拟信号、通过空中接口发送；无线控制器可以想成一颗跑调度器的 CPU，按需求与生意模型分配频率与时间。第二条是简化的调度模型：每个彩色矩形表示某用户可以在那个频率、那个时间发送；竖直截面是一个时间槽（第一个时间槽里蓝 3、橙 5、灰 4 个频率槽），水平截面是一个频率（最上面那行先后分给灰、绿、蓝、红）。第三条说明这个模型用预留共享资源、而不是尽力而为，并提到控制器如今有搬到云上的做法。最下面一条是往外看：每个运营商在全国铺很多基站形成无线接入网；每座基站自己一组频率，相邻基站用不重叠的频率以免干扰；频率还按需求分配。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="384" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">基站这一侧：控制器调度频率与时间，相邻基站用不同频率</text>
+  <rect x="25" y="64" width="220" height="66" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="135" y="92.6" font-size="11" fill="#1e40af" text-anchor="middle">天线</text>
+  <text x="135" y="109.1" font-size="11" fill="#1e40af" text-anchor="middle">在塔上收发</text>
+  <rect x="270" y="64" width="220" height="66" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="84.35" font-size="11" fill="#1e40af" text-anchor="middle">无线收发机</text>
+  <text x="380" y="100.85" font-size="11" fill="#1e40af" text-anchor="middle">把数字比特转换成模拟信号</text>
+  <text x="380" y="117.35" font-size="11" fill="#1e40af" text-anchor="middle">通过空中接口发送</text>
+  <rect x="515" y="64" width="220" height="66" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="625" y="84.35" font-size="11" fill="#166534" text-anchor="middle">无线控制器</text>
+  <text x="625" y="100.85" font-size="11" fill="#166534" text-anchor="middle">想成一颗跑调度器的 CPU</text>
+  <text x="625" y="117.35" font-size="11" fill="#166534" text-anchor="middle">按需求与生意模型分配频率与时间</text>
+  <rect x="25" y="158" width="710" height="30" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="380" y="176.5" font-size="10" fill="#1e293b" text-anchor="middle">简化的调度模型：每个彩色矩形表示某用户可以在那个频率、那个时间发送</text>
+  <rect x="25" y="216" width="710" height="27" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="380" y="232.65" font-size="9" fill="#1e293b" text-anchor="middle">竖直截面是一个时间槽（第一个时间槽里蓝 3、橙 5、灰 4 个频率槽）；水平截面是一个频率（最上面那行先后分给灰、绿、蓝、红）</text>
+  <rect x="25" y="271" width="710" height="30" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380" y="289.5" font-size="10" fill="#6b21a8" text-anchor="middle">这个模型用预留共享资源，而不是尽力而为：用户只能在自己被分配到的频率与时间里发送；控制器如今有搬到云上的做法</text>
+  <rect x="25" y="329" width="710" height="30" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="347.5" font-size="10" fill="#1e40af" text-anchor="middle">往外看：每个运营商在全国铺很多基站，形成无线接入网；每座基站自己一组频率，相邻基站用不重叠的频率以免干扰；频率还按需求分配</text>
+</svg>
