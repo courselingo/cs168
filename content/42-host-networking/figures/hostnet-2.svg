@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 223" width="760" height="223"
+     role="img" aria-labelledby="fig-hostnet-2-title fig-hostnet-2-desc">
+  <title id="fig-hostnet-2-title">把网络栈从内核态搬进用户态：三、四、七层共享一段地址空间</title>
+  <desc id="fig-hostnet-2-desc">左栏是搬之前：第一层与第二层在网卡硬件里，第三层与第四层在操作系统里的内核态，第七层应用在用户态，两者之间要不断来回拷贝数据，而且在内核里改协议既难部署也难测试。右栏是搬之后：第三、四、七层都在用户态，共用同一段地址空间，不再需要来回拷贝，迭代与创新也容易得多。教材同时指出，仅靠这一步还不够。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="223" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">把网络栈搬进用户态</text>
+
+  <rect x="22" y="76" width="344" height="90" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="194" y="98" font-size="12" fill="#9d174d" text-anchor="middle">搬之前</text>
+  <text x="194" y="116" font-size="12" fill="#9d174d" text-anchor="middle">三、四层在内核态，七层在用户态</text>
+  <text x="194" y="134" font-size="12" fill="#9d174d" text-anchor="middle">数据来回拷贝，拷贝既贵又没必要</text>
+  <text x="194" y="152" font-size="12" fill="#9d174d" text-anchor="middle">在内核里改协议难且慢</text>
+
+  <rect x="394" y="76" width="344" height="90" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="566" y="98" font-size="12" fill="#166534" text-anchor="middle">搬之后</text>
+  <text x="566" y="116" font-size="12" fill="#166534" text-anchor="middle">三、四、七层都在用户态</text>
+  <text x="566" y="134" font-size="12" fill="#166534" text-anchor="middle">共享同一段地址空间，不再拷贝</text>
+  <text x="566" y="152" font-size="12" fill="#166534" text-anchor="middle">迭代与创新更容易</text>
+
+  <text x="380" y="198" font-size="10" fill="#64748b" text-anchor="middle">消掉多余工作还不够让主机满足现代性能要求，于是有了第二条路线</text>
+</svg>

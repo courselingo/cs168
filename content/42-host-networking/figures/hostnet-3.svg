@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 205" width="760" height="205"
+     role="img" aria-labelledby="fig-hostnet-3-title fig-hostnet-3-desc">
+  <title id="fig-hostnet-3-title">卸载到网卡：分组本来就要过网卡，顺手多做一点就能省下 CPU</title>
+  <desc id="fig-hostnet-3-desc">左栏是卸载之前：网络协议跑在 CPU 上，占用大量 CPU 资源，留给应用的变少，而且 CPU 也跑不到现代性能。右栏是卸载之后：把网络栈的工作交给网卡硬件，因为每个分组都必须经过网卡，它可以顺手多做处理。三条好处是让出 CPU 资源、专用硬件更高效（速度与功耗）、延迟更低且更可预测——软件里 CPU 要调度进程，会引入不可预测的延迟。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="205" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">卸载到网卡</text>
+
+  <rect x="22" y="76" width="344" height="72" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="194" y="98" font-size="12" fill="#9d174d" text-anchor="middle">协议跑在 CPU 上</text>
+  <text x="194" y="116" font-size="12" fill="#9d174d" text-anchor="middle">占掉本该给应用的资源</text>
+  <text x="194" y="134" font-size="12" fill="#9d174d" text-anchor="middle">而且跑不到现代性能</text>
+
+  <rect x="394" y="76" width="344" height="72" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="566" y="98" font-size="12" fill="#166534" text-anchor="middle">交给网卡硬件</text>
+  <text x="566" y="116" font-size="12" fill="#166534" text-anchor="middle">每个分组本来就要过网卡</text>
+  <text x="566" y="134" font-size="12" fill="#166534" text-anchor="middle">延迟更低、也更可预测</text>
+
+  <text x="380" y="180" font-size="10" fill="#64748b" text-anchor="middle">软件里 CPU 要调度进程，这正是延迟不可预测的来源</text>
+</svg>

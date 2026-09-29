@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 187" width="760" height="187"
+     role="img" aria-labelledby="fig-hostnet-8-title fig-hostnet-8-desc">
+  <title id="fig-hostnet-8-title">一次 RDMA 发送：两端建队列、各排一个 WQE、网卡搬运、完成后各生成 CQE</title>
+  <desc id="fig-hostnet-8-desc">箭头依次向右四步：两端各自建好发送、接收与完成队列，这一步可以带外完成，也就是用传统协议来协调；发送端在发送队列里放一个指向文件的 WQE，接收端在接收队列里放一个指向空白缓冲区的 WQE；两端都排好队之后，网卡完成搬运，全程没有软件参与，可靠性与拥塞控制也由网卡包办；传输完成后 WQE 出队，两块网卡各生成一个 CQE 说明结果。最后一步是应用在方便的时候读 CQE。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="187" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">一次 RDMA 发送的五步</text>
+
+  <rect x="22" y="76" width="160" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="102" y="98" font-size="12" fill="#1e40af" text-anchor="middle">建队列</text>
+  <text x="102" y="116" font-size="12" fill="#1e40af" text-anchor="middle">可以带外完成</text>
+
+  <rect x="207" y="76" width="160" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="287" y="98" font-size="12" fill="#1e40af" text-anchor="middle">各排一个 WQE</text>
+  <text x="287" y="116" font-size="12" fill="#1e40af" text-anchor="middle">指向文件与缓冲区</text>
+
+  <rect x="392" y="76" width="160" height="54" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="472" y="98" font-size="12" fill="#b45309" text-anchor="middle">网卡搬运</text>
+  <text x="472" y="116" font-size="12" fill="#b45309" text-anchor="middle">全程没有软件参与</text>
+
+  <rect x="577" y="76" width="160" height="54" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="657" y="98" font-size="12" fill="#166534" text-anchor="middle">各生成 CQE</text>
+  <text x="657" y="116" font-size="12" fill="#166534" text-anchor="middle">说明成功或失败</text>
+
+  <path d="M187,103 L 196,103" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+  <path d="M372,103 L 381,103" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+  <path d="M557,103 L 566,103" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+
+  <text x="380" y="162" font-size="10" fill="#64748b" text-anchor="middle">最后一步：应用在方便的时候读 CQE，弄清这次传输怎么样了</text>
+</svg>

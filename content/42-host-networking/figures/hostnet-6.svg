@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 211" width="760" height="211"
+     role="img" aria-labelledby="fig-hostnet-6-title fig-hostnet-6-desc">
+  <title id="fig-hostnet-6-title">Epoch 2 与 3：带状态的操作靠匹配-动作表，整段协议交给了新设计的 RDMA</title>
+  <desc id="fig-hostnet-6-desc">左栏是 Epoch 2：卸的是带状态的复杂操作，驱动力是虚拟化——虚拟交换机把分组转给对应虚拟机，防火墙要检查安全策略，带宽管理要限制每个用户的发送量；实现靠匹配-动作对表，与 SDN 里的 OpenFlow 表很像，匹配五元组或其他首部字段，动作可以是丢弃、转发到某个下一跳或修改首部。右栏是 Epoch 3：想把整段协议卸到网卡，但把标准 TCP 卸上卡没有大规模落地，真正落地的是为硬件新设计的协议，也就是 RDMA。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="211" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">Epoch 2 与 Epoch 3</text>
+
+  <rect x="22" y="66" width="344" height="90" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="194" y="88" font-size="12" fill="#1e40af" text-anchor="middle">Epoch 2：带状态操作</text>
+  <text x="194" y="106" font-size="12" fill="#1e40af" text-anchor="middle">虚拟化驱动：虚拟交换机</text>
+  <text x="194" y="124" font-size="12" fill="#1e40af" text-anchor="middle">防火墙与带宽管理</text>
+  <text x="194" y="142" font-size="12" fill="#1e40af" text-anchor="middle">靠匹配-动作对表实现</text>
+
+  <rect x="394" y="66" width="344" height="90" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="566" y="88" font-size="12" fill="#166534" text-anchor="middle">Epoch 3：整段协议</text>
+  <text x="566" y="106" font-size="12" fill="#166534" text-anchor="middle">把 TCP 整段卸上卡</text>
+  <text x="566" y="124" font-size="12" fill="#166534" text-anchor="middle">实验过、没有大规模落地</text>
+  <text x="566" y="142" font-size="12" fill="#166534" text-anchor="middle">落地的是为硬件新设计的协议</text>
+
+  <text x="380" y="186" font-size="10" fill="#64748b" text-anchor="middle">匹配-动作表让软件把策略编程到硬件上，硬件按策略处理分组</text>
+</svg>

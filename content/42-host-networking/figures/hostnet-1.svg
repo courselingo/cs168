@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 205" width="760" height="205"
+     role="img" aria-labelledby="fig-hostnet-1-title fig-hostnet-1-desc">
+  <title id="fig-hostnet-1-title">主机侧网络的两条优化路线</title>
+  <desc id="fig-hostnet-1-desc">三行自上而下：前面几讲都在网络内部做优化，而这一讲把着力点换到端主机上；主机侧网络的第一条路线是共享内存，也就是把网络栈搬进用户态，消掉内核态与用户态之间的来回拷贝；第二条路线是卸载，把网络栈的工作从 CPU 交给网卡。教材用一张分类图把这两条路线并列，而它们是一层比一层更深的递进关系。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="205" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">主机侧网络：两条优化路线</text>
+
+  <rect x="22" y="76" width="716" height="72" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="98" font-size="12" fill="#1e40af" text-anchor="middle">前面几讲：在网络内部优化</text>
+  <text x="380" y="116" font-size="12" fill="#1e40af" text-anchor="middle">这一讲：在端主机上优化</text>
+  <text x="380" y="134" font-size="12" fill="#1e40af" text-anchor="middle">两条路线：共享内存（搬进用户态）与卸载（交给网卡）</text>
+
+  <text x="380" y="180" font-size="10" fill="#64748b" text-anchor="middle">两条路线不是并列的选择，而是一层比一层更深的递进</text>
+</svg>

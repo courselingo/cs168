@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 211" width="760" height="211"
+     role="img" aria-labelledby="fig-hostnet-5-title fig-hostnet-5-desc">
+  <title id="fig-hostnet-5-title">Epoch 1：校验和、分段、多队列，都能逐分组独立完成</title>
+  <desc id="fig-hostnet-5-desc">三格并排：校验和计算可以交给网卡，进站验证、出站计算，第三层与第四层也算在内；分段可以交给网卡切开与重组，操作系统因此面对少量大分组而不是一堆小分组，代价是分组越大连接越突发、越小越平滑；多队列支持让网卡为每个 CPU 维护自己的收发队列，但要靠一个分组调度器决定下一个发哪个队列，而且同一条流的分组必须进同一个队列，否则无法保证按序。进站时网卡按哈希决定交给哪个 CPU，做法与 ECMP 相似。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="211" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">Epoch 1：无状态操作上卡</text>
+
+  <rect x="22" y="66" width="222" height="90" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="133" y="88" font-size="12" fill="#1e40af" text-anchor="middle">校验和</text>
+  <text x="133" y="106" font-size="12" fill="#1e40af" text-anchor="middle">进站验证</text>
+  <text x="133" y="124" font-size="12" fill="#1e40af" text-anchor="middle">出站计算</text>
+  <text x="133" y="142" font-size="12" fill="#1e40af" text-anchor="middle">二、三、四层都算</text>
+
+  <rect x="269" y="66" width="222" height="90" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="88" font-size="12" fill="#b45309" text-anchor="middle">分段</text>
+  <text x="380" y="106" font-size="12" fill="#b45309" text-anchor="middle">网卡切开与重组</text>
+  <text x="380" y="124" font-size="12" fill="#b45309" text-anchor="middle">系统只面对少量大分组</text>
+  <text x="380" y="142" font-size="12" fill="#b45309" text-anchor="middle">越大越突发、越小越平滑</text>
+
+  <rect x="516" y="66" width="222" height="90" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="627" y="88" font-size="12" fill="#166534" text-anchor="middle">多队列</text>
+  <text x="627" y="106" font-size="12" fill="#166534" text-anchor="middle">每 CPU 各一套收发队列</text>
+  <text x="627" y="124" font-size="12" fill="#166534" text-anchor="middle">同一条流进同一个队列</text>
+  <text x="627" y="142" font-size="12" fill="#166534" text-anchor="middle">进站按哈希分给 CPU</text>
+
+  <text x="380" y="186" font-size="10" fill="#64748b" text-anchor="middle">队列再多，网卡最终只沿一根线发出，所以要一个分组调度器</text>
+</svg>

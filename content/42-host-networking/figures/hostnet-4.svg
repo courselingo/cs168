@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 205" width="760" height="205"
+     role="img" aria-labelledby="fig-hostnet-4-title fig-hostnet-4-desc">
+  <title id="fig-hostnet-4-title">Epoch 0：网卡只当门垫，剩下的靠中断交给 CPU</title>
+  <desc id="fig-hostnet-4-desc">三格并排：进来的分组由收发器把电信号转成比特放进缓冲区，网卡解析以太网帧、验证校验和、剥掉第二层首部，最后产生一个中断让 CPU 停下手上的事来取走第三层分组；出去的分组由驱动放进缓冲区，网卡组装成以太网帧再交给收发器转成电信号；整体上网卡像一块门垫，只做极少量处理。后面几个纪元讲的都是这块门垫开始自己干活。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="205" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">Epoch 0：门垫阶段</text>
+
+  <rect x="22" y="76" width="222" height="72" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="133" y="98" font-size="12" fill="#1e40af" text-anchor="middle">进来的分组</text>
+  <text x="133" y="116" font-size="12" fill="#1e40af" text-anchor="middle">信号转比特、解析帧</text>
+  <text x="133" y="134" font-size="12" fill="#1e40af" text-anchor="middle">剥掉二层首部</text>
+
+  <rect x="269" y="76" width="222" height="72" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="98" font-size="12" fill="#b45309" text-anchor="middle">中断 CPU</text>
+  <text x="380" y="116" font-size="12" fill="#b45309" text-anchor="middle">让 CPU 停下手上的事</text>
+  <text x="380" y="134" font-size="12" fill="#b45309" text-anchor="middle">来取走三层分组</text>
+
+  <rect x="516" y="76" width="222" height="72" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="627" y="98" font-size="12" fill="#166534" text-anchor="middle">出去的分组</text>
+  <text x="627" y="116" font-size="12" fill="#166534" text-anchor="middle">驱动放进缓冲区</text>
+  <text x="627" y="134" font-size="12" fill="#166534" text-anchor="middle">网卡组装成帧发出</text>
+
+  <text x="380" y="180" font-size="10" fill="#64748b" text-anchor="middle">把网卡想成一块门垫：递进递出，却几乎不处理</text>
+</svg>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 187" width="760" height="187"
+     role="img" aria-labelledby="fig-hostnet-9-title fig-hostnet-9-desc">
+  <title id="fig-hostnet-9-title">RDMA 的两条实现路线：把可靠性做进网络，或做进网卡</title>
+  <desc id="fig-hostnet-9-desc">左栏是把功能实现在网络里：可靠性与拥塞控制等由网络侧负责，比如把可靠性做在交换机上，这是 Nvidia 的 InfiniBand 的思路。右栏是实现在网卡里：把这些功能藏在队列对抽象之下的网卡里，这是 Google 目前在做的事。两条路线下，软件侧的应用与操作系统都通过队列对得到可靠有序投递的假象，区别只在于这份保证实际由谁实现。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="187" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">RDMA 怎么实现</text>
+
+  <rect x="22" y="76" width="344" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="194" y="98" font-size="12" fill="#1e40af" text-anchor="middle">实现在网络里</text>
+  <text x="194" y="116" font-size="12" fill="#1e40af" text-anchor="middle">可靠性做在交换机上：InfiniBand</text>
+
+  <rect x="394" y="76" width="344" height="54" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="566" y="98" font-size="12" fill="#166534" text-anchor="middle">实现在网卡里</text>
+  <text x="566" y="116" font-size="12" fill="#166534" text-anchor="middle">藏在队列对之下：Google 的路线</text>
+
+  <text x="380" y="162" font-size="10" fill="#64748b" text-anchor="middle">两条路线下，软件看到的都是队列对给出的可靠、有序投递</text>
+</svg>
