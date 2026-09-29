@@ -264,3 +264,147 @@ notes = "每个 AS 自己定偏好，协议算出的路径要尊重这些偏好�
 en = "valley-free"
 zh = "无山谷"
 notes = "路径先上坡到峰、再一路下坡，不出现「先下坡又掉头走上坡」的形状；横向的对等边只能出现在峰上"
+
+# ── 第 16 讲补入（BGP 的实现与它的问题）──────────────────────────
+# 这一讲的核心词全在 BGP 这条线上：从「一个 AS 当一台机器」到报文属性。
+# 键一律用连字符形式（[[term:]] 只接受 [A-Za-z0-9_.-]，含空格的键会被 validate 硬拦）。
+# 注意 as-path 这一条：键写作 as-path，正字（en）按源文拼写作 ASPATH。
+
+[[term]]
+en = "Border Gateway Protocol"
+zh = "边界网关协议"
+aliases = ["BGP"]
+notes = "互联网上唯一被大规模实现的域间路由协议：交换到目的前缀的 AS 级路径；第 15 讲讲它的规则，第 16 讲把它落到路由器级"
+
+[[term]]
+en = "external BGP"
+zh = "外部 BGP"
+aliases = ["eBGP"]
+notes = "不同 AS 的两台路由器之间的 BGP 会话，用来交换宣告、学到通向其他 AS 的路由；只有边界路由器参与"
+
+[[term]]
+en = "internal BGP"
+zh = "内部 BGP"
+aliases = ["iBGP"]
+notes = "同一个 AS 内两台路由器之间的 BGP 会话（不要求直连）；边界路由器用它把学到的新路由分发给本 AS 的其他路由器"
+
+[[term]]
+en = "interior gateway protocol"
+zh = "内部网关协议"
+aliases = ["IGP"]
+notes = "域内路由协议（距离向量、链路状态等）；与 iBGP 都在 AS 内交换消息，但它管的是本 AS 内的路，两者容易混"
+
+[[term]]
+en = "Multi-Exit Discriminator"
+zh = "多出口鉴别器"
+aliases = ["MED"]
+notes = "导出方在宣告里附加的偏好，等价于从导出路由器到目的地的距离；数值越小越优先，是导入时的第 4 条打破平局依据"
+
+[[term]]
+en = "local preference"
+zh = "本地优先级"
+notes = "把一个 AS 内部的 Gao-Rexford 导入规则编码成数值：客户路由设高值、提供者路由设低值；局部属性，只在 iBGP 消息里携带"
+
+[[term]]
+en = "ASPATH"
+zh = "AS 路径"
+key = "as-path"
+aliases = ["AS path"]
+notes = "宣告里这条路由经过的 AS 列表（按反向顺序），如 [3, 72, 25]；长度是第 2 条打破平局依据，源文明写它是全局属性"
+
+[[term]]
+en = "border router"
+zh = "边界路由器"
+notes = "至少有一条链路通向别的 AS 的路由器；只有它需要对外宣告路由，也只有它参与 eBGP"
+
+[[term]]
+en = "interior router"
+zh = "内部路由器"
+notes = "只有通向本 AS 内其他路由器的链路；参与 iBGP，不参与 eBGP"
+
+[[term]]
+en = "egress router"
+zh = "出口路由器"
+notes = "对外宣告某目的地路由的边界路由器；外部转发表是指向它的，但它通常不是下一跳，要用 IGP 走到它"
+
+[[term]]
+en = "hot potato routing"
+zh = "热土豆路由"
+notes = "选最近的出口路由器的策略：希望分组尽快离开自己的 AS、尽快开始走别人的链路；它算的是「我到你有多远」"
+
+[[term]]
+en = "prefix hijacking"
+zh = "前缀劫持"
+notes = "恶意 AS 宣告自己到不了、或根本不存在的便宜前缀，把流量引到自己这里再删改分组；BGP 没有内建安全保证"
+
+[[term]]
+en = "BGP speaker"
+zh = "BGP 发声者"
+notes = "宣告 BGP 路由的路由器；必须懂 BGP 的语法与语义（怎么读、怎么造宣告，收到宣告该做什么）"
+
+[[term]]
+en = "route reflector"
+zh = "路由反射器"
+notes = "现实里用来减少 iBGP 会话数的组合方式；本课程不展开"
+
+[[term]]
+en = "route attribute"
+zh = "路由属性"
+notes = "Update 报文里跟着目的前缀的名值对（教材的非网络例子是 color=red）；分局部与全局两类"
+
+# ── 第 18 讲补入（2026-09-29；传输层原理，供第 18–26 讲共用）────────
+# 第 18 讲是传输层的起点：端口、解复用、字节流、UDP，以及「至少一次 → 恰好一次」
+# 这两级交付承诺，是后面 TCP 设计、TCP 实现、拥塞控制各讲反复要用的词，先冻结译法。
+# ★ 加之前把候选的英文原词在**前 17 讲正文**里逐条扫过：
+#   port number / flow control / datagram / bytestream / well-known port /
+#   ephemeral port / at-least-once delivery / exactly-once delivery —— 出现 **0 次**；
+#   只有 demultiplexing 在 04-network-architecture 出现过（该页「溯源」里已自行登记
+#   「目前不在 glossary.toml 里」）⇒ 加完那页会报 2 条漂移 WARN（第 84 行与「溯源」段），
+#   补一个标记即可；本讲的作者不动别人的目录，这处留给定稿人处理。
+
+[[term]]
+en = "port number"
+zh = "端口号"
+notes = "16 位，用来在端主机上指认某个具体应用；0-1023 是熟知端口，1024-65535 通常临时分给客户端"
+
+[[term]]
+en = "well-known port"
+zh = "熟知端口"
+aliases = ["well known port"]
+notes = "编号 0-1023，服务器在这些号上监听请求；教材举的例子是 HTTP 的 80 与 SSH 的 22"
+
+[[term]]
+en = "ephemeral port"
+zh = "临时端口"
+notes = "客户端自己挑的号（通常在 1024-65535），连接结束就可以放弃，不需要长期占用"
+
+[[term]]
+en = "demultiplexing"
+zh = "解复用"
+aliases = ["demultiplex"]
+notes = "按端口号把到达的数据分给端主机上对应的那个进程"
+
+[[term]]
+en = "flow control"
+zh = "流量控制"
+notes = "限制发送速率以免压垮接收方；与拥塞控制（怕压垮网络）是相邻但不同的两件事"
+
+[[term]]
+en = "datagram"
+zh = "数据报"
+notes = "UDP 的一条消息，只能装进一个分组，不承诺到达与顺序"
+
+[[term]]
+en = "reliable in-order bytestream"
+zh = "可靠有序字节流"
+notes = "传输层给应用的抽象：长度不限、顺序不变、不丢字节；教材的比方是一根管子"
+
+[[term]]
+en = "at-least-once delivery"
+zh = "至少一次交付"
+notes = "目的地至少收到每个分组一次且未被损坏，但允许收到重复拷贝；传输层用尽力而为的网络实现它"
+
+[[term]]
+en = "exactly-once delivery"
+zh = "恰好一次交付"
+notes = "在至少一次之上把重复去掉，得到的效果；这是给应用看的那一层"

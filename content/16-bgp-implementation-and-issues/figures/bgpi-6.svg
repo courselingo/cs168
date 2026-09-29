@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 205" width="760" height="205"
      role="img" aria-labelledby="fig-bgpi-6-title fig-bgpi-6-desc">
-  <title id="fig-bgpi-6-title">导入优先级的四步</title>
-  <desc id="fig-bgpi-6-desc">箭头依次向右四步：先按 Gao-Rexford 规则，客户宣告的路径优于对等体优于提供者；若优先级相同（例如都来自客户），选更短的那条，也就是经过更少自治系统的；若长度也相同，选出口路由器更近的那条，用 IGP 算距离；若到出口的距离也相同，选 MED 更小的那条。MED 也相同时就随意打破，例如选 IP 地址更小的。教材指出最近的出口路由器与 MED 经常互相矛盾，这也导致互联网上的路径常常不对称。</desc>
+  <title id="fig-bgpi-6-title">导入优先级的五步</title>
+  <desc id="fig-bgpi-6-desc">箭头依次向右五步：先按 Gao-Rexford 规则，客户宣告的路径优于对等体优于提供者；若优先级相同（例如都来自客户），选更短的那条，也就是经过更少自治系统的；若长度也相同，选出口路由器更近的那条，用 IGP 算距离；若到出口的距离也相同，选 MED 更小的那条；若 MED 也相同，就随意打破，例如选 IP 地址更小的（按源文这一段是 5 条，本图与正文都按 5 条讲）。教材指出最近的出口路由器（热土豆路由）与 MED 经常互相矛盾，这也导致互联网上的路径常常不对称。</desc>
 
   <defs>
     <style>
@@ -15,31 +15,37 @@
 
   <rect x="0" y="0" width="760" height="205" fill="#ffffff"/>
 
-  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">导入优先级的四步</text>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">导入优先级的五步</text>
 
-  <rect x="22" y="76" width="160" height="72" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
-  <text x="102" y="98" font-size="12" fill="#1e40af" text-anchor="middle">一、钱款关系</text>
-  <text x="102" y="116" font-size="12" fill="#1e40af" text-anchor="middle">客户 &gt; 对等</text>
-  <text x="102" y="134" font-size="12" fill="#1e40af" text-anchor="middle">&gt; 提供者</text>
+  <rect x="22" y="76" width="122" height="72" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="83" y="98" font-size="12" fill="#1e40af" text-anchor="middle">一、钱款关系</text>
+  <text x="83" y="116" font-size="12" fill="#1e40af" text-anchor="middle">客户 &gt; 对等</text>
+  <text x="83" y="134" font-size="12" fill="#1e40af" text-anchor="middle">&gt; 提供者</text>
 
-  <rect x="207" y="76" width="160" height="72" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
-  <text x="287" y="98" font-size="12" fill="#1e40af" text-anchor="middle">二、路径更短</text>
-  <text x="287" y="116" font-size="12" fill="#1e40af" text-anchor="middle">经过的 AS 更少</text>
-  <text x="287" y="134" font-size="12" fill="#1e40af" text-anchor="middle">看 ASPATH</text>
+  <rect x="170" y="76" width="122" height="72" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="231" y="98" font-size="12" fill="#1e40af" text-anchor="middle">二、路径更短</text>
+  <text x="231" y="116" font-size="12" fill="#1e40af" text-anchor="middle">经过的 AS 更少</text>
+  <text x="231" y="134" font-size="12" fill="#1e40af" text-anchor="middle">看 ASPATH</text>
 
-  <rect x="392" y="76" width="160" height="72" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
-  <text x="472" y="98" font-size="12" fill="#b45309" text-anchor="middle">三、出口更近</text>
-  <text x="472" y="116" font-size="12" fill="#b45309" text-anchor="middle">用 IGP 算距离</text>
-  <text x="472" y="134" font-size="12" fill="#b45309" text-anchor="middle">热土豆路由</text>
+  <rect x="318" y="76" width="122" height="72" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="379" y="98" font-size="12" fill="#b45309" text-anchor="middle">三、出口更近</text>
+  <text x="379" y="116" font-size="12" fill="#b45309" text-anchor="middle">用 IGP 算距离</text>
+  <text x="379" y="134" font-size="12" fill="#b45309" text-anchor="middle">热土豆路由</text>
 
-  <rect x="577" y="76" width="160" height="72" rx="6" fill="#d1fae5" stroke="#22c55e"/>
-  <text x="657" y="98" font-size="12" fill="#166534" text-anchor="middle">四、MED 更小</text>
-  <text x="657" y="116" font-size="12" fill="#166534" text-anchor="middle">对方希望你走的</text>
-  <text x="657" y="134" font-size="12" fill="#166534" text-anchor="middle">那条</text>
+  <rect x="466" y="76" width="122" height="72" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="527" y="98" font-size="12" fill="#166534" text-anchor="middle">四、MED 更小</text>
+  <text x="527" y="116" font-size="12" fill="#166534" text-anchor="middle">对方希望你走的</text>
+  <text x="527" y="134" font-size="12" fill="#166534" text-anchor="middle">那条</text>
 
-  <path d="M187,112 L 196,112" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
-  <path d="M372,112 L 381,112" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
-  <path d="M557,112 L 566,112" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+  <rect x="614" y="76" width="122" height="72" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="675" y="98" font-size="12" fill="#6b21a8" text-anchor="middle">五、随意打破</text>
+  <text x="675" y="116" font-size="12" fill="#6b21a8" text-anchor="middle">MED 也相同时</text>
+  <text x="675" y="134" font-size="12" fill="#6b21a8" text-anchor="middle">例如选 IP 更小的</text>
 
-  <text x="380" y="180" font-size="10" fill="#64748b" text-anchor="middle">前两步与第三步经常互相拉扯，于是互联网上的路径常常不对称</text>
+  <path d="M149,112 L 158,112" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+  <path d="M297,112 L 306,112" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+  <path d="M445,112 L 454,112" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+  <path d="M593,112 L 602,112" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+
+  <text x="380" y="180" font-size="10" fill="#64748b" text-anchor="middle">第三与第四步（出口远近的热土豆路由与 MED）经常互相拉扯，于是互联网上的路径常常不对称</text>
 </svg>
