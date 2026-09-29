@@ -25,9 +25,9 @@
   <text x="194" y="167" font-size="12" fill="#1e40af" text-anchor="middle">当年：交换机有意做傻</text>
   <text x="194" y="185" font-size="12" fill="#1e40af" text-anchor="middle">只转发，不解析数据</text>
 
-  <rect x="394" y="145" width="344" height="54" rx="6" fill="#fce7f3" stroke="#ec4899"/>
-  <text x="566" y="167" font-size="12" fill="#9d174d" text-anchor="middle">后来：要防洪水攻击</text>
-  <text x="566" y="185" font-size="12" fill="#9d174d" text-anchor="middle">交换机可能需要能识别它</text>
+  <rect x="394" y="145" width="344" height="54" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="566" y="167" font-size="12" fill="#6b21a8" text-anchor="middle">后来：要防洪水攻击</text>
+  <text x="566" y="185" font-size="12" fill="#6b21a8" text-anchor="middle">交换机可能需要能识别它</text>
 
   <text x="380" y="222" font-size="10" fill="#64748b" text-anchor="middle">当年做选择时，安全这件事根本没有被纳入考虑</text>
 </svg>

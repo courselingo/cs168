@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 221" width="760" height="221"
      role="img" aria-labelledby="fig-sharing-4-title fig-sharing-4-desc">
   <title id="fig-sharing-4-title">先到先得与订座：分组交换与电路交换</title>
-  <desc id="fig-sharing-4-desc">左边是分组交换，像餐厅先到先得：每个人都直接送数据，不做预约，交换机逐个分组独立转发，不保证有带宽。右边是电路交换，像订座：开流前先申请并预留带宽，沿途每台交换机都要同意，用完释放给别人订。两者其实都在做统计复用，区别只是分配资源的粒度：按流，还是按分组。</desc>
+  <desc id="fig-sharing-4-desc">左边是分组交换，像餐厅先到先得：每个人都直接送数据，不做预约，交换机逐个分组独立转发，不保证有带宽。右边是电路交换，像订座：开流前先申请并预留带宽，沿途每台交换机都要同意，用完释放给别人订。两者其实都在做统计复用，区别只是分配资源的粒度：按流，还是按分组。教材原话是 both circuit switching and packet switching are embodying statistical multiplexing。</desc>
 
   <defs>
     <style>
@@ -25,5 +25,5 @@
   <text x="566" y="134" font-size="12" fill="#6b21a8" text-anchor="middle">沿途每台交换机都要同意</text>
   <text x="566" y="152" font-size="12" fill="#6b21a8" text-anchor="middle">用完释放，给别人订</text>
 
-  <text x="380" y="196" font-size="10" fill="#64748b" text-anchor="middle">两者都是统计复用，区别是分配的粒度：按流预约，还是按分组尽力而为</text>
+  <text x="380" y="196" font-size="10" fill="#64748b" text-anchor="middle">教材原话：两种做法都在做统计复用，区别只在分配的粒度（按流预约 / 按分组尽力而为）</text>
 </svg>

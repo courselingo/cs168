@@ -35,6 +35,6 @@
   <path d="M247,112 L 259,112" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
   <path d="M495,112 L 507,112" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
 
-  <text x="380" y="178" font-size="11" fill="#1e293b" text-anchor="middle">端主机是在发信收信的机器；交换机自己不发也不收，只帮端主机互相通信</text>
+  <text x="380" y="178" font-size="11" fill="#1e293b" text-anchor="middle">每片网络内部用什么技术、怎么送，是它自己的事；对外只需要跟别的网络对接</text>
   <text x="380" y="196" font-size="10" fill="#64748b" text-anchor="middle">分组一路上会跨过好几种链路技术，底下换成什么，第三层照样能用</text>
 </svg>

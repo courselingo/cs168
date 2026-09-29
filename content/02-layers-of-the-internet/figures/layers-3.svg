@@ -15,7 +15,7 @@
 
   <rect x="22" y="66" width="344" height="54" rx="6" fill="#fce7f3" stroke="#ec4899"/>
   <text x="194" y="88" font-size="12" fill="#9d174d" text-anchor="middle">直觉：机器跟机器直接连</text>
-  <text x="194" y="106" font-size="12" fill="#9d174d" text-anchor="middle">一台对一台，各拉一条线</text>
+  <text x="194" y="106" font-size="12" fill="#9d174d" text-anchor="middle">机器直接跟对面通信，不经过中间设备</text>
 
   <rect x="22" y="150" width="98" height="36" rx="6" fill="#fce7f3" stroke="#ec4899"/>
   <text x="71" y="172" font-size="12" fill="#9d174d" text-anchor="middle">1 号机</text>
@@ -34,10 +34,10 @@
   <text x="443" y="172" font-size="12" fill="#166534" text-anchor="middle">网络 A</text>
 
   <rect x="517" y="150" width="98" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
-  <text x="566" y="172" font-size="12" fill="#166534" text-anchor="middle">对接处</text>
+  <text x="566" y="172" font-size="12" fill="#166534" text-anchor="middle">一台设备对接</text>
 
   <rect x="640" y="150" width="98" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
   <text x="689" y="172" font-size="12" fill="#166534" text-anchor="middle">网络 B</text>
 
-  <text x="380" y="212" font-size="10" fill="#64748b" text-anchor="middle">机器一多，线按平方长；每加一片网络都要跟已有的每一片连一遍，这样就长不大</text>
+  <text x="380" y="212" font-size="10" fill="#64748b" text-anchor="middle">机器一多，要连的线就快速变多；每加一片网络都要跟已有的每一片连一遍，这样就长不大</text>
 </svg>

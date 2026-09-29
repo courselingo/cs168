@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 211" width="760" height="211"
      role="img" aria-labelledby="fig-headers-7-title fig-headers-7-desc">
   <title id="fig-headers-7-title">每一跳先拆掉旧壳，再包上新壳</title>
-  <desc id="fig-headers-7-desc">主机 A 往下走，依次加上五层首部，把分组发给第一台路由器。路由器拆掉上一跳带来的第一、二层首部，露出第三层首部，读到该往哪里送之后，再为下一跳包上新的第一、二层首部。最后主机 B 往上走，一层层剥掉。没有一台路由器会去看第三层以上的东西。</desc>
+  <desc id="fig-headers-7-desc">主机 A 往下走，逐层加上首部，把分组发给第一台路由器。路由器拆掉上一跳带来的第一、二层首部，露出第三层首部，读到该往哪里送之后，再为下一跳包上新的第一、二层首部。最后主机 B 往上走，一层层剥掉。没有一台路由器会去看第三层以上的东西。</desc>
 
   <defs>
     <style>
@@ -19,7 +19,7 @@
 
   <rect x="22" y="76" width="220" height="54" rx="6" fill="#d1fae5" stroke="#22c55e"/>
   <text x="132" y="98" font-size="12" fill="#166534" text-anchor="middle">主机 A</text>
-  <text x="132" y="116" font-size="12" fill="#166534" text-anchor="middle">往下走，加满五层首部</text>
+  <text x="132" y="116" font-size="12" fill="#166534" text-anchor="middle">往下走，逐层加上首部</text>
 
   <rect x="270" y="76" width="220" height="54" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
   <text x="380" y="98" font-size="12" fill="#b45309" text-anchor="middle">路由器</text>

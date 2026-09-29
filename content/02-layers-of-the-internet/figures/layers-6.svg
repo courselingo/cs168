@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 415" width="760" height="415"
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 433" width="760" height="433"
      role="img" aria-labelledby="fig-layers-6-title fig-layers-6-desc">
-  <title id="fig-layers-6-title">五层，每层只跟相邻两层打交道</title>
-  <desc id="fig-layers-6-desc">从上到下五层，每一层后面跟着它负责的事：应用层用网络的应用，传输层把分组变成可靠的流，网际层把分组送到任意地方，链路层管好一段链路上的共用，物理层把比特送过空间。跳层没有实用的办法，比如在第三层之上直接搭第七层。</desc>
+  <title id="fig-layers-6-title">每层只跟上下相邻的两层打交道</title>
+  <desc id="fig-layers-6-desc">从上到下每一层后面跟着它负责的事：应用层用网络的应用，传输层把分组变成可靠的流，网际层把分组送到任意地方，链路层管好一段链路上的共用，物理层把比特送过空间。跳层没有实用的办法，比如在第三层之上直接搭第七层。教材的层号是第七、四、三、二、一层，第五、六层已废弃，所以第七层的下一层就是第四层。</desc>
 
   <defs>
     <style>
@@ -9,9 +9,9 @@
     </style>
   </defs>
 
-  <rect x="0" y="0" width="760" height="415" fill="#ffffff"/>
+  <rect x="0" y="0" width="760" height="433" fill="#ffffff"/>
 
-  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">五层，每层只跟相邻两层打交道</text>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">五层，每层只跟上下相邻的两层打交道</text>
 
   <rect x="22" y="76" width="716" height="36" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
   <text x="380" y="98" font-size="12" fill="#6b21a8" text-anchor="middle">第七层：应用层，用网络的应用</text>
@@ -29,4 +29,5 @@
   <text x="380" y="342" font-size="12" fill="#b45309" text-anchor="middle">第一层：物理层，把比特送过空间</text>
 
   <text x="380" y="390" font-size="10" fill="#64748b" text-anchor="middle">上层用下层的服务，下层不关心上层要什么</text>
+  <text x="380" y="408" font-size="10" fill="#64748b" text-anchor="middle">教材的层号是第七、四、三、二、一层；第五、六层已废弃，所以第七层的下一层就是第四层</text>
 </svg>
