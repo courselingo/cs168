@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 187" width="760" height="187"
+     role="img" aria-labelledby="fig-router-10-title fig-router-10-desc">
+  <title id="fig-router-10-title">Trie：一位一层，走 32 步定音，默认路由住在根节点</title>
+  <desc id="fig-router-10-desc">三格并排：Trie 的每一层代表 IP 地址里的一位，第零层是根、第一层代表第一位，节点代表前缀，前缀在表里就在节点上写下下一跳；因为地址永远是 32 位，沿树下走是常数时间，哪怕表里有几百万条也只走 32 个节点，走不动就提前停下、取走过的最长前缀；默认路由存在根节点这个 0 位前缀上，而一路往下走的算法恰好保证只有其他前缀都不匹配时才会用到它。所有路由器都有某种形式的最长前缀匹配，只是有的用了更高级的方案。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="187" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">用 Trie 做最长前缀匹配</text>
+
+  <rect x="22" y="76" width="222" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="133" y="98" font-size="12" fill="#1e40af" text-anchor="middle">一位一层</text>
+  <text x="133" y="116" font-size="12" fill="#1e40af" text-anchor="middle">节点就是前缀</text>
+
+  <rect x="269" y="76" width="222" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="98" font-size="12" fill="#1e40af" text-anchor="middle">走 32 步定音</text>
+  <text x="380" y="116" font-size="12" fill="#1e40af" text-anchor="middle">表多大都是常数时间</text>
+
+  <rect x="516" y="76" width="222" height="54" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="627" y="98" font-size="12" fill="#166534" text-anchor="middle">默认路由在根节点</text>
+  <text x="627" y="116" font-size="12" fill="#166534" text-anchor="middle">其他都不匹配才用它</text>
+
+  <text x="380" y="162" font-size="10" fill="#64748b" text-anchor="middle">边走边记「迄今为止最长的匹配」，掉出树外就用它</text>
+</svg>

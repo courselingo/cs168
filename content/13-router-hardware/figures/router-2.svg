@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 205" width="760" height="205"
+     role="img" aria-labelledby="fig-router-2-title fig-router-2-desc">
+  <title id="fig-router-2-title">托管机房与机架：多家 ISP 的路由器在同一栋楼里互联</title>
+  <desc id="fig-router-2-desc">三格并排：托管机房或运营商酒店是一栋专门设计过供电与散热的楼，多家 ISP 租用空间把自己的路由器装进去；楼内路由器被叠进机架，机架大约 6 到 7 英尺高、19 英寸宽；同一栋楼里的路由器彼此互联，成为网络之间真正碰头的地方。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="205" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">路由器在哪碰头</text>
+
+  <rect x="22" y="76" width="222" height="72" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="133" y="98" font-size="12" fill="#1e40af" text-anchor="middle">托管机房</text>
+  <text x="133" y="116" font-size="12" fill="#1e40af" text-anchor="middle">专用供电与散热</text>
+  <text x="133" y="134" font-size="12" fill="#1e40af" text-anchor="middle">ISP 租空间装路由器</text>
+
+  <rect x="269" y="76" width="222" height="72" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="98" font-size="12" fill="#1e40af" text-anchor="middle">机架</text>
+  <text x="380" y="116" font-size="12" fill="#1e40af" text-anchor="middle">6 到 7 英尺高</text>
+  <text x="380" y="134" font-size="12" fill="#1e40af" text-anchor="middle">19 英寸宽</text>
+
+  <rect x="516" y="76" width="222" height="72" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="627" y="98" font-size="12" fill="#166534" text-anchor="middle">互联</text>
+  <text x="627" y="116" font-size="12" fill="#166534" text-anchor="middle">同楼的路由器</text>
+  <text x="627" y="134" font-size="12" fill="#166534" text-anchor="middle">在这里互相接线</text>
+
+  <text x="380" y="180" font-size="10" fill="#64748b" text-anchor="middle">楼的大小与机架尺寸，最后都变成「一台设备能装多少端口」的约束</text>
+</svg>

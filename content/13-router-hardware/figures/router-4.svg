@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 223" width="760" height="223"
+     role="img" aria-labelledby="fig-router-4-title fig-router-4-desc">
+  <title id="fig-router-4-title">三个平面：数据、控制、管理，时间尺度差好几个数量级</title>
+  <desc id="fig-router-4-desc">三格并排：数据平面负责转发分组，每来一个分组就用一次，局部运行不需要与其他路由器协调，时间尺度在纳秒级；控制平面负责与其他路由器通信、运行路由协议并算出转发表，只在拓扑变化时忙起来，时间尺度在秒级；管理平面供运营者配置与监控（每条链路多少代价、跑哪个协议都要人工决定），时间尺度在几十到几百秒，运营者通过网络管理系统与它交互。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="223" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">三个平面</text>
+
+  <rect x="22" y="76" width="222" height="90" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="133" y="98" font-size="12" fill="#1e40af" text-anchor="middle">数据平面</text>
+  <text x="133" y="116" font-size="12" fill="#1e40af" text-anchor="middle">转发分组</text>
+  <text x="133" y="134" font-size="12" fill="#1e40af" text-anchor="middle">局部、不协调</text>
+  <text x="133" y="152" font-size="12" fill="#1e40af" text-anchor="middle">纳秒级</text>
+
+  <rect x="269" y="76" width="222" height="90" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="98" font-size="12" fill="#b45309" text-anchor="middle">控制平面</text>
+  <text x="380" y="116" font-size="12" fill="#b45309" text-anchor="middle">跑路由协议</text>
+  <text x="380" y="134" font-size="12" fill="#b45309" text-anchor="middle">拓扑变化时才忙</text>
+  <text x="380" y="152" font-size="12" fill="#b45309" text-anchor="middle">秒级</text>
+
+  <rect x="516" y="76" width="222" height="90" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="627" y="98" font-size="12" fill="#166534" text-anchor="middle">管理平面</text>
+  <text x="627" y="116" font-size="12" fill="#166534" text-anchor="middle">配置与监控</text>
+  <text x="627" y="134" font-size="12" fill="#166534" text-anchor="middle">运营者 / NMS</text>
+  <text x="627" y="152" font-size="12" fill="#166534" text-anchor="middle">几十到几百秒</text>
+
+  <text x="380" y="198" font-size="10" fill="#64748b" text-anchor="middle">只转发不跑协议，我们知道怎么发，却不知道往哪里发</text>
+</svg>

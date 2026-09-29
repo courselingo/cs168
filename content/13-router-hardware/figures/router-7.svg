@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 205" width="760" height="205"
+     role="img" aria-labelledby="fig-router-7-title fig-router-7-desc">
+  <title id="fig-router-7-title">同一件事，两种尺度：软件每 10 微秒一个，硬件要每 10 纳秒一个</title>
+  <desc id="fig-router-7-desc">左栏是通用 CPU 上跑软件：能做到每 10 微秒处理一个分组就已经很了不起。右栏是顶级路由器的要求：400 Gbps 端口按 64 字节分组算，每端口每秒 7.81 亿个分组，36 个端口合起来每秒 560 亿个，也就是大约每 10 纳秒就要处理一个，相差三个数量级。所以路由器功能必须直接做在硬件上，并因此分成只涉及转发硬件的快路径与只在必要时才走的慢路径。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="205" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">先算规模，再决定用什么做</text>
+
+  <rect x="22" y="76" width="344" height="72" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="194" y="98" font-size="12" fill="#9d174d" text-anchor="middle">软件跑在通用 CPU 上</text>
+  <text x="194" y="116" font-size="12" fill="#9d174d" text-anchor="middle">每 10 微秒一个已经很了不起</text>
+  <text x="194" y="134" font-size="12" fill="#9d174d" text-anchor="middle">即 0.00001 秒</text>
+
+  <rect x="394" y="76" width="344" height="72" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="566" y="98" font-size="12" fill="#1e40af" text-anchor="middle">顶级路由器的要求</text>
+  <text x="566" y="116" font-size="12" fill="#1e40af" text-anchor="middle">每端口 7.81 亿个/秒</text>
+  <text x="566" y="134" font-size="12" fill="#1e40af" text-anchor="middle">整机 560 亿个/秒，约 10 纳秒一个</text>
+
+  <text x="380" y="180" font-size="10" fill="#64748b" text-anchor="middle">相差三个数量级，所以只能做专用硬件：更省电、更便宜、更省地方</text>
+</svg>

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 223" width="760" height="223"
+     role="img" aria-labelledby="fig-router-3-title fig-router-3-desc">
+  <title id="fig-router-3-title">容量 = 端口数 × 线速：从家用 1.4 Gbps 到顶级 115.2 Tbps</title>
+  <desc id="fig-router-3-desc">左栏是家用路由器：4 个 100 Mbps 端口加 1 个 1 Gbps 端口，总容量 1.4 Gbps，转发表通常只有一条默认条目。右栏是 ISP 用的顶级路由器：每端口线速可达 400 Gbps，8 张线卡每张 36 个端口共 288 个端口，总容量 288 乘 400 Gbps 等于 115.2 Tbps，价格可能超过一百万美元，做成线卡是为了容量不够时再插一张。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="223" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">容量 = 端口数 × 线速</text>
+
+  <rect x="22" y="76" width="344" height="90" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="194" y="98" font-size="12" fill="#166534" text-anchor="middle">家用路由器</text>
+  <text x="194" y="116" font-size="12" fill="#166534" text-anchor="middle">4 × 100 Mbps + 1 × 1 Gbps</text>
+  <text x="194" y="134" font-size="12" fill="#166534" text-anchor="middle">合计 1.4 Gbps</text>
+  <text x="194" y="152" font-size="12" fill="#166534" text-anchor="middle">表里常常只有一条默认条目</text>
+
+  <rect x="394" y="76" width="344" height="90" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="566" y="98" font-size="12" fill="#1e40af" text-anchor="middle">ISP 顶级路由器</text>
+  <text x="566" y="116" font-size="12" fill="#1e40af" text-anchor="middle">8 张线卡 × 36 端口 = 288 端口</text>
+  <text x="566" y="134" font-size="12" fill="#1e40af" text-anchor="middle">每端口 400 Gbps</text>
+  <text x="566" y="152" font-size="12" fill="#1e40af" text-anchor="middle">合计 115.2 Tbps</text>
+
+  <text x="380" y="198" font-size="10" fill="#64748b" text-anchor="middle">改进方向是提高单端口速度，而不是塞进更多端口（供电与散热不允许）</text>
+</svg>

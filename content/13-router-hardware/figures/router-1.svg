@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 187" width="760" height="187"
+     role="img" aria-labelledby="fig-router-1-title fig-router-1-desc">
+  <title id="fig-router-1-title">路由器干的事很少：查表，然后从一个端口发出去</title>
+  <desc id="fig-router-1-desc">两格并排：左边是读目的 IP 地址并在转发表里查找，表项可以是单个地址，也可以是一段地址范围；右边是沿查到的链路把分组转发出去，目的地就在路由器自己身上时则交给控制平面处理。职责虽少，但每秒要做几十亿次，所以它被做成一台专门为路由与转发优化的计算机。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="187" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">路由器做什么</text>
+
+  <rect x="22" y="76" width="344" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="194" y="98" font-size="12" fill="#1e40af" text-anchor="middle">读目的 IP，查转发表</text>
+  <text x="194" y="116" font-size="12" fill="#1e40af" text-anchor="middle">表项可以是范围</text>
+
+  <rect x="394" y="76" width="344" height="54" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="566" y="98" font-size="12" fill="#166534" text-anchor="middle">沿一条链路转发出去</text>
+  <text x="566" y="116" font-size="12" fill="#166534" text-anchor="middle">目的地是自己就交给控制平面</text>
+
+  <text x="380" y="162" font-size="10" fill="#64748b" text-anchor="middle">职责少，但每秒几十亿次，所以才被做成专用硬件</text>
+</svg>

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 195" width="760" height="195"
+     role="img" aria-labelledby="fig-router-9-title fig-router-9-desc">
+  <title id="fig-router-9-title">逐位淘汰：四行范围，一步一步只剩一行</title>
+  <desc id="fig-router-9-desc">四个格子表示转发表里的四行范围在逐位比对中的命运：前 21 位四行都匹配，所以四行都还在；第 22 位是 1，而第一行这一位是 0，于是第一行被淘汰；第 23 位也是 1，第二、三行这一位是 0，也被淘汰；第四行是 23 位前缀且 23 位全部匹配，被确认为完整匹配。朴素地做的话，每一位都要与表里每一条比对，运行时间会随表项数增长。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="195" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">逐位淘汰，取最长前缀</text>
+
+  <rect x="22" y="66" width="160" height="72" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="102" y="88" font-size="12" fill="#1e40af" text-anchor="middle">前 21 位</text>
+  <text x="102" y="106" font-size="12" fill="#1e40af" text-anchor="middle">四行都匹配</text>
+  <text x="102" y="124" font-size="12" fill="#1e40af" text-anchor="middle">四行都还在</text>
+
+  <rect x="207" y="66" width="160" height="72" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="287" y="88" font-size="12" fill="#b45309" text-anchor="middle">第 22 位 = 1</text>
+  <text x="287" y="106" font-size="12" fill="#b45309" text-anchor="middle">第一行是 0</text>
+  <text x="287" y="124" font-size="12" fill="#b45309" text-anchor="middle">第一行淘汰</text>
+
+  <rect x="392" y="66" width="160" height="72" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="472" y="88" font-size="12" fill="#b45309" text-anchor="middle">第 23 位 = 1</text>
+  <text x="472" y="106" font-size="12" fill="#b45309" text-anchor="middle">第二、三行是 0</text>
+  <text x="472" y="124" font-size="12" fill="#b45309" text-anchor="middle">两行淘汰</text>
+
+  <rect x="577" y="66" width="160" height="72" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="657" y="88" font-size="12" fill="#166534" text-anchor="middle">第四行</text>
+  <text x="657" y="106" font-size="12" fill="#166534" text-anchor="middle">23 位前缀全匹配</text>
+  <text x="657" y="124" font-size="12" fill="#166534" text-anchor="middle">确认命中</text>
+
+  <text x="380" y="170" font-size="10" fill="#64748b" text-anchor="middle">朴素做法每一步都要扫全表，运行时间随表项数增长</text>
+</svg>
