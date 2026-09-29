@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 338" width="760" height="338"
+     role="img" aria-labelledby="fig-end-4-title fig-end-4-desc">
+  <title id="fig-end-4-title">第三步：从第七层往下把 DNS 包拼出来</title>
+  <desc id="fig-end-4-desc">上面一条说明这次查询由 getaddrinfo 触发，而 DNS 服务器的地址也是从 DHCP 知道的（8.8.8.8），且它不在本地网络里。第二排与第三排四格是从上到下各层放进什么：第七层的问题段放一条 A 记录并配 DNS 头部；第四层用 UDP、源端口随便挑、目的端口是 53；第三层源 IP 是 DHCP 给我们的、目的 IP 是 8.8.8.8；第二层源 MAC 是我们自己的、目的 MAC 是路由器的（也就是下一跳）。最下面一条是中间可能发生的两件事：路由器在做 NAT 时改写头部替我们翻译，以及解析器缓存里没有答案时可能还要去问权威名字服务器。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="338" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">第三步：从第七层往下把 DNS 包拼出来</text>
+  <rect x="25" y="64" width="710" height="30" rx="6" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="380" y="82.5" font-size="10" fill="#1e40af" text-anchor="middle">浏览器调用 getaddrinfo 触发查询；DNS 服务器地址也是从 DHCP 知道的（8.8.8.8），它不在本地网络里</text>
+  <rect x="25" y="122" width="342.5" height="54" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="196.25" y="138.65" font-size="9" fill="#6b21a8" text-anchor="middle">第七层</text>
+  <text x="196.25" y="152.15" font-size="9" fill="#6b21a8" text-anchor="middle">问题段放一条 A 记录</text>
+  <text x="196.25" y="165.65" font-size="9" fill="#6b21a8" text-anchor="middle">再配 DNS 头部（标识、记录条数）</text>
+  <rect x="392.5" y="122" width="342.5" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="563.75" y="138.65" font-size="9" fill="#1e40af" text-anchor="middle">第四层</text>
+  <text x="563.75" y="152.15" font-size="9" fill="#1e40af" text-anchor="middle">DNS 跑在 UDP 上</text>
+  <text x="563.75" y="165.65" font-size="9" fill="#1e40af" text-anchor="middle">源端口随便挑，目的端口是 53</text>
+  <rect x="25" y="204" width="342.5" height="54" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="196.25" y="220.65" font-size="9" fill="#166534" text-anchor="middle">第三层</text>
+  <text x="196.25" y="234.15" font-size="9" fill="#166534" text-anchor="middle">源 IP 是 DHCP 给我们的</text>
+  <text x="196.25" y="247.65" font-size="9" fill="#166534" text-anchor="middle">目的 IP 是 8.8.8.8</text>
+  <rect x="392.5" y="204" width="342.5" height="54" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="563.75" y="220.65" font-size="9" fill="#b45309" text-anchor="middle">第二层</text>
+  <text x="563.75" y="234.15" font-size="9" fill="#b45309" text-anchor="middle">源 MAC 是我们自己的</text>
+  <text x="563.75" y="247.65" font-size="9" fill="#b45309" text-anchor="middle">目的 MAC 是路由器的（下一跳）</text>
+  <rect x="25" y="286" width="710" height="27" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="380" y="302.65" font-size="9" fill="#1e293b" text-anchor="middle">中间可能发生的事：路由器在做 NAT 时改写头部替我们翻译；解析器缓存里没有答案时可能还要去问权威名字服务器</text>
+</svg>

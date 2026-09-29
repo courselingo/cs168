@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 226.5" width="760" height="226.5"
+     role="img" aria-labelledby="fig-end-2-title fig-end-2-desc">
+  <title id="fig-end-2-title">第一步：广播请求、单播 offer、确认与应答</title>
+  <desc id="fig-end-2-desc">上排两格是 DHCP 的第一步与第二步：我们先广播一条 DHCP 请求（此时对这个网络一无所知），家里的路由器作为 DHCP 服务器单播回一个 offer（源文说这在家庭网络里很常见）。第二排两格是 offer 里装的四样东西（子网掩码、默认网关、DNS 服务器，以及一个我们可以用的 IP 地址）与协议的收尾两步（我们再发请求确认，服务器回确认应答）。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="226.5" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">第一步：广播请求、单播 offer、确认与应答</text>
+  <rect x="25" y="64" width="342.5" height="49.5" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="196.25" y="84.35" font-size="11" fill="#1e40af" text-anchor="middle">第一步：广播 DHCP 请求</text>
+  <text x="196.25" y="100.85" font-size="11" fill="#1e40af" text-anchor="middle">此时我们对这个网络一无所知</text>
+  <rect x="392.5" y="64" width="342.5" height="49.5" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="563.75" y="84.35" font-size="11" fill="#166534" text-anchor="middle">第二步：路由器单播回 offer</text>
+  <text x="563.75" y="100.85" font-size="11" fill="#166534" text-anchor="middle">家里的路由器就是 DHCP 服务器，这很常见</text>
+  <rect x="25" y="141.5" width="342.5" height="60" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="196.25" y="160" font-size="10" fill="#b45309" text-anchor="middle">offer 里的四样东西</text>
+  <text x="196.25" y="175" font-size="10" fill="#b45309" text-anchor="middle">子网掩码、默认网关、DNS 服务器</text>
+  <text x="196.25" y="190" font-size="10" fill="#b45309" text-anchor="middle">以及一个我们可以用的 IP 地址</text>
+  <rect x="392.5" y="141.5" width="342.5" height="60" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="563.75" y="167.5" font-size="10" fill="#6b21a8" text-anchor="middle">第三步与第四步</text>
+  <text x="563.75" y="182.5" font-size="10" fill="#6b21a8" text-anchor="middle">我们再发请求确认，服务器回确认应答</text>
+</svg>

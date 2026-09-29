@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 375.5" width="760" height="375.5"
+     role="img" aria-labelledby="fig-end-5-title fig-end-5-desc">
+  <title id="fig-end-5-title">第四步：TCP 握手之后，再逐层拼出一条 HTTP 请求</title>
+  <desc id="fig-end-5-desc">上排三格是 TCP 握手的三步：我们发 SYN、伯克利回 SYN-ACK、我们再发 ACK，于是有了一条字节流。第二排三格是从上到下拼 HTTP 请求的各层内容：第七层是 GET / HTTP/1.1；第四层源端口可随便挑、也可以写 Port 0 让系统挑一个临时端口，目的端口是 80；第三层目的 IP 是 141.193.213.21、第二层目的 MAC 仍是路由器。第三排三格是回应与后续：回应是 200 OK、浏览器在套接字上 read 取回字节；分隔符与 Content-Length 标记结束并说明载荷长度；回应可能引来更多请求（网页里的图片、用户点的链接）。第四排三格是流水线（同一条 TCP 连接一直开着）、收尾（两个方向的 FIN 都被确认）与一条 HTTP 消息可以跨多个包（各层头部只有一份，第四层头部在序号上不同）。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="375.5" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">第四步：TCP 握手之后，再逐层拼出一条 HTTP 请求</text>
+  <rect x="25" y="64" width="220" height="45" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="135" y="82.5" font-size="10" fill="#1e40af" text-anchor="middle">先做 TCP 握手</text>
+  <text x="135" y="97.5" font-size="10" fill="#1e40af" text-anchor="middle">我们发 SYN</text>
+  <rect x="270" y="64" width="220" height="45" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="90" font-size="10" fill="#1e40af" text-anchor="middle">伯克利回 SYN-ACK</text>
+  <rect x="515" y="64" width="220" height="45" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="625" y="82.5" font-size="10" fill="#1e40af" text-anchor="middle">我们再发 ACK</text>
+  <text x="625" y="97.5" font-size="10" fill="#1e40af" text-anchor="middle">于是有了一条字节流</text>
+  <rect x="25" y="137" width="220" height="67.5" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="135" y="167.15" font-size="9" fill="#6b21a8" text-anchor="middle">第七层</text>
+  <text x="135" y="180.65" font-size="9" fill="#6b21a8" text-anchor="middle">GET / HTTP/1.1</text>
+  <rect x="270" y="137" width="220" height="67.5" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="153.65" font-size="9" fill="#166534" text-anchor="middle">第四层</text>
+  <text x="380" y="167.15" font-size="9" fill="#166534" text-anchor="middle">源端口可随便挑</text>
+  <text x="380" y="180.65" font-size="9" fill="#166534" text-anchor="middle">也可以写 Port 0 让系统挑临时端口</text>
+  <text x="380" y="194.15" font-size="9" fill="#166534" text-anchor="middle">目的端口是 80</text>
+  <rect x="515" y="137" width="220" height="67.5" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="625" y="160.4" font-size="9" fill="#b45309" text-anchor="middle">第三层与第二层</text>
+  <text x="625" y="173.9" font-size="9" fill="#b45309" text-anchor="middle">目的 IP 是 141.193.213.21</text>
+  <text x="625" y="187.4" font-size="9" fill="#b45309" text-anchor="middle">目的 MAC 仍是路由器</text>
+  <rect x="25" y="232.5" width="220" height="45" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="135" y="251" font-size="10" fill="#1e40af" text-anchor="middle">回应是 200 OK</text>
+  <text x="135" y="266" font-size="10" fill="#1e40af" text-anchor="middle">浏览器在套接字上 read 取回字节</text>
+  <rect x="270" y="232.5" width="220" height="45" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="380" y="251" font-size="10" fill="#1e293b" text-anchor="middle">分隔符与 Content-Length</text>
+  <text x="380" y="266" font-size="10" fill="#1e293b" text-anchor="middle">标记结束、并说明载荷有多长</text>
+  <rect x="515" y="232.5" width="220" height="45" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="625" y="251" font-size="10" fill="#1e293b" text-anchor="middle">回应可能引来更多请求</text>
+  <text x="625" y="266" font-size="10" fill="#1e293b" text-anchor="middle">例如网页里的图片与用户点的链接</text>
+  <rect x="25" y="305.5" width="220" height="45" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="135" y="324" font-size="10" fill="#166534" text-anchor="middle">多条请求可以流水线发送</text>
+  <text x="135" y="339" font-size="10" fill="#166534" text-anchor="middle">同一条 TCP 连接一直开着</text>
+  <rect x="270" y="305.5" width="220" height="45" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="324" font-size="10" fill="#166534" text-anchor="middle">收尾：两个方向的 FIN 都被确认</text>
+  <text x="380" y="339" font-size="10" fill="#166534" text-anchor="middle">整件事就结束了</text>
+  <rect x="515" y="305.5" width="220" height="45" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="625" y="324.4" font-size="9" fill="#6b21a8" text-anchor="middle">一条 HTTP 消息可以跨多个包</text>
+  <text x="625" y="337.9" font-size="9" fill="#6b21a8" text-anchor="middle">各层头部只有一份，第四层头部序号不同</text>
+</svg>

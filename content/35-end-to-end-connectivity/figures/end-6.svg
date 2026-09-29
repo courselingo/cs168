@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 329" width="760" height="329"
+     role="img" aria-labelledby="fig-end-6-title fig-end-6-desc">
+  <title id="fig-end-6-title">套接字的五个基本操作</title>
+  <desc id="fig-end-6-desc">上面一条说明套接字是完全在软件里的一套抽象，程序员用它跟网络打交道。第二排三格与第三排前两格是五个基本操作：新建套接字（对应一条新连接）、connect（向远端发起 TCP 连接）、listen（在某个端口等别人来连，本身不建立连接）、write（往连接上写字节）、read(N)（从连接上读 N 个字节）；第三排最后一格是这套抽象的好处：写应用不必去想 TCP、IP、以太网。最下面一条是操作系统那一侧：每个套接字关联第四层的一个端口号，系统用它把包解复用给正确的套接字。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="329" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">套接字的五个基本操作</text>
+  <rect x="25" y="64" width="710" height="33" rx="6" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="380" y="84.35" font-size="11" fill="#1e40af" text-anchor="middle">套接字：完全在软件里的一套抽象，程序员用它跟网络打交道</text>
+  <rect x="25" y="125" width="220" height="45" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="135" y="143.5" font-size="10" fill="#1e40af" text-anchor="middle">一、新建套接字</text>
+  <text x="135" y="158.5" font-size="10" fill="#1e40af" text-anchor="middle">对应一条新连接</text>
+  <rect x="270" y="125" width="220" height="45" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="143.5" font-size="10" fill="#1e40af" text-anchor="middle">二、connect</text>
+  <text x="380" y="158.5" font-size="10" fill="#1e40af" text-anchor="middle">向远端发起 TCP 连接</text>
+  <rect x="515" y="125" width="220" height="45" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="625" y="143.5" font-size="10" fill="#1e40af" text-anchor="middle">三、listen</text>
+  <text x="625" y="158.5" font-size="10" fill="#1e40af" text-anchor="middle">在某个端口等别人来连（本身不建立连接）</text>
+  <rect x="25" y="198" width="220" height="45" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="135" y="216.5" font-size="10" fill="#166534" text-anchor="middle">四、write</text>
+  <text x="135" y="231.5" font-size="10" fill="#166534" text-anchor="middle">往连接上写字节</text>
+  <rect x="270" y="198" width="220" height="45" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="216.5" font-size="10" fill="#166534" text-anchor="middle">五、read(N)</text>
+  <text x="380" y="231.5" font-size="10" fill="#166534" text-anchor="middle">从连接上读 N 个字节</text>
+  <rect x="515" y="198" width="220" height="45" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="625" y="216.5" font-size="10" fill="#1e293b" text-anchor="middle">好处</text>
+  <text x="625" y="231.5" font-size="10" fill="#1e293b" text-anchor="middle">写应用不必去想 TCP、IP、以太网</text>
+  <rect x="25" y="271" width="710" height="33" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380" y="291.35" font-size="11" fill="#6b21a8" text-anchor="middle">操作系统那一侧：每个套接字关联第四层的一个端口号，系统用它把包解复用给正确的套接字</text>
+</svg>

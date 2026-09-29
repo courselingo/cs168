@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 283" width="760" height="283"
+     role="img" aria-labelledby="fig-end-3-title fig-end-3-desc">
+  <title id="fig-end-3-title">第二步：先确认路由器在本地，再用 ARP 问它的 MAC</title>
+  <desc id="fig-end-3-desc">上排两格是那一步判断与结论：路由器是 192.168.1.1，而我们在 192.168.1.2/24 这个范围里，于是它在本地网络，把以太网包发给它的 MAC 就能到达它。第二排三格是找 MAC 的三步：广播 ARP 请求问 192.168.1.1 的 MAC；路由器单播回答「我是 192.168.1.1，我的 MAC 是 01:ab:cd:ef:42:01」；把这条映射缓存下来。最下面一条是两处照录说明：源文把子网写成 192.168.1.2/24（那是我们自己的地址，网络地址应为 192.168.1.0/24），而示例 MAC 的首字节 01 最低位是 1，按第 29 讲的判据那看起来像一个组地址。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="283" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">第二步：先确认路由器在本地，再用 ARP 问它的 MAC</text>
+  <rect x="25" y="64" width="342.5" height="45" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="196.25" y="82.5" font-size="10" fill="#1e40af" text-anchor="middle">先确认它在本地</text>
+  <text x="196.25" y="97.5" font-size="10" fill="#1e40af" text-anchor="middle">路由器是 192.168.1.1，我们在 192.168.1.2/24</text>
+  <rect x="392.5" y="64" width="342.5" height="45" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="563.75" y="82.5" font-size="10" fill="#166534" text-anchor="middle">判断结果</text>
+  <text x="563.75" y="97.5" font-size="10" fill="#166534" text-anchor="middle">它属于本地网络，发给它的 MAC 就能到达它</text>
+  <rect x="25" y="137" width="220" height="66" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="135" y="165.6" font-size="11" fill="#b45309" text-anchor="middle">广播 ARP 请求</text>
+  <text x="135" y="182.1" font-size="11" fill="#b45309" text-anchor="middle">问 192.168.1.1 的 MAC 地址</text>
+  <rect x="270" y="137" width="220" height="66" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="157.35" font-size="11" fill="#166534" text-anchor="middle">路由器单播回答</text>
+  <text x="380" y="173.85" font-size="11" fill="#166534" text-anchor="middle">我是 192.168.1.1</text>
+  <text x="380" y="190.35" font-size="11" fill="#166534" text-anchor="middle">我的 MAC 是 01:ab:cd:ef:42:01</text>
+  <rect x="515" y="137" width="220" height="66" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="625" y="166" font-size="10" fill="#1e293b" text-anchor="middle">把映射缓存下来</text>
+  <text x="625" y="181" font-size="10" fill="#1e293b" text-anchor="middle">只要条目还在，就不必再问一遍</text>
+  <rect x="25" y="231" width="710" height="27" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380" y="247.65" font-size="9" fill="#6b21a8" text-anchor="middle">两处照录说明：源文把子网写成 192.168.1.2/24（那是我们的地址，网络地址应为 192.168.1.0/24）；示例 MAC 首字节 01 的最低位是 1，按第 29 讲判据那像组地址</text>
+</svg>

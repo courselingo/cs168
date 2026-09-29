@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 338" width="760" height="338"
+     role="img" aria-labelledby="fig-end-7-title fig-end-7-desc">
+  <title id="fig-end-7-title">每一层落在哪里，以及这门课的收束</title>
+  <desc id="fig-end-7-desc">上排三格是各层的执行落点：第一层与第二层在网卡（NIC）这个硬件上，第三层与第四层在操作系统的网络栈里，第七层在软件里。第二排一条说明三方的关注点各不相同：应用只想数据，网卡只想包，操作系统里的网络栈在连接与包之间来回翻译。第三排两格是看包的两条路（tshark 与 wireshark、浏览器的 Network 面板）与现实里的复杂度（包可能被 TLS 加密；HTTP/3 可能改走 QUIC 而不是 TCP）。第四排两格是最后的回看：这门课从没讲过第一层而其余各层照样建得起来；以及在第七层之上再叠协议（RPC 库，如 Apache Thrift 与 gRPC）。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="338" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">每一层落在哪里，以及这门课的收束</text>
+  <rect x="25" y="64" width="220" height="45" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="135" y="82.5" font-size="10" fill="#1e40af" text-anchor="middle">第一层与第二层</text>
+  <text x="135" y="97.5" font-size="10" fill="#1e40af" text-anchor="middle">实现在网卡（NIC）这个硬件上</text>
+  <rect x="270" y="64" width="220" height="45" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="82.5" font-size="10" fill="#166534" text-anchor="middle">第三层与第四层</text>
+  <text x="380" y="97.5" font-size="10" fill="#166534" text-anchor="middle">实现在操作系统的网络栈里</text>
+  <rect x="515" y="64" width="220" height="45" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="625" y="82.5" font-size="10" fill="#6b21a8" text-anchor="middle">第七层</text>
+  <text x="625" y="97.5" font-size="10" fill="#6b21a8" text-anchor="middle">实现在软件里（应用）</text>
+  <rect x="25" y="137" width="710" height="30" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="380" y="155.5" font-size="10" fill="#1e293b" text-anchor="middle">三方关注点：应用只想数据，网卡只想包，操作系统里的网络栈在连接与包之间来回翻译</text>
+  <rect x="25" y="195" width="342.5" height="45" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="196.25" y="213.5" font-size="10" fill="#b45309" text-anchor="middle">看包的两条路</text>
+  <text x="196.25" y="228.5" font-size="10" fill="#b45309" text-anchor="middle">tshark 与 wireshark；浏览器开发者工具的 Network 面板</text>
+  <rect x="392.5" y="195" width="342.5" height="45" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="563.75" y="213.5" font-size="10" fill="#b45309" text-anchor="middle">现实里的复杂度</text>
+  <text x="563.75" y="228.5" font-size="10" fill="#b45309" text-anchor="middle">包可能被 TLS 加密；HTTP/3 可能改走 QUIC 而不是 TCP</text>
+  <rect x="25" y="268" width="342.5" height="45" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="196.25" y="286.5" font-size="10" fill="#1e40af" text-anchor="middle">回看分层</text>
+  <text x="196.25" y="301.5" font-size="10" fill="#1e40af" text-anchor="middle">这门课从没讲过第一层，其余各层照样建得起来</text>
+  <rect x="392.5" y="268" width="342.5" height="45" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="563.75" y="286.5" font-size="10" fill="#1e40af" text-anchor="middle">在第七层之上再叠协议</text>
+  <text x="563.75" y="301.5" font-size="10" fill="#1e40af" text-anchor="middle">RPC 库（如 Apache Thrift 与 gRPC）把细节抽象掉</text>
+</svg>
