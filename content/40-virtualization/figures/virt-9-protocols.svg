@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 389" width="760" height="389"
+     role="img" aria-labelledby="fig-virt-9-protocols-title fig-virt-9-protocols-desc">
+  <title id="fig-virt-9-protocols-title">现实中的封装协议：IP-in-IP 套两个 IP 首部、MPLS 用标签标识服务、GRE 与 VXLAN 与 GENEVE 跑在 IP 之上</title>
+  <desc id="fig-virt-9-protocols-desc">现实中已有多种封装协议：IP-in-IP 支持两个 IP 首部；MPLS 用一个标签首部标识服务或租户；GRE、VXLAN、GENEVE 等把自定义协议放在内层作为 overlay 首部、普通 IP 放在外层作为 underlay 首部。封装之后做负载均衡时仍要能读出五元组，而现代路由硬件对此已有很好的支持。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="389" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">现实中的封装协议：IP-in-IP 套两个 IP 首部、MPLS 用标签标识服务、GRE 与 VXLAN 与 GENEVE 跑在 IP 之上</text>
+  <rect x="22" y="64" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="86" font-size="12" fill="#1e40af" text-anchor="middle">封装叠起来之后，负载均衡仍要能读出五元组（两个 IP、两个端口、协议）</text>
+  <rect x="22" y="125" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="147" font-size="12" fill="#166534" text-anchor="middle">好在现代路由硬件很擅长解析分组、知道相关首部在哪儿</text>
+  <rect x="22" y="186" width="716" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="208" font-size="12" fill="#b45309" text-anchor="middle">IP-in-IP：直接套两个 IP 首部（一个 overlay、一个 underlay）</text>
+  <rect x="22" y="247" width="716" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="269" font-size="12" fill="#b45309" text-anchor="middle">MPLS：一个简单的标签首部，用来标识某个服务或租户</text>
+  <rect x="22" y="308" width="716" height="36" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380" y="330" font-size="12" fill="#6b21a8" text-anchor="middle">GRE、VXLAN、GENEVE：自定义协议放内层（overlay），普通 IP 放外层（underlay）</text>
+  <text x="380" y="366" font-size="10" fill="#64748b" text-anchor="middle">机制只有一个，协议是各家在工程上的不同选择</text>
+</svg>

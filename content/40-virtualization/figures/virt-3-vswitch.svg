@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 389" width="760" height="389"
+     role="img" aria-labelledby="fig-virt-3-vswitch-title fig-virt-3-vswitch-desc">
+  <title id="fig-virt-3-vswitch-title">虚拟交换机：软件实现的交换机，每台虚拟机接到它，它再接外面的网络</title>
+  <desc id="fig-virt-3-vswitch-desc">物理服务器只有一块网卡与一个地址，而每台虚拟机都需要独立的网卡与地址，交换机侧也可能多台虚拟机共用一个物理端口；解法是在服务器软件里跑一台虚拟交换机，它像真实交换机一样转发分组，每台虚拟机接它、它再接外部网络。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="389" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">虚拟交换机：软件实现的交换机，每台虚拟机接到它，它再接外面的网络</text>
+  <rect x="22" y="64" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="86" font-size="12" fill="#1e40af" text-anchor="middle">问题：物理服务器只有一块网卡、一个 IP，但每台虚拟机都要有自己的网卡与地址</text>
+  <rect x="22" y="125" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="147" font-size="12" fill="#1e40af" text-anchor="middle">交换机侧也会遇到：多台虚拟机挤在同一个物理端口后面</text>
+  <rect x="22" y="186" width="716" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="208" font-size="12" fill="#b45309" text-anchor="middle">解法：服务器里跑一台虚拟交换机（软件实现，不是物理路由器）</text>
+  <rect x="22" y="247" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="269" font-size="12" fill="#166534" text-anchor="middle">它做真实交换机做的事，例如转发分组；每台虚拟机接它，它再接外部网络</text>
+  <rect x="22" y="308" width="716" height="36" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380" y="330" font-size="12" fill="#6b21a8" text-anchor="middle">取舍：真实交换机用专用硬件求效率；虚拟交换机跑在通用 CPU 上，只需支撑少数虚拟机</text>
+  <text x="380" y="366" font-size="10" fill="#64748b" text-anchor="middle">同一套功能，从专用硬件搬到了软件里</text>
+</svg>

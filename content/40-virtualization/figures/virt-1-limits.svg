@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 389" width="760" height="389"
+     role="img" aria-labelledby="fig-virt-1-limits-title fig-virt-1-limits-desc">
+  <title id="fig-virt-1-limits-title">物理数据中心的三条限制：改动要动硬件、轻量服务独占整机、搬家就得换地址</title>
+  <desc id="fig-virt-1-limits-desc">数据中心的物理结构固定且有结构（同样的服务器、固定的机柜与拓扑），好处是能分配层次化地址；但应用想快速增删与搬家。三种麻烦是：上新服务要真的装机器、轻量服务独占整机浪费算力、搬家既要搬硬件又要在层次化地址下换 IP。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="389" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">物理数据中心的三条限制：改动要动硬件、轻量服务独占整机、搬家就得换地址</text>
+  <rect x="22" y="64" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="86" font-size="12" fill="#1e40af" text-anchor="middle">物理结构固定且有结构：同样的服务器装进机柜，机柜按固定拓扑摆放</text>
+  <rect x="22" y="125" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="147" font-size="12" fill="#166534" text-anchor="middle">好处：能自然地分配层次化地址</text>
+  <rect x="22" y="186" width="716" height="36" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="380" y="208" font-size="12" fill="#9d174d" text-anchor="middle">麻烦一：想上新服务就得真的装一台机器、配一个 IP</text>
+  <rect x="22" y="247" width="716" height="36" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="380" y="269" font-size="12" fill="#9d174d" text-anchor="middle">麻烦二：轻量服务若必须独占机器，大部分算力就被浪费</text>
+  <rect x="22" y="308" width="716" height="36" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="380" y="330" font-size="12" fill="#9d174d" text-anchor="middle">麻烦三：搬家要有人搬机器，按层次化地址还得换 IP（而应用想保住地址）</text>
+  <text x="380" y="366" font-size="10" fill="#64748b" text-anchor="middle">不动物理结构，但让应用能自由地出现、长大与搬家</text>
+</svg>

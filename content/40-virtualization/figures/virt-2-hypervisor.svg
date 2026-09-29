@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 389" width="760" height="389"
+     role="img" aria-labelledby="fig-virt-2-hypervisor-title fig-virt-2-hypervisor-desc">
+  <title id="fig-virt-2-hypervisor-title">虚拟化：hypervisor 端出与真硬件一样的接口，应用以为自己在独占机器</title>
+  <desc id="fig-virt-2-hypervisor-desc">虚拟化在一台物理服务器里跑多台虚拟服务器：应用以为自己在独占机器，实际操作的是软件里的 hypervisor；hypervisor 提供与真硬件相同的接口并把请求转给硬件。于是新应用只需软件动作，多个应用能共享一台机器，一个 40 台服务器的机柜可以有超过 40 台终端主机。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="389" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">虚拟化：hypervisor 端出与真硬件一样的接口，应用以为自己在独占机器</text>
+  <rect x="22" y="64" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="86" font-size="12" fill="#1e40af" text-anchor="middle">解法：在一台物理服务器里跑一台或多台虚拟服务器</text>
+  <rect x="22" y="125" width="716" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="147" font-size="12" fill="#b45309" text-anchor="middle">虚拟服务器让应用以为自己在独占一台物理机</text>
+  <rect x="22" y="186" width="716" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="208" font-size="12" fill="#b45309" text-anchor="middle">应用以为在直接操作磁盘与网卡，实际对面是软件里的 hypervisor</text>
+  <rect x="22" y="247" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="269" font-size="12" fill="#166534" text-anchor="middle">hypervisor 端出的接口与真硬件一样，并把请求转交给真硬件</text>
+  <rect x="22" y="308" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="330" font-size="12" fill="#166534" text-anchor="middle">于是新应用只是软件动作；多应用共享一台机器；一个 40 台服务器的机柜可以有超过 40 台主机</text>
+  <text x="380" y="366" font-size="10" fill="#64748b" text-anchor="middle">应用没有改，变的是它所面对的那一层</text>
+</svg>

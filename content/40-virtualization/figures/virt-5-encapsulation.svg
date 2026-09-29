@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 450" width="760" height="450"
+     role="img" aria-labelledby="fig-virt-5-encapsulation-title fig-virt-5-encapsulation-desc">
+  <title id="fig-virt-5-encapsulation-title">封装的走位：A 写虚拟地址，虚拟交换机加物理地址的外层首部，underlay 只看外层，目的端再解封装</title>
+  <desc id="fig-virt-5-encapsulation-desc">虚拟机 A 写出的分组里装的是 B 的虚拟地址；本机虚拟交换机查出对应的物理服务器地址，加一个外层首部（封装）；此后 underlay 的交换机只看外层首部；到达目的物理服务器后，虚拟交换机去掉外层首部（解封装），再按内层首部把分组交给对应的虚拟机。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="450" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">封装的走位：A 写虚拟地址，虚拟交换机加物理地址的外层首部，underlay 只看外层，目的端再解封装</text>
+  <rect x="22" y="64" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="86" font-size="12" fill="#1e40af" text-anchor="middle">A 只按 overlay 思考：分组里装的是 B 的虚拟地址，交给本机虚拟交换机</text>
+  <rect x="22" y="125" width="716" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="147" font-size="12" fill="#b45309" text-anchor="middle">虚拟交换机查出 B 的虚拟地址对应的物理服务器地址</text>
+  <rect x="22" y="186" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="208" font-size="12" fill="#166534" text-anchor="middle">它加一个外层首部，装 B 的物理地址 —— 这一步叫封装</text>
+  <rect x="22" y="247" width="716" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="269" font-size="12" fill="#b45309" text-anchor="middle">此刻两个首部：内层（overlay，A 加）是虚拟地址，外层（underlay，虚拟交换机加）是物理地址</text>
+  <rect x="22" y="308" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="330" font-size="12" fill="#166534" text-anchor="middle">underlay 的交换机只看外层首部；目的端虚拟交换机发现外层目的是自己，就去掉外层（解封装）</text>
+  <rect x="22" y="369" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="391" font-size="12" fill="#166534" text-anchor="middle">再按内层首部把分组交给这台服务器上的某台虚拟机</text>
+  <text x="380" y="427" font-size="10" fill="#64748b" text-anchor="middle">多套一层首部，换来一层可以独立工作的抽象</text>
+</svg>

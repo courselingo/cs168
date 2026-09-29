@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 450" width="760" height="450"
+     role="img" aria-labelledby="fig-virt-8-stacking-title fig-virt-8-stacking-desc">
+  <title id="fig-virt-8-stacking-title">叠加封装与解封装：先加虚拟网络首部再加 underlay 首部，拆的时候反过来拆两层</title>
+  <desc id="fig-virt-8-stacking-desc">封装可以叠两层：虚拟机写标准 TCP/IP 分组后，第一层加虚拟网络首部标识租户，第二层加 underlay 首部给出物理服务器地址；解封装按相反次序先拆 underlay 首部，再用虚拟网络首部收窄租户，最后用最内层 IP 首部送到正确的虚拟机。现实中的 IP-in-IP、MPLS、GRE、VXLAN、GENEVE 都在做这类事。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="450" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">叠加封装与解封装：先加虚拟网络首部再加 underlay 首部，拆的时候反过来拆两层</text>
+  <rect x="22" y="64" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="86" font-size="12" fill="#1e40af" text-anchor="middle">虚拟机先写一个标准 TCP/IP 分组，目的地址是虚拟 IP</text>
+  <rect x="22" y="125" width="716" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="147" font-size="12" fill="#b45309" text-anchor="middle">第一层封装：加虚拟网络首部，交代这是哪个租户发的</text>
+  <rect x="22" y="186" width="716" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="208" font-size="12" fill="#b45309" text-anchor="middle">第二层封装：加 underlay 首部，交代虚拟 IP 对应的物理服务器地址</text>
+  <rect x="22" y="247" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="269" font-size="12" fill="#166534" text-anchor="middle">解封装按相反次序：先拆 underlay 首部，再用虚拟网络首部收窄到某个租户</text>
+  <rect x="22" y="308" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="330" font-size="12" fill="#166534" text-anchor="middle">最后用最内层 IP 首部送到「正确租户里的正确虚拟机」</text>
+  <rect x="22" y="369" width="716" height="36" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380" y="391" font-size="12" fill="#6b21a8" text-anchor="middle">现实做法：IP-in-IP 支持两个 IP 首部；MPLS 用标签标识服务或租户；GRE、VXLAN、GENEVE 等跑在 IP 之上</text>
+  <text x="380" y="427" font-size="10" fill="#64748b" text-anchor="middle">封装不是一次性技巧，而是一个可以叠、也可以反向拆的结构</text>
+</svg>
