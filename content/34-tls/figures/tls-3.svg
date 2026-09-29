@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 196.5" width="760" height="196.5"
+     role="img" aria-labelledby="fig-tls-3-title fig-tls-3-desc">
+  <title id="fig-tls-3-title">HTTP 与 HTTPS 的两个端口，以及服务器用重定向强制走 HTTPS</title>
+  <desc id="fig-tls-3-desc">上排两格是两个端口各自的用途：HTTP 用 80 号端口，HTTPS 用 443 号端口。下面一条是服务器强制用户走 HTTPS 的做法：对所有发到 80 号端口的请求回一个重定向，让客户端改用 443 号端口。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="196.5" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">HTTP 与 HTTPS 的两个端口，以及服务器用重定向强制走 HTTPS</text>
+  <rect x="25" y="64" width="342.5" height="49.5" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="196.25" y="84.35" font-size="11" fill="#1e40af" text-anchor="middle">HTTP</text>
+  <text x="196.25" y="100.85" font-size="11" fill="#1e40af" text-anchor="middle">用 80 号端口</text>
+  <rect x="392.5" y="64" width="342.5" height="49.5" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="563.75" y="84.35" font-size="11" fill="#166534" text-anchor="middle">HTTPS</text>
+  <text x="563.75" y="100.85" font-size="11" fill="#166534" text-anchor="middle">用 443 号端口</text>
+  <rect x="25" y="141.5" width="710" height="30" rx="6" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="380" y="160" font-size="10" fill="#1e40af" text-anchor="middle">服务器可以强制用户走 HTTPS：对所有发到 80 号端口的请求回一个重定向，让客户端改用 443 号端口</text>
+</svg>

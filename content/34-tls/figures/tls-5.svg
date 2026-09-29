@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 362" width="760" height="362"
+     role="img" aria-labelledby="fig-tls-5-title fig-tls-5-desc">
+  <title id="fig-tls-5-title">TLS 握手的五步：hello、证书、秘密交换、各自派生密钥、确认</title>
+  <desc id="fig-tls-5-desc">上排两格是第一步与第二步：交换 hello（带随机数以保证每次得出不同密钥，客户端列出方案而服务器挑一个），以及服务器发证书（让客户端核验对面是真的服务器，核验细节源文不展开）。第二排两格是第三步与第四步：得出只有双方知道的共享秘密（此时字节流仍不安全，例如客户端用服务器的公钥加密一个秘密），以及两端各自在本地派生密钥（材料是共享秘密与 hello 里的随机数，密钥不过网络）。第三排两格是第五步与结束状态：交换确认（确认两边算出同一套秘密，并确认此前的消息没被篡改），以及握手结束之后所有消息都被加密并配合消息认证码防篡改。最下面一条是两样材料的分工：用共享秘密是为了让攻击者学不到密钥，用随机数是为了每次都派生不同的密钥。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="362" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">TLS 握手的五步：hello、证书、秘密交换、各自派生密钥、确认</text>
+  <rect x="25" y="64" width="342.5" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="196.25" y="80.65" font-size="9" fill="#1e40af" text-anchor="middle">第一步：交换 hello</text>
+  <text x="196.25" y="94.15" font-size="9" fill="#1e40af" text-anchor="middle">带随机数，保证每次得出不同密钥</text>
+  <text x="196.25" y="107.65" font-size="9" fill="#1e40af" text-anchor="middle">客户端列方案，服务器挑一个</text>
+  <rect x="392.5" y="64" width="342.5" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="563.75" y="80.65" font-size="9" fill="#1e40af" text-anchor="middle">第二步：服务器发证书</text>
+  <text x="563.75" y="94.15" font-size="9" fill="#1e40af" text-anchor="middle">让客户端核验对面是真的服务器</text>
+  <text x="563.75" y="107.65" font-size="9" fill="#1e40af" text-anchor="middle">核验的细节源文不展开</text>
+  <rect x="25" y="146" width="342.5" height="54" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="196.25" y="162.65" font-size="9" fill="#166534" text-anchor="middle">第三步：得出共享秘密</text>
+  <text x="196.25" y="176.15" font-size="9" fill="#166534" text-anchor="middle">此时字节流仍不安全</text>
+  <text x="196.25" y="189.65" font-size="9" fill="#166534" text-anchor="middle">例如客户端用服务器公钥加密一个秘密</text>
+  <rect x="392.5" y="146" width="342.5" height="54" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="563.75" y="162.65" font-size="9" fill="#166534" text-anchor="middle">第四步：两端各自派生密钥</text>
+  <text x="563.75" y="176.15" font-size="9" fill="#166534" text-anchor="middle">材料是共享秘密与 hello 里的随机数</text>
+  <text x="563.75" y="189.65" font-size="9" fill="#166534" text-anchor="middle">在两端本地独立完成，密钥不过网络</text>
+  <rect x="25" y="228" width="342.5" height="54" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="196.25" y="244.65" font-size="9" fill="#6b21a8" text-anchor="middle">第五步：交换确认</text>
+  <text x="196.25" y="258.15" font-size="9" fill="#6b21a8" text-anchor="middle">确认两边算出同一套秘密</text>
+  <text x="196.25" y="271.65" font-size="9" fill="#6b21a8" text-anchor="middle">并确认此前的消息没被篡改</text>
+  <rect x="392.5" y="228" width="342.5" height="54" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="563.75" y="244.65" font-size="9" fill="#6b21a8" text-anchor="middle">握手结束之后</text>
+  <text x="563.75" y="258.15" font-size="9" fill="#6b21a8" text-anchor="middle">所有消息都用密钥加密</text>
+  <text x="563.75" y="271.65" font-size="9" fill="#6b21a8" text-anchor="middle">并配合消息认证码防篡改</text>
+  <rect x="25" y="310" width="710" height="27" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="326.65" font-size="9" fill="#b45309" text-anchor="middle">两样材料的分工：用共享秘密是为了让攻击者学不到密钥；用随机数是为了每次都派生不同的密钥</text>
+</svg>

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 257.5" width="760" height="257.5"
+     role="img" aria-labelledby="fig-tls-4-title fig-tls-4-desc">
+  <title id="fig-tls-4-title">先有 TCP 的三次握手，才有 TLS 的握手</title>
+  <desc id="fig-tls-4-desc">上面一条说明 TLS 要做两件事：给字节流上的消息加密，以及用消息认证码防止攻击者改动路上传的消息。第二条说明要做加密就得先有密钥，所以 TLS 开始时多跑一次握手来交换密钥并核验服务器的身份。下面三格是这一步的顺序与意义：TCP 的三次握手照常先走；换来一条还不安全的字节流；意义是此后所有消息都不必再考虑单个报文。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="257.5" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">先有 TCP 的三次握手，才有 TLS 的握手</text>
+  <rect x="25" y="64" width="710" height="33" rx="6" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="380" y="84.35" font-size="11" fill="#1e40af" text-anchor="middle">TLS 要做两件事：给字节流上的消息加密；用消息认证码防止攻击者改动路上传的消息</text>
+  <rect x="25" y="125" width="710" height="30" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="380" y="143.5" font-size="10" fill="#1e293b" text-anchor="middle">要做加密就得先有密钥，所以 TLS 开始时多跑一次握手：交换密钥并核验服务器的身份</text>
+  <rect x="25" y="183" width="220" height="49.5" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="135" y="211.6" font-size="11" fill="#1e40af" text-anchor="middle">第一步：TCP 的三次握手照常先走</text>
+  <rect x="270" y="183" width="220" height="49.5" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="211.6" font-size="11" fill="#b45309" text-anchor="middle">换来的东西：一条还不安全的字节流</text>
+  <rect x="515" y="183" width="220" height="49.5" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="625" y="203.35" font-size="11" fill="#166534" text-anchor="middle">意义：此后消息都不必再</text>
+  <text x="625" y="219.85" font-size="11" fill="#166534" text-anchor="middle">考虑单个报文</text>
+</svg>
