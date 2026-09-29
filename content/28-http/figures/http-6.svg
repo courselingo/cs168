@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 267.0" width="760" height="267.0"
+     role="img" aria-labelledby="fig-http-6-title fig-http-6-desc">
+  <title id="fig-http-6-title">在终端里敲一次请求，读一次响应</title>
+  <desc id="fig-http-6-desc">左右两格对照。左边是敲进去的两行：GET / HTTP/1.1 与 User-Agent: robjs，意思是取这个站点的根页面。右边是回来的响应：HTTP/1.1 200 OK 交代版本与状态码，Date 交代生成时间，Content-Type 交代内容类型，最后一段是可以直接放进浏览器打开的 HTML。中间的箭头说明请求与响应是一问一答。底部一行点出这件事的意义：报文是纯文本，人可以直接读，源文用 telnet 连 80 端口演示了这一步。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="267.0" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">在终端里敲一次请求，读一次响应</text>
+  <rect x="22" y="76" width="345" height="90.0" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <rect x="393" y="76" width="345" height="90.0" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <rect x="22" y="191" width="716" height="54.0" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="194.5" y="98.2" font-size="12" fill="#1e40af" text-anchor="middle">请求</text>
+  <text x="194.5" y="116.2" font-size="12" fill="#1e40af" text-anchor="middle">GET / HTTP/1.1</text>
+  <text x="194.5" y="134.2" font-size="12" fill="#1e40af" text-anchor="middle">User-Agent: robjs</text>
+  <text x="194.5" y="152.2" font-size="12" fill="#1e40af" text-anchor="middle">（取这个站点的根页面）</text>
+  <text x="565.5" y="98.2" font-size="12" fill="#166534" text-anchor="middle">响应</text>
+  <text x="565.5" y="116.2" font-size="12" fill="#166534" text-anchor="middle">HTTP/1.1 200 OK</text>
+  <text x="565.5" y="134.2" font-size="12" fill="#166534" text-anchor="middle">Date: Sat, 16 Mar 2024 18:33:08 GMT</text>
+  <text x="565.5" y="152.2" font-size="12" fill="#166534" text-anchor="middle">Content-Type: text/html; charset=ISO-8859-1</text>
+  <text x="380.0" y="213.2" font-size="12" fill="#1e293b" text-anchor="middle">报文是纯文本，人可以直接读，也可以直接敲</text>
+  <text x="380.0" y="231.2" font-size="12" fill="#1e293b" text-anchor="middle">源文连的是 telnet google.com 80，响应最后一段就是一份 HTML</text>
+  <path d="M372,118.0 Q 377.0,118.0 382,118.0" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+  <path d="M388,124.0 Q 383.0,124.0 378,124.0" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+</svg>

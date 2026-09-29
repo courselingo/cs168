@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760.0 259.5" width="760.0" height="259.5"
+     role="img" aria-labelledby="fig-http-4-title fig-http-4-desc">
+  <title id="fig-http-4-title">状态码按首位分成五类</title>
+  <desc id="fig-http-4-desc">五格排成一行，每格第一行是一位数字，第二行是它管的那一类，后面两行各举一个例子。1 开头是信息；2 开头是成功，200 OK 与 201 Created；3 开头是重定向，301 永久与 302 临时；4 开头是客户端这一侧的错，401 未授权与 403 禁止；5 开头是服务器这一侧的错，500 内部错误与 503 不可用。底部一行说源文的落点：分类比分号重要，客户端是按类别决定下一步的。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760.0" height="259.5" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">状态码按首位分成五类</text>
+  <rect x="22.0" y="76" width="122.4" height="82.5" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <rect x="170.4" y="76" width="122.4" height="82.5" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <rect x="318.8" y="76" width="122.4" height="82.5" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <rect x="467.2" y="76" width="122.4" height="82.5" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <rect x="615.6" y="76" width="122.4" height="82.5" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <rect x="22" y="183.5" width="716" height="54.0" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="83.2" y="96.35" font-size="11" fill="#1e40af" text-anchor="middle">1 开头</text>
+  <text x="83.2" y="112.85" font-size="11" fill="#1e40af" text-anchor="middle">信息</text>
+  <text x="83.2" y="129.35" font-size="11" fill="#1e40af" text-anchor="middle">100</text>
+  <text x="83.2" y="145.85" font-size="11" fill="#1e40af" text-anchor="middle">继续</text>
+  <text x="231.6" y="96.35" font-size="11" fill="#166534" text-anchor="middle">2 开头</text>
+  <text x="231.6" y="112.85" font-size="11" fill="#166534" text-anchor="middle">成功</text>
+  <text x="231.6" y="129.35" font-size="11" fill="#166534" text-anchor="middle">200 OK</text>
+  <text x="231.6" y="145.85" font-size="11" fill="#166534" text-anchor="middle">201 已创建</text>
+  <text x="380.0" y="96.35" font-size="11" fill="#6b21a8" text-anchor="middle">3 开头</text>
+  <text x="380.0" y="112.85" font-size="11" fill="#6b21a8" text-anchor="middle">重定向</text>
+  <text x="380.0" y="129.35" font-size="11" fill="#6b21a8" text-anchor="middle">301 永久</text>
+  <text x="380.0" y="145.85" font-size="11" fill="#6b21a8" text-anchor="middle">302 临时</text>
+  <text x="528.4" y="96.35" font-size="11" fill="#b45309" text-anchor="middle">4 开头</text>
+  <text x="528.4" y="112.85" font-size="11" fill="#b45309" text-anchor="middle">客户端的错</text>
+  <text x="528.4" y="129.35" font-size="11" fill="#b45309" text-anchor="middle">401 未授权</text>
+  <text x="528.4" y="145.85" font-size="11" fill="#b45309" text-anchor="middle">403 禁止</text>
+  <text x="676.8" y="96.35" font-size="11" fill="#9d174d" text-anchor="middle">5 开头</text>
+  <text x="676.8" y="112.85" font-size="11" fill="#9d174d" text-anchor="middle">服务端的错</text>
+  <text x="676.8" y="129.35" font-size="11" fill="#9d174d" text-anchor="middle">500 内部错误</text>
+  <text x="676.8" y="145.85" font-size="11" fill="#9d174d" text-anchor="middle">503 不可用</text>
+  <text x="380.0" y="205.7" font-size="12" fill="#1e293b" text-anchor="middle">分类比分号更重要：客户端按类别决定下一步行为</text>
+  <text x="380.0" y="223.7" font-size="12" fill="#1e293b" text-anchor="middle">301 之后不再去原处找，302 之后可以回头再试</text>
+</svg>

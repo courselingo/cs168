@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 486.0" width="760" height="486.0"
+     role="img" aria-labelledby="fig-http-12-title fig-http-12-desc">
+  <title id="fig-http-12-title">CDN 铺得越靠前，请求走的距离越短</title>
+  <desc id="fig-http-12-desc">四格自上而下是四种铺法。不铺：请求穿过 ISP 的 WAN，跨过对等点，再穿过应用的 WAN，一直走到数据中心里的源服务器，时延最高，带宽用得最多。铺在应用网络边缘的对等点上：请求跨过对等点就到，应用网络里不再需要那么多带宽。铺进 ISP 的网络：用户到缓存的流量留在 ISP 内部，对等连接上只送一次。再往前就碰到成本与收益的权衡：家用部署太贵，而一份缓存要很多人共用才划算。底部一格是 2023 年的一份流量报告：Netflix 15%、YouTube 11.4%、Disney+ 4.5%，源文说只给这三家铺服务器就能少建 25% 的容量，而这三个份额相加是 30.9%，源文没有解释这个差。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="486.0" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">CDN 铺得越靠前，请求走的距离越短</text>
+  <rect x="22" y="76" width="716" height="54.0" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <rect x="22" y="155" width="716" height="54.0" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <rect x="22" y="234" width="716" height="54.0" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <rect x="22" y="313" width="716" height="54.0" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <rect x="22" y="392" width="716" height="72.0" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="380.0" y="98.2" font-size="12" fill="#9d174d" text-anchor="middle">不铺 CDN：请求穿过 ISP 的 WAN、跨过对等点，再穿过应用的 WAN</text>
+  <text x="380.0" y="116.2" font-size="12" fill="#9d174d" text-anchor="middle">一直走到数据中心里的源服务器：时延最高，带宽也最费</text>
+  <text x="380.0" y="177.2" font-size="12" fill="#b45309" text-anchor="middle">铺在应用网络边缘的对等点上：请求跨过对等点就碰到缓存</text>
+  <text x="380.0" y="195.2" font-size="12" fill="#b45309" text-anchor="middle">应用的 WAN 里不再需要跑那么多带宽，扩容只要加缓存</text>
+  <text x="380.0" y="256.2" font-size="12" fill="#166534" text-anchor="middle">铺进 ISP 的网络：用户到缓存的流量留在 ISP 内部</text>
+  <text x="380.0" y="274.2" font-size="12" fill="#166534" text-anchor="middle">对等连接上只送一次，ISP 因此也愿意让应用进来</text>
+  <text x="380.0" y="335.2" font-size="12" fill="#6b21a8" text-anchor="middle">再往前就是成本与收益的权衡：家用部署太贵</text>
+  <text x="380.0" y="353.2" font-size="12" fill="#6b21a8" text-anchor="middle">一份缓存要很多人共用才划算，铺到哪一层是省钱与花钱在比大小</text>
+  <text x="380.0" y="414.2" font-size="12" fill="#1e293b" text-anchor="middle">2023 年一份报告：Netflix 15%、YouTube 11.4%、Disney+ 4.5%</text>
+  <text x="380.0" y="432.2" font-size="12" fill="#1e293b" text-anchor="middle">源文说只给这三家铺服务器，就能少建 25% 的网络容量</text>
+  <text x="380.0" y="450.2" font-size="12" fill="#1e293b" text-anchor="middle">三个份额相加是 30.9%，与 25% 不是一个口径，源文没有解释这个差</text>
+  <path d="M380,135 Q 380,139.5 380,144" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+  <path d="M380,214 Q 380,218.5 380,223" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+  <path d="M380,293 Q 380,297.5 380,302" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+</svg>

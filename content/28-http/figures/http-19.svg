@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 259.5" width="760" height="259.5"
+     role="img" aria-labelledby="fig-http-19-title fig-http-19-desc">
+  <title id="fig-http-19-title">401 与 403 的分界</title>
+  <desc id="fig-http-19-desc">左右两格对照。401 Unauthorized 表示客户端还没有被允许访问，如果它证明身份，比如登录一下，也许就能访问，所以浏览器会弹登录框。403 Forbidden 表示客户端已经通过验证、服务器也认得它是谁，但它仍然不许看，所以浏览器只能报错。底部一行是分界：401 是服务器还不认得你，403 是认得了但不许。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="259.5" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">401 与 403 的分界</text>
+  <rect x="22" y="76" width="345" height="82.5" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <rect x="393" y="76" width="345" height="82.5" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <rect x="22" y="183.5" width="716" height="54.0" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="194.5" y="96.35" font-size="11" fill="#1e40af" text-anchor="middle">401 Unauthorized</text>
+  <text x="194.5" y="112.85" font-size="11" fill="#1e40af" text-anchor="middle">客户端还没有被允许访问</text>
+  <text x="194.5" y="129.35" font-size="11" fill="#1e40af" text-anchor="middle">证明身份之后也许就能看</text>
+  <text x="194.5" y="145.85" font-size="11" fill="#1e40af" text-anchor="middle">浏览器会弹登录框</text>
+  <text x="565.5" y="96.35" font-size="11" fill="#9d174d" text-anchor="middle">403 Forbidden</text>
+  <text x="565.5" y="112.85" font-size="11" fill="#9d174d" text-anchor="middle">身份已经认出来了</text>
+  <text x="565.5" y="129.35" font-size="11" fill="#9d174d" text-anchor="middle">但仍然不许看这份内容</text>
+  <text x="565.5" y="145.85" font-size="11" fill="#9d174d" text-anchor="middle">浏览器只能显示错误</text>
+  <text x="380.0" y="205.7" font-size="12" fill="#1e293b" text-anchor="middle">分别在于服务器认不认得你</text>
+  <text x="380.0" y="223.7" font-size="12" fill="#1e293b" text-anchor="middle">401 是还不认得，403 是认得但不许</text>
+</svg>

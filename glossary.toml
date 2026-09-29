@@ -953,3 +953,82 @@ notes = "机器里那块做收发的硬件；MAC 地址通常就烧在它上面"
 en = "wide-area network"
 zh = "广域网"
 notes = "跨长距离的网络；这一讲换到它对面的那个尺度：一个局域网内部"
+
+
+[[term]]
+en = "HyperText Transfer Protocol"
+zh = "超文本传输协议"
+key = "http"
+notes = "应用层里让客户端与服务器交换报文的协议；请求与响应都是人能读的明文，踩在 TCP 的字节流之上"
+
+[[term]]
+en = "HTTPS"
+zh = "安全超文本传输协议"
+notes = "HTTP 加上 TLS 的那一版；报文先加密再送进字节流，服务器在 443 端口上听连接"
+
+[[term]]
+en = "URL"
+zh = "统一资源定位符"
+notes = "指明要取哪一份资源的那个字符串；源文给的直觉是远端服务器上的文件路径，但服务器不必真按路径组织"
+
+[[term]]
+en = "HTTP method"
+zh = "HTTP 方法"
+notes = "请求第一行里那个动词，说明要对资源做什么：GET 取回来，POST 送上去，此外还有 PUT、HEAD 等"
+
+[[term]]
+en = "status code"
+zh = "状态码"
+notes = "响应第一行里的三位数字，让服务器交代这次请求的结果；按首位分成信息、成功、重定向、客户端出错、服务器出错五类"
+
+[[term]]
+en = "Content-Type"
+zh = "内容类型"
+notes = "表示首部里最常用的一个，说明这份内容是文字、图片还是视频；请求与响应都可以带它"
+
+[[term]]
+en = "Cache-Control"
+zh = "缓存控制"
+notes = "HTTP/1.1 引入的缓存首部，同时说谁能缓存与能存多久，例如 private, max-age=86400 表示只存本地、存一天"
+
+[[term]]
+en = "pipelining"
+zh = "流水线"
+notes = "在一条 TCP 连接上连着发出多个请求、不等前一个的响应；它与连接复用不是同一件事"
+
+[[term]]
+en = "private cache"
+zh = "私有缓存"
+notes = "跟着某一个客户端的缓存，典型位置是浏览器里那一块；不共享，但坏了也只影响自己"
+
+[[term]]
+en = "proxy cache"
+zh = "代理缓存"
+notes = "网络里、由网络运营者控制而不是应用控制的缓存；很多用户共用，但源服务器只能指望它守规矩"
+
+[[term]]
+en = "managed cache"
+zh = "受管缓存"
+notes = "网络里、由应用提供方控制的缓存；与源服务器同属一方，所以应用能决定把用户指到哪一台"
+
+[[term]]
+en = "content delivery network"
+zh = "内容分发网络"
+notes = "放在网络里替应用分发内容的一组服务器；可以看成受管缓存铺开之后的形态，离用户近既指地理近也指跳数少"
+
+[[term]]
+en = "origin server"
+zh = "源服务器"
+notes = "真正生成这份内容的那台服务器；缓存里没有的请求最后都回到它这里"
+
+[[term]]
+en = "server-side pushing"
+zh = "服务器推送"
+key = "server-side-push"
+notes = "HTTP/2 加的做法：客户端还没要，服务器先把可能需要的东西送过去，省掉一轮往返"
+
+[[term]]
+en = "Transport Layer Security"
+zh = "传输层安全"
+key = "tls"
+notes = "建在 TCP 之上的安全协议，双方交换密钥后把消息加密；HTTPS 就跑在它上面"

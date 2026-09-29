@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760.0 322.0" width="760.0" height="322.0"
+     role="img" aria-labelledby="fig-http-17-title fig-http-17-desc">
+  <title id="fig-http-17-title">DNS 负载均衡的粒度：一个解析器后面的用户只算一个</title>
+  <desc id="fig-http-17-desc">上排三格是一条链：旧金山、悉尼、伦敦、东京的客户端把查询交给同一台递归解析器，解析器再去问应用的名字服务器。中间一行是名字服务器看到的全部信息：查询来自这一个解析器。底部一行是结果：它只能给回一个地址，于是四个城市的用户都落到同一台服务器上。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760.0" height="322.0" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">DNS 负载均衡的粒度：一个解析器后面的用户只算一个</text>
+  <rect x="22" y="76" width="221.33" height="66.0" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <rect x="269.33" y="76" width="221.33" height="66.0" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <rect x="516.67" y="76" width="221.33" height="66.0" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <rect x="22" y="167" width="716" height="54.0" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <rect x="22" y="246" width="716" height="54.0" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="132.67" y="96.35" font-size="11" fill="#1e40af" text-anchor="middle">四个城市的客户端</text>
+  <text x="132.67" y="112.85" font-size="11" fill="#1e40af" text-anchor="middle">旧金山、悉尼、伦敦、东京</text>
+  <text x="132.67" y="129.35" font-size="11" fill="#1e40af" text-anchor="middle">都交给同一台解析器</text>
+  <text x="380.0" y="96.35" font-size="11" fill="#b45309" text-anchor="middle">一台递归解析器</text>
+  <text x="380.0" y="112.85" font-size="11" fill="#b45309" text-anchor="middle">把查询转发出去</text>
+  <text x="380.0" y="129.35" font-size="11" fill="#b45309" text-anchor="middle">应用只看得见它</text>
+  <text x="627.33" y="96.35" font-size="11" fill="#166534" text-anchor="middle">应用的名字服务器</text>
+  <text x="627.33" y="112.85" font-size="11" fill="#166534" text-anchor="middle">只能给回一个地址</text>
+  <text x="627.33" y="129.35" font-size="11" fill="#166534" text-anchor="middle">因为它看不见用户</text>
+  <text x="380.0" y="189.2" font-size="12" fill="#9d174d" text-anchor="middle">名字服务器看到的不是四个城市，而是同一个解析器</text>
+  <text x="380.0" y="207.2" font-size="12" fill="#9d174d" text-anchor="middle">它没有别的信息可用，只能回同一个地址</text>
+  <text x="380.0" y="268.2" font-size="12" fill="#1e293b" text-anchor="middle">结果：四个城市的用户都落到同一台服务器上</text>
+  <text x="380.0" y="286.2" font-size="12" fill="#1e293b" text-anchor="middle">源文把这个例子当作 DNS 那条路的粒度上限</text>
+  <path d="M248.33333333333334,109.0 Q 253.33333333333337,109.0 258.33333333333337,109.0" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+  <path d="M495.66666666666674,109.0 Q 500.66666666666674,109.0 505.66666666666674,109.0" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+  <path d="M380,147 Q 380,151.5 380,156" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+  <path d="M380,226 Q 380,230.5 380,235" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+</svg>

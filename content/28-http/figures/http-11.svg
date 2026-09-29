@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760.0 322.0" width="760.0" height="322.0"
+     role="img" aria-labelledby="fig-http-11-title fig-http-11-desc">
+  <title id="fig-http-11-title">把受管缓存铺到全网，就成了 CDN</title>
+  <desc id="fig-http-11-desc">上面一整格给定义：内容分发网络是一组放在网络里、替应用分发内容的服务器，可以把它看成受管缓存铺开之后的形态，离用户近既指地理上近，也指跳数少。下面三格并排是它换来的三件事：用户拿到更近的内容所以更快；应用加机器就能扩容，不必把一台源服务器买到顶；一台服务器倒了，用户还能被指到别的服务器上。底部一行说它相对另外两类的位置：与私有缓存比它是共享的，与代理缓存比它听应用的话。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760.0" height="322.0" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">把受管缓存铺到全网，就成了 CDN</text>
+  <rect x="22" y="76" width="716" height="54.0" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <rect x="22.0" y="155" width="221.33" height="66.0" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <rect x="269.33" y="155" width="221.33" height="66.0" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <rect x="516.67" y="155" width="221.33" height="66.0" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <rect x="22" y="246" width="716" height="54.0" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="380.0" y="98.2" font-size="12" fill="#166534" text-anchor="middle">内容分发网络是放在网络里、替应用分发内容的一组服务器</text>
+  <text x="380.0" y="116.2" font-size="12" fill="#166534" text-anchor="middle">它是受管缓存铺开之后的形态：离用户近，既指地理上近，也指跳数少</text>
+  <text x="132.67" y="175.35" font-size="11" fill="#1e40af" text-anchor="middle">用户</text>
+  <text x="132.67" y="191.85" font-size="11" fill="#1e40af" text-anchor="middle">从更近的服务器取内容</text>
+  <text x="132.67" y="208.35" font-size="11" fill="#1e40af" text-anchor="middle">性能更好</text>
+  <text x="380.0" y="175.35" font-size="11" fill="#b45309" text-anchor="middle">应用</text>
+  <text x="380.0" y="191.85" font-size="11" fill="#b45309" text-anchor="middle">加机器就能扩容</text>
+  <text x="380.0" y="208.35" font-size="11" fill="#b45309" text-anchor="middle">不必把源服务器买到顶</text>
+  <text x="627.33" y="175.35" font-size="11" fill="#6b21a8" text-anchor="middle">可靠性</text>
+  <text x="627.33" y="191.85" font-size="11" fill="#6b21a8" text-anchor="middle">一台倒了还能换一台</text>
+  <text x="627.33" y="208.35" font-size="11" fill="#6b21a8" text-anchor="middle">不会整个服务断掉</text>
+  <text x="380.0" y="268.2" font-size="12" fill="#1e293b" text-anchor="middle">与私有缓存比，它是共享的；与代理缓存比，它听应用的话</text>
+  <text x="380.0" y="286.2" font-size="12" fill="#1e293b" text-anchor="middle">应用既控制源服务器，也控制这些缓存，所以能把用户指过去</text>
+  <path d="M132.66666666666669,135 Q 132.66666666666669,139.5 132.66666666666669,144" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+  <path d="M380.00000000000006,135 Q 380.00000000000006,139.5 380.00000000000006,144" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+  <path d="M627.3333333333334,135 Q 627.3333333333334,139.5 627.3333333333334,144" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+  <path d="M380,226 Q 380,230.5 380,235" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+</svg>

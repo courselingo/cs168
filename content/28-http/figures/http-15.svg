@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 267.0" width="760" height="267.0"
+     role="img" aria-labelledby="fig-http-15-title fig-http-15-desc">
+  <title id="fig-http-15-title">内容段的对称：谁有数据，谁空着</title>
+  <desc id="fig-http-15-desc">四格分成两行两列。上面一行是 GET：请求的内容段是空的，因为我们只是在要一份东西；响应的内容段里有那份页面。下面一行是 POST 与 PUT：请求的内容段里就是我们要送上去的数据，而响应的内容段是空的。源文用两张配图讲的就是这组对称。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="267.0" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">内容段的对称：谁有数据，谁空着</text>
+  <rect x="22" y="76" width="345" height="72.0" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <rect x="393" y="76" width="345" height="72.0" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <rect x="22" y="173" width="345" height="72.0" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <rect x="393" y="173" width="345" height="72.0" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="194.5" y="98.2" font-size="12" fill="#1e40af" text-anchor="middle">GET 请求</text>
+  <text x="194.5" y="116.2" font-size="12" fill="#1e40af" text-anchor="middle">内容段是空的</text>
+  <text x="194.5" y="134.2" font-size="12" fill="#1e40af" text-anchor="middle">我们只是在要一份东西</text>
+  <text x="565.5" y="98.2" font-size="12" fill="#166534" text-anchor="middle">GET 响应</text>
+  <text x="565.5" y="116.2" font-size="12" fill="#166534" text-anchor="middle">内容段里有那份页面</text>
+  <text x="565.5" y="134.2" font-size="12" fill="#166534" text-anchor="middle">服务器把东西送回来</text>
+  <text x="194.5" y="195.2" font-size="12" fill="#b45309" text-anchor="middle">POST 与 PUT 请求</text>
+  <text x="194.5" y="213.2" font-size="12" fill="#b45309" text-anchor="middle">内容段里是要送上去的数据</text>
+  <text x="194.5" y="231.2" font-size="12" fill="#b45309" text-anchor="middle">填表提交就是这种</text>
+  <text x="565.5" y="195.2" font-size="12" fill="#9d174d" text-anchor="middle">POST 与 PUT 响应</text>
+  <text x="565.5" y="213.2" font-size="12" fill="#9d174d" text-anchor="middle">内容段是空的</text>
+  <text x="565.5" y="231.2" font-size="12" fill="#9d174d" text-anchor="middle">只有状态码与首部</text>
+</svg>

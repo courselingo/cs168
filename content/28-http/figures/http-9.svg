@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760.0 340.0" width="760.0" height="340.0"
+     role="img" aria-labelledby="fig-http-9-title fig-http-9-desc">
+  <title id="fig-http-9-title">缓存对三方的账，以及它管不到的那件事</title>
+  <desc id="fig-http-9-desc">上面三格并排：客户端因此少发一部分请求，页面来得更快；运营网络的 ISP 因此少建带宽；服务器因此少处理一批请求。中间一行是共同的落点：缓存离得近，往返时延就小，而吞吐量与往返时延成反比，视频这类大内容受益最多。底部一行是代价：内容会不会变决定它能不能缓存，静态的图片可以放心缓存，按人按时刻生成的页面只能回源服务器。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760.0" height="340.0" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">缓存对三方的账，以及它管不到的那件事</text>
+  <rect x="22.0" y="76" width="221.33" height="66.0" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <rect x="269.33" y="76" width="221.33" height="66.0" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <rect x="516.67" y="76" width="221.33" height="66.0" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <rect x="22" y="167" width="716" height="54.0" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <rect x="22" y="246" width="716" height="72.0" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="132.67" y="96.35" font-size="11" fill="#1e40af" text-anchor="middle">客户端</text>
+  <text x="132.67" y="112.85" font-size="11" fill="#1e40af" text-anchor="middle">少发一部分重复请求</text>
+  <text x="132.67" y="129.35" font-size="11" fill="#1e40af" text-anchor="middle">页面来得更快</text>
+  <text x="380.0" y="96.35" font-size="11" fill="#b45309" text-anchor="middle">ISP</text>
+  <text x="380.0" y="112.85" font-size="11" fill="#b45309" text-anchor="middle">网里少跑一批请求</text>
+  <text x="380.0" y="129.35" font-size="11" fill="#b45309" text-anchor="middle">可以少建带宽</text>
+  <text x="627.33" y="96.35" font-size="11" fill="#166534" text-anchor="middle">服务器</text>
+  <text x="627.33" y="112.85" font-size="11" fill="#166534" text-anchor="middle">少处理一批请求</text>
+  <text x="627.33" y="129.35" font-size="11" fill="#166534" text-anchor="middle">压力小一截</text>
+  <text x="380.0" y="189.2" font-size="12" fill="#6b21a8" text-anchor="middle">缓存离得近，往返时延就小；吞吐量与往返时延成反比，所以大内容受益最多</text>
+  <text x="380.0" y="207.2" font-size="12" fill="#6b21a8" text-anchor="middle">这一条与第 24 讲的吞吐量式子接得上</text>
+  <text x="380.0" y="268.2" font-size="12" fill="#9d174d" text-anchor="middle">代价在内容会不会变</text>
+  <text x="380.0" y="286.2" font-size="12" fill="#9d174d" text-anchor="middle">静态的图片、视频可以放心缓存，动态生成的搜索页只能回源服务器</text>
+  <text x="380.0" y="304.2" font-size="12" fill="#9d174d" text-anchor="middle">源文由此给出一条分法：大的静态内容放缓存，小的动态内容去源头拿</text>
+  <path d="M132.66666666666669,147 Q 132.66666666666669,151.5 132.66666666666669,156" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+  <path d="M380.00000000000006,147 Q 380.00000000000006,151.5 380.00000000000006,156" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+  <path d="M627.3333333333334,147 Q 627.3333333333334,151.5 627.3333333333334,156" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+  <path d="M380,226 Q 380,230.5 380,235" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+</svg>

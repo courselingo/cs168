@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 334.0" width="760" height="334.0"
+     role="img" aria-labelledby="fig-http-18-title fig-http-18-desc">
+  <title id="fig-http-18-title">两代缓存首部并存时，谁说了算</title>
+  <desc id="fig-http-18-desc">上面一行是两个首部：Expires 是 HTTP/1.0 留下的写法，说明数据能缓存到什么时候；Cache-Control 是 HTTP/1.1 引入的，同时说谁能缓存与能存多久。下面一行是两种客户端：1.0 的客户端读不懂新的那个，只按 Expires 判断；1.1 的客户端认得两个，优先信 Cache-Control。底部一行说源文给的做法：为了兼容，有些服务器会把两个首部一起返回。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="334.0" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">两代缓存首部并存时，谁说了算</text>
+  <rect x="22" y="76" width="345" height="66.0" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <rect x="393" y="76" width="345" height="66.0" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <rect x="22" y="167" width="345" height="66.0" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <rect x="393" y="167" width="345" height="66.0" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <rect x="22" y="258" width="716" height="54.0" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="194.5" y="96.35" font-size="11" fill="#b45309" text-anchor="middle">Expires</text>
+  <text x="194.5" y="112.85" font-size="11" fill="#b45309" text-anchor="middle">HTTP/1.0 留下的写法</text>
+  <text x="194.5" y="129.35" font-size="11" fill="#b45309" text-anchor="middle">说明数据能缓存到什么时候</text>
+  <text x="565.5" y="96.35" font-size="11" fill="#1e40af" text-anchor="middle">Cache-Control</text>
+  <text x="565.5" y="112.85" font-size="11" fill="#1e40af" text-anchor="middle">HTTP/1.1 引入的写法</text>
+  <text x="565.5" y="129.35" font-size="11" fill="#1e40af" text-anchor="middle">谁能缓存、能存多久</text>
+  <text x="194.5" y="187.35" font-size="11" fill="#1e293b" text-anchor="middle">HTTP/1.0 的客户端</text>
+  <text x="194.5" y="203.85" font-size="11" fill="#1e293b" text-anchor="middle">读不懂新的那个首部</text>
+  <text x="194.5" y="220.35" font-size="11" fill="#1e293b" text-anchor="middle">只按 Expires 判断</text>
+  <text x="565.5" y="187.35" font-size="11" fill="#166534" text-anchor="middle">HTTP/1.1 的客户端</text>
+  <text x="565.5" y="203.85" font-size="11" fill="#166534" text-anchor="middle">认得两个首部</text>
+  <text x="565.5" y="220.35" font-size="11" fill="#166534" text-anchor="middle">优先信 Cache-Control</text>
+  <text x="380.0" y="280.2" font-size="12" fill="#1e293b" text-anchor="middle">为了兼容，有些服务器会把两个首部一起返回</text>
+  <text x="380.0" y="298.2" font-size="12" fill="#1e293b" text-anchor="middle">两代客户端各读各的，谁也不必改自己的规矩</text>
+  <path d="M194.5,147 Q 194.5,151.5 194.5,156" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+  <path d="M565.5,147 Q 565.5,151.5 565.5,156" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+</svg>

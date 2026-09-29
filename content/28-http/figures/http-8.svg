@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760.0 396.0" width="760.0" height="396.0"
+     role="img" aria-labelledby="fig-http-8-title fig-http-8-desc">
+  <title id="fig-http-8-title">三类缓存：在哪、谁控制、能不能共享</title>
+  <desc id="fig-http-8-desc">一张三列四行的对照表。三列是私有缓存、代理缓存、受管缓存；三行问同一组问题：它在哪儿，谁控制它，能不能被很多人共用。私有缓存在端主机上，由客户端自己控制，只有自己用；代理缓存在网络里，由网络运营者控制，很多人共用；受管缓存也在网络里，也很多人共用，但由应用提供方控制。底部一行说清这一点为什么重要：应用能指挥受管缓存，却只能信任代理缓存。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760.0" height="396.0" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">三类缓存：在哪、谁控制、能不能共享</text>
+  <rect x="22" y="76" width="221.33" height="36.0" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <rect x="269.33" y="76" width="221.33" height="36.0" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <rect x="516.67" y="76" width="221.33" height="36.0" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <rect x="22.0" y="137" width="221.33" height="36.0" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <rect x="269.33" y="137" width="221.33" height="36.0" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <rect x="516.67" y="137" width="221.33" height="36.0" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <rect x="22.0" y="198" width="221.33" height="36.0" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <rect x="269.33" y="198" width="221.33" height="36.0" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <rect x="516.67" y="198" width="221.33" height="36.0" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <rect x="22.0" y="259" width="221.33" height="36.0" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <rect x="269.33" y="259" width="221.33" height="36.0" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <rect x="516.67" y="259" width="221.33" height="36.0" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <rect x="22" y="320" width="716" height="54.0" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="132.67" y="98.2" font-size="12" fill="#1e40af" text-anchor="middle">私有缓存</text>
+  <text x="380.0" y="98.2" font-size="12" fill="#b45309" text-anchor="middle">代理缓存</text>
+  <text x="627.33" y="98.2" font-size="12" fill="#166534" text-anchor="middle">受管缓存</text>
+  <text x="132.67" y="159.2" font-size="12" fill="#1e293b" text-anchor="middle">端主机上，在浏览器里</text>
+  <text x="380.0" y="159.2" font-size="12" fill="#1e293b" text-anchor="middle">网络里，不在端主机上</text>
+  <text x="627.33" y="159.2" font-size="12" fill="#1e293b" text-anchor="middle">网络里，不在端主机上</text>
+  <text x="132.67" y="220.2" font-size="12" fill="#1e293b" text-anchor="middle">由客户端自己控制</text>
+  <text x="380.0" y="220.2" font-size="12" fill="#1e293b" text-anchor="middle">由网络运营者控制</text>
+  <text x="627.33" y="220.2" font-size="12" fill="#1e293b" text-anchor="middle">由应用提供方控制</text>
+  <text x="132.67" y="281.2" font-size="12" fill="#1e293b" text-anchor="middle">只有自己用，不共享</text>
+  <text x="380.0" y="281.2" font-size="12" fill="#1e293b" text-anchor="middle">很多人共用</text>
+  <text x="627.33" y="281.2" font-size="12" fill="#1e293b" text-anchor="middle">很多人共用</text>
+  <text x="380.0" y="342.2" font-size="12" fill="#1e293b" text-anchor="middle">应用能指挥受管缓存，对代理缓存只能指望它守规矩</text>
+  <text x="380.0" y="360.2" font-size="12" fill="#1e293b" text-anchor="middle">私有缓存坏了只影响自己，所以它最不需要被管</text>
+</svg>

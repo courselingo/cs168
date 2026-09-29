@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 457.0" width="760" height="457.0"
+     role="img" aria-labelledby="fig-http-10-title fig-http-10-desc">
+  <title id="fig-http-10-title">缓存靠首部来管：存多久、谁能存、不能存、用前再验</title>
+  <desc id="fig-http-10-desc">五格自上而下。第一格是 HTTP/1.0 留下的 Expires，它给出数据能缓存到什么时候。第二格是 HTTP/1.1 的 Cache-Control，它同时说谁能缓存与能存多久，例子写的是 private 与 max-age:86400，也就是一天。第三格是不能缓存的情形，服务器用 no-store 明确禁止。第四格是更细的策略：用一次 HEAD 请求回头核对，变了就把缓存作废。底部一行登记源文的写法：源文写 max-age:86400，而这一项在规范里的写法是 max-age=86400。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="457.0" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">缓存靠首部来管：存多久、谁能存、不能存、用前再验</text>
+  <rect x="22" y="76" width="716" height="36.0" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <rect x="22" y="137" width="716" height="36.0" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <rect x="22" y="198" width="716" height="36.0" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <rect x="22" y="259" width="716" height="36.0" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <rect x="22" y="320" width="716" height="36.0" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <rect x="22" y="381" width="716" height="54.0" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="380.0" y="98.2" font-size="12" fill="#1e40af" text-anchor="middle">Expires：HTTP/1.0 留下的写法，它给出数据能缓存到什么时候</text>
+  <text x="380.0" y="159.2" font-size="12" fill="#1e40af" text-anchor="middle">Cache-Control：HTTP/1.1 引入，谁能缓存、能存多久都写在这里</text>
+  <text x="380.0" y="220.2" font-size="12" fill="#b45309" text-anchor="middle">Cache-Control: private, max-age:86400：只存在本地缓存，能存一天</text>
+  <text x="380.0" y="281.2" font-size="12" fill="#b45309" text-anchor="middle">Cache-Control: no-store：明确禁止缓存，客户端与代理都不许留</text>
+  <text x="380.0" y="342.2" font-size="12" fill="#6b21a8" text-anchor="middle">更细的策略：用一次 HEAD 请求回头核对，数据变了就把缓存作废</text>
+  <text x="380.0" y="403.2" font-size="12" fill="#9d174d" text-anchor="middle">源文把这一项写成 max-age:86400；规范里的写法是 max-age=86400</text>
+  <text x="380.0" y="421.2" font-size="12" fill="#9d174d" text-anchor="middle">本页照录源文的写法，并在正文里点明这一处</text>
+  <path d="M380,117 Q 380,121.5 380,126" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+  <path d="M380,178 Q 380,182.5 380,187" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+  <path d="M380,239 Q 380,243.5 380,248" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+  <path d="M380,300 Q 380,304.5 380,309" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+</svg>

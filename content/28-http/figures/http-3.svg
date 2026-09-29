@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 396.0" width="760" height="396.0"
+     role="img" aria-labelledby="fig-http-3-title fig-http-3-desc">
+  <title id="fig-http-3-title">一个请求报文里的四段</title>
+  <desc id="fig-http-3-desc">左边一列是终端里敲进去的原文，右边一列逐行说明：方法说做什么，URL 说对哪个资源做，版本说用哪一版 HTTP，最后一段是要送出去的数据。底部一行登记源文的措辞：源文写「三部分」，而它随后列出了四项，可选内容也在其中，本页按四项读。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="396.0" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">一个请求报文里的四段</text>
+  <rect x="22" y="76" width="345" height="36.0" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <rect x="393" y="76" width="345" height="36.0" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <rect x="22" y="137" width="345" height="36.0" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <rect x="393" y="137" width="345" height="36.0" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <rect x="22" y="198" width="345" height="36.0" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <rect x="393" y="198" width="345" height="36.0" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <rect x="22" y="259" width="345" height="36.0" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <rect x="393" y="259" width="345" height="36.0" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <rect x="22" y="320" width="716" height="54.0" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="194.5" y="98.2" font-size="12" fill="#1e293b" text-anchor="middle">POST /send-money HTTP/1.1</text>
+  <text x="565.5" y="98.2" font-size="12" fill="#1e293b" text-anchor="middle">方法：要做什么</text>
+  <text x="194.5" y="159.2" font-size="12" fill="#1e293b" text-anchor="middle">/send-money</text>
+  <text x="565.5" y="159.2" font-size="12" fill="#1e293b" text-anchor="middle">URL：对哪个资源做</text>
+  <text x="194.5" y="220.2" font-size="12" fill="#1e293b" text-anchor="middle">HTTP/1.1</text>
+  <text x="565.5" y="220.2" font-size="12" fill="#1e293b" text-anchor="middle">版本：用哪一版 HTTP</text>
+  <text x="194.5" y="281.2" font-size="12" fill="#1e40af" text-anchor="middle">target=alice&amp;amp;amount=10</text>
+  <text x="565.5" y="281.2" font-size="12" fill="#1e293b" text-anchor="middle">内容：要送出去的数据（可选）</text>
+  <text x="380.0" y="342.2" font-size="12" fill="#9d174d" text-anchor="middle">源文把前三段叫三部分，然后把可选内容单列出来</text>
+  <text x="380.0" y="360.2" font-size="12" fill="#9d174d" text-anchor="middle">本页按四段读它：方法、URL、版本、内容</text>
+</svg>

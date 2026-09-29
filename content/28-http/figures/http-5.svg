@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760.0 355.0" width="760.0" height="355.0"
+     role="img" aria-labelledby="fig-http-5-title fig-http-5-desc">
+  <title id="fig-http-5-title">首部按出现的场合分成三个方向</title>
+  <desc id="fig-http-5-desc">上面一整格给出首部的定义：它是关于内容的元数据，本身不是内容，请求与响应都可以带。下面三格并排。请求首部跟着请求走：Accept 说想要什么类型，User-Agent 说客户端是什么程序，Host 说访问哪个站点，Referer 说这次请求从哪来。响应首部跟着响应走：Content-Encoding 说这些比特怎么解释，Date 说服务器什么时候生成，Location 说资源搬去了哪里。表示首部两边都用，Content-Type 说这份内容是什么类型。底部一行登记源文的说法：HTTP/1.1 里没有哪个首部是必须带的。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760.0" height="355.0" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">首部按出现的场合分成三个方向</text>
+  <rect x="22" y="76" width="716" height="54.0" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <rect x="22" y="155" width="221.33" height="99.0" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <rect x="269.33" y="155" width="221.33" height="99.0" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <rect x="516.67" y="155" width="221.33" height="99.0" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <rect x="22" y="279" width="716" height="54.0" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="380.0" y="98.2" font-size="12" fill="#1e293b" text-anchor="middle">首部是关于内容的元数据，不是内容本身</text>
+  <text x="380.0" y="116.2" font-size="12" fill="#1e293b" text-anchor="middle">它让 HTTP 能装下各种应用，也让它能扩展</text>
+  <text x="132.67" y="175.35" font-size="11" fill="#1e40af" text-anchor="middle">请求首部</text>
+  <text x="132.67" y="191.85" font-size="11" fill="#1e40af" text-anchor="middle">Accept：想要什么类型</text>
+  <text x="132.67" y="208.35" font-size="11" fill="#1e40af" text-anchor="middle">User-Agent：什么程序</text>
+  <text x="132.67" y="224.85" font-size="11" fill="#1e40af" text-anchor="middle">Host：访问哪个站点</text>
+  <text x="132.67" y="241.35" font-size="11" fill="#1e40af" text-anchor="middle">Referer：从哪来</text>
+  <text x="380.0" y="175.35" font-size="11" fill="#166534" text-anchor="middle">响应首部</text>
+  <text x="380.0" y="191.85" font-size="11" fill="#166534" text-anchor="middle">Content-Encoding：怎么解释</text>
+  <text x="380.0" y="208.35" font-size="11" fill="#166534" text-anchor="middle">Date：什么时候生成的</text>
+  <text x="380.0" y="224.85" font-size="11" fill="#166534" text-anchor="middle">Location：资源搬去哪了</text>
+  <text x="380.0" y="241.35" font-size="11" fill="#166534" text-anchor="middle">跟着响应一起回来</text>
+  <text x="627.33" y="175.35" font-size="11" fill="#6b21a8" text-anchor="middle">表示首部</text>
+  <text x="627.33" y="191.85" font-size="11" fill="#6b21a8" text-anchor="middle">Content-Type：什么类型</text>
+  <text x="627.33" y="208.35" font-size="11" fill="#6b21a8" text-anchor="middle">请求与响应都用它</text>
+  <text x="627.33" y="224.85" font-size="11" fill="#6b21a8" text-anchor="middle">文字、图片、视频各不同</text>
+  <text x="627.33" y="241.35" font-size="11" fill="#6b21a8" text-anchor="middle">同一套协议装下各种内容</text>
+  <text x="380.0" y="301.2" font-size="12" fill="#9d174d" text-anchor="middle">源文说 HTTP/1.1 里没有哪个首部是必须带上的</text>
+  <text x="380.0" y="319.2" font-size="12" fill="#9d174d" text-anchor="middle">按 RFC 7230，请求里的 Host 是必须的，本页在正文里点明了这处出入</text>
+  <path d="M132.66666666666669,135 Q 132.66666666666669,139.5 132.66666666666669,144" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+  <path d="M380.00000000000006,135 Q 380.00000000000006,139.5 380.00000000000006,144" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+  <path d="M627.3333333333334,135 Q 627.3333333333334,139.5 627.3333333333334,144" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+</svg>

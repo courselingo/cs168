@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 180.5" width="760" height="180.5"
+     role="img" aria-labelledby="fig-http-16-title fig-http-16-desc">
+  <title id="fig-http-16-title">任播的毛病只在长连接上出现</title>
+  <desc id="fig-http-16-desc">左右两格对照。左边是链路正常时：多台服务器宣告同一个地址前缀，路由算法挑最近的那一台，连接就停在那一台上。右边是中间那条链路断了以后：路由器看到的还是同一堆地址，往上转给哪一台都算对，于是可能改发给另一台，可那台接不上原来的 TCP 连接。源文顺手对比了一句，DNS 用任播没有这个问题，因为它的连接很短。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="180.5" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">任播的毛病只在长连接上出现</text>
+  <rect x="22" y="76" width="345" height="82.5" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <rect x="393" y="76" width="345" height="66.0" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="194.5" y="96.35" font-size="11" fill="#166534" text-anchor="middle">链路没断的时候</text>
+  <text x="194.5" y="112.85" font-size="11" fill="#166534" text-anchor="middle">多台服务器宣告同一个前缀</text>
+  <text x="194.5" y="129.35" font-size="11" fill="#166534" text-anchor="middle">路由算法挑最近的一台</text>
+  <text x="194.5" y="145.85" font-size="11" fill="#166534" text-anchor="middle">连接停在那一台上</text>
+  <text x="565.5" y="96.35" font-size="11" fill="#9d174d" text-anchor="middle">中间那条链路断了</text>
+  <text x="565.5" y="112.85" font-size="11" fill="#9d174d" text-anchor="middle">路由器改发另一台同地址的服务器</text>
+  <text x="565.5" y="129.35" font-size="11" fill="#9d174d" text-anchor="middle">它接不上原来的 TCP 连接</text>
+</svg>
