@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 354.5" width="760" height="354.5"
+     role="img" aria-labelledby="fig-cci25-9-title fig-cci25-9-desc">
+  <title id="fig-cci25-9-title">两件事纠缠在一起：耦合的证据、好处与代价，以及两个方向都拆不开</title>
+  <desc id="fig-cci25-9-desc">上排两格是耦合在算法写法上的两处证据：窗口在确认与超时上更新，因为可靠性代码就是为这两个事件写的；丢包用重复确认检测，因为可靠性用的是累积确认。第二排两格是把它当成一个设计选择的好处（当年只是一小块代码补丁，能在 1980 年代拥塞崩溃后被迅速铺开）与代价（两边演进互相牵制）。下面一条是源文的判断：这是模块化的失败而不是分层的失败。最后一排两格是拆不开的两个方向：要拥塞控制不要可靠性（视频流这一类）做不到，要可靠性不要拥塞控制（每 10 分钟发一个分组的轻连接）也做不到。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="354.5" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">两件事纠缠在一起：耦合的证据、好处与代价，以及两个方向都拆不开</text>
+  <rect x="25" y="64" width="342.5" height="49.5" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="196.25" y="84.35" font-size="11" fill="#b45309" text-anchor="middle">耦合证据一</text>
+  <text x="196.25" y="100.85" font-size="11" fill="#b45309" text-anchor="middle">窗口在确认与超时上更新，因为可靠性代码就是为这两个事件写的</text>
+  <rect x="392.5" y="64" width="342.5" height="49.5" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="563.75" y="84.35" font-size="11" fill="#b45309" text-anchor="middle">耦合证据二</text>
+  <text x="563.75" y="100.85" font-size="11" fill="#b45309" text-anchor="middle">丢包用重复确认检测，因为可靠性用的是累积确认</text>
+  <rect x="25" y="141.5" width="342.5" height="49.5" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="196.25" y="161.85" font-size="11" fill="#166534" text-anchor="middle">合成一个设计选择的好处</text>
+  <text x="196.25" y="178.35" font-size="11" fill="#166534" text-anchor="middle">当年只是一小块代码补丁，能在 1980 年代拥塞崩溃后被迅速铺开</text>
+  <rect x="392.5" y="141.5" width="342.5" height="49.5" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="563.75" y="161.85" font-size="11" fill="#166534" text-anchor="middle">代价</text>
+  <text x="563.75" y="178.35" font-size="11" fill="#166534" text-anchor="middle">两边演进互相牵制，改一个往往要动另一个</text>
+  <rect x="25" y="219" width="710" height="33" rx="6" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="380" y="239.35" font-size="11" fill="#1e40af" text-anchor="middle">源文的判断：这是模块化的失败，不是分层的失败；两者都在正确的抽象层上，问题出在传输层内部</text>
+  <rect x="25" y="280" width="342.5" height="49.5" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="196.25" y="300.35" font-size="11" fill="#1e293b" text-anchor="middle">想要拥塞控制不要可靠性</text>
+  <text x="196.25" y="316.85" font-size="11" fill="#1e293b" text-anchor="middle">视频流这一类：做不到</text>
+  <rect x="392.5" y="280" width="342.5" height="49.5" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="563.75" y="300.35" font-size="11" fill="#1e293b" text-anchor="middle">想要可靠性不要拥塞控制</text>
+  <text x="563.75" y="316.85" font-size="11" fill="#1e293b" text-anchor="middle">每 10 分钟发一个分组的轻连接：也做不到</text>
+</svg>

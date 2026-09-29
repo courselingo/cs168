@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 336.5" width="760" height="336.5"
+     role="img" aria-labelledby="fig-cci25-1-title fig-cci25-1-desc">
+  <title id="fig-cci25-1-title">这一讲的五个问题与它们接的讲</title>
+  <desc id="fig-cci25-1-desc">上面一条说明这是源文列出的五个问题。中间一排五格按源文顺序列出：把损坏当成拥塞、短连接、队列被填满、作弊、以及与可靠性纠缠在一起。下面两格标出其中两件接的是哪一讲：第一件用第 24 讲那条只认丢包率的算式，第五件用第 23 讲的实现细节，也就是窗口在确认与超时上更新、丢包靠重复确认发现。最下面一条把五件分成两组：前四件是算法本身的副作用，最后一件是当年的实现方式留下的债。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="336.5" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">这一讲的五个问题与它们接的讲</text>
+  <rect x="25" y="64" width="710" height="36" rx="6" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="380" y="86.2" font-size="12" fill="#1e40af" text-anchor="middle">源文列出的五个问题，按源文顺序</text>
+  <rect x="25" y="128" width="122" height="45" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="86" y="146.5" font-size="10" fill="#1e40af" text-anchor="middle">① 把损坏</text>
+  <text x="86" y="161.5" font-size="10" fill="#1e40af" text-anchor="middle">当成拥塞</text>
+  <rect x="172" y="128" width="122" height="45" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="233" y="154" font-size="10" fill="#1e40af" text-anchor="middle">② 短连接</text>
+  <rect x="319" y="128" width="122" height="45" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="154" font-size="10" fill="#1e40af" text-anchor="middle">③ 队列被填满</text>
+  <rect x="466" y="128" width="122" height="45" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="527" y="154" font-size="10" fill="#1e40af" text-anchor="middle">④ 作弊</text>
+  <rect x="613" y="128" width="122" height="45" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="674" y="146.5" font-size="10" fill="#1e40af" text-anchor="middle">⑤ 与可靠性</text>
+  <text x="674" y="161.5" font-size="10" fill="#1e40af" text-anchor="middle">纠缠在一起</text>
+  <rect x="25" y="201" width="342.5" height="49.5" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="196.25" y="221.35" font-size="11" fill="#166534" text-anchor="middle">接着第 24 讲</text>
+  <text x="196.25" y="237.85" font-size="11" fill="#166534" text-anchor="middle">算式只认丢包率</text>
+  <rect x="392.5" y="201" width="342.5" height="49.5" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="563.75" y="221.35" font-size="11" fill="#166534" text-anchor="middle">接着第 23 讲</text>
+  <text x="563.75" y="237.85" font-size="11" fill="#166534" text-anchor="middle">窗口在确认与超时上更新，丢包靠重复确认发现</text>
+  <rect x="25" y="278.5" width="710" height="33" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380" y="298.85" font-size="11" fill="#6b21a8" text-anchor="middle">前四件是算法本身的副作用，最后一件是当年的实现方式留下的债</text>
+</svg>

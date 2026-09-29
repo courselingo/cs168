@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 385.5" width="760" height="385.5"
+     role="img" aria-labelledby="fig-cci25-6-title fig-cci25-6-desc">
+  <title id="fig-cci25-6-title">拥塞控制协议的分类：TCP 在基于丢包那一支，BBR 在基于时延那一支</title>
+  <desc id="fig-cci25-6-desc">上面一条是分类树的根：拥塞控制协议。第二排三格是它的三个分支：预约、定价与动态调整。第三排两格把动态调整再分成主机端与路由器辅助。第四排两格把主机端分成基于丢包与基于时延，并分别标出 TCP 与 BBR 各自的位置。最下面一条说明这张图对应源文那张分类图。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="385.5" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">拥塞控制协议的分类：TCP 在基于丢包那一支，BBR 在基于时延那一支</text>
+  <rect x="25" y="64" width="710" height="36" rx="6" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="380" y="86.2" font-size="12" fill="#1e40af" text-anchor="middle">拥塞控制协议</text>
+  <rect x="25" y="128" width="220" height="33" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="135" y="148.35" font-size="11" fill="#1e40af" text-anchor="middle">预约</text>
+  <rect x="270" y="128" width="220" height="33" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="148.35" font-size="11" fill="#1e40af" text-anchor="middle">定价</text>
+  <rect x="515" y="128" width="220" height="33" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="625" y="148.35" font-size="11" fill="#1e40af" text-anchor="middle">动态调整</text>
+  <rect x="25" y="189" width="342.5" height="33" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="196.25" y="209.35" font-size="11" fill="#166534" text-anchor="middle">主机端</text>
+  <rect x="392.5" y="189" width="342.5" height="33" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="563.75" y="209.35" font-size="11" fill="#166534" text-anchor="middle">路由器辅助</text>
+  <rect x="25" y="250" width="342.5" height="49.5" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="196.25" y="270.35" font-size="11" fill="#b45309" text-anchor="middle">基于丢包</text>
+  <text x="196.25" y="286.85" font-size="11" fill="#b45309" text-anchor="middle">TCP 在这里</text>
+  <rect x="392.5" y="250" width="342.5" height="49.5" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="563.75" y="270.35" font-size="11" fill="#b45309" text-anchor="middle">基于时延</text>
+  <text x="563.75" y="286.85" font-size="11" fill="#b45309" text-anchor="middle">BBR 在这里</text>
+  <rect x="25" y="327.5" width="710" height="33" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="380" y="347.85" font-size="11" fill="#1e293b" text-anchor="middle">这是源文那张分类图的内容；TCP 与 BBR 分别落在主机端的两支上</text>
+</svg>

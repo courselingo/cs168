@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 321.5" width="760" height="321.5"
+     role="img" aria-labelledby="fig-cci25-7-title fig-cci25-7-desc">
+  <title id="fig-cci25-7-title">作弊：加法增快一倍，反复加减就收敛到一条坏公平线上</title>
+  <desc id="fig-cci25-7-desc">上面一条是两条连接的唯一区别：诚实方每个 RTT 加 1，作弊方每个 RTT 加 2。中间两格是后果：反复加减的动力学收敛到一条坏的公平线，结果是作弊方拿到诚实方的两倍带宽。下面一条给出源文配图上的两条线：效率线 X 加 Y 等于 1、坏公平线 X 等于 2Y，收敛点是两条线的交点。最下面一条是源文补的一句：能改的地方不止这一处，例如把初始窗口设得非常大。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="321.5" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">作弊：加法增快一倍，反复加减就收敛到一条坏公平线上</text>
+  <rect x="25" y="64" width="710" height="33" rx="6" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="380" y="84.35" font-size="11" fill="#1e40af" text-anchor="middle">两条连接的区别只在加法增：诚实方每个 RTT 加 1，作弊方每个 RTT 加 2</text>
+  <rect x="25" y="125" width="342.5" height="49.5" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="196.25" y="145.35" font-size="11" fill="#b45309" text-anchor="middle">反复加减的动力学</text>
+  <text x="196.25" y="161.85" font-size="11" fill="#b45309" text-anchor="middle">会收敛到一条坏的公平线</text>
+  <rect x="392.5" y="125" width="342.5" height="49.5" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="563.75" y="145.35" font-size="11" fill="#b45309" text-anchor="middle">收敛的结果</text>
+  <text x="563.75" y="161.85" font-size="11" fill="#b45309" text-anchor="middle">作弊方拿到诚实方的两倍带宽</text>
+  <rect x="25" y="202.5" width="710" height="33" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="222.85" font-size="11" fill="#1e40af" text-anchor="middle">源文配图上的两条线：效率线 X + Y = 1，坏公平线 X = 2Y，收敛点是两条线的交点</text>
+  <rect x="25" y="263.5" width="710" height="33" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="380" y="283.85" font-size="11" fill="#1e293b" text-anchor="middle">源文补的一句：能改的地方不止这一处，例如把初始窗口设得非常大</text>
+</svg>

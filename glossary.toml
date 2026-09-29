@@ -748,3 +748,43 @@ notes = "源文也叫 equation-based：不按丢包动态调速率的规则办�
 en = "TCP-friendly"
 zh = "TCP 友好"
 notes = "替代实现的判据：与 TCP 共存时该降速就降速，因而不会比同样情形下的 TCP 多吃带宽；一条链路上两种实现混跑也能公平分享（第 24 讲）"
+
+[[term]]
+en = "corruption"
+zh = "损坏"
+notes = "分组在链路上被改动而内容出错；它与拥塞是丢包的两个不同来源，而 TCP 只看得到丢包这个结果"
+
+[[term]]
+en = "bufferbloat"
+zh = "缓冲膨胀"
+notes = "路由器把队列做得过大，导致排队时延长期偏高；源头是缓冲区容量远超所需的带宽时延积"
+
+[[term]]
+en = "fair queuing"
+zh = "公平排队"
+notes = "路由器按连接分队列、按公平的方式挑队列发送，用排队本身强制跨连接的公平；它只保证一条链路上的分配（第 26 讲）"
+
+[[term]]
+en = "max-min fairness"
+zh = "最大最小公平"
+notes = "分配口径 a_i = min(f, r_i)，f 是唯一让所有 a_i 之和等于总容量的值；等长分组下轮询就是这种分配（第 26 讲）"
+
+[[term]]
+en = "round-robin"
+zh = "轮询"
+notes = "依次从每个队列各取一个分组发送；分组等长时它是最大最小公平的一种实现（第 26 讲）"
+
+[[term]]
+en = "first-in-first-out"
+zh = "先进先出"
+notes = "默认的队列纪律：按到达顺序送出，路由器不区分分组属于哪条连接；源文缩写成 FIFO（第 26 讲）"
+
+[[term]]
+en = "explicit congestion notification"
+zh = "显式拥塞通知"
+notes = "IP 首部里由路由器置位的拥塞信号，缩写成 ECN；接收方在回复的确认里把它带回发送方，源文写作一个位而规范里是两个比特（第 26 讲）"
+
+[[term]]
+en = "deficit round robin"
+zh = "赤字轮询"
+notes = "公平排队在高速路由器里的近似实现，源文举的例子；现代路由器一般用近似，并把队列数开得比连接数少（第 26 讲）"

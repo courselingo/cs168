@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 341" width="760" height="341"
+     role="img" aria-labelledby="fig-cci25-2-title fig-cci25-2-desc">
+  <title id="fig-cci25-2-title">丢包的两个来源，以及 TCP 只看得到「丢了」这个结果</title>
+  <desc id="fig-cci25-2-desc">上面一条是源文对 TCP 判断方式的说明：它靠检查丢包判断拥塞，但拥塞不是丢包的唯一原因。中间两格是丢包的两个来源：拥塞（队列溢出被丢弃）与损坏（分组在链路上被改动）。下面三格是 TCP 手上的两样信号与缺口：确认、超时，以及两个信号里都没有丢包的原因这一项。最下面一条指出第 24 讲那条算式只认丢包率、不认原因，因此对有损链路也能用来估算。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="341" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">丢包的两个来源，以及 TCP 只看得到「丢了」这个结果</text>
+  <rect x="25" y="64" width="710" height="36" rx="6" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="380" y="86.2" font-size="12" fill="#1e40af" text-anchor="middle">源文：TCP 靠检查丢包判断拥塞，但拥塞不是丢包的唯一原因</text>
+  <rect x="25" y="128" width="342.5" height="49.5" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="196.25" y="148.35" font-size="11" fill="#b45309" text-anchor="middle">来源一：拥塞</text>
+  <text x="196.25" y="164.85" font-size="11" fill="#b45309" text-anchor="middle">队列溢出，分组被路由器丢弃</text>
+  <rect x="392.5" y="128" width="342.5" height="49.5" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="563.75" y="148.35" font-size="11" fill="#b45309" text-anchor="middle">来源二：损坏</text>
+  <text x="563.75" y="164.85" font-size="11" fill="#b45309" text-anchor="middle">分组在链路上被改动，内容出错</text>
+  <rect x="25" y="205.5" width="220" height="49.5" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="135" y="225.85" font-size="11" fill="#1e40af" text-anchor="middle">TCP 手上的信号一</text>
+  <text x="135" y="242.35" font-size="11" fill="#1e40af" text-anchor="middle">确认</text>
+  <rect x="270" y="205.5" width="220" height="49.5" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="225.85" font-size="11" fill="#1e40af" text-anchor="middle">TCP 手上的信号二</text>
+  <text x="380" y="242.35" font-size="11" fill="#1e40af" text-anchor="middle">超时</text>
+  <rect x="515" y="205.5" width="220" height="49.5" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="625" y="225.85" font-size="11" fill="#1e293b" text-anchor="middle">两个信号里都没有</text>
+  <text x="625" y="242.35" font-size="11" fill="#1e293b" text-anchor="middle">丢包的原因这一项</text>
+  <rect x="25" y="283" width="710" height="33" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380" y="303.35" font-size="11" fill="#6b21a8" text-anchor="middle">第 24 讲的算式 吞吐量 = √(3/2) × MSS ÷ (RTT × √p) 只认丢包率 p，不认原因，所以对有损链路也能估</text>
+</svg>

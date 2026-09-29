@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 405" width="760" height="405"
+     role="img" aria-labelledby="fig-cci25-3-title fig-cci25-3-desc">
+  <title id="fig-cci25-3-title">短连接的低吞吐：三个分组要花两个 RTT</title>
+  <desc id="fig-cci25-3-desc">上面一条是例子的设定：发送方只有 3 个分组要发，窗口从 1 开始。中间两排四格是两步：第一步发第 1 个分组并等确认，收到确认后窗口从 1 变成 2；第二步把剩下 2 个分组一起发出，收到两个确认后连接结束。下面一条给出结果：两个 RTT 送完3 个分组，也就是 1.5 个分组每 RTT。最下面一条是源文的评价：短连接永远走不出慢启动阶段，也永远到不了应得的那一份带宽。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="405" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">短连接的低吞吐：三个分组要花两个 RTT</text>
+  <rect x="25" y="64" width="710" height="36" rx="6" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="380" y="86.2" font-size="12" fill="#1e40af" text-anchor="middle">例子：发送方只有 3 个分组要发，窗口从 1 开始</text>
+  <rect x="25" y="128" width="342.5" height="49.5" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="196.25" y="148.35" font-size="11" fill="#1e40af" text-anchor="middle">第一步</text>
+  <text x="196.25" y="164.85" font-size="11" fill="#1e40af" text-anchor="middle">发第 1 个分组，等确认</text>
+  <rect x="392.5" y="128" width="342.5" height="49.5" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="563.75" y="148.35" font-size="11" fill="#1e40af" text-anchor="middle">收到第 1 个确认后</text>
+  <text x="563.75" y="164.85" font-size="11" fill="#1e40af" text-anchor="middle">窗口从 1 变成 2</text>
+  <rect x="25" y="205.5" width="342.5" height="49.5" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="196.25" y="225.85" font-size="11" fill="#166534" text-anchor="middle">第二步</text>
+  <text x="196.25" y="242.35" font-size="11" fill="#166534" text-anchor="middle">把剩下 2 个分组一起发出</text>
+  <rect x="392.5" y="205.5" width="342.5" height="49.5" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="563.75" y="225.85" font-size="11" fill="#166534" text-anchor="middle">收到两个确认后</text>
+  <text x="563.75" y="242.35" font-size="11" fill="#166534" text-anchor="middle">连接结束</text>
+  <rect x="25" y="283" width="710" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="305.2" font-size="12" fill="#b45309" text-anchor="middle">两个 RTT 送完 3 个分组，也就是 1.5 个分组每 RTT</text>
+  <rect x="25" y="347" width="710" height="33" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="380" y="367.35" font-size="11" fill="#1e293b" text-anchor="middle">源文的评价：短连接永远走不出慢启动阶段，也永远到不了自己应得的那一份带宽</text>
+</svg>

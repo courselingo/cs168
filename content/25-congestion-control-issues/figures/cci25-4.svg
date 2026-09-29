@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 385.5" width="760" height="385.5"
+     role="img" aria-labelledby="fig-cci25-4-title fig-cci25-4-desc">
+  <title id="fig-cci25-4-title">短连接的第二个问题：凑不出三个重复确认，只能等超时</title>
+  <desc id="fig-cci25-4-desc">上面一条是前提：丢包靠三个重复确认发现。中间两排四格是例子与后果：4 个分组丢了第 2 个，于是永远凑不出三个重复确认，只能等超时触发重传，而现实里的超时值大约是 500 毫秒。下面两条是源文给的部分修复（把初始窗口从 1 个分组调大到 10 个分组）与这个修复的边界：数据量不超过 10 个分组的连接能在开头一次发完，但它覆盖不了丢包这一半。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="385.5" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">短连接的第二个问题：凑不出三个重复确认，只能等超时</text>
+  <rect x="25" y="64" width="710" height="36" rx="6" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="380" y="86.2" font-size="12" fill="#1e40af" text-anchor="middle">前提：丢包靠三个重复确认发现，这是第 23 讲的实现</text>
+  <rect x="25" y="128" width="342.5" height="33" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="196.25" y="148.35" font-size="11" fill="#b45309" text-anchor="middle">例子：4 个分组，丢了第 2 个</text>
+  <rect x="392.5" y="128" width="342.5" height="33" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="563.75" y="148.35" font-size="11" fill="#b45309" text-anchor="middle">后果：永远凑不出三个重复确认</text>
+  <rect x="25" y="189" width="342.5" height="49.5" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="196.25" y="209.35" font-size="11" fill="#1e40af" text-anchor="middle">只能走的那条路</text>
+  <text x="196.25" y="225.85" font-size="11" fill="#1e40af" text-anchor="middle">等超时触发重传</text>
+  <rect x="392.5" y="189" width="342.5" height="49.5" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="563.75" y="209.35" font-size="11" fill="#1e40af" text-anchor="middle">现实里的超时值</text>
+  <text x="563.75" y="225.85" font-size="11" fill="#1e40af" text-anchor="middle">大约 500 毫秒</text>
+  <rect x="25" y="266.5" width="710" height="33" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="286.85" font-size="11" fill="#166534" text-anchor="middle">源文给的部分修复：把初始窗口从 1 个分组调大到 10 个分组</text>
+  <rect x="25" y="327.5" width="710" height="33" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="380" y="347.85" font-size="11" fill="#1e293b" text-anchor="middle">这个修复的边界：数据量不超过 10 个分组的连接能在开头一次发完，但它覆盖不了丢包这一半</text>
+</svg>

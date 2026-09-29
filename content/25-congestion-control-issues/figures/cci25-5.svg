@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 399" width="760" height="399"
+     role="img" aria-labelledby="fig-cci25-5-title fig-cci25-5-desc">
+  <title id="fig-cci25-5-title">队列被填满：代价是全网都要排队的时延</title>
+  <desc id="fig-cci25-5-desc">上面一条是源文的因果链起点：算法故意一直加速直到触发丢包，而要触发丢包队列就得先被填满。中间三格是这条链的第三步拆解：算法故意加速、队列被填满开始丢包、全网都要排队的时延。再下面两格是例子：一条 10 GB 的大连接先把队列填满，随后一条只发一个分组的小连接只能排在后面等。下面两条是 bufferbloat 的定义与家用路由器的例子，以及源文指向的另一个方向：不靠故意丢包衡量拥塞，而用 RTT 变大作为信号，也就是 Google 在 2016 年提出的 BBR。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="399" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">队列被填满：代价是全网都要排队的时延</text>
+  <rect x="25" y="64" width="710" height="33" rx="6" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="380" y="84.35" font-size="11" fill="#1e40af" text-anchor="middle">源文：算法故意一直加速直到触发丢包；要触发丢包，队列就得先被填满</text>
+  <rect x="25" y="125" width="220" height="49.5" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="135" y="145.35" font-size="11" fill="#1e40af" text-anchor="middle">第一步</text>
+  <text x="135" y="161.85" font-size="11" fill="#1e40af" text-anchor="middle">算法故意加速</text>
+  <rect x="270" y="125" width="220" height="49.5" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="145.35" font-size="11" fill="#1e40af" text-anchor="middle">第二步</text>
+  <text x="380" y="161.85" font-size="11" fill="#1e40af" text-anchor="middle">队列被填满，开始丢包</text>
+  <rect x="515" y="125" width="220" height="49.5" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="625" y="145.35" font-size="11" fill="#1e40af" text-anchor="middle">第三步</text>
+  <text x="625" y="161.85" font-size="11" fill="#1e40af" text-anchor="middle">全网都要排队的时延</text>
+  <rect x="25" y="202.5" width="342.5" height="49.5" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="196.25" y="222.85" font-size="11" fill="#166534" text-anchor="middle">例子</text>
+  <text x="196.25" y="239.35" font-size="11" fill="#166534" text-anchor="middle">一条 10 GB 的大连接先把队列填满</text>
+  <rect x="392.5" y="202.5" width="342.5" height="49.5" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="563.75" y="222.85" font-size="11" fill="#166534" text-anchor="middle">随后</text>
+  <text x="563.75" y="239.35" font-size="11" fill="#166534" text-anchor="middle">一条只发一个分组的小连接只能排在后面等</text>
+  <rect x="25" y="280" width="710" height="33" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="300.35" font-size="11" fill="#b45309" text-anchor="middle">bufferbloat：路由器为长队列准备了过量内存；家用路由器队列大而连接少，于是每条连接都给别的连接添时延</text>
+  <rect x="25" y="341" width="710" height="33" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380" y="361.35" font-size="11" fill="#6b21a8" text-anchor="middle">源文给的方向：不靠故意丢包来衡量拥塞；RTT 开始变大就说明出现了时延（Google 的 BBR，2016）</text>
+</svg>

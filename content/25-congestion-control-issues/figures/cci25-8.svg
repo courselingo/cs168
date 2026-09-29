@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 277" width="760" height="277"
+     role="img" aria-labelledby="fig-cci25-8-title fig-cci25-8-desc">
+  <title id="fig-cci25-8-title">作弊的其它形态，以及两个还没有答案的问题</title>
+  <desc id="fig-cci25-8-desc">上排三格是三条路径：改操作系统里的 TCP 代码（绝大多数用户不会做）；很多人一起作弊（源文举的例子是微软发布一个滥用 TCP 的Windows 版本，几百万用户仍然互相竞争）；以及不改协议也能作弊的多开连接（10 条对 1 条就是 10 倍带宽）。下面两条是源文承认答不上来的两个问题（为什么没有第二次拥塞崩溃、作弊在实践中到底有多普遍）与它给的一种可能解释：改协议的作弊者仍然遵守丢包就降速这条原则，而 1980 年代那次崩溃里没有这条原则。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="277" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">作弊的其它形态，以及两个还没有答案的问题</text>
+  <rect x="25" y="64" width="220" height="66" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="135" y="92.6" font-size="11" fill="#1e40af" text-anchor="middle">改操作系统里的 TCP 代码</text>
+  <text x="135" y="109.1" font-size="11" fill="#1e40af" text-anchor="middle">绝大多数互联网用户不会这么做</text>
+  <rect x="270" y="64" width="220" height="66" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="84.35" font-size="11" fill="#1e40af" text-anchor="middle">很多人一起作弊：例如微软</text>
+  <text x="380" y="100.85" font-size="11" fill="#1e40af" text-anchor="middle">发布一个滥用 TCP 的 Windows</text>
+  <text x="380" y="117.35" font-size="11" fill="#1e40af" text-anchor="middle">那几百万用户仍然在互相竞争</text>
+  <rect x="515" y="64" width="220" height="66" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="625" y="92.6" font-size="11" fill="#1e40af" text-anchor="middle">不改协议也能作弊</text>
+  <text x="625" y="109.1" font-size="11" fill="#1e40af" text-anchor="middle">多开连接：10 条对 1 条就是 10 倍带宽</text>
+  <rect x="25" y="158" width="710" height="33" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="178.35" font-size="11" fill="#b45309" text-anchor="middle">源文承认答不上来的两个问题：为什么没有第二次拥塞崩溃；作弊在实践中到底有多普遍</text>
+  <rect x="25" y="219" width="710" height="33" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="380" y="239.35" font-size="11" fill="#1e293b" text-anchor="middle">它给的一种可能解释：改协议的作弊者仍然遵守丢包就降速这条原则，而 1980 年代那次崩溃里没有这条原则</text>
+</svg>
