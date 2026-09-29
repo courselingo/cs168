@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 272.5" width="760" height="272.5"
+     role="img" aria-labelledby="fig-sdn-3-title fig-sdn-3-desc">
+  <title id="fig-sdn-3-title">路由器难创新的两条障碍，以及三个面各自的处境</title>
+  <desc id="fig-sdn-3-desc">上排三格是两条障碍：标准化让新协议要等标准组织批准、可能要等好几年，标准化还带来两难（只有你有的问题不会被采纳，而别人的问题却会塞进你买的路由器里），垂直集成把三个面的功能都焊在芯片上、没法单独换控制面。第二排三格是三个面各自的处境：数据面由 IEEE 严格标准化、创新由更高带宽的需求驱动；控制面由 IETF 标准化、新技术被采纳可能要几年；管理面也归 IETF 但标准得松得多，于是做法五花八门。最下面一条是源文自己的总结：数据面规范但没有想加的新功能，控制面规范但我们想试新解法，管理面其实不太规范。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="272.5" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">路由器难创新的两条障碍，以及三个面各自的处境</text>
+  <rect x="25" y="64" width="220" height="60" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="135" y="90" font-size="10" fill="#b45309" text-anchor="middle">障碍一：标准化</text>
+  <text x="135" y="105" font-size="10" fill="#b45309" text-anchor="middle">新协议要标准组织批准，可能要等好几年</text>
+  <rect x="270" y="64" width="220" height="60" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="82.5" font-size="10" fill="#b45309" text-anchor="middle">标准化还带来两难</text>
+  <text x="380" y="97.5" font-size="10" fill="#b45309" text-anchor="middle">只有你有的问题不会被采纳</text>
+  <text x="380" y="112.5" font-size="10" fill="#b45309" text-anchor="middle">别人的问题却会塞进你的路由器</text>
+  <rect x="515" y="64" width="220" height="60" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="625" y="82.5" font-size="10" fill="#b45309" text-anchor="middle">障碍二：垂直集成</text>
+  <text x="625" y="97.5" font-size="10" fill="#b45309" text-anchor="middle">三个面的功能都焊在芯片上</text>
+  <text x="625" y="112.5" font-size="10" fill="#b45309" text-anchor="middle">没法单独换控制面</text>
+  <rect x="25" y="152" width="220" height="40.5" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="135" y="168.65" font-size="9" fill="#1e40af" text-anchor="middle">数据面</text>
+  <text x="135" y="182.15" font-size="9" fill="#1e40af" text-anchor="middle">由 IEEE 严格标准化；创新由更高带宽的需求驱动</text>
+  <rect x="270" y="152" width="220" height="40.5" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="168.65" font-size="9" fill="#166534" text-anchor="middle">控制面</text>
+  <text x="380" y="182.15" font-size="9" fill="#166534" text-anchor="middle">由 IETF 标准化；新技术被采纳可能要几年</text>
+  <rect x="515" y="152" width="220" height="40.5" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="625" y="168.65" font-size="9" fill="#6b21a8" text-anchor="middle">管理面</text>
+  <text x="625" y="182.15" font-size="9" fill="#6b21a8" text-anchor="middle">也归 IETF，但标准得松得多，于是做法五花八门</text>
+  <rect x="25" y="220.5" width="710" height="27" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="380" y="237.15" font-size="9" fill="#1e293b" text-anchor="middle">源文的总结：数据面规范（但没有想加的新功能），控制面规范（但我们想试新解法），管理面其实不太规范</text>
+</svg>

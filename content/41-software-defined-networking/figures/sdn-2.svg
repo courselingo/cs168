@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 332" width="760" height="332"
+     role="img" aria-labelledby="fig-sdn-2-title fig-sdn-2-desc">
+  <title id="fig-sdn-2-title">SDN 的来历：管理面的痛点与几个时间点</title>
+  <desc id="fig-sdn-2-desc">上排三格是管理面的处境：它很重要（没人配置，路由器什么也做不了，还要靠它上报错误）；历史上这些管理工作大量靠人工完成；第一次进步是用脚本以编程方式与网络交互。第二排两格是脚本化的例子与它的限度：修复脚本的写法是确认故障、重启、还不行就上报，但管理系统长期仍是运维瓶颈，加设备可能还要等人工。最下面一条是源文给的几个时间点：2003 年这些概念最早被考虑（当时没引起多少注意）、2005 年那篇论文点出根源在控制面与管理面的复杂度、2008 年势头更足并催生 OpenFlow 接口、2011 年成立开放网络基金会、2012 年 Nicira 是一家估值 4000 万美元的公司。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="332" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">SDN 的来历：管理面的痛点与几个时间点</text>
+  <rect x="25" y="64" width="220" height="60" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="135" y="82.5" font-size="10" fill="#1e40af" text-anchor="middle">管理面为什么重要</text>
+  <text x="135" y="97.5" font-size="10" fill="#1e40af" text-anchor="middle">没人配置，路由器什么也做不了</text>
+  <text x="135" y="112.5" font-size="10" fill="#1e40af" text-anchor="middle">还要靠它上报错误</text>
+  <rect x="270" y="64" width="220" height="60" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="380" y="90" font-size="10" fill="#1e293b" text-anchor="middle">历史上的样子</text>
+  <text x="380" y="105" font-size="10" fill="#1e293b" text-anchor="middle">这些管理工作大量靠人工完成</text>
+  <rect x="515" y="64" width="220" height="60" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="625" y="90" font-size="10" fill="#166534" text-anchor="middle">第一次进步</text>
+  <text x="625" y="105" font-size="10" fill="#166534" text-anchor="middle">用脚本以编程方式与网络交互</text>
+  <rect x="25" y="152" width="342.5" height="45" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="196.25" y="170.5" font-size="10" fill="#166534" text-anchor="middle">修好脚本的例子</text>
+  <text x="196.25" y="185.5" font-size="10" fill="#166534" text-anchor="middle">确认故障、重启、还不行就上报</text>
+  <rect x="392.5" y="152" width="342.5" height="45" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="563.75" y="170.5" font-size="10" fill="#b45309" text-anchor="middle">但仍然</text>
+  <text x="563.75" y="185.5" font-size="10" fill="#b45309" text-anchor="middle">管理系统长期是运维瓶颈，加设备可能还要等人工</text>
+  <rect x="25" y="225" width="710" height="27" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="380" y="241.65" font-size="9" fill="#1e293b" text-anchor="middle">时间线一：2003 起念（没引起注意），2005 那篇论文点出根源</text>
+  <rect x="25" y="280" width="710" height="27" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="380" y="296.65" font-size="9" fill="#1e293b" text-anchor="middle">时间线二：2008 催生 OpenFlow 接口，2011 成立开放网络基金会，2012 Nicira 估值 4000 万美元</text>
+</svg>

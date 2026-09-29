@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 338" width="760" height="338"
+     role="img" aria-labelledby="fig-sdn-9-title fig-sdn-9-desc">
+  <title id="fig-sdn-9-title">集中换来的两样东西，以及源文举的那些可以优化的目标</title>
+  <desc id="fig-sdn-9-desc">上面一条说明这张图讲的是集中换来的东西与可以优化的目标。第二排两格是换来的两样：控制面上的完全自由（不再被限制在距离向量或链路状态里）与全局最优（老板用全局视角决定什么对所有人都最好）。第三排三格是源文举的可以优化的目标：地理围栏（例如不要把流量发到加拿大境内的链路）、可靠性（让两条流走完全不共享链路的路、互为备份）、以及优先级（把流分成高低优先级，同时顾及利用率与各应用的需要）。最下面一条补一句源文的说法：集中还能让路由协议更容易收敛——链路坏了，路由器告诉老板，老板重算再把新路由装回去。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="338" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">集中换来的两样东西，以及源文举的那些可以优化的目标</text>
+  <rect x="25" y="64" width="710" height="30" rx="6" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="380" y="82.5" font-size="10" fill="#1e40af" text-anchor="middle">集中换来的两样东西，以及源文举的那些可以优化的目标</text>
+  <rect x="25" y="122" width="342.5" height="45" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="196.25" y="140.5" font-size="10" fill="#166534" text-anchor="middle">换来的第一样</text>
+  <text x="196.25" y="155.5" font-size="10" fill="#166534" text-anchor="middle">控制面上的完全自由：不再被限制在距离向量或链路状态里</text>
+  <rect x="392.5" y="122" width="342.5" height="45" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="563.75" y="140.5" font-size="10" fill="#166534" text-anchor="middle">换来的第二样</text>
+  <text x="563.75" y="155.5" font-size="10" fill="#166534" text-anchor="middle">全局最优：老板用全局视角决定什么对所有人都最好</text>
+  <rect x="25" y="195" width="220" height="60" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="135" y="213.5" font-size="10" fill="#1e40af" text-anchor="middle">可以优化的目标</text>
+  <text x="135" y="228.5" font-size="10" fill="#1e40af" text-anchor="middle">地理围栏</text>
+  <text x="135" y="243.5" font-size="10" fill="#1e40af" text-anchor="middle">例如不要把流量发到加拿大境内的链路</text>
+  <rect x="270" y="195" width="220" height="60" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="221" font-size="10" fill="#1e40af" text-anchor="middle">也可以优化可靠性</text>
+  <text x="380" y="236" font-size="10" fill="#1e40af" text-anchor="middle">让两条流走完全不共享链路的路，互为备份</text>
+  <rect x="515" y="195" width="220" height="60" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="625" y="213.5" font-size="10" fill="#1e40af" text-anchor="middle">还可以照顾优先级</text>
+  <text x="625" y="228.5" font-size="10" fill="#1e40af" text-anchor="middle">把流分成高低优先级</text>
+  <text x="625" y="243.5" font-size="10" fill="#1e40af" text-anchor="middle">同时顾及利用率与各应用的需要</text>
+  <rect x="25" y="283" width="710" height="30" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="380" y="301.5" font-size="10" fill="#1e293b" text-anchor="middle">源文说集中还能让路由协议更容易收敛：链路坏了，路由器告诉老板，老板重算再把新路由装回去</text>
+</svg>

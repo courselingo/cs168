@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 350" width="760" height="350"
+     role="img" aria-labelledby="fig-sdn-6-title fig-sdn-6-desc">
+  <title id="fig-sdn-6-title">流量工程的两个例子与集中带来的全局最优</title>
+  <desc id="fig-sdn-6-desc">上排三格是例题一：两条 10 Gbps 的流如果都走下面，会把一条 10 Gbps 的链路压到 20 Gbps，而上面那条路的带宽空着；更聪明的安排是让 S1 走上面、S2 走下面，也就是故意让一些包走更长的路；算法上的名字是受约束的最短路径优先，它要求在容量足够的路上走最短，容量也可以换成别的约束例如时延。第二排三格是例题二：12 与 8 Gbps 时 cSPF 会把两条流分到不同的路，但 12 Gbps 在一条 10 Gbps 的链路上装不下，于是要把一条流拆开（S1 的 10 Gbps 走上路、剩下的 2 Gbps 走下路），实现办法是封装，让一部分包带标签 0、其余带标签 1，下一跳再按标签分别送给 R2 与 R3。中间一条是例题三：20 与 100 Gbps 时，先到的那条按局部最优占了路，后到的那条发现上路 20、下路 80、单独一条都不够，症结是各自独立决定、没有协调。最下面一条是集中之后的收益：老板用全局视角决定什么对所有人都最好，还可以把流分成高低优先级，同时照顾利用率与各应用的需要。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="350" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">流量工程的两个例子与集中带来的全局最优</text>
+  <rect x="25" y="64" width="220" height="60" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="135" y="82.5" font-size="10" fill="#1e40af" text-anchor="middle">例题一：两条 10 Gbps 的流</text>
+  <text x="135" y="97.5" font-size="10" fill="#1e40af" text-anchor="middle">都走下面会把 10 Gbps 的链路压到 20 Gbps</text>
+  <text x="135" y="112.5" font-size="10" fill="#1e40af" text-anchor="middle">而上面那条路的带宽空着</text>
+  <rect x="270" y="64" width="220" height="60" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="82.5" font-size="10" fill="#166534" text-anchor="middle">更聪明的安排</text>
+  <text x="380" y="97.5" font-size="10" fill="#166534" text-anchor="middle">让 S1 走上面、S2 走下面</text>
+  <text x="380" y="112.5" font-size="10" fill="#166534" text-anchor="middle">故意让一些包走更长的路</text>
+  <rect x="515" y="64" width="220" height="60" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="625" y="82.5" font-size="10" fill="#6b21a8" text-anchor="middle">算法：受约束的最短路径优先</text>
+  <text x="625" y="97.5" font-size="10" fill="#6b21a8" text-anchor="middle">在有足够容量的最短路上走</text>
+  <text x="625" y="112.5" font-size="10" fill="#6b21a8" text-anchor="middle">容量也可以换成别的约束，例如时延</text>
+  <rect x="25" y="152" width="220" height="60" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="135" y="170.5" font-size="10" fill="#b45309" text-anchor="middle">例题二：12 与 8 Gbps</text>
+  <text x="135" y="185.5" font-size="10" fill="#b45309" text-anchor="middle">cSPF 会把两条流分到不同的路</text>
+  <text x="135" y="200.5" font-size="10" fill="#b45309" text-anchor="middle">但 12 Gbps 一条 10 Gbps 的链路装不下</text>
+  <rect x="270" y="152" width="220" height="60" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="170.5" font-size="10" fill="#166534" text-anchor="middle">解：把一条流拆开</text>
+  <text x="380" y="185.5" font-size="10" fill="#166534" text-anchor="middle">S1 的 10 Gbps 走上路</text>
+  <text x="380" y="200.5" font-size="10" fill="#166534" text-anchor="middle">剩下的 2 Gbps 走下路</text>
+  <rect x="515" y="152" width="220" height="60" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="625" y="170.5" font-size="10" fill="#1e40af" text-anchor="middle">怎么实现：封装</text>
+  <text x="625" y="185.5" font-size="10" fill="#1e40af" text-anchor="middle">一部分包带标签 0、其余带标签 1</text>
+  <text x="625" y="200.5" font-size="10" fill="#1e40af" text-anchor="middle">下一跳按标签分别送给 R2 与 R3</text>
+  <rect x="25" y="240" width="710" height="27" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="380" y="256.65" font-size="9" fill="#1e293b" text-anchor="middle">例题三：20 与 100 Gbps。先到的 20 Gbps 按局部最优占了路；后到的 100 Gbps 发现上路 20、下路 80，单独一条都不够。症结是各自独立决定、没有协调</text>
+  <rect x="25" y="295" width="710" height="30" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380" y="313.5" font-size="10" fill="#6b21a8" text-anchor="middle">集中之后：老板用全局视角决定什么对所有人都最好；还可以把流分成高低优先级，同时照顾利用率与各应用的需要</text>
+</svg>

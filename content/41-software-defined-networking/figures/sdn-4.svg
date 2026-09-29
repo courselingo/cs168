@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 259" width="760" height="259"
+     role="img" aria-labelledby="fig-sdn-4-title fig-sdn-4-desc">
+  <title id="fig-sdn-4-title">拆开后的三层：商品设备、网络操作系统、控制程序</title>
+  <desc id="fig-sdn-4-desc">上面一条是那个激进的提议：把路由器拆开、按抽象层次把几个面分开，让各层能独立变化。第二条说明拆开就需要层间的接口：在单独买的数据面之上要自己写控制面，就得有一个与数据面交互的接口。下面三格是从下到上的三层：最下面是商品网络设备，可以理解成只买数据面，它只按指令转发、不必懂路由协议，因此更便宜；中间是网络操作系统，它把路由器抽象出来（例如一张图）交给上面，再把上面的指令落到各台路由器上；最上面是控制程序，它拿到网络的图抽象、写出自己的路由协议，算出的路由交给下面去下发。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="259" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">拆开后的三层：商品设备、网络操作系统、控制程序</text>
+  <rect x="25" y="64" width="710" height="30" rx="6" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="380" y="82.5" font-size="10" fill="#1e40af" text-anchor="middle">激进的提议：把路由器拆开，按抽象层次把几个面分开，让各层能独立变化</text>
+  <rect x="25" y="122" width="710" height="30" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="380" y="140.5" font-size="10" fill="#1e293b" text-anchor="middle">拆开就需要层间的接口：单独买的数据面之上要自己写控制面，就得有一个与数据面交互的接口</text>
+  <rect x="25" y="180" width="220" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="135" y="196.65" font-size="9" fill="#1e40af" text-anchor="middle">最下面：商品网络设备</text>
+  <text x="135" y="210.15" font-size="9" fill="#1e40af" text-anchor="middle">可以理解成只买数据面</text>
+  <text x="135" y="223.65" font-size="9" fill="#1e40af" text-anchor="middle">只按指令转发，不必懂路由协议，因此更便宜</text>
+  <rect x="270" y="180" width="220" height="54" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="196.65" font-size="9" fill="#166534" text-anchor="middle">中间：网络操作系统</text>
+  <text x="380" y="210.15" font-size="9" fill="#166534" text-anchor="middle">把路由器抽象出来（例如一张图）交给上面</text>
+  <text x="380" y="223.65" font-size="9" fill="#166534" text-anchor="middle">再把上面的指令落到各台路由器上</text>
+  <rect x="515" y="180" width="220" height="54" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="625" y="196.65" font-size="9" fill="#6b21a8" text-anchor="middle">最上面：控制程序</text>
+  <text x="625" y="210.15" font-size="9" fill="#6b21a8" text-anchor="middle">拿到网络的图抽象</text>
+  <text x="625" y="223.65" font-size="9" fill="#6b21a8" text-anchor="middle">写出自己的路由协议，算出的路由交给下面下发</text>
+</svg>

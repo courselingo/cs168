@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 338" width="760" height="338"
+     role="img" aria-labelledby="fig-sdn-8-title fig-sdn-8-desc">
+  <title id="fig-sdn-8-title">覆盖网那一处的具体例子：新虚拟机出现时，控制器去别的虚拟交换机上加封装规则</title>
+  <desc id="fig-sdn-8-desc">上面一条说明这张图讲的是覆盖网那一处的具体例子：新虚拟机出现时，控制器去别的虚拟交换机上加封装规则。第二排两格是控制器手里的已知信息：Coke 的 2 号虚拟机虚拟 IP 是 192.0.2.1、物理 IP 是 2.2.2.2；控制器还知道 Coke 的 1 号虚拟机住在物理服务器 1.1.1.1 上。最下面一条与两格是它加下的那条规则：收到目的地址是 192.0.2.1 的包时，加上带 Coke 虚拟网络 ID 42 的头部，再加上带物理地址 2.2.2.2 的头部，然后让它走底层网。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="338" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">覆盖网那一处的具体例子：新虚拟机出现时，控制器去别的虚拟交换机上加封装规则</text>
+  <rect x="25" y="64" width="710" height="30" rx="6" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="380" y="82.5" font-size="10" fill="#1e40af" text-anchor="middle">覆盖网那一处的具体例子：新虚拟机出现时，控制器去别的虚拟交换机上加封装规则</text>
+  <rect x="25" y="122" width="342.5" height="60" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="196.25" y="140.5" font-size="10" fill="#1e40af" text-anchor="middle">已知</text>
+  <text x="196.25" y="155.5" font-size="10" fill="#1e40af" text-anchor="middle">Coke 的 2 号虚拟机虚拟 IP 是 192.0.2.1</text>
+  <text x="196.25" y="170.5" font-size="10" fill="#1e40af" text-anchor="middle">物理 IP 是 2.2.2.2</text>
+  <rect x="392.5" y="122" width="342.5" height="60" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="563.75" y="148" font-size="10" fill="#166534" text-anchor="middle">控制器还知道</text>
+  <text x="563.75" y="163" font-size="10" fill="#166534" text-anchor="middle">Coke 的 1 号虚拟机住在物理服务器 1.1.1.1 上</text>
+  <rect x="25" y="210" width="710" height="30" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380" y="228.5" font-size="10" fill="#6b21a8" text-anchor="middle">于是它在 1.1.1.1 那台虚拟交换机上加一条规则</text>
+  <rect x="25" y="268" width="342.5" height="45" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="196.25" y="286.5" font-size="10" fill="#6b21a8" text-anchor="middle">收到目的地址是 192.0.2.1 的包时</text>
+  <text x="196.25" y="301.5" font-size="10" fill="#6b21a8" text-anchor="middle">加上带 Coke 虚拟网络 ID 42 的头部</text>
+  <rect x="392.5" y="268" width="342.5" height="45" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="563.75" y="286.5" font-size="10" fill="#6b21a8" text-anchor="middle">再加上带物理地址 2.2.2.2 的头部</text>
+  <text x="563.75" y="301.5" font-size="10" fill="#6b21a8" text-anchor="middle">然后让它走底层网</text>
+</svg>

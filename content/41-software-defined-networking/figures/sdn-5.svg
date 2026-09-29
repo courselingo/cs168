@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 375" width="760" height="375"
+     role="img" aria-labelledby="fig-sdn-5-title fig-sdn-5-desc">
+  <title id="fig-sdn-5-title">OpenFlow 的流表：匹配-动作、带编号的表、先记录后执行</title>
+  <desc id="fig-sdn-5-desc">上排两格是流表的键与值：键说明拿包去匹配什么（目的前缀、精确地址、五元组等），值说明匹配上之后做什么（送去下一跳，或者加一个额外头部）。第二排三格是包经过一串编号流表时的流程：表 0、表 1、表 2 依次比；比中时先把动作记下来、此时并不执行；等比完最后一张表才把记下来的动作一起作用到包上。中间一条是跳表的动作：例如源端口匹配某个数就跳到表 5 去设置额外动作。第四条是硬件的限制与实践中的匹配规则：芯片为速度优化、处理不了复杂匹配，所以实践里常见的是目的前缀、五元组与封装头部的精确匹配。最下面一条回答为什么还要用它：它让运营者在控制面上有完全的自由，不再被限制在距离向量或链路状态里。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="375" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">OpenFlow 的流表：匹配-动作、带编号的表、先记录后执行</text>
+  <rect x="25" y="64" width="342.5" height="45" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="196.25" y="82.5" font-size="10" fill="#1e40af" text-anchor="middle">流表的键</text>
+  <text x="196.25" y="97.5" font-size="10" fill="#1e40af" text-anchor="middle">拿包去匹配什么：目的前缀、精确地址、五元组等</text>
+  <rect x="392.5" y="64" width="342.5" height="45" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="563.75" y="82.5" font-size="10" fill="#166534" text-anchor="middle">流表的值</text>
+  <text x="563.75" y="97.5" font-size="10" fill="#166534" text-anchor="middle">匹配上之后做什么：送去下一跳，或加一个额外头部</text>
+  <rect x="25" y="137" width="220" height="45" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="135" y="155.5" font-size="10" fill="#b45309" text-anchor="middle">一串带编号的表</text>
+  <text x="135" y="170.5" font-size="10" fill="#b45309" text-anchor="middle">表 0、表 1、表 2 依次比</text>
+  <rect x="270" y="137" width="220" height="45" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="155.5" font-size="10" fill="#b45309" text-anchor="middle">比中时先记录</text>
+  <text x="380" y="170.5" font-size="10" fill="#b45309" text-anchor="middle">把动作记下来，此时并不执行</text>
+  <rect x="515" y="137" width="220" height="45" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="625" y="155.5" font-size="10" fill="#b45309" text-anchor="middle">比完最后一张才施加</text>
+  <text x="625" y="170.5" font-size="10" fill="#b45309" text-anchor="middle">把记下来的动作一起作用到包上</text>
+  <rect x="25" y="210" width="710" height="27" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="380" y="226.65" font-size="9" fill="#1e293b" text-anchor="middle">还有跳表的动作：例如源端口匹配某个数就跳到表 5 去设置额外动作</text>
+  <rect x="25" y="265" width="710" height="27" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380" y="281.65" font-size="9" fill="#6b21a8" text-anchor="middle">硬件的限制：芯片为速度优化，处理不了复杂匹配；实践中的匹配是目的前缀、五元组、封装头部的精确匹配</text>
+  <rect x="25" y="320" width="710" height="30" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="338.5" font-size="10" fill="#166534" text-anchor="middle">那为什么还要用它：它让运营者在控制面上有完全的自由，不再被限制在距离向量或链路状态里</text>
+</svg>

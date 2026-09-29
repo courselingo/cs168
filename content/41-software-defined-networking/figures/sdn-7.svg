@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 359" width="760" height="359"
+     role="img" aria-labelledby="fig-sdn-7-title fig-sdn-7-desc">
+  <title id="fig-sdn-7-title">SDN 用在哪儿，以及集中的三样代价</title>
+  <desc id="fig-sdn-7-desc">上排三格是 SDN 的三处用法：覆盖网里由控制器学会虚拟地址与物理地址的映射并下发虚拟网络 ID；底层网里把大象流放到互不重叠的路径上，甚至有人用 SDN 消掉 Clos 网络里的层次；广域网里当链路像海底光缆那样加不了带宽时，优化只能靠把手里这些带宽用得更满。中间一条是事实：超大规模数据中心常在两层里都用 SDN，而且是两套解耦的系统，一套管底层网、一套管覆盖网。第三排三格是集中的三样代价：可靠性（中央控制器坏了就没法再更新网络，不过它可以逻辑上集中、不必跑在一台服务器上）、可扩展性（控制器要为所有人做决定，网络一大就很贵）、以及复杂度（买台路由器接上就能跑的日子结束了，控制器放哪、怎么可靠地连过去都是问题）。最下面一条是源文在这一页最后留的那句没写完的话：TODO ran out of time in SP24。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="359" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">SDN 用在哪儿，以及集中的三样代价</text>
+  <rect x="25" y="64" width="220" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="135" y="80.65" font-size="9" fill="#1e40af" text-anchor="middle">覆盖网</text>
+  <text x="135" y="94.15" font-size="9" fill="#1e40af" text-anchor="middle">虚拟地址与物理地址的映射</text>
+  <text x="135" y="107.65" font-size="9" fill="#1e40af" text-anchor="middle">虚拟网络 ID 由控制器学会并下发</text>
+  <rect x="270" y="64" width="220" height="54" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="80.65" font-size="9" fill="#166534" text-anchor="middle">底层网</text>
+  <text x="380" y="94.15" font-size="9" fill="#166534" text-anchor="middle">把大象流放到互不重叠的路径上</text>
+  <text x="380" y="107.65" font-size="9" fill="#166534" text-anchor="middle">有人用 SDN 消掉 Clos 的层次</text>
+  <rect x="515" y="64" width="220" height="54" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="625" y="80.65" font-size="9" fill="#6b21a8" text-anchor="middle">广域网</text>
+  <text x="625" y="94.15" font-size="9" fill="#6b21a8" text-anchor="middle">链路像海底光缆那样加不了带宽时</text>
+  <text x="625" y="107.65" font-size="9" fill="#6b21a8" text-anchor="middle">优化只能靠把带宽用得更满</text>
+  <rect x="25" y="146" width="710" height="30" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="380" y="164.5" font-size="10" fill="#1e293b" text-anchor="middle">超大规模数据中心常在两层里都用 SDN，而且是两套解耦的系统：一套管底层网，一套管覆盖网</text>
+  <rect x="25" y="204" width="220" height="75" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="135" y="222.5" font-size="10" fill="#b45309" text-anchor="middle">代价一：可靠性</text>
+  <text x="135" y="237.5" font-size="10" fill="#b45309" text-anchor="middle">中央控制器坏了就没法再更新网络</text>
+  <text x="135" y="252.5" font-size="10" fill="#b45309" text-anchor="middle">不过它可以逻辑上集中</text>
+  <text x="135" y="267.5" font-size="10" fill="#b45309" text-anchor="middle">不必跑在一台服务器上</text>
+  <rect x="270" y="204" width="220" height="75" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="230" font-size="10" fill="#b45309" text-anchor="middle">代价二：可扩展性</text>
+  <text x="380" y="245" font-size="10" fill="#b45309" text-anchor="middle">控制器要为所有人做决定</text>
+  <text x="380" y="260" font-size="10" fill="#b45309" text-anchor="middle">网络一大就很贵</text>
+  <rect x="515" y="204" width="220" height="75" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="625" y="230" font-size="10" fill="#b45309" text-anchor="middle">代价三：复杂度</text>
+  <text x="625" y="245" font-size="10" fill="#b45309" text-anchor="middle">买台路由器接上就能跑的日子结束了</text>
+  <text x="625" y="260" font-size="10" fill="#b45309" text-anchor="middle">控制器放哪、怎么可靠地连过去都是问题</text>
+  <rect x="25" y="307" width="710" height="27" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="380" y="323.65" font-size="9" fill="#1e293b" text-anchor="middle">源文在这一页最后留了一句没写完的话：TODO ran out of time in SP24，也就是教材在 2024 年春季这版没时间把这一节写完</text>
+</svg>
