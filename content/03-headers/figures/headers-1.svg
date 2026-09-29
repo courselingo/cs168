@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 203" width="760" height="203"
+     role="img" aria-labelledby="fig-headers-1-title fig-headers-1-desc">
+  <title id="fig-headers-1-title">载荷与首部：一边是应用关心的，一边是网络要读的</title>
+  <desc id="fig-headers-1-desc">左边是载荷，也就是信里写的内容，应用真正关心的是它；右边是首部，也就是信封上写的信息，网络只读这一部分。交换机读不到载荷，也不该读；端主机必须懂首部，因为首部是它自己加到分组上去的。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="203" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">载荷与首部：一边是应用关心的，一边是网络要读的</text>
+
+  <rect x="22" y="66" width="344" height="72" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="194" y="88" font-size="12" fill="#166534" text-anchor="middle">载荷（payload）</text>
+  <text x="194" y="106" font-size="12" fill="#166534" text-anchor="middle">信里写的内容</text>
+  <text x="194" y="124" font-size="12" fill="#166534" text-anchor="middle">应用真正关心的</text>
+
+  <rect x="394" y="66" width="344" height="72" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="566" y="88" font-size="12" fill="#b45309" text-anchor="middle">首部（header）</text>
+  <text x="566" y="106" font-size="12" fill="#b45309" text-anchor="middle">信封上写的信息</text>
+  <text x="566" y="124" font-size="12" fill="#b45309" text-anchor="middle">网络只读这一部分</text>
+
+  <text x="380" y="178" font-size="10" fill="#64748b" text-anchor="middle">交换机读不到载荷，也不该读；端主机必须懂首部，因为首部是它自己加上去的</text>
+</svg>

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 317" width="760" height="317"
+     role="img" aria-labelledby="fig-headers-3-title fig-headers-3-desc">
+  <title id="fig-headers-3-title">首部里放什么</title>
+  <desc id="fig-headers-3-desc">四项内容：目的地址是必须有的，它决定分组往哪里送；源地址对送达并不必需，但几乎总会带上，好让对方回信；校验和用来确认分组在路上有没有被改坏；长度告诉接收方该读多少，因为分组大小并不固定。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="317" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">首部里放什么</text>
+
+  <rect x="22" y="76" width="716" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="98" font-size="12" fill="#b45309" text-anchor="middle">目的地址：必须有，它决定这个分组往哪里送</text>
+
+  <rect x="22" y="137" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="159" font-size="12" fill="#1e40af" text-anchor="middle">源地址：送达并不需要，但几乎总会带上，好让对方回信</text>
+
+  <rect x="22" y="198" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="220" font-size="12" fill="#1e40af" text-anchor="middle">校验和：确认分组在路上有没有被改坏</text>
+
+  <rect x="22" y="259" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="281" font-size="12" fill="#1e40af" text-anchor="middle">长度：分组大小不固定，接收方要知道该读多少</text>
+</svg>

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 343" width="760" height="343"
+     role="img" aria-labelledby="fig-headers-4-title fig-headers-4-desc">
+  <title id="fig-headers-4-title">往下走一层层包上，往上走一层层剥掉</title>
+  <desc id="fig-headers-4-desc">三层外壳从外到里：最外层是箱子，写的是街道地址；中间层是信封，写的是收件人；最内层是信纸，写的是正文。发送时从里往外一层层包上，接收时从外往里一层层剥掉。每一层只看懂自己那一层的封皮，实际上是在跟同一层的对端说话。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="343" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">往下走一层层包上，往上走一层层剥掉</text>
+
+  <rect x="22" y="76" width="716" height="54" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="380" y="98" font-size="12" fill="#9d174d" text-anchor="middle">最外层：箱子</text>
+  <text x="380" y="116" font-size="12" fill="#9d174d" text-anchor="middle">写的是街道地址，运输公司按它送到那家公司</text>
+
+  <rect x="22" y="155" width="716" height="54" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="177" font-size="12" fill="#b45309" text-anchor="middle">中间层：信封</text>
+  <text x="380" y="195" font-size="12" fill="#b45309" text-anchor="middle">写的是收件人姓名，秘书按它把信交到人手里</text>
+
+  <rect x="22" y="234" width="716" height="54" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="256" font-size="12" fill="#166534" text-anchor="middle">最内层：信纸</text>
+  <text x="380" y="274" font-size="12" fill="#166534" text-anchor="middle">写的是正文，只有收信人关心</text>
+
+  <text x="380" y="318" font-size="11" fill="#64748b" text-anchor="middle">发送时从里往外一层层包上，接收时从外往里一层层剥掉</text>
+</svg>

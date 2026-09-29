@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 213" width="760" height="213"
+     role="img" aria-labelledby="fig-headers-8-title fig-headers-8-desc">
+  <title id="fig-headers-8-title">首部这套做法要付的账</title>
+  <desc id="fig-headers-8-desc">两笔账：一是开销，每一层都有自己的首部，每一跳还要换掉第一、二层那两层，链路上跑的字节比原始数据多；二是格式固化，部署之后想改就得所有人同意，标准组织为此要花好几年。另外网络只读首部，所以它对载荷是透明的，想跨层优化会更难。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="213" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">首部这套做法要付的账</text>
+
+  <rect x="22" y="76" width="344" height="72" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="194" y="98" font-size="12" fill="#9d174d" text-anchor="middle">第一笔：开销</text>
+  <text x="194" y="116" font-size="12" fill="#9d174d" text-anchor="middle">每一层都有自己的首部</text>
+  <text x="194" y="134" font-size="12" fill="#9d174d" text-anchor="middle">每一跳还要换掉头两层</text>
+
+  <rect x="394" y="76" width="344" height="72" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="566" y="98" font-size="12" fill="#9d174d" text-anchor="middle">第二笔：格式固化</text>
+  <text x="566" y="116" font-size="12" fill="#9d174d" text-anchor="middle">部署之后想改，得所有人同意</text>
+  <text x="566" y="134" font-size="12" fill="#9d174d" text-anchor="middle">标准组织为此要花好几年</text>
+
+  <text x="380" y="188" font-size="10" fill="#64748b" text-anchor="middle">还有一笔：网络只读首部，所以它对载荷是透明的；想跨层优化就更难</text>
+</svg>
