@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 189" width="760" height="189"
+     role="img" aria-labelledby="fig-routing-intro-2-title fig-routing-intro-2-desc">
+  <title id="fig-routing-intro-2-title">这一部分的四步</title>
+  <desc id="fig-routing-intro-2-desc">箭头依次向右，是 Routing 这一部分的推进顺序：先给互联网建一个够用的模型，把路由变成定义清楚的问题；再看路由问题的答案长什么样，什么样的答案算合法、算好；然后看几类路由协议，它们用来生成这些答案；最后看寻址与真实的硬件，怎么让整套东西扩展到整个互联网。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="189" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">这一部分的四步</text>
+
+  <rect x="22" y="76" width="160" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="102" y="98" font-size="12" fill="#1e40af" text-anchor="middle">① 建模型</text>
+  <text x="102" y="116" font-size="12" fill="#1e40af" text-anchor="middle">定义清楚问题</text>
+
+  <rect x="207" y="76" width="160" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="287" y="98" font-size="12" fill="#1e40af" text-anchor="middle">② 看答案</text>
+  <text x="287" y="116" font-size="12" fill="#1e40af" text-anchor="middle">什么算合法、够好</text>
+
+  <rect x="392" y="76" width="160" height="54" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="472" y="98" font-size="12" fill="#b45309" text-anchor="middle">③ 看协议</text>
+  <text x="472" y="116" font-size="12" fill="#b45309" text-anchor="middle">怎么生成答案</text>
+
+  <rect x="577" y="76" width="160" height="54" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="657" y="98" font-size="12" fill="#b45309" text-anchor="middle">④ 寻址与硬件</text>
+  <text x="657" y="116" font-size="12" fill="#b45309" text-anchor="middle">怎么扩展到全网</text>
+
+  <path d="M187,103 L 196,103" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+  <path d="M372,103 L 381,103" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+  <path d="M557,103 L 566,103" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+
+  <text x="380" y="164" font-size="10" fill="#64748b" text-anchor="middle">教材把这条路线写在第一节里；后面几讲按这个顺序往下走</text>
+</svg>

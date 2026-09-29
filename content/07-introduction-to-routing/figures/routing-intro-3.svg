@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 205" width="760" height="205"
+     role="img" aria-labelledby="fig-routing-intro-3-title fig-routing-intro-3-desc">
+  <title id="fig-routing-intro-3-title">一个巨型协议要覆盖全世界，规模上做不到</title>
+  <desc id="fig-routing-intro-3-desc">直觉做法是设计一个巨型路由协议，给互联网建一个包含全世界每一台机器的模型，让它能把分组送到任何地方。教材说这在实践中不可行，原因就是互联网的规模：一台路由器存不下全世界的路由信息，也没法在每台机器变动时同步一遍。这不是想法不好，而是它太大了。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="205" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">直觉做法：一个巨型协议</text>
+
+  <rect x="22" y="76" width="716" height="72" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="380" y="98" font-size="12" fill="#9d174d" text-anchor="middle">一个巨型路由协议</text>
+  <text x="380" y="116" font-size="12" fill="#9d174d" text-anchor="middle">模型要包含全世界每一台机器</text>
+  <text x="380" y="134" font-size="12" fill="#9d174d" text-anchor="middle">规模上不可行：信息存不下，变动也同步不过来</text>
+
+  <text x="380" y="180" font-size="10" fill="#64748b" text-anchor="middle">教材原话是 infeasible in practice because of the scale of the Internet</text>
+</svg>

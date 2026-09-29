@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 189" width="760" height="189"
+     role="img" aria-labelledby="fig-routing-intro-5-title fig-routing-intro-5-desc">
+  <title id="fig-routing-intro-5-title">每片网络都不一样，所以域内协议可以各选各的</title>
+  <desc id="fig-routing-intro-5-desc">三列并排列出本地网络的差异来源：规模与范围，比如机器多少、覆盖多大地方；要求不同，比如要支撑的带宽、允许的故障率、能投入的运维人手；现实条件，比如基础设施的新旧与能拿到的预算。正因为这些差异，同一套策略在这片网络好用、换一片未必，所以每片网络自己选。代表协议是 OSPF 与 IS-IS。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="189" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">每片网络都不一样，所以可以各选各的</text>
+
+  <rect x="22" y="76" width="222" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="133" y="98" font-size="12" fill="#1e40af" text-anchor="middle">规模与范围</text>
+  <text x="133" y="116" font-size="12" fill="#1e40af" text-anchor="middle">机器多少、多大地方</text>
+
+  <rect x="269" y="76" width="222" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="98" font-size="12" fill="#1e40af" text-anchor="middle">要求不同</text>
+  <text x="380" y="116" font-size="12" fill="#1e40af" text-anchor="middle">带宽、容错、运维人手</text>
+
+  <rect x="516" y="76" width="222" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="627" y="98" font-size="12" fill="#1e40af" text-anchor="middle">现实条件</text>
+  <text x="627" y="116" font-size="12" fill="#1e40af" text-anchor="middle">设备新旧、预算</text>
+
+  <text x="380" y="164" font-size="10" fill="#64748b" text-anchor="middle">域内协议因此允许各选各的，真实例子是 OSPF 与 IS-IS</text>
+</svg>

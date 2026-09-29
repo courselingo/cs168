@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 233" width="760" height="233"
+     role="img" aria-labelledby="fig-routing-intro-6-title fig-routing-intro-6-desc">
+  <title id="fig-routing-intro-6-title">域内可以不同，域间必须相同，于是只剩 BGP 一个</title>
+  <desc id="fig-routing-intro-6-desc">上排对照两种方向：域内是可以不同，因为各片网络差异太多，各选各的更合适；域间是必须相同，因为如果各用各的域间协议，就无法保证整个互联网以一致的方式连起来。正因为必须一致，全球规模上只有一个域间协议在跑，就是 BGP，边界网关协议。两个方向的理由正好相反。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="233" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">域内可以不同，域间必须相同</text>
+
+  <rect x="22" y="66" width="344" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="194" y="88" font-size="12" fill="#1e40af" text-anchor="middle">域内：可以不同</text>
+  <text x="194" y="106" font-size="12" fill="#1e40af" text-anchor="middle">差异太多，各选各的更合适</text>
+
+  <rect x="394" y="66" width="344" height="54" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="566" y="88" font-size="12" fill="#9d174d" text-anchor="middle">域间：必须相同</text>
+  <text x="566" y="106" font-size="12" fill="#9d174d" text-anchor="middle">不一致就连不成一个互联网</text>
+
+  <rect x="22" y="145" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="167" font-size="12" fill="#166534" text-anchor="middle">于是全互联网规模上只剩一个域间协议：BGP（边界网关协议）</text>
+
+  <text x="380" y="208" font-size="10" fill="#64748b" text-anchor="middle">两个方向的理由正好相反：一个是差异太多，一个是差异不能被容忍</text>
+</svg>

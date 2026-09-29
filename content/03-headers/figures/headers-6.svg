@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 429" width="760" height="429"
      role="img" aria-labelledby="fig-headers-6-title fig-headers-6-desc">
   <title id="fig-headers-6-title">路由器不解析第四层与第七层，端主机全都解析</title>
-  <desc id="fig-headers-6-desc">两列共用同一套横向行：左列是端主机，从上到下是第七层应用、第四层传输、第三层网际、第二层链路、第一层物理。右列是路由器，只有三行，并且与左列的第三层、第二层、第一层逐行对齐，说明两列用的是同一套下面三层。上面两行只有左列有，因为路由器上没有浏览器要显示网页，也不必操心可靠性，所以它不实现上面两层。教材的层号是第七、四、三、二、一层，第五、六层已废弃。</desc>
+  <desc id="fig-headers-6-desc">两列共用同一套横向行：左列上方标着「端主机」，从上到下是第七层应用、第四层传输、第三层网际、第二层链路、第一层物理。右列上方标着「路由器」，只有三行，并且与左列的第三层、第二层、第一层逐行对齐，说明两列用的是同一套下面三层。上面两行只有左列有，因为路由器上没有浏览器要显示网页，也不必操心可靠性，所以它不实现上面两层。教材的层号是第七、四、三、二、一层，第五、六层已废弃。</desc>
 
   <defs>
     <style>
@@ -12,6 +12,9 @@
   <rect x="0" y="0" width="760" height="429" fill="#ffffff"/>
 
   <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">路由器不解析第四层与第七层，端主机全都解析</text>
+
+  <text x="194" y="58" font-size="11" fill="#64748b" text-anchor="middle">端主机</text>
+  <text x="566" y="58" font-size="11" fill="#64748b" text-anchor="middle">路由器</text>
 
   <rect x="22" y="76" width="344" height="36" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
   <text x="194" y="98" font-size="12" fill="#6b21a8" text-anchor="middle">第七层：应用</text>

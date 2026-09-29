@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 185" width="760" height="185"
+     role="img" aria-labelledby="fig-routing-intro-1-title fig-routing-intro-1-desc">
+  <title id="fig-routing-intro-1-title">A 想给 B 发消息，可它们并不直连</title>
+  <desc id="fig-routing-intro-1-desc">左边是机器 A，它想把消息送到机器 B；右边是机器 B，也就是目的地。两台机器都连着互联网，但彼此之间并没有直接相连。要回答的是：A 该把消息发到哪里、消息会走出一条什么路径，才会最终抵达 B。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="185" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">A 想给 B 发消息，可它们并不直连</text>
+
+  <rect x="22" y="76" width="344" height="54" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="194" y="98" font-size="12" fill="#166534" text-anchor="middle">机器 A</text>
+  <text x="194" y="116" font-size="12" fill="#166534" text-anchor="middle">想把消息送到 B</text>
+
+  <rect x="394" y="76" width="344" height="54" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="566" y="98" font-size="12" fill="#166534" text-anchor="middle">机器 B</text>
+  <text x="566" y="116" font-size="12" fill="#166534" text-anchor="middle">目的地</text>
+
+  <path d="M371,103 L 383,103" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+
+  <text x="380" y="160" font-size="10" fill="#64748b" text-anchor="middle">问题：该往哪里发，消息才会最终抵达 B；它会走出一条什么路径</text>
+</svg>

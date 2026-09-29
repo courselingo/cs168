@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 205" width="760" height="205"
+     role="img" aria-labelledby="fig-routing-intro-7-title fig-routing-intro-7-desc">
+  <title id="fig-routing-intro-7-title">更本质的分法是看底层算法：距离向量、链路状态、路径向量</title>
+  <desc id="fig-routing-intro-7-desc">三列并排列出三类路由算法：距离向量、链路状态、路径向量。教材说，不管一套协议是部署在一片网络内部还是网络之间，都可以看它底层算法在做什么，按这个标准分成这三类。这三类各有一讲展开，本图只点名。域内与域间的分界线在实践中并不总能划清，例如 BGP 有时也用在一片网络内部。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="205" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">更本质的分法：看底层算法</text>
+
+  <rect x="22" y="76" width="222" height="72" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="133" y="98" font-size="12" fill="#1e40af" text-anchor="middle">距离向量</text>
+  <text x="133" y="116" font-size="12" fill="#1e40af" text-anchor="middle">distance-vector</text>
+  <text x="133" y="134" font-size="12" fill="#1e40af" text-anchor="middle">后面几讲展开</text>
+
+  <rect x="269" y="76" width="222" height="72" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="98" font-size="12" fill="#1e40af" text-anchor="middle">链路状态</text>
+  <text x="380" y="116" font-size="12" fill="#1e40af" text-anchor="middle">link-state</text>
+  <text x="380" y="134" font-size="12" fill="#1e40af" text-anchor="middle">后面几讲展开</text>
+
+  <rect x="516" y="76" width="222" height="72" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="627" y="98" font-size="12" fill="#1e40af" text-anchor="middle">路径向量</text>
+  <text x="627" y="116" font-size="12" fill="#1e40af" text-anchor="middle">path-vector</text>
+  <text x="627" y="134" font-size="12" fill="#1e40af" text-anchor="middle">后面几讲展开</text>
+
+  <text x="380" y="180" font-size="10" fill="#64748b" text-anchor="middle">域内/域间的分界并不总能划清，例如 BGP 有时也用在一片网络内部</text>
+</svg>

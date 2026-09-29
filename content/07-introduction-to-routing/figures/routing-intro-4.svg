@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 205" width="760" height="205"
+     role="img" aria-labelledby="fig-routing-intro-4-title fig-routing-intro-4-desc">
+  <title id="fig-routing-intro-4-title">核心思路：域内各管各的，域间共享一套规则</title>
+  <desc id="fig-routing-intro-4-desc">左边是域内：每片本地网络各自实现一套协议，规定怎么在这片网络内部送分组，不需要知道全世界的路由。右边是域间：再实现一套跨网络的协议，规定怎么在不同的本地网络之间送分组。这样任何一片网络只需要管好自己那一摊，规模问题就被切开了。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="205" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">核心思路：把路由切成两层</text>
+
+  <rect x="22" y="76" width="344" height="72" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="194" y="98" font-size="12" fill="#1e40af" text-anchor="middle">域内：各管各的</text>
+  <text x="194" y="116" font-size="12" fill="#1e40af" text-anchor="middle">每片网络自己定怎么送</text>
+  <text x="194" y="134" font-size="12" fill="#1e40af" text-anchor="middle">不必知道全世界的路由</text>
+
+  <rect x="394" y="76" width="344" height="72" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="566" y="98" font-size="12" fill="#166534" text-anchor="middle">域间：共享一套规则</text>
+  <text x="566" y="116" font-size="12" fill="#166534" text-anchor="middle">规定跨网络怎么送</text>
+  <text x="566" y="134" font-size="12" fill="#166534" text-anchor="middle">所有网络必须一致</text>
+
+  <text x="380" y="180" font-size="10" fill="#64748b" text-anchor="middle">切开的动机是规模：全世界的路由信息不需要塞进同一台机器</text>
+</svg>
