@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 189" width="760" height="189"
+     role="img" aria-labelledby="fig-solutions-8-title fig-solutions-8-desc">
+  <title id="fig-solutions-8-title">验证三步：画箭头、删掉没箭头的链路、看剩下的是不是生成树</title>
+  <desc id="fig-solutions-8-desc">三步依次进行：先按每台路由器的转发表，给每个节点画一支出箭头；再把没有箭头的链路删掉，因为它们永远不会被用来往这个目的地送分组；最后看剩下的图是不是生成树、所有箭头是否朝向目的地。剩下的图断成两块就是死胡同，带环就是环路，两者都不是生成树。换一个目的主机要重来一遍，所有目的地都有效，这份路由状态才算有效。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="189" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">怎么验证一份路由状态</text>
+
+  <rect x="22" y="76" width="222" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="133" y="98" font-size="12" fill="#1e40af" text-anchor="middle">① 每个节点</text>
+  <text x="133" y="116" font-size="12" fill="#1e40af" text-anchor="middle">画一支出箭头</text>
+
+  <rect x="269" y="76" width="222" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="98" font-size="12" fill="#1e40af" text-anchor="middle">② 删掉</text>
+  <text x="380" y="116" font-size="12" fill="#1e40af" text-anchor="middle">没有箭头的链路</text>
+
+  <rect x="516" y="76" width="222" height="54" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="627" y="98" font-size="12" fill="#166534" text-anchor="middle">③ 看剩下的是不是</text>
+  <text x="627" y="116" font-size="12" fill="#166534" text-anchor="middle">一棵生成树</text>
+
+  <text x="380" y="164" font-size="10" fill="#64748b" text-anchor="middle">断成两块＝死胡同，带环＝环路；换一个目的地要重来一遍</text>
+</svg>

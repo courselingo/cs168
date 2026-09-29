@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 205" width="760" height="205"
+     role="img" aria-labelledby="fig-solutions-9-title fig-solutions-9-desc">
+  <title id="fig-solutions-9-title">最小代价路由：代价由运营者按目标设定</title>
+  <desc id="fig-solutions-9-desc">左栏说代价可以代表很多东西：链路造价、传播时延、物理距离、可靠性、带宽，由运营者按自己的目标来定，所以一条 400 Gbps、20 毫秒的链路和一条 10 Gbps、5 毫秒的链路哪条代价更低，取决于在优化什么。右栏是两条假设：代价是正整数，负代价说不通，还能避免负权环；代价对称，A 到 B 与 B 到 A 相同。所有代价都是 1 时，最小代价就是最小跳数。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="205" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">什么叫「好」：最小代价路由</text>
+
+  <rect x="22" y="86" width="344" height="72" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="194" y="108" font-size="12" fill="#1e40af" text-anchor="middle">代价可以代表很多东西</text>
+  <text x="194" y="126" font-size="12" fill="#1e40af" text-anchor="middle">造价、时延、距离、可靠性、带宽</text>
+  <text x="194" y="144" font-size="12" fill="#1e40af" text-anchor="middle">由运营者按目标来定</text>
+
+  <rect x="394" y="86" width="344" height="72" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="566" y="108" font-size="12" fill="#b45309" text-anchor="middle">两条假设</text>
+  <text x="566" y="126" font-size="12" fill="#b45309" text-anchor="middle">代价是正整数：避免负权环</text>
+  <text x="566" y="144" font-size="12" fill="#b45309" text-anchor="middle">代价对称：A→B 等于 B→A</text>
+
+  <text x="380" y="180" font-size="10" fill="#64748b" text-anchor="middle">所有代价都是 1 时，最小代价路径就是经过链路最少的那条，也就是最小跳数</text>
+</svg>

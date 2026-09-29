@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 203" width="760" height="203"
+     role="img" aria-labelledby="fig-solutions-6-title fig-solutions-6-desc">
+  <title id="fig-solutions-6-title">有效等于没有死胡同，也没有环路</title>
+  <desc id="fig-solutions-6-desc">左栏是死胡同：分组到了某台路由器，而这台路由器不知道怎么把它往目的地转发，于是没转发；这个条件只适用于中间路由器，不适用于端主机，因为分组到达目的地之后本来就不需要再转发。右栏是环路：分组在同一批节点上绕圈，因为用的是基于目的地的转发，下一跳只由目的地决定，一旦进了环路就永远出不来；目的地本身不可能在环路里，因为它不转发分组。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="203" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">有效：没有死胡同，也没有环路</text>
+
+  <rect x="22" y="76" width="344" height="72" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="194" y="98" font-size="12" fill="#9d174d" text-anchor="middle">死胡同</text>
+  <text x="194" y="116" font-size="12" fill="#9d174d" text-anchor="middle">不知道怎么往目的地转发</text>
+  <text x="194" y="134" font-size="12" fill="#9d174d" text-anchor="middle">于是分组停在那里；只算中间路由器</text>
+
+  <rect x="394" y="76" width="344" height="72" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="566" y="98" font-size="12" fill="#b45309" text-anchor="middle">环路</text>
+  <text x="566" y="116" font-size="12" fill="#b45309" text-anchor="middle">分组在同一批节点上绕圈</text>
+  <text x="566" y="134" font-size="12" fill="#b45309" text-anchor="middle">只看目的地，进去就出不来</text>
+
+  <text x="380" y="178" font-size="10" fill="#64748b" text-anchor="middle">无死胡同加无环路，既是必要条件也是充分条件</text>
+</svg>

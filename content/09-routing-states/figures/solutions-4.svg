@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 221" width="760" height="221"
+     role="img" aria-labelledby="fig-solutions-4-title fig-solutions-4-desc">
+  <title id="fig-solutions-4-title">路由是全局的造表过程，转发是局部的用表过程</title>
+  <desc id="fig-solutions-4-desc">左栏是路由：路由器互相通信，决定怎么把转发表填起来，要了解网络的全局拓扑，还必须了解那些不在本地的目的地。右栏是转发：收到分组、查表、发给相应邻居，用的是现成的表，不需要知道表是怎么来的，也不关心分组交给下一跳之后去哪。两者方向不能对调。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="221" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">路由与转发是两件事</text>
+
+  <rect x="22" y="76" width="344" height="90" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="194" y="98" font-size="12" fill="#1e40af" text-anchor="middle">路由：全局的</text>
+  <text x="194" y="116" font-size="12" fill="#1e40af" text-anchor="middle">路由器互相通信</text>
+  <text x="194" y="134" font-size="12" fill="#1e40af" text-anchor="middle">把转发表填起来</text>
+  <text x="194" y="152" font-size="12" fill="#1e40af" text-anchor="middle">要了解全局拓扑</text>
+
+  <rect x="394" y="76" width="344" height="90" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="566" y="98" font-size="12" fill="#166534" text-anchor="middle">转发：局部的</text>
+  <text x="566" y="116" font-size="12" fill="#166534" text-anchor="middle">收到分组、查表、发出</text>
+  <text x="566" y="134" font-size="12" fill="#166534" text-anchor="middle">用现成的表，不问来历</text>
+  <text x="566" y="152" font-size="12" fill="#166534" text-anchor="middle">不必知道全局拓扑</text>
+
+  <text x="380" y="196" font-size="10" fill="#64748b" text-anchor="middle">转发不关心分组交给下一跳之后去哪；路由必须知道不在本地的目的地</text>
+</svg>

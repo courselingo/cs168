@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 233" width="760" height="233"
+     role="img" aria-labelledby="fig-solutions-5-title fig-solutions-5-desc">
+  <title id="fig-solutions-5-title">有效不有效，只能在全局判断</title>
+  <desc id="fig-solutions-5-desc">看单台路由器的表无法判断有效性：比如在 R2 的表里看到目的地 A 的下一跳是 R3，我们没办法据此判断把分组发给 R3 是否真能让它到达 A。要判断就得看全局路由状态，也就是所有路由器转发表的集合。全局路由状态有效，当且仅当对任何目的地，分组都不会卡在死胡同或环路里。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="233" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">有效不有效，只能在全局判断</text>
+
+  <rect x="22" y="66" width="344" height="54" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="194" y="88" font-size="12" fill="#1e293b" text-anchor="middle">只看一台路由器的表</text>
+  <text x="194" y="106" font-size="12" fill="#1e293b" text-anchor="middle">判断不出有效与否</text>
+
+  <rect x="394" y="66" width="344" height="54" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="566" y="88" font-size="12" fill="#166534" text-anchor="middle">看全部路由器的表</text>
+  <text x="566" y="106" font-size="12" fill="#166534" text-anchor="middle">才能判断有效性</text>
+
+  <rect x="22" y="145" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="167" font-size="12" fill="#1e40af" text-anchor="middle">全局路由状态 = 所有路由器转发表的集合</text>
+
+  <text x="380" y="208" font-size="10" fill="#64748b" text-anchor="middle">有效性要求：转发决策必须保证分组真的能到达目的地</text>
+</svg>

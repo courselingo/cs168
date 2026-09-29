@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 205" width="760" height="205"
+     role="img" aria-labelledby="fig-solutions-1-title fig-solutions-1-desc">
+  <title id="fig-solutions-1-title">两种不好的做法：随机发一个，或者给每个邻居都发</title>
+  <desc id="fig-solutions-1-desc">左栏是随机发给一个邻居：用这个策略无法确定分组能不能到达最终目的地。右栏是给每个邻居都发一份：副本会铺满网络，大概率能到，但把分组发给了许多根本不需要用到的路由器，浪费大量带宽。一个不确定能不能到，一个能到但太浪费。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="205" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">两种明显不好的做法</text>
+
+  <rect x="22" y="66" width="344" height="72" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="194" y="88" font-size="12" fill="#9d174d" text-anchor="middle">随机发给一个邻居</text>
+  <text x="194" y="106" font-size="12" fill="#9d174d" text-anchor="middle">无法确定分组能不能到</text>
+  <text x="194" y="124" font-size="12" fill="#9d174d" text-anchor="middle">可靠性没有保障</text>
+
+  <rect x="394" y="66" width="344" height="72" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="566" y="88" font-size="12" fill="#b45309" text-anchor="middle">给每个邻居都发一份</text>
+  <text x="566" y="106" font-size="12" fill="#b45309" text-anchor="middle">副本铺满网络，大概率能到</text>
+  <text x="566" y="124" font-size="12" fill="#b45309" text-anchor="middle">但发给了一堆用不到的路由器</text>
+
+  <text x="380" y="180" font-size="10" fill="#64748b" text-anchor="middle">一个不确定能不能到，一个能到但浪费大量带宽</text>
+</svg>
