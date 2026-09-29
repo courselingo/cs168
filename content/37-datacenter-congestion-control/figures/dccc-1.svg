@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 338" width="760" height="338"
+     role="img" aria-labelledby="fig-dccc-1-title fig-dccc-1-desc">
+  <title id="fig-dccc-1-title">新的一段：数据中心的两个额外约束，以及这一讲要看的两种做法</title>
+  <desc id="fig-dccc-1-desc">上面一条说明这一讲开的是新的一段：数据中心，而它与通用网络相比有两个额外约束。第二排两格就是这两个约束：物理上都在一栋楼里，由同一个运营者拥有。中间一条说明这两个约束允许出现只在这里好用的专用协议，而源文说这是一个仍在活跃研究与开发的领域。最下面两格是这一讲的问题（数据中心里的拥塞控制与广域网不一样）与它要看的两种做法（让路由器给出反馈、给包排优先级）。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="338" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">新的一段：数据中心的两个额外约束，以及这一讲要看的两种做法</text>
+  <rect x="25" y="64" width="710" height="33" rx="6" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="380" y="84.35" font-size="11" fill="#1e40af" text-anchor="middle">新的一段：数据中心。与通用网络相比它有两个额外约束</text>
+  <rect x="25" y="125" width="342.5" height="49.5" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="196.25" y="145.35" font-size="11" fill="#1e40af" text-anchor="middle">约束一</text>
+  <text x="196.25" y="161.85" font-size="11" fill="#1e40af" text-anchor="middle">物理上都在一栋楼里</text>
+  <rect x="392.5" y="125" width="342.5" height="49.5" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="563.75" y="145.35" font-size="11" fill="#1e40af" text-anchor="middle">约束二</text>
+  <text x="563.75" y="161.85" font-size="11" fill="#1e40af" text-anchor="middle">由同一个运营者拥有</text>
+  <rect x="25" y="202.5" width="710" height="33" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="380" y="222.85" font-size="11" fill="#1e293b" text-anchor="middle">这两个约束允许出现只在这里好用的专用协议；源文说这是一个仍在活跃研究的领域</text>
+  <rect x="25" y="263.5" width="342.5" height="49.5" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="196.25" y="283.85" font-size="11" fill="#b45309" text-anchor="middle">这一讲的问题</text>
+  <text x="196.25" y="300.35" font-size="11" fill="#b45309" text-anchor="middle">数据中心里的拥塞控制与广域网不一样</text>
+  <rect x="392.5" y="263.5" width="342.5" height="49.5" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="563.75" y="283.85" font-size="11" fill="#6b21a8" text-anchor="middle">两种做法</text>
+  <text x="563.75" y="300.35" font-size="11" fill="#6b21a8" text-anchor="middle">让路由器给出反馈；给包排优先级</text>
+</svg>

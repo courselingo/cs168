@@ -1048,3 +1048,17 @@ en = "DHCP server"
 zh = "DHCP 服务器"
 key = "dhcp-server"
 notes = "手里有网关与 DNS 服务器的信息，还有一池可分配地址；在固定的 UDP 67 端口上等新机器来问"
+
+# ── 第 36 讲（数据中心拓扑）新增 ──────────────────────────────────────────
+
+[[term]]
+en = "bisection bandwidth"
+zh = "二分带宽"
+key = "bisection-bandwidth"
+notes = "把网络切成等大两半所需剪掉的链路带宽之和；等价说法是最坏划分下两边能同时发送的最小总带宽"
+
+[[term]]
+en = "oversubscription"
+zh = "超订"
+key = "oversubscription"
+notes = "满二分带宽与二分带宽之比，衡量瓶颈处被超载多少；2 Gbps 对 4 Gbps 即 2 倍超订（只能跑到全速 50%）"

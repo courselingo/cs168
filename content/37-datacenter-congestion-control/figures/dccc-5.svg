@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 392" width="760" height="392"
+     role="img" aria-labelledby="fig-dccc-5-title fig-dccc-5-desc">
+  <title id="fig-dccc-5-title">pFabric 的优先级规则，以及它在同一张图上的读数</title>
+  <desc id="fig-dccc-5-desc">上排两格是优先级怎么算与它带来的三个效果：优先级按剩余流大小（还没被确认的字节数）算，数字越小优先级越高；于是小鼠的包优先级很高，大象最后几个字节也高起来，实际上优先了快做完的连接。第二排三格是两条交换机规则与发送方的新做法：先发优先级最高的包；队列满了就丢掉优先级最低的包；发送方可以按整线速率发送与重传，只在极端丢包（例如超时）时降速。第三排两格是读数与原因：pFabric 比 DCTCP 还好、非常接近理想，而图例里那条最陡的曲线叫 TCP-DropTail；它好是因为大家按整线速率发、带宽用满，不必浪费在慢启动上，而且大象大多数包优先级低、避免崩溃。最下面一条是代价：交换机与终端主机两侧都要做不小的改动，且要求两侧都在自己的完全控制之下。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="392" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">pFabric 的优先级规则，以及它在同一张图上的读数</text>
+  <rect x="25" y="64" width="342.5" height="67.5" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="196.25" y="86.25" font-size="10" fill="#1e40af" text-anchor="middle">优先级怎么算</text>
+  <text x="196.25" y="101.25" font-size="10" fill="#1e40af" text-anchor="middle">剩余流大小（还没被确认的字节数）</text>
+  <text x="196.25" y="116.25" font-size="10" fill="#1e40af" text-anchor="middle">数字越小优先级越高</text>
+  <rect x="392.5" y="64" width="342.5" height="67.5" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="563.75" y="80.65" font-size="9" fill="#166534" text-anchor="middle">三个效果</text>
+  <text x="563.75" y="94.15" font-size="9" fill="#166534" text-anchor="middle">小鼠的包优先级很高</text>
+  <text x="563.75" y="107.65" font-size="9" fill="#166534" text-anchor="middle">大象最后几个字节也高起来</text>
+  <text x="563.75" y="121.15" font-size="9" fill="#166534" text-anchor="middle">于是快做完的连接优先</text>
+  <rect x="25" y="159.5" width="220" height="54" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="135" y="182.5" font-size="10" fill="#b45309" text-anchor="middle">交换机规则一</text>
+  <text x="135" y="197.5" font-size="10" fill="#b45309" text-anchor="middle">先发优先级最高的那个包</text>
+  <rect x="270" y="159.5" width="220" height="54" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="182.5" font-size="10" fill="#b45309" text-anchor="middle">交换机规则二</text>
+  <text x="380" y="197.5" font-size="10" fill="#b45309" text-anchor="middle">队列满了就丢掉优先级最低的那个包</text>
+  <rect x="515" y="159.5" width="220" height="54" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="625" y="176.15" font-size="9" fill="#6b21a8" text-anchor="middle">发送方</text>
+  <text x="625" y="189.65" font-size="9" fill="#6b21a8" text-anchor="middle">可以按整线速率发送与重传</text>
+  <text x="625" y="203.15" font-size="9" fill="#6b21a8" text-anchor="middle">只在极端丢包（例如超时）时降速</text>
+  <rect x="25" y="241.5" width="342.5" height="67.5" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="196.25" y="258.15" font-size="9" fill="#b45309" text-anchor="middle">配图上的读数</text>
+  <text x="196.25" y="271.65" font-size="9" fill="#b45309" text-anchor="middle">pFabric 比 DCTCP 还好</text>
+  <text x="196.25" y="285.15" font-size="9" fill="#b45309" text-anchor="middle">而且非常接近理想</text>
+  <text x="196.25" y="298.65" font-size="9" fill="#b45309" text-anchor="middle">图例里那条最陡的曲线叫 TCP-DropTail</text>
+  <rect x="392.5" y="241.5" width="342.5" height="67.5" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="563.75" y="258.15" font-size="9" fill="#166534" text-anchor="middle">为什么好</text>
+  <text x="563.75" y="271.65" font-size="9" fill="#166534" text-anchor="middle">大家按整线速率发，带宽用满</text>
+  <text x="563.75" y="285.15" font-size="9" fill="#166534" text-anchor="middle">不必浪费在慢启动上</text>
+  <text x="563.75" y="298.65" font-size="9" fill="#166534" text-anchor="middle">大象大多数包优先级低，避免崩溃</text>
+  <rect x="25" y="337" width="710" height="30" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="380" y="355.5" font-size="10" fill="#1e293b" text-anchor="middle">代价：交换机与终端主机两侧都要做不小的改动，而且要求两侧都在自己的完全控制之下</text>
+</svg>

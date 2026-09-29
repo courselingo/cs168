@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 298" width="760" height="298"
+     role="img" aria-labelledby="fig-dccc-2-title fig-dccc-2-desc">
+  <title id="fig-dccc-2-title">三种延迟，以及数据中心里排队延迟占主导</title>
+  <desc id="fig-dccc-2-desc">上排三格把延迟拆成三块并写明各自由什么决定：传输延迟是把比特送上线路的时间、由带宽决定；传播延迟是比特在线路上跑的时间、由距离决定；排队延迟是包在队列里等的时间。第二排两格把两种场景对起来：数据中心里前两块都小（10 Gbps 链路、同一栋楼），于是排队延迟常常是延迟的主要来源；广域互联网上传播延迟可能大好几个数量级，也更常成为主导。最下面一条说明这个对比为什么是后面一切的起点：故意把队列填满的做法在这里代价特别大。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="298" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">三种延迟，以及数据中心里排队延迟占主导</text>
+  <rect x="25" y="64" width="220" height="60" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="135" y="82.5" font-size="10" fill="#1e40af" text-anchor="middle">传输延迟</text>
+  <text x="135" y="97.5" font-size="10" fill="#1e40af" text-anchor="middle">把比特送上线路的时间</text>
+  <text x="135" y="112.5" font-size="10" fill="#1e40af" text-anchor="middle">由带宽决定</text>
+  <rect x="270" y="64" width="220" height="60" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="82.5" font-size="10" fill="#166534" text-anchor="middle">传播延迟</text>
+  <text x="380" y="97.5" font-size="10" fill="#166534" text-anchor="middle">比特在线路上跑的时间</text>
+  <text x="380" y="112.5" font-size="10" fill="#166534" text-anchor="middle">由距离决定</text>
+  <rect x="515" y="64" width="220" height="60" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="625" y="90" font-size="10" fill="#b45309" text-anchor="middle">排队延迟</text>
+  <text x="625" y="105" font-size="10" fill="#b45309" text-anchor="middle">包在队列里等的时间</text>
+  <rect x="25" y="152" width="342.5" height="60" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="196.25" y="170.5" font-size="10" fill="#166534" text-anchor="middle">数据中心里</text>
+  <text x="196.25" y="185.5" font-size="10" fill="#166534" text-anchor="middle">前两块都小（10 Gbps 链路、同一栋楼）</text>
+  <text x="196.25" y="200.5" font-size="10" fill="#166534" text-anchor="middle">于是排队延迟常常是主要来源</text>
+  <rect x="392.5" y="152" width="342.5" height="60" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="563.75" y="170.5" font-size="10" fill="#1e293b" text-anchor="middle">广域互联网上</text>
+  <text x="563.75" y="185.5" font-size="10" fill="#1e293b" text-anchor="middle">传播延迟可能大好几个数量级</text>
+  <text x="563.75" y="200.5" font-size="10" fill="#1e293b" text-anchor="middle">也更常成为主导</text>
+  <rect x="25" y="240" width="710" height="33" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380" y="260.35" font-size="11" fill="#6b21a8" text-anchor="middle">这个对比是后面一切的起点：故意填满队列的做法在这里代价特别大</text>
+</svg>

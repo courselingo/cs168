@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 345.5" width="760" height="345.5"
+     role="img" aria-labelledby="fig-dccc-4-title fig-dccc-4-desc">
+  <title id="fig-dccc-4-title">DCTCP 的反馈环，以及归一化 FCT 上的读数</title>
+  <desc id="fig-dccc-4-desc">上面一条说明 DCTCP 的来路：2010 年由微软发布，今天已广泛使用。第二排三格是那条反馈环：路由器在队列长度超过某个阈值时置 ECN 位；包到目的地后，回来的确认也带这个位；发送方按带标记的包的数量成比例地降速。中间一条解释为什么数据中心可行而广域网不灵：广域网上不是所有路由器都支持 ECN，而这里运营者控制着所有交换机、可以让它们一致地置位。第三排三格是衡量标准与读数：FCT 是从第一个字节发出到最后一个字节收到的时间；理想 FCT 是有全知调度器时的完成时间，归一化 FCT 就是两者之比；配图上标准 TCP 差 3 倍、高负载下最多差 10 倍，而 DCTCP 明显更好。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="345.5" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">DCTCP 的反馈环，以及归一化 FCT 上的读数</text>
+  <rect x="25" y="64" width="710" height="33" rx="6" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="380" y="84.35" font-size="11" fill="#1e40af" text-anchor="middle">DCTCP：2010 年由微软发布，今天已广泛使用（源文说它进了 Linux 内核）</text>
+  <rect x="25" y="125" width="220" height="45" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="135" y="143.5" font-size="10" fill="#1e40af" text-anchor="middle">第一步：路由器置位</text>
+  <text x="135" y="158.5" font-size="10" fill="#1e40af" text-anchor="middle">队列长度超过某个阈值时置 ECN 位</text>
+  <rect x="270" y="125" width="220" height="45" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="143.5" font-size="10" fill="#1e40af" text-anchor="middle">第二步：确认带回</text>
+  <text x="380" y="158.5" font-size="10" fill="#1e40af" text-anchor="middle">包到目的地后，回来的确认也带这个位</text>
+  <rect x="515" y="125" width="220" height="45" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="625" y="143.5" font-size="10" fill="#166534" text-anchor="middle">第三步：发送方降速</text>
+  <text x="625" y="158.5" font-size="10" fill="#166534" text-anchor="middle">幅度与带标记的包的数量成比例</text>
+  <rect x="25" y="198" width="710" height="27" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="380" y="214.65" font-size="9" fill="#1e293b" text-anchor="middle">为什么数据中心可行而广域网不灵：广域网上不是所有路由器都支持 ECN，而这里运营者控制着所有交换机，可以让它们一致地置位</text>
+  <rect x="25" y="253" width="220" height="67.5" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="135" y="282.75" font-size="10" fill="#b45309" text-anchor="middle">衡量标准：FCT</text>
+  <text x="135" y="297.75" font-size="10" fill="#b45309" text-anchor="middle">从第一个字节发出到最后一个字节收到</text>
+  <rect x="270" y="253" width="220" height="67.5" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="380" y="275.25" font-size="10" fill="#1e293b" text-anchor="middle">理想 FCT</text>
+  <text x="380" y="290.25" font-size="10" fill="#1e293b" text-anchor="middle">有一个全知调度器时的完成时间</text>
+  <text x="380" y="305.25" font-size="10" fill="#1e293b" text-anchor="middle">归一化 FCT 就是实际与理想之比</text>
+  <rect x="515" y="253" width="220" height="67.5" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="625" y="269.65" font-size="9" fill="#6b21a8" text-anchor="middle">配图上的读数</text>
+  <text x="625" y="283.15" font-size="9" fill="#6b21a8" text-anchor="middle">标准 TCP 差 3 倍</text>
+  <text x="625" y="296.65" font-size="9" fill="#6b21a8" text-anchor="middle">高负载下最多差 10 倍</text>
+  <text x="625" y="310.15" font-size="9" fill="#6b21a8" text-anchor="middle">DCTCP 明显更好</text>
+</svg>

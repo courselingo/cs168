@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 345.5" width="760" height="345.5"
+     role="img" aria-labelledby="fig-dccc-6-title fig-dccc-6-desc">
+  <title id="fig-dccc-6-title">三种做法在同一件事上的差别：拥塞信号从哪来、发送方怎么反应</title>
+  <desc id="fig-dccc-6-desc">上面一条说明这张图比较的是三者在同一件事上的差别。第二排三格分别是：标准 TCP 靠丢包发现拥塞，而为了发现丢包要先填满队列；DCTCP 靠路由器置 ECN 位发现拥塞，并按被标记包的比例温和降速；pFabric 干脆不做速率控制，靠包上的优先级让交换机先发小鼠。中间一条说明前两种改的是什么时候降速、降多少，第三种改的是谁先被发出去。最下面两格是它们的共同点（都要别人配合，交换机或终端主机）与差别（DCTCP 只需要一致的 ECN 开关，pFabric 要求两侧都改）。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="345.5" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">三种做法在同一件事上的差别：拥塞信号从哪来、发送方怎么反应</text>
+  <rect x="25" y="64" width="710" height="33" rx="6" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="380" y="84.35" font-size="11" fill="#1e40af" text-anchor="middle">三种做法在同一件事上的差别：拥塞信号从哪来、发送方怎么反应</text>
+  <rect x="25" y="125" width="220" height="60" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="135" y="143.5" font-size="10" fill="#b45309" text-anchor="middle">标准 TCP</text>
+  <text x="135" y="158.5" font-size="10" fill="#b45309" text-anchor="middle">靠丢包发现拥塞</text>
+  <text x="135" y="173.5" font-size="10" fill="#b45309" text-anchor="middle">为了发现丢包要先填满队列</text>
+  <rect x="270" y="125" width="220" height="60" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="143.5" font-size="10" fill="#166534" text-anchor="middle">DCTCP</text>
+  <text x="380" y="158.5" font-size="10" fill="#166534" text-anchor="middle">靠路由器置 ECN 位发现拥塞</text>
+  <text x="380" y="173.5" font-size="10" fill="#166534" text-anchor="middle">按被标记包的比例温和降速</text>
+  <rect x="515" y="125" width="220" height="60" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="625" y="143.5" font-size="10" fill="#6b21a8" text-anchor="middle">pFabric</text>
+  <text x="625" y="158.5" font-size="10" fill="#6b21a8" text-anchor="middle">不做速率控制</text>
+  <text x="625" y="173.5" font-size="10" fill="#6b21a8" text-anchor="middle">靠包上的优先级让交换机先发小鼠</text>
+  <rect x="25" y="213" width="710" height="30" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="380" y="231.5" font-size="10" fill="#1e293b" text-anchor="middle">前两种改的是「什么时候降速、降多少」，第三种改的是「谁先被发出去」</text>
+  <rect x="25" y="271" width="342.5" height="49.5" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="196.25" y="291.35" font-size="11" fill="#1e40af" text-anchor="middle">共同点</text>
+  <text x="196.25" y="307.85" font-size="11" fill="#1e40af" text-anchor="middle">都要别人配合：交换机或终端主机</text>
+  <rect x="392.5" y="271" width="342.5" height="49.5" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="563.75" y="291.75" font-size="10" fill="#1e40af" text-anchor="middle">差别</text>
+  <text x="563.75" y="306.75" font-size="10" fill="#1e40af" text-anchor="middle">DCTCP 只需要一致的 ECN 开关；pFabric 要求两侧都改</text>
+</svg>
