@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 177" width="760" height="177"
+     role="img" aria-labelledby="fig-bgpi-4-title fig-bgpi-4-desc">
+  <title id="fig-bgpi-4-title">热土豆路由：谁离我近就走谁，让分组尽快离开自己的网络</title>
+  <desc id="fig-bgpi-4-desc">左栏是比较：两台自治系统之间有多条链路时，同一对路由器之间存在经过同一批自治系统的多条路径，导入方要用 IGP 算出自己到每个候选出口路由器的距离。右栏是选择：离自己更近的那个出口被选中，因为走它更少消耗本自治系统的带宽；这就是热土豆路由——希望分组尽快离开自己的网络、尽快开始走别人的链路。靠近另一个出口的路由器可能做出相反的选择。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="177" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">热土豆路由</text>
+
+  <rect x="22" y="66" width="344" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="194" y="88" font-size="12" fill="#1e40af" text-anchor="middle">多条链路 ⇒ 多条候选路径</text>
+  <text x="194" y="106" font-size="12" fill="#1e40af" text-anchor="middle">用 IGP 算到各出口的距离</text>
+
+  <rect x="394" y="66" width="344" height="54" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="566" y="88" font-size="12" fill="#166534" text-anchor="middle">选最近的那个出口</text>
+  <text x="566" y="106" font-size="12" fill="#166534" text-anchor="middle">少用自己的带宽</text>
+
+  <text x="380" y="152" font-size="10" fill="#64748b" text-anchor="middle">烫手的东西尽快扔出去：扔出去之后，这段路就由别人付钱了</text>
+</svg>

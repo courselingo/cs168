@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 205" width="760" height="205"
+     role="img" aria-labelledby="fig-bgpi-5-title fig-bgpi-5-desc">
+  <title id="fig-bgpi-5-title">MED：导出方用数值说「请从我这台路由器进来」</title>
+  <desc id="fig-bgpi-5-desc">左栏是导出方的偏好：它希望分组尽量少占用自己的带宽，所以偏好那条更省自己带宽的路径，在宣告里给这条附加「我希望你走这条」、给另一条附加「我希望你避开这条」。右栏是数值的含义：MED 是经由这个路由器到目的地的距离，例如西海岸路由器离目的地 3 跳、东海岸离目的地 12 跳，数值越小越优先，因为导出方宁愿用自己的 3 条链路而不是 12 条。注意热土豆路由算的是「我到你有多远」，MED 说的是「你从我这里到目的地有多远」，两个方向相反。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="205" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">MED：导出方的偏好</text>
+
+  <rect x="22" y="76" width="344" height="72" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="194" y="98" font-size="12" fill="#9d174d" text-anchor="middle">导出方表态</text>
+  <text x="194" y="116" font-size="12" fill="#9d174d" text-anchor="middle">「我希望你走这条」</text>
+  <text x="194" y="134" font-size="12" fill="#9d174d" text-anchor="middle">「我希望你避开那条」</text>
+
+  <rect x="394" y="76" width="344" height="72" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="566" y="98" font-size="12" fill="#166534" text-anchor="middle">另一种理解：到目的地的距离</text>
+  <text x="566" y="116" font-size="12" fill="#166534" text-anchor="middle">西边 3 跳、东边 12 跳</text>
+  <text x="566" y="134" font-size="12" fill="#166534" text-anchor="middle">数值越小越优先</text>
+
+  <text x="380" y="180" font-size="10" fill="#64748b" text-anchor="middle">热土豆算「我到你有多远」，MED 说「你从我这里到目的地有多远」</text>
+</svg>

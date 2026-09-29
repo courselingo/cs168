@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 211" width="760" height="211"
+     role="img" aria-labelledby="fig-bgpi-7-title fig-bgpi-7-desc">
+  <title id="fig-bgpi-7-title">三种路由属性：本地优先级管钱款、ASPATH 管长度、MED 管对方偏好</title>
+  <desc id="fig-bgpi-7-desc">三格并排：本地优先级把 Gao-Rexford 规则编码在一个自治系统内部，更偏好就给更高的值（例如来自客户设 3000、来自对等体设 1000），它是局部属性，只在 iBGP 消息里传递，数值是任意的、只有相对大小有意义；ASPATH 装着这条路由经过的自治系统列表（按反向顺序），例如 [3, 72, 25]，它是全局属性，用长度对应第二条打破平局的依据；MED 编码导出方的偏好，等价于从导出路由器到目的地的距离，数值越小越优先，它是第四条依据。注意本地优先级越高越优先，MED 越小越优先，两个方向相反。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="211" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">三种路由属性</text>
+
+  <rect x="22" y="66" width="222" height="90" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="133" y="88" font-size="12" fill="#1e40af" text-anchor="middle">本地优先级</text>
+  <text x="133" y="106" font-size="12" fill="#1e40af" text-anchor="middle">客户 3000 / 对等 1000</text>
+  <text x="133" y="124" font-size="12" fill="#1e40af" text-anchor="middle">局部：只在 iBGP 里走</text>
+  <text x="133" y="142" font-size="12" fill="#1e40af" text-anchor="middle">越大越优先</text>
+
+  <rect x="269" y="66" width="222" height="90" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="88" font-size="12" fill="#b45309" text-anchor="middle">ASPATH</text>
+  <text x="380" y="106" font-size="12" fill="#b45309" text-anchor="middle">经过的 AS 列表 [3, 72, 25]</text>
+  <text x="380" y="124" font-size="12" fill="#b45309" text-anchor="middle">全局：eBGP 也带</text>
+  <text x="380" y="142" font-size="12" fill="#b45309" text-anchor="middle">越短越优先</text>
+
+  <rect x="516" y="66" width="222" height="90" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="627" y="88" font-size="12" fill="#166534" text-anchor="middle">MED</text>
+  <text x="627" y="106" font-size="12" fill="#166534" text-anchor="middle">导出方到目的地的距离</text>
+  <text x="627" y="124" font-size="12" fill="#166534" text-anchor="middle">全局：可跨 AS 带</text>
+  <text x="627" y="142" font-size="12" fill="#166534" text-anchor="middle">越小越优先</text>
+
+  <text x="380" y="186" font-size="10" fill="#64748b" text-anchor="middle">本地优先级越高越优先，ASPATH 越短越优先，MED 越小越优先</text>
+</svg>

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 211" width="760" height="211"
+     role="img" aria-labelledby="fig-bgpi-8-title fig-bgpi-8-desc">
+  <title id="fig-bgpi-8-title">BGP 的四类问题</title>
+  <desc id="fig-bgpi-8-desc">左栏两类：BGP 没有内建安全保证，恶意自治系统可以宣告自己到不了、或根本不存在的便宜路由，诱导别人把分组送经自己再删除或修改，这类攻击叫前缀劫持；它还优先策略而不是最小代价，而且用自治系统数量衡量路径长度会有误导性，不过教材提醒这更像有意的设计取舍。右栏两类：实现很复杂，本地优先级与 MED 这类配置要靠运营者手工设置，配错会让错误路径扩散甚至导致大范围中断；它还依赖若干假设（都遵守 Gao-Rexford、图分层、没有提供者与客户的环），假设不成立就可能永不收敛或出现环路与死胡同。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="211" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">BGP 的四类问题</text>
+
+  <rect x="22" y="66" width="344" height="90" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="194" y="88" font-size="12" fill="#9d174d" text-anchor="middle">① 没有内建安全保证</text>
+  <text x="194" y="106" font-size="12" fill="#9d174d" text-anchor="middle">可以撒谎诱导流量</text>
+  <text x="194" y="124" font-size="12" fill="#9d174d" text-anchor="middle">前缀劫持</text>
+  <text x="194" y="142" font-size="12" fill="#9d174d" text-anchor="middle">② 策略优先于性能</text>
+
+  <rect x="394" y="66" width="344" height="90" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="566" y="88" font-size="12" fill="#b45309" text-anchor="middle">③ 实现复杂、易配错</text>
+  <text x="566" y="106" font-size="12" fill="#b45309" text-anchor="middle">本地优先级与 MED 靠手设</text>
+  <text x="566" y="124" font-size="12" fill="#b45309" text-anchor="middle">配错会导致中断</text>
+  <text x="566" y="142" font-size="12" fill="#b45309" text-anchor="middle">④ 依赖 Gao-Rexford 假设</text>
+
+  <text x="380" y="186" font-size="10" fill="#64748b" text-anchor="middle">每条毛病几乎都能追溯到「把策略放第一、把拓扑藏起来」这个最初的选择</text>
+</svg>

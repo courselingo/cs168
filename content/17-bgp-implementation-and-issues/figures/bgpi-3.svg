@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 205" width="760" height="205"
+     role="img" aria-labelledby="fig-bgpi-3-title fig-bgpi-3-desc">
+  <title id="fig-bgpi-3-title">三份路由各管一段：IGP 管内部、eBGP 学外部、iBGP 负责分发</title>
+  <desc id="fig-bgpi-3-desc">三格并排：先由每个自治系统运行 IGP，学到本系统内任意两台路由器之间的最小代价路径；再由各自治系统运行 eBGP，互相宣告路由、学到通向其他自治系统的路由；最后由 iBGP 把某台路由器学到的外部路由分发给同一系统内的所有路由器。转发时，目的地在本系统内就用 IGP 的路由；在别的自治系统就用 iBGP 得知的外部路由确定哪台是出口路由器，再用 IGP 把分组送到那台路由器。因此每台路由器有两张转发表。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="205" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">三种协议怎么配合</text>
+
+  <rect x="22" y="76" width="222" height="72" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="133" y="98" font-size="12" fill="#1e40af" text-anchor="middle">一、IGP</text>
+  <text x="133" y="116" font-size="12" fill="#1e40af" text-anchor="middle">学本系统内的最短路</text>
+  <text x="133" y="134" font-size="12" fill="#1e40af" text-anchor="middle">域内协议</text>
+
+  <rect x="269" y="76" width="222" height="72" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="98" font-size="12" fill="#b45309" text-anchor="middle">二、eBGP</text>
+  <text x="380" y="116" font-size="12" fill="#b45309" text-anchor="middle">互相宣告、学到外部路由</text>
+  <text x="380" y="134" font-size="12" fill="#b45309" text-anchor="middle">只要边界路由器</text>
+
+  <rect x="516" y="76" width="222" height="72" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="627" y="98" font-size="12" fill="#166534" text-anchor="middle">三、iBGP</text>
+  <text x="627" y="116" font-size="12" fill="#166534" text-anchor="middle">把外部路由分发全系统</text>
+  <text x="627" y="134" font-size="12" fill="#166534" text-anchor="middle">让全系统像一个整体</text>
+
+  <text x="380" y="180" font-size="10" fill="#64748b" text-anchor="middle">同一个目的地要找两个东西：谁的出口，以及我怎么走到那个出口</text>
+</svg>
