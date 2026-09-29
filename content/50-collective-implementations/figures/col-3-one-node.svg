@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 389" width="760" height="389"
+     role="img" aria-labelledby="fig-col-3-one-node-title fig-col-3-one-node-desc">
+  <title id="fig-col-3-one-node-title">集中到一个节点：带宽降到 O(Dp)，但变成两个时间步，而且有单点故障</title>
+  <desc id="fig-col-3-one-node-desc">除 1 号节点外所有人把向量发给 1 号节点，1 号节点求和后再发回所有人。两步各 D(p-1) 字节，合计 2D(p-1) 即 O(D·p)，比全网状好 p 倍；但它需要两个时间步，第一步必须全部完成后第二步才能开始，而且 1 号节点是单点故障，实践中并不常用。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="389" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">集中到一个节点：带宽降到 O(Dp)，但变成两个时间步，而且有单点故障</text>
+  <rect x="22" y="64" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="86" font-size="12" fill="#1e40af" text-anchor="middle">做法：除 1 号节点外，所有人把向量发给 1 号节点</text>
+  <rect x="22" y="125" width="716" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="147" font-size="12" fill="#b45309" text-anchor="middle">1 号节点求和，再把和向量发回给所有人</text>
+  <rect x="22" y="186" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="208" font-size="12" fill="#166534" text-anchor="middle">带宽：两步各 D(p-1) 字节，合计 2D(p-1) = O(D·p)，比全网状好 p 倍</text>
+  <rect x="22" y="247" width="716" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="269" font-size="12" fill="#b45309" text-anchor="middle">时间：两个时间步，第一步必须全部完成第二步才能开始（硬串行边界）</text>
+  <rect x="22" y="308" width="716" height="36" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="380" y="330" font-size="12" fill="#9d174d" text-anchor="middle">缺点：1 号节点是单点故障，实践中不常用</text>
+  <text x="380" y="366" font-size="10" fill="#64748b" text-anchor="middle">换一种拓扑就换了瓶颈在哪</text>
+</svg>

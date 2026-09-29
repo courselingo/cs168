@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 450" width="760" height="450"
+     role="img" aria-labelledby="fig-col-7-compare-title fig-col-7-compare-desc">
+  <title id="fig-col-7-compare-title">五种方案的总带宽与时间步对比</title>
+  <desc id="fig-col-7-compare-desc">五种方案的总带宽与时间步：全网状 O(Dp²)、1 步、每步 2D(p-1)；集中式 O(Dp)、2 步、每步 D(p-1)；二叉树 6D·p、O(log p) 步、每步 3D；朴素环 4D·p、O(p) 步、每步 2D；优化环 4D·p、O(p) 步、每步 2D/p。只有全网状是平方级，而带宽省下来之后竞争的维度就变成时间与每步字节。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="450" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">五种方案的总带宽与时间步对比</text>
+  <rect x="22" y="64" width="716" height="36" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="380" y="86" font-size="12" fill="#9d174d" text-anchor="middle">全网状：带宽 O(Dp²)，1 个时间步，每步 2D(p-1)</text>
+  <rect x="22" y="125" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="147" font-size="12" fill="#1e40af" text-anchor="middle">集中到一个节点：带宽 O(Dp)，2 个时间步，每步 D(p-1)</text>
+  <rect x="22" y="186" width="716" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="208" font-size="12" fill="#b45309" text-anchor="middle">二叉树：带宽 6D·p，O(log p) 步，每步 3D</text>
+  <rect x="22" y="247" width="716" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="269" font-size="12" fill="#b45309" text-anchor="middle">朴素环：带宽 4D·p，O(p) 步，每步 2D</text>
+  <rect x="22" y="308" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="330" font-size="12" fill="#166534" text-anchor="middle">优化环：带宽 4D·p，O(p) 步，每步 2D/p</text>
+  <rect x="22" y="369" width="716" height="36" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380" y="391" font-size="12" fill="#6b21a8" text-anchor="middle">读法：只有全网状是平方级；带宽省下来后，竞争维度变成时间与每步字节</text>
+  <text x="380" y="427" font-size="10" fill="#64748b" text-anchor="middle">方案之间比的从来不是单一指标，而是一对指标</text>
+</svg>

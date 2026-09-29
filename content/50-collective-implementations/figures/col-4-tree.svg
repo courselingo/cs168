@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 450" width="760" height="450"
+     role="img" aria-labelledby="fig-col-4-tree-title fig-col-4-tree-desc">
+  <title id="fig-col-4-tree-title">二叉树：每节点 3D 字节，时间步 O(log p)，而每一跳都把数据归并得更小</title>
+  <desc id="fig-col-4-tree-desc">二叉树方案让每个节点最多 2 个孩子：上行时每个节点把孩子的向量与自己的相加后再发给父节点，根算出总和；下行时根把总和往下发。每节点每趟最多 3D 字节，两趟合计 6D·p 即 O(D·p)；时间步是 O(log p)，但每步只搬 3D 字节，比前两个方案每步更少。它最值得学的一手是先归并再转发：把三个向量压成一个往上送。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="450" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">二叉树：每节点 3D 字节，时间步 O(log p)，而每一跳都把数据归并得更小</text>
+  <rect x="22" y="64" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="86" font-size="12" fill="#1e40af" text-anchor="middle">拓扑：二叉树，每个节点最多 2 个孩子</text>
+  <rect x="22" y="125" width="716" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="147" font-size="12" fill="#b45309" text-anchor="middle">上行：叶子先发，每个节点把孩子的向量和自己的加起来，再把和发给父节点</text>
+  <rect x="22" y="186" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="208" font-size="12" fill="#166534" text-anchor="middle">下行：根把总和往下发，每个节点收到后给自己的每个孩子发一份</text>
+  <rect x="22" y="247" width="716" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="269" font-size="12" fill="#b45309" text-anchor="middle">带宽：每节点每趟最多 3D 字节（收 2 发 1 / 收 1 发 2），两趟合计 6D·p = O(D·p)</text>
+  <rect x="22" y="308" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="330" font-size="12" fill="#166534" text-anchor="middle">时间：O(log p) 个时间步，但每步只搬 3D 字节，比前两个方案每步更少</text>
+  <rect x="22" y="369" width="716" height="36" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380" y="391" font-size="12" fill="#6b21a8" text-anchor="middle">关键一手：先归并再转发，把三个向量压成一个往上送，省下带宽</text>
+  <text x="380" y="427" font-size="10" fill="#64748b" text-anchor="middle">归并不只是数学操作，它是省带宽的手段</text>
+</svg>

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 389" width="760" height="389"
+     role="img" aria-labelledby="fig-col-1-motivation-title fig-col-1-motivation-desc">
+  <title id="fig-col-1-motivation-title">实现一个集合操作要先回答两个问题，再用两个指标衡量</title>
+  <desc id="fig-col-1-motivation-desc">实现集合操作要先定两件事：用什么拓扑连接节点、节点之间交换哪些数据；然后用两个指标衡量：总共用了多少网络带宽、操作花了多长时间。变量是 p 个节点、每个向量 D 字节、每个元素 D/p 字节，本节取 p 等于 5。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="389" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">实现一个集合操作要先回答两个问题，再用两个指标衡量</text>
+  <rect x="22" y="64" width="716" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="86" font-size="12" fill="#1e40af" text-anchor="middle">实现一个集合操作，要先回答两个问题：用什么拓扑连节点，节点之间要交换哪些数据</text>
+  <rect x="22" y="125" width="716" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="147" font-size="12" fill="#b45309" text-anchor="middle">这两个问题定了，实现就定了；再往下才是评价</text>
+  <rect x="22" y="186" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="208" font-size="12" fill="#166534" text-anchor="middle">指标一：总共用了多少网络带宽</text>
+  <rect x="22" y="247" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="269" font-size="12" fill="#166534" text-anchor="middle">指标二：整个操作花了多长时间</text>
+  <rect x="22" y="308" width="716" height="36" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380" y="330" font-size="12" fill="#6b21a8" text-anchor="middle">变量：p 个节点，每个向量共 D 字节，于是每个元素（每个盒子）是 D/p 字节；本节取 p=5</text>
+  <text x="380" y="366" font-size="10" fill="#64748b" text-anchor="middle">拓扑与交换什么是设计变量，带宽与时间是评价指标</text>
+</svg>
