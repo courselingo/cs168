@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 185" width="760" height="185"
+     role="img" aria-labelledby="fig-dv-7-title fig-dv-7-desc">
+  <title id="fig-dv-7-title">触发更新与间隔更新</title>
+  <desc id="fig-dv-7-desc">左边是触发更新：转发表一发生变化就立刻把广告发出去。右边是间隔更新：每隔一个广告间隔定期重发一遍，实践中常用 30 秒。重发是为了对付会丢包的链路；而触发更新只是优化，省掉它协议依然正确，只是收敛慢一些。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="185" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">触发更新与间隔更新</text>
+
+  <rect x="22" y="66" width="344" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="194" y="88" font-size="12" fill="#1e40af" text-anchor="middle">触发更新</text>
+  <text x="194" y="106" font-size="12" fill="#1e40af" text-anchor="middle">表一变，立刻发出去</text>
+
+  <rect x="394" y="66" width="344" height="54" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="566" y="88" font-size="12" fill="#166534" text-anchor="middle">间隔更新</text>
+  <text x="566" y="106" font-size="12" fill="#166534" text-anchor="middle">每 30 秒定期重发一遍</text>
+
+  <text x="380" y="160" font-size="10" fill="#64748b" text-anchor="middle">重发是为了对付会丢包的链路；触发更新只是优化，省掉它协议仍然正确</text>
+</svg>

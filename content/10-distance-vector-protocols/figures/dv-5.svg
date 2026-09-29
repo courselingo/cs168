@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 189" width="760" height="189"
+     role="img" aria-labelledby="fig-dv-5-title fig-dv-5-desc">
+  <title id="fig-dv-5-title">把例子跑一遍：代价一跳一跳加上去</title>
+  <desc id="fig-dv-5-desc">R1 先用静态路由硬编码「到 A 的代价是 1」，于是宣告出去；R2 表里没有 A，装上「经由 R1，代价 2」，再宣告给 R3 与 R1；R1 一算经由 R2 是 3，比 1 差，忽略；R3 装上「经由 R2，代价 3」，再宣告给 R2，R2 一算 4 比 2 差，忽略，于是不再有新的宣告。此时每个人的表都填好，合起来正好是一棵最小代价的投递树。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="189" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">把例子跑一遍</text>
+
+  <rect x="22" y="76" width="222" height="54" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="133" y="98" font-size="12" fill="#166534" text-anchor="middle">R1 装表</text>
+  <text x="133" y="116" font-size="12" fill="#166534" text-anchor="middle">到 A 代价 1</text>
+
+  <rect x="269" y="76" width="222" height="54" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="98" font-size="12" fill="#b45309" text-anchor="middle">R2 装表</text>
+  <text x="380" y="116" font-size="12" fill="#b45309" text-anchor="middle">经 R1，代价 2</text>
+
+  <rect x="516" y="76" width="222" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="627" y="98" font-size="12" fill="#1e40af" text-anchor="middle">R3 装表</text>
+  <text x="627" y="116" font-size="12" fill="#1e40af" text-anchor="middle">经 R2，代价 3</text>
+
+  <text x="380" y="164" font-size="10" fill="#64748b" text-anchor="middle">更差的宣告被忽略，于是停下；合起来是一棵最小代价投递树</text>
+</svg>

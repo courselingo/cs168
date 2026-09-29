@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 221" width="760" height="221"
+     role="img" aria-labelledby="fig-dv-10-title fig-dv-10-desc">
+  <title id="fig-dv-10-title">水平分割与毒性反转：二选一，都只防长度为 2 的环</title>
+  <desc id="fig-dv-10-desc">左栏是水平分割：永远不要把一条路由广告回给把它给你的人，也就是不往回说。右栏是毒性反转：不是不说，而是明确回告一条代价无穷，等于告诉对方别往我这儿发。两者选一个用，不能同时用。区别在于环路已经形成时：水平分割什么都不发，只能等表项过期；毒性反转会立刻回告无穷，把环路当场拆掉。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="221" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">水平分割与毒性反转</text>
+
+  <rect x="22" y="66" width="344" height="90" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="194" y="88" font-size="12" fill="#1e40af" text-anchor="middle">水平分割</text>
+  <text x="194" y="106" font-size="12" fill="#1e40af" text-anchor="middle">不把路由广告回给出处</text>
+  <text x="194" y="124" font-size="12" fill="#1e40af" text-anchor="middle">环路已形成时什么都不发</text>
+  <text x="194" y="142" font-size="12" fill="#1e40af" text-anchor="middle">只能等表项过期</text>
+
+  <rect x="394" y="66" width="344" height="90" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="566" y="88" font-size="12" fill="#166534" text-anchor="middle">毒性反转</text>
+  <text x="566" y="106" font-size="12" fill="#166534" text-anchor="middle">明确回告一条代价无穷</text>
+  <text x="566" y="124" font-size="12" fill="#166534" text-anchor="middle">环路已形成时立刻发回</text>
+  <text x="566" y="142" font-size="12" fill="#166534" text-anchor="middle">当场把环路拆掉</text>
+
+  <text x="380" y="196" font-size="10" fill="#64748b" text-anchor="middle">两者选一个用（不能同时用）；它们都只防得住长度为 2 的环</text>
+</svg>

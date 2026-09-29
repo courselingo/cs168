@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 195" width="760" height="195"
+     role="img" aria-labelledby="fig-dv-9-title fig-dv-9-desc">
+  <title id="fig-dv-9-title">毒化：用代价无穷主动宣告一条路作废</title>
+  <desc id="fig-dv-9-desc">左边是不毒化：t=6 链路就断了，但我们还得用这条作废的路再撑 10 秒，到 t=16 才过期；这期间发给目的地的分组全丢，还可能把作废的路广告给别人，甚至因此拒绝掉新的正确路径。右边是毒化：t=6 立刻宣告「A 离我无穷远」，按来自下一跳的规则更新表，同一刻到达的新广告马上被接受，分组当场改走另一条路。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="195" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">毒化：别傻等过期</text>
+
+  <rect x="22" y="66" width="344" height="72" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="194" y="88" font-size="12" fill="#9d174d" text-anchor="middle">不毒化</text>
+  <text x="194" y="106" font-size="12" fill="#9d174d" text-anchor="middle">t=6 链路断，却要等到 t=16</text>
+  <text x="194" y="124" font-size="12" fill="#9d174d" text-anchor="middle">这 10 秒的分组全丢</text>
+
+  <rect x="394" y="66" width="344" height="72" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="566" y="88" font-size="12" fill="#166534" text-anchor="middle">毒化</text>
+  <text x="566" y="106" font-size="12" fill="#166534" text-anchor="middle">t=6 立刻宣告代价无穷</text>
+  <text x="566" y="124" font-size="12" fill="#166534" text-anchor="middle">当场改走另一条路</text>
+
+  <text x="380" y="170" font-size="10" fill="#64748b" text-anchor="middle">毒化路径像普通路径一样传播；但绝不能沿着毒化路径转发分组</text>
+</svg>

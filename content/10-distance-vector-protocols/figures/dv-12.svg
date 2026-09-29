@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 205" width="760" height="205"
+     role="img" aria-labelledby="fig-dv-12-title fig-dv-12-desc">
+  <title id="fig-dv-12-title">发广告的三类场合</title>
+  <desc id="fig-dv-12-desc">三种场合会促使一台路由器发广告：表发生变化时发，叫触发更新，可能因为接受了新广告、加了一条新链路、或者链路坏掉导致路由被毒化；每隔一个广告间隔定期发；表项过期、被换成毒化时发。触发更新只是优化：只在间隔到了才发，协议依然正确，只是收敛更慢。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="205" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">发广告的三类场合</text>
+
+  <rect x="22" y="76" width="222" height="72" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="133" y="98" font-size="12" fill="#1e40af" text-anchor="middle">表变了</text>
+  <text x="133" y="116" font-size="12" fill="#1e40af" text-anchor="middle">触发更新</text>
+  <text x="133" y="134" font-size="12" fill="#1e40af" text-anchor="middle">新广告、新链路、链路坏</text>
+
+  <rect x="269" y="76" width="222" height="72" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="98" font-size="12" fill="#1e40af" text-anchor="middle">间隔到了</text>
+  <text x="380" y="116" font-size="12" fill="#1e40af" text-anchor="middle">定期更新</text>
+  <text x="380" y="134" font-size="12" fill="#1e40af" text-anchor="middle">每 30 秒一遍</text>
+
+  <rect x="516" y="76" width="222" height="72" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="627" y="98" font-size="12" fill="#b45309" text-anchor="middle">表项过期</text>
+  <text x="627" y="116" font-size="12" fill="#b45309" text-anchor="middle">换成毒化再发</text>
+  <text x="627" y="134" font-size="12" fill="#b45309" text-anchor="middle">告诉别人这条路作废</text>
+
+  <text x="380" y="180" font-size="10" fill="#64748b" text-anchor="middle">触发更新只是优化：省掉它协议仍然正确，只是收敛更慢</text>
+</svg>

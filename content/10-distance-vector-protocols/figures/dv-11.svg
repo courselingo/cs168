@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 205" width="760" height="205"
+     role="img" aria-labelledby="fig-dv-11-title fig-dv-11-desc">
+  <title id="fig-dv-11-title">数到无穷：毒化丢了一条，代价就一路涨上去</title>
+  <desc id="fig-dv-11-desc">箭头依次向右，四个格子是同一台路由器在不同轮次里被误导后的代价：R1 以为自己到目的地是 2，R2 接受成 3，R3 接受成 4，R1 又接受成 5，如此循环、越涨越高。原因是发给 R1 的那条毒化丢了，R1 仍以为自己能到目的地；水平分割只阻止广告回下一跳，而这里的环长是 3，所以救不了；毒性反转也救不了。兜底办法是设上限：RIP 用 15，16 及以上一律当无穷。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="205" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">数到无穷</text>
+
+  <rect x="22" y="76" width="160" height="72" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="102" y="98" font-size="12" fill="#9d174d" text-anchor="middle">R1 以为</text>
+  <text x="102" y="116" font-size="12" fill="#9d174d" text-anchor="middle">到 A 是 2</text>
+  <text x="102" y="134" font-size="12" fill="#9d174d" text-anchor="middle">毒化丢了</text>
+
+  <rect x="207" y="76" width="160" height="72" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="287" y="98" font-size="12" fill="#9d174d" text-anchor="middle">R2 接受</text>
+  <text x="287" y="116" font-size="12" fill="#9d174d" text-anchor="middle">变成 3</text>
+  <text x="287" y="134" font-size="12" fill="#9d174d" text-anchor="middle">因为来自下一跳</text>
+
+  <rect x="392" y="76" width="160" height="72" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="472" y="98" font-size="12" fill="#9d174d" text-anchor="middle">R3 接受</text>
+  <text x="472" y="116" font-size="12" fill="#9d174d" text-anchor="middle">变成 4</text>
+  <text x="472" y="134" font-size="12" fill="#9d174d" text-anchor="middle">再传给 R1</text>
+
+  <rect x="577" y="76" width="160" height="72" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="657" y="98" font-size="12" fill="#b45309" text-anchor="middle">R1 再接受</text>
+  <text x="657" y="116" font-size="12" fill="#b45309" text-anchor="middle">变成 5</text>
+  <text x="657" y="134" font-size="12" fill="#b45309" text-anchor="middle">一路涨下去</text>
+
+  <path d="M187,112 L 196,112" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+  <path d="M372,112 L 381,112" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+  <path d="M557,112 L 566,112" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+
+  <text x="380" y="180" font-size="10" fill="#64748b" text-anchor="middle">兜底：设上限，16 及以上当无穷；这里的无穷是「数上去的」，不是检测到故障</text>
+</svg>

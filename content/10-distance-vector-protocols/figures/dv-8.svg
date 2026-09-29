@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 221" width="760" height="221"
+     role="img" aria-labelledby="fig-dv-8-title fig-dv-8-desc">
+  <title id="fig-dv-8-title">两个计时器：TTL 每条表项一个，广告间隔整张表一个</title>
+  <desc id="fig-dv-8-desc">左栏是 TTL：每条表项各自独立倒计时，t=0 装表时设为 11，t=5 收到下一跳的定期广告就重置回 11，如果在 t=6 之后一直收不到确认，到 t=16 归零并删除该条目。右栏是广告间隔：通常整张表共用一个计时器，每 30 秒把这台路由器表里的所有路由向所有邻居发一遍，收到的人据此重置自己表项的 TTL。这两个计时器很容易混。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="221" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">两个计时器，别混</text>
+
+  <rect x="22" y="76" width="344" height="90" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="194" y="98" font-size="12" fill="#9d174d" text-anchor="middle">TTL：每条表项各自一个</text>
+  <text x="194" y="116" font-size="12" fill="#9d174d" text-anchor="middle">t=0 装表时设为 11</text>
+  <text x="194" y="134" font-size="12" fill="#9d174d" text-anchor="middle">t=5 收到确认，重置回 11</text>
+  <text x="194" y="152" font-size="12" fill="#9d174d" text-anchor="middle">t=16 归零，删掉这条</text>
+
+  <rect x="394" y="76" width="344" height="90" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="566" y="98" font-size="12" fill="#1e40af" text-anchor="middle">广告间隔：整张表一个</text>
+  <text x="566" y="116" font-size="12" fill="#1e40af" text-anchor="middle">常用 30 秒</text>
+  <text x="566" y="134" font-size="12" fill="#1e40af" text-anchor="middle">把表里所有路由发一遍</text>
+  <text x="566" y="152" font-size="12" fill="#1e40af" text-anchor="middle">收到的人据此重置 TTL</text>
+
+  <text x="380" y="196" font-size="10" fill="#64748b" text-anchor="middle">一个是「什么时候发广告」，一个是「什么时候删条目」</text>
+</svg>

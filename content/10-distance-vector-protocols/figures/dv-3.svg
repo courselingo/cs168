@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 205" width="760" height="205"
+     role="img" aria-labelledby="fig-dv-3-title fig-dv-3-desc">
+  <title id="fig-dv-3-title">比较的是「到邻居的链路代价 + 宣告里的代价」</title>
+  <desc id="fig-dv-3-desc">上面一行：听到「我是 R1，A 离我 5」，如果我们到 R1 的链路代价是 1，那么经由它的代价是 1 加 5 等于 6。下面一行：后来听到「我是 R2，A 离我 3」，看上去 3 比 5 小，但我们到 R2 的链路代价是 10，所以经由它是 10 加 3 等于 13，比 6 差，于是忽略它，分组继续发给 R1。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="205" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">比较的是两个数之和</text>
+
+  <rect x="22" y="66" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="88" font-size="12" fill="#166534" text-anchor="middle">听到「我是 R1，A 离我 5」⇒ 1 + 5 = 6，记下经 R1 到 A</text>
+
+  <rect x="22" y="127" width="716" height="36" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="380" y="149" font-size="12" fill="#9d174d" text-anchor="middle">后来「我是 R2，A 离我 3」⇒ 10 + 3 = 13，比 6 差，忽略</text>
+
+  <text x="380" y="180" font-size="10" fill="#64748b" text-anchor="middle">只看宣告里的数字会算错：那个 3 看着更小，实际是 13</text>
+</svg>

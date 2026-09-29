@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 221" width="760" height="221"
+     role="img" aria-labelledby="fig-dv-6-title fig-dv-6-desc">
+  <title id="fig-dv-6-title">来自下一跳的宣告再差也要接受；协议一直跑并进入稳态</title>
+  <desc id="fig-dv-6-desc">上一格是补上的规则：如果宣告来自我们正在用的那个下一跳，就必须把它当成更新接受，哪怕结果更差，因为它可能是在说自己的距离变大了；这种更新只改距离，不改目的地与下一跳。下一格是稳态：没有拓扑变化时不再改动表；拓扑一变又会重新收敛，像水面被扔进石头后起涟漪、最后恢复平静。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="221" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">来自下一跳的宣告与稳态</text>
+
+  <rect x="22" y="66" width="716" height="54" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="88" font-size="12" fill="#b45309" text-anchor="middle">来自当前下一跳的宣告：即使更差也要接受</text>
+  <text x="380" y="106" font-size="12" fill="#b45309" text-anchor="middle">它可能是在说「我的距离变大了」；这种更新只改距离</text>
+
+  <rect x="22" y="145" width="716" height="54" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="167" font-size="12" fill="#166534" text-anchor="middle">协议一直跑：没有变化时进入稳态，表格不再改动</text>
+  <text x="380" y="185" font-size="12" fill="#166534" text-anchor="middle">拓扑一变就再收敛一次，像水面起涟漪后又平静下来</text>
+</svg>

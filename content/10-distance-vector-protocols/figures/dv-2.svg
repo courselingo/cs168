@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 205" width="760" height="205"
+     role="img" aria-labelledby="fig-dv-2-title fig-dv-2-desc">
+  <title id="fig-dv-2-title">宣告向外扩散，消息向内汇聚</title>
+  <desc id="fig-dv-2-desc">左栏是宣告的方向：从目的地 A 开始向外扩散，A 说「我是 A」，R1 再把「我能到 A」告诉自己的邻居。右栏是消息本身的方向：从远处的 D 出发，一路朝 A 的方向送，是向内汇聚的。教材特别提醒，宣告的方向与消息的方向完全相反，这两者最容易搞混。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="205" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">宣告的方向与消息的方向相反</text>
+
+  <rect x="22" y="76" width="344" height="72" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="194" y="98" font-size="12" fill="#1e40af" text-anchor="middle">宣告：向外扩散</text>
+  <text x="194" y="116" font-size="12" fill="#1e40af" text-anchor="middle">A 说「我是 A」</text>
+  <text x="194" y="134" font-size="12" fill="#1e40af" text-anchor="middle">R1 再告诉自己的邻居</text>
+
+  <rect x="394" y="76" width="344" height="72" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="566" y="98" font-size="12" fill="#166534" text-anchor="middle">消息：向内汇聚</text>
+  <text x="566" y="116" font-size="12" fill="#166534" text-anchor="middle">从远处的 D 出发</text>
+  <text x="566" y="134" font-size="12" fill="#166534" text-anchor="middle">一路朝 A 的方向送</text>
+
+  <text x="380" y="180" font-size="10" fill="#64748b" text-anchor="middle">宣告向外、消息向内：这两件事方向完全相反，别把它们混起来</text>
+</svg>

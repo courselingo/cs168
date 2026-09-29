@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 205" width="760" height="205"
+     role="img" aria-labelledby="fig-dv-4-title fig-dv-4-desc">
+  <title id="fig-dv-4-title">分布式、异步的 Bellman-Ford</title>
+  <desc id="fig-dv-4-desc">左栏是分布式：没有一台中心机器跑整个算法，每台路由器在看不到整张图的情况下只算自己那一份答案，也就是把自己的转发表填好。右栏是异步：所有路由器可以同时跑，没有谁规定松弛的顺序，也没有谁规定宣告发出的顺序。核心动作是松弛：拿「宣告里的代价加上到邻居的链路代价」与已知代价比较，更小就替换。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="205" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">分布式、异步的 Bellman-Ford</text>
+
+  <rect x="22" y="76" width="344" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="194" y="98" font-size="12" fill="#1e40af" text-anchor="middle">分布式</text>
+  <text x="194" y="116" font-size="12" fill="#1e40af" text-anchor="middle">没有中心机器，每台只算自己那一份</text>
+
+  <rect x="394" y="76" width="344" height="54" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="566" y="98" font-size="12" fill="#166534" text-anchor="middle">异步</text>
+  <text x="566" y="116" font-size="12" fill="#166534" text-anchor="middle">同时跑，没人规定操作顺序</text>
+
+  <text x="380" y="180" font-size="10" fill="#64748b" text-anchor="middle">核心动作是松弛：拿新算出的代价与已知代价比，更小就替换</text>
+</svg>
