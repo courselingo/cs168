@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 411" width="760" height="411"
      role="img" aria-labelledby="fig-headers-6-title fig-headers-6-desc">
   <title id="fig-headers-6-title">端主机要实现全部层，路由器只要下面三层</title>
-  <desc id="fig-headers-6-desc">左列是端主机，五层全都有：应用、传输、网际、链路、物理。右列是路由器，只有网际、链路、物理三层，因为路由器上没有浏览器要显示网页，也不必操心可靠性，所以它不实现上面两层。下面三层到处都要实现，上面两层只在端主机上实现。</desc>
+  <desc id="fig-headers-6-desc">两列共用同一套横向行：左列是端主机，五层全都有，从上到下是第七层应用、第四层传输、第三层网际、第二层链路、第一层物理。右列是路由器，只有三行，并且与左列的第三层、第二层、第一层逐行对齐，说明两列用的是同一套下面三层。上面两行只有左列有，因为路由器上没有浏览器要显示网页，也不必操心可靠性，所以它不实现上面两层。</desc>
 
   <defs>
     <style>
@@ -19,26 +19,26 @@
   <rect x="22" y="137" width="344" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
   <text x="194" y="159" font-size="12" fill="#1e40af" text-anchor="middle">第四层：传输</text>
 
-  <rect x="394" y="76" width="344" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
-  <text x="566" y="98" font-size="12" fill="#1e40af" text-anchor="middle">第三层：网际</text>
+  <text x="394" y="98" font-size="11" fill="#64748b">路由器上没有浏览器要显示网页</text>
+  <text x="394" y="134" font-size="11" fill="#64748b">也不必操心可靠性，所以不实现上面两层</text>
 
   <rect x="22" y="198" width="344" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
   <text x="194" y="220" font-size="12" fill="#1e40af" text-anchor="middle">第三层：网际</text>
 
-  <rect x="394" y="137" width="344" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
-  <text x="566" y="159" font-size="12" fill="#166534" text-anchor="middle">第二层：链路</text>
+  <rect x="394" y="198" width="344" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="566" y="220" font-size="12" fill="#1e40af" text-anchor="middle">第三层：网际</text>
 
   <rect x="22" y="259" width="344" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
   <text x="194" y="281" font-size="12" fill="#166534" text-anchor="middle">第二层：链路</text>
 
-  <rect x="394" y="198" width="344" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
-  <text x="566" y="220" font-size="12" fill="#b45309" text-anchor="middle">第一层：物理</text>
+  <rect x="394" y="259" width="344" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="566" y="281" font-size="12" fill="#166534" text-anchor="middle">第二层：链路</text>
 
   <rect x="22" y="320" width="344" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
   <text x="194" y="342" font-size="12" fill="#b45309" text-anchor="middle">第一层：物理</text>
 
-  <text x="394" y="259" font-size="11" fill="#64748b">路由器上没有浏览器要显示网页</text>
-  <text x="394" y="281" font-size="11" fill="#64748b">也不必操心可靠性，所以不实现上面两层</text>
+  <rect x="394" y="320" width="344" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="566" y="342" font-size="12" fill="#b45309" text-anchor="middle">第一层：物理</text>
 
   <text x="380" y="386" font-size="10" fill="#64748b" text-anchor="middle">下面三层到处都要实现，上面两层只在端主机上实现</text>
 </svg>
