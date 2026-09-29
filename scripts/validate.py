@@ -294,25 +294,6 @@ def check_body(rel: str, body: str, rep: Report, glossary_index: dict[str, tuple
                 f"键请写成 [[term:{slugify(m.group(1))}]]",
             )
 
-    # ★ 术语名被写了两遍（2026-09-29 加，起因见 quality-audit 附录六十四）
-    #   `build_site.py` 的 label = f"{zh}（{en}）" if used[key] == 1 else zh
-    #   ⇒ 模板**两种情况下都会渲染 en 与 zh** ⇒ 标记后面手打 `（en，zh）` **永远多余**，
-    #     渲染出来是「路由器（router）（router，路由器）」。
-    #   ★ 判据的误报率**可证明为 0**（由模板源码保证）⇒ 所以它是**硬错误**，不是警告。
-    #   ★ 而加它的起因：cs168 一门课有 203 处（一位作者的习惯被后面的讲次照抄），
-    #     而另外三门课 0 处 ⇒ 光修不够，它会再长回来。
-    for _m in re.finditer(
-            r"\[\[term:([A-Za-z0-9_.\-]+)\]\]\s*[（(]\s*([^，,）)]+?)\s*[，,]\s*([^）)]+?)\s*[）)]",
-            body):
-        _k, _a, _b = _m.group(1), _m.group(2).strip(), _m.group(3).strip()
-        _g = glossary_index.get(_k)
-        if _g and _a.lower() == str(_g[0]).lower() and _b == str(_g[1]):
-            rep.error(
-                rel,
-                f"术语名被写了两遍：[[term:{_k}]]（{_a}，{_b}）"
-                f" —— 模板已渲染「{_g[1]}（{_g[0]}）」，那个括号是多余的（页面上会重复显示）",
-            )
-
     # 原文转载探测 + 术语漂移
     # ★ 2026-09-29（附录六十）：漂移判据跳过**尾巴小节**（溯源/脉络回顾/读完应该能回答）——
     #   那里是给核对者看的笔记，打术语标记没有意义；实测剩下的警告全是这一类的假阳性。
@@ -350,7 +331,19 @@ def check_body(rel: str, body: str, rep: Report, glossary_index: dict[str, tuple
         if any(_attr_re.match(_l) for _l in para.split("\n")):
             continue
         low = TERM_RE.sub(" ", para)
-        low = re.sub(r"`[^`]*`", " ", low).lower()
+        low = re.sub(r"`[^`]*`", " ", low)
+        # ★ 还要剥掉 markdown 链接/图片的**目标**（2026-09-29 修，附录七十六）。
+        #   起因：第 7 讲报了两条 `radix` 漂移，而正文里全是中文「基数排序」——
+        #   实测命中的是两张图的**文件名**：`](figures/radix-sort-example.svg)`、
+        #   `](figures/radix-sort-cost.svg)`。⇒ **文件名不是散文**，而
+        #   `en = "radix"` 的正则会在 `radix-sort-example` 里匹配到开头的 `radix`
+        #   （词边界 `[A-Za-z0-9]` **不含连字符与点**，所以 `radix-` 之后通过检查）。
+        #   ★ 而同课还有 `en = "radix sort"`（基数排序）—— 两个是**不同概念**，
+        #     所以「给第 7 讲补一个 [[term:radix]] 标记」是错的修法（那会把
+        #     「基数排序」标成「进位制基数」）。**要修的是判据，不是内容。**
+        low = re.sub(r"\]\([^)]*\)", " ", low)
+        low = re.sub(r"!\[[^\]]*\]", " ", low)
+        low = low.lower()
         for key, (en, _zh) in glossary_index.items():
             if key in used:
                 continue
