@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 205" width="760" height="205"
+     role="img" aria-labelledby="fig-links-1-title fig-links-1-desc">
+  <title id="fig-links-1-title">一条链路的三个属性，以及它们在管子类比里的位置</title>
+  <desc id="fig-links-1-desc">三列并排：带宽是每秒能送多少位，对应管子的粗细；传播时延是一位走完整条链路要多久，对应管子的长短；带宽时延积是前两者相乘，也就是链路此刻装了多少位，对应管子里的水量。带宽时延积就是这条链路的容量。在链路的语境下，延迟指的就是传播时延。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="205" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">一条链路的三个属性</text>
+
+  <rect x="22" y="76" width="222" height="72" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="133" y="98" font-size="12" fill="#1e40af" text-anchor="middle">带宽</text>
+  <text x="133" y="116" font-size="12" fill="#1e40af" text-anchor="middle">每秒能送多少位</text>
+  <text x="133" y="134" font-size="12" fill="#1e40af" text-anchor="middle">管子有多粗</text>
+
+  <rect x="269" y="76" width="222" height="72" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="98" font-size="12" fill="#1e40af" text-anchor="middle">传播时延</text>
+  <text x="380" y="116" font-size="12" fill="#1e40af" text-anchor="middle">一位走完全程多久</text>
+  <text x="380" y="134" font-size="12" fill="#1e40af" text-anchor="middle">管子有多长</text>
+
+  <rect x="516" y="76" width="222" height="72" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="627" y="98" font-size="12" fill="#166534" text-anchor="middle">带宽时延积</text>
+  <text x="627" y="116" font-size="12" fill="#166534" text-anchor="middle">前两个相乘</text>
+  <text x="627" y="134" font-size="12" fill="#166534" text-anchor="middle">管子此刻装了多少</text>
+
+  <text x="380" y="180" font-size="10" fill="#64748b" text-anchor="middle">带宽时延积就是这条链路的容量；在链路语境下，「延迟」指传播时延</text>
+</svg>

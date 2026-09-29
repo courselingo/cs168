@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 233" width="760" height="233"
+     role="img" aria-labelledby="fig-links-8-title fig-links-8-desc">
+  <title id="fig-links-8-title">改一个参数，管子会怎么变</title>
+  <desc id="fig-links-8-desc">上排是两个动作：把传播时延缩短，或者把带宽调高。左下是缩短传播时延的后果：管子变窄、面积变小也就是容量变小，但分组宽度不变，说明发送时延没变。右下是调高带宽的后果：管子变高，分组变高也变窄，因为更快把整个分组喂进管子，发送时延随之变小。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="233" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">改一个参数，管子会怎么变</text>
+
+  <rect x="22" y="66" width="344" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="194" y="88" font-size="12" fill="#1e40af" text-anchor="middle">把传播时延缩短</text>
+
+  <rect x="394" y="66" width="344" height="36" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="566" y="88" font-size="12" fill="#1e40af" text-anchor="middle">把带宽调高</text>
+
+  <rect x="22" y="127" width="344" height="54" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="194" y="149" font-size="12" fill="#1e293b" text-anchor="middle">管子变窄，容量变小</text>
+  <text x="194" y="167" font-size="12" fill="#1e293b" text-anchor="middle">分组宽度不变：发送时延没变</text>
+
+  <rect x="394" y="127" width="344" height="54" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <text x="566" y="149" font-size="12" fill="#1e293b" text-anchor="middle">管子变高，每步放进去更多</text>
+  <text x="566" y="167" font-size="12" fill="#1e293b" text-anchor="middle">分组变高也变窄：发得更快</text>
+
+  <text x="380" y="208" font-size="10" fill="#64748b" text-anchor="middle">传播时延管的是宽，带宽管的是高，两者互不替代</text>
+</svg>

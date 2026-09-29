@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 221" width="760" height="221"
+     role="img" aria-labelledby="fig-links-10-title fig-links-10-desc">
+  <title id="fig-links-10-title">持续过载：队列填满之后只能丢包</title>
+  <desc id="fig-links-10-desc">左边是持续过载：出口链路的容量根本撑不住进入速率，把队列填满也没用，交换机迟早要丢包。右边是运营者能做的两件事：按需扩容（可能需要人工操作），以及让发送方放慢，也就是后面要讲的拥塞控制。教材说得很直白，过载没有根治办法，这正是互联网只承诺尽力而为的原因。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="221" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">持续过载：队列填满之后只能丢包</text>
+
+  <rect x="22" y="76" width="344" height="90" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="194" y="98" font-size="12" fill="#9d174d" text-anchor="middle">持续过载</text>
+  <text x="194" y="116" font-size="12" fill="#9d174d" text-anchor="middle">出口容量根本不够</text>
+  <text x="194" y="134" font-size="12" fill="#9d174d" text-anchor="middle">队列填满也没用</text>
+  <text x="194" y="152" font-size="12" fill="#9d174d" text-anchor="middle">迟早要丢包</text>
+
+  <rect x="394" y="76" width="344" height="90" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="566" y="98" font-size="12" fill="#166534" text-anchor="middle">运营者能做的两件事</text>
+  <text x="566" y="116" font-size="12" fill="#166534" text-anchor="middle">按需扩容（可能要人工）</text>
+  <text x="566" y="134" font-size="12" fill="#166534" text-anchor="middle">让发送方放慢（拥塞控制）</text>
+  <text x="566" y="152" font-size="12" fill="#166534" text-anchor="middle">没有根治办法，所以只承诺尽力而为</text>
+
+  <text x="380" y="196" font-size="10" fill="#64748b" text-anchor="middle">排队时延就是在这里加进分组时延公式的第三项</text>
+</svg>

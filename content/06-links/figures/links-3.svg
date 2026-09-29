@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 243" width="760" height="243"
+     role="img" aria-labelledby="fig-links-3-title fig-links-3-desc">
+  <title id="fig-links-3-title">分组时延的两个组成部分</title>
+  <desc id="fig-links-3-desc">左边是发送时延，等于分组大小除以链路带宽，也就是把这些位放上线要花的时间；右边是传播时延，等于一位走完整条链路的时间，与带宽无关。两者相加就是分组时延，到这一讲最后还要再加上排队时延。发小分组时传播时延主导，发大分组时发送时延主导。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="243" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">分组时延的两个组成部分</text>
+
+  <rect x="22" y="76" width="344" height="54" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="194" y="98" font-size="12" fill="#b45309" text-anchor="middle">发送时延</text>
+  <text x="194" y="116" font-size="12" fill="#b45309" text-anchor="middle">分组大小 ÷ 链路带宽</text>
+
+  <rect x="394" y="76" width="344" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="566" y="98" font-size="12" fill="#1e40af" text-anchor="middle">传播时延</text>
+  <text x="566" y="116" font-size="12" fill="#1e40af" text-anchor="middle">一位走完全程的时间</text>
+
+  <rect x="22" y="155" width="716" height="36" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="380" y="177" font-size="12" fill="#166534" text-anchor="middle">分组时延 = 发送时延 + 传播时延（排队时延最后再加进来）</text>
+
+  <text x="380" y="218" font-size="10" fill="#64748b" text-anchor="middle">发小分组时传播时延主导，发大分组时发送时延主导</text>
+</svg>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 205" width="760" height="205"
+     role="img" aria-labelledby="fig-links-6-title fig-links-6-desc">
+  <title id="fig-links-6-title">管道图：两条边与面积各是什么</title>
+  <desc id="fig-links-6-desc">把链路画成一根管子：宽是传播时延，高是带宽，面积就是这条链路的容量，也就是前面讲的带宽时延积。时序图看的是事件发生的时刻，管道图看的是某一瞬间链路上有什么，两种画法信息相同。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="205" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">管道图：两条边与面积各是什么</text>
+
+  <rect x="22" y="76" width="716" height="72" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="380" y="98" font-size="12" fill="#1e40af" text-anchor="middle">链路 = 一根管子</text>
+  <text x="380" y="116" font-size="12" fill="#1e40af" text-anchor="middle">宽 = 传播时延，高 = 带宽</text>
+  <text x="380" y="134" font-size="12" fill="#1e40af" text-anchor="middle">面积 = 容量（带宽时延积）</text>
+
+  <text x="380" y="180" font-size="10" fill="#64748b" text-anchor="middle">时序图看时刻，管道图看瞬间；两者表达的信息是一样的</text>
+</svg>

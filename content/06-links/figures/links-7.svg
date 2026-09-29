@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 215" width="760" height="215"
+     role="img" aria-labelledby="fig-links-7-title fig-links-7-desc">
+  <title id="fig-links-7-title">管子里的分组：它的宽度就是发送时延</title>
+  <desc id="fig-links-7-desc">外框是管子，宽表示传播时延、高表示带宽；里面那块是正在被发送的分组，它的宽度就是发送时延，高度表示每个时间步放进管子的位数。教材给的例子是链路每秒送 5 位、分组 20 位：每一秒有一列 5 位进入管子，需要 4 列，所以分组宽度是 4 秒，也就是发送时延。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="215" fill="#ffffff"/>
+
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">管子里的分组：宽度就是发送时延</text>
+
+  <rect x="22" y="76" width="716" height="72" rx="6" fill="#f8fafc" stroke="#94a3b8"/>
+  <rect x="180" y="87" width="400" height="54" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="109" font-size="12" fill="#b45309" text-anchor="middle">正在发送的分组</text>
+  <text x="380" y="127" font-size="12" fill="#b45309" text-anchor="middle">宽 = 发送时延，高 = 每个时间步放进去的位数</text>
+
+  <text x="380" y="190" font-size="10" fill="#64748b" text-anchor="middle">例：每秒 5 位、分组 20 位 ⇒ 要 4 列，分组宽度 4 秒（教材同段另写的 11 秒与此不符）</text>
+</svg>
