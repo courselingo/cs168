@@ -482,10 +482,25 @@ export const overlap = {
             }));
           } else if (distance < DETOUR_CLEARANCE) {
             if (endsNear(points, rect)) continue;
+            // ★ 报出**它撞的是哪一个框**。
+            //   实测（2026-09-29，mit-6.5840 的 `rpc-and-threads-9`）：作者两次改形状都被
+            //   `detour-too-close` 拦下，而原文只说 "an unrelated box" —— 它于是无法判断
+            //   该往哪边挪，只能来回试。**一条说不出对象的告警，把一次求解变成了猜。**
+            //
+            //   同时点明**虚线分组框不算障碍**（见 L462 与 document.mjs 的 contentRects）：
+            //   作者的算式中恰好假设「两侧容器都算障碍 ⇒ 24px 的带装不下 40px」，
+            //   而那前提是错的 —— 把这条写进消息里，省掉一次来回。
+            const b = rect.bbox;
             out.push(warning({
               check: ID, code: 'detour-too-close', ...at,
-              message: `Connector passes ${round(distance)}px from an unrelated box`,
-              repair: { actual: String(round(distance)), expected: `≥${DETOUR_CLEARANCE}`, hint: 'detour paths stay at least 20px outside the obstacle boundary' },
+              message: `Connector passes ${round(distance)}px from an unrelated box`
+                + ` (solid box at x=${round(b.minX)}..${round(b.maxX)}, y=${round(b.minY)}..${round(b.maxY)})`,
+              repair: {
+                actual: String(round(distance)),
+                expected: `≥${DETOUR_CLEARANCE}`,
+                hint: 'detour paths stay at least 20px outside the obstacle boundary; '
+                  + 'dashed grouping boxes are NOT obstacles, so only the named solid box needs clearing',
+              },
             }));
           }
         }
