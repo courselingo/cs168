@@ -35,7 +35,7 @@ output_mode = "explanation"
 >
 > 中译：我们需要被分配一个 [[term:ip-address]]，这样才收发包。地址按地理分配，所以接入一个新网络时，得有人把这个地址给你。
 
-第二样是掩码。源文说有了它才知道本地地址的范围：固定位全 1、非固定位全 0，把掩码与本机地址按位与，就得到本地网络前缀。第三样是本地那台 [[term:router]] 是谁，因为目的地址不在本地的包都要先交给它：
+第二样是[[term:subnet-mask]]。源文说有了它才知道本地地址的范围：固定位全 1、非固定位全 0，把掩码与本机地址按位与，就得到本地网络前缀。第三样是本地那台 [[term:router]] 是谁，因为目的地址不在本地的包都要先交给它：
 
 > Sometimes we call this router the default gateway.
 >
@@ -43,7 +43,7 @@ output_mode = "explanation"
 
 第四样是这一网络上 [[term:recursive-resolver]] 在哪。源文用的是 might，也就是说这一项不是每个网络都非得问。
 
-手工填这四格也能用。源文说它费时间，而且每换一个网络都要重配一遍；普通用户多半不知道怎么配。它同时留了一句公道话：路由器这类不常移动的机器，手工配置有时确实可行。于是这一讲要的东西就是一个约定：
+手工填这四格也能用。源文说它费时间，而且每换一个网络都要重配一遍；普通用户多半不知道怎么配。它同时留了一句公道话：路由器这类不常移动的机器，手工配置有时确实可行。于是这一讲要的东西就是一个协议：
 
 > We need an protocol that allows new hosts to automatically learn these values (and possibly other useful information).
 >
@@ -111,7 +111,7 @@ output_mode = "explanation"
 
 ![谁在提供配置：家用路由器兼任或单独一台服务器，中继把请求转给中心服务器，以及固定的 UDP 67 端口](figures/dhcp-3.svg)
 
-图里上排两格是两种规模下服务器是谁，中间两行说明同网段那条约束与中继这条出路，最下面一行是服务器手里的三样东西与它监听的那个端口。三样里有两样正好是第一节那四格中的两格，第三样则引出下一节要展开的租约。
+图里上排两格是两种规模下服务器是谁，中间两行说明同网段那条约束与中继这条出路，最下面一行是服务器手里的三样东西与它监听的那个端口。这三样恰好对上前一节那四格里的三格，剩下那一格是掩码，它跟着地址一起给。池子里的地址是有租期的，这就是下一节要展开的部分。
 
 ## 四、地址是借来的：租约、续租与回收
 
@@ -213,7 +213,7 @@ output_mode = "explanation"
 >
 > 中译：为了拿到本地网络的信息，我们可以扩展邻居发现协议（IPv6 版的 ARP）：路由器请求消息让用户广播出去问一次，路由器通告消息让路由器把这些信息回过来。
 
-这也是说 SLAAC「无状态」的意思所在：参与进来的机器并不少，只是要来的信息只有前缀这一项，没有任何一台机器在维护「这个地址归谁、租到什么时候」这种状态。源文还留了一道兜底：
+这也是说 SLAAC「无状态」的意思所在：地址是每台机器自己凑出来的，要向路由器问的只有前缀这一项，没有任何一台机器在维护「这个地址归谁、租到什么时候」这种状态。源文还留了一道兜底：
 
 > SLAAC has additional mechanisms to detect duplicate addresses, just in case.
 >
@@ -242,9 +242,9 @@ output_mode = "explanation"
 ## 溯源
 
 - **字段核对与源文件范围**：`docs/lecture-manifest.md` 里编号 32 的那一行（文件第 57 行）为 `dhcp` / `DHCP: Joining Networks` / `/end-to-end/dhcp.html`；抓页时 `<title>` 是 `DHCP: Joining Networks | CS 168 Textbook`，H1 是 `DHCP: Joining Networks`。三处一致。该页 HTML 共 27,397 字节（首次即 200，没有遇到 `http=000`），正文锚点 `#main-content`，实测 5 个二级小节（Joining Networks / DHCP: Dynamic Host Configuration Protocol / DHCP Servers / DHCP Implementation / Autoconfiguration in IPv6），`TODO` 标记 0 处，全页也没有出现 `DORA` 这个缩写。
-- **6 张配图逐张看过**：`5-050-dhcp1`（第 1 步：A 向 B、两台服务器与 C 广播，左侧配置表四格都是问号）、`5-051-dhcp2`（第 2 步：两台服务器各回一份 Offer）、`5-052-dhcp3`（第 3 步：客户端广播说自己选了 Server 1）、`5-053-dhcp4`（第 4 步：Server 1 回确认，配置表填成掩码 `/24`、网关 `192.168.86.254`、解析器 `8.8.8.8`、本机 `192.168.86.38`）、`5-054-dhcp-over-ip`（Discover 的六个字段与一句注释）、`5-055-slaac`（IPv6 地址两半，网络 ID 64 位与主机 ID 64 位，MAC 48 位）。六张的文件名与内容都对得上，没有出现「文件名误导」那类情况。
+- **6 张配图逐张看过**：`5-050-dhcp1`（第 1 步：A 向 B、两台服务器与 C 广播，左侧配置表四格都是问号）、`5-051-dhcp2`（第 2 步：两台服务器各回一份 Offer）、`5-052-dhcp3`（第 3 步：客户端广播说自己选了 Server 1）、`5-053-dhcp4`（第 4 步：Server 1 回确认，配置表填成掩码 `/24`、网关 `192.168.86.254`、解析器 `8.8.8.8`、本机 `192.168.86.38`）、`5-054-dhcp-over-ip`（Discover 的六个字段，每一行各带一句注释）、`5-055-slaac`（IPv6 地址两半，网络 ID 64 位与主机 ID 64 位，MAC 48 位）。六张的文件名与内容都对得上，没有出现「文件名误导」那类情况。
 - **自己算过的数**：`5-053` 的掩码 `/24` 表示前 24 位固定，`192.168.86.38` 与 `255.255.255.0` 按位与得到 `192.168.86.0`，网关 `192.168.86.254` 落在同一个 `/24` 里；解析器 `8.8.8.8` 算出来是 `8.8.8.0/24`，与前者不在同一个网段，正对应源文把「本地网络信息」与「解析器在哪」分成两件事来写。`5-055` 里 MAC 是 48 位、主机 ID 是 64 位，差 16 位，这正是图上那句「补几个填充位」要补的位数。UDP 67 落在 0 到 1023 这一段，这一段就是约定端口。
 - **源文两处措辞的关系，以及配图比正文多的一句（预告 → 照录 → 说明）**：其一，第 2 节写 `Any DHCP server who can help will unicast an Offer to the client`，把 Offer 定为单播；第 4 节又写 `The DHCP servers could either broadcast the offers, or use the client’s MAC address to unicast the offers`。本页第六节按预告、照录、说明三步处理：先说第 2 步写成单播而客户端此刻没有源地址，再照录第 4 节那一句，最后说明两句是「结论」与「做法」的关系，不是互相打脸。源文没有把这层关系写出来，是并排读出来的。其二，源文正文写 `we copy our own MAC address bits into the host bits of the IPv6 address`，读起来像是直接把 MAC 位抄进主机位；而它配的图 `5-055-slaac` 多了一句 `Run some algorithm (e.g. add padding bits) to derive host ID bits.`，也就是中间还有一步加工。48 位与 64 位差 16 位，按图上那句「补几个填充位」正好补上。本页第七节照录正文、补上配图这一步，并说明两者合起来才完整。
 - **核过但不是矛盾的，与一处笔误**：第 2 节给的 Offer 例子只举了三个值（`IP address, gateway address, DNS address`），而第 1 节列的是四样（多一样子网掩码）。那处例子写的是 `e.g.`，不是清单的全部；而图 `5-053` 上掩码是跟着地址一起给的（`/24`），所以两处可以并存。另外第 1 节写 `We need an protocol that allows new hosts to automatically learn these values`，其中 `an protocol` 应为 `a protocol`；本页在第一节照录原句并就地说明，不改引文。
-- **我们补的（源文没有写）**：把 5 个小节归并成本页七节；把「接入时要问的四样与不用问的那一样」压成一张图；第 29 到第 32 讲这条线的逐讲对应；「跳过 ARP 是因为目的写的就是所有人」这层理由；租约与「被拒的 Offer 立刻放回池子」之间那条因果；67 落在 0 到 1023 的约定端口段；SLAAC 里「无状态」指的是没有机器在维护租约状态；以及脉络回顾末尾那句可观察性建议（家用路由器与 Linux 上的 DHCP 客户端、Wireshark 里的四个报文），源文没有点名任何工具或系统。
-- **术语取舍**：本讲新增三个词条，都是本页第一次引入的复合技术词：`subnet mask`、`default gateway`、`DHCP server`。加之前按 `validate.py` 的漂移判据把仓内 30 页扫了一遍（跳过「读完应该能回答 / 脉络回顾 / 溯源」三段，剥掉行内代码、链接目标与出处行，并把 `[[term:…]]` 的键本身也算作命中），三个词在别的页里都没有命中，所以不会把别人的页打红。本讲专有的 `DHCP`、`ARP`、`SLAAC`、`Neighbor Discovery`、`Router Solicitation`、`Router Advertisement` 一律不登记：`DHCP` 与 `ARP` 在第 29、31 讲的正文里出现过，登记会立刻给那两页添漂移警告；后四个属于第 31 讲的地盘（它有一节就叫 `Neighbor Discovery in IPv6`），本页正文只写中文名，英文名留在这条里。
+- **我们补的（源文没有写）**：把 5 个小节归并成本页七节；把「接入时要问的四样与不用问的那一样」压成一张图；第 29 到第 32 讲这条线的逐讲对应；「跳过 ARP 是因为目的写的就是所有人」这层理由；租约与「被拒的 Offer 立刻放回池子」之间那条因果；67 落在 0 到 1023 的约定端口段；SLAAC 里「无状态」指的是没有机器在维护租约状态，以及「保证唯一」与「另设重复地址检测」那两句的读法；以及脉络回顾末尾那句可观察性建议（家用路由器与 Linux 上的 DHCP 客户端、Wireshark 里的四个报文），源文没有点名任何工具或系统。
+- **术语取舍**：本讲新增三个词条，都是本页第一次引入的复合技术词：`subnet mask`、`default gateway`、`DHCP server`。加之前按 `validate.py` 的漂移判据把仓内 30 页扫了一遍（跳过「读完应该能回答 / 脉络回顾 / 溯源」三段，剥掉行内代码、链接目标与出处行，并把术语标记里的键本身也算作命中），三个词在别的页里都没有命中，所以不会把别人的页打红。本讲专有的 `DHCP`、`ARP`、`SLAAC`、`Neighbor Discovery`、`Router Solicitation`、`Router Advertisement` 一律不登记：`DHCP` 与 `ARP` 在第 29、31 讲的正文里出现过，登记会立刻给那两页添漂移警告；后四个属于第 31 讲的地盘（它有一节就叫 `Neighbor Discovery in IPv6`），本页正文只写中文名，英文名留在这条里。
