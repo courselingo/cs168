@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 348.0" width="760" height="348.0"
+     role="img" aria-labelledby="fig-ratcc-8-title fig-ratcc-8-desc">
+  <title id="fig-ratcc-8-title">公平排队的利与弊，以及现实里的折中</title>
+  <desc id="fig-ratcc-8-desc">第一行左右两格对照：左边是好处，连接之间被隔离，作弊的连接拿不到更多带宽，连接也不必实现 TCP；右边是代价，它比 FIFO 复杂得多，截止时间的过程很绕，路由器要维护多条队列，每个分组还要额外解析。两支向下箭头汇到中间一整格：好处是双份的，既防作弊也挡住 RTT 的参差，但它只解决一半，端主机还得自己发现并适应这一份。再一支向下箭头指向最后一整格：现实只用近似，也就是赤字轮询，队列开得少意味着隔离变粗。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="348.0" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">公平排队的利与弊，以及现实里的折中</text>
+  <rect x="22" y="76" width="345" height="90" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="194.5" y="98.2" font-size="12" fill="#166534" text-anchor="middle">好处一：连接之间隔离</text>
+  <text x="194.5" y="116.2" font-size="12" fill="#166534" text-anchor="middle">作弊的连接拿不到更多</text>
+  <text x="194.5" y="134.2" font-size="12" fill="#166534" text-anchor="middle">连接不必实现 TCP</text>
+  <text x="194.5" y="152.2" font-size="12" fill="#166534" text-anchor="middle">算法可以挑对自己有利的，哪怕对别人不友好</text>
+  <rect x="393" y="76" width="345" height="90" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="565.5" y="98.2" font-size="12" fill="#9d174d" text-anchor="middle">代价一：比 FIFO 复杂得多</text>
+  <text x="565.5" y="116.2" font-size="12" fill="#9d174d" text-anchor="middle">算截止时间的过程很绕</text>
+  <text x="565.5" y="134.2" font-size="12" fill="#9d174d" text-anchor="middle">要维护多条队列</text>
+  <text x="565.5" y="152.2" font-size="12" fill="#9d174d" text-anchor="middle">每个分组还要额外解析</text>
+  <rect x="22" y="191" width="715" height="54" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="379.5" y="213.2" font-size="12" fill="#6b21a8" text-anchor="middle">好处是双份的：防作弊，也挡住了 RTT 的参差</text>
+  <text x="379.5" y="231.2" font-size="12" fill="#6b21a8" text-anchor="middle">但它只解决一半，端主机还得自己发现并适应这一份</text>
+  <path d="M194.5,171 Q 194.5,175.5 194.5,180" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+  <path d="M565.5,171 Q 565.5,175.5 565.5,180" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+  <rect x="22" y="270" width="715" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="379.5" y="292.2" font-size="12" fill="#1e40af" text-anchor="middle">现实折中：完美的公平排队跑不到高速度，只能用近似</text>
+  <text x="379.5" y="310.2" font-size="12" fill="#1e40af" text-anchor="middle">近似就是赤字轮询；队列开得少，隔离就变粗，例如每个客户一个队列</text>
+  <path d="M380,250 Q 380,254.5 380,259" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+</svg>

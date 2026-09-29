@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 391.0" width="760" height="391.0"
+     role="img" aria-labelledby="fig-ratcc-10-title fig-ratcc-10-desc">
+  <title id="fig-ratcc-10-title">ECN 的四步：路由器置位，接收方在确认里带回</title>
+  <desc id="fig-ratcc-10-desc">第一行两格，中间一支向右的箭头：发送方发出数据分组，这个位由沿途的路由器改；链路上的路由器看队列，堵了就把这个位设成 1。一支向下箭头指向第二整格：接收方拿到这个置位的分组，它回确认时把这个位也带上，发送方由此知道前面堵了。再一支向下箭头指向第三整格：这一步是必需的，发送方只能靠这条确认知道，正向的数据分组回不到它手里。最后一支向下箭头指向第四整格：发送方读到这个位，按自己的办法反应，源文举的一种反应是把这个分组当成丢了然后降速。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="391.0" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">ECN 的四步：路由器置位，接收方在确认里带回</text>
+  <rect x="22" y="76" width="345" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="194.5" y="98.2" font-size="12" fill="#1e40af" text-anchor="middle">发送方发出数据分组</text>
+  <text x="194.5" y="116.2" font-size="12" fill="#1e40af" text-anchor="middle">这个位由沿途的路由器改</text>
+  <rect x="393" y="76" width="345" height="54" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="565.5" y="98.2" font-size="12" fill="#b45309" text-anchor="middle">链路上的路由器看队列</text>
+  <text x="565.5" y="116.2" font-size="12" fill="#b45309" text-anchor="middle">堵了就把 ECN 位设成 1</text>
+  <path d="M372,103 Q 377.5,103 383,103" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+  <rect x="22" y="155" width="715" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="379.5" y="177.2" font-size="12" fill="#1e40af" text-anchor="middle">接收方拿到这个置位的分组</text>
+  <text x="379.5" y="195.2" font-size="12" fill="#1e40af" text-anchor="middle">它回确认时把这个位也带上，发送方由此知道前面堵了</text>
+  <path d="M565.5,135 Q 565.5,139.5 565.5,144" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+  <rect x="22" y="234" width="715" height="54" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="379.5" y="256.2" font-size="12" fill="#6b21a8" text-anchor="middle">发送方只能靠这条确认知道，正向的数据分组回不到它手里</text>
+  <text x="379.5" y="274.2" font-size="12" fill="#6b21a8" text-anchor="middle">这就是源文在「直接给速率」那一段里没有交代的那一步</text>
+  <path d="M380,214 Q 380,218.5 380,223" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+  <rect x="22" y="313" width="715" height="54" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="379.5" y="335.2" font-size="12" fill="#166534" text-anchor="middle">发送方读到这个位，按自己的办法反应</text>
+  <text x="379.5" y="353.2" font-size="12" fill="#166534" text-anchor="middle">源文举的一种反应是把这个分组当成丢了，然后降速</text>
+  <path d="M380,293 Q 380,297.5 380,302" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+</svg>

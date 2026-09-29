@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 269.0" width="760" height="269.0"
+     role="img" aria-labelledby="fig-ratcc-6-title fig-ratcc-6-desc">
+  <title id="fig-ratcc-6-title">分组不等长：从逐位轮询到截止时间</title>
+  <desc id="fig-ratcc-6-desc">三格横向排列，中间两支向右的箭头。第一格说现实中分组长短不一，40 字节与 1500 字节并存，后者是前者的 37.5 倍；第二格给出理想做法，轮流从每个队列送出 1 个比特，做不到但可以当成模型；第三格由这个模型算出每个分组的截止时间，也就是它最后一个比特本该发完的时刻，再按这个时刻排序发送。三支向下的箭头汇到最后一整格：截止时间撞在一起时先发先到的那个，它把逐位公平这个理想折回现实。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="269.0" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">分组不等长：从逐位轮询到截止时间</text>
+  <rect x="22" y="76" width="222" height="90" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="133" y="98.2" font-size="12" fill="#1e40af" text-anchor="middle">① 分组长短不一</text>
+  <text x="133" y="116.2" font-size="12" fill="#1e40af" text-anchor="middle">现实中 40 字节</text>
+  <text x="133" y="134.2" font-size="12" fill="#1e40af" text-anchor="middle">与 1500 字节并存</text>
+  <text x="133" y="152.2" font-size="12" fill="#1e40af" text-anchor="middle">后者是前者的 37.5 倍</text>
+  <rect x="269" y="76" width="222" height="90" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="380" y="98.2" font-size="12" fill="#b45309" text-anchor="middle">② 理想是逐位轮询</text>
+  <text x="380" y="116.2" font-size="12" fill="#b45309" text-anchor="middle">轮流从每个队列</text>
+  <text x="380" y="134.2" font-size="12" fill="#b45309" text-anchor="middle">送出 1 个比特</text>
+  <text x="380" y="152.2" font-size="12" fill="#b45309" text-anchor="middle">做不到，但可以当成模型</text>
+  <rect x="516" y="76" width="222" height="90" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="627" y="98.2" font-size="12" fill="#6b21a8" text-anchor="middle">③ 给分组算截止时间</text>
+  <text x="627" y="116.2" font-size="12" fill="#6b21a8" text-anchor="middle">它最后一个比特</text>
+  <text x="627" y="134.2" font-size="12" fill="#6b21a8" text-anchor="middle">本该发完的时刻</text>
+  <text x="627" y="152.2" font-size="12" fill="#6b21a8" text-anchor="middle">按这个时刻排序发送</text>
+  <path d="M249,121 Q 254,121 259,121" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+  <path d="M496,121 Q 501,121 506,121" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+  <rect x="22" y="191" width="715" height="54" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="379.5" y="213.2" font-size="12" fill="#166534" text-anchor="middle">截止时间撞在一起时，先发先到的那个</text>
+  <text x="379.5" y="231.2" font-size="12" fill="#166534" text-anchor="middle">它把「逐位公平」这个理想折回现实</text>
+  <path d="M133,171 Q 133,175.5 133,180" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+  <path d="M380,171 Q 380,175.5 380,180" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+  <path d="M627,171 Q 627,175.5 627,180" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+</svg>

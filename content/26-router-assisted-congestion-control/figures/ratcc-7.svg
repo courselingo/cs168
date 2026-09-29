@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 391.0" width="760" height="391.0"
+     role="img" aria-labelledby="fig-ratcc-7-title fig-ratcc-7-desc">
+  <title id="fig-ratcc-7-title">两条连接的逐位公平排队</title>
+  <desc id="fig-ratcc-7-desc">四条横格自上而下。第一格是流 1 到达，A1 到 A6 六个分组，每个占 1 个比特；第二格是流 2 到达，B1 到 B5 五个分组，每个占 2 个比特；第三格是理想流体系统，一共 16 个比特位，等于 6 个 A 乘 1 加上 5 个 B 乘 2，每个分组的最后一个比特位就是它的截止时间；第四格是实际的公平排队系统，按截止时间排序发出，撞在一起时才先发先到的那个。每两格之间一支向下的箭头。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="391.0" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">两条连接的逐位公平排队</text>
+  <rect x="22" y="76" width="715" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="379.5" y="98.2" font-size="12" fill="#1e40af" text-anchor="middle">流 1 到达：A1 到 A6，六个分组，每个占 1 个比特</text>
+  <text x="379.5" y="116.2" font-size="12" fill="#1e40af" text-anchor="middle">它们到达的时刻一个比一个晚</text>
+  <rect x="22" y="155" width="715" height="54" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="379.5" y="177.2" font-size="12" fill="#1e40af" text-anchor="middle">流 2 到达：B1 到 B5，五个分组，每个占 2 个比特</text>
+  <text x="379.5" y="195.2" font-size="12" fill="#1e40af" text-anchor="middle">B 的分组更长，所以占的比特位是 A 的两倍</text>
+  <rect x="22" y="234" width="715" height="54" rx="6" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="379.5" y="256.2" font-size="12" fill="#6b21a8" text-anchor="middle">理想流体系统：16 个比特位 = 6 个 A × 1 + 5 个 B × 2</text>
+  <text x="379.5" y="274.2" font-size="12" fill="#6b21a8" text-anchor="middle">每个分组的最后一个比特位就是它的截止时间</text>
+  <rect x="22" y="313" width="715" height="54" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="379.5" y="335.2" font-size="12" fill="#166534" text-anchor="middle">实际公平排队系统：按截止时间排序发出</text>
+  <text x="379.5" y="353.2" font-size="12" fill="#166534" text-anchor="middle">这就是源文说的那个近似：顺序由截止时间定，撞在一起才看谁先到</text>
+  <path d="M380,135 Q 380,139.5 380,144" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+  <path d="M380,214 Q 380,218.5 380,223" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+  <path d="M380,293 Q 380,297.5 380,302" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+</svg>

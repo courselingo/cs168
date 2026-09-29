@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 263.0" width="760" height="263.0"
+     role="img" aria-labelledby="fig-ratcc-1-title fig-ratcc-1-desc">
+  <title id="fig-ratcc-1-title">主机侧的四处麻烦，路由器能帮上的两件事</title>
+  <desc id="fig-ratcc-1-desc">第一行四格，是主机侧拥塞控制的四处麻烦：损坏与拥塞混在一起、队列被填满、速率一跳一跳、短连接吃亏。四支向下的箭头收到第二行一整格：路由器站在拥塞发生的地方，手里有主机没有的信息，它能把拥塞告诉发送方，或者直接给出理想速率，而代价落在部署上，路由器要加上这些新功能，有些还要求每个路由器都同意。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="263.0" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">主机侧的四处麻烦，路由器能帮上的两件事</text>
+  <rect x="22" y="76" width="160" height="66" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="102" y="96.35" font-size="11" fill="#9d174d" text-anchor="middle">① 损坏与拥塞</text>
+  <text x="102" y="112.85" font-size="11" fill="#9d174d" text-anchor="middle">分不清</text>
+  <text x="102" y="129.35" font-size="11" fill="#9d174d" text-anchor="middle">降速可能降错</text>
+  <rect x="207" y="76" width="160" height="66" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="287" y="96.35" font-size="11" fill="#9d174d" text-anchor="middle">② 队列被填满</text>
+  <text x="287" y="112.85" font-size="11" fill="#9d174d" text-anchor="middle">要靠丢包</text>
+  <text x="287" y="129.35" font-size="11" fill="#9d174d" text-anchor="middle">才能探出拥塞</text>
+  <rect x="392" y="76" width="160" height="66" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="472" y="96.35" font-size="11" fill="#9d174d" text-anchor="middle">③ 速率一跳一跳</text>
+  <text x="472" y="112.85" font-size="11" fill="#9d174d" text-anchor="middle">窗口来回摆</text>
+  <text x="472" y="129.35" font-size="11" fill="#9d174d" text-anchor="middle">忽高忽低</text>
+  <rect x="577" y="76" width="160" height="66" rx="6" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="657" y="96.35" font-size="11" fill="#9d174d" text-anchor="middle">④ 短连接吃亏</text>
+  <text x="657" y="112.85" font-size="11" fill="#9d174d" text-anchor="middle">还没热身</text>
+  <text x="657" y="129.35" font-size="11" fill="#9d174d" text-anchor="middle">连接就结束</text>
+  <rect x="22" y="167" width="715" height="72" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="379.5" y="189.2" font-size="12" fill="#166534" text-anchor="middle">路由器站在拥塞发生的地方，手里有主机没有的信息</text>
+  <text x="379.5" y="207.2" font-size="12" fill="#166534" text-anchor="middle">它能做两件事：把拥塞告诉发送方，或者直接把理想速率告诉它</text>
+  <text x="379.5" y="225.2" font-size="12" fill="#166534" text-anchor="middle">代价在部署：路由器要加上这些新功能，有些还要求每个路由器都同意</text>
+  <path d="M102,147 Q 102,151.5 102,156" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+  <path d="M287,147 Q 287,151.5 287,156" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+  <path d="M472,147 Q 472,151.5 472,156" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+  <path d="M657,147 Q 657,151.5 657,156" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+</svg>

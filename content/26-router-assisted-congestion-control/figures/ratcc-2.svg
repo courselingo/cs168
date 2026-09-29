@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 251.0" width="760" height="251.0"
+     role="img" aria-labelledby="fig-ratcc-2-title fig-ratcc-2-desc">
+  <title id="fig-ratcc-2-title">FIFO 排队与按连接分类</title>
+  <desc id="fig-ratcc-2-desc">上一行两格左右对照：左边是旧模型，路由器按先进先出送出，只看首部里的目的地址，不问分组属于哪条连接；右边是新模型，路由器先把分组分类，读出源与目的 IP 地址和端口，每条连接一个队列。两支向下的箭头汇到下面一整格：公平不再靠发送方自觉，而靠路由器每一次挑队列，代价是多条队列与逐包多读几个字段。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="760" height="251.0" fill="#ffffff"/>
+  <text x="380" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">FIFO 排队与按连接分类</text>
+  <rect x="22" y="76" width="345" height="72" rx="6" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="194.5" y="98.2" font-size="12" fill="#1e40af" text-anchor="middle">旧模型：先进先出</text>
+  <text x="194.5" y="116.2" font-size="12" fill="#1e40af" text-anchor="middle">只看首部里的目的地址</text>
+  <text x="194.5" y="134.2" font-size="12" fill="#1e40af" text-anchor="middle">不问分组属于哪条连接</text>
+  <rect x="393" y="76" width="345" height="72" rx="6" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="565.5" y="98.2" font-size="12" fill="#b45309" text-anchor="middle">新模型：先分类</text>
+  <text x="565.5" y="116.2" font-size="12" fill="#b45309" text-anchor="middle">读源与目的 IP 地址和端口</text>
+  <text x="565.5" y="134.2" font-size="12" fill="#b45309" text-anchor="middle">每条连接一个队列</text>
+  <rect x="22" y="173" width="715" height="54" rx="6" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="379.5" y="195.2" font-size="12" fill="#166534" text-anchor="middle">公平不再靠发送方自觉，而靠路由器每一次挑队列</text>
+  <text x="379.5" y="213.2" font-size="12" fill="#166534" text-anchor="middle">代价：多条队列，每个分组还要多读几个字段</text>
+  <path d="M194.5,153 Q 194.5,157.5 194.5,162" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+  <path d="M565.5,153 Q 565.5,157.5 565.5,162" fill="none" stroke="#64748b" marker-end="url(#arrow)"/>
+</svg>
